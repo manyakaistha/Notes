@@ -1,0 +1,240 @@
+{
+  "main": {
+    "id": "376fe1ea045b77de",
+    "type": "split",
+    "children": [
+      {
+        "id": "6c21ef4cdcb8636d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9b9d12c227868c83",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "NeuroScience/month 1/week 2/week-2-export.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "week-2-export"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "50eb291af66146dd",
+    "type": "split",
+    "children": [
+      {
+        "id": "a539a0628fa23175",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "79b4e4038ac0ae05",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "7bc0811629462213",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "928327d11a6524f5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "12f0c51e5eb85e9f",
+    "type": "split",
+    "children": [
+      {
+        "id": "4337906360d300f6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "be8974f0ecc92ecd",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Speech Technology/week 1/week-1-notes.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "307cc940cb6d258c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Speech Technology/week 1/week-1-notes.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "5a8d47d23c025cf7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "5d51f988227b7fe9",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "cdf68a795ba54736",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Speech Technology/week 1/week-1-notes.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "79b4e4038ac0ae05",
+  "lastOpenFiles": [
+    "NeuroScience/month 1/week 2/days/w2d1.md",
+    "NeuroScience/month 1/week 2/week-2-export.md",
+    "Speech Technology/week 2/week-2-notes.md",
+    "Speech Technology/week 1/week-1-notes.pdf",
+    "Speech Technology/week 1/week-1-notes.md",
+    "Speech Technology/week 2/assets/10_triphone_coarticulation_state_tying.png",
+    "Speech Technology/week 2/assets/09_viterbi_trellis_decoding.png",
+    "Speech Technology/week 2/assets/08_hmm_bakis_topology_and_duration.png",
+    "Speech Technology/week 2/assets/07_gmm_density_decomposition_and_posteriors.png",
+    "Speech Technology/week 2/assets/06_kmeans_hard_vs_gmm_soft.png",
+    "Speech Technology/week 2/assets/05_kmeans_clustering_lbg_splitting.png",
+    "Speech Technology/week 2/assets/04_dynamic_spectral_deltas.png",
+    "Speech Technology/week 2/assets/03_dct_feature_decorrelation.png",
+    "Speech Technology/week 2/assets/02_mel_warping_filterbank_geometry.png",
+    "Speech Technology/week 2/assets/01_mfcc_extraction_pipeline.png",
+    "Speech Technology/generate_week2_plots.py",
+    "Speech Technology/week 1/week-1-notes.html",
+    "Speech Technology/week 1/pdf-build/build_pdf.js",
+    "Speech Technology/week 1/pdf-build/package-lock.json",
+    "Speech Technology/week 1/pdf-build/node_modules/puppeteer-core/lib/puppeteer/injected/XPathQuerySelector.d.ts",
+    "Speech Technology/week 1/pdf-build/node_modules/puppeteer-core/lib/puppeteer/common/XPathQueryHandler.d.ts",
+    "Speech Technology/week 1/pdf-build/node_modules/puppeteer-core/lib/puppeteer/cdp/WebWorker.d.ts",
+    "Speech Technology/week 1/pdf-build/node_modules/puppeteer-core/lib/puppeteer/bidi/WebWorker.d.ts",
+    "Speech Technology/week 1/pdf-build/node_modules/puppeteer-core/lib/puppeteer/api/WebWorker.d.ts",
+    "Speech Technology/week 1/pdf-build/node_modules/puppeteer-core/README.md",
+    "Speech Technology/week 1/pdf-build/node_modules/puppeteer-core/src/bidi/core/README.md",
+    "Speech Technology/week 1/pdf-build/node_modules/puppeteer-core/src/templates/README.md",
+    "Speech Technology/week 1/pdf-build/node_modules/puppeteer-core/src/injected/README.md",
+    "Speech Technology/week 1/pdf-build/node_modules/chromium-bidi/README.md",
+    "Speech Technology/week 1/pdf-build/node_modules/zod/README.md",
+    "Speech Technology/week 1/pdf-build/node_modules/katex/README.md",
+    "Speech Technology/week 1/pdf-build/node_modules/katex/src/metrics/README.md",
+    "Speech Technology/week 1/pdf-build/node_modules/@puppeteer/browsers/README.md",
+    "Speech Technology/week 1/pdf-build/node_modules/yargs/README.md",
+    "Speech Technology/week 1/pdf-build/node_modules/markdown-it/README.md",
+    "Speech Technology/week 1/pdf-build/node_modules/entities/readme.md",
+    "Speech Technology/week 1/pdf-build/node_modules/devtools-protocol/README.md",
+    "Speech Technology/week 1/pdf-build/node_modules/puppeteer/README.md",
+    "Speech Technology/week 1/pdf-build/node_modules/katex/contrib/mathtex-script-type/README.md",
+    "Speech Technology/week 1/pdf-build/node_modules/katex/contrib/mhchem/README.md",
+    "Speech Technology/week 1/pdf-build/node_modules/katex/contrib/copy-tex/README.md",
+    "Speech Technology/week 1/pdf-build/node_modules/katex/contrib/auto-render/README.md",
+    "Speech Technology/week 1/pdf-build/node_modules/ws/README.md",
+    "Speech Technology/week 1/pdf-build/node_modules/yargs-parser/README.md",
+    "Speech Technology/week 1/pdf-build/node_modules/commander/Readme.md",
+    "Speech Technology/week 1/pdf-build/node_modules/webdriver-bidi-protocol/README.md"
+  ]
+}

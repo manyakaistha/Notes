@@ -1,0 +1,53 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build site directory
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp _sidebar.md _site/
+          cp README.md _site/
+          cp .nojekyll _site/
+          
+          # Copy Sequential Matching study notes and documentation
+          mkdir -p "_site/The Sequential Matching Problem"
+          cp -r "The Sequential Matching Problem/study_notes" "_site/The Sequential Matching Problem/"
+          
+          # Copy other technical disciplines (excluding venvs, raw data caches, pycache)
+          rsync -av --exclude='.venv' --exclude='__pycache__' --exclude='.pytest_cache' --exclude='cache' "NeuroScience/" "_site/NeuroScience/"
+          rsync -av --exclude='.venv' --exclude='__pycache__' --exclude='.pytest_cache' --exclude='cache' "PINN/" "_site/PINN/"
+          rsync -av --exclude='.venv' --exclude='__pycache__' --exclude='.pytest_cache' "Vision Transformers/" "_site/Vision Transformers/"
+          rsync -av --exclude='.venv' --exclude='__pycache__' --exclude='.pytest_cache' --exclude='cache' "Speech Technology/" "_site/Speech Technology/"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

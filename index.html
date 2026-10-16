@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Technical Curriculum & Research Notes</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Technical curriculum, research monographs, and defense archives across Sequential Matching, Neuroscience, PINNs, and Vision Transformers.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  
+  <!-- Theme style -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  
+  <!-- KaTeX CSS -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"/>
+  
+  <style>
+    :root {
+      --theme-color: #1e3a8a;
+      --sidebar-width: 320px;
+    }
+    .sidebar {
+      font-size: 14px;
+    }
+    .sidebar-nav > ul > li > a {
+      font-weight: 600;
+    }
+    .markdown-section {
+      max-width: 950px;
+      padding: 30px 40px 60px;
+    }
+    .markdown-section h1 {
+      font-size: 2.2rem;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 0.4rem;
+    }
+    .markdown-section h2 {
+      font-size: 1.6rem;
+      border-bottom: 1px solid #f3f4f6;
+      padding-bottom: 0.3rem;
+      margin-top: 2rem;
+    }
+    .markdown-section table {
+      display: table;
+      width: 100%;
+      margin: 1.5rem 0;
+    }
+    .markdown-section img {
+      border-radius: 6px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      margin: 1.5rem auto;
+      display: block;
+    }
+    /* GitHub alert blocks */
+    blockquote {
+      border-left: 4px solid #3b82f6;
+      background: #f8fafc;
+      padding: 12px 18px;
+      border-radius: 0 6px 6px 0;
+      color: #334155;
+    }
+    /* Admonitions styling */
+    .admonition-note {
+      border-left-color: #3b82f6;
+      background-color: #eff6ff;
+    }
+    .admonition-warning {
+      border-left-color: #f59e0b;
+      background-color: #fffbeb;
+    }
+    .admonition-important {
+      border-left-color: #8b5cf6;
+      background-color: #f5f3ff;
+    }
+    .admonition-caution {
+      border-left-color: #ef4444;
+      background-color: #fef2f2;
+    }
+    .admonition-tip {
+      border-left-color: #10b981;
+      background-color: #ecfdf5;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">Loading Technical Curriculum...</div>
+  <script>
+    window.$docsify = {
+      name: 'Technical Notes Hub',
+      repo: 'https://github.com/manyakaistha/Notes',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      homepage: 'README.md',
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: 'Search notes...',
+        noData: 'No matching notes found',
+        depth: 4
+      },
+      copyCode: {
+        buttonText: 'Copy',
+        errorText: 'Error',
+        successText: 'Copied'
+      },
+      plugins: [
+        function(hook, vm) {
+          // Transform Obsidian wiki-links [[target|label]] and [[target]]
+          hook.beforeEach(function(content) {
+            // Replace [[target|label]] with [label](target)
+            content = content.replace(/\[\[([^\]\|]+)\|([^\]]+)\]\]/g, function(match, target, label) {
+              return '[' + label + '](' + target + ')';
+            });
+            // Replace [[target]] with [target](target)
+            content = content.replace(/\[\[([^\]]+)\]\]/g, function(match, target) {
+              return '[' + target + '](' + target + ')';
+            });
+            // Format GitHub style alerts > [!NOTE], > [!WARNING], etc.
+            content = content.replace(/> \[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]/gi, function(match, p1) {
+              var type = p1.toLowerCase();
+              return '> **' + p1.toUpperCase() + ':**';
+            });
+            return content;
+          });
+        }
+      ]
+    };
+  </script>
+  <!-- Docsify core -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <!-- Plugins -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  
+  <!-- Math / KaTeX -->
+  <script src="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/marked@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+  
+  <!-- Prism code highlighting -->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-markdown.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-yaml.min.js"></script>
+
+  <!-- Mermaid -->
+  <script type="module">
+    import mermaid from "//cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.mmin.mjs";
+    mermaid.initialize({ startOnLoad: true });
+    window.mermaid = mermaid;
+  </script>
+  <script src="//unpkg.com/docsify-mermaid@2.0.1/dist/docsify-mermaid.js"></script>
+</body>
+</html>

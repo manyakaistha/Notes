@@ -1,1 +1,3 @@
 .DS_Store
+*.dmg
+**/.git_dev_backup

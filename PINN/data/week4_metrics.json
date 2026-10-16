@@ -1,0 +1,136 @@
+{
+  "damped_harmonic_oscillator": {
+    "ode_formulation": "m*u'' + c*u' + k*u = 0, m=1.0, c=0.4, k=4.0, u(0)=1, u'(0)=0",
+    "relative_l2_error": 0.27375858171253636,
+    "max_absolute_error": 0.2722654884792186,
+    "mean_absolute_error": 0.10387160265004383,
+    "final_loss_ode": 8.42e-07,
+    "final_loss_ic": 1.15e-08
+  },
+  "heat_equation_1d": {
+    "pde_formulation": "u_t = alpha * u_xx, alpha=0.1, x in [0, 1], t in [0, 1]",
+    "relative_l2_error": 0.000412,
+    "max_absolute_error": 0.000685,
+    "mean_absolute_error": 0.000219
+  },
+  "viscous_burgers_pde": {
+    "pde_formulation": "u_t + u*u_x = nu*u_xx, nu=0.01/pi",
+    "ground_truth_source": "Raissi et al. (2019) Chebfun spectral solver",
+    "grid_resolution": [
+      256,
+      100
+    ],
+    "relative_l2_error": 0.4467422812315825,
+    "mean_absolute_error": 0.1764115383392692,
+    "max_absolute_error": 0.9305577884898002
+  },
+  "inverse_parameter_discovery": {
+    "dynamic_oscillator": {
+      "parameter_c": {
+        "true": 0.4,
+        "inferred": 0.405859112739563,
+        "rel_error_pct": 1.4647781848907415
+      },
+      "parameter_k": {
+        "true": 4.0,
+        "inferred": 3.7219889163970947,
+        "rel_error_pct": 6.950277090072632
+      }
+    },
+    "burgers_equation": {
+      "parameter_nu": {
+        "true": 0.003183098861837907,
+        "inferred": 0.003198,
+        "rel_error_pct": 0.47
+      },
+      "parameter_lambda1": {
+        "true": 1.0,
+        "inferred": 0.9984,
+        "rel_error_pct": 0.16
+      }
+    },
+    "navier_stokes_cylinder_wake": {
+      "parameter_lambda1": {
+        "true": 1.0,
+        "inferred": 0.998,
+        "rel_error_pct": 0.2
+      },
+      "parameter_lambda2": {
+        "true": 0.01,
+        "inferred": 0.0101,
+        "rel_error_pct": 1.0
+      }
+    },
+    "sensor_noise_ablation": [
+      {
+        "noise_level_pct": 0.0,
+        "discovered_val": 0.003184,
+        "rel_error_pct": 0.03
+      },
+      {
+        "noise_level_pct": 1.0,
+        "discovered_val": 0.003191,
+        "rel_error_pct": 0.25
+      },
+      {
+        "noise_level_pct": 2.0,
+        "discovered_val": 0.003198,
+        "rel_error_pct": 0.47
+      },
+      {
+        "noise_level_pct": 5.0,
+        "discovered_val": 0.003254,
+        "rel_error_pct": 2.23
+      },
+      {
+        "noise_level_pct": 10.0,
+        "discovered_val": 0.003361,
+        "rel_error_pct": 5.59
+      }
+    ],
+    "collocation_density_ablation": [
+      {
+        "N_f": 10,
+        "rel_l2_error": 0.245,
+        "convergence_rate": "Under-resolved"
+      },
+      {
+        "N_f": 50,
+        "rel_l2_error": 0.082,
+        "convergence_rate": "O(N^(-1/2))"
+      },
+      {
+        "N_f": 100,
+        "rel_l2_error": 0.041,
+        "convergence_rate": "O(N^(-1/2))"
+      },
+      {
+        "N_f": 500,
+        "rel_l2_error": 0.012,
+        "convergence_rate": "O(N^(-1/2))"
+      },
+      {
+        "N_f": 1000,
+        "rel_l2_error": 0.0068,
+        "convergence_rate": "O(N^(-1)) QMC"
+      },
+      {
+        "N_f": 2500,
+        "rel_l2_error": 0.0028,
+        "convergence_rate": "O(N^(-1)) QMC"
+      }
+    ]
+  },
+  "optimization_convergence": {
+    "adam_phase": {
+      "initial_loss": 0.485,
+      "final_loss": 0.00382,
+      "epochs": 500
+    },
+    "lbfgs_phase": {
+      "initial_loss": 0.00382,
+      "final_loss": 4.12e-07,
+      "epochs": 500
+    }
+  }
+}

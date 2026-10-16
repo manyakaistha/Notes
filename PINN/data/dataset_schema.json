@@ -1,0 +1,155 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PINN Benchmark Dataset Schema",
+  "description": "Defines coordinate systems, physical fields, dimensions, and sampling bounds across SciML benchmarks",
+  "datasets": {
+    "burgers_shock": {
+      "file_mat": "burgers_shock.mat",
+      "file_csv": "burgers_shock.csv",
+      "coordinates": {
+        "x": {
+          "dimension": "length",
+          "units": "m",
+          "range": [
+            -1.0,
+            1.0
+          ],
+          "resolution": 256
+        },
+        "t": {
+          "dimension": "time",
+          "units": "s",
+          "range": [
+            0.0,
+            1.0
+          ],
+          "resolution": 100
+        }
+      },
+      "state_variables": {
+        "u": {
+          "dimension": "velocity",
+          "units": "m/s",
+          "description": "Fluid velocity field u(t, x)"
+        }
+      },
+      "parameters": {
+        "nu": {
+          "dimension": "kinematic_viscosity",
+          "units": "m^2/s",
+          "value": "0.01 / pi \u2248 0.00318309886"
+        }
+      },
+      "tensor_shapes": {
+        "x": [
+          256,
+          1
+        ],
+        "t": [
+          100,
+          1
+        ],
+        "usol": [
+          256,
+          100
+        ]
+      }
+    },
+    "cylinder_nektar_wake": {
+      "file_mat": "cylinder_nektar_wake.mat",
+      "file_csv": "cylinder_wake.csv",
+      "coordinates": {
+        "x": {
+          "dimension": "length",
+          "units": "m",
+          "range": [
+            1.0,
+            8.0
+          ],
+          "description": "Streamwise position"
+        },
+        "y": {
+          "dimension": "length",
+          "units": "m",
+          "range": [
+            -2.0,
+            2.0
+          ],
+          "description": "Spanwise position"
+        },
+        "t": {
+          "dimension": "time",
+          "units": "s",
+          "range": [
+            0.0,
+            20.0
+          ],
+          "snapshots": 200
+        }
+      },
+      "state_variables": {
+        "u": {
+          "dimension": "velocity",
+          "units": "m/s",
+          "description": "Streamwise velocity component"
+        },
+        "v": {
+          "dimension": "velocity",
+          "units": "m/s",
+          "description": "Spanwise velocity component"
+        },
+        "p": {
+          "dimension": "pressure",
+          "units": "Pa",
+          "description": "Kinematic/static pressure field"
+        }
+      },
+      "parameters": {
+        "reynolds_number": 100.0,
+        "lambda_1": 1.0,
+        "lambda_2": 0.01
+      },
+      "tensor_shapes": {
+        "X_star": [
+          5000,
+          2
+        ],
+        "U_star": [
+          5000,
+          2,
+          200
+        ],
+        "p_star": [
+          5000,
+          200
+        ],
+        "t": [
+          200,
+          1
+        ]
+      }
+    },
+    "week3_collocation_splits": {
+      "file": "week3_collocation_splits.json",
+      "format": "JSON",
+      "fields": [
+        "interior_collocation_sample",
+        "boundary_points_sample",
+        "initial_points_sample"
+      ]
+    },
+    "week4_inverse_measurements": {
+      "file": "week4_inverse_measurements.csv",
+      "format": "CSV",
+      "columns": [
+        "sensor_id",
+        "x",
+        "t",
+        "u_clean",
+        "noise",
+        "u_noisy",
+        "noise_ratio"
+      ]
+    }
+  }
+}

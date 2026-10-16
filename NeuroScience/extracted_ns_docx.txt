@@ -1,0 +1,195 @@
+WEEK 1 — INTRODUCTION TO AI + NEURAL DATA
+1. What is Neuroscience?
+Only understand:
+What neuroscience studies 
+What is a neuron? 
+What is neural activity? 
+How information is transmitted between neurons 
+No detailed brain anatomy or biology.
+2. What is Neural Data?
+Introduce the major types:
+EEG 
+MRI 
+fMRI 
+MEG 
+ECoG 
+Neural spike recordings 
+The main focus should be understanding what kind of data each produces.
+3. EEG Fundamentals
+Focus mainly on EEG:
+What is EEG? 
+Electrode 
+Channel 
+Sampling rate 
+Amplitude 
+Time 
+Frequency 
+4. EEG Frequency Bands
+Only introduce:
+Delta 
+Theta 
+Alpha 
+Beta 
+Gamma 
+They only need to understand that different frequency ranges can contain different types of neural information.
+5. AI + Neuroscience
+Understand the basic relationship:
+Brain → Neural activity → Neural data → AI → Prediction/interpretation
+Examples:
+EEG → motor imagery 
+EEG → seizure detection 
+EEG → sleep stage 
+Brain image → disease classification 
+Weekly Review Article
+"Introduction to Artificial Intelligence in Neuroscience: Neural Data and EEG Fundamentals"
+WEEK 2 — UNDERSTANDING NEURAL SIGNALS
+This week should answer:
+What happens to a neural signal before an AI model uses it?
+1. What is a Signal?
+Learn:
+Signal 
+Noise 
+Continuous signal 
+Discrete signal 
+Time series 
+2. Sampling
+Only cover:
+Sampling 
+Sampling frequency 
+Why sampling is needed 
+Basic idea of the Nyquist theorem 
+No detailed mathematical treatment.
+3. Noise and Artifacts
+Understand that EEG contains unwanted information.
+Focus only on:
+Eye blinks 
+Muscle activity 
+Electrode movement 
+Electrical interference 
+4. Basic Filtering
+Only introduce:
+Low-pass filter 
+High-pass filter 
+Band-pass filter 
+Notch filter 
+The important question is simply:
+What frequencies does each filter keep or remove?
+5. Feature Extraction
+Introduce only the basic idea.
+Time-domain
+Mean 
+Variance 
+Amplitude 
+Frequency-domain
+Frequency 
+Power 
+Band power 
+No FFT mathematics or wavelet mathematics yet.
+Weekly Review Article
+"Fundamentals of Neural Signal Processing for Artificial Intelligence"
+WEEK 3 — MACHINE LEARNING FOR NEUROSCIENCE
+This week introduces the actual ML component.
+1. What is Machine Learning?
+Understand:
+AI 
+Machine Learning 
+Dataset 
+Feature 
+Label 
+Training 
+Testing 
+Basic idea:
+Data → Model → Prediction
+2. Neuroscience ML Problems
+Understand just a few examples:
+Classification
+EEG → Left hand / Right hand
+Detection
+EEG → Seizure / No seizure
+Prediction
+Neural activity → Target variable
+Decoding
+Brain activity → Intended action/stimulus
+3. Basic ML Algorithms
+Don't overwhelm them.
+Focus on only three:
+Logistic Regression 
+Decision Tree 
+Support Vector Machine 
+They should understand:
+What each algorithm does 
+Basic intuition 
+When it can be used 
+Other algorithms can be introduced later.
+4. Training and Evaluation
+Learn:
+Training data 
+Test data 
+Prediction 
+Accuracy 
+Precision 
+Recall 
+F1-score 
+Also understand:
+Overfitting
+at a basic conceptual level.
+5. Subject Generalization
+Introduce one important neuroscience-specific concept:
+A model that works on one person's brain signals may not necessarily work equally well on another person's signals.
+Learn:
+Subject-dependent learning 
+Subject-independent learning 
+Generalization 
+That's enough for Week 3.
+Weekly Review Article
+"Machine Learning for Neuroscience: From Neural Data to Prediction"
+WEEK 4 — DEEP LEARNING FOR NEUROSCIENCE
+This week should introduce modern AI without going too deep.
+1. Neural Networks
+Learn:
+Neuron 
+Weight 
+Bias 
+Layer 
+Activation function 
+Forward propagation 
+Loss 
+Backpropagation 
+Only conceptual understanding.
+2. CNN
+Understand:
+Convolution 
+Kernel 
+Feature map 
+Pooling 
+Classification 
+And why CNNs can be useful for neural signals.
+Basic idea:
+EEG → CNN → Features → Prediction
+3. RNN and LSTM
+Only understand:
+What is sequential data? 
+Why EEG is sequential 
+What is an RNN? 
+Why LSTM was introduced 
+No equations required.
+4. Transformers
+Only introduce:
+Attention 
+Self-attention 
+Transformer 
+The main idea:
+Transformers can learn relationships between different parts of a sequence.
+No detailed Q/K/V mathematics yet.
+5. AI Applications in Neuroscience
+Finish with the major applications:
+Brain-Computer Interfaces 
+Motor imagery 
+Seizure detection 
+Sleep classification 
+Emotion recognition 
+Neural decoding 
+Neuroimaging analysis 
+They should understand what the AI is trying to predict, not how to implement each application.
+Weekly Review Article
+"Deep Learning for Neuroscience: Neural Networks, CNNs, Sequential Models and Applications"

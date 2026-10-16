@@ -1,0 +1,64 @@
+{
+  "week": 4,
+  "title": "Deep Learning for Neuroscience: Neural Networks, CNNs, Sequential Models and Applications",
+  "dataset": "PhysioNet EEG Motor Movement/Imagery Dataset (eegmmidb)",
+  "doi": "10.13026/C28G6P",
+  "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "sampling_rate_hz": 160.0,
+  "channels": [
+    "C3",
+    "Cz",
+    "C4"
+  ],
+  "cohort_subjects": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "runs": [
+    4,
+    8,
+    12
+  ],
+  "total_trials": 450,
+  "epoch_duration_sec": 3.0,
+  "epoch_samples": 480,
+  "window_post_cue_sec": [
+    0.5,
+    3.5
+  ],
+  "bandpass_filter": {
+    "type": "Butterworth zero-phase band-pass (filtfilt)",
+    "low_cut_hz": 1.0,
+    "high_cut_hz": 35.0,
+    "order": 4
+  },
+  "normalization": {
+    "channel_wise_z_score": "Fitted strictly on training partition; mean and std frozen for validation/test",
+    "axes": "Channel-wise over (trials, time)"
+  },
+  "random_seed": 42,
+  "torch_version": "2.14.1",
+  "figures_generated": 12,
+  "figure_files": [
+    "month 1/week 4/assets/fig1_representation_pipeline.png",
+    "month 1/week 4/assets/fig2_artificial_neuron_step.png",
+    "month 1/week 4/assets/fig3_mlp_training_history.png",
+    "month 1/week 4/assets/fig4_cnn_architecture_trace.png",
+    "month 1/week 4/assets/fig5_temporal_convolution_sliding.png",
+    "month 1/week 4/assets/fig6_learned_kernels_and_feature_maps.png",
+    "month 1/week 4/assets/fig7_heldout_confusion_matrices.png",
+    "month 1/week 4/assets/fig8_subject_generalization_comparison.png",
+    "month 1/week 4/assets/fig9_rnn_lstm_state_dynamics.png",
+    "month 1/week 4/assets/fig10_eeg_tokenization_geometry.png",
+    "month 1/week 4/assets/fig11_self_attention_matrix.png",
+    "month 1/week 4/assets/fig12_neuroscience_applications_landscape.png"
+  ]
+}

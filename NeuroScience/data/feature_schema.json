@@ -1,0 +1,35 @@
+{
+  "total_trials": 450,
+  "positive_class": "RIGHT_HAND (target=1)",
+  "negative_class": "LEFT_HAND (target=0)",
+  "channels": [
+    "C3",
+    "Cz",
+    "C4"
+  ],
+  "feature_count": 15,
+  "feature_names": [
+    "C3_mean",
+    "C3_var",
+    "C3_p2p",
+    "C3_alpha",
+    "C3_beta",
+    "Cz_mean",
+    "Cz_var",
+    "Cz_p2p",
+    "Cz_alpha",
+    "Cz_beta",
+    "C4_mean",
+    "C4_var",
+    "C4_p2p",
+    "C4_alpha",
+    "C4_beta"
+  ],
+  "feature_units": {
+    "mean": "microvolts (uV)",
+    "var": "microvolts squared (uV^2)",
+    "p2p": "peak-to-peak amplitude (uV)",
+    "alpha": "integrated Welch PSD 8-12 Hz (uV^2)",
+    "beta": "integrated Welch PSD 13-30 Hz (uV^2)"
+  }
+}

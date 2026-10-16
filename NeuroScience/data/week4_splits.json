@@ -1,0 +1,16 @@
+{
+  "subject_dependent": {
+    "description": "Run-held-out evaluation within Subject 1",
+    "subject": 1,
+    "train_run": 4,
+    "validation_run": 8,
+    "test_run": 12,
+    "trials_per_run": 15
+  },
+  "subject_independent": {
+    "description": "Leave-One-Subject-Out (LOSO) cross-validation across all 10 subjects",
+    "num_folds": 10,
+    "trials_per_fold_train": 405,
+    "trials_per_fold_test": 45
+  }
+}

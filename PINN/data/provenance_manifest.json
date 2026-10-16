@@ -1,0 +1,156 @@
+{
+  "manifest_version": "1.0.0",
+  "project": "Physics-Informed Neural Networks (PINN) Research & Pedagogy Vault",
+  "date_created": "2026-10-14",
+  "benchmarks": [
+    {
+      "benchmark_name": "Viscous Burgers' Shock Benchmark",
+      "citation": "Raissi, M., Perdikaris, P., & Karniadakis, G. E. (2019). Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear partial differential equations. Journal of Computational Physics, 378, 686-707.",
+      "doi": "10.1016/j.jcp.2018.10.045",
+      "license": "MIT Open Science License",
+      "source_repository": "https://github.com/maziarraissi/PINNs/raw/master/appendix/Data/burgers_shock.mat",
+      "associated_files": [
+        "burgers_shock.mat",
+        "burgers_shock.csv"
+      ]
+    },
+    {
+      "benchmark_name": "Navier-Stokes Flow Past a Cylinder Wake Benchmark",
+      "citation": "Raissi, M., Perdikaris, P., & Karniadakis, G. E. (2019). Physics-informed neural networks... Journal of Computational Physics.",
+      "doi": "10.1016/j.jcp.2018.10.045",
+      "license": "MIT Open Science License",
+      "source_repository": "https://github.com/maziarraissi/PINNs/raw/master/main/Data/cylinder_nektar_wake.mat",
+      "associated_files": [
+        "cylinder_nektar_wake.mat",
+        "cylinder_wake.csv"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "filename": "burgers_shock.csv",
+      "size_bytes": 870347,
+      "sha256": "932dc5b9c5705e3a5c01f7b1a1c0ad856b346111d77228c1621875104bff16e0",
+      "checksum_verified": true
+    },
+    {
+      "filename": "burgers_shock.mat",
+      "size_bytes": 207944,
+      "sha256": "f4d11e6798b8d29b6829984952b04adcc470d9bf70dd7e56c7985cd8e316c4bf",
+      "checksum_verified": true
+    },
+    {
+      "filename": "cylinder_nektar_wake.mat",
+      "size_bytes": 24081984,
+      "sha256": "99d9e1f9da7d2dff113ff2723373237b455e2de6c6747ac681846fe86fbba3d0",
+      "checksum_verified": true
+    },
+    {
+      "filename": "cylinder_wake.csv",
+      "size_bytes": 1126162,
+      "sha256": "869a8761809e7d5cf3a07ae80bdaa48fa4d0d3fc1d48f2fce402005831152b41",
+      "checksum_verified": true
+    },
+    {
+      "filename": "dataset_schema.json",
+      "size_bytes": 3389,
+      "sha256": "27cb3bdc8d9b5228a08a2141e9ff67125dee26ef713d6f502e0f6985ffa0b15c",
+      "checksum_verified": true
+    },
+    {
+      "filename": "week1_fd_convergence_table.csv",
+      "size_bytes": 2742,
+      "sha256": "1f500290da6cf2b8f593bff0e6765851b939f7faaeb839e13dc1d53380e37a38",
+      "checksum_verified": true
+    },
+    {
+      "filename": "week1_harmonic_oscillator_ivp.csv",
+      "size_bytes": 204827,
+      "sha256": "91382d3323be2b26df66511279ceda603fdb2fedb483e155dd8fc45b7ddf7ff6",
+      "checksum_verified": true
+    },
+    {
+      "filename": "week1_heat_diffusion_analytical.npy",
+      "size_bytes": 160128,
+      "sha256": "082c2fb36c540a41c2dd68d585a8c53bba18e7be3240daf4f3ae6e5a23d523db",
+      "checksum_verified": true
+    },
+    {
+      "filename": "week2_activation_derivatives.csv",
+      "size_bytes": 128969,
+      "sha256": "c32d168c742fb26aad9f9a55d0fbcaa0e5f9eb5c9d8dc2f8cdcf29739d6cb4ab",
+      "checksum_verified": true
+    },
+    {
+      "filename": "week2_multiscale_target.csv",
+      "size_bytes": 99751,
+      "sha256": "973f7f5bb0e47558e9f0ac5157bd5b02a09655fd47ab0b4316e6b8c45c32e56a",
+      "checksum_verified": true
+    },
+    {
+      "filename": "week2_optimizer_benchmarks.json",
+      "size_bytes": 60509,
+      "sha256": "6108608cb0b14005c4b6c726f447ec950e899e183744d8cf2d28a34eab0f3c16",
+      "checksum_verified": true
+    },
+    {
+      "filename": "week3_collocation_splits.json",
+      "size_bytes": 4348,
+      "sha256": "f4a8da722fcc190fefbd0fa232b5e39422663a2a55b1aa647d0e2c2359609ee8",
+      "checksum_verified": true
+    },
+    {
+      "filename": "week4_inverse_measurements.csv",
+      "size_bytes": 7100,
+      "sha256": "00b82c6f35a50e3b9ece8ed68c489f172347948c74a424976cafa1d5ec0515d2",
+      "checksum_verified": true
+    },
+    {
+      "filename": "week4_metrics.json",
+      "size_bytes": 3381,
+      "sha256": "258fd429bfbef769348530cbb67cd73f95acd3713e23fb857cebf25fb755e87f",
+      "checksum_verified": true
+    },
+    {
+      "filename": "week4_pinn_checkpoint.pt",
+      "size_bytes": 26537,
+      "sha256": "646aa1c20d0084a5c9c3bea3019edb9278437119223df9349fcb73cac6f189c9",
+      "checksum_verified": true
+    }
+  ],
+  "date_updated": "2026-10-14",
+  "curriculum_modules": {
+    "week_1": {
+      "title": "Mathematical Foundations for Physics-Informed Neural Networks",
+      "datasets": [
+        "week1_harmonic_oscillator_ivp.csv",
+        "week1_heat_diffusion_analytical.npy",
+        "week1_fd_convergence_table.csv"
+      ]
+    },
+    "week_2": {
+      "title": "Fundamentals of Neural Networks and Optimization for Scientific Machine Learning",
+      "datasets": [
+        "week2_multiscale_target.csv",
+        "week2_activation_derivatives.csv",
+        "week2_optimizer_benchmarks.json"
+      ]
+    },
+    "week_3": {
+      "title": "Physics-Informed Neural Networks: Concepts, Formulation and Learning Framework",
+      "datasets": [
+        "week3_collocation_splits.json",
+        "burgers_shock.mat",
+        "cylinder_nektar_wake.mat"
+      ]
+    },
+    "week_4": {
+      "title": "Basic Implementation and Applications of Physics-Informed Neural Networks",
+      "datasets": [
+        "week4_inverse_measurements.csv",
+        "week4_metrics.json",
+        "week4_pinn_checkpoint.pt"
+      ]
+    }
+  }
+}

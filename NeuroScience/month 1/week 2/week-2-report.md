@@ -5,6 +5,7 @@ month: 1
 status: complete
 date: 2026-10-02
 prev: "[[week-1-report|Week 1]]"
+next: "[[week-3-report|Week 3]]"
 map: "[[Knowledge-Map]]"
 tags:
   - ns/week-02
@@ -25,7 +26,7 @@ concepts:
 > Foundation learning phase: strong fundamentals before research.
 > Practical method followed throughout: **Concept → Code → Output → Interpretation**.
 
-**Knowledge graph:** ← [[week-1-report|Week 1]] · [[Knowledge-Map|Map]]
+**Knowledge graph:** ← [[week-1-report|Week 1]] · [[Knowledge-Map|Map]] · [[week-3-report|Week 3]] →
 **Concepts:** [[eeg-sampling-rate]] · [[nyquist-criterion]] · [[artifact-contamination]] · [[band-pass-filtering]] · [[time-domain-features]] · [[band-power-features]]
 
 ## Abstract
@@ -723,7 +724,7 @@ Plotting uses `sns.set_theme(style="whitegrid", context="talk", palette="deep")`
 
 **Upstream:** [[week-1-report|Week 1]] — supplies the `[Channels × Time]` geometry, sampling-rate math, amplitude/frequency distinction, and frequency-band vocabulary extended in §§2–6.
 
-**Downstream:** Week 3 (planned) — the `(Samples × Features)` matrix from §7.2 becomes the input for supervised classifiers; labels, held-out evaluation, and subject/session generalization determine whether its predictions are meaningful. A report link will be added when that file exists.
+**Downstream:** [[week-3-report|Week 3: Machine Learning for Neuroscience]] — the `(Samples × Features)` matrix from §7.2 becomes the input for supervised classifiers; labels, held-out evaluation, and subject/session generalization determine whether its predictions are meaningful. A report link will be added when that file exists.
 
 **Sibling concepts:** [[eeg-sampling-rate]] · [[nyquist-criterion]] · [[artifact-contamination]] · [[band-pass-filtering]] · [[time-domain-features]] · [[band-power-features]]
 

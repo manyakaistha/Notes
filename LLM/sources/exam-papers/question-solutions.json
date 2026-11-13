@@ -1,0 +1,4663 @@
+{
+  "records": [
+    {
+      "id": "da5004_2024T1_ET_AN--q144",
+      "week": 3,
+      "answer": "A: Generative Pre-trained Transformer.",
+      "steps": "GPT abbreviates Generative Pre-trained Transformer. B substitutes Text, C Generalized, and D Transfer-text.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2024T1_ET_AN--q144"
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q148",
+      "week": 4,
+      "answer": "something somewhere incredible is waiting be",
+      "steps": "Take each row maximum: 0.41, 0.43, 0.29, 0.48, 0.29, 0.23. No [end] is selected in these six rows.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "row_maxima": [
+          0.41,
+          0.43,
+          0.29,
+          0.48,
+          0.29,
+          0.23
+        ]
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2024T1_ET_AN--q148"
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q149",
+      "week": 3,
+      "answer": "A–D with a fixed window; A–E with a sliding window.",
+      "steps": "2048−712=1336 positions remain when the complete sequence is capped; 256, 16, 1024 and 512 fit, but 2048 does not. Sliding the window and resetting position IDs permits longer output; if the last sampled token need not be fed back, one extra token can be emitted without sliding.",
+      "status": "ambiguous",
+      "ambiguity_note": "Fixed full-sequence window: A–D; sliding context with position IDs reset: A–E. Counting a final prediction beyond the last input adds one token but does not change these choices.",
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "context": 2048,
+        "prompt_tokens": 712,
+        "remaining": 1336
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2024T1_ET_AN--q149"
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q150",
+      "week": 4,
+      "answer": "A, B, C, D and E could all produce the observed runs.",
+      "steps": "A and B are deterministic given fixed tie-breaking. E preserves the logit argmax for every positive temperature. C and D can randomly repeat a sequence, and D can even have a one-token nucleus; repetition alone cannot identify the decoder.",
+      "status": "ambiguous",
+      "ambiguity_note": "“Might” allows chance repetition under sampling; if the intended question asks for guaranteed repeatability, only A, B, E follow with deterministic tie-breaking and positive temperatures.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2024T1_ET_AN--q150"
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q151",
+      "week": 1,
+      "answer": "Not uniquely determinable.",
+      "steps": "For vocabulary size V, fixed positions contribute zero; with bias-free attention and two affine layer norms per layer, the encoder and embedding total is 2,366,208 + 256V. Divide by 1,000 and truncate as requested.",
+      "status": "ambiguous",
+      "ambiguity_note": "Vocabulary size is not specified; attention biases and normalization parameters are also not specified.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "encoder_parameters": 2366208
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T1_ET_AN--q151"
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q152",
+      "week": 1,
+      "answer": "0 additional parameters.",
+      "steps": "Fixed sinusoidal positions have no learned parameters and the layer and vocabulary sizes are unchanged.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "additional_parameters": 0
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T1_ET_AN--q152"
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q153",
+      "week": 1,
+      "answer": "The sum after the output projection is 1.676.",
+      "steps": "From the image, use the last attention row [0.04, 0.12, 0.17, 0.67], the four embeddings in sentence order, then compute AHW_VW_O = [-0.417, 2.093]; the sum is 1.676. The displayed attention entries are rounded.",
+      "status": "ambiguous",
+      "ambiguity_note": "The question does not specify whether representation is before or after W_O; before W_O the sum differs. The displayed attention entries are rounded.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          -0.417,
+          2.093
+        ],
+        "sum": 1.676
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T1_ET_AN--q153"
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q154",
+      "week": 1,
+      "answer": "Approximately 0.53.",
+      "steps": "Without positional information, reordering permutes attention rows and columns. Coffee is row 3 and often column 4 in the original table; the entry is 0.53.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "attention": 0.53
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T1_ET_AN--q154"
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q155",
+      "week": 1,
+      "answer": "8 tokens.",
+      "steps": "The displayed score matrix has shape `8 × 8`, one row and column per token.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sequence_length": 8
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T1_ET_AN--q155"
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q156",
+      "week": 1,
+      "answer": "A, C and D.",
+      "steps": "The query–key dot product requires d_q = d_k, while d_v can differ. A, C, D have equal query and key dimensions; B and E do not.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "C",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T1_ET_AN--q156"
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q157",
+      "week": 2,
+      "answer": "3",
+      "steps": "For query 3 the causal mask admits keys 0–3, with source-image scores 0.94, 0.41, 2.26, 2.29. Softmax preserves their order; the largest is key 3.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "key_index": 3
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T1_ET_AN--q157"
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q198",
+      "week": 4,
+      "answer": "B is the intended closest answer.",
+      "steps": "The original expansion is Bidirectional Encoder Representations from Transformers. B approximates it but drops both plurals; A changes “from Transformers” to “for Text”; C and D expand different words.",
+      "status": "ambiguous",
+      "ambiguity_note": "No option exactly spells the expansion: B uses singular Representation and Transformer.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2024T1_ET_FN--q198"
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q201",
+      "week": 4,
+      "answer": "somewhere something incredible is waiting be",
+      "steps": "Select the largest entry in each row: 0.41, 0.43, 0.29, 0.48, 0.29, 0.23; no [end] appears.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "row_maxima": [
+          0.41,
+          0.43,
+          0.29,
+          0.48,
+          0.29,
+          0.23
+        ]
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2024T1_ET_FN--q201"
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q202",
+      "week": 3,
+      "answer": "A and B with a fixed window; A–D with a sliding window.",
+      "steps": "1024−712=312 positions remain when the complete sequence is capped; 256 and 16 fit but 1024 and 512 do not. A sliding context with position IDs reset permits all four; a final prediction without feedback adds one token without altering the choices.",
+      "status": "ambiguous",
+      "ambiguity_note": "Fixed full-sequence window: A and B; sliding context with position IDs reset: A–D. Counting a final prediction beyond the last input adds one token but does not change these choices.",
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "context": 1024,
+        "prompt_tokens": 712,
+        "remaining": 312
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2024T1_ET_FN--q202"
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q203",
+      "week": 4,
+      "answer": "A, B, C, D and E could all produce the observed runs.",
+      "steps": "A and B are deterministic given fixed tie-breaking. E preserves the logit argmax for every positive temperature. C and D can randomly repeat a sequence, and D can even have a one-token nucleus; repetition alone cannot identify the decoder.",
+      "status": "ambiguous",
+      "ambiguity_note": "“Might” allows chance repetition under sampling; if the intended question asks for guaranteed repeatability, only A, B, E follow with deterministic tie-breaking and positive temperatures.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2024T1_ET_FN--q203"
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q206",
+      "week": 1,
+      "answer": "Not uniquely determinable.",
+      "steps": "For vocabulary size V, fixed positions contribute zero; with bias-free attention and two affine layer norms per layer, the encoder and embedding total is 2,366,208 + 256V. Divide by 1,000 and truncate as requested.",
+      "status": "ambiguous",
+      "ambiguity_note": "Vocabulary size is not specified; attention biases and normalization parameters are also not specified.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "encoder_parameters": 2366208
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T1_ET_FN--q206"
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q207",
+      "week": 1,
+      "answer": "0 additional parameters.",
+      "steps": "Fixed sinusoidal positions have no learned parameters and the layer and vocabulary sizes are unchanged.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "additional_parameters": 0
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T1_ET_FN--q207"
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q208",
+      "week": 1,
+      "answer": "The sum after output projection is 1.592.",
+      "steps": "Using the displayed coffee attention row [0.25, 0.06, 0.17, 0.53], the embeddings in sentence order and the image matrices gives AHW_VW_O = [-0.324, 1.916], whose sum is 1.592.",
+      "status": "ambiguous",
+      "ambiguity_note": "The question does not specify whether representation is before or after W_O; before W_O the sum differs. The displayed attention entries are rounded.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          -0.324,
+          1.916
+        ],
+        "sum": 1.592
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T1_ET_FN--q208"
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q209",
+      "week": 1,
+      "answer": "Approximately 0.53.",
+      "steps": "Without positional information, reordering permutes attention rows and columns. Coffee is row 3 and much column 4 in the original table; the entry is 0.53.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "attention": 0.53
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T1_ET_FN--q209"
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q210",
+      "week": 1,
+      "answer": "8 tokens.",
+      "steps": "The displayed score matrix has shape `8 × 8`, one row and column per token.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sequence_length": 8
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T1_ET_FN--q210"
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q211",
+      "week": 1,
+      "answer": "A, B, C and D.",
+      "steps": "The query–key dot product requires d_q = d_k, while d_v can differ. A–D have equal dimensions; E and F do not.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T1_ET_FN--q211"
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q212",
+      "week": 2,
+      "answer": "3",
+      "steps": "For query 3 the causal mask admits keys 0–3, with source-image scores 0.94, 0.41, 2.26, 2.29. Softmax preserves their order; the largest is key 3.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "key_index": 3
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T1_ET_FN--q212"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q184",
+      "week": 2,
+      "answer": "−0.675262 approximately.",
+      "steps": "The original image asks for P_5, despite the inventory transcription P_3. With dimension 2, P_5 = [sin(5), cos(5)], whose sum is sin(5)+cos(5).",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "position": 5,
+        "sum": -0.6752620891999122
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T1_Q1_NA--q184"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q185",
+      "week": 2,
+      "answer": "0.151128 approximately.",
+      "steps": "Zero-based position 3 is T, whose embedding is [0, 1]; add [sin(3), cos(3)]. The components sum to 1+sin(3)+cos(3).",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum": 0.15112751145942172
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T1_Q1_NA--q185"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q186",
+      "week": 1,
+      "answer": "Approximately -0.057922.",
+      "steps": "Using zero-based positions, T is at 3 and A at 4. From the image W_Q=diag(1,-1), W_K=[[1,0],[1,0]]; score = sin(3) × (1+sin(4)+cos(4)).",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "score": -0.05792216
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T1_Q1_NA--q186"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q187",
+      "week": 1,
+      "answer": "A: G at position 0.",
+      "steps": "For query T at zero-based index 3 the unscaled scores are approximately [0.42336, 0.19500, 0.06959, 0.02133, -0.05792, 0.18695]. G at 0 is highest; C (B), T (C), and A (D) score lower.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "scores": [
+          0.42336,
+          0.194996,
+          0.069593,
+          0.021327,
+          -0.057922,
+          0.186947
+        ]
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T1_Q1_NA--q187"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q189",
+      "week": 1,
+      "answer": "768 matrix weights, assuming the preceding question’s embedding size carries over.",
+      "steps": "From 1600 source embedding weights / 100 tokens, d_model=16. Two heads each have three `16 × 8` matrices: 2×3×16×8=768; W_O excluded.",
+      "status": "ambiguous",
+      "ambiguity_note": "The 1600-parameter embedding is stated conditionally in the preceding subquestion, not explicitly carried over; attention biases are unspecified.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "matrix_weights": 768
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T1_Q1_NA--q189"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q190",
+      "week": 2,
+      "answer": "D: T₂ × T₁.",
+      "steps": "Decoder queries have `T₂` rows and encoder keys `T₁` rows, hence QKᵀ has shape `[T₂, T₁]` per head. A reverses query/key axes; B and C are self-attention sizes.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [
+        "D"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "rows": "T2",
+        "columns": "T1"
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T1_Q1_NA--q190"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q192",
+      "week": 2,
+      "answer": "B and C are the intended choices, but B is not guaranteed.",
+      "steps": "Teacher forcing makes target positions parallel and supplies clean prefixes; switching to model-generated prefixes is possible (C), so D is false. Faster convergence (B) is empirical, not a theorem; A is likewise not guaranteed. Autoregressive factorization itself also includes teacher forcing.",
+      "status": "ambiguous",
+      "ambiguity_note": "B asserts faster convergence without conditions, and autoregressive training is not defined separately from teacher forcing.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "B",
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T1_Q1_NA--q192"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q193",
+      "week": 3,
+      "answer": "A under a capped complete sequence; A and B if the final prediction need not be fed back; A–D with a sliding window.",
+      "steps": "With BOS occupying one of 1024 full-sequence slots, at most 1023 new tokens fit, so only 512 is eligible. A model can predict one further token from a full input window, allowing 1024 generated tokens, while sliding with position IDs reset permits all offered lengths.",
+      "status": "ambiguous",
+      "ambiguity_note": "Full-sequence cap including BOS yields A; counting the final prediction without feeding it back yields A and B; sliding and resetting position IDs yields A–D.",
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "context": 1024
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2024T1_Q1_NA--q193"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q194",
+      "week": 3,
+      "answer": "A, B, D in the GPT-1 supervised-task setting.",
+      "steps": "A: pretraining starts from random model parameters. B: Radford et al. use supervised loss plus an auxiliary CLM loss; CLM is not mandatory for every fine-tuning task. C: pretrained weights are reused, not reinitialized. D: supervised downstream fine-tuning generally uses labels; unsupervised adaptation is also possible.",
+      "status": "ambiguous",
+      "ambiguity_note": "B is task-dependent: GPT-1 used auxiliary CLM in its experiments, but fine-tuning need not minimize CLM; D concerns supervised fine-tuning rather than all fine-tuning.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2024T1_Q1_NA--q194"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q195",
+      "week": 4,
+      "answer": "A, B, C and D can all be applied to translation.",
+      "steps": "Top-k and top-p are stochastic but can generate translations; beam search searches a few candidates, and exhaustive search is feasible under the stated infinite compute assumption. E is therefore false.",
+      "status": "ambiguous",
+      "ambiguity_note": "“Appropriate” is subjective and no quality or optimality criterion is specified; a conventional quality-oriented answer could prefer B and D.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2024T1_Q1_NA--q195"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q196",
+      "week": 2,
+      "answer": "A: True.",
+      "steps": "The source table is lower triangular with nonnegative rows summing to 1, so no future key receives weight. B incorrectly claims incompatibility; C overlooks the supplied matrix. Exact zeros for allowed entries can arise as rounded values.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T1_Q1_NA--q196"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q197",
+      "week": 2,
+      "answer": "0.",
+      "steps": "The sequence indexes [BOS], This, is, a, cool, idea, [EOS] from 0; the source table entry at row 4, column 2 is 0.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "attention": 0,
+        "query_index": 4,
+        "key_index": 2
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T1_Q1_NA--q197"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q198",
+      "week": 4,
+      "answer": "B: false.",
+      "steps": "BERT NSP classifies a jointly encoded sentence pair, not autoregressively generates the second sentence. A asserts that incorrect mechanism.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2024T1_Q1_NA--q198"
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q135",
+      "week": 3,
+      "answer": "D: all have the same decoder parameter count.",
+      "steps": "All share two layers and identical widths, heads and FFN dimensions; vocabulary changes only excluded embedding/output parameters. Thus A, B and C are false.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2024T1_Q2_NA--q135"
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q176",
+      "week": 1,
+      "answer": "Approximately 0.239933.",
+      "steps": "The image asks for the (0,0) element of ∂a₃/∂e₃, not z₁. For query 3, scores are [2.2, 1.1, 1.1], giving a₃,₀≈0.600333; its softmax diagonal derivative is a₃,₀(1−a₃,₀)≈0.239933.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "scores": [
+          2.2,
+          1.1,
+          1.1
+        ],
+        "derivative": 0.2399332882
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T3_ET_AN--q176"
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q177",
+      "week": 3,
+      "answer": "B: rare embeddings can be updated.",
+      "steps": "Tied output weights receive softmax gradients even for absent targets. A is false; C is not guaranteed since gradients may cancel or learning rates may be zero; D ignores this mechanism.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2024T3_ET_AN--q177"
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q178",
+      "week": 4,
+      "answer": "A and B are both deterministic.",
+      "steps": "Both fixed-width beam search and greedy decoding return the same output with fixed model and tie-breaking; C samples and D ignores A and B.",
+      "status": "ambiguous",
+      "ambiguity_note": "This is marked single-answer MCQ but both A and B are correct.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "A",
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2024T3_ET_AN--q178"
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q184",
+      "week": 1,
+      "answer": "A.",
+      "steps": "With row vectors, eᵢⱼ=(xᵢ+pᵢ)W_Q W_Kᵀ(xⱼ+pⱼ)ᵀ; expanding gives A. B has incorrect signs; C reverses query and key projections; D omits necessary transposes; E is false.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T3_ET_AN--q184"
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q191",
+      "week": 2,
+      "answer": "A and B.",
+      "steps": "A: causal decoder self-attention masks future positions. B: the Transformer replaces recurrent sequence computation and improved translation benchmarks. C is false: source and target embeddings need not be identical. D is false because A and B hold.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T3_ET_AN--q191"
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q193",
+      "week": 3,
+      "answer": "A and B.",
+      "steps": "GPT-1 uses a causal decoder and learned absolute positions. C is false: Radford et al. pretrained on BooksCorpus, rather than the later composite WebText-style mixtures; D is false.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2024T3_ET_AN--q193"
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q189",
+      "week": 1,
+      "answer": "Approximately 0.246608.",
+      "steps": "The image asks for ∂a₃/∂e₃ at (0,0). For query 3 scores are [1.65, 0.11, 1.1], so a₃,₀≈0.558244 and the corresponding softmax diagonal derivative is a₃,₀(1−a₃,₀)≈0.246608.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "scores": [
+          1.65,
+          0.11,
+          1.1
+        ],
+        "derivative": 0.2466076191
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T3_ET_FN--q189"
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q190",
+      "week": 2,
+      "answer": "A, B and C, with A dependent on interpretation.",
+      "steps": "Decoder self-attention uses a causal mask (A); the encoder includes multi-head self-attention (B); teacher forcing permits parallel training (C). D is false. Encoder self-attention need not use a causal mask, so A is not universal.",
+      "status": "ambiguous",
+      "ambiguity_note": "A does not specify decoder versus encoder self-attention or whether a padding mask is present.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T3_ET_FN--q190"
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q194",
+      "week": 3,
+      "answer": "A, B, D in the GPT-1 supervised-task setting.",
+      "steps": "A: pretraining starts from random model parameters. B: Radford et al. use supervised loss plus an auxiliary CLM loss; CLM is not mandatory for every fine-tuning task. C: pretrained weights are reused, not reinitialized. D: supervised downstream fine-tuning generally uses labels; unsupervised adaptation is also possible. E is false because A and D hold.",
+      "status": "ambiguous",
+      "ambiguity_note": "B is task-dependent: GPT-1 used auxiliary CLM in its experiments, but fine-tuning need not minimize CLM; D concerns supervised fine-tuning rather than all fine-tuning.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2024T3_ET_FN--q194"
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q196",
+      "week": 4,
+      "answer": "C: top-k sampling with k=2.",
+      "steps": "C can sample alternative tokens on different runs. A is width-one beam search and B is greedy, both deterministic under fixed tie-breaking; D ignores C. Different outputs are possible, not guaranteed on every run.",
+      "status": "ambiguous",
+      "ambiguity_note": "Literal “different each time” is not guaranteed by sampling, which can repeat; C is interpreted as allowing different outputs.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2024T3_ET_FN--q196"
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q199",
+      "week": 1,
+      "answer": "A: O(T²d).",
+      "steps": "Multiplying `Q [T,d]` by `Kᵀ [d,T]` produces `T²` dot products of length d. B is projection cost, C and D omit pairwise work, E is false.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T3_ET_FN--q199"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q275",
+      "week": 2,
+      "answer": "B: optional.",
+      "steps": "Teacher forcing is a training choice; generated-prefix training is possible. A incorrectly makes it mandatory.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T3_Q1_NA--q275"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q276",
+      "week": 2,
+      "answer": "B and D are both defensible.",
+      "steps": "B: heads can attend in different representation subspaces. D: batch normalization can replace layer normalization in Transformer variants, although it has different batch and padding behavior. A dismisses important optimization aids; C is a poor general choice because fixed one-hot positions do not naturally extrapolate; E is false.",
+      "status": "ambiguous",
+      "ambiguity_note": "Single-answer MCQ has at least two defensible choices: multi-head diversity and the possibility of using batch normalization.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T3_Q1_NA--q276"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q277",
+      "week": 2,
+      "answer": "230,656 under standard bias-free attention and two layers per stack.",
+      "steps": "Each attention block has 4×64²=16,384 weights; two encoder and two decoder layers contain 6 blocks. Four FFNs contribute 4×2×64×256; ten layer norms contribute 10×2×64. Total 98,304+131,072+1,280=230,656.",
+      "status": "ambiguous",
+      "ambiguity_note": "Attention projection biases and whether N=2 applies independently to encoder and decoder are not specified; allowing projection biases changes the count.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "conditional_count": 230656
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T3_Q1_NA--q277"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q278",
+      "week": 2,
+      "answer": "48,000 weights if the output projection has no bias.",
+      "steps": "The target projection has `64 × 750` weights, giving 48,000. A 750-element output bias would increase this to 48,750; tied weights alter independent parameter accounting.",
+      "status": "ambiguous",
+      "ambiguity_note": "Output bias and weight tying are not specified.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "weights": 48000,
+        "with_bias": 48750
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T3_Q1_NA--q278"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q279",
+      "week": 2,
+      "answer": "32,000 for the source table; 80,000 for both source and target tables.",
+      "steps": "Source embeddings use `500 × 64`=32,000 weights; target embeddings use `750 × 64`=48,000. Both tables together contain 80,000 when untied.",
+      "status": "ambiguous",
+      "ambiguity_note": "The question does not identify which of the two embedding layers to count or specify tying.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "source": 32000,
+        "target": 48000,
+        "both": 80000
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T3_Q1_NA--q279"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q280",
+      "week": 2,
+      "answer": "−1: insufficient information.",
+      "steps": "The named three probabilities sum to 0.90. The remaining 0.10 is distributed among rasithen and the other target vocabulary entries, so its individual probability cannot be inferred.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "known_sum": 0.9,
+        "remaining_mass": 0.1,
+        "requested_insufficient_code": -1
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T3_Q1_NA--q280"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q281",
+      "week": 2,
+      "answer": "0.",
+      "steps": "Batch normalization centers each feature across its sample row. Therefore the centered first row sums to zero, and division by its common standard deviation preserves the zero sum.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum": 0
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T3_Q1_NA--q281"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q282",
+      "week": 2,
+      "answer": "0.",
+      "steps": "Layer normalization centers each sample across its feature column; the common denominator preserves the zero sum of its centered first column.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum": 0
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T3_Q1_NA--q282"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q283",
+      "week": 2,
+      "answer": "Approximately 7.243 using population standard deviations.",
+      "steps": "The image asks for the sum of standard deviations, not their squares. For the three feature rows, population variances are 2/3, 74/9 and 38/3; their square roots sum to 7.242964. Epsilon 10⁻⁶ affects normalization denominators negligibly.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum_std": 7.242964420619039
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T3_Q1_NA--q283"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q284",
+      "week": 2,
+      "answer": "Approximately 10.276 using population standard deviations.",
+      "steps": "The image asks for the sum of standard deviations, not their squares. Across the three sample columns the population variances are 74/9, 38/9 and 86/3, whose square roots sum to 10.276373.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum_std": 10.276372558073538
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T3_Q1_NA--q284"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q285",
+      "week": 3,
+      "answer": "0.41.",
+      "steps": "The initial row gives P(seismology|[start])=0.41.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "probability": 0.41
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2024T3_Q1_NA--q285"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q286",
+      "week": 3,
+      "answer": "Approximately 1.637.",
+      "steps": "The six successive tokens follow the greedy path, so 1000 × 0.41 × 0.43 × 0.29 × 0.48 × 0.29 × 0.23 = 1.636882032.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "factors": [
+          0.41,
+          0.43,
+          0.29,
+          0.48,
+          0.29,
+          0.23
+        ],
+        "scaled_probability": 1.636882032
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2024T3_Q1_NA--q286"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q287",
+      "week": 3,
+      "answer": "Insufficient information; enter −1.",
+      "steps": "The row following “seismology is” is supplied only along the greedy prefix, which continues with “a”; the conditional distribution after the non-greedy “earth quake” is missing.",
+      "status": "ambiguous",
+      "ambiguity_note": "The conditional probability of study after the non-greedy earthquake prefix is absent: choosing that factor as 0 gives sequence probability 0, and choosing 1 gives 0.007052. The prescribed insufficient-information response is −1; this treats the listed “earth quake” as earthquake.",
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2024T3_Q1_NA--q287"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q288",
+      "week": 4,
+      "answer": "0.41/0.64 ≈ 0.640625.",
+      "steps": "The three largest first-row entries are 0.41, 0.14 and 0.09; renormalize 0.41/(0.41+0.14+0.09).",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "selected": [
+          0.41,
+          0.14,
+          0.09
+        ],
+        "probability": 0.640625
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2024T3_Q1_NA--q288"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q289",
+      "week": 3,
+      "answer": "A: 64 × 128.",
+      "steps": "Learned positional embeddings have one 128-dimensional row per position, giving `64 × 128`. B uses head count as width, C uses 12 positions, and D is an unrelated configuration. E is false.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "positions": 64,
+        "dimension": 128
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2024T3_Q1_NA--q289"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q290",
+      "week": 1,
+      "answer": "D: `128 × 32` for one head.",
+      "steps": "The image asks for W_Q in one head: d_model=128 and 4 heads give d_q=32. Thus W_Q is `128 × 32`; A, B, C, E have incorrect dimensions and F is false.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [
+        "D"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "shape": [
+          128,
+          32
+        ]
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T3_Q1_NA--q290"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q291",
+      "week": 2,
+      "answer": "C: 64 × 64.",
+      "steps": "The causal mask has one row per query and one column per key; the sequence length is 64. A, B and D use incorrect sequence lengths; E is false since C fits.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "rows": 64,
+        "columns": 64
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T3_Q1_NA--q291"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q292",
+      "week": 1,
+      "answer": "0.",
+      "steps": "The image asks for sum of ∂L/∂e₃, not ∂L/∂h₁. Since a₃=softmax(e₃), ∂L/∂e₃=(diag(a₃)−a₃a₃ᵀ)V[1,2]ᵀ; every column of the softmax Jacobian sums to zero, so the gradient sum is zero.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum": 0
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2024T3_Q1_NA--q292"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q293",
+      "week": 2,
+      "answer": "Approximately 0.79315.",
+      "steps": "For the first sine/cosine pair at position 2, p₀=sin(2), p₁=cos(2), hence h₀+h₁=0.1+0.2+sin(2)+cos(2).",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum": 0.7931505902785394
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2024T3_Q1_NA--q293"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q104",
+      "week": 2,
+      "answer": "D: T₂ × T₁.",
+      "steps": "Decoder query length is T₂; encoder key length is T₁. Therefore QKᵀ is `[T₂, T₁]` per head. A and C are square self-attention sizes; B reverses axes.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [
+        "D"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "rows": "T2",
+        "columns": "T1"
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2025T1_Q1_NA--q104"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q105",
+      "week": 2,
+      "answer": "D is the intended answer.",
+      "steps": "Autoregressive translation training is possible, so the assertion is false. Teacher forcing often accelerates training by parallelizing known target prefixes. A–C incorrectly label the assertion true.",
+      "status": "ambiguous",
+      "ambiguity_note": "The reason asserts a universal convergence-rate improvement; the training speed benefit does not guarantee faster convergence in every setting.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2025T1_Q1_NA--q105"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q106",
+      "week": 4,
+      "answer": "C: top-k sampling with k=2.",
+      "steps": "C can sample alternative tokens on different runs. A is width-one beam search and B is greedy, both deterministic under fixed tie-breaking; D ignores C. Different outputs are possible, not guaranteed on every run.",
+      "status": "ambiguous",
+      "ambiguity_note": "Literal “different each time” is not guaranteed by sampling, which can repeat; C is interpreted as allowing different outputs.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T1_Q1_NA--q106"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q107",
+      "week": 1,
+      "answer": "A is the conventional intended answer: an encoder–decoder RNN with a fixed context vector.",
+      "steps": "A fixed-length RNN context bottleneck makes long sentences difficult; B attention supplies access to all encoder states and C self-attention supplies direct token interactions. Neither makes long-sequence problems impossible.",
+      "status": "ambiguous",
+      "ambiguity_note": "The unqualified wording “in general, struggle” is not a precise criterion: attention RNNs and transformers also have long-context limitations.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2025T1_Q1_NA--q107"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q108",
+      "week": 3,
+      "answer": "A, B, D in the GPT-1 supervised-task setting.",
+      "steps": "A: pretraining starts from random model parameters. B: Radford et al. use supervised loss plus an auxiliary CLM loss; CLM is not mandatory for every fine-tuning task. C: pretrained weights are reused, not reinitialized. D: supervised downstream fine-tuning generally uses labels; unsupervised adaptation is also possible.",
+      "status": "ambiguous",
+      "ambiguity_note": "B is task-dependent: GPT-1 used auxiliary CLM in its experiments, but fine-tuning need not minimize CLM; D concerns supervised fine-tuning rather than all fine-tuning.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2025T1_Q1_NA--q108"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q109",
+      "week": 4,
+      "answer": "A and C.",
+      "steps": "There are |V| choices at each of 10 positions, giving |V|^10 complete sequences; exhaustive maximization is deterministic with fixed tie-breaking. B uses the wrong exponent and D confuses search with sampling.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T1_Q1_NA--q109"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q110",
+      "week": 4,
+      "answer": "A, B, C and D can all be applied to translation.",
+      "steps": "Top-k and top-p are stochastic but can generate translations; beam search searches a few candidates, and exhaustive search is feasible under the stated infinite compute assumption. E is therefore false.",
+      "status": "ambiguous",
+      "ambiguity_note": "“Appropriate” is subjective and no quality or optimality criterion is specified; a conventional quality-oriented answer could prefer B and D.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T1_Q1_NA--q110"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q111",
+      "week": 2,
+      "answer": "0 for fixed sinusoidal positions; 1,024 for a learned position table.",
+      "steps": "Source word embeddings have 100d=3,200, so d=32. A learned table for 32 positions has 32×32=1,024 parameters, whereas the original vanilla Transformer uses fixed sinusoidal encodings with no learnable positional parameters.",
+      "status": "ambiguous",
+      "ambiguity_note": "The question calls the architecture vanilla but does not specify whether position encodings are learned; Vaswani et al. use fixed sinusoids.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "model_dimension": 32,
+        "learned_position_parameters": 1024,
+        "fixed_position_parameters": 0
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2025T1_Q1_NA--q111"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q112",
+      "week": 1,
+      "answer": "3,072 matrix weights if the previous question’s embedding size carries over.",
+      "steps": "The prior subquestion gives 3,200 weights for 100 source tokens, implying d_model=32 and 4 heads of width 8. Three projection matrices per head give 4×3×32×8=3,072, excluding W_O and FFN.",
+      "status": "ambiguous",
+      "ambiguity_note": "The 3,200 embedding parameters are conditional in the preceding subquestion and not explicitly carried over; projection biases are unspecified.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "matrix_weights": 3072
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2025T1_Q1_NA--q112"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q113",
+      "week": 1,
+      "answer": "256 weights if the previous question’s embedding size carries over.",
+      "steps": "Assuming the preceding 3,200 source embedding weights and 100 words, d_model=32 and d_q=32/4=8, so one W_Q has `32 × 8`=256 entries.",
+      "status": "ambiguous",
+      "ambiguity_note": "The 3,200 embedding parameters are conditional in an earlier subquestion and not explicitly carried over.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "matrix_weights": 256
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2025T1_Q1_NA--q113"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q114",
+      "week": 2,
+      "answer": "0.",
+      "steps": "Batch normalization centers each feature row over four samples; all entries have the same denominator and their sum is zero.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum": 0
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2025T1_Q1_NA--q114"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q115",
+      "week": 2,
+      "answer": "0.",
+      "steps": "Layer normalization centers the two features within the first sample; their normalized values sum to zero.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum": 0
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2025T1_Q1_NA--q115"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q116",
+      "week": 2,
+      "answer": "Approximately 6.50047.",
+      "steps": "Standard population variances of the two feature rows are 7.25 and 14.5; the sum of their standard deviations is √7.25+√14.5. The paper image specifies epsilon 10⁻⁶.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum_std": 6.500468956499207
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2025T1_Q1_NA--q116"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q117",
+      "week": 2,
+      "answer": "11.",
+      "steps": "For each two-feature sample, population standard deviation is half the absolute feature difference: 1.5, 2.5, 4 and 3. Their sum is 11.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum_std": 11
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2025T1_Q1_NA--q117"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q118",
+      "week": 3,
+      "answer": "60/41 ≈ 1.4634",
+      "steps": "Under an empirical random-token-start distribution, the corpus contains 41 tokens and the requested phrase occurs 6 time(s); chain-rule conditionals telescope to occurrence count / 41.",
+      "status": "ambiguous",
+      "ambiguity_note": "The sampling distribution over starting positions is unspecified; the estimate assumes uniformly sampled corpus token positions.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "total_tokens": 41,
+        "sachin_count": 6,
+        "scaled_probability": 1.4634146341463414
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2025T1_Q1_NA--q118"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q119",
+      "week": 3,
+      "answer": "100/41 ≈ 2.4390",
+      "steps": "Under an empirical random-token-start distribution, the corpus contains 41 tokens and the requested phrase occurs 1 time(s); chain-rule conditionals telescope to occurrence count / 41.",
+      "status": "ambiguous",
+      "ambiguity_note": "The sampling distribution over starting positions is unspecified; the estimate assumes uniformly sampled corpus token positions.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "total_tokens": 41,
+        "phrase_count": 1,
+        "scaled_probability": 2.4390243902439024
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2025T1_Q1_NA--q119"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q120",
+      "week": 3,
+      "answer": "100/41 ≈ 2.4390",
+      "steps": "Under an empirical random-token-start distribution, the corpus contains 41 tokens and the requested phrase occurs 1 time(s); chain-rule conditionals telescope to occurrence count / 41.",
+      "status": "ambiguous",
+      "ambiguity_note": "The sampling distribution over starting positions is unspecified; the estimate assumes uniformly sampled corpus token positions.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "total_tokens": 41,
+        "phrase_count": 1,
+        "scaled_probability": 2.4390243902439024
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2025T1_Q1_NA--q120"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q121",
+      "week": 3,
+      "answer": "A: broken, under the empirical-frequency approximation.",
+      "steps": "After “Sachin has”, broken occurs twice, acted once, highest once; A has the highest empirical conditional frequency. B and C are less frequent; D disregards A. Training does not guarantee this learned ranking.",
+      "status": "ambiguous",
+      "ambiguity_note": "Model training and generalization are unspecified; corpus counts alone do not guarantee a trained model’s next-token ranking.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2025T1_Q1_NA--q121"
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q193",
+      "week": 2,
+      "answer": "A.",
+      "steps": "An additive causal logit mask is 0 at allowed positions and −∞ above the diagonal, making future softmax weights zero. B favors future positions; C and D are finite and cannot suppress logits when added.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2025T2_ET_AN--q193"
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q198",
+      "week": 4,
+      "answer": "6 tokens.",
+      "steps": "Sorted probabilities accumulate 0.20+0.15+0.14+0.11=0.60; adding 0.09 reaches 0.69 and the sixth, 0.08, reaches 0.77.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sorted": [
+          0.2,
+          0.15,
+          0.14,
+          0.11,
+          0.09,
+          0.08
+        ],
+        "cumulative_five": 0.69,
+        "cumulative_six": 0.77,
+        "count": 6
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T2_ET_AN--q198"
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q199",
+      "week": 1,
+      "answer": "Approximately 0.950 using the supplied rounded attention matrix.",
+      "steps": "The enjoy row is [0.43,0.25,0.21,0.10]. Multiply this row by H W_V W_O to get [1.331,−0.381], summing to 0.950. Recomputing full precision from the matrices gives approximately 0.95216.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          1.331,
+          -0.381
+        ],
+        "sum": 0.95
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2025T2_ET_AN--q199"
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q200",
+      "week": 1,
+      "answer": "Approximately 0.07 from the supplied table.",
+      "steps": "Without positional encodings, reordering permutes attention rows and columns; tea is row 3 and often column 4 of the supplied original matrix, so the entry is 0.07. Recomputing from the matrices gives approximately 0.06607.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "attention_rounded": 0.07,
+        "attention_exact_approx": 0.06606854
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2025T2_ET_AN--q200"
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q141",
+      "week": 4,
+      "answer": "A, B, C and D are possible; the observations do not uniquely identify the methods.",
+      "steps": "Greedy A explains repeated text; top-p C can yield modest variation, and high-temperature top-p D can produce large variation. B is also capable of accidental repetition; E is normally deterministic. Observed semantic variation is not a reliable decoder identifier.",
+      "status": "ambiguous",
+      "ambiguity_note": "“Most likely” is underdetermined without the model distribution, sample counts and priors; B can repeat by chance. D’s low p does not guarantee high diversity.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T2_ET_FN--q141"
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q142",
+      "week": 2,
+      "answer": "A, B, D and E.",
+      "steps": "Depth, learning-rate schedule, vocabulary size and normalization are model or training design choices. C, source-code font, does not change the model or learning rule.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2025T2_ET_FN--q142"
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q143",
+      "week": 4,
+      "answer": "A and B.",
+      "steps": "A retains k largest probabilities. B retains the smallest prefix reaching p (the question says exceeds). C is false because their candidate sets vary independently; D is false since nucleus size varies.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T2_ET_FN--q143"
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q145",
+      "week": 4,
+      "answer": "Approximately 0.41.",
+      "steps": "For T=2, logits become [0.75, 0.25, 0, −0.25]; exp(0.75)/sum(exp([0.75, 0.25, 0, −0.25])) ≈ 0.408701, or 0.41.",
+      "status": "ambiguous",
+      "ambiguity_note": "The prompt calls T=2 low temperature, but relative to T=1 it is high; calculation uses the stated T.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "logits": [
+          1.5,
+          0.5,
+          0,
+          -0.5
+        ],
+        "temperature": 2,
+        "probability_rounded": 0.41
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T2_ET_FN--q145"
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q146",
+      "week": 1,
+      "answer": "Approximately 1.020 using the supplied rounded attention matrix.",
+      "steps": "The tea row is [0.39,0.39,0.16,0.07]. Multiplication by H W_V W_O yields [1.272,−0.252] with sum 1.020. Recomputing full precision from the stated matrices gives approximately 1.01445.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          1.272,
+          -0.252
+        ],
+        "sum": 1.02
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2025T2_ET_FN--q146"
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q147",
+      "week": 1,
+      "answer": "Approximately 0.07 from the supplied table.",
+      "steps": "With no positional encodings reordering permutes rows and columns; the original tea-query, often-key table entry is 0.07. Recomputing the matrices gives approximately 0.06607.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "attention_rounded": 0.07,
+        "attention_exact_approx": 0.06606854
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2025T2_ET_FN--q147"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q135",
+      "week": 1,
+      "answer": "C: all input positions can be processed in parallel.",
+      "steps": "Self-attention and feed-forward operations allow parallel processing of available positions during a forward pass. A and B prescribe a recurrence or reverse order, neither required; D is not generally true for causal generation, which processes a prefix.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2025T2_Q1_NA--q135"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q136",
+      "week": 1,
+      "answer": "A: normalize attention scores into a probability distribution.",
+      "steps": "Row-wise softmax yields nonnegative weights summing to one, used to average values. B is a generic consequence rather than the attention-specific purpose; C concerns an output classifier; D is not what softmax does.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2025T2_Q1_NA--q136"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q137",
+      "week": 4,
+      "answer": "B.",
+      "steps": "GPT predicts next tokens causally; BERT uses masked-token prediction (plus NSP in original pretraining). A reverses them; C and D make both objectives identical.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T2_Q1_NA--q137"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q138",
+      "week": 4,
+      "answer": "C.",
+      "steps": "Increasing k allows more low-ranked options and potentially greater diversity and incoherence. A reverses the trend, B is not guaranteed, and D is an unsupported guarantee.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T2_Q1_NA--q138"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q139",
+      "week": 2,
+      "answer": "C.",
+      "steps": "The identity path in a residual connection facilitates gradient propagation through deep networks. A is not its general effect; B confuses residuals with batch normalization; D is false because residuals do not eliminate the role of layer normalization.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2025T2_Q1_NA--q139"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q140",
+      "week": 3,
+      "answer": "A and B.",
+      "steps": "Causal attention admits current and earlier positions (A), and predicts the next token (B). C requires future context and D describes the usual encoder-only MLM setting.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2025T2_Q1_NA--q140"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q141",
+      "week": 3,
+      "answer": "A and D.",
+      "steps": "A: masked attention parallelizes training across positions; D: pretrained weights transfer to many tasks. B incorrectly introduces recurrence; C overstates the finite context limit.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2025T2_Q1_NA--q141"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q142",
+      "week": 4,
+      "answer": "A, B, C.",
+      "steps": "BERT’s paired input begins with [CLS], separates sentences with [SEP], and adds segment embeddings. D is false: position embeddings are part of the input representation.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T2_Q1_NA--q142"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q143",
+      "week": 4,
+      "answer": "B.",
+      "steps": "Top-p retains the smallest high-probability prefix reaching p. A describes top-k, C incorrectly makes probabilities uniform, and D does not ensure diversity or include all tail tokens.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T2_Q1_NA--q143"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q144",
+      "week": 2,
+      "answer": "2.03.",
+      "steps": "At position 3, p₀=sin(3), p₁=cos(3), so h₀−h₁=(0.5−(−0.4))+sin(3)−cos(3)=2.0311125, rounded to two decimals.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "unrounded": 2.031112504660313,
+        "rounded": 2.03
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-a.json::da5004_2025T2_Q1_NA--q144"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q145",
+      "week": 4,
+      "answer": "Approximately 0.84.",
+      "steps": "Scale logits by 1/0.5, yielding [4,2,1,−2]; exp(4)/sum(exp([4,2,1,−2])) ≈ 0.842.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "logits": [
+          2,
+          1,
+          0.5,
+          -1
+        ],
+        "temperature": 0.5,
+        "probability_rounded": 0.84
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T2_Q1_NA--q145"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q146",
+      "week": 1,
+      "answer": "1.00.",
+      "steps": "The weighted vector is 0.1[1,0]+0.2[0,1]+0.5[1,1]+0.2[2,1]=[1.0,0.9]; the first component is 1.00.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          1.0,
+          0.9
+        ],
+        "first": 1.0
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2025T2_Q1_NA--q146"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q147",
+      "week": 1,
+      "answer": "No option matches the paper’s stated matrices.",
+      "steps": "From the image, Q=K=V=W¹X=[[2,4],[4,8]], and the printed formula gives softmax(QᵀK/√2)Vᵀ≈[[4,8],[4,8]]. A, B, C, and D differ substantially.",
+      "status": "ambiguous",
+      "ambiguity_note": "No listed option matches; the inventory transcription of the matrices differs from the paper image.",
+      "verified_by_code": false,
+      "verification_note": "solve_numeric.py has no registered derivation for this ID; the extracted question data do not supply a complete computable input set.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          [
+            3.99999856,
+            7.99999711
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2025T2_Q1_NA--q147"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q148",
+      "week": 1,
+      "answer": "No option matches the paper’s stated matrices.",
+      "steps": "Using the image, Q=K=V=W²X=[[2,0],[3,4]]. Row-softmax(QᵀK/√2)Vᵀ≈[[1.33952,3.33024],[0.11161,3.94419]]. A, B, C and D each differ from this result.",
+      "status": "ambiguous",
+      "ambiguity_note": "No option matches; the inventory transcription differs from the paper image.",
+      "verified_by_code": false,
+      "verification_note": "solve_numeric.py has no registered derivation for this ID; the extracted question data do not supply a complete computable input set.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          [
+            1.3395231,
+            3.33023845
+          ],
+          [
+            0.11161444,
+            3.94419278
+          ]
+        ]
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2025T2_Q1_NA--q148"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q149",
+      "week": 1,
+      "answer": "No option matches the paper’s stated matrices.",
+      "steps": "Transpose the head outputs into feature-by-token orientation, stack them, and left-multiply the image’s diagonal W_O: approximately [[2,2],[4,4],[1.33952,0.11161],[3.33024,3.94419]]. None of A–D matches.",
+      "status": "ambiguous",
+      "ambiguity_note": "No option matches the operations and matrices shown in the source image; the inventory transcription differs.",
+      "verified_by_code": false,
+      "verification_note": "solve_numeric.py has no registered derivation for this ID; the extracted question data do not supply a complete computable input set.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          [
+            1.99999928,
+            2
+          ],
+          [
+            3.99999856,
+            4
+          ],
+          [
+            1.3395231,
+            0.11161444
+          ],
+          [
+            3.33023845,
+            3.94419278
+          ]
+        ]
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2025T2_Q1_NA--q149"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q150",
+      "week": 2,
+      "answer": "32",
+      "steps": "The passage image gives X=[[1,1],[2,3],[1,2],[3,1]] and MHA(X)=[[1,2],[3,3],[2,3],[3,1]], with tokens in columns. Thus R=[[2,3],[5,6],[3,5],[6,2]], whose entries sum to 32. The transcription and printed key differ from the image.",
+      "status": "ambiguous",
+      "ambiguity_note": "The source image matrices conflict with the transcription and official key; 32 follows the visible matrices.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "R": [
+          [
+            2,
+            3
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            2
+          ]
+        ],
+        "sum": 32
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2025T2_Q1_NA--q150"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q151",
+      "week": 2,
+      "answer": "8 trainable parameters",
+      "steps": "The passage states d_model=4, and its `4 × 2` image represents two tokens with four features each. LayerNorm has one gain and one bias per feature, shared across tokens: 4+4=8.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "features": 4,
+        "parameters": 8
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2025T2_Q1_NA--q151"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q152",
+      "week": 2,
+      "answer": "8",
+      "steps": "The image specifies gamma=2σ_l, beta=1, epsilon=0, not gamma=2. For either token column, centering makes the four normalized features sum to zero; multiplying all by the same gamma for that column preserves this. Adding 1 to each of 8 entries yields sum 8.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum": 8
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2025T2_Q1_NA--q152"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q153",
+      "week": 4,
+      "answer": "216 decoder evaluations.",
+      "steps": "At t=4 exhaustive search expands 6^3=216 distinct length-3 prefixes, requiring one evaluation each absent batching.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "vocabulary": 6,
+        "prefix_length": 3,
+        "decoder_evaluations": 216
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T2_Q1_NA--q153"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q154",
+      "week": 4,
+      "answer": "7776 sequences.",
+      "steps": "Six possible tokens at each of five positions give 6^5=7776 length-5 sequences.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "vocabulary": 6,
+        "length": 5,
+        "sequences": 7776
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T2_Q1_NA--q154"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q155",
+      "week": 4,
+      "answer": "0.23/(0.33+0.23) ≈ 0.411.",
+      "steps": "The first column gives blue 0.33 and sky 0.23 as the top two; sky renormalizes to 0.23/(0.33+0.23)=0.410714. The column totals 0.92, but any omitted mass totals only 0.08 and cannot displace either token.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sky": 0.23,
+        "blue": 0.33,
+        "normalized": 0.4107142857142857
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T2_Q1_NA--q155"
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q2",
+      "week": 4,
+      "answer": "B: apple or banana.",
+      "steps": "Dividing by positive T preserves ranking; the two largest logits are 2.1 and 1.8. A omits banana, C includes a third token, D replaces banana with grape.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T3_ET_AN--q2"
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q3",
+      "week": 2,
+      "answer": "B — 1,024 parameters for each",
+      "steps": "Standard affine BatchNorm and LayerNorm each have 512 scales and 512 biases, so 2×512=1024. A omits one set for both; C and D omit one set for one layer; E assumes no affine parameters.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "features": 512,
+        "batch_norm": 1024,
+        "layer_norm": 1024
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2025T3_ET_AN--q3"
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q5",
+      "week": 4,
+      "answer": "B: use [CLS] for a classification head.",
+      "steps": "Original BERT uses final [CLS] representation and a classifier. A is a possible alternative pooling method, not the canonical BERT design; C and D do not specify the standard sequence classifier.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T3_ET_AN--q5"
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q6",
+      "week": 4,
+      "answer": "C: named entity recognition.",
+      "steps": "NER labels spans such as disease names. A is a pretraining objective, B is sentence-pair classification, and D generates text instead of tagging spans.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T3_ET_AN--q6"
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q15",
+      "week": 4,
+      "answer": "C and D.",
+      "steps": "Top-p can sample different continuations at positive T. Greedy A and width-one beam B are deterministic with fixed tie-breaking; E is not a valid positive integer beam width.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T3_ET_AN--q15"
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q17",
+      "week": 1,
+      "answer": "C; B holds for the quadratic attention products only.",
+      "steps": "FFN work is proportional to L, so C is true and D false. QKᵀ and AV are proportional to L² and quadruple, supporting B for those products; Q/K/V/output projections are linear in L. Thus the complete self-attention sublayer has both linear and quadratic work and neither factor 2 nor 4 is exact.",
+      "status": "ambiguous",
+      "ambiguity_note": "The question does not specify whether self-attention FLOPs include projection layers. If included, neither A nor B is exactly correct; if restricted to attention products, B is correct.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2025T3_ET_AN--q17"
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q20",
+      "week": 1,
+      "answer": "48 sets of three matrices, or 144 individual matrices.",
+      "steps": "There are 6×8=48 head-specific (W_Q,W_K,W_V) triples, comprising 48×3=144 individual projection matrices.",
+      "status": "ambiguous",
+      "ambiguity_note": "“Sets of ... matrices” ordinarily means 48 triples, while the question may intend the number 144 of individual matrices.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sets": 48,
+        "individual_matrices": 144
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2025T3_ET_AN--q20"
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q23",
+      "week": 3,
+      "answer": "B.",
+      "steps": "Autoregressive training models P(x[t+1]|x[1:t]). A denies dependencies; C describes bidirectional masked-token prediction.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2025T3_ET_AN--q23"
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q24",
+      "week": 3,
+      "answer": "C.",
+      "steps": "Teacher forcing conditions each prediction on the observed prefix. A instead feeds generated tokens; B ignores correctly predicted tokens; D violates causal masking.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2025T3_ET_AN--q24"
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q25",
+      "week": 2,
+      "answer": "B — ground truth is unavailable during generation, producing exposure bias",
+      "steps": "B describes the train/inference prefix mismatch. A incorrectly claims ordinary teacher forcing remains; C gives an unsupported speed reason; D confuses the mismatch with an architecture requirement.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2025T3_ET_AN--q25"
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q26",
+      "week": 2,
+      "answer": "C — masked self-attention",
+      "steps": "C suppresses attention to future decoder positions. A is a pointwise feed-forward layer, B encodes positions without forbidding future access, and D attends to source states rather than enforcing target causality.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2025T3_ET_AN--q26"
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q2",
+      "week": 2,
+      "answer": "No option is universally correct; D holds in standard evaluation mode.",
+      "steps": "With a single value per feature in training, the batch mean equals that activation, not necessarily 0, and variance is 0. B falsely says mean=0. A ignores degenerate training statistics, C does not occur automatically, and D describes evaluation with tracked running statistics, not training generally. Spatial dimensions can supply additional observations.",
+      "status": "ambiguous",
+      "ambiguity_note": "Training/evaluation mode and reduction dimensions are unspecified; B states a false mean, while D is conditional on evaluation and tracked statistics.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2025T3_ET_FN--q2"
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q3",
+      "week": 4,
+      "answer": "C: cat, dog and bird.",
+      "steps": "Positive temperature preserves ranking 3.2 > 2.9 > 1.1 > 0.5 > −0.4. A and B omit eligible tokens; D includes fish and omits cat.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T3_ET_FN--q3"
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q4",
+      "week": 4,
+      "answer": "C: A, B and C.",
+      "steps": "Cumulative 0.5+0.2=0.7 < 0.8; adding C reaches 0.85. A and D include unnecessary tokens; B omits C; E skips a higher-probability token.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "cumulative_two": 0.7,
+        "cumulative_three": 0.85
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T3_ET_FN--q4"
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q6",
+      "week": 4,
+      "answer": "B: sigmoid for each label.",
+      "steps": "Independent sigmoid outputs allow several topics at once. A changes pooling, C is token labeling, and D does not specify the required multi-label activation.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T3_ET_FN--q6"
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q8",
+      "week": 1,
+      "answer": "B and C both perform quadratic-in-T, linear-in-d matrix multiplications.",
+      "steps": "QKᵀ costs O(T²d) and AV costs O(T²d), so both B and C qualify. A row-wise softmax is O(T²), not O(T²d); D is O(Td).",
+      "status": "ambiguous",
+      "ambiguity_note": "Single-answer MCQ has two valid choices B and C under the stated complexity.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "B",
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2025T3_ET_FN--q8"
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q18",
+      "week": 1,
+      "answer": "100,000 scalar scores.",
+      "steps": "Each of 10 sentences has a `100 × 100` score matrix, so 10×100×100=100,000 scores before masking.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "scores": 100000
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-a.json::da5004_2025T3_ET_FN--q18"
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q23",
+      "week": 3,
+      "answer": "A and B.",
+      "steps": "A: the mask blocks future keys; B: identical position-wise input embeddings and deterministic computation give identical distributions. C is false: the triangular mask itself conveys order through prefix structure across layers. D is false: dense attention remains quadratic.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2025T3_ET_FN--q23"
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q24",
+      "week": 4,
+      "answer": "B and C.",
+      "steps": "Sampling from nontrivial top-k or top-p sets may vary. A has one candidate and T=0 is undefined as division but has a greedy limit; D retains the argmax under positive temperature; E is deterministic with fixed ties.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "B",
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T3_ET_FN--q24"
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q25",
+      "week": 1,
+      "answer": "C is true; B holds for the quadratic attention products, but the total self-attention sublayer does not exactly quadruple.",
+      "steps": "Score and weighted-value products scale as L²d, whereas Q/K/V/output projections scale as Ld². FFN scales linearly in L: C true, D false. A is false for the quadratic products; B is true only if self-attention FLOPs means those products alone.",
+      "status": "ambiguous",
+      "ambiguity_note": "The phrase self-attention FLOPs is underspecified: including projection FLOPs gives neither an exact factor of 2 nor 4.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "quadratic_factor": 4,
+        "ffn_factor": 2
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2025T3_ET_FN--q25"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q173",
+      "week": 1,
+      "answer": "D: scaling limits softmax saturation and vanishing gradients.",
+      "steps": "Independent unit-variance components yield dot-product variance proportional to d_k; dividing by √d_k controls scale. A is not the main motivation; B does not reduce asymptotic cost; C is guaranteed by softmax.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2025T3_Q1_NA--q173"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q174",
+      "week": 2,
+      "answer": "C — each position uses sine in even dimensions and cosine in odd dimensions",
+      "steps": "The original encoding alternates the trigonometric function by dimension, not by token-position parity. Therefore A and B incorrectly assign a single function by word position.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2025T3_Q1_NA--q174"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q175",
+      "week": 2,
+      "answer": "C — suis",
+      "steps": "At step 3 teacher forcing supplies the ground-truth token at step 2, suis. A is the wrong model prediction at step 2; B is the step-1 target; D is the step-3 target rather than the preceding input.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2025T3_Q1_NA--q175"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q176",
+      "week": 2,
+      "answer": "C — [1, 2, 0, −∞]",
+      "steps": "Query x3 can attend to positions 1, 2 and 3; future x4 receives −∞ before softmax. A leaves the future visible; B sets its logit to 0, which still has positive softmax weight; D masks a past token; E masks the allowed prefix and retains the future.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2025T3_Q1_NA--q176"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q177",
+      "week": 2,
+      "answer": "A — feed the correct preceding target token",
+      "steps": "Teacher forcing conditions on the reference prefix, independent of predicted tokens. B instead feeds predictions; C concerns initialization; D is not the procedure.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2025T3_Q1_NA--q177"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q178",
+      "week": 4,
+      "answer": "C: Σ(k=1..5) |V|^k.",
+      "steps": "Count all nonempty lengths 1 through 5. A counts only length 5; B is linear instead of exponential; D sums lengths 0 through 4.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T3_Q1_NA--q178"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q179",
+      "week": 2,
+      "answer": "A — [[−1, −1], [1, 1]]",
+      "steps": "Per-feature batch means are [2,3] and population variances are [1,1], so standardizing each column gives A. B uses a sample-variance convention instead of the standard BN batch variance; C normalizes along the wrong axis and also uses that convention; D reverses the signs.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "mean": [
+          2,
+          3
+        ],
+        "variance": [
+          1,
+          1
+        ],
+        "output": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2025T3_Q1_NA--q179"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q180",
+      "week": 4,
+      "answer": "C: (V−1)V^L.",
+      "steps": "Comparing total leaf counts, V^(L+1)−V^L=(V−1)V^L. A, B, D, E do not generally equal that difference.",
+      "status": "ambiguous",
+      "ambiguity_note": "If “additional sequences evaluated” means all new length-(L+1) strings after already evaluating length L, the number is V^(L+1), absent from the options; C assumes a difference in total leaf counts.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T3_Q1_NA--q180"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q181",
+      "week": 4,
+      "answer": "D.",
+      "steps": "After one token the retained counts are 1, 3, 10; after three, 1, 3, 10^3. A, B and C incorrectly count beam or exhaustive prefixes.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [
+        "D"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "vocabulary": 10,
+        "step1": [
+          1,
+          3,
+          10
+        ],
+        "step3": [
+          1,
+          3,
+          1000
+        ]
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T3_Q1_NA--q181"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q182",
+      "week": 4,
+      "answer": "C: nucleus sampling.",
+      "steps": "Sampling draws randomly from the nucleus. A beam, B greedy, and D exhaustive search are deterministic under fixed tie-breaking.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T3_Q1_NA--q182"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q183",
+      "week": 1,
+      "answer": "A and C.",
+      "steps": "A: heads can learn different relations. C: standard equal head width is d_model/h. B: more heads do not generally reduce memory and score matrices grow with head count. D: heads may overlap.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2025T3_Q1_NA--q183"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q184",
+      "week": 2,
+      "answer": "A, D and E",
+      "steps": "Every decoder self-attention layer is causally masked (A); original encoder and decoder both use token embeddings (D) and positional encodings (E). B denies decoder embeddings, while C denies decoder positional encoding.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "D",
+        "E"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2025T3_Q1_NA--q184"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q185",
+      "week": 4,
+      "answer": "B and D.",
+      "steps": "Beam width 2 retains both A and B; top-2 filters to both then draws one. A reverses the two roles; C claims random beam selection and least-probable filtering.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T3_Q1_NA--q185"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q186",
+      "week": 1,
+      "answer": "1152 scalar scores.",
+      "steps": "Each head produces a `[12, 12]` score matrix per sequence, hence 4×2×12² = 1152.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "batch": 4,
+        "heads": 2,
+        "sequence_length": 12,
+        "scores": 1152
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2025T3_Q1_NA--q186"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q187",
+      "week": 1,
+      "answer": "100% increase.",
+      "steps": "Float32 uses 4 bytes; 8×1000²×4/10⁶ = 32 MB and 16×1000²×4/10⁶ = 64 MB. The increase is (64−32)/32×100%.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "model_a_mb": 32,
+        "model_b_mb": 64,
+        "increase_percent": 100
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2025T3_Q1_NA--q187"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q188",
+      "week": 1,
+      "answer": "32768 parameters.",
+      "steps": "One head has W_Q shape `[512, 64]`, so 512×64 = 32768 matrix entries; bias is not part of the matrix.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "parameters": 32768,
+        "shape": [
+          512,
+          64
+        ]
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2025T3_Q1_NA--q188"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q189",
+      "week": 3,
+      "answer": "32736 targets.",
+      "steps": "Without BOS, each length-1024 sequence supplies 1023 next-token labels; 32 × 1023 = 32736.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "batch": 32,
+        "length": 1024,
+        "targets": 32736
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2025T3_Q1_NA--q189"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q190",
+      "week": 2,
+      "answer": "At most 524,800 unmasked entries per head; the number of nonzero raw scores is not determined.",
+      "steps": "For T=1024 the diagonal-inclusive lower triangle has T(T+1)/2=524800 permitted entries. Finite logits can themselves be zero, and an additive mask sets forbidden logits to −∞, not zero. If the question means post-softmax weights for finite logits, all allowed weights are positive and the count is 524800.",
+      "status": "ambiguous",
+      "ambiguity_note": "Nonzero attention scores are not determined from sequence length alone; the question does not specify post-softmax weights or assume nonzero permitted scores.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "T": 1024,
+        "allowed_entries": 524800
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2025T3_Q1_NA--q190"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q191",
+      "week": 1,
+      "answer": "589824 matrix parameters.",
+      "steps": "In the shared setup d_model=768 and the conventional concatenated value width is 768. W_O has shape `[768, 768]`, hence 768²=589824; an optional bias is not part of W_O.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "parameters": 589824,
+        "shape": [
+          768,
+          768
+        ]
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2025T3_Q1_NA--q191"
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q110",
+      "week": 1,
+      "answer": "Approximately 110 million parameters under the stated idealized sharing assumption.",
+      "steps": "Equal halves of 220 million each contain 110 million; fully tying corresponding encoder and decoder parameters stores one copy. This assumes all counted parameters can actually be shared.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "model_a_millions": 220,
+        "model_c_millions": 110
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2025T3_Q2_NA--q110"
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q113",
+      "week": 2,
+      "answer": "0",
+      "steps": "Token 4 is future relative to query 3. The causal mask changes its logit to −∞ and exp(−∞)=0, so the softmax probability is exactly 0 regardless of the other finite scores.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "token_4_probability": 0
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2025T3_Q2_NA--q113"
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q115",
+      "week": 4,
+      "answer": "E and F.",
+      "steps": "Ordinary beam search is deterministic with fixed tie-breaking; width one reduces to greedy. A–D sample and need not repeat when the candidate set has multiple tokens.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "E",
+        "F"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2025T3_Q2_NA--q115"
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q127",
+      "week": 2,
+      "answer": "D — BatchNorm 1,024 and LayerNorm 1,024",
+      "steps": "Each standard affine normalization has 512 learned scale and 512 learned shift values, totaling 1024. A omits one set for each; B omits LayerNorm bias or scale; C omits the corresponding BatchNorm set.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [
+        "D"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "features": 512,
+        "batch_norm": 1024,
+        "layer_norm": 1024
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2025T3_Q2_NA--q127"
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q128",
+      "week": 2,
+      "answer": "A — Q from decoder, K and V from encoder",
+      "steps": "The decoder sublayer produces queries, while the final encoder representations supply keys and values. B reverses these origins.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2025T3_Q2_NA--q128"
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q2",
+      "week": 2,
+      "answer": "C — prevent target-future leakage",
+      "steps": "The causal mask permits the current shifted decoder input and earlier ones; when predicting target y_t those inputs contain only y_<t. A describes padding masking, B special-token exclusion, and D is unrelated to the causal constraint.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2026T1_ET_AN--q2"
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q8",
+      "week": 4,
+      "answer": "3 tokens.",
+      "steps": "Cumulative mass reaches 0.40+0.25+0.15=0.80 with three tokens, using the standard threshold ≥ p.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "probabilities": [
+          0.4,
+          0.25,
+          0.15
+        ],
+        "p": 0.8,
+        "count": 3
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T1_ET_AN--q8"
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q10",
+      "week": 1,
+      "answer": "Factor 4.",
+      "steps": "A score matrix has T² elements, so (2T)²/T²=4 at fixed element size and head count.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "factor": 4
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T1_ET_AN--q10"
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q11",
+      "week": 4,
+      "answer": "0.46.",
+      "steps": "Scale logits to [1,0.5,0,−0.5], then exp(1)/sum(exp([1,0.5,0,−0.5])) ≈ 0.4551.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "logits": [
+          2,
+          1,
+          0,
+          -1
+        ],
+        "temperature": 2,
+        "probability_rounded": 0.46
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T1_ET_AN--q11"
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q14",
+      "week": 2,
+      "answer": "C — position provides a structural and distance-sensitive inductive bias",
+      "steps": "C is the intended rationale: explicit encodings make relative and absolute position information accessible. A is unrelated to KV memory reduction; B reverses causality; D invents an error in dot-product attention.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2026T1_ET_AN--q14"
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q2",
+      "week": 1,
+      "answer": "262144 parameters.",
+      "steps": "For Q, K and V, 3×4×256×64 = 196608 entries; W_O has 256×256 = 65536. Total 262144; biases are excluded.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "qkv": 196608,
+        "output": 65536,
+        "total": 262144
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T1_ET_FN--q2"
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q3",
+      "week": 1,
+      "answer": "4718592 parameters.",
+      "steps": "The original T5 feed-forward block has two matrices `[768, 3072]` and `[3072, 768]`; 2×768×3072=4718592 without biases.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "parameters": 4718592
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T1_ET_FN--q3"
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q4",
+      "week": 1,
+      "answer": "6400 elements.",
+      "steps": "The final encoder tensor retains padded shape `[5, 20, 64]`; 5×20×64 = 6400.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "shape": [
+          5,
+          20,
+          64
+        ],
+        "elements": 6400
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T1_ET_FN--q4"
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q6",
+      "week": 4,
+      "answer": "C: randomly sample another corpus sentence.",
+      "steps": "Original BERT uses actual next sentences for half the pairs and random corpus sentences for the other half. A uses the preceding sentence, B reverses order, D masks verbs.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T1_ET_FN--q6"
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q12",
+      "week": 4,
+      "answer": "A, B, D with the usual inclusive causal convention.",
+      "steps": "BERT attention is bidirectional and MLM predicts masked tokens; GPT uses causal next-token prediction. B is understood to include the current position. C reverses the model types.",
+      "status": "ambiguous",
+      "ambiguity_note": "B says “only to previous tokens” literally excludes the current position, although standard GPT causal self-attention includes it; B is accepted in the conventional intended sense.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T1_ET_FN--q12"
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q15",
+      "week": 4,
+      "answer": "A, B and D.",
+      "steps": "With identical scoring and stopping, width-one beam equals greedy; greedy can degenerate into repetition; nucleus size adapts to the distribution while k is fixed. C falsely guarantees grammar.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T1_ET_FN--q15"
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q16",
+      "week": 4,
+      "answer": "C, and B under the intended conventional formatting.",
+      "steps": "Frozen BERT supplies fixed features to a trainable linear/softmax head (C). Pairing question with each candidate (B) is a standard construction, but not the only possible format. A updates the pretrained model, contradicting feature-based freezing; D describes generation.",
+      "status": "ambiguous",
+      "ambiguity_note": "B says the input “must” use this pair format, but feature-based multiple-choice systems can use other representations; C alone is strictly necessary among these choices.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "B",
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T1_ET_FN--q16"
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q17",
+      "week": 4,
+      "answer": "A: BERT 150, GPT 90.",
+      "steps": "Per layer, unrestricted attention has 5²=25 links and causal attention has 5×6/2=15. Across six layers these are 150 and 90. B swaps totals; C and D equate masks; E and F omit pairwise links.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "length": 5,
+        "layers": 6,
+        "bert": 150,
+        "gpt": 90
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T1_ET_FN--q17"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q2",
+      "week": 1,
+      "answer": "C: `[T, d_k]`.",
+      "steps": "Q=XW_Q has shapes `[T,d_model]` × `[d_model,d_k]` = `[T,d_k]`. A and B transpose dimensions; D incorrectly retains d_model in general.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "shape": [
+          "T",
+          "d_k"
+        ]
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T1_Q1_NA--q2"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q3",
+      "week": 1,
+      "answer": "C.",
+      "steps": "The dot-product variance grows with d_k, and √d_k scaling prevents excessively saturated softmax and tiny gradients. A: scalar scaling changes no shape; B: adds/removes no learned parameters; D: does not normalize vector lengths.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T1_Q1_NA--q3"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q4",
+      "week": 1,
+      "answer": "C: `[50, 512]`.",
+      "steps": "Every standard encoder layer preserves sequence length and model width. A pools tokens, B treats layers as tokens, and D concatenates layer outputs, none of which is specified.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "shape": [
+          50,
+          512
+        ]
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T1_Q1_NA--q4"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q5",
+      "week": 2,
+      "answer": "C — no source causal mask; source padding may be masked",
+      "steps": "The complete source is available to cross-attention, but padding keys can be excluded. A and B incorrectly impose target-style causality on source positions; D ignores source padding masks.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2026T1_Q1_NA--q5"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q6",
+      "week": 4,
+      "answer": "B.",
+      "steps": "Single-sentence input normally assigns the same learned segment-A embedding to every token. A disables an active embedding, C invents a split, and D incorrectly reinitializes parameters.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T1_Q1_NA--q6"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q7",
+      "week": 4,
+      "answer": "B.",
+      "steps": "For a unique maximum, softmax(z/T) converges to [1,0,0] as T→0+. A is the high-temperature limit, C is false, D confuses numerical implementation with the mathematical limit.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T1_Q1_NA--q7"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q8",
+      "week": 4,
+      "answer": "C: final [CLS] hidden state.",
+      "steps": "BERT’s standard sequence classification head uses [CLS]. A is alternative pooling, B uses [SEP], D concatenates variable numbers of vectors.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T1_Q1_NA--q8"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q9",
+      "week": 1,
+      "answer": "A, B and D.",
+      "steps": "A and D follow from separate learned head projections and attention patterns. B is a useful mathematical analogy: parallel learned transformations extract different features, although heads are dynamic attention operators rather than convolution kernels. C is false: standard fixed total width gives the same projection parameter count as one head.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T1_Q1_NA--q9"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q10",
+      "week": 1,
+      "answer": "A, C and D, with d_v=d_k under the given assumption.",
+      "steps": "A: `[T,d_k]` times `[d_k,T]` gives `[T,T]`. D: each entry is a query–key affinity. Softmax is row-wise, so B is false. C: multiplying `[T,T]` by V yields `[T,d_k]`, equivalently `[T,d_v]` here with d_v=d_k.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [
+        "A",
+        "C",
+        "D"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "output_shape": [
+          "T",
+          "d_k"
+        ],
+        "score_shape": [
+          "T",
+          "T"
+        ]
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T1_Q1_NA--q10"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q11",
+      "week": 2,
+      "answer": "B and D",
+      "steps": "Decoder hidden states provide Q (B), and decoder queries use encoder keys/values to select source information (D). A incorrectly sources K and V from the decoder; C describes self-attention rather than encoder–decoder attention.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2026T1_Q1_NA--q11"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q12",
+      "week": 2,
+      "answer": "cos(3/10000^(4/128)) ≈ −0.627927",
+      "steps": "The sixth element has zero-based coordinate 5=2×2+1, so the cosine formula uses pair index 2 and exponent 4/128. The wording calls the coordinate i=5 although i denotes the pair index in the formula; interpreting i=5 as the pair index would instead address coordinate 11.",
+      "status": "ambiguous",
+      "ambiguity_note": "The question uses i=5 for a vector coordinate although the equations use i as the sine/cosine pair index; the sixth-element interpretation is given.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "position": 3,
+        "coordinate": 5,
+        "pair_index": 2,
+        "value": -0.6279266524418035
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2026T1_Q1_NA--q12"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q13",
+      "week": 1,
+      "answer": "1.93.",
+      "steps": "For h₁=(1,0), identity U and W give s+h₁=(2,2), and v=(1,1) gives score 2 tanh(2)≈1.928055, rounded to two decimals.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "score": 1.9280551601516338,
+        "rounded": 1.93
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T1_Q1_NA--q13"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q14",
+      "week": 1,
+      "answer": "0.35.",
+      "steps": "The three additive scores are approximately 1.928055, 1.756649, 1.959082. Applying exp(score₁)/Σ exp(scoreⱼ) gives 0.347948, rounded only at the end.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "scores": [
+          1.9280551601516338,
+          1.7566489096424953,
+          1.9590823337625474
+        ],
+        "alpha": [
+          0.34794798617397626,
+          0.29313895714981564,
+          0.3589130566762082
+        ],
+        "rounded": 0.35
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T1_Q1_NA--q14"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q15",
+      "week": 1,
+      "answer": "1.36.",
+      "steps": "With h₁=(1,0), h₂=(0,1), h₃=(1,1), c=(α₁+α₃, α₂+α₃), whose component sum is 1+α₃=1.358913.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "alpha": [
+          0.34794798617397626,
+          0.29313895714981564,
+          0.3589130566762082
+        ],
+        "context": [
+          0.7068610428501845,
+          0.6520520138260238
+        ],
+        "sum": 1.3589130566762082
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T1_Q1_NA--q15"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q16",
+      "week": 3,
+      "answer": "A",
+      "steps": "Token matrix `[40000, 768]`: 40000 × 768 = 30720000; B adds dimensions, C is position count and D multiplies unrelated dimensions.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "parameters": 30720000
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2026T1_Q1_NA--q16"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q17",
+      "week": 3,
+      "answer": "B",
+      "steps": "Position matrix `[512, 768]`: 512 × 768 = 393216; A adds dimensions, C and D have incorrect decimal scale.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "parameters": 393216
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2026T1_Q1_NA--q17"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q18",
+      "week": 3,
+      "answer": "D (147,456) without Q/K/V biases; 147,648 with biases, absent from the options.",
+      "steps": "Each of Q, K and V has a 768×64 weight matrix. Their 147,456 weights become 147,648 parameters if three 64-element bias vectors are included.",
+      "status": "ambiguous",
+      "ambiguity_note": "Bias-free Q/K/V projections yield D, 147,456; biased Q/K/V projections yield 147,648, which is not listed. The prompt does not specify the bias convention.",
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [
+        "D"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "head_width": 64,
+        "weights_only": 147456,
+        "with_biases": 147648
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2026T1_Q1_NA--q18"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q19",
+      "week": 3,
+      "answer": "C",
+      "steps": "The concatenated heads have width 768; output weights `[768, 768]` contain 589824. A, B and D use smaller incorrect dimensions.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "parameters": 589824
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2026T1_Q1_NA--q19"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q20",
+      "week": 3,
+      "answer": "C",
+      "steps": "Two weight matrices plus biases: 2 × 768 × 3072 + 3072 + 768 = 4722432. A omits a matrix; B omits biases; D doubles the count.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "parameters": 4722432
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2026T1_Q1_NA--q20"
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q2",
+      "week": 1,
+      "answer": "C: `[T, 512]`.",
+      "steps": "Under standard equal-width heads d_v=512/8=64; concatenating eight `[T,64]` outputs gives `[T,512]`. A is one head, B assumes each head has width 512, and D confuses head count with concatenated width.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "head_width": 64,
+        "shape": [
+          "T",
+          512
+        ]
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T1_Q2_NA--q2"
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q3",
+      "week": 4,
+      "answer": "C.",
+      "steps": "Unchanged selected tokens reduce pretraining/fine-tuning input mismatch and encourage contextual representations of ordinary tokens. A has no softmax saving; B is related but less complete; D is not the stated motivation.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T1_Q2_NA--q3"
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q4",
+      "week": 4,
+      "answer": "B.",
+      "steps": "GPT’s causal mask blocks right-hand context, unlike BERT MLM. A cites size, C incorrectly denies positional embeddings, and D incorrectly makes activation choice decisive.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T1_Q2_NA--q4"
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q8",
+      "week": 1,
+      "answer": "A and B.",
+      "steps": "The original encoder has unmasked multi-head self-attention and position-wise FFNs. C belongs to decoder cross-attention, and D describes the causal masked decoder self-attention, not the standard encoder.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T1_Q2_NA--q8"
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q9",
+      "week": 1,
+      "answer": "A, C and D.",
+      "steps": "A: full self-attention connects arbitrary positions in one layer, versus O(T) maximum recurrent path. C: token operations can run in parallel at training. D: Q/K/V are projections of layer inputs, initially embeddings. B is false: teacher-forced transformer training parallelizes sequence positions.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "C",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T1_Q2_NA--q9"
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q12",
+      "week": 2,
+      "answer": "3/√5 ≈ 1.341641",
+      "steps": "Sample 2 is [1,3,5,7], with mean 4 and population variance (9+1+1+9)/4=5. Its largest centered value is 3, so its maximum normalized value is 3/√5. The zero variance of sample 3 is irrelevant to this question.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "mean": 4,
+        "variance": 5,
+        "maximum": 1.3416407864998738
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2026T1_Q2_NA--q12"
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q13",
+      "week": 3,
+      "answer": "B: false.",
+      "steps": "All future entries are zero, but row t=5 sums to 0.90, not 1. A is false for an attention probability matrix; C is false because the supplied entries suffice.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "row_5_sum": 0.9
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2026T1_Q2_NA--q13"
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q14",
+      "week": 1,
+      "answer": "0.2.",
+      "steps": "In the provided attention matrix, row t=5 (data) and column 2 (science) contain 0.2. The row sums to 0.9, so the supplied matrix is not a valid normalized attention distribution, but its stated entry is unambiguous.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "row": 5,
+        "column": 2,
+        "weight": 0.2
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T1_Q2_NA--q14"
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q17",
+      "week": 4,
+      "answer": "0.62.",
+      "steps": "Top two are B=0.4 and D=0.25; normalize P(B)=0.4/0.65≈0.61538.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "B": 0.4,
+        "D": 0.25,
+        "probability": 0.6153846153846154
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T1_Q2_NA--q17"
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q18",
+      "week": 4,
+      "answer": "648448 parameters.",
+      "steps": "Token, position and segment tables contribute 5000×128 + 64×128 + 2×128 = 640000+8192+256=648448.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "token": 640000,
+        "position": 8192,
+        "segment": 256,
+        "total": 648448
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T1_Q2_NA--q18"
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q2",
+      "week": 1,
+      "answer": "C.",
+      "steps": "In an original Transformer encoder, each unpadded position can attend bidirectionally, while causal masking is used in the decoder. Thus assertion true, reason false; A and B require true reason, and D and E falsely reject the assertion.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T2_ET_AN--q2"
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q3",
+      "week": 2,
+      "answer": "A is incorrect under the usual geometric interpretation; D is also false if read literally.",
+      "steps": "For sinusoidal encodings the dot product is a sum of cosines of relative offsets, oscillatory and potentially negative, so A is false. B follows from sin²+cos²=1 per pair and C from orthogonal one-hot vectors. D is true only in the restricted sense that raw one-hot distances or dot products do not encode separation: the indices can be decoded and subtracted, so the absolute claim of mathematical incapacity is false.",
+      "status": "ambiguous",
+      "ambiguity_note": "This single-answer MCQ has two false statements under a literal reading: one-hot indices can represent and recover relative distance even though their raw pairwise geometry does not.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "A",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2026T2_ET_AN--q3"
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q4",
+      "week": 4,
+      "answer": "A: beam search.",
+      "steps": "A retains a small set of high-scoring partial sequences. B expands exponentially, C samples a token at a time instead of explicitly tracking competing sequences, and D commits to one.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T2_ET_AN--q4"
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q5",
+      "week": 4,
+      "answer": "B.",
+      "steps": "BERT adds learned segment/type embeddings to token and positional embeddings. A invents separate encoders, C confuses [MASK] with [SEP], D wrongly assigns attention heads by segment.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T2_ET_AN--q5"
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q6",
+      "week": 2,
+      "answer": "3 if ε=0; otherwise 1+2/√(1+ε)",
+      "steps": "The image gives sample 3 as [7,5]. Its mean is 6 and population variance is 1; its first normalized entry is 1/√(1+ε), followed by gain 2 and bias 1. The standard ε=0 simplification gives 3.",
+      "status": "ambiguous",
+      "ambiguity_note": "The question does not specify epsilon; its exact output depends on epsilon in standard LayerNorm.",
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "mean": 6,
+        "variance": 1,
+        "output_if_epsilon_zero": 3
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2026T2_ET_AN--q6"
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q9",
+      "week": 4,
+      "answer": "3 tokens.",
+      "steps": "Softmax logits give approximately [0.5072, 0.2519, 0.1382, 0.0686, 0.0341]; first two total 0.7590 < 0.8, first three 0.8973 ≥ 0.8.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "logits": [
+          2.5,
+          1.8,
+          1.2,
+          0.5,
+          -0.2
+        ],
+        "p": 0.8,
+        "count": 3
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T2_ET_AN--q9"
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q10",
+      "week": 4,
+      "answer": "0.565.",
+      "steps": "Three candidates survive top-p. The largest renormalized probability is exp(2.5)/(exp(2.5)+exp(1.8)+exp(1.2))≈0.565254.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "candidate_logits": [
+          2.5,
+          1.8,
+          1.2
+        ],
+        "probability": 0.5652537086405652
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T2_ET_AN--q10"
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q18",
+      "week": 1,
+      "answer": "No option matches: W_Q x_m = [5, 3, −1, −1]ᵀ.",
+      "steps": "The displayed x₁=(2,1,3,2) and W_Q rows yield (2+3, 1+2, 2−3, 1−2)=(5,3,−1,−1). A, B, C and D all differ, including C with 13 rather than 3.",
+      "status": "ambiguous",
+      "ambiguity_note": "No correct option: C incorrectly uses 13 for the second component.",
+      "verified_by_code": false,
+      "verification_note": "solve_numeric.py has no registered derivation for this ID; the extracted question data do not supply a complete computable input set.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "x_m": [
+          2,
+          1,
+          3,
+          2
+        ],
+        "product": [
+          5,
+          3,
+          -1,
+          -1
+        ]
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T2_ET_AN--q18"
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q19",
+      "week": 1,
+      "answer": "No option matches: W_K x_n = [4, 6, −2, −2]ᵀ.",
+      "steps": "The displayed x₃=(1,3,2,4) yields (1+3, 2+4, 1−3, 2−4)=(4,6,−2,−2). Each of A, B, C and D differs; B incorrectly has 16 in its second component.",
+      "status": "ambiguous",
+      "ambiguity_note": "No correct option: B incorrectly uses 16 for the second component.",
+      "verified_by_code": false,
+      "verification_note": "solve_numeric.py has no registered derivation for this ID; the extracted question data do not supply a complete computable input set.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "x_n": [
+          1,
+          3,
+          2,
+          4
+        ],
+        "product": [
+          4,
+          6,
+          -2,
+          -2
+        ]
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T2_ET_AN--q19"
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q2",
+      "week": 1,
+      "answer": "262144 parameters.",
+      "steps": "For Q, K and V, 3×4×256×64 = 196608 entries; W_O has 256×256 = 65536. Total 262144; biases excluded.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "qkv": 196608,
+        "output": 65536,
+        "total": 262144
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T2_ET_FN--q2"
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q3",
+      "week": 1,
+      "answer": "4718592 parameters.",
+      "steps": "Original T5 uses two FFN matrices `[768,3072]` and `[3072,768]`: 2×768×3072=4718592, ignoring bias.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "parameters": 4718592
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T2_ET_FN--q3"
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q4",
+      "week": 1,
+      "answer": "6400 elements.",
+      "steps": "The encoder output is `[5,20,64]`, preserving batch, padded sequence length and hidden width: 5×20×64=6400.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "shape": [
+          5,
+          20,
+          64
+        ],
+        "elements": 6400
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T2_ET_FN--q4"
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q6",
+      "week": 4,
+      "answer": "C: randomly sample another corpus sentence.",
+      "steps": "Original BERT uses actual next sentences for half the pairs and random corpus sentences for the other half. A uses the preceding sentence, B reverses order, D masks verbs.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T2_ET_FN--q6"
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q12",
+      "week": 4,
+      "answer": "A, B, D with the usual inclusive causal convention.",
+      "steps": "BERT attention is bidirectional and MLM predicts masked tokens; GPT uses causal next-token prediction. B is understood to include the current position. C reverses the model types.",
+      "status": "ambiguous",
+      "ambiguity_note": "B says “only to previous tokens” literally excludes the current position, although standard GPT causal self-attention includes it; B is accepted in the conventional intended sense.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T2_ET_FN--q12"
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q15",
+      "week": 4,
+      "answer": "A, B and D.",
+      "steps": "With identical scoring and stopping, width-one beam equals greedy; greedy can degenerate into repetition; nucleus size adapts to the distribution while k is fixed. C falsely guarantees grammar.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T2_ET_FN--q15"
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q16",
+      "week": 4,
+      "answer": "C, and B under the intended conventional formatting.",
+      "steps": "Frozen BERT supplies fixed features to a trainable linear/softmax head (C). Pairing question with each candidate (B) is a standard construction, but not the only possible format. A updates the pretrained model, contradicting feature-based freezing; D describes generation.",
+      "status": "ambiguous",
+      "ambiguity_note": "B says the input “must” use this pair format, but feature-based multiple-choice systems can use other representations; C alone is strictly necessary among these choices.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "B",
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T2_ET_FN--q16"
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q17",
+      "week": 4,
+      "answer": "A: BERT 150, GPT 90.",
+      "steps": "Per layer, unrestricted attention has 5²=25 links and causal attention has 5×6/2=15. Across six layers these are 150 and 90. B swaps totals; C and D equate masks; E and F omit pairwise links.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "length": 5,
+        "layers": 6,
+        "bert": 150,
+        "gpt": 90
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T2_ET_FN--q17"
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q2",
+      "week": 1,
+      "answer": "A and C.",
+      "steps": "In Bahdanau attention the decoder state scores encoder states and the context is their weighted sum. B is false because weights run over encoder states, not all decoder states; D is false because those states are retrieved throughout decoding.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T2_Q1_NA--q2"
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q3",
+      "week": 1,
+      "answer": "4.",
+      "steps": "The original PNG uses QᵀK, consistent with tokens as columns of X; Q=K=X because W_Q=W_K=I. Thus QᵀK=[[1,0,1],[0,1,1],[1,1,2]] and its trace is 1+1+2=4. The transcription incorrectly writes QKᵀ.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "matrix": [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ]
+        ],
+        "trace": 4
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T2_Q1_NA--q3"
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q4",
+      "week": 1,
+      "answer": "A: {learn, easy}.",
+      "steps": "The source image specifies column-token QᵀK=[[1,0,1],[0,1,1],[1,1,2]]. The indicated pairs have scores A=0; B=C=D=E=1. Scaling by √2 does not change the ranking, and within the learn query A also has the smallest row-softmax weight.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "solve_numeric.py has no registered derivation for this ID; the extracted question data do not supply a complete computable input set.",
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "raw_scores": {
+          "A": 0,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "E": 1
+        }
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T2_Q1_NA--q4"
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q5",
+      "week": 1,
+      "answer": "144 additional scores.",
+      "steps": "Every head computes 6²=36 scores per sequence; four additional heads therefore add (8−4)×36=144.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sequence_length": 6,
+        "additional_heads": 4,
+        "additional_scores": 144
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T2_Q1_NA--q5"
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q6",
+      "week": 1,
+      "answer": "32768 elements.",
+      "steps": "The last encoder output retains shape `[8,32,128]`, independent of the number of layers and heads; 8×32×128=32768.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "shape": [
+          8,
+          32,
+          128
+        ],
+        "elements": 32768
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w1-b.json::da5004_2026T2_Q1_NA--q6"
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q7",
+      "week": 2,
+      "answer": "8,128 entries per `128 × 128` causal mask",
+      "steps": "Only the strict upper triangle is masked, giving T(T−1)/2=128×127/2=8128; vocabulary size and hidden width do not change this count. A shared mask is counted once, not once per head.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "T": 128,
+        "masked_entries": 8128
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2026T2_Q1_NA--q7"
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q8",
+      "week": 2,
+      "answer": "256",
+      "steps": "There are 512/2=256 sine–cosine pairs, each with squared norm sin²θ+cos²θ=1. Their total squared Euclidean norm is 256, independent of position.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "depends on figure, no code path",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "dimension": 512,
+        "squared_norm": 256
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2026T2_Q1_NA--q8"
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q9",
+      "week": 2,
+      "answer": "B — statement 1 false; statement 2 true",
+      "steps": "Teacher forcing feeds preceding ground-truth target tokens, not output from a larger teacher model. It prevents feeding a wrong prediction into the next training step, reducing within-prefix compounding. Thus A, C and D all misclassify at least one statement.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2026T2_Q1_NA--q9"
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q10",
+      "week": 3,
+      "answer": "0.18.",
+      "steps": "From the tree: P(you)P(eat|you)P(apples|you,eat)=0.4×0.5×0.9=0.18.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "factors": [
+          0.4,
+          0.5,
+          0.9
+        ],
+        "joint_probability": 0.18
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2026T2_Q1_NA--q10"
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q11",
+      "week": 3,
+      "answer": "C if the unshown B path has probability below 0.09; B if its probability exceeds 0.09.",
+      "steps": "The displayed paths give A=.5×.3×.4=.06, C=.5×.3×.6=.09, D=.4×.4×.5=.08, E=.4×.4×.4=.064. B begins with an unshown apples branch whose start mass can be up to .1; its later conditionals are unspecified.",
+      "status": "ambiguous",
+      "ambiguity_note": "If the omitted B path has probability 0, C wins at 0.09; if P(apples first)=0.1 and both subsequent B conditionals are 1, B wins at 0.1. The partial tree permits both completions.",
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [
+        "B",
+        "C"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "A": 0.06,
+        "C": 0.09,
+        "D": 0.08,
+        "E": 0.064
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2026T2_Q1_NA--q11"
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q12",
+      "week": 3,
+      "answer": "Insufficient information; enter −1.",
+      "steps": "P(apples|like) marginalizes over all preceding first tokens; the tree is partial and omits possible contexts and their probabilities.",
+      "status": "ambiguous",
+      "ambiguity_note": "If no omitted first token can precede like, P(apples|like)=0.274/0.46≈0.595652; if an omitted first token has mass 0.1 and both relevant conditionals are 1, the ratio is 0.374/0.56≈0.667857. The prescribed answer for missing information is −1.",
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2026T2_Q1_NA--q12"
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q13",
+      "week": 3,
+      "answer": "A, B and E.",
+      "steps": "GPT decoder blocks contain causal self-attention, positionwise FFN, residual additions and layer normalization. C is encoder–decoder cross-attention, absent in GPT-1; D is recurrent, not a GPT block.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "B",
+        "E"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2026T2_Q1_NA--q13"
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q14",
+      "week": 4,
+      "answer": "historic castle was majestic but abandoned; probability 0.005.",
+      "steps": "Select column maxima 0.38, 0.40, 0.50, 0.35, 0.45, 0.40; their product is 0.004788, rounded to 0.005.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "maxima": [
+          0.38,
+          0.4,
+          0.5,
+          0.35,
+          0.45,
+          0.4
+        ],
+        "probability": 0.004788,
+        "rounded": 0.005
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T2_Q1_NA--q14"
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q15",
+      "week": 4,
+      "answer": "400 decoder evaluations.",
+      "steps": "Under general prefix-conditioned exhaustive decoding, evaluate each prefix of lengths 0–3: 1+7+49+343=400; a batched or prefix-independent implementation can use fewer calls.",
+      "status": "ambiguous",
+      "ambiguity_note": "One unbatched model call per prefix gives 400; batching by depth gives 4 forward calls, and reusing the supplied prefix-invariant table requires 0 model calls. The question does not define a decoder run or whether the table may be reused.",
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "vocabulary": 7,
+        "prefix_counts": [
+          1,
+          7,
+          49,
+          343
+        ],
+        "total": 400
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T2_Q1_NA--q15"
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q16",
+      "week": 4,
+      "answer": "0.412.",
+      "steps": "At t=4 the top three are 0.35, 0.30, 0.20; normalize 0.35/0.85≈0.411765.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "top3": [
+          0.35,
+          0.3,
+          0.2
+        ],
+        "probability": 0.4117647058823529
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T2_Q1_NA--q16"
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q17",
+      "week": 4,
+      "answer": "5 beams.",
+      "steps": "The target prefix products through t=4 are 0.30, 0.12, 0.06, 0.018. Under the given prefix-invariant table, its global ranks are 2, 2, 2, 5, so width 5 retains it at each step.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": true,
+      "verification_note": "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.",
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "prefix_products": [
+          0.3,
+          0.12,
+          0.06,
+          0.018
+        ],
+        "prefix_ranks": [
+          2,
+          2,
+          2,
+          5
+        ],
+        "beam_width": 5
+      },
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T2_Q1_NA--q17"
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q2",
+      "week": 2,
+      "answer": "FHMPR",
+      "steps": "In the diagram, F and H are the two encoder residual-plus-normalization blocks; M, P and R follow the decoder masked-attention, cross-attention and feed-forward blocks respectively. Sorting gives FHMPR.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2026T2_Q2_NA--q2"
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q3",
+      "week": 2,
+      "answer": "C — masked multi-head self-attention",
+      "steps": "L is the first decoder sublayer receiving shifted target representations as Q, K and V; its residual path joins M. A is positional encoding at D, B is the later feed-forward block Q, D is cross-attention O, and E is the output projection S.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2026T2_Q2_NA--q3"
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q4",
+      "week": 2,
+      "answer": "A, B and F",
+      "steps": "The diagram has two positional encodings B and D, two feed-forward blocks G and Q, and five Add & Norm blocks F,H,M,P,R. C appears once at L; D once at O. E is not depicted as a tokenizer (A and C are embedding blocks).",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "B",
+        "F"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2026T2_Q2_NA--q4"
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q5",
+      "week": 2,
+      "answer": "A and D",
+      "steps": "Post-softmax multiplication zeros future weights but leaves allowed weights divided by the sum over all logits, including future logits. Changing future keys therefore changes earlier outputs, violating autoregressive independence (A); B overlooks this indirect dependence. Allowed weights are at most, not at least, their pre-softmax-masked counterparts, so C is false. In the final row all positions are allowed, so both methods coincide (D).",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "A",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w2-b.json::da5004_2026T2_Q2_NA--q5"
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q8",
+      "week": 3,
+      "answer": "B: separate premise and hypothesis.",
+      "steps": "GPT-1 places a delimiter between the two text segments. A softmax is applied by the classification head; C uses a separate end token; D the delimiter does not initialize parameters.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2026T2_Q2_NA--q8"
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q9",
+      "week": 3,
+      "answer": "D.",
+      "steps": "Causal attention permits the final representation to incorporate all earlier tokens. A overstates positional embeddings, B denies attention, and C confuses classification with teacher forcing.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "verification_note": "Non-numeric response; no numeric checker path applies.",
+      "answer_options": [
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w3.json::da5004_2026T2_Q2_NA--q9"
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q10",
+      "week": 4,
+      "answer": "A is the intended general trend.",
+      "steps": "T=5 flattens softmax compared with T=1, so cumulative mass is less concentrated and the nucleus cannot shrink; B reverses the effect, C describes truncation rather than scaling, and D ignores the changed cumulative mass.",
+      "status": "ambiguous",
+      "ambiguity_note": "The nucleus need not strictly expand: for some p and logits its size remains unchanged; no distribution or p is specified, so A is not universally true.",
+      "verified_by_code": false,
+      "verification_note": "No numeric checker path; answer remains explicitly ambiguous.",
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {},
+      "author": "terra",
+      "code_ref": "solutions-terra-w4.json::da5004_2026T2_Q2_NA--q10"
+    }
+  ]
+}

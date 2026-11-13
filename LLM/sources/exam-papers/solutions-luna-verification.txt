@@ -1,2 +1,44 @@
 seed=42
-in_scope_count=0
+adjudicated_ids=23
+da5004_2024T1_ET_AN--q157 computed={"admissible_scores": [0.94, 0.41, 2.26, 2.29], "key_index": 3, "one_based_position": 4, "zero_based_query": 3} verdict=code_wrong_assumption MATCH
+da5004_2024T1_ET_FN--q212 computed={"admissible_scores": [0.94, 0.41, 2.26, 2.29], "key_index": 3, "one_based_position": 4, "zero_based_query": 3} verdict=code_wrong_assumption MATCH
+da5004_2024T1_ET_AN--q149 computed={"fixed_complete_sequence_emitted": 1336, "fixed_complete_sequence_options": ["A", "B", "C", "D"], "fixed_last_sample_not_fed_back_emitted": 1337, "fixed_last_sample_options": ["A", "B", "C", "D"], "sliding_options": ["A", "B", "C", "D", "E"]} verdict=ambiguous MATCH
+da5004_2024T1_ET_FN--q202 computed={"fixed_complete_sequence_emitted": 312, "fixed_complete_sequence_options": ["A", "B"], "fixed_last_sample_not_fed_back_emitted": 313, "fixed_last_sample_options": ["A", "B"], "sliding_options": ["A", "B", "C", "D"]} verdict=ambiguous MATCH
+da5004_2024T1_Q1_NA--q193 computed={"capped_complete_sequence_new_tokens": 1023, "capped_options": ["A"], "last_prediction_not_fed_back_new_tokens": 1024, "last_prediction_options": ["A", "B"], "sliding_options": ["A", "B", "C", "D"]} verdict=ambiguous MATCH
+da5004_2024T3_Q1_NA--q287 computed={"known_prefix_probability": 0.007051999999999999, "submitted_value": -1, "unknown_final_factor_examples": {"0": 0.0, "1": 0.007051999999999999}} verdict=ambiguous MATCH
+da5004_2024T3_Q1_NA--q289 computed={"dimension": 128, "option": "A", "positions": 64, "shape_position_feature": [64, 128]} verdict=terra_correct MATCH
+da5004_2026T1_Q1_NA--q16 computed={"dimension": 768, "option": "A", "parameters": 30720000, "vocabulary": 40000} verdict=terra_correct MATCH
+da5004_2026T1_Q1_NA--q17 computed={"dimension": 768, "option": "B", "parameters": 393216, "positions": 512} verdict=terra_correct MATCH
+da5004_2026T1_Q1_NA--q19 computed={"option": "C", "weights_only": 589824} verdict=terra_correct MATCH
+da5004_2026T1_Q1_NA--q20 computed={"biases": 3840, "option": "C", "total": 4722432, "weights": 4718592} verdict=terra_correct MATCH
+da5004_2026T1_Q1_NA--q18 computed={"bias_free": 147456, "head_width": 64, "option": "D", "with_three_biases": 147648} verdict=ambiguous MATCH
+da5004_2026T1_Q2_NA--q13 computed={"option": "B", "row_sum": 0.9, "valid_probability_row": false, "zero_based_row": 5} verdict=terra_correct MATCH
+da5004_2026T2_Q1_NA--q10 computed={"factors": [0.4, 0.5, 0.9], "joint_probability": 0.18000000000000002} verdict=terra_correct MATCH
+da5004_2026T2_Q1_NA--q11 computed={"omitted_B_examples": {"B_max": 0.1, "B_zero": 0.0}, "shown_probabilities": {"A": 0.06, "C": 0.09, "D": 0.08, "E": 0.064}, "winner_when_B_max": "B", "winner_when_B_zero": "C"} verdict=ambiguous MATCH
+da5004_2026T2_Q1_NA--q12 computed={"omitted_context_example_ratio": 0.6678571428571428, "shown_denominator": 0.46, "shown_numerator": 0.274, "shown_only_ratio": 0.5956521739130435, "submitted_value": -1} verdict=ambiguous MATCH
+da5004_2025T2_Q1_NA--q155 computed={"blue": 0.33, "normalized": 0.4107142857142857, "sky": 0.23} verdict=terra_correct MATCH
+da5004_2026T2_ET_AN--q9 computed={"count": 3, "logits": [2.5, 1.8, 1.2, 0.5, -0.2], "p": 0.8, "sorted_probabilities": [0.507187379540256, 0.25186179894816696, 0.13822468595032825, 0.06864034766411593, 0.034085787897132964]} verdict=terra_correct MATCH
+da5004_2026T2_ET_AN--q10 computed={"candidate_logits": [2.5, 1.8, 1.2], "probability": 0.5652537086405655, "rounded": 0.565} verdict=terra_correct MATCH
+da5004_2026T2_Q1_NA--q14 computed={"maxima": [0.38, 0.4, 0.5, 0.35, 0.45, 0.4], "probability": 0.004788000000000001, "rounded": 0.005} verdict=terra_correct MATCH
+da5004_2026T2_Q1_NA--q15 computed={"batched_depth_calls": 4, "prefix_counts": [1, 7, 49, 343], "reuse_supplied_table_calls": 0, "total": 400, "unbatched_calls": 400, "vocabulary": 7} verdict=ambiguous MATCH
+da5004_2026T2_Q1_NA--q16 computed={"probability": 0.411764705882353, "rounded": 0.412, "top3": [0.35, 0.3, 0.2]} verdict=terra_correct MATCH
+da5004_2026T2_Q1_NA--q17 computed={"minimum_beam_width": 5, "prefix_products": [0.3, 0.12, 0.06, 0.018], "prefix_ranks": [2, 2, 2, 5]} verdict=terra_correct MATCH
+da5004_2024T1_ET_AN--q152 computed={"additional_parameters": 0} verdict=derived_extra MATCH
+da5004_2024T3_Q1_NA--q280 computed={"known_sum": 0.9000000000000001, "remaining_mass": 0.09999999999999987, "requested_insufficient_code": -1} verdict=derived_extra MATCH
+da5004_2024T3_Q1_NA--q293 computed={"sum": 0.7931505902785394} verdict=derived_extra MATCH
+da5004_2025T2_Q1_NA--q153 computed={"decoder_evaluations": 216, "prefix_length": 3, "vocabulary": 6} verdict=derived_extra MATCH
+da5004_2025T2_Q1_NA--q154 computed={"length": 5, "sequences": 7776, "vocabulary": 6} verdict=derived_extra MATCH
+da5004_2025T3_Q1_NA--q189 computed={"batch": 32, "length": 1024, "targets": 32736} verdict=derived_extra MATCH
+da5004_2025T3_Q2_NA--q110 computed={"model_a_millions": 220, "model_c_millions": 110} verdict=derived_extra MATCH
+da5004_2025T3_ET_AN--q3 computed={"batch_norm": 1024, "features": 512, "layer_norm": 1024} verdict=derived_extra MATCH
+da5004_2025T3_Q1_NA--q181 computed={"step1": [1, 3, 10], "step3": [1, 3, 1000], "vocabulary": 10} verdict=derived_extra MATCH
+da5004_2025T3_Q2_NA--q127 computed={"batch_norm": 1024, "features": 512, "layer_norm": 1024} verdict=derived_extra MATCH
+da5004_2026T1_ET_FN--q3 computed={"parameters": 4718592} verdict=derived_extra MATCH
+da5004_2026T2_ET_FN--q3 computed={"parameters": 4718592} verdict=derived_extra MATCH
+da5004_2026T1_Q2_NA--q18 computed={"position": 8192, "segment": 256, "token": 640000, "total": 648448} verdict=derived_extra MATCH
+da5004_2026T1_ET_AN--q10 computed={"factor": 4} verdict=derived_extra MATCH
+da5004_2026T1_ET_AN--q8 computed={"count": 3, "p": 0.8, "probabilities": [0.4, 0.25, 0.15]} verdict=derived_extra MATCH
+da5004_2026T2_Q1_NA--q5 computed={"additional_heads": 4, "additional_scores": 144, "sequence_length": 6} verdict=derived_extra MATCH
+da5004_2026T1_ET_FN--q17 computed={"bert": 150, "gpt": 90, "layers": 6, "length": 5} verdict=derived_extra MATCH
+da5004_2026T2_ET_FN--q17 computed={"bert": 150, "gpt": 90, "layers": 6, "length": 5} verdict=derived_extra MATCH
+mismatch_count=0

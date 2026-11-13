@@ -1,0 +1,292 @@
+records=241
+counts_by_week_status:
+  week=1 status=derived count=56
+  week=1 status=ambiguous count=17
+  week=2 status=derived count=51
+  week=2 status=ambiguous count=14
+  week=3 status=derived count=22
+  week=3 status=ambiguous count=14
+  week=4 status=derived count=50
+  week=4 status=ambiguous count=17
+counts_by_type_status:
+  type=MCQ status=derived count=69
+  type=MCQ status=ambiguous count=19
+  type=MSQ status=derived count=31
+  type=MSQ status=ambiguous count=20
+  type=SA status=derived count=79
+  type=SA status=ambiguous count=23
+numeric_count=135
+verified_by_code_count=41
+numeric_derived_verified=33
+numeric_derived_unverified=68
+numeric_unverified_ids_and_reasons:
+  da5004_2024T1_ET_AN--q148: depends on figure, no code path
+  da5004_2024T1_ET_AN--q151: depends on figure, no code path
+  da5004_2024T1_ET_AN--q153: depends on figure, no code path
+  da5004_2024T1_ET_AN--q154: depends on figure, no code path
+  da5004_2024T1_ET_AN--q155: depends on figure, no code path
+  da5004_2024T1_ET_FN--q201: depends on figure, no code path
+  da5004_2024T1_ET_FN--q206: depends on figure, no code path
+  da5004_2024T1_ET_FN--q207: depends on figure, no code path
+  da5004_2024T1_ET_FN--q208: depends on figure, no code path
+  da5004_2024T1_ET_FN--q209: depends on figure, no code path
+  da5004_2024T1_ET_FN--q210: depends on figure, no code path
+  da5004_2024T1_Q1_NA--q184: depends on figure, no code path
+  da5004_2024T1_Q1_NA--q185: depends on figure, no code path
+  da5004_2024T1_Q1_NA--q186: depends on figure, no code path
+  da5004_2024T1_Q1_NA--q187: depends on figure, no code path
+  da5004_2024T1_Q1_NA--q189: depends on figure, no code path
+  da5004_2024T1_Q1_NA--q190: depends on figure, no code path
+  da5004_2024T1_Q1_NA--q197: depends on figure, no code path
+  da5004_2024T3_ET_AN--q176: depends on figure, no code path
+  da5004_2024T3_ET_FN--q189: depends on figure, no code path
+  da5004_2024T3_Q1_NA--q277: depends on figure, no code path
+  da5004_2024T3_Q1_NA--q278: depends on figure, no code path
+  da5004_2024T3_Q1_NA--q279: depends on figure, no code path
+  da5004_2024T3_Q1_NA--q281: depends on figure, no code path
+  da5004_2024T3_Q1_NA--q282: depends on figure, no code path
+  da5004_2024T3_Q1_NA--q283: depends on figure, no code path
+  da5004_2024T3_Q1_NA--q284: depends on figure, no code path
+  da5004_2024T3_Q1_NA--q285: depends on figure, no code path
+  da5004_2024T3_Q1_NA--q286: depends on figure, no code path
+  da5004_2024T3_Q1_NA--q288: depends on figure, no code path
+  da5004_2024T3_Q1_NA--q290: depends on figure, no code path
+  da5004_2024T3_Q1_NA--q291: depends on figure, no code path
+  da5004_2024T3_Q1_NA--q292: depends on figure, no code path
+  da5004_2025T1_Q1_NA--q104: depends on figure, no code path
+  da5004_2025T1_Q1_NA--q111: depends on figure, no code path
+  da5004_2025T1_Q1_NA--q112: depends on figure, no code path
+  da5004_2025T1_Q1_NA--q113: depends on figure, no code path
+  da5004_2025T1_Q1_NA--q114: depends on figure, no code path
+  da5004_2025T1_Q1_NA--q115: depends on figure, no code path
+  da5004_2025T1_Q1_NA--q116: depends on figure, no code path
+  da5004_2025T1_Q1_NA--q117: depends on figure, no code path
+  da5004_2025T1_Q1_NA--q118: depends on figure, no code path
+  da5004_2025T1_Q1_NA--q119: depends on figure, no code path
+  da5004_2025T1_Q1_NA--q120: depends on figure, no code path
+  da5004_2025T2_ET_AN--q198: depends on figure, no code path
+  da5004_2025T2_ET_AN--q199: depends on figure, no code path
+  da5004_2025T2_ET_AN--q200: depends on figure, no code path
+  da5004_2025T2_ET_FN--q145: depends on figure, no code path
+  da5004_2025T2_ET_FN--q146: depends on figure, no code path
+  da5004_2025T2_ET_FN--q147: depends on figure, no code path
+  da5004_2025T2_Q1_NA--q144: depends on figure, no code path
+  da5004_2025T2_Q1_NA--q145: depends on figure, no code path
+  da5004_2025T2_Q1_NA--q146: depends on figure, no code path
+  da5004_2025T2_Q1_NA--q147: solve_numeric.py has no registered derivation for this ID; the extracted question data do not supply a complete computable input set.
+  da5004_2025T2_Q1_NA--q148: solve_numeric.py has no registered derivation for this ID; the extracted question data do not supply a complete computable input set.
+  da5004_2025T2_Q1_NA--q149: solve_numeric.py has no registered derivation for this ID; the extracted question data do not supply a complete computable input set.
+  da5004_2025T2_Q1_NA--q150: depends on figure, no code path
+  da5004_2025T2_Q1_NA--q151: depends on figure, no code path
+  da5004_2025T2_Q1_NA--q152: depends on figure, no code path
+  da5004_2025T3_ET_AN--q20: depends on figure, no code path
+  da5004_2025T3_ET_FN--q4: depends on figure, no code path
+  da5004_2025T3_ET_FN--q18: depends on figure, no code path
+  da5004_2025T3_ET_FN--q25: depends on figure, no code path
+  da5004_2025T3_Q1_NA--q179: depends on figure, no code path
+  da5004_2025T3_Q1_NA--q186: depends on figure, no code path
+  da5004_2025T3_Q1_NA--q187: depends on figure, no code path
+  da5004_2025T3_Q1_NA--q188: depends on figure, no code path
+  da5004_2025T3_Q1_NA--q190: depends on figure, no code path
+  da5004_2025T3_Q1_NA--q191: depends on figure, no code path
+  da5004_2025T3_Q2_NA--q113: depends on figure, no code path
+  da5004_2026T1_ET_AN--q11: depends on figure, no code path
+  da5004_2026T1_ET_FN--q2: depends on figure, no code path
+  da5004_2026T1_ET_FN--q4: depends on figure, no code path
+  da5004_2026T1_Q1_NA--q2: depends on figure, no code path
+  da5004_2026T1_Q1_NA--q4: depends on figure, no code path
+  da5004_2026T1_Q1_NA--q10: depends on figure, no code path
+  da5004_2026T1_Q1_NA--q12: depends on figure, no code path
+  da5004_2026T1_Q1_NA--q13: depends on figure, no code path
+  da5004_2026T1_Q1_NA--q14: depends on figure, no code path
+  da5004_2026T1_Q1_NA--q15: depends on figure, no code path
+  da5004_2026T1_Q2_NA--q2: depends on figure, no code path
+  da5004_2026T1_Q2_NA--q12: depends on figure, no code path
+  da5004_2026T1_Q2_NA--q14: depends on figure, no code path
+  da5004_2026T1_Q2_NA--q17: depends on figure, no code path
+  da5004_2026T2_ET_AN--q6: depends on figure, no code path
+  da5004_2026T2_ET_AN--q18: solve_numeric.py has no registered derivation for this ID; the extracted question data do not supply a complete computable input set.
+  da5004_2026T2_ET_AN--q19: solve_numeric.py has no registered derivation for this ID; the extracted question data do not supply a complete computable input set.
+  da5004_2026T2_ET_FN--q2: depends on figure, no code path
+  da5004_2026T2_ET_FN--q4: depends on figure, no code path
+  da5004_2026T2_Q1_NA--q3: depends on figure, no code path
+  da5004_2026T2_Q1_NA--q4: solve_numeric.py has no registered derivation for this ID; the extracted question data do not supply a complete computable input set.
+  da5004_2026T2_Q1_NA--q6: depends on figure, no code path
+  da5004_2026T2_Q1_NA--q7: depends on figure, no code path
+  da5004_2026T2_Q1_NA--q8: depends on figure, no code path
+ambiguous_count=62
+ambiguous_ids_and_notes:
+  da5004_2024T1_ET_AN--q149: Fixed full-sequence window: A–D; sliding context with position IDs reset: A–E. Counting a final prediction beyond the last input adds one token but does not change these choices.
+  da5004_2024T1_ET_AN--q150: “Might” allows chance repetition under sampling; if the intended question asks for guaranteed repeatability, only A, B, E follow with deterministic tie-breaking and positive temperatures.
+  da5004_2024T1_ET_AN--q151: Vocabulary size is not specified; attention biases and normalization parameters are also not specified.
+  da5004_2024T1_ET_AN--q153: The question does not specify whether representation is before or after W_O; before W_O the sum differs. The displayed attention entries are rounded.
+  da5004_2024T1_ET_FN--q198: No option exactly spells the expansion: B uses singular Representation and Transformer.
+  da5004_2024T1_ET_FN--q202: Fixed full-sequence window: A and B; sliding context with position IDs reset: A–D. Counting a final prediction beyond the last input adds one token but does not change these choices.
+  da5004_2024T1_ET_FN--q203: “Might” allows chance repetition under sampling; if the intended question asks for guaranteed repeatability, only A, B, E follow with deterministic tie-breaking and positive temperatures.
+  da5004_2024T1_ET_FN--q206: Vocabulary size is not specified; attention biases and normalization parameters are also not specified.
+  da5004_2024T1_ET_FN--q208: The question does not specify whether representation is before or after W_O; before W_O the sum differs. The displayed attention entries are rounded.
+  da5004_2024T1_Q1_NA--q189: The 1600-parameter embedding is stated conditionally in the preceding subquestion, not explicitly carried over; attention biases are unspecified.
+  da5004_2024T1_Q1_NA--q192: B asserts faster convergence without conditions, and autoregressive training is not defined separately from teacher forcing.
+  da5004_2024T1_Q1_NA--q193: Full-sequence cap including BOS yields A; counting the final prediction without feeding it back yields A and B; sliding and resetting position IDs yields A–D.
+  da5004_2024T1_Q1_NA--q194: B is task-dependent: GPT-1 used auxiliary CLM in its experiments, but fine-tuning need not minimize CLM; D concerns supervised fine-tuning rather than all fine-tuning.
+  da5004_2024T1_Q1_NA--q195: “Appropriate” is subjective and no quality or optimality criterion is specified; a conventional quality-oriented answer could prefer B and D.
+  da5004_2024T3_ET_AN--q178: This is marked single-answer MCQ but both A and B are correct.
+  da5004_2024T3_ET_FN--q190: A does not specify decoder versus encoder self-attention or whether a padding mask is present.
+  da5004_2024T3_ET_FN--q194: B is task-dependent: GPT-1 used auxiliary CLM in its experiments, but fine-tuning need not minimize CLM; D concerns supervised fine-tuning rather than all fine-tuning.
+  da5004_2024T3_ET_FN--q196: Literal “different each time” is not guaranteed by sampling, which can repeat; C is interpreted as allowing different outputs.
+  da5004_2024T3_Q1_NA--q276: Single-answer MCQ has at least two defensible choices: multi-head diversity and the possibility of using batch normalization.
+  da5004_2024T3_Q1_NA--q277: Attention projection biases and whether N=2 applies independently to encoder and decoder are not specified; allowing projection biases changes the count.
+  da5004_2024T3_Q1_NA--q278: Output bias and weight tying are not specified.
+  da5004_2024T3_Q1_NA--q279: The question does not identify which of the two embedding layers to count or specify tying.
+  da5004_2024T3_Q1_NA--q287: The conditional probability of study after the non-greedy earthquake prefix is absent: choosing that factor as 0 gives sequence probability 0, and choosing 1 gives 0.007052. The prescribed insufficient-information response is −1; this treats the listed “earth quake” as earthquake.
+  da5004_2025T1_Q1_NA--q105: The reason asserts a universal convergence-rate improvement; the training speed benefit does not guarantee faster convergence in every setting.
+  da5004_2025T1_Q1_NA--q106: Literal “different each time” is not guaranteed by sampling, which can repeat; C is interpreted as allowing different outputs.
+  da5004_2025T1_Q1_NA--q107: The unqualified wording “in general, struggle” is not a precise criterion: attention RNNs and transformers also have long-context limitations.
+  da5004_2025T1_Q1_NA--q108: B is task-dependent: GPT-1 used auxiliary CLM in its experiments, but fine-tuning need not minimize CLM; D concerns supervised fine-tuning rather than all fine-tuning.
+  da5004_2025T1_Q1_NA--q110: “Appropriate” is subjective and no quality or optimality criterion is specified; a conventional quality-oriented answer could prefer B and D.
+  da5004_2025T1_Q1_NA--q111: The question calls the architecture vanilla but does not specify whether position encodings are learned; Vaswani et al. use fixed sinusoids.
+  da5004_2025T1_Q1_NA--q112: The 3,200 embedding parameters are conditional in the preceding subquestion and not explicitly carried over; projection biases are unspecified.
+  da5004_2025T1_Q1_NA--q113: The 3,200 embedding parameters are conditional in an earlier subquestion and not explicitly carried over.
+  da5004_2025T1_Q1_NA--q118: The sampling distribution over starting positions is unspecified; the estimate assumes uniformly sampled corpus token positions.
+  da5004_2025T1_Q1_NA--q119: The sampling distribution over starting positions is unspecified; the estimate assumes uniformly sampled corpus token positions.
+  da5004_2025T1_Q1_NA--q120: The sampling distribution over starting positions is unspecified; the estimate assumes uniformly sampled corpus token positions.
+  da5004_2025T1_Q1_NA--q121: Model training and generalization are unspecified; corpus counts alone do not guarantee a trained model’s next-token ranking.
+  da5004_2025T2_ET_FN--q141: “Most likely” is underdetermined without the model distribution, sample counts and priors; B can repeat by chance. D’s low p does not guarantee high diversity.
+  da5004_2025T2_ET_FN--q145: The prompt calls T=2 low temperature, but relative to T=1 it is high; calculation uses the stated T.
+  da5004_2025T2_Q1_NA--q147: No listed option matches; the inventory transcription of the matrices differs from the paper image.
+  da5004_2025T2_Q1_NA--q148: No option matches; the inventory transcription differs from the paper image.
+  da5004_2025T2_Q1_NA--q149: No option matches the operations and matrices shown in the source image; the inventory transcription differs.
+  da5004_2025T2_Q1_NA--q150: The source image matrices conflict with the transcription and official key; 32 follows the visible matrices.
+  da5004_2025T3_ET_AN--q17: The question does not specify whether self-attention FLOPs include projection layers. If included, neither A nor B is exactly correct; if restricted to attention products, B is correct.
+  da5004_2025T3_ET_AN--q20: “Sets of ... matrices” ordinarily means 48 triples, while the question may intend the number 144 of individual matrices.
+  da5004_2025T3_ET_FN--q2: Training/evaluation mode and reduction dimensions are unspecified; B states a false mean, while D is conditional on evaluation and tracked statistics.
+  da5004_2025T3_ET_FN--q8: Single-answer MCQ has two valid choices B and C under the stated complexity.
+  da5004_2025T3_ET_FN--q25: The phrase self-attention FLOPs is underspecified: including projection FLOPs gives neither an exact factor of 2 nor 4.
+  da5004_2025T3_Q1_NA--q180: If “additional sequences evaluated” means all new length-(L+1) strings after already evaluating length L, the number is V^(L+1), absent from the options; C assumes a difference in total leaf counts.
+  da5004_2025T3_Q1_NA--q190: Nonzero attention scores are not determined from sequence length alone; the question does not specify post-softmax weights or assume nonzero permitted scores.
+  da5004_2026T1_ET_FN--q12: B says “only to previous tokens” literally excludes the current position, although standard GPT causal self-attention includes it; B is accepted in the conventional intended sense.
+  da5004_2026T1_ET_FN--q16: B says the input “must” use this pair format, but feature-based multiple-choice systems can use other representations; C alone is strictly necessary among these choices.
+  da5004_2026T1_Q1_NA--q12: The question uses i=5 for a vector coordinate although the equations use i as the sine/cosine pair index; the sixth-element interpretation is given.
+  da5004_2026T1_Q1_NA--q18: Bias-free Q/K/V projections yield D, 147,456; biased Q/K/V projections yield 147,648, which is not listed. The prompt does not specify the bias convention.
+  da5004_2026T2_ET_AN--q3: This single-answer MCQ has two false statements under a literal reading: one-hot indices can represent and recover relative distance even though their raw pairwise geometry does not.
+  da5004_2026T2_ET_AN--q6: The question does not specify epsilon; its exact output depends on epsilon in standard LayerNorm.
+  da5004_2026T2_ET_AN--q18: No correct option: C incorrectly uses 13 for the second component.
+  da5004_2026T2_ET_AN--q19: No correct option: B incorrectly uses 16 for the second component.
+  da5004_2026T2_ET_FN--q12: B says “only to previous tokens” literally excludes the current position, although standard GPT causal self-attention includes it; B is accepted in the conventional intended sense.
+  da5004_2026T2_ET_FN--q16: B says the input “must” use this pair format, but feature-based multiple-choice systems can use other representations; C alone is strictly necessary among these choices.
+  da5004_2026T2_Q1_NA--q11: If the omitted B path has probability 0, C wins at 0.09; if P(apples first)=0.1 and both subsequent B conditionals are 1, B wins at 0.1. The partial tree permits both completions.
+  da5004_2026T2_Q1_NA--q12: If no omitted first token can precede like, P(apples|like)=0.274/0.46≈0.595652; if an omitted first token has mass 0.1 and both relevant conditionals are 1, the ratio is 0.374/0.56≈0.667857. The prescribed answer for missing information is −1.
+  da5004_2026T2_Q1_NA--q15: One unbatched model call per prefix gives 400; batching by depth gives 4 forward calls, and reusing the supplied prefix-invariant table requires 0 model calls. The question does not define a decoder run or whether the table may be reused.
+  da5004_2026T2_Q2_NA--q10: The nucleus need not strictly expand: for some p and logits its size remains unchanged; no distribution or p is specified, so A is not universally true.
+records_with_empty_answer_options=108
+  da5004_2024T1_ET_AN--q148
+  da5004_2024T1_ET_AN--q151
+  da5004_2024T1_ET_AN--q152
+  da5004_2024T1_ET_AN--q153
+  da5004_2024T1_ET_AN--q154
+  da5004_2024T1_ET_AN--q155
+  da5004_2024T1_ET_AN--q157
+  da5004_2024T1_ET_FN--q201
+  da5004_2024T1_ET_FN--q206
+  da5004_2024T1_ET_FN--q207
+  da5004_2024T1_ET_FN--q208
+  da5004_2024T1_ET_FN--q209
+  da5004_2024T1_ET_FN--q210
+  da5004_2024T1_ET_FN--q212
+  da5004_2024T1_Q1_NA--q184
+  da5004_2024T1_Q1_NA--q185
+  da5004_2024T1_Q1_NA--q186
+  da5004_2024T1_Q1_NA--q189
+  da5004_2024T1_Q1_NA--q197
+  da5004_2024T3_ET_AN--q176
+  da5004_2024T3_ET_FN--q189
+  da5004_2024T3_Q1_NA--q277
+  da5004_2024T3_Q1_NA--q278
+  da5004_2024T3_Q1_NA--q279
+  da5004_2024T3_Q1_NA--q280
+  da5004_2024T3_Q1_NA--q281
+  da5004_2024T3_Q1_NA--q282
+  da5004_2024T3_Q1_NA--q283
+  da5004_2024T3_Q1_NA--q284
+  da5004_2024T3_Q1_NA--q285
+  da5004_2024T3_Q1_NA--q286
+  da5004_2024T3_Q1_NA--q287
+  da5004_2024T3_Q1_NA--q288
+  da5004_2024T3_Q1_NA--q292
+  da5004_2024T3_Q1_NA--q293
+  da5004_2025T1_Q1_NA--q111
+  da5004_2025T1_Q1_NA--q112
+  da5004_2025T1_Q1_NA--q113
+  da5004_2025T1_Q1_NA--q114
+  da5004_2025T1_Q1_NA--q115
+  da5004_2025T1_Q1_NA--q116
+  da5004_2025T1_Q1_NA--q117
+  da5004_2025T1_Q1_NA--q118
+  da5004_2025T1_Q1_NA--q119
+  da5004_2025T1_Q1_NA--q120
+  da5004_2025T2_ET_AN--q198
+  da5004_2025T2_ET_AN--q199
+  da5004_2025T2_ET_AN--q200
+  da5004_2025T2_ET_FN--q145
+  da5004_2025T2_ET_FN--q146
+  da5004_2025T2_ET_FN--q147
+  da5004_2025T2_Q1_NA--q144
+  da5004_2025T2_Q1_NA--q145
+  da5004_2025T2_Q1_NA--q146
+  da5004_2025T2_Q1_NA--q147
+  da5004_2025T2_Q1_NA--q148
+  da5004_2025T2_Q1_NA--q149
+  da5004_2025T2_Q1_NA--q150
+  da5004_2025T2_Q1_NA--q151
+  da5004_2025T2_Q1_NA--q152
+  da5004_2025T2_Q1_NA--q153
+  da5004_2025T2_Q1_NA--q154
+  da5004_2025T2_Q1_NA--q155
+  da5004_2025T3_ET_AN--q20
+  da5004_2025T3_ET_FN--q2
+  da5004_2025T3_ET_FN--q18
+  da5004_2025T3_Q1_NA--q186
+  da5004_2025T3_Q1_NA--q187
+  da5004_2025T3_Q1_NA--q188
+  da5004_2025T3_Q1_NA--q189
+  da5004_2025T3_Q1_NA--q190
+  da5004_2025T3_Q1_NA--q191
+  da5004_2025T3_Q2_NA--q110
+  da5004_2025T3_Q2_NA--q113
+  da5004_2026T1_ET_AN--q8
+  da5004_2026T1_ET_AN--q10
+  da5004_2026T1_ET_AN--q11
+  da5004_2026T1_ET_FN--q2
+  da5004_2026T1_ET_FN--q3
+  da5004_2026T1_ET_FN--q4
+  da5004_2026T1_Q1_NA--q12
+  da5004_2026T1_Q1_NA--q13
+  da5004_2026T1_Q1_NA--q14
+  da5004_2026T1_Q1_NA--q15
+  da5004_2026T1_Q2_NA--q12
+  da5004_2026T1_Q2_NA--q14
+  da5004_2026T1_Q2_NA--q17
+  da5004_2026T1_Q2_NA--q18
+  da5004_2026T2_ET_AN--q6
+  da5004_2026T2_ET_AN--q9
+  da5004_2026T2_ET_AN--q10
+  da5004_2026T2_ET_AN--q18
+  da5004_2026T2_ET_AN--q19
+  da5004_2026T2_ET_FN--q2
+  da5004_2026T2_ET_FN--q3
+  da5004_2026T2_ET_FN--q4
+  da5004_2026T2_Q1_NA--q3
+  da5004_2026T2_Q1_NA--q5
+  da5004_2026T2_Q1_NA--q6
+  da5004_2026T2_Q1_NA--q7
+  da5004_2026T2_Q1_NA--q8
+  da5004_2026T2_Q1_NA--q10
+  da5004_2026T2_Q1_NA--q12
+  da5004_2026T2_Q1_NA--q14
+  da5004_2026T2_Q1_NA--q15
+  da5004_2026T2_Q1_NA--q16
+  da5004_2026T2_Q1_NA--q17
+  da5004_2026T2_Q2_NA--q2
+gate7_derived_numeric=68 unverified; each listed above with reason
+checker_match_count=41
+checker_mismatch_count=0

@@ -1,0 +1,32 @@
+Transcript audit (PDF page markers are the page boundaries)
+Counts: $, [illegible, [possible-error, [Figure:, boxed labels
+
+W1: week-1-transcript.md
+  pages: 17/17 markers; expected 4-20; order=OK
+  transcript: 633 lines, 6426 words
+  markers: $=848, [illegible=0, [possible-error=5, [Figure:=3, boxed=20
+  pages under 40 words: none
+  failures: none
+
+W2: week-2-transcript.md
+  pages: 13/13 markers; expected 21-33; order=OK
+  transcript: 519 lines, 4483 words
+  markers: $=456, [illegible=0, [possible-error=2, [Figure:=2, boxed=17
+  pages under 40 words: none
+  failures: none
+
+W3: week-3-transcript.md
+  pages: 11/11 markers; expected 34-44; order=OK
+  transcript: 469 lines, 3856 words
+  markers: $=323, [illegible=0, [possible-error=6, [Figure:=2, boxed=11
+  pages under 40 words: none
+  failures: none
+
+W4: week-4-transcript.md
+  pages: 15/15 markers; expected 45-59; order=OK
+  transcript: 571 lines, 5304 words
+  markers: $=616, [illegible=0, [possible-error=8, [Figure:=1, boxed=21
+  pages under 40 words: none
+  failures: none
+
+Audit result: PASS (0 structural failure(s); short pages are flagged above)

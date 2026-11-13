@@ -1,0 +1,482 @@
+{
+  "week": 2,
+  "chunk": "b",
+  "author": "terra",
+  "records": [
+    {
+      "id": "da5004_2025T2_Q1_NA--q150",
+      "answer": "32",
+      "steps": "The passage image gives X=[[1,1],[2,3],[1,2],[3,1]] and MHA(X)=[[1,2],[3,3],[2,3],[3,1]], with tokens in columns. Thus R=[[2,3],[5,6],[3,5],[6,2]], whose entries sum to 32. The transcription and printed key differ from the image.",
+      "status": "ambiguous",
+      "ambiguity_note": "The source image matrices conflict with the transcription and official key; 32 follows the visible matrices.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "R": [
+          [
+            2,
+            3
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            2
+          ]
+        ],
+        "sum": 32
+      }
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q151",
+      "answer": "8 trainable parameters",
+      "steps": "The passage states d_model=4, and its `4 × 2` image represents two tokens with four features each. LayerNorm has one gain and one bias per feature, shared across tokens: 4+4=8.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "features": 4,
+        "parameters": 8
+      }
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q152",
+      "answer": "8",
+      "steps": "The image specifies gamma=2σ_l, beta=1, epsilon=0, not gamma=2. For either token column, centering makes the four normalized features sum to zero; multiplying all by the same gamma for that column preserves this. Adding 1 to each of 8 entries yields sum 8.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum": 8
+      }
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q25",
+      "answer": "B — ground truth is unavailable during generation, producing exposure bias",
+      "steps": "B describes the train/inference prefix mismatch. A incorrectly claims ordinary teacher forcing remains; C gives an unsupported speed reason; D confuses the mismatch with an architecture requirement.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q26",
+      "answer": "C — masked self-attention",
+      "steps": "C suppresses attention to future decoder positions. A is a pointwise feed-forward layer, B encodes positions without forbidding future access, and D attends to source states rather than enforcing target causality.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q3",
+      "answer": "B — 1,024 parameters for each",
+      "steps": "Standard affine BatchNorm and LayerNorm each have 512 scales and 512 biases, so 2×512=1024. A omits one set for both; C and D omit one set for one layer; E assumes no affine parameters.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "features": 512,
+        "batch_norm": 1024,
+        "layer_norm": 1024
+      }
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q2",
+      "answer": "No option is universally correct; D holds in standard evaluation mode.",
+      "steps": "With a single value per feature in training, the batch mean equals that activation, not necessarily 0, and variance is 0. B falsely says mean=0. A ignores degenerate training statistics, C does not occur automatically, and D describes evaluation with tracked running statistics, not training generally. Spatial dimensions can supply additional observations.",
+      "status": "ambiguous",
+      "ambiguity_note": "Training/evaluation mode and reduction dimensions are unspecified; B states a false mean, while D is conditional on evaluation and tracked statistics.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q174",
+      "answer": "C — each position uses sine in even dimensions and cosine in odd dimensions",
+      "steps": "The original encoding alternates the trigonometric function by dimension, not by token-position parity. Therefore A and B incorrectly assign a single function by word position.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q175",
+      "answer": "C — suis",
+      "steps": "At step 3 teacher forcing supplies the ground-truth token at step 2, suis. A is the wrong model prediction at step 2; B is the step-1 target; D is the step-3 target rather than the preceding input.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q176",
+      "answer": "C — [1, 2, 0, −∞]",
+      "steps": "Query x3 can attend to positions 1, 2 and 3; future x4 receives −∞ before softmax. A leaves the future visible; B sets its logit to 0, which still has positive softmax weight; D masks a past token; E masks the allowed prefix and retains the future.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q177",
+      "answer": "A — feed the correct preceding target token",
+      "steps": "Teacher forcing conditions on the reference prefix, independent of predicted tokens. B instead feeds predictions; C concerns initialization; D is not the procedure.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q179",
+      "answer": "A — [[−1, −1], [1, 1]]",
+      "steps": "Per-feature batch means are [2,3] and population variances are [1,1], so standardizing each column gives A. B uses a sample-variance convention instead of the standard BN batch variance; C normalizes along the wrong axis and also uses that convention; D reverses the signs.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "mean": [
+          2,
+          3
+        ],
+        "variance": [
+          1,
+          1
+        ],
+        "output": [
+          [
+            -1,
+            -1
+          ],
+          [
+            1,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q184",
+      "answer": "A, D and E",
+      "steps": "Every decoder self-attention layer is causally masked (A); original encoder and decoder both use token embeddings (D) and positional encodings (E). B denies decoder embeddings, while C denies decoder positional encoding.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "D",
+        "E"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q190",
+      "answer": "At most 524,800 unmasked entries per head; the number of nonzero raw scores is not determined.",
+      "steps": "For T=1024 the diagonal-inclusive lower triangle has T(T+1)/2=524800 permitted entries. Finite logits can themselves be zero, and an additive mask sets forbidden logits to −∞, not zero. If the question means post-softmax weights for finite logits, all allowed weights are positive and the count is 524800.",
+      "status": "ambiguous",
+      "ambiguity_note": "Nonzero attention scores are not determined from sequence length alone; the question does not specify post-softmax weights or assume nonzero permitted scores.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "T": 1024,
+        "allowed_entries": 524800
+      }
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q113",
+      "answer": "0",
+      "steps": "Token 4 is future relative to query 3. The causal mask changes its logit to −∞ and exp(−∞)=0, so the softmax probability is exactly 0 regardless of the other finite scores.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "token_4_probability": 0
+      }
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q127",
+      "answer": "D — BatchNorm 1,024 and LayerNorm 1,024",
+      "steps": "Each standard affine normalization has 512 learned scale and 512 learned shift values, totaling 1024. A omits one set for each; B omits LayerNorm bias or scale; C omits the corresponding BatchNorm set.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "D"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "features": 512,
+        "batch_norm": 1024,
+        "layer_norm": 1024
+      }
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q128",
+      "answer": "A — Q from decoder, K and V from encoder",
+      "steps": "The decoder sublayer produces queries, while the final encoder representations supply keys and values. B reverses these origins.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q14",
+      "answer": "C — position provides a structural and distance-sensitive inductive bias",
+      "steps": "C is the intended rationale: explicit encodings make relative and absolute position information accessible. A is unrelated to KV memory reduction; B reverses causality; D invents an error in dot-product attention.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q2",
+      "answer": "C — prevent target-future leakage",
+      "steps": "The causal mask permits the current shifted decoder input and earlier ones; when predicting target y_t those inputs contain only y_<t. A describes padding masking, B special-token exclusion, and D is unrelated to the causal constraint.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q11",
+      "answer": "B and D",
+      "steps": "Decoder hidden states provide Q (B), and decoder queries use encoder keys/values to select source information (D). A incorrectly sources K and V from the decoder; C describes self-attention rather than encoder–decoder attention.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q12",
+      "answer": "cos(3/10000^(4/128)) ≈ −0.627927",
+      "steps": "The sixth element has zero-based coordinate 5=2×2+1, so the cosine formula uses pair index 2 and exponent 4/128. The wording calls the coordinate i=5 although i denotes the pair index in the formula; interpreting i=5 as the pair index would instead address coordinate 11.",
+      "status": "ambiguous",
+      "ambiguity_note": "The question uses i=5 for a vector coordinate although the equations use i as the sine/cosine pair index; the sixth-element interpretation is given.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "position": 3,
+        "coordinate": 5,
+        "pair_index": 2,
+        "value": -0.6279266524418035
+      }
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q5",
+      "answer": "C — no source causal mask; source padding may be masked",
+      "steps": "The complete source is available to cross-attention, but padding keys can be excluded. A and B incorrectly impose target-style causality on source positions; D ignores source padding masks.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q12",
+      "answer": "3/√5 ≈ 1.341641",
+      "steps": "Sample 2 is [1,3,5,7], with mean 4 and population variance (9+1+1+9)/4=5. Its largest centered value is 3, so its maximum normalized value is 3/√5. The zero variance of sample 3 is irrelevant to this question.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "mean": 4,
+        "variance": 5,
+        "maximum": 1.3416407864998738
+      }
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q3",
+      "answer": "A is incorrect under the usual geometric interpretation; D is also false if read literally.",
+      "steps": "For sinusoidal encodings the dot product is a sum of cosines of relative offsets, oscillatory and potentially negative, so A is false. B follows from sin²+cos²=1 per pair and C from orthogonal one-hot vectors. D is true only in the restricted sense that raw one-hot distances or dot products do not encode separation: the indices can be decoded and subtracted, so the absolute claim of mathematical incapacity is false.",
+      "status": "ambiguous",
+      "ambiguity_note": "This single-answer MCQ has two false statements under a literal reading: one-hot indices can represent and recover relative distance even though their raw pairwise geometry does not.",
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q6",
+      "answer": "3 if ε=0; otherwise 1+2/√(1+ε)",
+      "steps": "The image gives sample 3 as [7,5]. Its mean is 6 and population variance is 1; its first normalized entry is 1/√(1+ε), followed by gain 2 and bias 1. The standard ε=0 simplification gives 3.",
+      "status": "ambiguous",
+      "ambiguity_note": "The question does not specify epsilon; its exact output depends on epsilon in standard LayerNorm.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "mean": 6,
+        "variance": 1,
+        "output_if_epsilon_zero": 3
+      }
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q7",
+      "answer": "8,128 entries per `128 × 128` causal mask",
+      "steps": "Only the strict upper triangle is masked, giving T(T−1)/2=128×127/2=8128; vocabulary size and hidden width do not change this count. A shared mask is counted once, not once per head.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "T": 128,
+        "masked_entries": 8128
+      }
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q8",
+      "answer": "256",
+      "steps": "There are 512/2=256 sine–cosine pairs, each with squared norm sin²θ+cos²θ=1. Their total squared Euclidean norm is 256, independent of position.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "dimension": 512,
+        "squared_norm": 256
+      }
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q9",
+      "answer": "B — statement 1 false; statement 2 true",
+      "steps": "Teacher forcing feeds preceding ground-truth target tokens, not output from a larger teacher model. It prevents feeding a wrong prediction into the next training step, reducing within-prefix compounding. Thus A, C and D all misclassify at least one statement.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q2",
+      "answer": "FHMPR",
+      "steps": "In the diagram, F and H are the two encoder residual-plus-normalization blocks; M, P and R follow the decoder masked-attention, cross-attention and feed-forward blocks respectively. Sorting gives FHMPR.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q3",
+      "answer": "C — masked multi-head self-attention",
+      "steps": "L is the first decoder sublayer receiving shifted target representations as Q, K and V; its residual path joins M. A is positional encoding at D, B is the later feed-forward block Q, D is cross-attention O, and E is the output projection S.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q4",
+      "answer": "A, B and F",
+      "steps": "The diagram has two positional encodings B and D, two feed-forward blocks G and Q, and five Add & Norm blocks F,H,M,P,R. C appears once at L; D once at O. E is not depicted as a tokenizer (A and C are embedding blocks).",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "F"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q5",
+      "answer": "A and D",
+      "steps": "Post-softmax multiplication zeros future weights but leaves allowed weights divided by the sum over all logits, including future logits. Changing future keys therefore changes earlier outputs, violating autoregressive independence (A); B overlooks this indirect dependence. Allowed weights are at most, not at least, their pre-softmax-masked counterparts, so C is false. In the final row all positions are allowed, so both methods coincide (D).",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    }
+  ]
+}

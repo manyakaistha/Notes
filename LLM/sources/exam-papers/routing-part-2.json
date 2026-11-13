@@ -1,0 +1,1251 @@
+{
+  "part": 2,
+  "papers": [
+    "da5004_2024T3_Q2_NA",
+    "da5004_2025T1_Q1_NA",
+    "da5004_2025T1_Q2_NA",
+    "da5004_2025T2_ET_AN",
+    "da5004_2025T2_ET_FN",
+    "da5004_2025T2_Q1_NA",
+    "da5004_2025T2_Q2_NA"
+  ],
+  "records": [
+    {
+      "id": "da5004_2024T3_Q2_NA--q140",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenization and BPE vocabulary construction",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q141",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenization and BPE vocabulary construction",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q142",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenization and BPE vocabulary construction",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q143",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenization and BPE vocabulary construction",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q144",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenization and BPE vocabulary construction",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q145",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenization and BPE vocabulary construction",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q146",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenization and BPE vocabulary construction",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q147",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenization and BPE vocabulary construction",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q148",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenization and BPE vocabulary construction",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": "Tokenization and BPE vocabulary construction."
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q149",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Pretraining data quality, filtering or scaling laws",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": "Pretraining data quality, filtering or scaling laws."
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q150",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "T5 span-corruption denoising objective",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "T5 span-corruption denoising objective."
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q151",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Prefix language modeling and its bidirectional-prefix mask",
+      "likely_later_week": "7",
+      "confidence": "medium",
+      "note": "Prefix language modeling and its bidirectional-prefix mask."
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q152",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Pretraining data quality, filtering or scaling laws",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q153",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Pretraining data quality, filtering or scaling laws",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q154",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Broad LLM design choices spanning later data and position methods",
+      "likely_later_week": "other/unknown",
+      "confidence": "medium",
+      "note": "The choices combine early architecture with dataset and unspecified position design."
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q155",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Pretraining data quality, filtering or scaling laws",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q104",
+      "week": 2,
+      "topic_ids": [
+        "w2-cross-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q105",
+      "week": 2,
+      "topic_ids": [
+        "w2-teacher-forcing"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The assertion and reason test autoregressive training and teacher forcing."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q106",
+      "week": 4,
+      "topic_ids": [
+        "w4-topk-temperature"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q107",
+      "week": 1,
+      "topic_ids": [
+        "w1-seq2seq-bottleneck"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q108",
+      "week": 3,
+      "topic_ids": [
+        "w3-finetuning",
+        "w3-gpt1-architecture"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q109",
+      "week": 4,
+      "topic_ids": [
+        "w4-exhaustive-greedy"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q110",
+      "week": 4,
+      "topic_ids": [
+        "w4-beam-search",
+        "w4-topk-temperature",
+        "w4-topp-nucleus",
+        "w4-exhaustive-greedy"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The options compare multiple decoding methods."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q111",
+      "week": 2,
+      "topic_ids": [
+        "w2-positional-encoding"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "medium",
+      "note": "The vanilla Transformer context suggests fixed sinusoidal encoding, though the positional embedding type is not explicit."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q112",
+      "week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count",
+        "w1-multi-head-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q113",
+      "week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count",
+        "w1-multi-head-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q114",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q115",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q116",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q117",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q118",
+      "week": 3,
+      "topic_ids": [
+        "w3-language-modelling"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The shared context asks for probabilities or next-token prediction in a causal language model."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q119",
+      "week": 3,
+      "topic_ids": [
+        "w3-language-modelling"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The shared context asks for probabilities or next-token prediction in a causal language model."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q120",
+      "week": 3,
+      "topic_ids": [
+        "w3-language-modelling"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The shared context asks for probabilities or next-token prediction in a causal language model."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q121",
+      "week": 3,
+      "topic_ids": [
+        "w3-language-modelling"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The shared context asks for probabilities or next-token prediction in a causal language model."
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q119",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenizer vocabulary tradeoffs or tokenization pipeline",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q120",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Pretraining data duplication and filtering",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": "Pretraining data duplication and filtering."
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q121",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenizer vocabulary tradeoffs or tokenization pipeline",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": "Tokenizer vocabulary tradeoffs or tokenization pipeline."
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q122",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "T5 or BART model-specific adaptation or denoising",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "T5 or BART model-specific adaptation or denoising."
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q123",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "T5 or BART model-specific adaptation or denoising",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "T5 or BART model-specific adaptation or denoising."
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q124",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "T5 or BART model-specific adaptation or denoising",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "T5 or BART model-specific adaptation or denoising."
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q125",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Denoising objectives across BERT, BART and T5",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "The question requires distinguishing BERT from later BART and T5 objectives."
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q126",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Pretraining data duplication and filtering",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": "Pretraining data duplication and filtering."
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q127",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "GPT-3 model-specific architecture and pretraining data",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": "GPT-3 model-specific architecture and pretraining data."
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q128",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "T5 or BART model-specific adaptation or denoising",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "T5 or BART model-specific adaptation or denoising."
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q129",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Prefix language modeling and its bidirectional-prefix mask",
+      "likely_later_week": "7",
+      "confidence": "medium",
+      "note": "Prefix language modeling and its bidirectional-prefix mask."
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q130",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BPE vocabulary and merge operations",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q131",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BPE vocabulary and merge operations",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q132",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BPE vocabulary and merge operations",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q133",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BPE vocabulary and merge operations",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q134",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BPE vocabulary and merge operations",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q135",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BPE vocabulary and merge operations",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q136",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BPE vocabulary and merge operations",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q192",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "SentencePiece subword tokenization",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q193",
+      "week": 2,
+      "topic_ids": [
+        "w2-masked-self-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The GPT setting asks specifically for the causal attention mask."
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q194",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Sparse or block attention for efficient long sequences",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "Sparse or block attention for efficient long sequences."
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q195",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BERT preprocessing combines subword tokenization with special tokens",
+      "likely_later_week": "5",
+      "confidence": "medium",
+      "note": "The options jointly test tokenizer processing and BERT input conventions."
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q196",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Sparse or block attention for efficient long sequences",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "Sparse or block attention for efficient long sequences."
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q197",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Relative positional embedding clipping",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "Relative positional embedding clipping."
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q198",
+      "week": 4,
+      "topic_ids": [
+        "w4-topp-nucleus"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q199",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-scaled-dot-product",
+        "w1-multi-head-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q200",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-scaled-dot-product",
+        "w1-multi-head-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q201",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Sparse or block attention for efficient long sequences",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q202",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Sparse or block attention for efficient long sequences",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q203",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Sparse or block attention for efficient long sequences",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q204",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Relative positional embeddings or ALiBi",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q205",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Relative positional embeddings or ALiBi",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "Relative positional embeddings or ALiBi."
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q206",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Relative positional embeddings or ALiBi",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "Relative positional embeddings or ALiBi."
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q207",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Relative positional embeddings or ALiBi",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "Relative positional embeddings or ALiBi."
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q208",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Relative positional embeddings or ALiBi",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "Relative positional embeddings or ALiBi."
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q138",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Subword tokenization and tokenizer preprocessing",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q139",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Sparse or block attention for efficient long sequences",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "Sparse or block attention for efficient long sequences."
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q140",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Subword tokenization and tokenizer preprocessing",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q141",
+      "week": 4,
+      "topic_ids": [
+        "w4-exhaustive-greedy",
+        "w4-beam-search",
+        "w4-topk-temperature",
+        "w4-topp-nucleus"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q142",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm",
+        "w2-training-tricks"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "medium",
+      "note": "The broad design choices include LayerNorm and learning-rate schedules alongside vocabulary and depth."
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q143",
+      "week": 4,
+      "topic_ids": [
+        "w4-topk-temperature",
+        "w4-topp-nucleus"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q144",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Subword tokenization and tokenizer preprocessing",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q145",
+      "week": 4,
+      "topic_ids": [
+        "w4-topk-temperature"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q146",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-scaled-dot-product",
+        "w1-multi-head-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q147",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-scaled-dot-product",
+        "w1-multi-head-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q148",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Sparse or block attention for efficient long sequences",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q149",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Sparse or block attention for efficient long sequences",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q150",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Sparse or block attention for efficient long sequences",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q151",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Relative positional embeddings",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q152",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Relative positional embeddings",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "Relative positional embeddings."
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q153",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Relative positional embeddings",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "Relative positional embeddings."
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q154",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Relative positional embeddings",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "Relative positional embeddings."
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q135",
+      "week": 1,
+      "topic_ids": [
+        "w1-ffn-encoder-stack"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "medium",
+      "note": "The question concerns parallel processing in a Transformer encoder."
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q136",
+      "week": 1,
+      "topic_ids": [
+        "w1-scaled-dot-product"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q137",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-finetuning",
+        "w4-bert-mlm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question compares GPT causal and BERT masked pretraining objectives."
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q138",
+      "week": 4,
+      "topic_ids": [
+        "w4-topk-temperature"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q139",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q140",
+      "week": 3,
+      "topic_ids": [
+        "w3-causal-lm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q141",
+      "week": 3,
+      "topic_ids": [
+        "w3-gpt1-architecture"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "medium",
+      "note": "The options combine Transformer parallelism and transfer through fine-tuning."
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q142",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-nsp-inputs"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q143",
+      "week": 4,
+      "topic_ids": [
+        "w4-topp-nucleus",
+        "w4-topk-temperature"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q144",
+      "week": 2,
+      "topic_ids": [
+        "w2-positional-encoding"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q145",
+      "week": 4,
+      "topic_ids": [
+        "w4-topk-temperature"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q146",
+      "week": 1,
+      "topic_ids": [
+        "w1-scaled-dot-product"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q147",
+      "week": 1,
+      "topic_ids": [
+        "w1-scaled-dot-product",
+        "w1-multi-head-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q148",
+      "week": 1,
+      "topic_ids": [
+        "w1-scaled-dot-product",
+        "w1-multi-head-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q149",
+      "week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q150",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q151",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q152",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q153",
+      "week": 4,
+      "topic_ids": [
+        "w4-exhaustive-greedy"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q154",
+      "week": 4,
+      "topic_ids": [
+        "w4-exhaustive-greedy"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q155",
+      "week": 4,
+      "topic_ids": [
+        "w4-topk-temperature"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Routed by the concept tested in the question."
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q269",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Subword tokenization, vocabulary design or BPE/WordPiece",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q270",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Scaling laws or pretraining data filtering",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q271",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Subword tokenization, vocabulary design or BPE/WordPiece",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q272",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "T5 text-to-text or span-corruption objective",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "T5 text-to-text or span-corruption objective."
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q273",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "T5 text-to-text or span-corruption objective",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q274",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Subword tokenization, vocabulary design or BPE/WordPiece",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q275",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Scaling laws or pretraining data filtering",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q276",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Scaling laws or pretraining data filtering",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q277",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Subword tokenization, vocabulary design or BPE/WordPiece",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": "Subword tokenization, vocabulary design or BPE/WordPiece."
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q278",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Comparison includes T5 span corruption and prefix language modeling",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "The options mix causal and masked objectives with later T5 and prefix objectives."
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q279",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Multitask pretraining data mixing strategy",
+      "likely_later_week": "8",
+      "confidence": "medium",
+      "note": "Multitask pretraining data mixing strategy."
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q280",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Scaling laws or pretraining data filtering",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": "Scaling laws or pretraining data filtering."
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q281",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Subword tokenization, vocabulary design or BPE/WordPiece",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q282",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Subword tokenization, vocabulary design or BPE/WordPiece",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q283",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Subword tokenization, vocabulary design or BPE/WordPiece",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q284",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Subword tokenization, vocabulary design or BPE/WordPiece",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q285",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Subword tokenization, vocabulary design or BPE/WordPiece",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    }
+  ]
+}

@@ -1,0 +1,1177 @@
+{
+  "part": 4,
+  "papers": [
+    "2026T1_Q1_NA",
+    "2026T1_Q2_NA",
+    "2026T2_ET_AN",
+    "2026T2_ET_FN",
+    "2026T2_Q1_NA",
+    "2026T2_Q2_NA"
+  ],
+  "records": [
+    {
+      "id": "da5004_2026T1_Q1_NA--q2",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q3",
+      "week": 1,
+      "topic_ids": [
+        "w1-scaled-dot-product"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q4",
+      "week": 1,
+      "topic_ids": [
+        "w1-ffn-encoder-stack"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q5",
+      "week": 2,
+      "topic_ids": [
+        "w2-cross-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q6",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-nsp-inputs"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Tests w4 bert nsp inputs."
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q7",
+      "week": 4,
+      "topic_ids": [
+        "w4-topk-temperature"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q8",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-finetuning"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Tests w4 bert finetuning."
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q9",
+      "week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q10",
+      "week": 1,
+      "topic_ids": [
+        "w1-scaled-dot-product"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q11",
+      "week": 2,
+      "topic_ids": [
+        "w2-cross-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q12",
+      "week": 2,
+      "topic_ids": [
+        "w2-positional-encoding"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "medium",
+      "note": "The prompt ambiguously uses i for both a vector index and the sinusoidal pair index."
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q13",
+      "week": 1,
+      "topic_ids": [
+        "w1-bahdanau-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q14",
+      "week": 1,
+      "topic_ids": [
+        "w1-bahdanau-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q15",
+      "week": 1,
+      "topic_ids": [
+        "w1-bahdanau-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q16",
+      "week": 3,
+      "topic_ids": [
+        "w3-gpt1-parameter-count"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Tests w3 gpt1 parameter count."
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q17",
+      "week": 3,
+      "topic_ids": [
+        "w3-gpt1-parameter-count"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Tests w3 gpt1 parameter count."
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q18",
+      "week": 3,
+      "topic_ids": [
+        "w3-gpt1-parameter-count"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Tests w3 gpt1 parameter count."
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q19",
+      "week": 3,
+      "topic_ids": [
+        "w3-gpt1-parameter-count"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Tests w3 gpt1 parameter count."
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q20",
+      "week": 3,
+      "topic_ids": [
+        "w3-gpt1-parameter-count"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Tests w3 gpt1 parameter count."
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q2",
+      "week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q3",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-mlm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Tests w4 bert mlm."
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q4",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-mlm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question compares GPT causal masking with BERT bidirectional MLM."
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q5",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "T5 text-to-text task formulation",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q6",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Multitask dataset sampling during pretraining",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "Tests Multitask dataset sampling during pretraining."
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q7",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Training data quality, diversity and scale",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": "Tests Training data quality, diversity and scale."
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q8",
+      "week": 1,
+      "topic_ids": [
+        "w1-ffn-encoder-stack"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q9",
+      "week": 1,
+      "topic_ids": [
+        "w1-seq2seq-bottleneck"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The comparison tests recurrent bottlenecks and Transformer parallelism."
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q10",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "T5 pretraining objective experiments",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q11",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "GPT-2 zero-shot transfer and prompting",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "Tests GPT-2 zero-shot transfer and prompting."
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q12",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q13",
+      "week": 3,
+      "topic_ids": [
+        "w3-causal-lm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q14",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The shared causal-LM passage asks for an entry of the attention matrix."
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q15",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BPE tokenization",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q16",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BPE vocabulary construction",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": "Tests BPE vocabulary construction."
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q17",
+      "week": 4,
+      "topic_ids": [
+        "w4-topk-temperature"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Tests w4 topk temperature."
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q18",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-architecture-params"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q19",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Character-level tokenization",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": "Tests Character-level tokenization."
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q20",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "SentencePiece subword tokenization",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q21",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Training data preprocessing and filtering",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q22",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Training data deduplication",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": "Tests Training data deduplication."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q2",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q3",
+      "week": 2,
+      "topic_ids": [
+        "w2-positional-encoding"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q4",
+      "week": 4,
+      "topic_ids": [
+        "w4-beam-search"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q5",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-nsp-inputs"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q6",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q7",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Unigram tokenization and Viterbi segmentation",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": "Tests Unigram tokenization and Viterbi segmentation."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q8",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Clipped relative positional encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "Tests Clipped relative positional encoding."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q9",
+      "week": 4,
+      "topic_ids": [
+        "w4-topp-nucleus"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Tests w4 topp nucleus."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q10",
+      "week": 4,
+      "topic_ids": [
+        "w4-topp-nucleus"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Tests w4 topp nucleus."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q11",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "GPT-2 zero-shot transfer",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q12",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Comparison of prefix LM and T5-style denoising objectives",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "Tests Comparison of prefix LM and T5-style denoising objectives."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q13",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Prefix language modelling objective",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "Tests Prefix language modelling objective."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q14",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Strided local attention complexity",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "Tests Strided local attention complexity."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q15",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "KV caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "Tests KV caching."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q16",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Grouped-query attention and KV cache",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "Tests Grouped-query attention and KV cache."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q17",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Long-context length generalization",
+      "likely_later_week": "12",
+      "confidence": "medium",
+      "note": "Tests Long-context length generalization."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q18",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Although the passage introduces RoPE, this subquestion asks only for the query projection."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q19",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Although the passage introduces RoPE, this subquestion asks only for the key projection."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q20",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Rotary positional encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "Tests Rotary positional encoding."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q21",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "RoPE-modified query-key dot product",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "The final dot product uses the RoPE rotation from the shared passage."
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q2",
+      "week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q3",
+      "week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "T5 supplies dimensions, but the question asks for standard encoder FFN parameter counting."
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q4",
+      "week": 1,
+      "topic_ids": [
+        "w1-ffn-encoder-stack"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q5",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "KV cache memory",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "Tests KV cache memory."
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q6",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-nsp-inputs"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q7",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Scaling laws and training data",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q8",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "PagedAttention and KV cache serving",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q9",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Kernel-based linear attention",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "Tests Kernel-based linear attention."
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q10",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Rotary positional encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "Tests Rotary positional encoding."
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q11",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "ALiBi positional bias",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "Tests ALiBi positional bias."
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q12",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-finetuning"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Tests w4 bert finetuning."
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q13",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "T5-era architecture comparison experiments and prefix LM",
+      "likely_later_week": "7",
+      "confidence": "medium",
+      "note": "Tests T5-era architecture comparison experiments and prefix LM."
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q14",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "KV caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "Tests KV caching."
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q15",
+      "week": 4,
+      "topic_ids": [
+        "w4-beam-search"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q16",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-finetuning"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q17",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-finetuning"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The comparison tests bidirectional BERT versus causal GPT attention patterns."
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q18",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BART architecture",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "Tests BART architecture."
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q19",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "FlashAttention",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "Tests FlashAttention."
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q20",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Relative positional encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "Tests Relative positional encoding."
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q21",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Comparison of RoPE, ALiBi and relative position encodings",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q2",
+      "week": 1,
+      "topic_ids": [
+        "w1-bahdanau-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q3",
+      "week": 1,
+      "topic_ids": [
+        "w1-scaled-dot-product"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q4",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q5",
+      "week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q6",
+      "week": 1,
+      "topic_ids": [
+        "w1-ffn-encoder-stack"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q7",
+      "week": 2,
+      "topic_ids": [
+        "w2-masked-self-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Tests w2 masked self attention."
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q8",
+      "week": 2,
+      "topic_ids": [
+        "w2-positional-encoding"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Tests w2 positional encoding."
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q9",
+      "week": 2,
+      "topic_ids": [
+        "w2-teacher-forcing"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Tests w2 teacher forcing."
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q10",
+      "week": 3,
+      "topic_ids": [
+        "w3-language-modelling"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q11",
+      "week": 3,
+      "topic_ids": [
+        "w3-language-modelling"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q12",
+      "week": 3,
+      "topic_ids": [
+        "w3-language-modelling"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The tree provides limited conditional information, but the question tests language-model probabilities."
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q13",
+      "week": 3,
+      "topic_ids": [
+        "w3-causal-lm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests decoder-only GPT components rather than the generic encoder stack."
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q14",
+      "week": 4,
+      "topic_ids": [
+        "w4-exhaustive-greedy"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Tests w4 exhaustive greedy."
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q15",
+      "week": 4,
+      "topic_ids": [
+        "w4-exhaustive-greedy"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q16",
+      "week": 4,
+      "topic_ids": [
+        "w4-topk-temperature"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q17",
+      "week": 4,
+      "topic_ids": [
+        "w4-beam-search"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q2",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q3",
+      "week": 2,
+      "topic_ids": [
+        "w2-masked-self-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The shared architecture diagram identifies a decoder self-attention sublayer."
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q4",
+      "week": 2,
+      "topic_ids": [
+        "w2-full-transformer"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q5",
+      "week": 2,
+      "topic_ids": [
+        "w2-masked-self-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q6",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BPE tokenization",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q7",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "T5 span corruption objective",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "Tests T5 span corruption objective."
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q8",
+      "week": 3,
+      "topic_ids": [
+        "w3-task-input-formats"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q9",
+      "week": 3,
+      "topic_ids": [
+        "w3-finetuning"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The selected topic reflects the specific concept tested."
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q10",
+      "week": 4,
+      "topic_ids": [
+        "w4-topp-nucleus"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question combines temperature scaling with nucleus sampling."
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q11",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "WordPiece tokenization",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": "Tests WordPiece tokenization."
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q12",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "T5 text-to-text fine-tuning",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "Tests T5 text-to-text fine-tuning."
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q13",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BART denoising architecture",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "Tests BART denoising architecture."
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q14",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "C4 training data filtering",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": "Tests C4 training data filtering."
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q15",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Parameter-efficient adapter fine-tuning",
+      "likely_later_week": "other/unknown",
+      "confidence": "high",
+      "note": "Tests Parameter-efficient adapter fine-tuning."
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q16",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Training data duplication",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q17",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Compute-optimal scaling laws",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q18",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Vocabulary-based token segmentation",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q19",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Unigram tokenization and segmentation",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    }
+  ]
+}

@@ -1,0 +1,464 @@
+{
+  "week": 2,
+  "chunk": "a",
+  "author": "terra",
+  "records": [
+    {
+      "id": "da5004_2024T1_ET_AN--q157",
+      "answer": "3",
+      "steps": "For query 3 the causal mask admits keys 0–3, with source-image scores 0.94, 0.41, 2.26, 2.29. Softmax preserves their order; the largest is key 3.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "key_index": 3
+      }
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q212",
+      "answer": "3",
+      "steps": "For query 3 the causal mask admits keys 0–3, with source-image scores 0.94, 0.41, 2.26, 2.29. Softmax preserves their order; the largest is key 3.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "key_index": 3
+      }
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q184",
+      "answer": "−0.675262 approximately.",
+      "steps": "The original image asks for P_5, despite the inventory transcription P_3. With dimension 2, P_5 = [sin(5), cos(5)], whose sum is sin(5)+cos(5).",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "position": 5,
+        "sum": -0.6752620891999122
+      }
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q185",
+      "answer": "0.151128 approximately.",
+      "steps": "Zero-based position 3 is T, whose embedding is [0, 1]; add [sin(3), cos(3)]. The components sum to 1+sin(3)+cos(3).",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum": 0.15112751145942172
+      }
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q190",
+      "answer": "D: T₂ × T₁.",
+      "steps": "Decoder queries have `T₂` rows and encoder keys `T₁` rows, hence QKᵀ has shape `[T₂, T₁]` per head. A reverses query/key axes; B and C are self-attention sizes.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [
+        "D"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "rows": "T2",
+        "columns": "T1"
+      }
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q192",
+      "answer": "B and C are the intended choices, but B is not guaranteed.",
+      "steps": "Teacher forcing makes target positions parallel and supplies clean prefixes; switching to model-generated prefixes is possible (C), so D is false. Faster convergence (B) is empirical, not a theorem; A is likewise not guaranteed. Autoregressive factorization itself also includes teacher forcing.",
+      "status": "ambiguous",
+      "ambiguity_note": "B asserts faster convergence without conditions, and autoregressive training is not defined separately from teacher forcing.",
+      "verified_by_code": false,
+      "answer_options": [
+        "B",
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q196",
+      "answer": "A: True.",
+      "steps": "The source table is lower triangular with nonnegative rows summing to 1, so no future key receives weight. B incorrectly claims incompatibility; C overlooks the supplied matrix. Exact zeros for allowed entries can arise as rounded values.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q197",
+      "answer": "0.",
+      "steps": "The sequence indexes [BOS], This, is, a, cool, idea, [EOS] from 0; the source table entry at row 4, column 2 is 0.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "attention": 0,
+        "query_index": 4,
+        "key_index": 2
+      }
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q191",
+      "answer": "A and B.",
+      "steps": "A: causal decoder self-attention masks future positions. B: the Transformer replaces recurrent sequence computation and improved translation benchmarks. C is false: source and target embeddings need not be identical. D is false because A and B hold.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q190",
+      "answer": "A, B and C, with A dependent on interpretation.",
+      "steps": "Decoder self-attention uses a causal mask (A); the encoder includes multi-head self-attention (B); teacher forcing permits parallel training (C). D is false. Encoder self-attention need not use a causal mask, so A is not universal.",
+      "status": "ambiguous",
+      "ambiguity_note": "A does not specify decoder versus encoder self-attention or whether a padding mask is present.",
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q275",
+      "answer": "B: optional.",
+      "steps": "Teacher forcing is a training choice; generated-prefix training is possible. A incorrectly makes it mandatory.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q276",
+      "answer": "B and D are both defensible.",
+      "steps": "B: heads can attend in different representation subspaces. D: batch normalization can replace layer normalization in Transformer variants, although it has different batch and padding behavior. A dismisses important optimization aids; C is a poor general choice because fixed one-hot positions do not naturally extrapolate; E is false.",
+      "status": "ambiguous",
+      "ambiguity_note": "Single-answer MCQ has at least two defensible choices: multi-head diversity and the possibility of using batch normalization.",
+      "verified_by_code": false,
+      "answer_options": [
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q277",
+      "answer": "230,656 under standard bias-free attention and two layers per stack.",
+      "steps": "Each attention block has 4×64²=16,384 weights; two encoder and two decoder layers contain 6 blocks. Four FFNs contribute 4×2×64×256; ten layer norms contribute 10×2×64. Total 98,304+131,072+1,280=230,656.",
+      "status": "ambiguous",
+      "ambiguity_note": "Attention projection biases and whether N=2 applies independently to encoder and decoder are not specified; allowing projection biases changes the count.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "conditional_count": 230656
+      }
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q278",
+      "answer": "48,000 weights if the output projection has no bias.",
+      "steps": "The target projection has `64 × 750` weights, giving 48,000. A 750-element output bias would increase this to 48,750; tied weights alter independent parameter accounting.",
+      "status": "ambiguous",
+      "ambiguity_note": "Output bias and weight tying are not specified.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "weights": 48000,
+        "with_bias": 48750
+      }
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q279",
+      "answer": "32,000 for the source table; 80,000 for both source and target tables.",
+      "steps": "Source embeddings use `500 × 64`=32,000 weights; target embeddings use `750 × 64`=48,000. Both tables together contain 80,000 when untied.",
+      "status": "ambiguous",
+      "ambiguity_note": "The question does not identify which of the two embedding layers to count or specify tying.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "source": 32000,
+        "target": 48000,
+        "both": 80000
+      }
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q280",
+      "answer": "−1: insufficient information.",
+      "steps": "The named three probabilities sum to 0.90. The remaining 0.10 is distributed among rasithen and the other target vocabulary entries, so its individual probability cannot be inferred.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "known_sum": 0.9,
+        "remaining_mass": 0.1,
+        "requested_insufficient_code": -1
+      }
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q281",
+      "answer": "0.",
+      "steps": "Batch normalization centers each feature across its sample row. Therefore the centered first row sums to zero, and division by its common standard deviation preserves the zero sum.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum": 0
+      }
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q282",
+      "answer": "0.",
+      "steps": "Layer normalization centers each sample across its feature column; the common denominator preserves the zero sum of its centered first column.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum": 0
+      }
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q283",
+      "answer": "Approximately 7.243 using population standard deviations.",
+      "steps": "The image asks for the sum of standard deviations, not their squares. For the three feature rows, population variances are 2/3, 74/9 and 38/3; their square roots sum to 7.242964. Epsilon 10⁻⁶ affects normalization denominators negligibly.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum_std": 7.242964420619039
+      }
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q284",
+      "answer": "Approximately 10.276 using population standard deviations.",
+      "steps": "The image asks for the sum of standard deviations, not their squares. Across the three sample columns the population variances are 74/9, 38/9 and 86/3, whose square roots sum to 10.276373.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum_std": 10.276372558073538
+      }
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q291",
+      "answer": "C: 64 × 64.",
+      "steps": "The causal mask has one row per query and one column per key; the sequence length is 64. A, B and D use incorrect sequence lengths; E is false since C fits.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "rows": 64,
+        "columns": 64
+      }
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q293",
+      "answer": "Approximately 0.79315.",
+      "steps": "For the first sine/cosine pair at position 2, p₀=sin(2), p₁=cos(2), hence h₀+h₁=0.1+0.2+sin(2)+cos(2).",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum": 0.7931505902785394
+      }
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q104",
+      "answer": "D: T₂ × T₁.",
+      "steps": "Decoder query length is T₂; encoder key length is T₁. Therefore QKᵀ is `[T₂, T₁]` per head. A and C are square self-attention sizes; B reverses axes.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [
+        "D"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "rows": "T2",
+        "columns": "T1"
+      }
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q105",
+      "answer": "D is the intended answer.",
+      "steps": "Autoregressive translation training is possible, so the assertion is false. Teacher forcing often accelerates training by parallelizing known target prefixes. A–C incorrectly label the assertion true.",
+      "status": "ambiguous",
+      "ambiguity_note": "The reason asserts a universal convergence-rate improvement; the training speed benefit does not guarantee faster convergence in every setting.",
+      "verified_by_code": false,
+      "answer_options": [
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q111",
+      "answer": "0 for fixed sinusoidal positions; 1,024 for a learned position table.",
+      "steps": "Source word embeddings have 100d=3,200, so d=32. A learned table for 32 positions has 32×32=1,024 parameters, whereas the original vanilla Transformer uses fixed sinusoidal encodings with no learnable positional parameters.",
+      "status": "ambiguous",
+      "ambiguity_note": "The question calls the architecture vanilla but does not specify whether position encodings are learned; Vaswani et al. use fixed sinusoids.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "model_dimension": 32,
+        "learned_position_parameters": 1024,
+        "fixed_position_parameters": 0
+      }
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q114",
+      "answer": "0.",
+      "steps": "Batch normalization centers each feature row over four samples; all entries have the same denominator and their sum is zero.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum": 0
+      }
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q115",
+      "answer": "0.",
+      "steps": "Layer normalization centers the two features within the first sample; their normalized values sum to zero.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum": 0
+      }
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q116",
+      "answer": "Approximately 6.50047.",
+      "steps": "Standard population variances of the two feature rows are 7.25 and 14.5; the sum of their standard deviations is √7.25+√14.5. The paper image specifies epsilon 10⁻⁶.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum_std": 6.500468956499207
+      }
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q117",
+      "answer": "11.",
+      "steps": "For each two-feature sample, population standard deviation is half the absolute feature difference: 1.5, 2.5, 4 and 3. Their sum is 11.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum_std": 11
+      }
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q193",
+      "answer": "A.",
+      "steps": "An additive causal logit mask is 0 at allowed positions and −∞ above the diagonal, making future softmax weights zero. B favors future positions; C and D are finite and cannot suppress logits when added.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q142",
+      "answer": "A, B, D and E.",
+      "steps": "Depth, learning-rate schedule, vocabulary size and normalization are model or training design choices. C, source-code font, does not change the model or learning rule.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "D",
+        "E"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q139",
+      "answer": "C.",
+      "steps": "The identity path in a residual connection facilitates gradient propagation through deep networks. A is not its general effect; B confuses residuals with batch normalization; D is false because residuals do not eliminate the role of layer normalization.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q144",
+      "answer": "2.03.",
+      "steps": "At position 3, p₀=sin(3), p₁=cos(3), so h₀−h₁=(0.5−(−0.4))+sin(3)−cos(3)=2.0311125, rounded to two decimals.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "unrounded": 2.031112504660313,
+        "rounded": 2.03
+      }
+    }
+  ]
+}

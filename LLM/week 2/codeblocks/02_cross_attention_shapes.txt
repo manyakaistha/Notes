@@ -1,0 +1,3 @@
+Q=[B,T_dec,d]=[2,3,16], K=V=[B,T_enc,d]=[2,5,16]
+weights [B,h,T_dec,T_enc]=[2, 4, 3, 5]; output=[2, 3, 16]
+cross-attention has no causal mask over source positions

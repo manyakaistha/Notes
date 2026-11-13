@@ -1,0 +1,4 @@
+gold target=[1, 2, 3, 4]
+teacher-forced decoder input=[0, 1, 2, 3]
+free-running decoder input=[0, 1, 7, 6]
+teacher forcing exposes gold prefix; free-running errors can enter later inputs

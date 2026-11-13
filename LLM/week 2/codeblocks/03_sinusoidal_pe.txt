@@ -1,0 +1,2 @@
+shape=(10, 16); max |from scratch - formula implementation|=0.00000011
+entry range=[-0.989992,1.000000]

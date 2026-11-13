@@ -1,0 +1,6 @@
+[B,T,d]=[2, 2, 3]; LN per-token means=tensor([[0., 0.],
+        [0., 0.]])
+BN changes with batch/padding population: feature-0 normalized values=tensor([[-1.3416, -0.4472],
+        [ 0.4472,  1.3416]])
+single token LN output=tensor([-1.2247,  0.0000,  1.2247])
+BN on [1,3,1]: Expected more than 1 value per channel when training, got input size torch.

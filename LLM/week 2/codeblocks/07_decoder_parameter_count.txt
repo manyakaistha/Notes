@@ -1,0 +1,3 @@
+self+cross attention=2,101,248; FFN=2,099,712; 3 LayerNorms=3,072
+decoder layer formula=4,204,032; torch count=4,204,032; equal=True
+Course shorthand ~4M; exact biased PyTorch module is 4.204M.

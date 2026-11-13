@@ -226,7 +226,7 @@ def plot_fourier_decomposition():
 
 
 # -----------------------------------------------------------------------------
-# Figure 4: DFT symmetry, leakage, and window sidelobes
+# Figure 4: DFT finite-record leakage and window sidelobes
 # -----------------------------------------------------------------------------
 def _first_sidelobes_db(window):
     """Return (first sidelobe dB, highest sidelobe dB) of a real window."""
@@ -303,7 +303,7 @@ def plot_dft_leakage():
 
 
 # -----------------------------------------------------------------------------
-# Figure 5: LTI convolution and formant filtering
+# Figure 5: LTI convolution and resonator filtering
 # -----------------------------------------------------------------------------
 def plot_lti_convolution():
     rng = np.random.default_rng(42)
@@ -349,7 +349,7 @@ def plot_lti_convolution():
     freqs = np.fft.rfftfreq(1024, 1 / fs)
 
     axes[0, 0].plot(t * 1000, x_in, color="steelblue", lw=1.1)
-    axes[0, 0].set_title(r"Input $x[n]$: glottal pulses + 2200 Hz tone", fontsize=12, fontweight="bold")
+    axes[0, 0].set_title(r"Input $x[n]$: periodic impulse train + 2200 Hz tone", fontsize=12, fontweight="bold")
     axes[0, 0].set_ylabel("Amplitude")
 
     axes[0, 1].plot(freqs, 20 * np.log10(np.abs(np.fft.rfft(x_in, 1024)) + 1e-6), color="steelblue", lw=1.1)
@@ -372,7 +372,7 @@ def plot_lti_convolution():
     axes[2, 0].set_ylabel("Amplitude")
 
     axes[2, 1].plot(freqs, 20 * np.log10(np.abs(np.fft.rfft(y_out, 1024)) + 1e-6), color="forestgreen", lw=1.3)
-    axes[2, 1].set_title(r"Output $|Y[k]|$: 2200 Hz tone attenuated, 600 Hz kept", fontsize=12, fontweight="bold")
+    axes[2, 1].set_title(r"Output $|Y[k]|$: input spectrum shaped by resonator", fontsize=12, fontweight="bold")
     axes[2, 1].set_xlabel("Frequency (Hz)")
     axes[2, 1].set_ylabel("Magnitude (dB)")
     axes[2, 1].set_xlim(0, 4000)
@@ -454,262 +454,35 @@ def plot_pole_zero_constellation():
 
 
 # -----------------------------------------------------------------------------
-# Figure 7: Autocorrelation pitch estimation
+# Figure 7: Synthetic speech classes and the acoustic waveform
 # -----------------------------------------------------------------------------
-def plot_autocorrelation_pitch():
-    rng = np.random.default_rng(7)
-    fig, axes = plt.subplots(2, 2, figsize=(14, 9))
+def plot_speech_waveforms():
     fs = 16000
-    t = np.arange(int(0.05 * fs)) / fs
-    n_samples = len(t)
-
-    f0_true = 125.0
-    period = int(fs / f0_true)
-    pulses = np.zeros(n_samples)
-    pulses[::period] = 1.0
-    resonator = np.exp(-t * 200) * (np.sin(2 * np.pi * 700 * t) + 0.6 * np.sin(2 * np.pi * 1220 * t))
-    voiced = np.convolve(pulses, resonator)[:n_samples]
-    voiced += 0.03 * rng.standard_normal(n_samples)
-    unvoiced = np.diff(rng.standard_normal(n_samples), prepend=0.0)
-
-    def normalized_autocorr(x):
-        corr = np.correlate(x, x, mode="full")
-        corr = corr[corr.size // 2 :]
-        return corr / corr[0]
-
-    r_voiced = normalized_autocorr(voiced)
-    r_unvoiced = normalized_autocorr(unvoiced)
-    lags_ms = np.arange(len(r_voiced)) / fs * 1000
-
-    l_min = int(np.floor(fs / 500))
-    l_max = int(np.ceil(fs / 50))
-    l_star = l_min + int(np.argmax(r_voiced[l_min : l_max + 1]))
-    print(
-        f"[Pitch] l*={l_star} samples, T0={1000 * l_star / fs:.2f} ms, "
-        f"F0={fs / l_star:.2f} Hz, rho={r_voiced[l_star]:.3f}; "
-        f"unvoiced max in search={np.max(r_unvoiced[l_min:l_max + 1]):.3f}"
-    )
-
-    axes[0, 0].plot(t * 1000, voiced, color="navy", lw=1.2)
-    axes[0, 0].set_title(r"Voiced frame (/a/-like, $F_0 = 125$ Hz)", fontsize=12, fontweight="bold")
-    axes[0, 0].set_ylabel("Amplitude")
-
-    axes[1, 0].plot(lags_ms[:400], r_voiced[:400], color="navy", lw=1.6)
-    axes[1, 0].axvspan(1000 * l_min / fs, 1000 * l_max / fs, color="green", alpha=0.12, label="Search 50–500 Hz")
-    axes[1, 0].axvline(1000 * l_star / fs, color="crimson", ls="--", lw=1.5, label=rf"Peak at {1000 * l_star / fs:.1f} ms")
-    axes[1, 0].set_title(r"Voiced $\rho_{xx}[l]$: pitch peak inside the search band", fontsize=12, fontweight="bold")
-    axes[1, 0].set_xlabel("Lag (milliseconds)")
-    axes[1, 0].set_ylabel("Normalized autocorrelation")
-    axes[1, 0].legend(loc="upper right", fontsize=9)
-
-    axes[0, 1].plot(t * 1000, unvoiced, color="darkslategray", lw=0.9)
-    axes[0, 1].set_title("Unvoiced frame (differentiated noise, /s/-like)", fontsize=12, fontweight="bold")
-
-    axes[1, 1].plot(lags_ms[:400], r_unvoiced[:400], color="darkslategray", lw=1.3)
-    axes[1, 1].axvspan(1000 * l_min / fs, 1000 * l_max / fs, color="green", alpha=0.12)
-    axes[1, 1].axhline(0.30, color="crimson", ls=":", lw=1.2, label=r"Voicing threshold $\rho = 0.30$")
-    axes[1, 1].set_title(r"Unvoiced $\rho_{xx}[l]$: no peak above threshold", fontsize=12, fontweight="bold")
-    axes[1, 1].set_xlabel("Lag (milliseconds)")
-    axes[1, 1].set_ylim(-0.45, 1.05)
-    axes[1, 1].legend(loc="upper right", fontsize=9)
-
+    t = np.arange(int(0.04 * fs)) / fs
+    voiced = np.sin(2 * np.pi * 120 * t) + 0.35 * np.sin(2 * np.pi * 240 * t)
+    rng = np.random.default_rng(42)
+    unvoiced = 0.45 * rng.standard_normal(len(t))
+    silence = np.zeros_like(t)
+    fig, axes = plt.subplots(3, 1, figsize=(12, 8), sharex=True)
+    for ax, x, title, color in zip(
+        axes, (voiced, unvoiced, silence),
+        ("Voiced: quasi-periodic excitation", "Unvoiced: aperiodic turbulent excitation", "Silence: near-zero acoustic pressure variation"),
+        ("C0", "C1", "C2")):
+        ax.plot(t * 1000, x, color=color, lw=1.1)
+        ax.set_title(title, fontsize=12, fontweight="bold")
+        ax.set_ylabel("Relative amplitude")
+    axes[-1].set_xlabel("Time (ms)")
     fig.tight_layout()
-    _save(fig, "07_autocorrelation_pitch.png")
-
-
-# -----------------------------------------------------------------------------
-# Figure 8: Wideband vs narrowband spectrograms
-# -----------------------------------------------------------------------------
-def plot_spectrogram_tradeoff():
-    rng = np.random.default_rng(11)
-    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(13, 10), sharex=True)
-    fs = 16000
-    duration = 0.8
-    t = np.arange(int(fs * duration)) / fs
-
-    f0 = 130 + 30 * np.sin(2 * np.pi * 2.0 * t)
-    phase = 2 * np.pi * np.cumsum(f0) / fs
-    glottal = (1.0 + np.sin(phase)) * (phase % (2 * np.pi) < 0.3)
-    f1 = 450 + 300 * (t / duration)
-    f2 = 1400.0
-    speech = np.zeros_like(t)
-    pulse_idx = np.flatnonzero(glottal > 0.8)
-    for i in pulse_idx:
-        remain = len(t) - i
-        tau = np.arange(remain) / fs
-        burst = np.exp(-tau * 250) * (np.sin(2 * np.pi * f1[i] * tau) + 0.5 * np.sin(2 * np.pi * f2 * tau))
-        speech[i:] += burst
-    speech += 0.02 * rng.standard_normal(len(speech))
-
-    def stft_power(x, nperseg, noverlap):
-        step = nperseg - noverlap
-        n_frames = (len(x) - nperseg) // step
-        window = np.hamming(nperseg)
-        spec = np.zeros((nperseg // 2 + 1, n_frames))
-        t_axis = (np.arange(n_frames) * step + nperseg / 2) / fs
-        f_axis = np.fft.rfftfreq(nperseg, 1 / fs)
-        for idx in range(n_frames):
-            frame = x[idx * step : idx * step + nperseg] * window
-            spec[:, idx] = np.abs(np.fft.rfft(frame)) ** 2
-        return f_axis, t_axis, spec
-
-    f_w, t_w, s_w = stft_power(speech, int(0.006 * fs), int(0.006 * fs * 0.75))
-    f_n, t_n, s_n = stft_power(speech, int(0.050 * fs), int(0.050 * fs * 0.8))
-    db_w = 10 * np.log10(s_w + 1e-6)
-    db_n = 10 * np.log10(s_n + 1e-6)
-
-    im1 = ax1.pcolormesh(t_w * 1000, f_w, db_w, shading="gouraud", cmap="viridis")
-    ax1.set_ylim(0, 3500)
-    ax1.set_title("Wideband spectrogram (6 ms Hamming window)\nVertical striations are individual glottal pulses", fontsize=12, fontweight="bold")
-    ax1.set_ylabel("Frequency (Hz)")
-    fig.colorbar(im1, ax=ax1, label="Power (dB, this panel)")
-
-    im2 = ax2.pcolormesh(t_n * 1000, f_n, db_n, shading="gouraud", cmap="magma")
-    ax2.set_ylim(0, 3500)
-    ax2.set_title("Narrowband spectrogram (50 ms Hamming window)\nHorizontal lines are harmonics; $F_1$ glides upward", fontsize=12, fontweight="bold")
-    ax2.set_xlabel("Time (milliseconds)")
-    ax2.set_ylabel("Frequency (Hz)")
-    fig.colorbar(im2, ax=ax2, label="Power (dB, this panel)")
-
-    fig.tight_layout()
-    _save(fig, "08_wideband_vs_narrowband_spectrogram.png")
-
-
-# -----------------------------------------------------------------------------
-# Figure 9: Source-filter model and real-cepstrum liftering
-# -----------------------------------------------------------------------------
-def plot_source_filter_cepstrum():
-    fig, axes = plt.subplots(4, 1, figsize=(13, 12.5))
-    fs = 16000
-    n_fft = 1024
-    freqs = np.fft.rfftfreq(n_fft, 1 / fs)
-
-    def formant_peak(f, center, bw, gain):
-        return gain / (1.0 + ((f - center) / (bw / 2.0)) ** 2)
-
-    v_mag = (
-        formant_peak(freqs, 600, 100, 15)
-        + formant_peak(freqs, 1400, 150, 10)
-        + formant_peak(freqs, 2400, 200, 6)
-        + 1.0
-    )
-    f0 = 125.0
-    excitation = 0.05 * np.ones_like(freqs)
-    for harmonic in np.arange(f0, fs / 2, f0):
-        excitation += np.exp(-0.5 * ((freqs - harmonic) / 12.0) ** 2)
-    excitation /= np.max(excitation[freqs < 400])
-    speech = excitation * v_mag
-    log_v = 20 * np.log10(v_mag)
-    log_s = 20 * np.log10(speech)
-
-    cepstrum = np.fft.irfft(log_s)
-    quefrency_ms = np.arange(len(cepstrum)) / fs * 1000
-    cutoff = int(0.003 * fs)  # 3 ms
-    lifter = np.zeros_like(cepstrum)
-    lifter[:cutoff] = 1.0
-    lifter[-cutoff:] = 1.0
-    recovered = np.fft.rfft(cepstrum * lifter).real
-
-    axes[0].plot(freqs, speech, color="steelblue", lw=1.1, label=r"$|S| = |E|\,|V|$")
-    axes[0].plot(freqs, v_mag, color="crimson", lw=2.0, label=r"Vocal-tract envelope $|V|$")
-    axes[0].set_title(r"Harmonic speech spectrum under a formant envelope", fontsize=12, fontweight="bold")
-    axes[0].set_ylabel("Linear amplitude")
-    axes[0].set_xlim(0, 4000)
-    axes[0].legend(loc="upper right", fontsize=10)
-
-    axes[1].plot(freqs, log_s, color="darkslategray", lw=1.0, alpha=0.85, label=r"$\log|S(\omega)|$")
-    axes[1].plot(freqs, log_v, color="crimson", lw=2.0, ls="--", label=r"$\log|V(\omega)|$ through the harmonic peaks")
-    axes[1].set_title(r"Log spectrum: $\log|S| = \log|E| + \log|V|$  (radiation absorbed into $E$)", fontsize=12, fontweight="bold")
-    axes[1].set_ylabel("Magnitude (dB)")
-    axes[1].set_xlim(0, 4000)
-    axes[1].legend(loc="upper right", fontsize=10)
-
-    axes[2].plot(quefrency_ms[:200], cepstrum[:200], color="purple", lw=1.5)
-    axes[2].axvspan(0, 3.0, color="crimson", alpha=0.15, label="Lifter kept: $|n| < 3$ ms")
-    axes[2].axvline(1000 / f0, color="C0", ls=":", lw=2.0, label=rf"Pitch rahmonic at {1000 / f0:.1f} ms")
-    axes[2].set_title(r"Real cepstrum $\mathrm{IDFT}\{\log|S|\}$", fontsize=12, fontweight="bold")
-    axes[2].set_xlabel("Quefrency (milliseconds)")
-    axes[2].set_ylabel("Cepstral amplitude")
-    axes[2].set_xlim(0, 20)
-    axes[2].legend(loc="upper right", fontsize=10)
-
-    axes[3].plot(freqs, log_s, color="0.75", lw=1.0, label="Raw log spectrum")
-    axes[3].plot(freqs, log_v, color="crimson", lw=1.5, ls="--", label=r"True $\log|V|$")
-    axes[3].plot(freqs, recovered, color="forestgreen", lw=2.3, label="3 ms lifter (same shape, lower level)")
-    axes[3].set_title("Liftering removes the pitch rahmonic; valleys pull the level down", fontsize=12, fontweight="bold")
-    axes[3].set_xlabel("Frequency (Hz)")
-    axes[3].set_ylabel("Log magnitude (dB)")
-    axes[3].set_xlim(0, 4000)
-    axes[3].legend(loc="upper right", fontsize=10)
-
-    fig.tight_layout()
-    _save(fig, "09_source_filter_cepstral_separation.png")
-
-
-# -----------------------------------------------------------------------------
-# Figure 10: Mel scale and a 26-channel triangular filter bank
-# -----------------------------------------------------------------------------
-def plot_mel_filterbank():
-    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(13, 10))
-    fs = 16000
-    n_filters = 26
-    n_fft = 1024
-
-    def hz_to_mel(hz):
-        return 1125.0 * np.log(1.0 + hz / 700.0)
-
-    def mel_to_hz(mel):
-        return 700.0 * (np.exp(mel / 1125.0) - 1.0)
-
-    hz_range = np.linspace(0, 8000, 1200)
-    ax1.plot(hz_range, hz_to_mel(hz_range), color="navy", lw=2.4, label=r"$1125\ln(1+f/700)$")
-    chord = hz_range * (hz_to_mel(1000) / 1000)
-    ax1.plot(hz_range, chord, "k--", alpha=0.7, label="Chord through 0 Hz and 1000 Hz")
-    ax1.axvline(1000, color="crimson", ls=":", label="1000 Hz reference")
-    ax1.set_title(r"Mel map used in this note: $f_{\mathrm{mel}} = 1125\ln(1 + f_{\mathrm{Hz}}/700)$", fontsize=13, fontweight="bold")
-    ax1.set_xlabel("Physical frequency (Hz)")
-    ax1.set_ylabel("Perceived pitch (mels)")
-    ax1.legend(loc="upper left", fontsize=10)
-
-    mel_points = np.linspace(hz_to_mel(0), hz_to_mel(fs / 2), n_filters + 2)
-    hz_points = mel_to_hz(mel_points)
-    bin_points = np.floor((n_fft + 1) * hz_points / fs).astype(int)
-    freq_bins = np.fft.rfftfreq(n_fft, 1 / fs)
-    colors = sns.color_palette("rocket", n_filters)
-    for m in range(1, n_filters + 1):
-        left, center, right = bin_points[m - 1], bin_points[m], bin_points[m + 1]
-        weights = np.zeros(len(freq_bins))
-        for k in range(left, center):
-            weights[k] = (k - left) / max(1, center - left)
-        for k in range(center, right):
-            weights[k] = (right - k) / max(1, right - center)
-        ax2.plot(freq_bins, weights, color=colors[m - 1], lw=1.5)
-
-    ax2.set_title(
-        "26 triangular filters, uniform in mel, drawn so each triangle is visible\n"
-        "The end-to-end lab uses 40 filters; the construction is the same",
-        fontsize=12,
-        fontweight="bold",
-    )
-    ax2.set_xlabel("Physical frequency (Hz)")
-    ax2.set_ylabel("Filter weight")
-    ax2.set_xlim(0, 8000)
-    ax2.set_ylim(-0.02, 1.08)
-
-    fig.tight_layout()
-    _save(fig, "10_mel_filterbank_frequency_response.png")
+    _save(fig, "07_speech_waveform_classes.png")
 
 
 if __name__ == "__main__":
-    print("[Starting] Week 1 figure generation")
+    print("[Starting] Week 1 in-scope figure generation")
     plot_sampling_aliasing()
     plot_quantization()
     plot_fourier_decomposition()
     plot_dft_leakage()
     plot_lti_convolution()
     plot_pole_zero_constellation()
-    plot_autocorrelation_pitch()
-    plot_spectrogram_tradeoff()
-    plot_source_filter_cepstrum()
-    plot_mel_filterbank()
-    print("[Completed] 10 figures")
+    plot_speech_waveforms()
+    print("[Completed] 7 in-scope figures")

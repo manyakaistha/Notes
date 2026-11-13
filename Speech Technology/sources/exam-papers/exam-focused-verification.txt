@@ -1,0 +1,14 @@
+Evidence: all 98 included records assigned once; no excluded record used to inflate counts.
+Week 1 evidence: sampling=7, systems=5, basis=3, speech=3
+Week 2 evidence: gaussian=9, perception=4, stft=5, mfcc=3
+Week 3 evidence: gmm=11, vq=13, markov=6, bayes=4, optimization=4
+Week 4 evidence: decoding=8, hmm=5, forward=1, acoustic=7
+week 1: Python example executed; recorded stdout matches; 2846 whitespace-delimited words.
+week 2: Python example executed; recorded stdout matches; 2933 whitespace-delimited words.
+week 3: Python example executed; recorded stdout matches; 3228 whitespace-delimited words.
+week 4: Python example executed; recorded stdout matches; 3439 whitespace-delimited words.
+Artifacts: all five YAML headers parse; links resolve; 11 existing figures have sequential captions.
+Gaussian example: each conditional error and overall equal-prior error = 0.158655254.
+HMM example: Forward evidence 0.050000000; best-path posterior 0.281250; smoothed Day 1 occupancy verified.
+M-step variance, VQ bit widths, geometric mean duration and unpadded frame count verified.
+PASS: study evidence, numerical demonstrations, source navigation and guide structure.

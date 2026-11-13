@@ -1,0 +1,332 @@
+[
+  {
+    "week": 1,
+    "family": "sampling",
+    "label": "Sampling, aliasing and sample counts",
+    "priority": "P1 — practise calculations",
+    "question_ids": [
+      "ee4001_2022T3_Q1_AN--q8",
+      "ee4001_2023T1_Q1_NA--q8",
+      "ee4001_2023T3_Q1_NA--q8",
+      "ee4001_2025T2_Q1_NA--q3",
+      "ee4001_2026T1_ET_FN--q3",
+      "ee4001_2026T1_Q1_NA--q5",
+      "ee4001_2026T1_Q1_NA--q6"
+    ],
+    "occurrences": 7,
+    "exam_counts": {
+      "Q1": 6,
+      "ET": 1
+    },
+    "distinct_exam_terms": 6
+  },
+  {
+    "week": 1,
+    "family": "systems",
+    "label": "Linearity, time invariance and causality",
+    "priority": "P1 — practise proofs",
+    "question_ids": [
+      "ee4001_2022T3_Q1_AN--q9",
+      "ee4001_2023T1_Q1_NA--q9",
+      "ee4001_2023T3_Q1_NA--q9",
+      "ee4001_2025T2_Q1_NA--q5",
+      "ee4001_2026T1_Q1_NA--q8"
+    ],
+    "occurrences": 5,
+    "exam_counts": {
+      "Q1": 5
+    },
+    "distinct_exam_terms": 5
+  },
+  {
+    "week": 1,
+    "family": "basis",
+    "label": "Basis / linear-combination idea",
+    "priority": "P2 — rehearse concise answers",
+    "question_ids": [
+      "ee4001_2022T3_Q1_AN--q10",
+      "ee4001_2023T1_Q1_NA--q10",
+      "ee4001_2023T3_Q1_NA--q10"
+    ],
+    "occurrences": 3,
+    "exam_counts": {
+      "Q1": 3
+    },
+    "distinct_exam_terms": 3
+  },
+  {
+    "week": 1,
+    "family": "speech",
+    "label": "Voicing, articulation and information in speech",
+    "priority": "P2 — rehearse concise answers",
+    "question_ids": [
+      "ee4001_2025T2_Q1_NA--q2",
+      "ee4001_2026T1_ET_FN--q14",
+      "ee4001_2026T1_Q1_NA--q2"
+    ],
+    "occurrences": 3,
+    "exam_counts": {
+      "Q1": 2,
+      "ET": 1
+    },
+    "distinct_exam_terms": 3
+  },
+  {
+    "week": 2,
+    "family": "gaussian",
+    "label": "Gaussian parameters, density normalization and symmetry",
+    "priority": "P1 — master repeated fundamentals",
+    "question_ids": [
+      "ee4001_2022T3_Q1_AN--q2",
+      "ee4001_2022T3_Q1_AN--q11",
+      "ee4001_2022T3_Q1_AN--q12",
+      "ee4001_2023T1_Q1_NA--q2",
+      "ee4001_2023T1_Q1_NA--q11",
+      "ee4001_2023T1_Q1_NA--q12",
+      "ee4001_2023T3_Q1_NA--q2",
+      "ee4001_2023T3_Q1_NA--q11",
+      "ee4001_2023T3_Q1_NA--q12"
+    ],
+    "occurrences": 9,
+    "exam_counts": {
+      "Q1": 9
+    },
+    "distinct_exam_terms": 3
+  },
+  {
+    "week": 2,
+    "family": "perception",
+    "label": "Pitch and basilar membrane",
+    "priority": "P2 — rehearse concise answers",
+    "question_ids": [
+      "ee4001_2022T3_Q1_AN--q13",
+      "ee4001_2023T1_Q1_NA--q13",
+      "ee4001_2023T3_Q1_NA--q13",
+      "ee4001_2026T1_Q1_NA--q4"
+    ],
+    "occurrences": 4,
+    "exam_counts": {
+      "Q1": 4
+    },
+    "distinct_exam_terms": 4
+  },
+  {
+    "week": 2,
+    "family": "stft",
+    "label": "STFT, window trade-offs and frame correlation",
+    "priority": "P1 — explain and calculate",
+    "question_ids": [
+      "ee4001_2023T3_ET_FN--q-subj-4",
+      "ee4001_2025T2_Q1_NA--q1",
+      "ee4001_2026T1_ET_FN--q12",
+      "ee4001_2026T1_Q1_NA--q3",
+      "ee4001_2026T1_Q1_NA--q7"
+    ],
+    "occurrences": 5,
+    "exam_counts": {
+      "ET": 2,
+      "Q1": 3
+    },
+    "distinct_exam_terms": 4
+  },
+  {
+    "week": 2,
+    "family": "mfcc",
+    "label": "MFCC role and extraction steps",
+    "priority": "P1 — reconstruct the pipeline",
+    "question_ids": [
+      "ee4001_2025T2_Q1_NA--q4",
+      "ee4001_2025T2_Q2_NA--q7",
+      "ee4001_2026T1_Q1_NA--q1"
+    ],
+    "occurrences": 3,
+    "exam_counts": {
+      "Q1": 2,
+      "Q2": 1
+    },
+    "distinct_exam_terms": 3
+  },
+  {
+    "week": 3,
+    "family": "gmm",
+    "label": "GMM density, posterior, likelihood and EM",
+    "priority": "P1 — calculate and explain",
+    "question_ids": [
+      "ee4001_2022T3_ET_FN--q-mcq-1",
+      "ee4001_2022T3_Q1_AN--q4",
+      "ee4001_2022T3_Q1_AN--q5",
+      "ee4001_2023T1_ET_AN--q-mcq-1",
+      "ee4001_2023T1_ET_FN--q-mcq-1",
+      "ee4001_2023T1_Q1_NA--q4",
+      "ee4001_2023T1_Q1_NA--q5",
+      "ee4001_2023T3_Q1_NA--q4",
+      "ee4001_2023T3_Q1_NA--q5",
+      "ee4001_2025T2_Q1_NA--q8",
+      "ee4001_2026T1_Q1_NA--q10"
+    ],
+    "occurrences": 11,
+    "exam_counts": {
+      "ET": 3,
+      "Q1": 8
+    },
+    "distinct_exam_terms": 7
+  },
+  {
+    "week": 3,
+    "family": "vq",
+    "label": "K-means, LBG and vector quantization",
+    "priority": "P1 — work iterations by hand",
+    "question_ids": [
+      "ee4001_2022T3_Q1_AN--q1",
+      "ee4001_2022T3_Q1_AN--q3",
+      "ee4001_2022T3_Q1_AN--q7",
+      "ee4001_2023T1_Q1_NA--q1",
+      "ee4001_2023T1_Q1_NA--q3",
+      "ee4001_2023T1_Q1_NA--q7",
+      "ee4001_2023T3_Q1_NA--q1",
+      "ee4001_2023T3_Q1_NA--q3",
+      "ee4001_2023T3_Q1_NA--q7",
+      "ee4001_2025T2_Q1_NA--q6",
+      "ee4001_2025T2_Q1_NA--q7",
+      "ee4001_2026T1_ET_FN--q17",
+      "ee4001_2026T1_ET_FN--q18"
+    ],
+    "occurrences": 13,
+    "exam_counts": {
+      "Q1": 11,
+      "ET": 2
+    },
+    "distinct_exam_terms": 5
+  },
+  {
+    "week": 3,
+    "family": "markov",
+    "label": "Observed Markov forecasts and max-path trellis",
+    "priority": "P1 — build trellises",
+    "question_ids": [
+      "ee4001_2022T3_ET_FN--q-mcq-8",
+      "ee4001_2022T3_Q1_AN--q6",
+      "ee4001_2023T1_ET_AN--q-mcq-8",
+      "ee4001_2023T1_ET_FN--q-mcq-8",
+      "ee4001_2023T1_Q1_NA--q6",
+      "ee4001_2023T3_Q1_NA--q6"
+    ],
+    "occurrences": 6,
+    "exam_counts": {
+      "ET": 3,
+      "Q1": 3
+    },
+    "distinct_exam_terms": 5
+  },
+  {
+    "week": 3,
+    "family": "bayes",
+    "label": "Conditional probability / Bayes rule",
+    "priority": "P2 — retrieve accurately",
+    "question_ids": [
+      "ee4001_2022T3_ET_FN--q-mcq-7",
+      "ee4001_2023T1_ET_AN--q-mcq-7",
+      "ee4001_2023T1_ET_FN--q-mcq-7",
+      "ee4001_2023T3_ET_AN--q-mcq-4"
+    ],
+    "occurrences": 4,
+    "exam_counts": {
+      "ET": 4
+    },
+    "distinct_exam_terms": 3
+  },
+  {
+    "week": 3,
+    "family": "optimization",
+    "label": "Local versus global optima",
+    "priority": "P2 — explain limitations",
+    "question_ids": [
+      "ee4001_2022T3_ET_FN--q-subj-3",
+      "ee4001_2023T1_ET_AN--q-subj-3",
+      "ee4001_2023T1_ET_FN--q-subj-3",
+      "ee4001_2023T3_ET_FN--q-subj-1"
+    ],
+    "occurrences": 4,
+    "exam_counts": {
+      "ET": 4
+    },
+    "distinct_exam_terms": 3
+  },
+  {
+    "week": 4,
+    "family": "decoding",
+    "label": "HMM Viterbi: weather and POS examples",
+    "priority": "P1 — calculate with traceback",
+    "question_ids": [
+      "ee4001_2022T3_ET_FN--q-subj-8",
+      "ee4001_2022T3_Q2_NA--q9",
+      "ee4001_2023T1_ET_AN--q-subj-8",
+      "ee4001_2023T1_ET_FN--q-subj-8",
+      "ee4001_2023T3_Q2_NA--q4",
+      "ee4001_2025T2_Q1_NA--q9",
+      "ee4001_2026T1_Q1_NA--q9",
+      "ee4001_2026T1_Q1_NA--q11"
+    ],
+    "occurrences": 8,
+    "exam_counts": {
+      "ET": 3,
+      "Q2": 2,
+      "Q1": 3
+    },
+    "distinct_exam_terms": 6
+  },
+  {
+    "week": 4,
+    "family": "hmm",
+    "label": "HMM versus chain and probability normalization",
+    "priority": "P1 — understand every probability",
+    "question_ids": [
+      "ee4001_2022T3_ET_FN--q-mcq-2",
+      "ee4001_2022T3_Q2_NA--q8",
+      "ee4001_2023T1_ET_AN--q-mcq-2",
+      "ee4001_2023T1_ET_FN--q-mcq-2",
+      "ee4001_2023T3_Q2_NA--q7"
+    ],
+    "occurrences": 5,
+    "exam_counts": {
+      "ET": 3,
+      "Q2": 2
+    },
+    "distinct_exam_terms": 4
+  },
+  {
+    "week": 4,
+    "family": "forward",
+    "label": "Forward likelihood; foundation for soft alignment",
+    "priority": "P1 — compare with Viterbi",
+    "question_ids": [
+      "ee4001_2023T3_ET_FN--q-mcq-1"
+    ],
+    "occurrences": 1,
+    "exam_counts": {
+      "ET": 1
+    },
+    "distinct_exam_terms": 1
+  },
+  {
+    "week": 4,
+    "family": "acoustic",
+    "label": "HMM–GMM roles, emissions, topology, duration, triphones",
+    "priority": "P1 — explain and count correctly",
+    "question_ids": [
+      "ee4001_2022T3_Q2_NA--q10",
+      "ee4001_2023T3_ET_AN--q-mcq-1",
+      "ee4001_2023T3_ET_AN--q-subj-3",
+      "ee4001_2025T2_Q2_NA--q1",
+      "ee4001_2025T2_Q2_NA--q8",
+      "ee4001_2026T1_Q2_NA--q1",
+      "ee4001_2026T1_Q2_NA--q2"
+    ],
+    "occurrences": 7,
+    "exam_counts": {
+      "Q2": 5,
+      "ET": 2
+    },
+    "distinct_exam_terms": 4
+  }
+]

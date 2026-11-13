@@ -5,27 +5,11 @@ tags: [speech/concept, machine-learning/clustering, vector-quantization]
 
 # K-Means Clustering in Speech
 
-**K-Means Clustering** is a deterministic, hard-assignment partitioning algorithm that segments an unlabelled acoustic dataset $\mathcal{X} = \{x_1, \dots, x_N\}$ into $K$ disjoint clusters by minimizing the within-cluster sum of squares (WCSS) distortion objective:
+**Formal definition.** K-means partitions observations $x_i\in\mathbb R^D$ into at most $K$ nonempty clusters by minimizing within-cluster squared Euclidean distortion $J=\sum_{k=1}^K\sum_{i:z_i=k}\|x_i-\mu_k\|_2^2$. Lloyd iterations alternate nearest-centroid assignments and centroid updates to the assigned arithmetic means. Each step does not increase $J$, but the objective is nonconvex: the result depends on initialization, ties, empty-cluster handling, and feature scaling, and convergence is to a local optimum rather than a guaranteed global minimum. In speech, the procedure supports vector quantization and codebook initialization; Linde-Buzo-Gray (LBG) grows codebooks by splitting centroids with perturbations and refining them. K-means uses hard assignments and squared Euclidean geometry, so it is not equivalent to probabilistic mixture estimation and may poorly represent clusters with unequal covariance or density.
 
-$$J = \sum_{k=1}^K \sum_{x_i \in S_k} \| x_i - \mu_k \|^2$$
+**Why it matters here.** It supplies a baseline discrete acoustic partition and an initialization intuition for the soft responsibilities of GMMs.
 
-### Algorithmic Mechanics
-1. **Assignment Step:** Assign each continuous acoustic observation vector $x_i$ strictly to the closest centroid $\mu_k$ according to Euclidean distance.
-2. **Update Step:** Recompute each centroid as the arithmetic mean of all vectors assigned to it:
-   $$\mu_k = \frac{1}{|S_k|} \sum_{x_i \in S_k} x_i$$
-3. **Convergence:** Iterate until centroid shifts fall below a threshold or assignments stabilize.
-
-### Vector Quantization & LBG Splitting
-To initialize cluster centers without getting trapped in bad local minima, the Linde-Buzo-Gray (LBG) algorithm starts with the global dataset mean and splits each centroid using a small perturbation factor $\epsilon$:
-
-$$c_1 = \mu (1 + \epsilon), \quad c_2 = \mu (1 - \epsilon)$$
-
-### Key Properties & Constraints
-- **Fixed Hyperparameter:** The number of clusters $K$ is set prior to running and remains strictly fixed throughout convergence.
-- **Hard Assignment:** Points belong 100% to one cluster; outliers directly drag the centroid of their assigned cluster.
-- **Local Minima:** Optimization relies on greedy coordinate descent and does not guarantee reaching the global minimum.
-
-**Appears in:** [[week 2/week-2-notes|Week 2 Notes]]
+**Appears in:** [[Knowledge-Map]] (supplementary registry; course week unassigned)
 
 ## Related
 - [[gaussian-mixture-models]]

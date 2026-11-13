@@ -1,0 +1,8 @@
+[Sampling] fs=8000 Hz, f0=1000 Hz, samples/cycle=8
+[Quantization] bits=8, step=0.007812, max_abs_error=0.003906
+[Fourier series] terms=5 odd harmonics, RMS_error=0.200990
+[DFT] N=64, bin_spacing=125.0 Hz, peak_bins=8,56, inverse_max_error=4.44e-16
+[Convolution] x=[1.0, 2.0, 0.0], h=[1.0, -0.5], y=[1.0, 1.5, -1.0, 0.0]
+[Waveform] voiced: rms=0.764064
+[Waveform] unvoiced: rms=0.421051
+[Waveform] silence: rms=0.000000

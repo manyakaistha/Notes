@@ -1,0 +1,25 @@
+Equal-prior threshold: x=1.000; Bayes error=0.158655
+Bivariate covariance eigenvalues: [0.553581 1.946419]
+Fixed GMM at x=2.0: weighted component densities=[0.145182 0.096788]; mixture=0.241971
+Fixed GMM posterior responsibilities: [0.6 0.4]
+One soft-EM update: effective counts=[1.5 1.5]; weights=[0.5 0.5]
+One soft-EM update: means=[0.667561 3.332439]; variances=[0.891273 0.891273]
+Synthetic sample: N=600; generator seed=42; true weights=[0.58, 0.42]
+Soft-EM estimates (ordered by mean): weights=[0.5769 0.4231], means=[-1.2601  1.643 ], variances=[0.2363 0.5202]
+Observed log-likelihood: start=-1154.540495; end=-912.934508; minimum increment=-1.137e-13
+Responsibility checks: row-sum max error=2.22e-16; effective counts=[346.17 253.83]
+Hard-assignment fractions from final posterior: [0.58 0.42]
+Observed weather transitions (rows S,C,R): [[1, 2, 1], [1, 1, 2], [2, 1, 1]]
+Count-estimated transition matrix (rows S,C,R): [[0.25 0.5  0.25]
+ [0.25 0.25 0.5 ]
+ [0.5  0.25 0.25]]
+Assumed forecast transition matrix (rows S,C,R): [[0.5   0.375 0.125]
+ [0.25  0.125 0.625]
+ [0.25  0.075 0.675]]
+P(Sunny|Cloudy): count estimate=0.250; assumed forecast=0.250; full matrices are distinct
+P(next five states S,S,C,R,C | yesterday C)=0.00219727
+Three-day marginal from Cloudy (S,C,R): [0.328125 0.176563 0.495313]
+Three-day marginal from Sunny (S,C,R): [0.34375  0.199687 0.456562]
+Sunny-start greedy path: Sunny -> Sunny -> Sunny; probability=0.125000
+Sunny-start exhaustive best of 27 paths: Cloudy -> Rainy -> Rainy; probability=0.158203
+Max-product DP path: Cloudy -> Rainy -> Rainy; probability=0.158203; matches enumeration=True

@@ -18,7 +18,7 @@ Governed by the Gabor limit ($\Delta t \cdot \Delta f \ge \frac{1}{4\pi}$):
 
 Standard ASR feature pipelines utilize a balanced $25\ \mathrm{ms}$ window with a $10\ \mathrm{ms}$ frame advance.
 
-**Appears in:** [[week-1-notes|Week 1 Notes]]
+**Appears in:** [[week-2-notes|Week 2 Notes]]
 
 ## Related
 - [[discrete-fourier-transform]]

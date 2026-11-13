@@ -21,7 +21,7 @@ $$l^* = \arg\max_{l \in [L_{\min}, L_{\max}]} r_{xx}[l] \implies F_0 = \frac{f_s
 
 For adult males ($F_0 \approx 100\ \mathrm{Hz}$), $l^* \approx 160$ samples at $16\ \mathrm{kHz}$; for females ($F_0 \approx 250\ \mathrm{Hz}$), $l^* \approx 64$ samples. In unvoiced speech (e.g., /s/, /t/), $r_{xx}[l]$ decays rapidly to zero without secondary peaks.
 
-**Appears in:** [[week-1-notes|Week 1 Notes]]
+**Appears in:** [[Knowledge-Map]] (supplementary registry; course week unassigned)
 
 ## Related
 - [[source-filter-model]]

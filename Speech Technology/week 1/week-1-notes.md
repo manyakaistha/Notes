@@ -1,507 +1,320 @@
 ---
-title: "Week 1: Fundamentals of Speech Signals, Sampling, LTI Systems & Spectral Analysis"
+title: "Week 1: Speech Communication, Digital Signal Processing, and Speech Production"
 week: 1
 status: complete
-date: 2026-10-03
-tags:
-  - speech/week-01
-  - speech/sampling
-  - dsp/lti-systems
-  - speech/spectrograms
-  - speech/mel-scale
+date: 2026-11-10
+tags: [speech/week-01, speech/dsp, speech/production]
 concepts:
   - "[[speech-chain]]"
   - "[[nyquist-sampling-theorem]]"
   - "[[linear-time-invariant-systems]]"
   - "[[discrete-fourier-transform]]"
   - "[[rational-filters-poles-zeros]]"
-  - "[[autocorrelation-pitch-estimation]]"
-  - "[[short-time-fourier-transform]]"
-  - "[[source-filter-model]]"
-  - "[[mel-scale-filter-banks]]"
-  - "[[cepstral-analysis-mfcc]]"
 prev: "[[Knowledge-Map|Knowledge Map]]"
 next: "[[week 2/week-2-notes|Week 2 Notes]]"
 map: "[[Knowledge-Map]]"
 ---
 
-# Week 1: Fundamentals of Speech Signals, Sampling, LTI Systems & Spectral Analysis
+# Week 1: Speech Communication, Digital Signal Processing, and Speech Production
 
-> **Track:** Speech Technology (IIT Madras BS Degree — BSEE4001)  
-> **Scope:** Week 1 of 12  
-> **Core Focus:** Continuous acoustic production, Nyquist-Shannon sampling, amplitude quantization, LTI discrete convolution, rational all-pole resonators, the Discrete Fourier Transform, autocorrelation pitch tracking, STFT spectrograms, source-filter cepstral separation, and Mel filter bank acoustic feature extraction.
+**Learn and revise for the exam:** [[week-1-exam-focused-notes|Week 1 beginner-friendly exam guide]] · [[exam-study-guide|Study route and priorities]]
 
----
+
+**Authentic past papers:** [[week-1-exam-questions|Week 1 questions and worked answers]] · [[exam-question-index|Paper coverage and routing audit]]
+
+
+**Navigation:** [[Knowledge-Map|Knowledge Map]] · [[week 2/week-2-notes|Week 2 Notes]] → · [[source-catalog|Sources and scope]]
+
+> **Scope:** The six lecture headings visible in the course-curriculum screenshot: Course Introduction; Digital Signal Processing Fundamentals; Fourier Series; Speech Production; Revision; Waveforms. The technical scope below follows the corresponding lecture material, slides 1–43 of `../sources/Speech_course_slides-revamp.pdf`. The later speech-production-model overview on slide 44 is outside this week's boundary.
 
 ## Abstract
 
-This document constitutes the comprehensive technical and mathematical reference for Week 1 of Speech Technology. We examine the complete acoustic signal processing pipeline, bridging continuous-time physical acoustics to discrete representations suitable for statistical modeling and neural acoustic feature extraction. 
+This note establishes how speech is represented as a communicative acoustic signal, how continuous-time signals enter digital systems, how periodic signals admit Fourier representations, and how vocal production yields distinguishable waveform classes. Sampling is derived as uniform time discretization, while finite-word quantization is treated separately as amplitude discretization; a deterministic eight-bit example yields a step of `0.0078125` and a worst-case rounding error of `0.00390625` for a full-scale mid-rise quantizer. The four Fourier representations are organized by continuous or discrete time and periodic or aperiodic signals, with the finite DFT interpreted as a set of projections onto orthogonal complex sinusoids. LTI systems, convolution, rational transfer functions, and pole-zero geometry provide the mathematical bridge between excitation and frequency-selective response. The final synthesis connects articulators, voiced and unvoiced excitation, phones and phonemes, and silence to the observable acoustic waveform, without extending into later feature extraction or speech-perception topics.
 
-We formalize:
-1. The five-stage **Speech Chain** connecting cognitive linguistic intent to auditory decoding.
-2. The continuous-to-discrete conversion boundary governed by the **Nyquist-Shannon Sampling Theorem** ($f_s \ge 2 f_{\max}$), folding aliasing dynamics, and uniform amplitude quantization noise ($\mathrm{SQNR} \approx 6.02 B + 1.76\ \mathrm{dB}$).
-3. The **four-transform Fourier matrix** (CTFS, CTFT, DTFS, DTFT), formalizing the **Discrete Fourier Transform (DFT)** and its Fast Fourier Transform (FFT) algorithmic implementation as an orthogonal coordinate projection.
-4. **Linear Time-Invariant (LTI) Systems**, difference equations, the discrete convolution sum ($y[n] = x[n] * h[n]$), and rational transfer functions $H(z)$ whose complex conjugate pole pairs define vocal tract formant resonances.
-5. Statistical **autocorrelation** for fundamental frequency ($F_0$) pitch estimation and Voiced/Unvoiced (V/UV) classification.
-6. The **Short-Time Fourier Transform (STFT)**, analyzing the time-frequency trade-offs between **Wideband** and **Narrowband spectrograms**.
-7. Gunnar Fant's **Source-Filter Model** ($S = E \cdot V \cdot R$), separated via **homomorphic cepstral deconvolution** in the quefrency domain.
-8. Psychoacoustic **Mel-scale filter bank** construction mirroring human cochlear frequency integration.
+## Lecture map and boundaries
 
-All concepts are accompanied by publication-grade scientific figures and verifiable Python implementations.
+| Screenshot lecture | Material covered here | Source slides |
+|---|---|---:|
+| Course Introduction | Communication purpose, course map, speech chain, compression, TTS and recognition as applications | 1–9 |
+| Digital Signal Processing Fundamentals | Sampling, quantization, Fourier-transform taxonomy, DFT, systems, LTI convolution, rational filters | 10–16, 19–32 |
+| Fourier Series | Periodic-signal expansion in harmonic basis functions; CTFS and DTFS distinction | 15–18 |
+| Speech Production | Vocal tract, vocal-fold vibration, mouth configurations, vowel/phoneme inventory, articulation manner/place | 33–41 |
+| Revision | Organizing recap of the named foundations above | 10–32 |
+| Waveforms | Speech, unvoiced, silence examples; waveform cues for speaker/age questions posed in the lecture | 42–43 |
 
----
+**Assignment labels shown in the screenshot:** AQ1.1, AQ1.2, AQ1.3, AQ1.4, AQ1.6, and Graded Assignment 1. The source supplied for this task contains labels only, not question text. No assignment problems or official solutions are reconstructed here.
 
-## 1. The Speech Chain & Acoustic Foundations
+**Boundary rule:** Sampling, quantization, CTFS/DTFS/CTFT/DTFT/DFT, system properties, convolution, z-transform framing, rational filters and pole-zero interpretation are in scope. The source's later slides about STFT, spectrograms, auditory perception, pitch, masking, mel, cepstrum, liftering, and MFCC are outside Week 1. The full source-filter production-model derivation begins after slide 43 and is also reserved for its assigned later week. $F_0$ and formants are used only as production concepts here; no estimation algorithm is introduced.
 
-### 1.1 The Five-Stage Communication Pipeline
+## 1. Communication and the speech chain
 
-Speech communication transforms an abstract neural thought in the speaker's brain into a decoded linguistic message in the listener's brain across five sequential physical and physiological domains:
+Speech is an acoustic realization of a message. A speaker selects linguistic content, coordinates articulators, and produces pressure variations that travel through a medium; a listener's auditory system transduces those variations into a linguistic interpretation. The course slides depict this as linguistic, physiological, acoustic, physiological, and linguistic stages. The chain matters because an observed waveform is the outcome of several transformations: different wordings can encode a similar intent, and similar articulatory targets can be altered by speaker, channel, or environment.
 
-$$\begin{aligned}
-\text{Speaker Brain (Linguistic)} &\xrightarrow{\text{Motor Neurons}} \text{Vocal Articulators (Physiological)} \\
-&\xrightarrow{\text{Air Compression}} \text{Pressure Wave } x(t) \text{ (Acoustic)} \\
-&\xrightarrow{\text{Eardrum Vibration}} \text{Cochlea/Basilar Membrane (Physiological)} \\
-&\xrightarrow{\text{Auditory Nerve}} \text{Listener Brain (Linguistic)}
-\end{aligned}$$
+Speech technology tasks operate at different points in this chain. Automatic recognition maps an acoustic input toward symbolic output. Speech synthesis maps a text or linguistic specification toward an acoustic output, ultimately requiring digital-to-analog conversion for playback. Coding and compression seek a representation that can be stored or transmitted and later reconstructed. These are application motivations, not a claim that the week develops a complete recognizer, synthesizer, or codec.
 
-- **Automatic Speech Recognition (ASR):** Maps the physical acoustic pressure wave into the linguistic sequence of words/phonemes.
-- **Text-to-Speech (TTS):** Synthesizes linguistic text into an acoustic pressure wave.
+## 2. Continuous-time signals become digital sequences
 
-### 1.2 Acoustic Units: Phonemes, Pitch, and Formants
+### 2.1 Uniform sampling
 
-1. **Phonemes:** The atomic distinctive linguistic units of sound. Categorized into:
-   - **Vowels:** Unobstructed vocal tract shapes characterized by distinct resonant peaks (/a/, /i/, /u/).
-   - **Consonants:** Produced with vocal tract constrictions or closures, classified by *manner* (stops /p, t, k/, fricatives /s, f/, nasals /m, n/, liquids /l, r/, glides /w, j/) and *place* (bilabial, alveolar, velar).
-2. **Voiced vs. Unvoiced Sound Generation:**
-   - **Voiced Sounds:** Produced by aerodynamic self-oscillation of the vocal folds within the larynx. Generates a quasi-periodic train of airflow volume pulses characterized by fundamental frequency $F_0$ (pitch).
-   - **Unvoiced Sounds:** Produced with open (abducted) vocal folds. Turbulent acoustic noise is generated by forcing air through narrow constrictions (e.g., /s/, /sh/).
-3. **Pitch ($F_0$):** The rate of vocal fold vibration. Adult males typically range from $80\text{--}150\ \mathrm{Hz}$; adult females from $150\text{--}250\ \mathrm{Hz}$; children exceed $300\ \mathrm{Hz}$. Pitch conveys prosody, emphasis, and emotion, but does not alter vowel identity.
-4. **Formants ($F_1, F_2, F_3$):** The natural acoustic resonant frequencies of the vocal tract cavity. Formant peaks determine vowel identity:
-   - $F_1$ is inversely correlated with tongue height: high vowels (/i/, /u/) exhibit low $F_1$ ($300\ \mathrm{Hz}$); low vowels (/a/) exhibit high $F_1$ ($800\ \mathrm{Hz}$).
-   - $F_2$ is positively correlated with tongue advancement: front vowels (/i/) exhibit high $F_2$ ($2200\ \mathrm{Hz}$); back vowels (/u/) exhibit low $F_2$ ($800\ \mathrm{Hz}$).
+Let $x(t)$ be a continuous-time signal and let the sampling interval be $T_s$. The sampled sequence is
 
-### 1.3 Psychoacoustics & Human Auditory Perception
+$$x[n] = x(nT_s), \qquad n\in\mathbb{Z}, \qquad f_s = T_s^{-1}.$$
 
-- **Non-Linear Frequency Sensitivity:** Pitch perception is linear below $1000\ \mathrm{Hz}$ and logarithmic above $1000\ \mathrm{Hz}$.
-- **Auditory Masking:** A loud acoustic sound renders a quieter sound in adjacent frequency bins (**spectral masking**) or adjacent time intervals (**temporal masking**) inaudible.
-- **Equal-Loudness (Fletcher-Munson Contours):** Human hearing is most sensitive between $2\ \mathrm{kHz}$ and $5\ \mathrm{kHz}$ (ear canal resonance) and falls off sharply below $100\ \mathrm{Hz}$ and above $10\ \mathrm{kHz}$.
+For a bandlimited signal with maximum frequency $f_max$, ideal reconstruction is possible when the sampling rate exceeds twice that highest frequency (with additional practical care at the boundary):
 
----
+$$f_s > 2f_{\max}, \qquad f_{\mathrm{Nyquist}}=\frac{f_s}{2}.$$
 
-## 2. Continuous-to-Discrete Foundations: Sampling & Quantization
+The sampling rate is a property of the acquisition process; the Nyquist frequency is the upper edge of the unaliased baseband. They are related but are not interchangeable terms. If spectral replicas overlap because $f_s$ is too low, distinct analog frequencies produce the same samples. For a sampled sinusoid, frequencies separated by integer multiples of $f_s$ are indistinguishable; folding into `[0, f_s/2]` gives the principal alias. A real acquisition system therefore applies an anti-alias filter before sampling, although the ideal theorem abstracts away that implementation.
 
-### 2.1 The Nyquist-Shannon Sampling Theorem
+**Worked calculation.** A `1 kHz` sinusoid sampled at `8 kHz` has eight samples per cycle and lies below the `4 kHz` Nyquist frequency. A `5 kHz` sinusoid sampled at the same rate aliases to `3 kHz`, since the samples of `cos(2π·5000 n/8000)` equal those of `cos(2π·3000 n/8000)`.
 
-A continuous-time analog speech signal $x(t)$ with continuous Fourier transform $X(\Omega)$ is sampled uniformly at intervals $T_s = 1 / f_s$. Modeling the sampled signal $x_s(t)$ as multiplication by an ideal Dirac impulse comb:
+![Sampling and aliasing cases](assets/01_sampling_aliasing.png)
 
-$$x_s(t) = x(t) \cdot \sum_{n=-\infty}^{\infty} \delta(t - n T_s) = \sum_{n=-\infty}^{\infty} x(n T_s) \delta(t - n T_s)$$
+**Figure 1.** *A 100 Hz cosine observed at four sampling-rate ratios. Below twice the signal frequency, the discrete samples are consistent with a lower-frequency sinusoid, demonstrating ambiguity from aliasing.*
 
-Applying the Continuous-Time Fourier Transform ($\mathcal{F}$) yields:
+### 2.2 Quantization is a second operation
 
-$$X_s(\Omega) = \frac{1}{T_s} \sum_{k=-\infty}^{\infty} X\left(\Omega - k \Omega_s\right), \quad \text{where } \Omega_s = 2\pi f_s$$
+Sampling discretizes time. Quantization maps each sampled amplitude to a finite set of representable levels. For a uniform mid-rise quantizer covering `[-A,A]` with `B` bits, the nominal step is
 
-The spectrum of the discrete sequence contains infinitely replicated copies of the analog spectrum spaced at integer multiples of $f_s$.
+$$\Delta=\frac{2A}{2^B}.$$
 
-$$\text{Nyquist-Shannon Criterion:} \quad f_s \ge 2 f_{\max}$$
+Under the common high-resolution model, the quantization error is approximated as uniformly distributed over $[-\Delta/2,\Delta/2]$, with variance $\Delta^2/12$. For a full-scale sinusoid, the familiar approximation is
 
-If $f_s \ge 2 f_{\max}$, an ideal low-pass filter with cutoff $\Omega_c = \Omega_s / 2$ perfectly reconstructs $x(t)$ via the Whittaker-Shannon interpolation formula:
+$$\mathrm{SQNR}\approx 6.02B+1.76\ \mathrm{dB}.$$
 
-$$x(t) = \sum_{n=-\infty}^{\infty} x[n] \operatorname{sinc}\left(\frac{t - n T_s}{T_s}\right), \quad \operatorname{sinc}(\theta) = \frac{\sin(\pi \theta)}{\pi \theta}$$
+This estimate assumes no overload and a sufficiently decorrelated quantization error. It is not a guarantee for arbitrary signals, low-level tones, or companded coding. The lecture cites 16 kHz, 16-bit PCM as a preferred speech-processing representation and identifies A-law/μ-law telephone coding as standards examples; those are contextual standards rather than universal optimal settings.
 
-![Nyquist Sampling and Aliasing](assets/01_sampling_aliasing.png)
+![Uniform quantization and SQNR](assets/02_quantization_sqnr.png)
 
-**Figure 1.** *Nyquist-Shannon sampling and aliasing dynamics. Demonstrating reconstruction fidelity across sampling ratios $f_s/f = 2.6$ (oversampled), $2.0$ (critical Nyquist limit), $1.4$ (undersampled alias at $40\ \mathrm{Hz}$), and $0.8$ (severe undersampling alias at $20\ \mathrm{Hz}$). Analog reference: $100\ \mathrm{Hz}$ sinusoid.*
+**Figure 2.** *A finite-level quantizer introduces bounded amplitude error. The measured full-scale sinusoid SQNR approaches the high-resolution `6.02B + 1.76 dB` approximation as word length increases.*
 
-### 2.2 Aliasing Distortion & Folding Formula
+## 3. Fourier series and the transform family
 
-When a continuous sinusoid $x(t) = \cos(2\pi f t)$ is sampled at $f_s < 2 f$, the apparent perceived digital frequency $f_{\mathrm{apparent}}$ folds into the fundamental Nyquist interval $[0, f_s / 2]$ according to:
+### 3.1 Periodic signals and Fourier series
 
-$$f_{\mathrm{apparent}} = \left| f - k \cdot f_s \right|, \quad \text{where } k = \operatorname{round}\left(\frac{f}{f_s}\right)$$
+A periodic signal of period $T_0$ can be represented, under standard convergence conditions, as a sum of harmonically related complex exponentials:
 
-To eliminate aliasing, all hardware Analog-to-Digital Converters (ADCs) place an analog **anti-aliasing low-pass filter** ($f_c \le f_s / 2$) prior to sampling.
+$$x(t)=\sum_{k=-\infty}^{\infty} c_k e^{jk\omega_0t},\qquad \omega_0=\frac{2\pi}{T_0},$$
 
-### 2.3 Amplitude Quantization & The $6.02\ \mathrm{dB}$ Rule
+$$c_k=\frac{1}{T_0}\int_{t_0}^{t_0+T_0}x(t)e^{-jk\omega_0t}\,dt.$$
 
-Quantization maps continuous sample amplitudes into $2^B$ discrete levels. For a uniform quantizer over range $[-X_{\max}, +X_{\max}]$, the step size is $\Delta = \frac{2 X_{\max}}{2^B}$. Under the standard assumption of uniformly distributed quantization noise $e[n] \sim \mathcal{U}[-\Delta/2, +\Delta/2]$, the noise power is:
+The harmonics are basis functions; coefficients encode the contribution of each basis component. A periodic square wave with zero mean contains odd harmonics whose amplitudes decay in proportion to $1/k$; a triangle wave's odd-harmonic amplitudes decay as $1/k^2$. The slower square-wave decay explains its sharper transitions and slower partial-sum convergence. At discontinuities, Fourier partial sums converge to the midpoint of the jump and exhibit the Gibbs phenomenon near the jump; adding terms narrows the oscillatory region but does not eliminate its limiting overshoot.
 
-$$P_e = \sigma_e^2 = \frac{\Delta^2}{12} = \frac{X_{\max}^2}{3 \cdot 2^{2B}}$$
+For a discrete periodic sequence with period $N$, the DTFS uses $N$ distinct harmonics and periodic coefficient indexing. The continuous/discrete distinction concerns the signal's independent variable, not whether coefficients happen to be stored numerically.
 
-For a full-scale sinusoid ($P_x = X_{\max}^2 / 2$), the theoretical Signal-to-Quantization-Noise Ratio is:
+![Fourier-series approximations](assets/03_fourier_series_decomposition.png)
 
-$$\mathrm{SQNR} = 10 \log_{10}\left(\frac{P_x}{P_e}\right) = 10 \log_{10}\left(\frac{3}{2} \cdot 2^{2B}\right) \approx 6.02 B + 1.76\ \mathrm{dB}$$
+**Figure 3.** *Finite harmonic sums approximate square, sawtooth, and triangle waves. Their different coefficient-decay rates explain the relative sharpness of transitions and convergence behavior.*
 
-Every added bit of quantization precision increases dynamic range by **$6.02\ \mathrm{dB}$**. A 16-bit linear PCM system provides $\approx 98\ \mathrm{dB}$ of dynamic range, sufficient to encompass the full dynamic range of human hearing without audible quantization hiss.
+### 3.2 Four transforms by signal domain
 
-![Quantization SQNR](assets/02_quantization_sqnr.png)
+| Representation | Signal | Transform variable | Typical role |
+|---|---|---|---|
+| CTFS | Continuous-time, periodic | Discrete harmonic index | Harmonic coefficients of a periodic waveform |
+| CTFT | Continuous-time, aperiodic | Continuous frequency | Frequency representation of finite-energy signals |
+| DTFS | Discrete-time, periodic | Discrete harmonic index | One period's coefficient representation |
+| DTFT | Discrete-time, aperiodic | Continuous normalized frequency, periodic in $\omega$ | Frequency response of discrete sequences/systems |
 
-**Figure 2.** *Uniform quantization mapping and the theoretical 6.02 dB per bit SQNR limit against measured error on a full-scale sinusoid.*
+This classification follows the lecture's input-domain distinction. The CTFT convention used here is `X(Ω)=∫x(t)e^{-jΩt}dt`; the DTFT is `X(e^{jω})=Σ_n x[n]e^{-jωn}`. Since discrete time implies periodicity in normalized frequency with period $2\pi$, the DTFT is continuous in $\omega$ but periodic. The DFT then samples one period of that spectrum at $N$ equally spaced frequencies for a finite $N$-sample record.
 
----
+### 3.3 DFT as orthogonal projection
 
-## 3. Signal Transforms & The Discrete Fourier Transform Engine
+For $x[n]$, $0\le n<N$, the DFT and inverse DFT are
 
-### 3.1 The Fourier Transform Taxonomy
+$$X[k]=\sum_{n=0}^{N-1}x[n]e^{-j2\pi kn/N},\qquad
+x[n]=\frac{1}{N}\sum_{k=0}^{N-1}X[k]e^{j2\pi kn/N}.$$
 
-| Transform | Time Domain Input | Frequency Domain Output | Mathematical Formulation |
-| :--- | :--- | :--- | :--- |
-| **CTFS** (Continuous Fourier Series) | Continuous & Periodic ($T_0$) | Discrete & Aperiodic ($k \Omega_0$) | $c_n = \frac{1}{T_0} \int_{T_0} x(t) e^{-j n \Omega_0 t} dt$ |
-| **CTFT** (Continuous Fourier Transform) | Continuous & Aperiodic | Continuous & Aperiodic ($\Omega$) | $X(\Omega) = \int_{-\infty}^{\infty} x(t) e^{-j \Omega t} dt$ |
-| **DTFS** (Discrete Fourier Series) | Discrete & Periodic ($N$) | Discrete & Periodic ($N$) | $a_k = \frac{1}{N} \sum_{n=0}^{N-1} x[n] e^{-j \frac{2\pi}{N} k n}$ |
-| **DTFT** (Discrete-Time Fourier Transform) | Discrete & Aperiodic | Continuous & Periodic ($2\pi$) | $X(\omega) = \sum_{n=-\infty}^{\infty} x[n] e^{-j \omega n}$ |
-| **DFT** (Discrete Fourier Transform) | **Discrete & Finite ($N$)** | **Discrete & Periodic ($N$)** | $X[k] = \sum_{n=0}^{N-1} x[n] e^{-j \frac{2\pi}{N} k n}$ |
+The basis vectors are orthogonal over the length-$N$ observation interval. Bin `k` corresponds to frequency $f_k=kf_s/N$ for the nonnegative-frequency half of a real-signal spectrum, so bin spacing is $f_s/N$. This grid spacing is not identical to the ability to resolve two nearby tones: leakage, window main-lobe width, record length, signal-to-noise ratio, and estimator assumptions matter. A sinusoid completing an integer number of cycles in the record concentrates energy in its matching DFT bins; a detuned sinusoid spreads energy across bins because truncation multiplies the infinite signal by a finite observation window. Windowing trades main-lobe width for sidelobe suppression.
 
-### 3.2 Basis Function Representation in Hilbert Space
+![DFT bins and finite-record leakage](assets/04_dft_window_leakage.png)
 
-Any vector or signal in a linear inner-product space can be decomposed as a linear combination of orthogonal basis vectors:
+**Figure 4.** *A bin-centered tone concentrates in its conjugate-symmetric DFT bins. Detuning spreads energy; taper windows reduce distant sidelobes while broadening the main lobe.*
 
-$$x[n] = \sum_{k=0}^{N-1} c_k \phi_k[n], \quad c_k = \frac{\langle x, \phi_k \rangle}{\|\phi_k\|^2}$$
+## 4. Systems, convolution, and rational filters
 
-For the DFT, the orthogonal basis sequences are discrete complex sinusoids: $\phi_k[n] = e^{j \frac{2\pi}{N} k n}$.
+### 4.1 System properties and LTI representation
 
-![Fourier Decomposition](assets/03_fourier_series_decomposition.png)
+A discrete-time system maps input $x[n]$ to output $y[n]$. Linearity requires superposition, `T{a x_1+b x_2}=aT{x_1}+bT{x_2}`. Time invariance requires a shift in input to produce the same shift in output. Other classifications include memoryless versus memory-bearing, causal versus noncausal, and BIBO stable versus unstable. These are logically separate properties: for example, causality alone does not imply stability.
 
-**Figure 3.** *Harmonic Fourier series decomposition of periodic waveforms. Square wave (odd harmonics, $1/k$ decay), Sawtooth wave (all harmonics, $1/k$ decay), and Triangle wave (odd harmonics, rapid $1/k^2$ decay). Right panel shows discrete line spectra $|c_k|$ as a function of harmonic index $k$.*
+For an LTI system, the response to the unit impulse $\delta[n]$ is $h[n]$; every input can be decomposed into shifted impulses, giving
 
-### 3.3 The Forward and Inverse DFT
+$$y[n]=(x*h)[n]=\sum_{k=-\infty}^{\infty}x[k]h[n-k].$$
 
-**Forward DFT (Analysis):**
-$$X[k] = \sum_{n=0}^{N-1} x[n] W_N^{k n}, \quad k = 0, 1, \dots, N-1 \quad \left(W_N = e^{-j \frac{2\pi}{N}}\right)$$
+The time reversal in `h[n-k]` is essential to convolution. In frequency, convolution becomes multiplication, `Y(e^{jω})=X(e^{jω})H(e^{jω})`, when the relevant transforms exist. A finite sequence calculation below demonstrates the indexing directly.
 
-**Inverse DFT (Synthesis):**
-$$x[n] = \frac{1}{N} \sum_{k=0}^{N-1} X[k] W_N^{-k n}, \quad n = 0, 1, \dots, N-1$$
+### 4.2 Difference equations, z-transform, and pole geometry
 
-### 3.4 Frequency Bin Resolution & Real-Signal Symmetry
+A constant-coefficient linear difference equation
 
-Each discrete frequency index $k$ maps to physical continuous frequency $f_k$ according to:
+$$y[n]+\sum_{k=1}^{P}a_k y[n-k]=\sum_{m=0}^{Q}b_m x[n-m]$$
 
-$$f_k = k \cdot \frac{f_s}{N} = k \cdot \Delta f \quad (\mathrm{Hz})$$
+has transfer function, under zero initial conditions,
 
-The **frequency resolution** is strictly:
+$$H(z)=\frac{Y(z)}{X(z)}=\frac{\sum_{m=0}^{Q}b_mz^{-m}}{1+\sum_{k=1}^{P}a_kz^{-k}}.$$
 
-$$\Delta f = \frac{f_s}{N} = \frac{1}{N T_s} = \frac{1}{T_{\mathrm{record}}}$$
+Roots of the numerator are zeros; roots of the denominator are poles. Pole angles set resonant frequencies and pole radii set decay rates. For a causal rational system the region of convergence lies outside the outermost pole; BIBO stability additionally requires the unit circle to lie in the region of convergence. A pole close to the unit circle creates a sharper, longer-lived resonance. In speech acoustics, resonances of vocal-tract cavities are called formants, but interpreting poles as approximate formant locations is a model-level connection, not direct measurement of a speaker's anatomy.
 
-For real speech sequences ($x[n] \in \mathbb{R}$), the DFT obeys **conjugate symmetry**:
+![LTI input, impulse response, and output](assets/05_lti_convolution_filtering.png)
 
-$$X[N - k] = X^*[k] \implies |X[N - k]| = |X[k]|, \quad \angle X[N - k] = -\angle X[k]$$
+**Figure 5.** *A deterministic input passed through a second-order resonator illustrates the impulse-response and frequency-selective views of an LTI system. The output is calculated by a causal recurrence.*
 
-All unique spectral information resides within bins $k = 0, 1, \dots, N/2$, spanning frequencies from $0\ \mathrm{Hz}$ to the Nyquist folding frequency $f_s / 2$.
+![Pole-zero diagram and frequency response](assets/06_pole_zero_constellation.png)
 
-![DFT Windowing and Leakage](assets/04_dft_window_leakage.png)
+**Figure 6.** *Conjugate pole pairs produce resonant peaks near their angles. The causal region of convergence is exterior to the outermost pole; stability requires inclusion of the unit circle.*
 
-**Figure 4.** *Spectral leakage and window function smoothing. Top: Rectangular vs. Hamming window on bin-centered and off-bin frequencies. Bottom: Sidelobe decay profiles (dB) for Rectangular, Hann, and Hamming windows.*
+## 5. Speech production and waveform classes
 
----
+### 5.1 Articulatory production
 
-## 4. Linear Time-Invariant Systems & Rational Digital Filters
+The vocal tract comprises the respiratory source, larynx and vocal folds, pharyngeal and oral cavities, and articulators including tongue, lips, jaw, and velum. In voiced production, airflow drives vocal-fold vibration, producing quasi-periodic excitation. Its repetition rate is the fundamental frequency $F_0$; perceived pitch is related to this rate but is not identical to every component of the acoustic spectrum. The vocal tract's changing shape filters that excitation and creates resonances associated with vowel quality. Unvoiced sounds arise from turbulent airflow at a constriction without periodic vocal-fold vibration. Many speech sounds combine or transition between these mechanisms.
 
-### 4.1 System Property Definitions & Proofs
+A **phone** is a concrete speech sound; a **phoneme** is a language-specific contrastive category that can distinguish meaning. One phoneme can have multiple context-dependent phone realizations. Vowels are produced with an open vocal tract and are distinguished in part by tongue and lip configuration. Consonants involve constriction or closure and can be classified by manner (for example, stop, fricative, nasal, glide) and place (for example, bilabial, labiodental, alveolar, velar). The source lecture's mouth configurations, vowel examples, phoneme inventory, and manner/place slides support this articulatory vocabulary.
 
-A discrete system is an operator $\mathcal{T}\{\cdot\}$ transforming input $x[n]$ to output $y[n]$.
+### 5.2 What waveform shape supports
 
-1. **Linearity (Superposition):**
-   $$\mathcal{T}\{a x_1[n] + b x_2[n]\} = a \mathcal{T}\{x_1[n]\} + b \mathcal{T}\{x_2[n]\}$$
-2. **Time-Invariance (Shift-Invariance):**
-   $$\text{If } \mathcal{T}\{x[n]\} = y[n], \quad \text{then } \mathcal{T}\{x[n - k]\} = y[n - k] \quad \forall k \in \mathbb{Z}$$
-3. **Causality:** Output $y[n]$ depends only on present and past inputs $\{x[n], x[n-1], x[n-2], \dots\}$.
-4. **BIBO Stability:** Every bounded input ($|x[n]| \le B_x < \infty$) yields a bounded output ($|y[n]| \le B_y < \infty$).
+The lecture's waveform examples distinguish silence, unvoiced speech, and voiced speech. Periodicity is evidence of voiced excitation; irregular broadband-like fluctuation is consistent with turbulent unvoiced excitation; silence has very low signal energy. These cues are not perfect classifiers: background noise makes silence nonzero, voiced fricatives mix periodic and noisy components, and a waveform alone does not uniquely identify a phoneme or speaker. The lecture poses gender and adult/child identification as questions from waveform examples, but these are not uniquely solvable from a single short waveform without controlled conditions and validated features. $F_0$ and vocal-tract resonances vary across people and phonetic context; neither is a categorical label by itself.
 
-#### Detailed Proof: System $y[n] = n x[n]$
-- *Linearity:* $\mathcal{T}\{a x_1[n] + b x_2[n]\} = n(a x_1[n] + b x_2[n]) = a(n x_1[n]) + b(n x_2[n]) = a y_1[n] + b y_2[n]$. **LINEAR.**
-- *Time-Invariance:* Delayed input gives $y_1[n] = n x[n - k]$. Delayed output gives $y[n - k] = (n - k) x[n - k]$. Because $n \ne n - k$, **TIME-VARIANT**.
-- *Causality & Memory:* Depends only on current index $n$. **CAUSAL & MEMORYLESS**.
+![Illustrative speech waveform classes](assets/07_speech_waveform_classes.png)
 
-#### Detailed Proof: System $y[n] = e^{x[n]}$
-- *Linearity:* $\mathcal{T}\{a x_1[n] + b x_2[n]\} = e^{a x_1[n] + b x_2[n]} = (e^{x_1[n]})^a (e^{x_2[n]})^b \ne a e^{x_1[n]} + b e^{x_2[n]}$. **NON-LINEAR.**
-- *Time-Invariance:* Delayed input gives $y_1[n] = e^{x[n - k]}$. Delayed output gives $y[n - k] = e^{x[n - k]}$. Because $y_1[n] \equiv y[n-k]$, **TIME-INVARIANT**.
-- *Causality & Memory:* Depends only on current index $n$. **CAUSAL & MEMORYLESS**.
+**Figure 7.** *Synthetic voiced, noise-like unvoiced, and zero-valued silence sequences illustrate broad time-domain differences. These examples teach signal categories and do not represent recorded speech or a validated demographic classifier.*
 
-### 4.2 Discrete Convolution & The Convolution Theorem
+## 6. Reproducible computational lab
 
-For an LTI system with impulse response $h[n] = \mathcal{T}\{\delta[n]\}$:
+### Concept
 
-$$y[n] = x[n] * h[n] = \sum_{k=-\infty}^{\infty} x[k] h[n - k]$$
+The lab combines discrete sampling, finite precision, a Fourier-series approximation, a bin-centered DFT, finite convolution, and elementary waveform-class statistics. It deliberately ends at the waveform and system foundations introduced in the named lectures.
 
-By the Convolution Theorem:
+### Code
 
-$$y[n] = x[n] * h[n] \quad \stackrel{\mathcal{F}}{\longleftrightarrow} \quad Y(\omega) = X(\omega) \cdot H(\omega)$$
-
-Time-domain convolution corresponds to point-wise complex multiplication in frequency.
-
-![LTI Convolution Filtering](assets/05_lti_convolution_filtering.png)
-
-**Figure 5.** *LTI system discrete convolution and spectral filtering. Top row: Input sequence $x[n]$ containing glottal pulses contaminated by high-frequency noise ($2200\ \mathrm{Hz}$) and its magnitude spectrum. Middle row: Vocal tract impulse response $h[n]$ and resonant filter transfer function $|H(\omega)|$ ($F_1 = 600\ \mathrm{Hz}$). Bottom row: Output speech sequence $y[n] = x[n] * h[n]$ and output spectrum $|Y(\omega)| = |X(\omega)| \cdot |H(\omega)|$, demonstrating selective formant amplification.*
-
-### 4.3 Rational Filters, Poles & Zeros in the Z-Plane
-
-A digital filter is governed by the linear constant-coefficient difference equation:
-
-$$y[n] - \sum_{k=1}^N a_k y[n-k] = \sum_{r=0}^M b_r x[n-r]$$
-
-Taking the Z-transform yields the rational system transfer function $H(z)$:
-
-$$H(z) = \frac{\sum_{r=0}^M b_r z^{-r}}{1 - \sum_{k=1}^N a_k z^{-k}} = K \frac{\prod_{i=1}^M (z - z_i)}{\prod_{k=1}^N (z - p_k)}$$
-
-- **Zeros ($z_i$):** Roots of numerator; transmission nulls ($H(z_i) = 0$).
-- **Poles ($p_k$):** Roots of denominator; resonant peaks ($H(p_k) \to \infty$).
-- **Causality & Stability:** A causal LTI system is BIBO stable if and only if **all poles lie strictly inside the unit circle** ($|p_k| < 1$).
-
-![Pole Zero Constellation](assets/06_pole_zero_constellation.png)
-
-**Figure 6.** *Complex Z-plane pole-zero constellation and frequency response. Left: Resonant formant poles ($\times$) located at conjugate angles inside the unit circle $|z|=1$, with shaded ROC $|z| > \max |p_k|$ ensuring stability. Right: Magnitude response along the unit circle $|H(e^{j\omega})|$ displaying formant resonance peaks at $F_1 = 500\ \mathrm{Hz}$ and $F_2 = 1500\ \mathrm{Hz}$.*
-
----
-
-## 5. Statistical Correlation & Pitch ($F_0$) Tracking
-
-### 5.1 The Autocorrelation Sequence
-
-For a real discrete speech sequence $x[n]$, the deterministic autocorrelation sequence is:
-
-$$r_{xx}[l] = \sum_{n=-\infty}^{\infty} x[n] x[n-l]$$
-
-The normalized autocorrelation coefficient is $\rho_{xx}[l] = \frac{r_{xx}[l]}{r_{xx}[0]}$.
-
-#### Core Theorems:
-1. **Zero-Lag Energy Maximum:** $r_{xx}[0] = \sum_n x^2[n] = E_x$.
-2. **Even Symmetry:** $r_{xx}[l] = r_{xx}[-l]$.
-3. **Cauchy-Schwarz Upper Bound:** $|r_{xx}[l]| \le r_{xx}[0]$ for all $l \in \mathbb{Z}$.
-4. **Periodicity Preservation:** If $x[n] = x[n + N_0]$, then $r_{xx}[l] = r_{xx}[l + N_0]$.
-
-### 5.2 Pitch Tracking & Voiced/Unvoiced (V/UV) Classification
-
-In voiced speech, vocal fold pulses recur every $N_0 = f_s / F_0$ samples, producing a dominant peak at lag $l^* = N_0$. We restrict search to physiological limits ($50\ \mathrm{Hz} \le F_0 \le 500\ \mathrm{Hz}$):
-
-$$L_{\min} = \left\lfloor \frac{f_s}{500} \right\rfloor, \quad L_{\max} = \left\lceil \frac{f_s}{50} \right\rceil$$
-
-$$l^* = \arg\max_{l \in [L_{\min}, L_{\max}]} \rho_{xx}[l] \implies F_0 = \frac{f_s}{l^*}$$
-
-$$\text{Decision Rule:} \quad \text{Frame is Voiced if } \rho_{xx}[l^*] \ge 0.30, \quad \text{Unvoiced otherwise}$$
-
-![Autocorrelation Pitch Estimation](assets/07_autocorrelation_pitch.png)
-
-**Figure 7.** *Normalized autocorrelation functions for voiced speech (/a/, left) and unvoiced speech (/s/, right). Voiced speech displays a prominent pitch peak at lag $l^* = 128$ samples ($8.0\ \mathrm{ms}$, $F_0 = 125\ \mathrm{Hz}$). Unvoiced speech decays rapidly to zero without secondary periodic maxima.*
-
----
-
-## 6. Non-Stationary Speech Processing: STFT & Spectrograms
-
-### 6.1 The Short-Time Fourier Transform (STFT)
-
-Because speech is non-stationary, it is analyzed over short, quasi-stationary frames ($20\text{--}30\ \mathrm{ms}$) shifted by $R$ samples ($10\ \mathrm{ms}$) using the STFT:
-
-$$X(m, \omega) = \sum_{n=-\infty}^{\infty} x[n] w[n - m R] e^{-j \omega n}$$
-
-The **spectrogram** is the squared magnitude: $\mathcal{S}(m, \omega) = |X(m, \omega)|^2$.
-
-### 6.2 The Wideband vs. Narrowband Spectrogram Trade-Off
-
-Governed by the Gabor-Heisenberg limit $\Delta t \cdot \Delta f \ge \frac{1}{4\pi}$:
-- **Wideband Spectrogram ($L \approx 5\text{--}10\ \mathrm{ms}$):** High time resolution ($\Delta t$ small); resolves individual vocal cord closures as **vertical pitch striations** and broad formant bands.
-- **Narrowband Spectrogram ($L \approx 40\text{--}100\ \mathrm{ms}$):** High frequency resolution ($\Delta f$ small); resolves discrete pitch harmonics ($k \cdot F_0$) as **horizontal lines**.
-
-![Spectrogram Trade-Off](assets/08_wideband_vs_narrowband_spectrogram.png)
-
-**Figure 8.** *Wideband vs. Narrowband Spectrogram comparison of a synthesized speech utterance. Top: Wideband spectrogram ($6\ \mathrm{ms}$ window) resolves individual vertical pitch pulses. Bottom: Narrowband spectrogram ($50\ \mathrm{ms}$ window) resolves individual horizontal harmonic frequency lines and fine formant bands.*
-
----
-
-## 7. The Source-Filter Deconvolution Paradigm & Cepstral Analysis
-
-### 7.1 Gunnar Fant's Acoustic Model
-
-Speech is modeled as the convolution of glottal excitation $e[n]$, vocal tract filter $v[n]$, and lip radiation $r[n]$:
-
-$$s[n] = e[n] * v[n] * r[n] \quad \xrightarrow{\mathcal{F}} \quad S(\omega) = E(\omega) \cdot V(\omega) \cdot R(\omega)$$
-
-Taking the logarithm converts multiplication into addition:
-
-$$\log |S(\omega)| = \log |E(\omega)| + \log |V(\omega)|$$
-
-Applying the Inverse Discrete Fourier Transform yields the **Real Cepstrum** $c[n]$:
-
-$$c[n] = \mathcal{F}^{-1}\left\{ \log |S(\omega)| \right\}$$
-
-- **Low Quefrency ($|n| < 3\ \mathrm{ms}$):** Slowly varying vocal tract formant envelope $\log |V(\omega)|$.
-- **High Quefrency ($n \approx T_0$):** Rapidly oscillating glottal excitation harmonics $\log |E(\omega)|$.
-
-Applying a low-pass lifter ($c_{\mathrm{liftered}}[n] = c[n]$ for $|n| \le n_{\mathrm{cutoff}}$) isolates the smoothed vocal tract formant envelope.
-
-![Source Filter Cepstral Separation](assets/09_source_filter_cepstral_separation.png)
-
-**Figure 9.** *Homomorphic cepstral deconvolution pipeline. 1: Speech spectrum exhibiting harmonic spikes under a resonant formant envelope. 2: Log spectrum where excitation and filter add linearly. 3: Real cepstrum on the quefrency axis showing low-quefrency formant coefficients and a distinct pitch spike at $T_0 = 8\ \mathrm{ms}$. 4: Liftered vocal tract formant envelope recovered by discarding high-quefrency pitch spikes.*
-
----
-
-## 8. Psychoacoustic Mel Filter Banks & Feature Extraction
-
-### 8.1 The Mel Scale Formula
-
-The **Mel Scale** maps physical frequency $f_{\mathrm{Hz}}$ to perceived pitch $f_{\mathrm{mel}}$:
-
-$$f_{\mathrm{mel}} = 1125 \ln\left(1 + \frac{f_{\mathrm{Hz}}}{700}\right) = 2595 \log_{10}\left(1 + \frac{f_{\mathrm{Hz}}}{700}\right)$$
-
-Below $1000\ \mathrm{Hz}$, the mapping is approximately linear; above $1000\ \mathrm{Hz}$, it becomes logarithmic.
-
-### 8.2 Triangular Mel Filter Bank Construction
-
-Given $M$ filters spanning $[f_{\mathrm{low}}, f_{\mathrm{high}}]$:
-1. Convert endpoints to Mels: $m_{\mathrm{low}} = \operatorname{mel}(f_{\mathrm{low}})$, $m_{\mathrm{high}} = \operatorname{mel}(f_{\mathrm{high}})$.
-2. Space $M+2$ points linearly in Mel space and convert back to Hertz $f_i$.
-3. Map Hertz frequencies to DFT bin indices $k_i = \lfloor (N_{\mathrm{fft}} + 1) f_i / f_s \rfloor$.
-4. Form triangular weighting filters $H_m[k]$.
-
-![Mel Filter Bank](assets/10_mel_filterbank_frequency_response.png)
-
-**Figure 10.** *The Mel scale and 26-channel triangular filter bank across $[0, 8000]\ \mathrm{Hz}$. Top: Mel transformation curve showing the transition from linear to logarithmic scaling around $1000\ \mathrm{Hz}$. Bottom: Overlapping triangular filter bank with narrow, dense filters at low frequencies and broad, sparse filters at high frequencies.*
-
----
-
-## 9. End-to-End Computational Pipeline
-
-### 9.1 Runnable Speech Synthesis and Log-Mel Spectrogram Pipeline
+The exact runnable file is [week1_lab.py](../week1_lab.py). Its complete source is reproduced here for a standalone reading copy:
 
 ```python
+"""Reproducible Week 1 lab: sampled signals, transforms, systems, speech classes."""
 import numpy as np
 
-# Week 1 Master Pipeline: Synthetic Utterance to Log-Mel Spectrogram
-fs = 16000
-duration = 0.20  # 200 ms synthetic voiced speech
-t = np.arange(int(fs * duration)) / fs
 
-# Fundamental frequency contour (pitch glide from 120 Hz to 140 Hz)
-f0 = np.linspace(120, 140, len(t))
-phase = 2 * np.pi * np.cumsum(f0) / fs
-excitation = (1.0 + np.sin(phase)) * (phase % (2 * np.pi) < 0.25)
+def main():
+    # Sampling of a 1 kHz sinusoid at 8 kHz: no aliasing, 8 samples/cycle.
+    fs, f0 = 8000, 1000
+    n = np.arange(16)
+    x = np.cos(2 * np.pi * f0 * n / fs)
+    print(f"[Sampling] fs={fs} Hz, f0={f0} Hz, samples/cycle={fs // f0}")
 
-# 2-pole vocal tract formant filter (F1 = 700 Hz, F2 = 1300 Hz)
-r1, theta1 = 0.95, 2 * np.pi * 700 / fs
-r2, theta2 = 0.92, 2 * np.pi * 1300 / fs
-p1, p1_c = r1 * np.exp(1j * theta1), r1 * np.exp(-1j * theta1)
-p2, p2_c = r2 * np.exp(1j * theta2), r2 * np.exp(-1j * theta2)
+    # Mid-rise uniform quantizer on [-1, 1), 8 bits.
+    bits, xmax = 8, 1.0
+    delta = 2 * xmax / (2**bits)
+    q = -xmax + (np.floor((x + xmax) / delta) + 0.5) * delta
+    q = np.clip(q, -xmax + delta / 2, xmax - delta / 2)
+    print(f"[Quantization] bits={bits}, step={delta:.6f}, max_abs_error={np.max(np.abs(x-q)):.6f}")
 
-den = np.poly([p1, p1_c, p2, p2_c]).real
-y = np.zeros(len(t))
-for n in range(len(t)):
-    feed = excitation[n]
-    for k in range(1, len(den)):
-        if n - k >= 0:
-            feed -= den[k] * y[n - k]
-    y[n] = feed
+    # Complex Fourier series of a periodic unit-amplitude square wave; first five odd terms.
+    t = np.arange(4000) / 4000
+    approx = np.zeros_like(t)
+    for k in (1, 3, 5, 7, 9):
+        approx += 4 / (np.pi * k) * np.sin(2 * np.pi * k * t)
+    target = np.where(np.sin(2*np.pi*t) >= 0, 1.0, -1.0)
+    print(f"[Fourier series] terms=5 odd harmonics, RMS_error={np.sqrt(np.mean((target-approx)**2)):.6f}")
 
-# STFT Framing (25 ms window, 10 ms hop)
-frame_len = int(0.025 * fs)
-hop_len = int(0.010 * fs)
-n_frames = (len(y) - frame_len) // hop_len
-n_fft = 512
-win = np.hamming(frame_len)
+    # DFT bin spacing and reconstruction via inverse DFT for a bin-centered tone.
+    N, fs_dft = 64, 8000
+    nd = np.arange(N)
+    tone = np.cos(2*np.pi*8*nd/N)
+    X = np.fft.fft(tone)
+    rec_error = np.max(np.abs(np.fft.ifft(X).real - tone))
+    print(f"[DFT] N={N}, bin_spacing={fs_dft/N:.1f} Hz, peak_bins=8,56, inverse_max_error={rec_error:.2e}")
 
-stft_frames = []
-for i in range(n_frames):
-    segment = y[i * hop_len : i * hop_len + frame_len] * win
-    spec = np.abs(np.fft.rfft(segment, n_fft))**2
-    stft_frames.append(spec)
-stft_mat = np.array(stft_frames).T
+    # Finite discrete convolution demonstrates LTI superposition mechanism.
+    a = np.array([1., 2., 0.])
+    h = np.array([1., -0.5])
+    y = np.convolve(a, h)
+    print(f"[Convolution] x={a.tolist()}, h={h.tolist()}, y={y.tolist()}")
 
-# Mel Filter Bank (40 channels)
-n_mels = 40
-def hz_to_mel(f): return 1125.0 * np.log(1.0 + f / 700.0)
-def mel_to_hz(m): return 700.0 * (np.exp(m / 1125.0) - 1.0)
+    # Basic acoustic labels: periodic voiced, noise-like unvoiced, silence.
+    rng = np.random.default_rng(42)
+    t = np.arange(320) / 16000
+    voiced = np.sin(2*np.pi*120*t) + 0.35*np.sin(2*np.pi*240*t)
+    unvoiced = 0.45*rng.standard_normal(t.size)
+    silence = np.zeros_like(t)
+    for name, signal in (("voiced", voiced), ("unvoiced", unvoiced), ("silence", silence)):
+        print(f"[Waveform] {name}: rms={np.sqrt(np.mean(signal**2)):.6f}")
 
-mel_pts = np.linspace(hz_to_mel(0), hz_to_mel(fs / 2), n_mels + 2)
-hz_pts = mel_to_hz(mel_pts)
-bin_pts = np.floor((n_fft + 1) * hz_pts / fs).astype(int)
 
-fbank = np.zeros((n_mels, n_fft // 2 + 1))
-for m in range(1, n_mels + 1):
-    for k in range(bin_pts[m - 1], bin_pts[m]):
-        fbank[m - 1, k] = (k - bin_pts[m - 1]) / max(1, bin_pts[m] - bin_pts[m - 1])
-    for k in range(bin_pts[m], bin_pts[m + 1]):
-        fbank[m - 1, k] = (bin_pts[m + 1] - k) / max(1, bin_pts[m + 1] - bin_pts[m])
-
-log_mel_spec = 10 * np.log10(np.dot(fbank, stft_mat) + 1e-6)
-
-print(f"Synthesized Audio Duration: {duration*1000:.0f} ms | Samples: {len(y)}")
-print(f"STFT Matrix Dimensions (Freq Bins x Frames): {stft_mat.shape[0]} x {stft_mat.shape[1]}")
-print(f"Log-Mel Spectrogram Dimensions (Mel Bins x Frames): {log_mel_spec.shape[0]} x {log_mel_spec.shape[1]}")
-print(f"Dynamic Range: Min {np.min(log_mel_spec):.2f} dB, Max {np.max(log_mel_spec):.2f} dB")
-print(f"Filter 1 Center: {hz_pts[1]:.1f} Hz | Filter 40 Center: {hz_pts[40]:.1f} Hz")
+if __name__ == "__main__":
+    main()
 ```
 
-### 9.2 Exact Terminal Output
+### Output
+
 ```text
-Synthesized Audio Duration: 200 ms | Samples: 3200
-STFT Matrix Dimensions (Freq Bins x Frames): 257 x 17
-Log-Mel Spectrogram Dimensions (Mel Bins x Frames): 40 x 17
-Dynamic Range: Min -11.91 dB, Max 67.71 dB
-Filter 1 Center: 44.4 Hz | Filter 40 Center: 7481.4 Hz
+[Sampling] fs=8000 Hz, f0=1000 Hz, samples/cycle=8
+[Quantization] bits=8, step=0.007812, max_abs_error=0.003906
+[Fourier series] terms=5 odd harmonics, RMS_error=0.200990
+[DFT] N=64, bin_spacing=125.0 Hz, peak_bins=8,56, inverse_max_error=4.44e-16
+[Convolution] x=[1.0, 2.0, 0.0], h=[1.0, -0.5], y=[1.0, 1.5, -1.0, 0.0]
+[Waveform] voiced: rms=0.764064
+[Waveform] unvoiced: rms=0.421051
+[Waveform] silence: rms=0.000000
 ```
 
----
+### Interpretation
 
-## 10. Comparative Benchmarks & Practice Problems
+The sampling example has eight samples per cycle, while the quantizer's measured maximum error equals half its step because the non-overloaded mid-rise reconstruction level is centered in each bin. The square-wave approximation has finite RMS error because five harmonics cannot reproduce its discontinuities; the exact value depends on the explicitly chosen sampling grid and harmonic count. The DFT's conjugate-symmetric bins 8 and 56 correspond to the positive and negative frequency components of a real cosine; inverse transformation recovers the finite input to floating-point precision. Convolution returns four samples, consistent with lengths three and two. The waveform RMS values summarize these constructed sequences only and are not empirical speech measurements.
 
-### 10.1 Telecommunication Audio Standards
+## 7. Worked revision problems and mastery check
 
-| Audio Quality Standard | Bandwidth ($f_{\max}$) | Nominal $f_s$ | Nyquist Threshold | Bit Depth ($B$) | Uncompressed Bitrate | Industry Standard |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **PSTN Telephony (Narrowband)** | $300\ \mathrm{Hz}\text{--}3.4\ \mathrm{kHz}$ | $8\ \mathrm{kHz}$ | $6.8\ \mathrm{kHz}$ | 8-bit ($\mu$-law/A-law) | $64.0\ \mathrm{kbps}$ | ITU G.711 PCM |
-| **HD Voice (Wideband)** | $50\ \mathrm{Hz}\text{--}7.0\ \mathrm{kHz}$ | $16\ \mathrm{kHz}$ | $14.0\ \mathrm{kHz}$ | 16-bit linear PCM | $256.0\ \mathrm{kbps}$ | AMR-WB / G.722 |
-| **Studio Audio (Fullband)** | $20\ \mathrm{Hz}\text{--}20.0\ \mathrm{kHz}$ | $44.1\ \mathrm{kHz} / 48\ \mathrm{kHz}$ | $40.0\ \mathrm{kHz}$ | 16-bit / 24-bit PCM | $1411.2\ \mathrm{kbps}$ (stereo) | CD PCM / Broadcast |
+These are generated revision problems, not reconstructed activity-assignment questions.
 
-### 10.2 Practice Problems with Complete Solutions
+1. **Sampling versus quantization.** A 3 kHz sinusoid is sampled at 8 kHz with a 10-bit uniform quantizer spanning $[-1,1]$. What is the Nyquist frequency and quantizer step? **Solution:** $f_s/2=4$ kHz, so this tone is below the Nyquist frequency. The amplitude step is $\Delta=2/2^{10}=0.001953125$. Increasing the bit depth reduces amplitude error; it does not correct aliasing caused by an insufficient sampling rate.
+2. **DFT bins.** A 64-sample record at 8 kHz contains a 1 kHz real cosine. Which bins contain its ideal bin-centered components? **Solution:** $\Delta f=8000/64=125$ Hz, so the positive-frequency bin is $k=1000/125=8$ and its conjugate partner is $N-k=56$. The latter represents $-1$ kHz under signed-frequency indexing.
+3. **Convolution indexing.** For $x=[1,2,0]$ and $h=[1,-0.5]$, calculate the finite convolution. **Solution:** $y[0]=1$, $y[1]=2-0.5=1.5$, $y[2]=0-1=-1$, and $y[3]=0$. Thus $y=[1,1.5,-1,0]$, matching the executed lab. The output length is $3+2-1=4$.
+4. **System properties.** Classify $y[n]=x[n-1]$ and $y[n]=x[n]^2$. **Solution:** A unit delay is linear, time invariant, causal, has memory, and is BIBO stable. Squaring is nonlinear, time invariant, causal, memoryless, and BIBO stable: bounded input magnitude $M$ gives output at most $M^2$.
+5. **Harmonics and phonetic identity.** Does increasing a vowel's fundamental frequency imply a different phoneme? **Solution:** No. Fundamental frequency primarily describes excitation periodicity. Vowel identity depends strongly on vocal-tract resonances and linguistic context. A waveform can change its repetition rate while retaining broadly similar articulatory targets; waveform periodicity alone cannot establish phoneme identity or demographic category.
 
-#### Problem 1 (Nyquist & Aliasing)
-**Question:** A speech recording containing frequency content up to $7.2\ \mathrm{kHz}$ is sampled at $12\ \mathrm{kHz}$ without an anti-aliasing filter. What apparent frequency will a $7.0\ \mathrm{kHz}$ harmonic fold into?  
-**Solution:**
-$$f_{\mathrm{apparent}} = |f - k \cdot f_s| = |7000 - 1 \times 12000| = |-5000| = 5000\ \mathrm{Hz} = 5.0\ \mathrm{kHz}$$
-The $7.0\ \mathrm{kHz}$ component aliases into $5.0\ \mathrm{kHz}$, corrupting the vocal tract formant structure.
+**Master formula sheet.** $x[n]=x(n/f_s)$; $f_{\mathrm{Nyquist}}=f_s/2$; $\Delta=2A/2^B$; $\Delta f=f_s/N$; $X[k]=\sum_{n=0}^{N-1}x[n]e^{-j2\pi kn/N}$; $(x*h)[n]=\sum_kx[k]h[n-k]$. The ideal sampling criterion concerns bandwidth, while finite-record DFT spacing concerns the observation duration.
 
-#### Problem 2 (Complex Pole Placement for Formant Filter)
-**Question:** Construct the complex conjugate poles for a digital resonator placed at $F_1 = 800\ \mathrm{Hz}$ with $3\text{-dB}$ bandwidth $B = 100\ \mathrm{Hz}$ at $f_s = 16\ \mathrm{kHz}$.  
-**Solution:**
-$$\theta = \frac{2\pi F_1}{f_s} = \frac{2\pi (800)}{16000} = \frac{\pi}{10} = 0.3142\ \mathrm{rad} = 18^\circ$$
-$$r = \exp\left(-\frac{\pi B}{f_s}\right) = \exp\left(-\frac{\pi \cdot 100}{16000}\right) = \exp(-0.0196) \approx 0.9806$$
-The pole pair is placed at $p_{1,2} = 0.9806 e^{\pm j 0.3142}$. Because $|p| = 0.9806 < 1$, the filter is BIBO stable.
+**Self-check:** Explain the speech chain; separate sampling from amplitude quantization; distinguish Fourier series from a Fourier transform; compute a DFT-bin frequency and a short convolution; distinguish voiced, unvoiced, and low-energy waveform regions without treating these cues as perfect classifiers.
 
-#### Problem 3 (Mel Frequency Inversion)
-**Question:** A Mel filter bank channel is centered at $m = 1200\ \mathrm{Mels}$. Compute its center frequency in physical Hertz.  
-**Solution:**
-$$f_{\mathrm{Hz}} = 700 \left[ \exp\left(\frac{m}{1125}\right) - 1 \right] = 700 \left[ \exp\left(\frac{1200}{1125}\right) - 1 \right] = 700 [\exp(1.0667) - 1] \approx 700 [2.9057 - 1] = 1334.0\ \mathrm{Hz}$$
+## 8. Numerical cautions and common errors
 
----
+- **Sampling versus quantization:** A sequence can have finely resolved amplitudes but still be aliased; amplitude precision cannot recover information lost in time sampling.
+- **Rate versus frequency:** $f_s$ is the sample rate; `f_s/2` is the Nyquist frequency. The Nyquist rate for a particular bandlimit is twice that bandlimit.
+- **DFT grid versus resolving power:** $f_s/N$ is bin spacing, not a universal two-tone resolution guarantee.
+- **Convolution indexing:** Replacing `h[n-k]` with `h[n+k]` changes the operation. Correlation uses a different shift convention.
+- **Pole angle versus exact resonance:** Pole angle predicts a resonance location, but numerator zeros and damping can shift the maximum of `|H(e^{jω})|`.
+- **Waveform interpretation:** Periodicity and energy are useful cues, not sufficient proof of a phonetic identity or demographic attribute.
 
-## 11. Common Pathologies & Engineering Traps
+## 9. Summary and handoff
 
-1. **Downsampling Without Low-Pass Filtering:**
-   - Decimating audio from $48\ \mathrm{kHz}$ to $16\ \mathrm{kHz}$ by discarding samples without an anti-aliasing filter causes high frequencies to fold into the baseband, introducing severe audible distortion.
-2. **Spectral Leakage from Rectangular Windows:**
-   - Rectangular windowing has a slow $1/\omega$ sidelobe decay ($-13\ \mathrm{dB}$ first sidelobe), masking low-energy formants adjacent to dominant fundamental frequencies. Tapered windows (Hamming/Hann) suppress sidelobes to $-43\ \mathrm{dB}$.
-3. **Pitch Doubling/Halving in Autocorrelation:**
-   - Unconstrained peak picking picks formant cycles (pitch doubling) or subharmonic vocal fry pulses (pitch halving). Physiological limits ($50\text{--}500\ \mathrm{Hz}$) must constrain search.
-4. **IIR Filter Instability via Coefficient Quantization:**
-   - Implementing high-order filters in direct form shifts denominator roots outside the unit circle ($|p_k| \ge 1$) under finite-precision rounding. Always decompose high-order filters into cascades of 2nd-order biquad sections.
+1. Speech is a message-bearing acoustic event produced through coordinated linguistic and physiological stages.
+2. Digital representation requires separate time sampling and amplitude quantization; undersampling creates alias ambiguity.
+3. Fourier series represent periodic signals in harmonically related basis functions; the CTFS/CTFT/DTFS/DTFT distinction follows time-domain continuity and periodicity.
+4. The DFT computes finite-record frequency projections; finite observation and window choice govern leakage behavior.
+5. LTI systems are characterized by impulse response and convolution; rational transfer functions connect difference equations to poles, zeros, and resonant behavior.
+6. Vocal-fold vibration, turbulent airflow, articulatory configuration, and silence create waveform classes that motivate subsequent speech analysis.
 
----
+The next assigned material should build on this signal-and-production foundation according to the course's actual screenshot curriculum. Week 1 does not pre-teach later feature extraction or auditory-analysis lectures.
 
-## 12. Academic References & Master Formula Sheet
+## 10. References
 
-### References
-1. **Rabiner, L. R., & Schafer, R. W. (2010).** *Theory and Applications of Digital Speech Processing.* Prentice Hall.
-2. **Oppenheim, A. V., & Schafer, R. W. (2009).** *Discrete-Time Signal Processing (3rd ed.).* Pearson.
-3. **Fant, G. (1960).** *Acoustic Theory of Speech Production.* Mouton & Co., The Hague.
-4. **Davis, S., & Mermelstein, P. (1980).** *Comparison of parametric representations for monosyllabic word recognition.* IEEE TASSP, 28(4), 357–366.
+1. Umesh, S. *Introduction to Speech Signal Processing*, course lecture slides, Speech Lab, Department of Electrical Engineering, IIT Madras, file `../sources/Speech_course_slides-revamp.pdf`, slides 1–43. Stable local source pointer: `[[source-catalog]]`. Contribution: primary source for the lecture sequence, sampling, transform taxonomy, systems, speech production, and waveform examples summarized here.
+2. Oppenheim, A. V., and R. W. Schafer. *Discrete-Time Signal Processing*, 3rd ed. Pearson, 2010. Contribution: standard reference for discrete-time systems, transforms, and Fourier analysis.
+3. Rabiner, L. R., and R. W. Schafer. *Theory and Applications of Digital Speech Processing*. Pearson, 2011. Contribution: speech-specific grounding for acoustic production and digital speech signal representations.
 
-### Master Formula Sheet
+## Appendix A — Reproduction
 
-| Concept | Formal Mathematical Expression | Dimensional Units |
-| :--- | :--- | :--- |
-| **Nyquist Criterion** | $f_s \ge 2 f_{\max}$ | $\mathrm{Hz}$ (Samples/s) |
-| **Quantization SQNR** | $\mathrm{SQNR} \approx 6.02 B + 1.76$ | $\mathrm{dB}$ |
-| **Discrete Convolution** | $y[n] = \sum_k x[k] h[n - k]$ | Amplitude |
-| **Forward DFT** | $X[k] = \sum_{n=0}^{N-1} x[n] e^{-j \frac{2\pi}{N} k n}$ | Complex Amplitude |
-| **Frequency Resolution** | $\Delta f = \frac{f_s}{N} = \frac{1}{T_{\mathrm{record}}}$ | $\mathrm{Hz/bin}$ |
-| **Autocorrelation** | $r_{xx}[l] = \sum_n x[n] x[n - l]$ | Energy ($\mathrm{Amp}^2$) |
-| **Pitch Estimation** | $F_0 = \frac{f_s}{l^*}, \quad l^* = \arg\max_{l} r_{xx}[l]$ | $\mathrm{Hz}$ |
-| **STFT** | $X(m, \omega) = \sum_n x[n] w[n - m R] e^{-j\omega n}$ | Complex Spectrum |
-| **Mel Scale** | $f_{\mathrm{mel}} = 1125 \ln\left(1 + \frac{f_{\mathrm{Hz}}}{700}\right)$ | Mels |
-| **Real Cepstrum** | $c[n] = \mathcal{F}^{-1}\left\{ \log |S(\omega)| \right\}$ | Quefrency (Time) |
+From the `Speech Technology/` directory:
+
+```bash
+uv run python week1_lab.py
+uv run python generate_week1_plots.py
+shasum -a 256 'week 1/assets/'*.png
+```
+
+The plot generator writes seven in-scope PNGs and prints deterministic diagnostic lines. Pre-existing assets for later speech-analysis topics have been left on disk but are not generated or referenced by this Week 1 note.
+
+## Appendix B — Knowledge graph connections
+
+**Upstream:** [[Knowledge-Map]]  
+**Core concepts:** [[speech-chain]] · [[nyquist-sampling-theorem]] · [[discrete-fourier-transform]] · [[linear-time-invariant-systems]] · [[rational-filters-poles-zeros]]  
+**Downstream:** [[week 2/week-2-notes|Week 2 Notes]]  
+**Source:** [[source-catalog]]

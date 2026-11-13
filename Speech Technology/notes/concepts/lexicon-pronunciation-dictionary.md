@@ -5,17 +5,12 @@ tags: [speech/concept, lexicon, phonetics, asr]
 
 # Lexicon (Pronunciation Dictionary)
 
-In automatic speech recognition, the **Lexicon** (pronunciation dictionary) is the architectural mapping lookup table that bridges sub-word phonetic units output by the acoustic-HMM model into orthographic words recognized by the language model:
+**Formal definition.** An ASR pronunciation lexicon maps each orthographic vocabulary item to one or more permissible phoneme sequences, optionally with variant-specific probabilities or costs. For example, a word may map to /k ae t/ in a chosen phoneme inventory. The lexicon is composed with acoustic and language-model constraints during decoding: acoustic scores evaluate observations against phone or state hypotheses, the lexicon constrains which pronunciations realize words, and the language model scores word sequences. Thus the lexicon is not merely a post-processing lookup from an already decoded phone string; in large-vocabulary systems it participates in the search graph, including weighted finite-state representations. ARPAbet is one phoneme-label inventory and is not interchangeable with IPA without a mapping. A grapheme-to-phoneme (G2P) model can propose pronunciations for new spellings, but it does not automatically guarantee that an out-of-vocabulary word is represented in the decoder vocabulary or graph. Pronunciation variants, stress, silence, and context-dependent phone expansion require explicit conventions. Errors or omissions in the dictionary can make otherwise acoustically plausible word sequences unreachable.
 
-$$\text{Phoneme String } (/k/ , /ae/ , /t/) \xrightarrow{\text{Lexicon}} \text{Word Unit } ("\text{CAT}")$$
+**Why it matters here.** It connects subword acoustic modeling to word hypotheses and makes the boundary between pronunciation, acoustics, and linguistic context explicit.
 
-### Architectural Boundary
-- **Acoustic Model (HMM-GMM / HMM-DNN):** Responsible strictly for evaluating acoustic feature vectors into phonemic state likelihoods and sequences. It has no intrinsic knowledge of word spellings.
-- **Lexicon:** Specifies the phonetic transcriptions of each vocabulary word. Allows multiple pronunciation entries for dialectal variants.
-- **Language Model:** Assigns syntax and context priors $P(W)$ over words.
-
-**Appears in:** [[week 2/week-2-notes|Week 2 Notes]]
+**Appears in:** [[Knowledge-Map]], [[week 5/week-5-notes|Week 5]]
 
 ## Related
 - [[hidden-markov-models]]
-- [[speech-chain]]
+- [[triphone-state-tying]]

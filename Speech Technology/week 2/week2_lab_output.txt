@@ -1,0 +1,11 @@
+Frame samples: 400; hop samples: 160; overlap samples: 240
+Mel(1000 Hz): 999.99 mels
+DCT-II coefficients: [1.0000e+00 2.2304e+00 3.3307e-16 1.5851e-01]
+DCT reconstruction max error: 4.44e-16
+Gaussian MLE: mean=2.50, variance=1.25, std=1.12
+At x=1: density N(0,1)=0.241971; density N(2,1)=0.241971
+Equal-prior decision threshold for N(0,1) vs N(2,1): 1.00
+Equal-prior error: 0.158655 (standard-normal tail beyond 1)
+Synthetic front end: frames=(10, 400), Mel energies=(10, 26), MFCC=(10, 13)
+First-frame MFCC[0:5]: [-3.399 16.858  2.564  0.902  4.678]
+MFCC finite: True

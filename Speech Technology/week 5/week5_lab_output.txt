@@ -1,0 +1,35 @@
+Corpus lexical tokens: 9
+Unigram P(eat): word-only=0.333333; with EOS=0.250000
+Bigram prediction events (BOS once, EOS once per sentence): 12
+Prediction vocabulary (BOS excluded): </s>, apples, bananas, eat, i, you
+P(apples | eat) = 0.666667
+P(i eat apples EOS | BOS) = 0.444444
+P(you | BOS,BOS) trigram = 0.333333
+P(you eat bananas EOS | BOS) bigram = 0.111111; trigram count = 0
+P(i eat apples EOS | BOS,BOS) trigram = 0.333333
+P(you eat bananas EOS | BOS,BOS) trigram = 0.000000
+Four-utterance bigram mass (words + EOS): 1.000000
+P(you | eat), unsmoothed / add-one: 0.000000 / 0.111111
+Unseen history MLE: undefined (raised ValueError)
+Toy lexicon entries (ARPAbet-like phones, stress stripped):
+  to: T UW
+  two: T UW
+  read: R EH D | R IY D
+  red: R EH D
+VQ feature samples: [-1.4 -0.9 -0.2  0.1  0.7  1.3]
+VQ codebook / assignment indices: [-1.  0.  1.] / [0, 0, 1, 1, 2, 2]
+VQ mean squared quantization distortion (feature^2): 0.066667
+Illustrative MFCC design: N=3 HMM states; K=2 GMM components/state; D=13 features; M=3 VQ codewords.
+Executed scalar demonstrations: D=1; candidate-HMM emissions use single Gaussians (K=1), without training.
+Gaussian N(0,1) masses in VQ Voronoi cells: [0.308538 0.382925 0.308538]
+Gaussian density at centroids (feature^-1): [0.241971 0.398942 0.241971]
+Topology row sums: fully connected = [1. 1. 1.] ; left-to-right = [1. 1. 1.]
+Left-to-right forbidden backward transitions: exactly 0; final-state self-loop: 1
+Irreducible, aperiodic counterexample (cycle + self-loops) row sums: [1. 1. 1.]
+Synthetic 3-state continuous-HMM acoustic evidence (feature^-3): apples=0.158752826, bananas=0.174174945
+Acoustic-only winner: bananas
+LM priors P(word | eat): apples=0.666667, bananas=0.333333
+Unnormalized AM × LM scores: apples=0.105835217, bananas=0.058058315
+Combined winner: apples
+Acoustic models use the same fixed 3-frame horizon; final states are marginalized, with no exit event.
+Recognition score is a toy candidate comparison; the lexicon above is not compiled into these 3-state word models.

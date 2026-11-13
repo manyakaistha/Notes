@@ -5,7 +5,7 @@ tags: [speech/concept, acoustics/source-filter, production]
 
 # The Source-Filter Model of Speech Production
 
-First formalized mathematically by Gunnar Fant (1960), the **Source-Filter Model** treats speech acoustic output $s(t)$ as the convolution of a physiological sound source excitation $e(t)$ with a linear vocal tract acoustic filter $v(t)$, terminated by a lip radiation characteristic $r(t)$:
+First formalized mathematically by Gunnar Fant (1960), the **Source-Filter Model** approximates speech acoustic output $s(t)$ as the convolution of a physiological sound source excitation $e(t)$ with a linear vocal tract acoustic filter $v(t)$, terminated by a lip radiation characteristic $r(t)$:
 
 $$s(t) = e(t) * v(t) * r(t) \quad \xrightarrow{\mathcal{F}} \quad S(\omega) = E(\omega) \cdot V(\omega) \cdot R(\omega)$$
 
@@ -17,9 +17,9 @@ $$s(t) = e(t) * v(t) * r(t) \quad \xrightarrow{\mathcal{F}} \quad S(\omega) = E(
 3. **Lip Radiation $R(\omega)$:** First-order high-pass differentiator acting at the mouth opening, introducing a $+6\ \mathrm{dB/octave}$ spectral boost.
 
 ### Why It Matters Here
-The source carries speaker identity and intonation (pitch), whereas the filter encodes linguistic identity (vowel and consonant phonemes). Feature extraction techniques such as Cepstral Analysis and LPC explicitly invert this convolution to isolate $V(\omega)$ for recognition while discarding $E(\omega)$.
+Excitation periodicity and vocal-tract resonances provide complementary acoustic cues; speaker and linguistic information are not cleanly confined to one factor. Week 2 uses logarithmic spectra and cepstral liftering to emphasize broad envelope structure. This is approximate separation under a local source-filter model, not an exact inversion of arbitrary recorded speech. Source–tract interaction, unvoiced turbulence, additive noise, and finite windows limit the approximation.
 
-**Appears in:** [[week-1-notes|Week 1 Notes]]
+**Appears in:** [[week-2-notes|Week 2 Notes]]
 
 ## Related
 - [[linear-time-invariant-systems]]

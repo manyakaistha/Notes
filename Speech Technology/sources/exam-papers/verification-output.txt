@@ -1,0 +1,15 @@
+Source integrity: 18 PDF hashes match; 200 academic records; 2 no-paper notices.
+Week 1: 18 records, each with question, worked answer and source provenance.
+Week 2: 21 records, each with question, worked answer and source provenance.
+Week 3: 38 records, each with question, worked answer and source provenance.
+Week 4: 21 records, each with question, worked answer and source provenance.
+Navigation: all generated Markdown links and wikilinks resolve; 100 source images have sequential captions; YAML parses.
+Cloudy Day 0, Dry/Damp: best Days 1–2 = S,C; score 0.014062500.
+Rainy Day 0, Soggy/Dry: best Days 1–2 = R,S; score 0.050625000.
+Observed weather forecast: best C,R,R = 0.158203125; greedy S,S,S = 0.125000000.
+Two-state HMM: tied MAP paths S,S,R and S,R,R; score 0.008640000.
+POS Viterbi: final N,V,A scores = 0.032, 0.048, 0.040; best N,V,V.
+Trellis: max = 0.0882; sum = 0.2282 (all three incoming edges).
+GMM density = 0.241970724519; component-1 posterior = 0.600000.
+K-means/LBG means, VQ distances and frame sample count verified.
+PASS: source coverage, generated artifacts and independent numerical checks.

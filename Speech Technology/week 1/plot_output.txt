@@ -1,0 +1,15 @@
+[Starting] Week 1 in-scope figure generation
+[Generated] /Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/Notes/Speech Technology/week 1/assets/01_sampling_aliasing.png
+[Quantization] B=16 measured 98.045 dB, theory 98.091 dB
+[Generated] /Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/Notes/Speech Technology/week 1/assets/02_quantization_sqnr.png
+[Triangle] max |series_{k<=79} - target| = 0.0051
+[Generated] /Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/Notes/Speech Technology/week 1/assets/03_fourier_series_decomposition.png
+[DFT] on-bin |X[8]|=32.00, |X[56]|=32.00, other max=3.38e-14; bin spacing=125.0 Hz
+[Window] Rectangular: first sidelobe -13.26 dB, highest of first lobes -13.26 dB
+[Window] Hann: first sidelobe -31.47 dB, highest of first lobes -31.47 dB
+[Window] Hamming: first sidelobe -44.70 dB, highest of first lobes -42.66 dB
+[Generated] /Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/Notes/Speech Technology/week 1/assets/04_dft_window_leakage.png
+[Generated] /Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/Notes/Speech Technology/week 1/assets/05_lti_convolution_filtering.png
+[Generated] /Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/Notes/Speech Technology/week 1/assets/06_pole_zero_constellation.png
+[Generated] /Volumes/1700 APFS/PERSONAL_PROGRAMMING_PROJECTS/Notes/Speech Technology/week 1/assets/07_speech_waveform_classes.png
+[Completed] 7 in-scope figures

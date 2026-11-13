@@ -8,7 +8,7 @@ Any autonomous agent or human contributor working within this vault must treat t
 
 > [!IMPORTANT]
 > **Track-Specific Convention Notice:**
-> The `Speech Technology` course uses a **simplified 12-week structure** that differs intentionally from other vaults (such as PINN and NeuroTech):
+> The `Speech Technology` vault uses a simplified weekly structure. Weeks 1–5 have confirmed lesson scope in the supplied curriculum screenshots. Weeks 6–12 remain unassigned; do not infer a week-by-week schedule from tentative outlines or topic plausibility.
 > 1. **NO Month Folders:** Do NOT nest weeks inside `month 1/`, `month 2/`, etc. Weeks are organized directly as `week 1/`, `week 2/`, ... `week 12/`.
 > 2. **NO Daywise Notes:** Do NOT create `days/` subfolders or individual day notes (`w1d1.md`, etc.). All content for a week is consolidated into a single comprehensive weekly note.
 > 3. **NO Raw Exports:** Do NOT create raw `weekN-export.md` syllabus dumping files. Everything needed is integrated directly into the weekly notes.
@@ -17,12 +17,12 @@ Any autonomous agent or human contributor working within this vault must treat t
 
 ## 1. Directory Architecture & File Naming
 
-The vault layout spans weeks 1 through 12:
+The confirmed vault layout currently covers Weeks 1–5. Future week folders may be added when their lesson scope is supplied; do not prepopulate a Weeks 6–12 topic schedule.
 
 ```text
 Speech Technology/
 ├── AGENTS.md                         # Authoritative track rules & conventions
-├── Knowledge-Map.md                  # Central Map of Content (MOC) & 12-week spine
+├── Knowledge-Map.md                  # Central Map of Content & confirmed-scope spine
 ├── pyproject.toml                    # UV virtual environment configuration
 ├── uv.lock                           # Locked Python dependencies
 ├── generate_week1_plots.py           # Week 1 deterministic plotting script
@@ -49,15 +49,21 @@ Speech Technology/
 │       ├── 06_wideband_vs_narrowband_spectrogram.png
 │       ├── 07_source_filter_cepstral_separation.png
 │       └── 08_mel_filterbank_frequency_response.png
-├── week 2/                           # (Planned: LPC & Parametric Modeling)
+├── week 2/                           # Confirmed Week 2 speech perception and feature-extraction lessons
 │   ├── week-2-notes.md
 │   └── assets/
-└── ... up to week 12/
+├── week 3/                           # Confirmed Week 3 Gaussian and Markov-model lessons
+│   ├── week-3-notes.md
+│   └── assets/
+├── week 4/                           # Confirmed Week 4 HMM and speech acoustic-model lessons
+│   ├── week-4-notes.md
+│   └── assets/
+└── future week folders/               # Add only after lesson scope is supplied
 ```
 
 ### Canonical File Naming Rules
 - **Weekly Directory:** `week N/` (with a literal space, lowercase, e.g., `week 1/`, `week 2/`).
-- **Weekly Note:** `week N/week-N-notes.md` (e.g., `week 1/week-1-notes.md`).
+- **Weekly Note:** `week N/week-N-notes.md` (e.g., `week 1/week-1-notes.md`, `week 3/week-3-notes.md`).
 - **Assets Directory:** `week N/assets/`.
 - **Image Embedding:** In `week-N-notes.md`, image links point directly to `![Caption](assets/<figure_name>.png)`. Every figure must have a bold caption paragraph immediately following it: `**Figure N.** *Description...*`.
 

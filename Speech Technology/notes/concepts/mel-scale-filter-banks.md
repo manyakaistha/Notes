@@ -7,7 +7,7 @@ tags: [speech/concept, perception/psychoacoustics, features]
 
 The **Mel Scale** is an empirical psychoacoustic frequency scale relating physical frequency $f_{\mathrm{Hz}}$ to perceived pitch $f_{\mathrm{mel}}$, introduced by Stevens, Volkmann, and Newman (1937) and formulated analytically as:
 
-$$f_{\mathrm{mel}} = 1125 \ln\left(1 + \frac{f_{\mathrm{Hz}}}{700}\right)$$
+$$f_{\mathrm{mel}} = 1127 \ln\left(1 + \frac{f_{\mathrm{Hz}}}{700}\right)$$
 
 ### Biological Origin & Nonlinearity
 The human cochlea's basilar membrane does not distribute frequency sensitivity linearly. Tonotopic hair cell density is high at low frequencies and declines logarithmically above $1000\ \mathrm{Hz}$. Hence, human listeners easily resolve a $50\ \mathrm{Hz}$ difference between $200\ \mathrm{Hz}$ and $250\ \mathrm{Hz}$, but cannot distinguish between $4000\ \mathrm{Hz}$ and $4050\ \mathrm{Hz}$.
@@ -22,9 +22,10 @@ Standard configurations specify **80 triangular filters** for wideband $16\ \mat
 ### Why It Matters Here
 Mel filter banks perform critical dimension reduction (e.g., condensing 513 DFT bins down to 80 channels) and match the spectral representation directly to human perceptual sensitivity, serving as the dominant front-end for modern Conformer, Whisper, and Wav2Vec2 architectures.
 
-**Appears in:** [[week-1-notes|Week 1 Notes]]
+**Appears in:** [[week-2-notes|Week 2 Notes]]. Mel mapping used here follows the supplied lecture slide; see [[source-catalog]].
 
 ## Related
+- [[speech-perception-and-masking]]
 - [[short-time-fourier-transform]]
 - [[cepstral-analysis-mfcc]]
 - [[source-filter-model]]

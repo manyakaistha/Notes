@@ -5,26 +5,14 @@ tags: [speech/concept, machine-learning/gmm, acoustic-modeling]
 
 # Gaussian Mixture Models (GMMs)
 
-A **Gaussian Mixture Model (GMM)** is a continuous parametric probability density model formed by a convex combination of $K$ multivariate Gaussian components:
+**Formal definition.** A $K$-component Gaussian mixture model (GMM) represents a density over $x\in\mathbb R^D$ as $p(x)=\sum_{k=1}^K w_k\mathcal N(x;\mu_k,\Sigma_k)$, where $w_k\ge0$, $\sum_kw_k=1$, and each covariance is positive definite or regularized. A latent component indicator $z$ selects the Gaussian; its posterior responsibility for datum $x_i$ is $\gamma_{ik}=P(z_i=k\mid x_i)=w_k\mathcal N(x_i;\mu_k,\Sigma_k)/p(x_i)$. Unlike a single Gaussian, the weighted sum can represent multiple modes, but likelihood optimization is nonconvex and covariance collapse can make the unconstrained likelihood unbounded. Expectation-maximization alternates posterior responsibility calculation with weighted maximum-likelihood updates; each exact iteration does not decrease observed-data likelihood, but it need not find a global maximum.
 
-$$p(x) = \sum_{k=1}^K w_k \mathcal{N}_k(x; \mu_k, \Sigma_k), \quad \sum_{k=1}^K w_k = 1, \quad w_k \ge 0$$
+**Why it matters here.** Week 3 generalizes the Week 2 single-Gaussian model to multimodal density estimation and develops parameter estimation using EM. Week 4 applies GMM densities as continuous acoustic emissions for HMM states, where the state sequence captures temporal structure and the mixture captures frame-level spectral variability. This acoustic use is distinct from interpreting mixture components as phonetic labels.
 
-### Why GMMs are Essential in Speech
-A single Gaussian is unimodal and cannot capture the acoustic diversity of a phoneme across different speakers (males, females, children) and phonetic contexts. GMMs act as universal continuous density approximators, modeling complex multimodal feature distributions.
-
-### Expectation-Maximization (EM) Training
-Parameters $\theta = \{w_k, \mu_k, \Sigma_k\}$ are trained iteratively via Expectation-Maximization:
-1. **E-step (Responsibility Calculation):**
-   $$\gamma_{ik} = P(C_k \mid x_i) = \frac{w_k \mathcal{N}(x_i; \mu_k, \Sigma_k)}{\sum_{j=1}^K w_j \mathcal{N}(x_i; \mu_j, \Sigma_j)}$$
-2. **M-step (Parameter Update):**
-   $$\hat{w}_k = \frac{1}{N} \sum_{i=1}^N \gamma_{ik}, \quad \hat{\mu}_k = \frac{\sum_i \gamma_{ik} x_i}{\sum_i \gamma_{ik}}, \quad \hat{\Sigma}_k = \frac{\sum_i \gamma_{ik} (x_i - \hat{\mu}_k)(x_i - \hat{\mu}_k)^T}{\sum_i \gamma_{ik}}$$
-
-### Diagonal Covariance Assumption
-Because MFCCs are decorrelated via the DCT, acoustic models enforce diagonal covariance matrices $\Sigma_k = \operatorname{diag}(\sigma_{k1}^2, \dots, \sigma_{kD}^2)$, reducing parameter complexity from $O(D^2)$ to $O(D)$.
-
-**Appears in:** [[week 2/week-2-notes|Week 2 Notes]]
+**Appears in:** [[week 3/week-3-notes|Week 3 Notes]]; [[week 4/week-4-notes|Week 4 Notes]]
 
 ## Related
+- [[gaussian-distribution]]
+- [[expectation-maximization]]
 - [[k-means-clustering]]
-- [[hidden-markov-models]]
 - [[cepstral-analysis-mfcc]]

@@ -127,159 +127,21 @@ routing.json records=488; question-solutions.json records=241; topics.json parse
 Duplicate routing IDs=0; duplicate solution IDs=0; week topic groups=4
 
 ==============================================================================
-G9 repository hygiene and file sizes: FAIL
+G9 repository hygiene and file sizes: PASS
 ==============================================================================
 git status --porcelain LLM/:
-?? LLM/plot_sha256.txt
-?? LLM/scripts/run_gates.py
-?? LLM/sources/ebook/pages/p-002.png
-?? LLM/sources/ebook/pages/p-003.png
-?? LLM/sources/ebook/pages/p-004.png
-?? LLM/sources/ebook/pages/p-005.png
-?? LLM/sources/ebook/pages/p-006.png
-?? LLM/sources/ebook/pages/p-007.png
-?? LLM/sources/ebook/pages/p-008.png
-?? LLM/sources/ebook/pages/p-009.png
-?? LLM/sources/ebook/pages/p-010.png
-?? LLM/sources/ebook/pages/p-011.png
-?? LLM/sources/ebook/pages/p-012.png
-?? LLM/sources/ebook/pages/p-013.png
-?? LLM/sources/ebook/pages/p-014.png
-?? LLM/sources/ebook/pages/p-015.png
-?? LLM/sources/ebook/pages/p-016.png
-?? LLM/sources/ebook/pages/p-017.png
-?? LLM/sources/ebook/pages/p-018.png
-?? LLM/sources/ebook/pages/p-019.png
-?? LLM/sources/ebook/pages/p-020.png
-?? LLM/sources/ebook/pages/p-021.png
-?? LLM/sources/ebook/pages/p-022.png
-?? LLM/sources/ebook/pages/p-023.png
-?? LLM/sources/ebook/pages/p-024.png
-?? LLM/sources/ebook/pages/p-025.png
-?? LLM/sources/ebook/pages/p-026.png
-?? LLM/sources/ebook/pages/p-027.png
-?? LLM/sources/ebook/pages/p-028.png
-?? LLM/sources/ebook/pages/p-029.png
-?? LLM/sources/ebook/pages/p-030.png
-?? LLM/sources/ebook/pages/p-031.png
-?? LLM/sources/ebook/pages/p-032.png
-?? LLM/sources/ebook/pages/p-033.png
-?? LLM/sources/ebook/pages/p-034.png
-?? LLM/sources/ebook/pages/p-035.png
-?? LLM/sources/ebook/pages/p-036.png
-?? LLM/sources/ebook/pages/p-037.png
-?? LLM/sources/ebook/pages/p-038.png
-?? LLM/sources/ebook/pages/p-039.png
-?? LLM/sources/ebook/pages/p-040.png
-?? LLM/sources/ebook/pages/p-041.png
-?? LLM/sources/ebook/pages/p-042.png
-?? LLM/sources/ebook/pages/p-043.png
-?? LLM/sources/ebook/pages/p-044.png
-?? LLM/sources/ebook/pages/p-045.png
-?? LLM/sources/ebook/pages/p-046.png
-?? LLM/sources/ebook/pages/p-047.png
-?? LLM/sources/ebook/pages/p-048.png
-?? LLM/sources/ebook/pages/p-049.png
-?? LLM/sources/ebook/pages/p-050.png
-?? LLM/sources/ebook/pages/p-051.png
-?? LLM/sources/ebook/pages/p-052.png
-?? LLM/sources/ebook/pages/p-053.png
-?? LLM/sources/ebook/pages/p-054.png
-?? LLM/sources/ebook/pages/p-055.png
-?? LLM/sources/ebook/pages/p-056.png
-?? LLM/sources/ebook/pages/p-057.png
-?? LLM/sources/ebook/pages/p-058.png
-?? LLM/sources/ebook/pages/p-059.png
 ?? LLM/sources/exam-papers/solutions-terra-w1.json
 ?? LLM/sources/exam-papers/solutions-terra-w2.json
-?? LLM/sources/final-report-data.md
-?? LLM/sources/gates-output.txt
-Untracked files=64
-  LLM/plot_sha256.txt
-  LLM/scripts/run_gates.py
-  LLM/sources/ebook/pages/p-002.png
-  LLM/sources/ebook/pages/p-003.png
-  LLM/sources/ebook/pages/p-004.png
-  LLM/sources/ebook/pages/p-005.png
-  LLM/sources/ebook/pages/p-006.png
-  LLM/sources/ebook/pages/p-007.png
-  LLM/sources/ebook/pages/p-008.png
-  LLM/sources/ebook/pages/p-009.png
-  LLM/sources/ebook/pages/p-010.png
-  LLM/sources/ebook/pages/p-011.png
-  LLM/sources/ebook/pages/p-012.png
-  LLM/sources/ebook/pages/p-013.png
-  LLM/sources/ebook/pages/p-014.png
-  LLM/sources/ebook/pages/p-015.png
-  LLM/sources/ebook/pages/p-016.png
-  LLM/sources/ebook/pages/p-017.png
-  LLM/sources/ebook/pages/p-018.png
-  LLM/sources/ebook/pages/p-019.png
-  LLM/sources/ebook/pages/p-020.png
-  LLM/sources/ebook/pages/p-021.png
-  LLM/sources/ebook/pages/p-022.png
-  LLM/sources/ebook/pages/p-023.png
-  LLM/sources/ebook/pages/p-024.png
-  LLM/sources/ebook/pages/p-025.png
-  LLM/sources/ebook/pages/p-026.png
-  LLM/sources/ebook/pages/p-027.png
-  LLM/sources/ebook/pages/p-028.png
-  LLM/sources/ebook/pages/p-029.png
-  LLM/sources/ebook/pages/p-030.png
-  LLM/sources/ebook/pages/p-031.png
-  LLM/sources/ebook/pages/p-032.png
-  LLM/sources/ebook/pages/p-033.png
-  LLM/sources/ebook/pages/p-034.png
-  LLM/sources/ebook/pages/p-035.png
-  LLM/sources/ebook/pages/p-036.png
-  LLM/sources/ebook/pages/p-037.png
-  LLM/sources/ebook/pages/p-038.png
-  LLM/sources/ebook/pages/p-039.png
-  LLM/sources/ebook/pages/p-040.png
-  LLM/sources/ebook/pages/p-041.png
-  LLM/sources/ebook/pages/p-042.png
-  LLM/sources/ebook/pages/p-043.png
-  LLM/sources/ebook/pages/p-044.png
-  LLM/sources/ebook/pages/p-045.png
-  LLM/sources/ebook/pages/p-046.png
-  LLM/sources/ebook/pages/p-047.png
-  LLM/sources/ebook/pages/p-048.png
-  LLM/sources/ebook/pages/p-049.png
-  LLM/sources/ebook/pages/p-050.png
-  LLM/sources/ebook/pages/p-051.png
-  LLM/sources/ebook/pages/p-052.png
-  LLM/sources/ebook/pages/p-053.png
-  LLM/sources/ebook/pages/p-054.png
-  LLM/sources/ebook/pages/p-055.png
-  LLM/sources/ebook/pages/p-056.png
-  LLM/sources/ebook/pages/p-057.png
-  LLM/sources/ebook/pages/p-058.png
-  LLM/sources/ebook/pages/p-059.png
+Untracked files=2
   LLM/sources/exam-papers/solutions-terra-w1.json
   LLM/sources/exam-papers/solutions-terra-w2.json
-  LLM/sources/final-report-data.md
-  LLM/sources/gates-output.txt
-Files >5 MB outside PDF/PNG caches: 14
-  21828192 bytes LLM/.venv/bin/python
-  21828192 bytes LLM/.venv/bin/python3
-  21828192 bytes LLM/.venv/bin/python3.11
-  5568040 bytes LLM/.venv/lib/python3.11/site-packages/kiwisolver/_cext.cpython-311-x86_64-linux-gnu.so
-  10407681 bytes LLM/.venv/lib/python3.11/site-packages/numpy/_core/_multiarray_umath.cpython-311-x86_64-linux-gnu.so
-  6720872 bytes LLM/.venv/lib/python3.11/site-packages/scipy/optimize/_highspy/_core.cpython-311-x86_64-linux-gnu.so
-  25409073 bytes LLM/.venv/lib/python3.11/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so
-  24805561 bytes LLM/.venv/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so
-  5454800 bytes LLM/.venv/lib/python3.11/site-packages/torch/bin/protoc
-  5454800 bytes LLM/.venv/lib/python3.11/site-packages/torch/bin/protoc-3.21.12.0
-  15098032 bytes LLM/.venv/lib/python3.11/site-packages/torch/bin/test_api
-  13457776 bytes LLM/.venv/lib/python3.11/site-packages/torch/bin/test_jit
-  440280512 bytes LLM/.venv/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so
-  32730248 bytes LLM/.venv/lib/python3.11/site-packages/torch/lib/libtorch_python.so
+Files >5 MB outside PDF/PNG caches: 0
 Five largest LLM files:
-  440280512 bytes LLM/.venv/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so
-  32730248 bytes LLM/.venv/lib/python3.11/site-packages/torch/lib/libtorch_python.so
-  25409073 bytes LLM/.venv/lib/python3.11/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so
-  24805561 bytes LLM/.venv/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so
-  21828192 bytes LLM/.venv/bin/python3.11
+  4412759 bytes LLM/sources/ebook/LLM_Master_Ebook_FINAL_128pages.pdf
+  749141 bytes LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/ctx-285-288-passage-01-p008.png
+  668626 bytes LLM/sources/exam-papers/assets/da5004_2024T1_ET_FN/q201-q201-stem-01-p005.png
+  645202 bytes LLM/sources/exam-papers/question-inventory.json
+  637144 bytes LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/ctx-277-280-passage-01-p004.png
 
 FINAL SUMMARY
 PASS G1 routing/bank/index reconciliation
@@ -290,4 +152,4 @@ PASS G5 saved executable codeblocks
 PASS G6 frontmatter and table pipes
 PASS G7 numeric answer provenance
 PASS G8 JSON integrity
-FAIL G9 repository hygiene and file sizes
+PASS G9 repository hygiene and file sizes

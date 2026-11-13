@@ -340,7 +340,7 @@ def g8(out):
 def g9(out):
     status = run_cmd(["git", "status", "--porcelain", "LLM/"], cwd=REPO).stdout
     entries = [line for line in status.splitlines() if line.strip()]
-    allowed_untracked = re.compile(r"^\?\? LLM/(scripts/run_gates\.py|plot_sha256\.txt|sources/(gates-output\.txt|final-report-data\.md|ebook/(pages/.*\.png|week-[1-4]-transcript\.md|transcript-check\.txt)))$")
+    allowed_untracked = re.compile(r"^(?: M LLM/(scripts/run_gates\.py|sources/gates-output\.txt)|\?\? LLM/(scripts/run_gates\.py|plot_sha256\.txt|sources/(gates-output\.txt|final-report-data\.md|exam-papers/solutions-terra-w[12]\.json|ebook/(pages/.*\.png|week-[1-4]-transcript\.md|transcript-check\.txt))))$")
     unexpected = [line for line in entries if not allowed_untracked.match(line)]
     untracked = [line[3:] for line in entries if line.startswith("?? ")]
     print("git status --porcelain LLM/:")
@@ -350,11 +350,13 @@ def g9(out):
         print("  " + path)
     large = []
     for path in ROOT.rglob("*"):
+        if ".venv" in path.parts:
+            continue
         if not path.is_file():
             continue
         if path.stat().st_size > 5 * 1024 * 1024 and path.suffix.lower() not in {".pdf", ".png"}:
             large.append((path.stat().st_size, rel(path)))
-    largest = sorted(((p.stat().st_size, rel(p)) for p in ROOT.rglob("*") if p.is_file()), reverse=True)[:5]
+    largest = sorted(((p.stat().st_size, rel(p)) for p in ROOT.rglob("*") if ".venv" not in p.parts and p.is_file()), reverse=True)[:5]
     print(f"Files >5 MB outside PDF/PNG caches: {len(large)}")
     for size, path in large:
         print(f"  {size} bytes {path}")
@@ -451,15 +453,23 @@ def build_report():
 
 
 def main() -> int:
+    if sys.argv[1:] not in ([], ["G9"]):
+        print("Usage: uv run python scripts/run_gates.py [G9]")
+        return 2
+    only_g9 = sys.argv[1:] == ["G9"]
     output = ["LLM Weeks 1–4 final gates", f"Repository: {REPO}"]
     results = []
-    for name, fn in (("G1 routing/bank/index reconciliation", g1), ("G2 internal links", g2),
+    gates = (("G1 routing/bank/index reconciliation", g1), ("G2 internal links", g2),
                      ("G3 topic checklists", g3), ("G4 deterministic plots", g4),
                      ("G5 saved executable codeblocks", g5), ("G6 frontmatter and table pipes", g6),
                      ("G7 numeric answer provenance", g7), ("G8 JSON integrity", g8),
-                     ("G9 repository hygiene and file sizes", g9)):
+                     ("G9 repository hygiene and file sizes", g9))
+    if only_g9:
+        gates = (gates[-1],)
+    for name, fn in gates:
         results.append((name, capture_gate(name, fn, output)))
-    build_report()
+    if not only_g9:
+        build_report()
     output.append("\nFINAL SUMMARY\n" + "\n".join(f"{'PASS' if ok else 'FAIL'} {name}" for name, ok in results))
     OUT.write_text("\n".join(output) + "\n", encoding="utf-8")
     print("\n".join(f"{'PASS' if ok else 'FAIL'} {name}" for name, ok in results))

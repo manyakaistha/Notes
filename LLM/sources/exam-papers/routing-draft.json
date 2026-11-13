@@ -1,0 +1,8190 @@
+{
+  "generated_by": "LLM/scripts/route_draft.py",
+  "records": [
+    {
+      "id": "da5004_2024T1_ET_AN--q144",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "Generative Pre-trained Transformer"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q145",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-bahdanau-attention",
+        "w1-scaled-dot-product"
+      ],
+      "archive_signals": [
+        "w11-efficient-long-context:sparse attention"
+      ],
+      "confidence": 0.6,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "softmax",
+        "self-attention",
+        "self attention"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q146",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-finetuning",
+        "w3-gpt1-architecture",
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [],
+      "confidence": 0.75,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "fine-tuning",
+        "fine tuning"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q147",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:tokenizer",
+        "w5-tokenization:tokenization",
+        "w5-tokenization:byte pair encoding",
+        "w5-tokenization:bpe"
+      ],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q148",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-language-modelling",
+        "w3-model-parameterisations",
+        "w3-task-input-formats"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "conditional probability",
+        "probability distribution",
+        "text generation"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q149",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q150",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topk-temperature",
+        "w4-topp-nucleus",
+        "w4-beam-search"
+      ],
+      "archive_signals": [],
+      "confidence": 0.7826,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "beam search",
+        "beam size",
+        "top-k sampling",
+        "temperature",
+        "softmax",
+        "top-k",
+        "top k",
+        "top-p",
+        "top p"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q151",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q152",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q153",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q154",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "attention score"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q155",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "sequence length"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q156",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention",
+        "w1-scaled-dot-product"
+      ],
+      "archive_signals": [],
+      "confidence": 0.625,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "query",
+        "key",
+        "value",
+        "d_k"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q157",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention",
+        "w1-bahdanau-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "softmax",
+        "query",
+        "key",
+        "value",
+        "attention score"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q158",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count",
+        "w1-multi-head-attention",
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [],
+      "confidence": 0.625,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "query",
+        "d_model"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q198",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-bert-finetuning",
+        "w4-bert-mlm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "BERT",
+        "bert",
+        "bidirectional encoder"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q199",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "position information"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q200",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-bahdanau-attention",
+        "w1-scaled-dot-product"
+      ],
+      "archive_signals": [
+        "w11-efficient-long-context:sparse attention"
+      ],
+      "confidence": 0.6,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "softmax",
+        "self-attention",
+        "self attention"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q201",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-language-modelling",
+        "w3-model-parameterisations",
+        "w3-task-input-formats"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "conditional probability",
+        "probability distribution",
+        "text generation"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q202",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q203",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topk-temperature",
+        "w4-topp-nucleus",
+        "w4-beam-search"
+      ],
+      "archive_signals": [],
+      "confidence": 0.7826,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "beam search",
+        "beam size",
+        "top-k sampling",
+        "temperature",
+        "softmax",
+        "top-k",
+        "top k",
+        "top-p",
+        "top p"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q204",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:tokenizer",
+        "w5-tokenization:tokenization"
+      ],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q205",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:tokenizer"
+      ],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q206",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q207",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q208",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q209",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "attention score"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q210",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "sequence length"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q211",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention",
+        "w1-scaled-dot-product"
+      ],
+      "archive_signals": [],
+      "confidence": 0.625,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "query",
+        "key",
+        "value",
+        "d_k"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q212",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w4-beam-search",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.35,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "softmax",
+        "query",
+        "key",
+        "value",
+        "attention score"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q184",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q185",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q186",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-scaled-dot-product",
+        "w1-multi-head-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.9048,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "softmax",
+        "W^Q",
+        "W^K",
+        "W^V",
+        "attention score",
+        "w^q",
+        "w^k",
+        "w^v",
+        "w_q",
+        "w_k",
+        "w_v",
+        "sqrt(d_k)",
+        "d_k",
+        "dot product",
+        "sqrt d_k",
+        "W^O",
+        "w^o",
+        "encoder layer"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q187",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-multi-head-attention",
+        "w1-ffn-encoder-stack"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "W^Q",
+        "W^K",
+        "W^V",
+        "attention score",
+        "w^q",
+        "w^k",
+        "w^v",
+        "w_q",
+        "w_k",
+        "w_v",
+        "W^O",
+        "w^o",
+        "encoder layer"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q188",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "positional embedding"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q189",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "multi-head attention",
+        "W^O",
+        "w^o"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q190",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w2-cross-attention",
+        "w1-encoder-parameter-count",
+        "w1-ffn-encoder-stack"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "d_k",
+        "d_model",
+        "encoder layer"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q191",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "positional embedding"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q192",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-bahdanau-attention",
+        "w1-seq2seq-bottleneck",
+        "w2-teacher-forcing"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "machine translation"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q193",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count",
+        "w1-ffn-encoder-stack",
+        "w1-multi-head-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5556,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "d_k",
+        "d_model",
+        "d_ff"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q194",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-finetuning",
+        "w3-gpt1-architecture",
+        "w3-causal-lm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "CLM",
+        "clm",
+        "pre-training",
+        "fine-tuning",
+        "fine tuning"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q195",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topk-temperature",
+        "w4-beam-search",
+        "w4-topp-nucleus"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8095,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "exhaustive search",
+        "beam search",
+        "beam size",
+        "top-k sampling",
+        "top-k",
+        "top k",
+        "top-p",
+        "top p"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q196",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-causal-lm",
+        "w3-pretraining-objective",
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "language modelling",
+        "causal language modelling"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q197",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "value"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q198",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-bert-nsp-inputs",
+        "w4-bert-mlm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "BERT",
+        "bert",
+        "next sentence prediction",
+        "NSP",
+        "nsp"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q134",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q135",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "number of parameters"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q136",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:tokenizer"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q137",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-finetuning",
+        "w3-gpt1-architecture",
+        "w3-task-input-formats"
+      ],
+      "archive_signals": [
+        "w5-tokenization:tokenizer"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "fine-tuning",
+        "fine tuning",
+        "sentiment classification"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q138",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-causal-lm",
+        "w3-finetuning",
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "CLM",
+        "decoder-only",
+        "decoder only",
+        "clm",
+        "pre-training",
+        "fine-tuning",
+        "fine tuning"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q139",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "pre-training"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q140",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-gpt1-architecture",
+        "w4-bert-mlm"
+      ],
+      "archive_signals": [
+        "w7-model-families:bart",
+        "w7-model-families:t5",
+        "w7-model-families:gpt-2",
+        "w7-model-families:gpt 2"
+      ],
+      "confidence": 0.8,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "GPT-1",
+        "pre-training",
+        "gpt-1",
+        "gpt 1"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q141",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q142",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q143",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-causal-lm",
+        "w1-seq2seq-bottleneck",
+        "w2-masked-self-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "decoder-only",
+        "causal mask",
+        "decoder only"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q144",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w8-scaling-laws:scaling law"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q145",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q146",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q147",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "pre-training"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q176",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-scaled-dot-product",
+        "w1-encoder-parameter-count"
+      ],
+      "archive_signals": [],
+      "confidence": 0.9118,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "value",
+        "W^Q",
+        "W^K",
+        "W^V",
+        "attention score",
+        "w^q",
+        "w^k",
+        "w^v",
+        "w_q",
+        "w_k",
+        "w_v",
+        "sqrt(d_k)",
+        "d_k",
+        "sqrt d_k",
+        "projection matrices"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q177",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q178",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-beam-search",
+        "w4-topk-temperature",
+        "w3-task-input-formats"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8333,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "beam search",
+        "beam size",
+        "top-k",
+        "top k",
+        "text generation"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q179",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-finetuning",
+        "w3-gpt1-architecture",
+        "w3-task-input-formats"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "CLM",
+        "clm",
+        "fine-tuning",
+        "transfer learning",
+        "fine tuning",
+        "sentiment classification",
+        "textual entailment"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q180",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-language-modelling"
+      ],
+      "archive_signals": [
+        "w5-tokenization:tokenizer"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "language modeling"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q181",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "pre-training"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q182",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q183",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w7-model-families:gpt-2",
+        "w7-model-families:gpt 2"
+      ],
+      "confidence": 0.5714,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "w7-model-families:gpt-2",
+        "w7-model-families:gpt 2"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q184",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "W^Q",
+        "W^K",
+        "w^q",
+        "w^k",
+        "w_q",
+        "w_k"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q185",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q186",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q187",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q188",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q189",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q190",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q191",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-seq2seq-bottleneck",
+        "w1-bahdanau-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "encoder-decoder",
+        "RNN",
+        "machine translation"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q192",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q193",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-gpt1-architecture",
+        "w3-causal-lm",
+        "w2-full-transformer"
+      ],
+      "archive_signals": [],
+      "confidence": 0.75,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "decoder-only",
+        "decoder only",
+        "GPT-1",
+        "pre-training",
+        "gpt-1",
+        "gpt 1"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q194",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "sequence length"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q195",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w3-causal-lm",
+        "w3-finetuning"
+      ],
+      "archive_signals": [
+        "w5-tokenization:tokenizer"
+      ],
+      "confidence": 0.5455,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "RNN",
+        "machine translation",
+        "key",
+        "W^Q",
+        "W^K",
+        "w^q",
+        "w^k",
+        "w_q",
+        "w_k"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q189",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-scaled-dot-product",
+        "w1-encoder-parameter-count"
+      ],
+      "archive_signals": [],
+      "confidence": 0.9118,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "value",
+        "W^Q",
+        "W^K",
+        "W^V",
+        "attention score",
+        "w^q",
+        "w^k",
+        "w^v",
+        "w_q",
+        "w_k",
+        "w_v",
+        "sqrt(d_k)",
+        "d_k",
+        "sqrt d_k",
+        "projection matrices"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q190",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-seq2seq-bottleneck",
+        "w1-bahdanau-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.7143,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "encoder-decoder",
+        "machine translation",
+        "self-attention",
+        "self attention"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q191",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q192",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q193",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-causal-lm",
+        "w1-seq2seq-bottleneck",
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [],
+      "confidence": 0.75,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "decoder-only",
+        "decoder only",
+        "pre-training"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q194",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-finetuning",
+        "w3-gpt1-architecture",
+        "w3-causal-lm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "CLM",
+        "clm",
+        "pre-training",
+        "fine-tuning",
+        "fine tuning",
+        "sentiment classification"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q195",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-finetuning",
+        "w2-full-transformer",
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [
+        "w7-model-families:t5"
+      ],
+      "confidence": 0.8,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "fine-tuning",
+        "fine tuning",
+        "sentiment classification"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q196",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-beam-search",
+        "w4-topk-temperature",
+        "w3-task-input-formats"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8333,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "beam search",
+        "beam size",
+        "top-k",
+        "top k",
+        "text generation"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q197",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-language-modelling"
+      ],
+      "archive_signals": [
+        "w5-tokenization:tokenizer"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "language modeling"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q198",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "pre-training"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q199",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "attention score"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q200",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w7-model-families:gpt-2",
+        "w7-model-families:gpt 2"
+      ],
+      "confidence": 0.5714,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "w7-model-families:gpt-2",
+        "w7-model-families:gpt 2"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q201",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "W^Q",
+        "W^K",
+        "w^q",
+        "w^k",
+        "w_q",
+        "w_k"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q202",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q203",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q204",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q205",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q206",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q207",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q208",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "value"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q209",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w3-finetuning",
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [
+        "w5-tokenization:tokenizer"
+      ],
+      "confidence": 0.525,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "machine translation",
+        "self-attention",
+        "key",
+        "W^Q",
+        "W^K",
+        "self attention",
+        "w^q",
+        "w^k",
+        "w_q",
+        "w_k"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q275",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-teacher-forcing",
+        "w3-pretraining-objective"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "teacher forcing"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q276",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm",
+        "w2-full-transformer",
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "position encoding",
+        "normalization",
+        "layer normalization",
+        "batch normalization",
+        "residual",
+        "transformer architecture"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q277",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "number of parameters"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q278",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q279",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q280",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q281",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "normalization",
+        "batch normalization"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q282",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "normalization",
+        "layer normalization"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q283",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "normalization",
+        "batch normalization"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q284",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "normalization",
+        "layer normalization"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q285",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q286",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q287",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q288",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topk-temperature"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "top-k sampling",
+        "top-k",
+        "top k"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q289",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "positional embedding"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q290",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "W^K",
+        "w^k",
+        "w_k"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q291",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q292",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-scaled-dot-product",
+        "w1-encoder-parameter-count"
+      ],
+      "archive_signals": [],
+      "confidence": 0.9118,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "value",
+        "W^Q",
+        "W^K",
+        "W^V",
+        "attention score",
+        "w^q",
+        "w^k",
+        "w^v",
+        "w_q",
+        "w_k",
+        "w_v",
+        "sqrt(d_k)",
+        "d_k",
+        "sqrt d_k",
+        "projection matrices"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q293",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-positional-encoding",
+        "w1-encoder-parameter-count",
+        "w1-multi-head-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "key",
+        "d_model",
+        "positional embedding",
+        "sinusoidal"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q140",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q141",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q142",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q143",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q144",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q145",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q146",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q147",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q148",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [
+        "w5-tokenization:tokenizer"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "normalization"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q149",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "pre-training"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q150",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-teacher-forcing",
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [
+        "w7-model-families:t5"
+      ],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "target sequence"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q151",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm",
+        "w3-language-modelling"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "sequence length"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q152",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q153",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w8-scaling-laws:scaling law"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q154",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-full-transformer",
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q2_NA--q155",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q104",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w2-cross-attention",
+        "w1-encoder-parameter-count",
+        "w1-ffn-encoder-stack"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "d_k",
+        "d_model",
+        "encoder layer"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q105",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-bahdanau-attention",
+        "w1-seq2seq-bottleneck",
+        "w2-teacher-forcing"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "machine translation"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q106",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-beam-search",
+        "w4-topk-temperature",
+        "w3-task-input-formats"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8333,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "beam search",
+        "beam size",
+        "top-k",
+        "top k",
+        "text generation"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q107",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-seq2seq-bottleneck"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "RNN"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q108",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-finetuning",
+        "w3-causal-lm",
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "CLM",
+        "clm",
+        "fine-tuning",
+        "fine tuning"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q109",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q110",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topk-temperature",
+        "w4-beam-search",
+        "w4-topp-nucleus"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8095,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "exhaustive search",
+        "beam search",
+        "beam size",
+        "top-k sampling",
+        "top-k",
+        "top k",
+        "top-p",
+        "top p"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q111",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "positional embedding"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q112",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention",
+        "w1-ffn-encoder-stack"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "multi-head attention",
+        "W^O",
+        "w^o",
+        "FFN"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q113",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "W^Q",
+        "w^q",
+        "w_q"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q114",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "normalization",
+        "batch normalization"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q115",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "normalization",
+        "layer normalization"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q116",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "normalization",
+        "batch normalization"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q117",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "normalization",
+        "layer normalization"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q118",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "value"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q119",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "value"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q120",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "value"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q121",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q119",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q120",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "pre-training"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q121",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-language-modelling"
+      ],
+      "archive_signals": [
+        "w5-tokenization:tokenizer"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "language modeling"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q122",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-finetuning",
+        "w2-full-transformer",
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [
+        "w7-model-families:t5"
+      ],
+      "confidence": 0.8,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "fine-tuning",
+        "fine tuning",
+        "sentiment classification"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q123",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "pre-training"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q124",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-causal-lm"
+      ],
+      "archive_signals": [
+        "w7-model-families:t5"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "decoder-only",
+        "decoder only"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q125",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-gpt1-architecture",
+        "w4-bert-mlm"
+      ],
+      "archive_signals": [
+        "w7-model-families:bart",
+        "w7-model-families:t5"
+      ],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "pre-training"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q126",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "key",
+        "value"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q127",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-causal-lm",
+        "w1-seq2seq-bottleneck",
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [],
+      "confidence": 0.75,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "decoder-only",
+        "decoder only",
+        "pre-training"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q128",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w3-language-modelling",
+        "w3-model-parameterisations",
+        "w4-exhaustive-greedy"
+      ],
+      "archive_signals": [
+        "w7-model-families:bart"
+      ],
+      "confidence": 0.4545,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "greedy search",
+        "probability distribution",
+        "[mask]"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q129",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm",
+        "w3-language-modelling"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "sequence length"
+      ]
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q130",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q131",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q132",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q133",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q134",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q135",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T1_Q2_NA--q136",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q192",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:tokenizer",
+        "w5-tokenization:tokenization",
+        "w5-tokenization:sentencepiece",
+        "w5-tokenization:sentence piece",
+        "w5-tokenization:subword"
+      ],
+      "confidence": 0.6,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "w5-tokenization:tokenizer",
+        "w5-tokenization:tokenization",
+        "w5-tokenization:sentencepiece",
+        "w5-tokenization:sentence piece",
+        "w5-tokenization:subword"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q193",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-scaled-dot-product",
+        "w2-masked-self-attention",
+        "w3-language-modelling"
+      ],
+      "archive_signals": [],
+      "confidence": 0.2857,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "attention logits"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q194",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "query",
+        "key"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q195",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-bert-nsp-inputs",
+        "w4-bert-mlm"
+      ],
+      "archive_signals": [
+        "w5-tokenization:tokenizer",
+        "w5-tokenization:subword"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "BERT",
+        "bert",
+        "[CLS]",
+        "[SEP]",
+        "[cls]",
+        "[sep]"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q196",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-bahdanau-attention",
+        "w1-scaled-dot-product",
+        "w2-decoder-output-and-params"
+      ],
+      "archive_signals": [
+        "w11-efficient-long-context:sparse attention"
+      ],
+      "confidence": 0.2857,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "softmax"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q197",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-positional-encoding",
+        "w3-gpt1-parameter-count",
+        "w4-bert-nsp-inputs"
+      ],
+      "archive_signals": [
+        "w7-model-families:t5"
+      ],
+      "confidence": 0.3333,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "relative position"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q198",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topp-nucleus",
+        "w3-model-parameterisations",
+        "w4-topk-temperature"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "probability distribution",
+        "top-p",
+        "nucleus sampling",
+        "top p"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q199",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-multi-head-attention",
+        "w1-bahdanau-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "attention weights",
+        "W^Q",
+        "W^K",
+        "W^V",
+        "w^q",
+        "w^k",
+        "w^v",
+        "w_q",
+        "w_k",
+        "w_v",
+        "W^O",
+        "w^o"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q200",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention",
+        "w1-bahdanau-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "softmax",
+        "query",
+        "key",
+        "attention score"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q201",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q202",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q203",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q204",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q205",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "value"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q206",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-positional-encoding",
+        "w3-gpt1-parameter-count",
+        "w4-bert-nsp-inputs"
+      ],
+      "archive_signals": [],
+      "confidence": 0.3333,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "relative position"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q207",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "W^Q",
+        "W^K",
+        "w^q",
+        "w^k",
+        "w_q",
+        "w_k"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q208",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w4-bert-nsp-inputs",
+        "w3-task-input-formats"
+      ],
+      "archive_signals": [
+        "w5-tokenization:tokenizer",
+        "w5-tokenization:subword",
+        "w11-efficient-long-context:sparse attention",
+        "w12-position-methods:alibi",
+        "w12-position-methods:attention with linear biases"
+      ],
+      "confidence": 0.619,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "key",
+        "W^Q",
+        "W^K",
+        "w^q",
+        "w^k",
+        "w_q",
+        "w_k"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q138",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:tokenizer",
+        "w5-tokenization:tokenization",
+        "w5-tokenization:sentencepiece",
+        "w5-tokenization:sentence piece",
+        "w5-tokenization:subword"
+      ],
+      "confidence": 0.75,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "w5-tokenization:tokenizer",
+        "w5-tokenization:tokenization",
+        "w5-tokenization:sentencepiece",
+        "w5-tokenization:sentence piece",
+        "w5-tokenization:subword"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q139",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "query",
+        "key"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q140",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:byte pair encoding",
+        "w5-tokenization:sentencepiece",
+        "w5-tokenization:sentence piece",
+        "w5-tokenization:subword"
+      ],
+      "confidence": 0.7778,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "w5-tokenization:byte pair encoding",
+        "w5-tokenization:sentencepiece",
+        "w5-tokenization:sentence piece",
+        "w5-tokenization:subword"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q141",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topk-temperature",
+        "w4-topp-nucleus",
+        "w4-beam-search"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8947,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "beam search",
+        "top-k sampling",
+        "temperature",
+        "high temperature",
+        "top-k",
+        "top k",
+        "top-p",
+        "top p"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q142",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-training-tricks",
+        "w2-residual-layernorm",
+        "w2-decoder-output-and-params"
+      ],
+      "archive_signals": [],
+      "confidence": 0.75,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "vocabulary size",
+        "LayerNorm",
+        "normalization",
+        "layer norm",
+        "learning-rate schedule",
+        "learning rate schedule"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q143",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topp-nucleus",
+        "w4-topk-temperature"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "top-k",
+        "top k",
+        "top-p",
+        "cumulative probability",
+        "top p"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q144",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:bpe",
+        "w5-tokenization:wordpiece",
+        "w5-tokenization:subword"
+      ],
+      "confidence": 0.6,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "w5-tokenization:bpe",
+        "w5-tokenization:wordpiece",
+        "w5-tokenization:subword"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q145",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topk-temperature",
+        "w1-bahdanau-attention",
+        "w1-scaled-dot-product"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5455,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "temperature",
+        "softmax",
+        "logits",
+        "low temperature"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q146",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-multi-head-attention",
+        "w1-bahdanau-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "attention weights",
+        "W^Q",
+        "W^K",
+        "W^V",
+        "w^q",
+        "w^k",
+        "w^v",
+        "w_q",
+        "w_k",
+        "w_v",
+        "W^O",
+        "w^o"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q147",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention",
+        "w1-bahdanau-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "softmax",
+        "query",
+        "key",
+        "attention score"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q148",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q149",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q150",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q151",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q152",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "value"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q153",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-positional-encoding",
+        "w3-gpt1-parameter-count",
+        "w4-bert-nsp-inputs"
+      ],
+      "archive_signals": [],
+      "confidence": 0.3333,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "relative position"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q154",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w4-topk-temperature",
+        "w4-topp-nucleus"
+      ],
+      "archive_signals": [
+        "w5-tokenization:bpe",
+        "w5-tokenization:wordpiece",
+        "w5-tokenization:subword"
+      ],
+      "confidence": 0.3636,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "vocabulary size",
+        "temperature",
+        "high temperature",
+        "top-k",
+        "top k",
+        "top-p",
+        "cumulative probability",
+        "top p"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q135",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q136",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w4-topk-temperature",
+        "w3-model-parameterisations",
+        "w1-bahdanau-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.3,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "probability distribution",
+        "softmax"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q137",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-bert-mlm",
+        "w3-gpt1-architecture",
+        "w3-language-modelling"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5556,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "BERT",
+        "bert",
+        "masked language modeling"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q138",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topk-temperature",
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.7778,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "top-k sampling",
+        "top-k",
+        "top k"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q139",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "normalization",
+        "gradient flow",
+        "layer normalization",
+        "batch normalization",
+        "residual"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q140",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-causal-lm",
+        "w3-language-modelling",
+        "w4-bert-mlm"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6667,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "language modeling",
+        "CLM",
+        "clm"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q141",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q142",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-bert-nsp-inputs",
+        "w3-gpt1-parameter-count",
+        "w4-bert-mlm"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8947,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "BERT",
+        "bert",
+        "next sentence prediction",
+        "[CLS]",
+        "[SEP]",
+        "position embeddings",
+        "segment embeddings",
+        "sentence A",
+        "sentence B",
+        "[cls]",
+        "[sep]"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q143",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topp-nucleus",
+        "w4-topk-temperature"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "top-k sampling",
+        "top-k",
+        "top k",
+        "top-p",
+        "nucleus sampling",
+        "cumulative probability",
+        "top p"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q144",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention",
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6667,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "value",
+        "sinusoidal"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q145",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topk-temperature",
+        "w1-bahdanau-attention",
+        "w1-scaled-dot-product"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5455,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "temperature",
+        "temperature scaling",
+        "softmax",
+        "logits"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q146",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-bahdanau-attention",
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8333,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "attention weights",
+        "weighted sum",
+        "value"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q147",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-scaled-dot-product"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "scaled dot-product attention",
+        "dot product"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q148",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-scaled-dot-product"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "scaled dot-product attention",
+        "dot product"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q149",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention",
+        "w4-bert-architecture-params"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8182,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "multi-head attention",
+        "W^O",
+        "output projection",
+        "w^o"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q150",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm",
+        "w1-ffn-encoder-stack"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "residual connection",
+        "residual"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q151",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "normalization",
+        "layer normalization"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q152",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "normalization",
+        "layer normalization"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q153",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-exhaustive-greedy"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "exhaustive search"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q154",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-exhaustive-greedy"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "exhaustive search"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q155",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-bert-nsp-inputs",
+        "w4-topk-temperature",
+        "w4-bert-mlm"
+      ],
+      "archive_signals": [],
+      "confidence": 0.7647,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "top-k sampling",
+        "probability distribution",
+        "top-k",
+        "top k",
+        "cumulative probability",
+        "BERT",
+        "bert",
+        "masked language modeling",
+        "[CLS]",
+        "[SEP]",
+        "segment embeddings",
+        "sentence A",
+        "sentence B",
+        "[cls]",
+        "[sep]"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q269",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:tokenizer",
+        "w5-tokenization:tokenization",
+        "w5-tokenization:bpe",
+        "w5-tokenization:wordpiece",
+        "w5-tokenization:subword",
+        "w5-tokenization:out-of-vocabulary"
+      ],
+      "confidence": 0.5714,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "w5-tokenization:tokenizer",
+        "w5-tokenization:tokenization",
+        "w5-tokenization:bpe",
+        "w5-tokenization:wordpiece",
+        "w5-tokenization:subword",
+        "w5-tokenization:out-of-vocabulary"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q270",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w8-scaling-laws:scaling laws"
+      ],
+      "confidence": 0.6667,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "w8-scaling-laws:scaling laws"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q271",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:byte pair encoding",
+        "w5-tokenization:bpe"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q272",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-finetuning",
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [
+        "w7-model-families:t5"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "pre-training",
+        "fine-tuning",
+        "transfer learning",
+        "fine tuning"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q273",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w7-model-families:t5",
+        "w7-model-families:span corruption"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q274",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:tokenizer",
+        "w5-tokenization:tokenization",
+        "w5-tokenization:sentencepiece",
+        "w5-tokenization:sentence piece",
+        "w5-tokenization:subword"
+      ],
+      "confidence": 0.75,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "w5-tokenization:tokenizer",
+        "w5-tokenization:tokenization",
+        "w5-tokenization:sentencepiece",
+        "w5-tokenization:sentence piece",
+        "w5-tokenization:subword"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q275",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w8-scaling-laws:scaling laws",
+        "w8-scaling-laws:training data size"
+      ],
+      "confidence": 0.625,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "w8-scaling-laws:scaling laws",
+        "w8-scaling-laws:training data size"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q276",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q277",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-bahdanau-attention",
+        "w1-scaled-dot-product",
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [
+        "w5-tokenization:out-of-vocabulary"
+      ],
+      "confidence": 0.375,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "softmax",
+        "key"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q278",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-bert-mlm",
+        "w3-causal-lm",
+        "w3-language-modelling"
+      ],
+      "archive_signals": [
+        "w7-model-families:t5",
+        "w7-model-families:span corruption"
+      ],
+      "confidence": 0.6,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "MLM",
+        "masked language modeling",
+        "mlm",
+        "[mask]"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q279",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "value"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q280",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-gpt1-parameter-count",
+        "w4-bert-architecture-params"
+      ],
+      "archive_signals": [
+        "w8-scaling-laws:scaling law"
+      ],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "embedding parameters"
+      ]
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q281",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:byte pair encoding",
+        "w5-tokenization:bpe"
+      ],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q282",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:byte pair encoding"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q283",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:byte pair encoding"
+      ],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q284",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:byte pair encoding",
+        "w5-tokenization:bpe",
+        "w5-tokenization:subword"
+      ],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T2_Q2_NA--q285",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:tokenizer",
+        "w5-tokenization:wordpiece",
+        "w5-tokenization:out-of-vocabulary",
+        "w7-model-families:t5",
+        "w7-model-families:span corruption"
+      ],
+      "confidence": 0.6667,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "w5-tokenization:tokenizer",
+        "w5-tokenization:wordpiece",
+        "w5-tokenization:out-of-vocabulary",
+        "w7-model-families:t5",
+        "w7-model-families:span corruption"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q2",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topk-temperature",
+        "w4-topp-nucleus"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "top-k sampling",
+        "temperature",
+        "temperature scaling",
+        "logits",
+        "top-k",
+        "top k"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q3",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm",
+        "w1-encoder-parameter-count"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8462,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "LayerNorm",
+        "BatchNorm",
+        "normalization",
+        "layer norm",
+        "layer normalization",
+        "batch norm",
+        "batch normalization"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q4",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:tokenizer",
+        "w5-tokenization:wordpiece"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q5",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-bert-nsp-inputs",
+        "w4-bert-mlm",
+        "w3-gpt1-parameter-count"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8182,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "BERT",
+        "bert",
+        "[mask]",
+        "[CLS]",
+        "[SEP]",
+        "token embeddings",
+        "[cls]",
+        "[sep]"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q6",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-bert-mlm",
+        "w4-bert-nsp-inputs",
+        "w3-language-modelling"
+      ],
+      "archive_signals": [],
+      "confidence": 0.7143,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "text generation",
+        "BERT",
+        "bert",
+        "masked language modeling",
+        "next sentence prediction"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q7",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "self-attention",
+        "self attention"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q8",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-full-transformer",
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [
+        "w12-position-methods:rope",
+        "w12-position-methods:alibi",
+        "w12-position-methods:nope"
+      ],
+      "confidence": 0.6667,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q9",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w12-position-methods:rope"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q10",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [
+        "w12-position-methods:rope"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "sequence length"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q11",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q12",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-full-transformer",
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [
+        "w12-position-methods:relative positional encoding"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q13",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-full-transformer",
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [
+        "w12-position-methods:rope",
+        "w12-position-methods:alibi"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q14",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [
+        "w12-position-methods:alibi"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "attention score"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q15",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topp-nucleus",
+        "w4-beam-search",
+        "w4-exhaustive-greedy"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "beam width",
+        "beam search",
+        "temperature",
+        "top-p",
+        "top p"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q16",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w12-position-methods:rope",
+        "w12-position-methods:alibi"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q17",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-encoder-parameter-count",
+        "w1-multi-head-attention"
+      ],
+      "archive_signals": [
+        "w7-model-families:bart"
+      ],
+      "confidence": 0.6923,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "self-attention",
+        "self attention",
+        "d_model",
+        "FFN"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q18",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [
+        "w11-efficient-long-context:sparse attention"
+      ],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "sequence length"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q19",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q20",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-ffn-encoder-stack"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "W^Q",
+        "W^K",
+        "W^V",
+        "w^q",
+        "w^k",
+        "w^v",
+        "w_q",
+        "w_k",
+        "w_v",
+        "encoder stack"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q21",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm",
+        "w3-language-modelling"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "sequence length"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q22",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count",
+        "w1-multi-head-attention"
+      ],
+      "archive_signals": [
+        "w11-efficient-long-context:kv cache"
+      ],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "head dimension",
+        "number of heads"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q23",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q24",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-masked-self-attention",
+        "w2-teacher-forcing",
+        "w3-pretraining-objective"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6667,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "teacher forcing",
+        "future tokens"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q25",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-teacher-forcing",
+        "w2-full-transformer",
+        "w1-seq2seq-bottleneck"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6364,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "teacher forcing",
+        "exposure bias",
+        "encoder-decoder architecture"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q26",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-full-transformer",
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.64,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "masked self-attention",
+        "cross-attention",
+        "cross attention",
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q2",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "normalization",
+        "layer normalization",
+        "batch normalization"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q3",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topk-temperature",
+        "w4-topp-nucleus"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "temperature",
+        "temperature scaling",
+        "logits",
+        "top-k",
+        "top k"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q4",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topp-nucleus"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "top-p",
+        "top p"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q5",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:wordpiece"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q6",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-bert-nsp-inputs",
+        "w2-full-transformer",
+        "w3-gpt1-parameter-count"
+      ],
+      "archive_signals": [],
+      "confidence": 0.7143,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "BERT",
+        "bert",
+        "[CLS]",
+        "[SEP]",
+        "token embeddings",
+        "[cls]",
+        "[sep]",
+        "attention heads"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q7",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-bert-mlm",
+        "w4-bert-nsp-inputs"
+      ],
+      "archive_signals": [
+        "w7-model-families:bart"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "BERT",
+        "bert",
+        "[CLS]",
+        "[cls]"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q8",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-residual-layernorm",
+        "w1-bahdanau-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.4706,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "value",
+        "softmax",
+        "normalization",
+        "sequence length",
+        "layer normalization"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q9",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention",
+        "w2-teacher-forcing"
+      ],
+      "archive_signals": [
+        "w11-efficient-long-context:kv cache"
+      ],
+      "confidence": 0.5,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "autoregressive inference",
+        "key",
+        "value"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q10",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-multi-head-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "self-attention",
+        "self attention",
+        "head dimension"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q11",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w12-position-methods:rope"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q12",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-positional-encoding",
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "positional embedding",
+        "sequence length"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q13",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q14",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w12-position-methods:alibi",
+        "w12-position-methods:nope",
+        "w12-position-methods:relative positional encoding"
+      ],
+      "confidence": 0.5556,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "w12-position-methods:alibi",
+        "w12-position-methods:nope",
+        "w12-position-methods:relative positional encoding"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q15",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w12-position-methods:rope",
+        "w12-position-methods:alibi"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q16",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-full-transformer",
+        "w2-positional-encoding",
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [
+        "w12-position-methods:rope",
+        "w12-position-methods:alibi"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "positional encoding",
+        "sequence length"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q17",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w12-position-methods:alibi"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q18",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "self-attention",
+        "self attention"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q19",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm",
+        "w3-language-modelling"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "sequence length"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q20",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q21",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention",
+        "w4-bert-architecture-params"
+      ],
+      "archive_signals": [
+        "w11-efficient-long-context:kv cache"
+      ],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "head dimension"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q22",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [
+        "w11-efficient-long-context:sparse attention"
+      ],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "sequence length"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q23",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-causal-lm",
+        "w2-masked-self-attention",
+        "w2-teacher-forcing"
+      ],
+      "archive_signals": [],
+      "confidence": 0.55,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "next-token prediction",
+        "causal mask",
+        "causal language model"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q24",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topk-temperature",
+        "w4-topp-nucleus",
+        "w4-beam-search"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "beam width",
+        "beam search",
+        "top-k sampling",
+        "temperature",
+        "logits",
+        "top-k",
+        "top k",
+        "top-p",
+        "top p"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q25",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-encoder-parameter-count",
+        "w1-multi-head-attention"
+      ],
+      "archive_signals": [
+        "w7-model-families:bart"
+      ],
+      "confidence": 0.6923,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "self-attention",
+        "self attention",
+        "d_model",
+        "FFN"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q173",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-scaled-dot-product",
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8571,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "query",
+        "key",
+        "sqrt(d_k)",
+        "d_k",
+        "dot product",
+        "sqrt d_k"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q174",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "sine",
+        "cosine",
+        "sinusoidal"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q175",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-teacher-forcing",
+        "w3-pretraining-objective"
+      ],
+      "archive_signals": [],
+      "confidence": 0.75,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "teacher forcing",
+        "decoder input",
+        "target sequence"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q176",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-full-transformer",
+        "w3-causal-lm"
+      ],
+      "archive_signals": [],
+      "confidence": 0.4762,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "decoder input",
+        "masked self-attention",
+        "softmax"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q177",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-teacher-forcing",
+        "w3-pretraining-objective"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "teacher forcing"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q178",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q179",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "normalization",
+        "batch normalization"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q180",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "sequence length"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q181",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-exhaustive-greedy",
+        "w4-beam-search",
+        "w2-decoder-output-and-params"
+      ],
+      "archive_signals": [],
+      "confidence": 0.7143,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "exhaustive search",
+        "greedy search",
+        "vocabulary size",
+        "beam search",
+        "beam size"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q182",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q183",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count",
+        "w1-multi-head-attention",
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6364,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "d_model",
+        "number of heads"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q184",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-full-transformer",
+        "w2-masked-self-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5294,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "look-ahead mask",
+        "positional encoding",
+        "transformer architecture"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q185",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-beam-search",
+        "w3-language-modelling"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6667,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "beam search",
+        "beam size"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q186",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-encoder-parameter-count",
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 0.7778,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "self-attention",
+        "self attention",
+        "number of heads"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q187",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w4-bert-architecture-params"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6667,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "self-attention",
+        "self attention"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q188",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-encoder-parameter-count",
+        "w1-multi-head-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8261,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "query",
+        "key",
+        "W^Q",
+        "w^q",
+        "w_q",
+        "d_k",
+        "d_model",
+        "number of heads",
+        "trainable parameters"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q189",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w2-teacher-forcing",
+        "w3-causal-lm",
+        "w3-language-modelling"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6667,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "next-token prediction"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q190",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "attention score"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q191",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention",
+        "w1-encoder-parameter-count",
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [],
+      "confidence": 0.875,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "W^O",
+        "output projection",
+        "d_model",
+        "head outputs",
+        "w^o",
+        "trainable parameters"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q192",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count",
+        "w1-self-attention-qkv",
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [],
+      "confidence": 0.4286,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "self-attention",
+        "key",
+        "self attention",
+        "d_model",
+        "number of heads"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q107",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q108",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q109",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q110",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count",
+        "w3-causal-lm",
+        "w1-seq2seq-bottleneck"
+      ],
+      "archive_signals": [],
+      "confidence": 0.4667,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "encoder-decoder",
+        "parameter count",
+        "number of parameters"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q111",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:byte pair encoding",
+        "w5-tokenization:bpe"
+      ],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q112",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-decoder-output-and-params",
+        "w3-gpt1-parameter-count",
+        "w4-exhaustive-greedy"
+      ],
+      "archive_signals": [
+        "w5-tokenization:bpe"
+      ],
+      "confidence": 0.3333,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "vocabulary size"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q113",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-scaled-dot-product",
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "softmax",
+        "query",
+        "key",
+        "dot product"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q114",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q115",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topk-temperature",
+        "w4-topp-nucleus",
+        "w4-beam-search"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "beam search",
+        "beam size",
+        "temperature",
+        "top-k",
+        "top k",
+        "top-p",
+        "top p"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q116",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q117",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q118",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-gpt1-architecture",
+        "w4-bert-mlm"
+      ],
+      "archive_signals": [
+        "w7-model-families:bart",
+        "w7-model-families:t5"
+      ],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "pre-training"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q119",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w8-scaling-laws:scaling law"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q120",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-task-input-formats",
+        "w3-gpt1-architecture",
+        "w4-bert-mlm"
+      ],
+      "archive_signals": [
+        "w7-model-families:bart"
+      ],
+      "confidence": 0.6,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "pre-training",
+        "sentiment classification",
+        "text generation"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q121",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-causal-lm",
+        "w3-finetuning",
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [
+        "w7-model-families:t5",
+        "w7-model-families:span corruption"
+      ],
+      "confidence": 0.6957,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "CLM",
+        "causal language model",
+        "clm",
+        "pre-training",
+        "fine-tuning",
+        "pre-training objective",
+        "fine tuning"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q122",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "pre-training"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q123",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-bert-mlm",
+        "w3-causal-lm",
+        "w3-language-modelling"
+      ],
+      "archive_signals": [
+        "w7-model-families:bart"
+      ],
+      "confidence": 0.5556,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "MLM",
+        "masked language modeling",
+        "mlm"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q124",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-seq2seq-bottleneck",
+        "w2-teacher-forcing",
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [
+        "w7-model-families:bart"
+      ],
+      "confidence": 0.2857,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "encoder-decoder"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q125",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:wordpiece"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q126",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:tokenization",
+        "w5-tokenization:sentencepiece",
+        "w5-tokenization:sentence piece"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q127",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "LayerNorm",
+        "BatchNorm",
+        "layer norm",
+        "batch norm"
+      ]
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q128",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-cross-attention",
+        "w1-self-attention-qkv",
+        "w1-seq2seq-bottleneck"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6429,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "cross-attention",
+        "query",
+        "key",
+        "value",
+        "cross attention"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q2",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w4-bert-nsp-inputs",
+        "w1-multi-head-attention",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.3636,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "decoder input",
+        "encoder output"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q3",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-pretraining-objective",
+        "w2-teacher-forcing",
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [
+        "w7-model-families:bart",
+        "w7-model-families:t5",
+        "w7-model-families:span corruption"
+      ],
+      "confidence": 0.7143,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "pre-training",
+        "pre-training objective"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q4",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-seq2seq-bottleneck"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "long-range dependencies"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q5",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-positional-encoding",
+        "w2-full-transformer"
+      ],
+      "archive_signals": [
+        "w12-position-methods:alibi"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "positional encoding",
+        "sinusoidal"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q6",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-bert-nsp-inputs",
+        "w2-residual-layernorm",
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [
+        "w5-tokenization:bpe"
+      ],
+      "confidence": 0.6,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "BERT",
+        "bert",
+        "[CLS]",
+        "[SEP]",
+        "[cls]",
+        "[sep]"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q7",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-finetuning",
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [
+        "later-alignment-and-adaptation:prompting"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "fine-tuning",
+        "fine tuning"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q8",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w3-model-parameterisations",
+        "w4-topk-temperature",
+        "w4-topp-nucleus"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6667,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "probability distribution",
+        "nucleus sampling"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q9",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm",
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "sequence length"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q10",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-encoder-parameter-count",
+        "w1-multi-head-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6875,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "self-attention",
+        "value",
+        "attention score",
+        "self attention",
+        "d_model"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q11",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topk-temperature",
+        "w1-bahdanau-attention",
+        "w1-scaled-dot-product"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6154,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "temperature",
+        "temperature scaling",
+        "softmax",
+        "logits",
+        "high temperature"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q12",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention",
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "attention head"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q13",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w2-residual-layernorm",
+        "w1-self-attention-qkv",
+        "w3-finetuning"
+      ],
+      "archive_signals": [],
+      "confidence": 0.3684,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "self-attention",
+        "self attention",
+        "FFN",
+        "residual connection"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q14",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-masked-self-attention",
+        "w1-scaled-dot-product",
+        "w3-causal-lm"
+      ],
+      "archive_signals": [
+        "w12-position-methods:rope"
+      ],
+      "confidence": 0.5556,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "causal mask",
+        "future tokens",
+        "sinusoidal"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q15",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "query",
+        "key",
+        "value"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q16",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention",
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.7273,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "query",
+        "key",
+        "value",
+        "multi-head attention",
+        "attention head"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q17",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w1-scaled-dot-product",
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [
+        "w12-position-methods:relative positional encoding"
+      ],
+      "confidence": 0.6154,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "attention logits",
+        "query",
+        "key",
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q18",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention",
+        "w4-topk-temperature"
+      ],
+      "archive_signals": [
+        "w12-position-methods:alibi"
+      ],
+      "confidence": 0.6,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "query",
+        "attention score"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q19",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-finetuning",
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [
+        "w7-model-families:t5"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "pre-training",
+        "fine-tuning",
+        "fine tuning"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q20",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "sequence length"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q21",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w1-bahdanau-attention",
+        "w1-scaled-dot-product",
+        "w2-decoder-output-and-params"
+      ],
+      "archive_signals": [
+        "w11-efficient-long-context:flash attention"
+      ],
+      "confidence": 0.4286,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "softmax",
+        "dropout"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q2",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count",
+        "w1-multi-head-attention",
+        "w1-scaled-dot-product"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8462,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "key",
+        "value",
+        "d_k",
+        "multi-head attention",
+        "W^O",
+        "d_model",
+        "w^o",
+        "projection matrices",
+        "number of heads",
+        "trainable parameters"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q3",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count",
+        "w1-ffn-encoder-stack"
+      ],
+      "archive_signals": [
+        "w7-model-families:t5"
+      ],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "FFN",
+        "encoder layer",
+        "number of parameters"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q4",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count",
+        "w1-ffn-encoder-stack",
+        "w1-multi-head-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "d_model",
+        "Transformer encoder"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q5",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention",
+        "w1-encoder-parameter-count",
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [
+        "w11-efficient-long-context:kv cache"
+      ],
+      "confidence": 0.6364,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "multi-head attention",
+        "d_model"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q6",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-bert-nsp-inputs",
+        "w4-bert-mlm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "BERT",
+        "bert",
+        "next sentence prediction"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q7",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w7-model-families:t5",
+        "w8-scaling-laws:scaling law"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q8",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w11-efficient-long-context:kv cache"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q9",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [
+        "w11-efficient-long-context:linear attention"
+      ],
+      "confidence": 0.6667,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "self-attention",
+        "self attention"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q10",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count",
+        "w1-multi-head-attention",
+        "w1-scaled-dot-product"
+      ],
+      "archive_signals": [
+        "w12-position-methods:rope",
+        "w12-position-methods:rotary positional"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "dot product",
+        "attention head",
+        "weight matrix"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q11",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-bahdanau-attention",
+        "w1-scaled-dot-product"
+      ],
+      "archive_signals": [
+        "w12-position-methods:alibi"
+      ],
+      "confidence": 0.5,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "softmax",
+        "attention score"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q12",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w3-causal-lm",
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "autoregressive model",
+        "pre-training"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q13",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-seq2seq-bottleneck",
+        "w3-causal-lm",
+        "w4-bert-mlm"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5714,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "sequence-to-sequence",
+        "encoder-decoder",
+        "sequence to sequence"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q14",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention",
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [
+        "w11-efficient-long-context:kv cache"
+      ],
+      "confidence": 0.75,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "autoregressive inference",
+        "key",
+        "value",
+        "sequence length"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q15",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-exhaustive-greedy",
+        "w4-beam-search",
+        "w2-decoder-output-and-params"
+      ],
+      "archive_signals": [],
+      "confidence": 0.75,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "greedy search",
+        "vocabulary size",
+        "beam width",
+        "beam search",
+        "nucleus sampling"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q16",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w2-full-transformer",
+        "w4-bert-nsp-inputs",
+        "w4-exhaustive-greedy"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "greedy search",
+        "autoregressive decoding",
+        "softmax",
+        "BERT",
+        "bert",
+        "[CLS]",
+        "[SEP]",
+        "[cls]",
+        "[sep]"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q17",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w4-bert-mlm"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6667,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "self-attention",
+        "self attention"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q18",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-causal-lm",
+        "w1-seq2seq-bottleneck",
+        "w4-bert-mlm"
+      ],
+      "archive_signals": [
+        "w7-model-families:bart"
+      ],
+      "confidence": 0.4,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "decoder-only",
+        "decoder only"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q19",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count"
+      ],
+      "archive_signals": [
+        "w11-efficient-long-context:flash attention"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "number of parameters"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q20",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w1-scaled-dot-product",
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [
+        "w12-position-methods:relative positional encoding"
+      ],
+      "confidence": 0.6154,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "attention logits",
+        "query",
+        "key",
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q21",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w12-position-methods:rope",
+        "w12-position-methods:rotary positional",
+        "w12-position-methods:alibi",
+        "w12-position-methods:attention with linear biases"
+      ],
+      "confidence": 0.6364,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "w12-position-methods:rope",
+        "w12-position-methods:rotary positional",
+        "w12-position-methods:alibi",
+        "w12-position-methods:attention with linear biases"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q2",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-encoder-parameter-count",
+        "w1-multi-head-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.7727,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "self-attention",
+        "query",
+        "W^Q",
+        "self attention",
+        "w^q",
+        "w_q",
+        "d_k",
+        "d_model"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q3",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-scaled-dot-product",
+        "w1-encoder-parameter-count",
+        "w1-bahdanau-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8095,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "softmax",
+        "scaled dot-product attention",
+        "sqrt(d_k)",
+        "d_k",
+        "dot product",
+        "sqrt d_k",
+        "trainable parameters"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q4",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-ffn-encoder-stack",
+        "w1-bahdanau-attention",
+        "w1-encoder-parameter-count"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6667,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "context vector",
+        "d_model",
+        "encoder stack",
+        "Transformer encoder"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q5",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-cross-attention",
+        "w2-full-transformer",
+        "w1-ffn-encoder-stack"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6471,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "cross-attention",
+        "source sequence",
+        "cross attention",
+        "encoder-decoder architecture"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q6",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-finetuning",
+        "w3-gpt1-architecture",
+        "w4-bert-nsp-inputs"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5714,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "pre-training",
+        "fine-tuning",
+        "fine tuning"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q7",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topk-temperature",
+        "w3-model-parameterisations",
+        "w4-exhaustive-greedy"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5882,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "greedy search",
+        "temperature",
+        "temperature scaling",
+        "softmax",
+        "logits",
+        "probability distribution"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q8",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w3-finetuning",
+        "w4-bert-nsp-inputs"
+      ],
+      "archive_signals": [],
+      "confidence": 0.4167,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "hidden state",
+        "fine-tuning",
+        "classification head",
+        "fine tuning"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q9",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention",
+        "w1-encoder-parameter-count"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "multi-head attention",
+        "representation subspaces",
+        "number of parameters"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q10",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-scaled-dot-product",
+        "w1-self-attention-qkv",
+        "w1-bahdanau-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.7778,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "softmax",
+        "self-attention",
+        "self attention",
+        "sqrt(d_k)",
+        "d_k",
+        "sqrt d_k"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q11",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-cross-attention",
+        "w2-full-transformer",
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [],
+      "confidence": 0.7368,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "cross-attention",
+        "encoder-decoder attention",
+        "query",
+        "key",
+        "value",
+        "cross attention",
+        "transformer architecture"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q12",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-positional-encoding",
+        "w1-encoder-parameter-count",
+        "w1-multi-head-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "value",
+        "positional encoding",
+        "d_model",
+        "positional embedding"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q13",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-seq2seq-bottleneck",
+        "w3-causal-lm"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6667,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "hidden state",
+        "attention score"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q14",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-bahdanau-attention",
+        "w1-scaled-dot-product",
+        "w2-decoder-output-and-params"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "attention weights",
+        "softmax"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q15",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-bahdanau-attention",
+        "w1-seq2seq-bottleneck"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "context vector"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q16",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "number of parameters"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q17",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count",
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "number of parameters"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q18",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count",
+        "w1-multi-head-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "attention head",
+        "number of parameters"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q19",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "multi-head attention",
+        "output projection",
+        "head outputs"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q20",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count",
+        "w1-ffn-encoder-stack"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "FFN",
+        "number of parameters"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q2",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention",
+        "w1-encoder-parameter-count",
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8667,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "multi-head attention",
+        "W^O",
+        "output projection",
+        "d_model",
+        "w^o"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q3",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w4-bert-mlm",
+        "w3-finetuning",
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [],
+      "confidence": 0.44,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "language modeling",
+        "softmax",
+        "pre-training",
+        "fine-tuning",
+        "fine tuning"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q4",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w4-bert-mlm",
+        "w3-causal-lm",
+        "w2-masked-self-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.381,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "language modeling",
+        "decoder-only",
+        "causal mask",
+        "decoder only"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q5",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w7-model-families:t5",
+        "w7-model-families:text-to-text transfer transformer"
+      ],
+      "confidence": 0.6667,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "w7-model-families:t5",
+        "w7-model-families:text-to-text transfer transformer"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q6",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-gpt1-architecture",
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.3333,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "pre-training"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q7",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count",
+        "w2-decoder-output-and-params",
+        "w3-gpt1-parameter-count"
+      ],
+      "archive_signals": [
+        "w5-tokenization:tokenization"
+      ],
+      "confidence": 0.3636,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "key",
+        "number of parameters"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q8",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w2-cross-attention",
+        "w1-ffn-encoder-stack",
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [],
+      "confidence": 0.4762,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "encoder-decoder",
+        "self-attention",
+        "self attention",
+        "encoder layer",
+        "Transformer encoder"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q9",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention",
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 0.625,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "query",
+        "key",
+        "value",
+        "sequence length"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q10",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w7-model-families:t5",
+        "w7-model-families:span corruption"
+      ],
+      "confidence": 0.6,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "w7-model-families:t5",
+        "w7-model-families:span corruption"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q11",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-finetuning",
+        "w3-gpt1-architecture",
+        "w3-task-input-formats"
+      ],
+      "archive_signals": [
+        "w7-model-families:gpt-2",
+        "w7-model-families:gpt 2"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "fine-tuning",
+        "downstream task",
+        "fine tuning"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q12",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm",
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "value",
+        "normalization",
+        "layer normalization"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q13",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-causal-lm",
+        "w3-pretraining-objective",
+        "w3-language-modelling"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "language modelling",
+        "causal language modelling"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q14",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q15",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:bpe"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q16",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-decoder-output-and-params",
+        "w3-gpt1-parameter-count",
+        "w4-exhaustive-greedy"
+      ],
+      "archive_signals": [],
+      "confidence": 0.3333,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "vocabulary size"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q17",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-model-parameterisations",
+        "w4-topk-temperature",
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [],
+      "confidence": 0.3333,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "probability distribution"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q18",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w3-gpt1-parameter-count",
+        "w4-bert-nsp-inputs",
+        "w1-encoder-parameter-count"
+      ],
+      "archive_signals": [],
+      "confidence": 0.3226,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "vocabulary size",
+        "BERT",
+        "bert",
+        "token embeddings",
+        "position embeddings",
+        "segment embeddings"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q19",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-decoder-output-and-params",
+        "w3-gpt1-parameter-count",
+        "w4-exhaustive-greedy"
+      ],
+      "archive_signals": [
+        "w5-tokenization:tokenization"
+      ],
+      "confidence": 0.3333,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "vocabulary size"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q20",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:sentencepiece",
+        "w5-tokenization:sentence piece",
+        "w5-tokenization:subword"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q21",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:byte pair encoding",
+        "w5-tokenization:bpe",
+        "w5-tokenization:subword",
+        "later-alignment-and-adaptation:rlhf",
+        "later-alignment-and-adaptation:reinforcement learning from human feedback"
+      ],
+      "confidence": 0.6,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "w5-tokenization:byte pair encoding",
+        "w5-tokenization:bpe",
+        "w5-tokenization:subword",
+        "later-alignment-and-adaptation:rlhf",
+        "later-alignment-and-adaptation:reinforcement learning from human feedback"
+      ]
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q22",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-training-tricks"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "dropout"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q2",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-ffn-encoder-stack",
+        "w2-masked-self-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "self-attention",
+        "self attention",
+        "Transformer encoder"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q3",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-positional-encoding",
+        "w1-scaled-dot-product",
+        "w2-full-transformer"
+      ],
+      "archive_signals": [],
+      "confidence": 0.75,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "value",
+        "sinusoidal positional encoding",
+        "positional encoding",
+        "sinusoidal"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q4",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topp-nucleus",
+        "w4-beam-search",
+        "w4-exhaustive-greedy"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "exhaustive search",
+        "beam search",
+        "top-p",
+        "top p"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q5",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-bert-nsp-inputs",
+        "w1-multi-head-attention",
+        "w4-bert-mlm"
+      ],
+      "archive_signals": [],
+      "confidence": 0.7273,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "BERT",
+        "bert",
+        "[mask]",
+        "next sentence prediction",
+        "segment embeddings"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q6",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm",
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "value",
+        "normalization",
+        "layer normalization"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q7",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-beam-search"
+      ],
+      "archive_signals": [
+        "w5-tokenization:tokenizer",
+        "w5-tokenization:tokenization"
+      ],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "decoding algorithm"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q8",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "relative position"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q9",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q10",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "value"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q11",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w7-model-families:gpt-2",
+        "w7-model-families:gpt 2"
+      ],
+      "confidence": 0.6667,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "w7-model-families:gpt-2",
+        "w7-model-families:gpt 2"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q12",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-language-modelling"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "language modelling"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q13",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-language-modelling"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "language modelling"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q14",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "sequence length"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q15",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-full-transformer",
+        "w4-exhaustive-greedy"
+      ],
+      "archive_signals": [
+        "w11-efficient-long-context:kv cache"
+      ],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "autoregressive decoding"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q16",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention",
+        "w1-multi-head-attention"
+      ],
+      "archive_signals": [
+        "w11-efficient-long-context:kv cache"
+      ],
+      "confidence": 0.4167,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "query",
+        "key",
+        "value",
+        "head dimension"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q17",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-full-transformer",
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q18",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "W^Q",
+        "w^q",
+        "w_q"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q19",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "W^K",
+        "w^k",
+        "w_k"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q20",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [
+        "w12-position-methods:rope"
+      ],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "value"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q21",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-positional-encoding",
+        "w1-scaled-dot-product",
+        "w2-full-transformer"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5625,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "key",
+        "sinusoidal positional encoding",
+        "positional encoding",
+        "sinusoidal"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q2",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count",
+        "w1-multi-head-attention",
+        "w1-scaled-dot-product"
+      ],
+      "archive_signals": [],
+      "confidence": 0.8462,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "key",
+        "value",
+        "d_k",
+        "multi-head attention",
+        "W^O",
+        "d_model",
+        "w^o",
+        "projection matrices",
+        "number of heads",
+        "trainable parameters"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q3",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count",
+        "w1-ffn-encoder-stack"
+      ],
+      "archive_signals": [
+        "w7-model-families:t5"
+      ],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "FFN",
+        "encoder layer",
+        "number of parameters"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q4",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count",
+        "w1-ffn-encoder-stack",
+        "w1-multi-head-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "d_model",
+        "Transformer encoder"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q5",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention",
+        "w1-encoder-parameter-count",
+        "w2-positional-encoding"
+      ],
+      "archive_signals": [
+        "w11-efficient-long-context:kv cache"
+      ],
+      "confidence": 0.6364,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "multi-head attention",
+        "d_model"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q6",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-bert-nsp-inputs",
+        "w4-bert-mlm"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "BERT",
+        "bert",
+        "next sentence prediction"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q7",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w7-model-families:t5",
+        "w8-scaling-laws:scaling law"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q8",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w11-efficient-long-context:kv cache"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q9",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [
+        "w11-efficient-long-context:linear attention"
+      ],
+      "confidence": 0.6667,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "self-attention",
+        "self attention"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q10",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count",
+        "w1-multi-head-attention",
+        "w1-scaled-dot-product"
+      ],
+      "archive_signals": [
+        "w12-position-methods:rope",
+        "w12-position-methods:rotary positional"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "dot product",
+        "attention head",
+        "weight matrix"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q11",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-bahdanau-attention",
+        "w1-scaled-dot-product"
+      ],
+      "archive_signals": [
+        "w12-position-methods:alibi"
+      ],
+      "confidence": 0.5,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "softmax",
+        "attention score"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q12",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w3-causal-lm",
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "autoregressive model",
+        "pre-training"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q13",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-seq2seq-bottleneck",
+        "w3-causal-lm",
+        "w4-bert-mlm"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5714,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "sequence-to-sequence",
+        "encoder-decoder",
+        "sequence to sequence"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q14",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention",
+        "w2-residual-layernorm"
+      ],
+      "archive_signals": [
+        "w11-efficient-long-context:kv cache"
+      ],
+      "confidence": 0.75,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "autoregressive inference",
+        "key",
+        "value",
+        "sequence length"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q15",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-exhaustive-greedy",
+        "w4-beam-search",
+        "w2-decoder-output-and-params"
+      ],
+      "archive_signals": [],
+      "confidence": 0.75,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "greedy search",
+        "vocabulary size",
+        "beam width",
+        "beam search",
+        "nucleus sampling"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q16",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w2-full-transformer",
+        "w4-bert-nsp-inputs",
+        "w4-exhaustive-greedy"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "greedy search",
+        "autoregressive decoding",
+        "softmax",
+        "BERT",
+        "bert",
+        "[CLS]",
+        "[SEP]",
+        "[cls]",
+        "[sep]"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q17",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w4-bert-mlm"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6667,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "self-attention",
+        "self attention"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q18",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-causal-lm",
+        "w1-seq2seq-bottleneck",
+        "w4-bert-mlm"
+      ],
+      "archive_signals": [
+        "w7-model-families:bart"
+      ],
+      "confidence": 0.4,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "decoder-only",
+        "decoder only"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q19",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count"
+      ],
+      "archive_signals": [
+        "w11-efficient-long-context:flash attention"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "number of parameters"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q20",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w1-scaled-dot-product",
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [
+        "w12-position-methods:relative positional encoding"
+      ],
+      "confidence": 0.6154,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "attention logits",
+        "query",
+        "key",
+        "positional encoding"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q21",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w12-position-methods:rope",
+        "w12-position-methods:rotary positional",
+        "w12-position-methods:alibi",
+        "w12-position-methods:attention with linear biases"
+      ],
+      "confidence": 0.6364,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "w12-position-methods:rope",
+        "w12-position-methods:rotary positional",
+        "w12-position-methods:alibi",
+        "w12-position-methods:attention with linear biases"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q2",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-bahdanau-attention",
+        "w1-seq2seq-bottleneck"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "sequence-to-sequence",
+        "context vector",
+        "sequence to sequence",
+        "attention weights",
+        "encoder hidden states",
+        "weighted sum"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q3",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-scaled-dot-product"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "scaled dot-product attention",
+        "dot product"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q4",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "attention score"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q5",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention",
+        "w2-residual-layernorm",
+        "w4-bert-architecture-params"
+      ],
+      "archive_signals": [],
+      "confidence": 0.4286,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "multi-head attention"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q6",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-ffn-encoder-stack",
+        "w4-bert-architecture-params",
+        "w1-encoder-parameter-count"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5714,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "d_model",
+        "encoder layer",
+        "Transformer encoder"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q7",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention",
+        "w2-masked-self-attention",
+        "w3-causal-lm"
+      ],
+      "archive_signals": [],
+      "confidence": 0.4783,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "softmax",
+        "attention score",
+        "multi-head attention",
+        "d_model"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q8",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w2-positional-encoding",
+        "w1-encoder-parameter-count",
+        "w1-multi-head-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.4375,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "hidden state",
+        "value",
+        "d_model"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q9",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-seq2seq-bottleneck",
+        "w2-teacher-forcing",
+        "w3-pretraining-objective"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "sequence-to-sequence",
+        "sequence to sequence"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q10",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-language-modelling",
+        "w3-model-parameterisations"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "joint probability"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q11",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-language-modelling",
+        "w3-model-parameterisations"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "joint probability"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q12",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-language-modelling"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "conditional probability"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q13",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-seq2seq-bottleneck",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5238,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "RNN",
+        "recurrent neural network",
+        "self-attention",
+        "self attention",
+        "position-wise feed-forward network"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q14",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.5,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "value"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q15",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-exhaustive-greedy"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "exhaustive search"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q16",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topk-temperature",
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.7778,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "top-k sampling",
+        "top-k",
+        "top k"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q17",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-beam-search",
+        "w1-encoder-parameter-count",
+        "w4-exhaustive-greedy"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "beam width",
+        "beam search"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q2",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm",
+        "w1-seq2seq-bottleneck",
+        "w2-full-transformer"
+      ],
+      "archive_signals": [],
+      "confidence": 0.75,
+      "low_confidence": true,
+      "image_only": true,
+      "evidence": [
+        "Add & Norm",
+        "add & norm",
+        "transformer architecture"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q3",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-full-transformer",
+        "w1-self-attention-qkv",
+        "w2-cross-attention"
+      ],
+      "archive_signals": [],
+      "confidence": 0.6667,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "cross-attention",
+        "cross attention",
+        "positional encoding",
+        "transformer architecture"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q4",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w2-cross-attention",
+        "w2-full-transformer"
+      ],
+      "archive_signals": [
+        "w5-tokenization:tokenizer"
+      ],
+      "confidence": 0.7778,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "cross-attention",
+        "cross attention",
+        "positional encoding",
+        "Add & Norm",
+        "add & norm"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q5",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-masked-self-attention",
+        "w1-bahdanau-attention",
+        "w3-causal-lm"
+      ],
+      "archive_signals": [],
+      "confidence": 0.4286,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "causal mask",
+        "future tokens",
+        "softmax"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q6",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w5-tokenization:byte pair encoding",
+        "w5-tokenization:bpe"
+      ],
+      "confidence": 0.6667,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "w5-tokenization:byte pair encoding",
+        "w5-tokenization:bpe"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q7",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-gpt1-architecture"
+      ],
+      "archive_signals": [
+        "w7-model-families:t5"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "pre-training"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q8",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-gpt1-architecture",
+        "w3-finetuning",
+        "w3-task-input-formats"
+      ],
+      "archive_signals": [],
+      "confidence": 0.7727,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "softmax",
+        "GPT-1",
+        "fine-tuning",
+        "gpt-1",
+        "gpt 1",
+        "fine tuning",
+        "textual entailment",
+        "delimiter token"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q9",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-gpt1-architecture",
+        "w1-self-attention-qkv",
+        "w3-causal-lm"
+      ],
+      "archive_signals": [],
+      "confidence": 0.7143,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "decoder-only",
+        "decoder only",
+        "decoder-only Transformer",
+        "fine-tuning",
+        "teacher forcing",
+        "fine tuning"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q10",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-topk-temperature",
+        "w4-topp-nucleus"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "temperature",
+        "temperature scaling",
+        "logits",
+        "nucleus sampling"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q11",
+      "candidate_week": 4,
+      "topic_ids": [
+        "w4-beam-search"
+      ],
+      "archive_signals": [
+        "w5-tokenization:tokenization",
+        "w5-tokenization:wordpiece"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "log probability"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q12",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-finetuning",
+        "w3-gpt1-architecture",
+        "w3-language-modelling"
+      ],
+      "archive_signals": [
+        "w7-model-families:t5"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "cross-entropy",
+        "fine-tuning",
+        "fine tuning"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q13",
+      "candidate_week": 2,
+      "topic_ids": [
+        "w2-cross-attention",
+        "w2-full-transformer",
+        "w3-language-modelling"
+      ],
+      "archive_signals": [
+        "w7-model-families:bart"
+      ],
+      "confidence": 0.6667,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "encoder output",
+        "transformer architecture"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q14",
+      "candidate_week": 3,
+      "topic_ids": [
+        "w3-finetuning",
+        "w3-gpt1-architecture",
+        "w3-task-input-formats"
+      ],
+      "archive_signals": [],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": [
+        "downstream task"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q15",
+      "candidate_week": 1,
+      "topic_ids": [
+        "w3-finetuning",
+        "w1-ffn-encoder-stack",
+        "w1-encoder-parameter-count"
+      ],
+      "archive_signals": [],
+      "confidence": 0.3684,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": [
+        "d_model",
+        "FFN",
+        "ReLU",
+        "relu"
+      ]
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q16",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q17",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "w8-scaling-laws:scaling laws"
+      ],
+      "confidence": 1.0,
+      "low_confidence": false,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q18",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q19",
+      "candidate_week": "archive",
+      "topic_ids": [],
+      "archive_signals": [
+        "non_llm:unclassified"
+      ],
+      "confidence": 0.0,
+      "low_confidence": true,
+      "image_only": false,
+      "evidence": []
+    }
+  ]
+}

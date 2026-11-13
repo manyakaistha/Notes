@@ -1,0 +1,19 @@
+FIRST-PASS KEYWORD ROUTING DRAFT — HUMAN REVIEW REQUIRED
+This heuristic output is not a correctness claim; keyword overlap can misroute questions.
+Total records: 488
+Counts by candidate_week: 1=137, 2=91, 3=65, 4=58, archive=137
+Low-confidence count: 261
+Image-only count: 172
+Counts per topic id: w1-bahdanau-attention=29, w1-encoder-parameter-count=49, w1-ffn-encoder-stack=18, w1-multi-head-attention=41, w1-scaled-dot-product=35, w1-self-attention-qkv=108, w1-seq2seq-bottleneck=23, w2-cross-attention=52, w2-decoder-output-and-params=11, w2-full-transformer=27, w2-masked-self-attention=10, w2-positional-encoding=33, w2-residual-layernorm=49, w2-teacher-forcing=14, w2-training-tricks=2, w3-causal-lm=32, w3-finetuning=24, w3-gpt1-architecture=47, w3-gpt1-parameter-count=12, w3-language-modelling=26, w3-model-parameterisations=10, w3-pretraining-objective=8, w3-task-input-formats=12, w4-beam-search=20, w4-bert-architecture-params=6, w4-bert-finetuning=1, w4-bert-mlm=27, w4-bert-nsp-inputs=22, w4-exhaustive-greedy=17, w4-topk-temperature=29, w4-topp-nucleus=18
+
+10 sample records:
+{"archive_signals": [], "candidate_week": 3, "confidence": 1.0, "evidence": ["Generative Pre-trained Transformer"], "id": "da5004_2024T1_ET_AN--q144", "image_only": false, "low_confidence": false, "topic_ids": ["w3-gpt1-architecture"]}
+{"archive_signals": ["w11-efficient-long-context:sparse attention"], "candidate_week": 1, "confidence": 0.6, "evidence": ["softmax", "self-attention", "self attention"], "id": "da5004_2024T1_ET_AN--q145", "image_only": false, "low_confidence": false, "topic_ids": ["w1-self-attention-qkv", "w1-bahdanau-attention", "w1-scaled-dot-product"]}
+{"archive_signals": [], "candidate_week": 3, "confidence": 0.75, "evidence": ["fine-tuning", "fine tuning"], "id": "da5004_2024T1_ET_AN--q146", "image_only": false, "low_confidence": false, "topic_ids": ["w3-finetuning", "w3-gpt1-architecture", "w1-self-attention-qkv"]}
+{"archive_signals": ["w5-tokenization:tokenizer", "w5-tokenization:tokenization", "w5-tokenization:byte pair encoding", "w5-tokenization:bpe"], "candidate_week": "archive", "confidence": 1.0, "evidence": [], "id": "da5004_2024T1_ET_AN--q147", "image_only": true, "low_confidence": true, "topic_ids": []}
+{"archive_signals": [], "candidate_week": 3, "confidence": 0.5, "evidence": ["conditional probability", "probability distribution", "text generation"], "id": "da5004_2024T1_ET_AN--q148", "image_only": true, "low_confidence": true, "topic_ids": ["w3-language-modelling", "w3-model-parameterisations", "w3-task-input-formats"]}
+{"archive_signals": ["non_llm:unclassified"], "candidate_week": "archive", "confidence": 0.0, "evidence": [], "id": "da5004_2024T1_ET_AN--q149", "image_only": false, "low_confidence": true, "topic_ids": []}
+{"archive_signals": [], "candidate_week": 4, "confidence": 0.7826, "evidence": ["beam search", "beam size", "top-k sampling", "temperature", "softmax", "top-k", "top k", "top-p", "top p"], "id": "da5004_2024T1_ET_AN--q150", "image_only": false, "low_confidence": false, "topic_ids": ["w4-topk-temperature", "w4-topp-nucleus", "w4-beam-search"]}
+{"archive_signals": ["non_llm:unclassified"], "candidate_week": "archive", "confidence": 0.0, "evidence": [], "id": "da5004_2024T1_ET_AN--q151", "image_only": true, "low_confidence": true, "topic_ids": []}
+{"archive_signals": ["non_llm:unclassified"], "candidate_week": "archive", "confidence": 0.0, "evidence": [], "id": "da5004_2024T1_ET_AN--q152", "image_only": true, "low_confidence": true, "topic_ids": []}
+{"archive_signals": ["non_llm:unclassified"], "candidate_week": "archive", "confidence": 0.0, "evidence": [], "id": "da5004_2024T1_ET_AN--q153", "image_only": true, "low_confidence": true, "topic_ids": []}

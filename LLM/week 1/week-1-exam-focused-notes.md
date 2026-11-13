@@ -25,8 +25,8 @@ Counts below are occurrences of topic IDs among the 73 records with `week == 1` 
 | 1 | Self-attention and Q/K/V projections | 30 |
 | 2 | Multi-head attention and W^O | 17 |
 | 3 | Parameter counting for the encoder | 14 |
-| 4 | Scaled dot-product attention and the sqrt(d_k) factor | 12 |
-| 5 | Position-wise FFN and the encoder layer/stack | 6 |
+| 4 | Scaled dot-product attention and the sqrt(d_k) factor | 14 |
+| 5 | Position-wise FFN and the encoder layer/stack | 8 |
 | 6 | Bahdanau (additive) attention | 4 |
 | 7 | Seq2seq and the RNN bottleneck | 2 |
 

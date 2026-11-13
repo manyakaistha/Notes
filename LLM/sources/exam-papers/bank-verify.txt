@@ -1,0 +1,14 @@
+Inputs: 488 inventory records; 241 routed; 247 archived.
+Week 1: 73 routed sections; IDs unique; each has worked answer and verification marker.
+Week 1: 7 topic checklist rows; no blank cells; all topics.json topics present.
+Week 2: 65 routed sections; IDs unique; each has worked answer and verification marker.
+Week 2: 8 topic checklist rows; no blank cells; all topics.json topics present.
+Week 3: 36 routed sections; IDs unique; each has worked answer and verification marker.
+Week 3: 8 topic checklist rows; no blank cells; all topics.json topics present.
+Week 4: 67 routed sections; IDs unique; each has worked answer and verification marker.
+Week 4: 8 topic checklist rows; no blank cells; all topics.json topics present.
+Archive: 247 IDs appear in the index and none appear in the four banks.
+Images: 147 contextual image links resolve from their bank files.
+Reconciliation: W1 73 + W2 65 + W3 36 + W4 67 + archived 247 = 488.
+Topics without direct question: W3 Ways to parameterise a language model (w3-model-parameterisations)
+PASS: exam bank structure, coverage, topic checklists, archive routing, and image links verified.

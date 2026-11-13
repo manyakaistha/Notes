@@ -1,0 +1,85 @@
+Routing merge validation report
+
+CHECK 1 inventory coverage: PASS (inventory=488 routed=488 missing=0 extra=0 repeated=0)
+CHECK 2 allowed weeks: PASS (invalid=0)
+CHECK 3 week-valid topics: PASS (errors=0)
+CHECK 4 archive metadata: PASS (errors=0)
+
+Week × type:
+  1: MCQ=19, MSQ=11, SA=43
+  2: MCQ=26, MSQ=8, SA=31
+  3: MCQ=15, MSQ=12, SA=9
+  4: MCQ=28, MSQ=20, SA=19
+  archive: MCQ=124, MSQ=57, SA=66
+Week × exam:
+  1: Q1=33, Q2=5, ET=35
+  2: Q1=43, Q2=8, ET=14
+  3: Q1=23, Q2=4, ET=9
+  4: Q1=26, Q2=6, ET=35
+  archive: Q1=3, Q2=103, ET=141
+Topic occurrences:
+  w1-seq2seq-bottleneck: 2
+  w1-bahdanau-attention: 4
+  w1-self-attention-qkv: 30
+  w1-scaled-dot-product: 12
+  w1-multi-head-attention: 17
+  w1-ffn-encoder-stack: 6
+  w1-encoder-parameter-count: 14
+  w2-teacher-forcing: 8
+  w2-masked-self-attention: 15
+  w2-cross-attention: 5
+  w2-decoder-output-and-params: 4
+  w2-positional-encoding: 11
+  w2-residual-layernorm: 21
+  w2-training-tricks: 1
+  w2-full-transformer: 4
+  w3-language-modelling: 10
+  w3-model-parameterisations: 0 ZERO QUESTIONS
+  w3-causal-lm: 8
+  w3-gpt1-architecture: 4
+  w3-gpt1-parameter-count: 7
+  w3-pretraining-objective: 5
+  w3-finetuning: 4
+  w3-task-input-formats: 1
+  w4-exhaustive-greedy: 15
+  w4-beam-search: 13
+  w4-topk-temperature: 22
+  w4-topp-nucleus: 15
+  w4-bert-mlm: 3
+  w4-bert-nsp-inputs: 6
+  w4-bert-architecture-params: 2
+  w4-bert-finetuning: 11
+Archive count by likely_later_week:
+  11: 46
+  12: 44
+  5: 71
+  7: 42
+  8: 36
+  other/unknown: 8
+Low-confidence records: 1
+Distinct stems by week:
+  1: 71 distinct / 73 records
+    exact duplicate IDs: da5004_2026T1_ET_FN--q2, da5004_2026T2_ET_FN--q2
+    exact duplicate IDs: da5004_2026T1_ET_FN--q4, da5004_2026T2_ET_FN--q4
+  2: 65 distinct / 65 records
+  3: 36 distinct / 36 records
+  4: 61 distinct / 67 records
+    exact duplicate IDs: da5004_2024T1_ET_AN--q150, da5004_2024T1_ET_FN--q203
+    exact duplicate IDs: da5004_2026T1_ET_FN--q12, da5004_2026T2_ET_FN--q12
+    exact duplicate IDs: da5004_2026T1_ET_FN--q15, da5004_2026T2_ET_FN--q15
+    exact duplicate IDs: da5004_2026T1_ET_FN--q16, da5004_2026T2_ET_FN--q16
+    exact duplicate IDs: da5004_2026T1_ET_FN--q17, da5004_2026T2_ET_FN--q17
+    exact duplicate IDs: da5004_2026T1_ET_FN--q6, da5004_2026T2_ET_FN--q6
+  archive: 235 distinct / 247 records
+    exact duplicate IDs: da5004_2024T3_ET_FN--q193, da5004_2025T1_Q2_NA--q127
+    exact duplicate IDs: da5004_2025T2_ET_AN--q194, da5004_2025T2_ET_FN--q139
+    exact duplicate IDs: da5004_2026T1_ET_FN--q10, da5004_2026T2_ET_FN--q10
+    exact duplicate IDs: da5004_2026T1_ET_FN--q11, da5004_2026T2_ET_FN--q11
+    exact duplicate IDs: da5004_2026T1_ET_FN--q13, da5004_2026T2_ET_FN--q13
+    exact duplicate IDs: da5004_2026T1_ET_FN--q14, da5004_2026T2_ET_FN--q14
+    exact duplicate IDs: da5004_2026T1_ET_FN--q18, da5004_2026T2_ET_FN--q18
+    exact duplicate IDs: da5004_2026T1_ET_FN--q19, da5004_2026T2_ET_FN--q19
+    exact duplicate IDs: da5004_2026T1_ET_FN--q21, da5004_2026T2_ET_FN--q21
+    exact duplicate IDs: da5004_2026T1_ET_FN--q7, da5004_2026T2_ET_FN--q7
+    exact duplicate IDs: da5004_2026T1_ET_FN--q8, da5004_2026T2_ET_FN--q8
+    exact duplicate IDs: da5004_2026T1_ET_FN--q9, da5004_2026T2_ET_FN--q9

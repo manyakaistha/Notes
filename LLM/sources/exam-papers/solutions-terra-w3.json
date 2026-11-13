@@ -1,0 +1,541 @@
+{
+  "week": 3,
+  "author": "terra",
+  "records": [
+    {
+      "id": "da5004_2024T1_ET_AN--q144",
+      "answer": "A: Generative Pre-trained Transformer.",
+      "steps": "GPT abbreviates Generative Pre-trained Transformer. B substitutes Text, C Generalized, and D Transfer-text.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q149",
+      "answer": "A, B, C, D, and E are possible in principle.",
+      "steps": "A 2048-token context limits each forward pass, not necessarily total output; a sliding context can generate arbitrarily long text. Without sliding, 2048−712=1336 slots allow A–D but not E.",
+      "status": "ambiguous",
+      "ambiguity_note": "The question does not specify whether the context is truncated/slid during generation; under a single untruncated window only A–D fit.",
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "context": 2048,
+        "prompt_tokens": 712,
+        "remaining": 1336
+      }
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q202",
+      "answer": "A and B under a single-window assumption.",
+      "steps": "1024−712=312 remaining positions: 256 and 16 fit, whereas 1024 and 512 do not. Sliding the context allows longer generations.",
+      "status": "ambiguous",
+      "ambiguity_note": "Generation policy is unspecified; a sliding context makes C and D possible too.",
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "context": 1024,
+        "prompt_tokens": 712,
+        "remaining": 312
+      }
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q193",
+      "answer": "A, B, C, D are possible with a sliding context.",
+      "steps": "A 1024-token receptive field limits each forward pass, not total generation if older tokens are discarded. With one fixed untruncated window, only the shorter outputs fit, with boundary depending on whether BOS is counted.",
+      "status": "ambiguous",
+      "ambiguity_note": "The question omits the context-management policy and whether BOS counts in output length; without sliding, longer sequences are excluded.",
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "context": 1024
+      }
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q194",
+      "answer": "A, B, D in the GPT-1 supervised-task setting.",
+      "steps": "A: pretraining starts from random model parameters. B: Radford et al. use supervised loss plus an auxiliary CLM loss; CLM is not mandatory for every fine-tuning task. C: pretrained weights are reused, not reinitialized. D: supervised downstream fine-tuning generally uses labels; unsupervised adaptation is also possible.",
+      "status": "ambiguous",
+      "ambiguity_note": "B is task-dependent: GPT-1 used auxiliary CLM in its experiments, but fine-tuning need not minimize CLM; D concerns supervised fine-tuning rather than all fine-tuning.",
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q194",
+      "answer": "A, B, D in the GPT-1 supervised-task setting.",
+      "steps": "A: pretraining starts from random model parameters. B: Radford et al. use supervised loss plus an auxiliary CLM loss; CLM is not mandatory for every fine-tuning task. C: pretrained weights are reused, not reinitialized. D: supervised downstream fine-tuning generally uses labels; unsupervised adaptation is also possible. E is false because A and D hold.",
+      "status": "ambiguous",
+      "ambiguity_note": "B is task-dependent: GPT-1 used auxiliary CLM in its experiments, but fine-tuning need not minimize CLM; D concerns supervised fine-tuning rather than all fine-tuning.",
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q108",
+      "answer": "A, B, D in the GPT-1 supervised-task setting.",
+      "steps": "A: pretraining starts from random model parameters. B: Radford et al. use supervised loss plus an auxiliary CLM loss; CLM is not mandatory for every fine-tuning task. C: pretrained weights are reused, not reinitialized. D: supervised downstream fine-tuning generally uses labels; unsupervised adaptation is also possible.",
+      "status": "ambiguous",
+      "ambiguity_note": "B is task-dependent: GPT-1 used auxiliary CLM in its experiments, but fine-tuning need not minimize CLM; D concerns supervised fine-tuning rather than all fine-tuning.",
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q135",
+      "answer": "D: all have the same decoder parameter count.",
+      "steps": "All share two layers and identical widths, heads and FFN dimensions; vocabulary changes only excluded embedding/output parameters. Thus A, B and C are false.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q177",
+      "answer": "B: rare embeddings can be updated.",
+      "steps": "Tied output weights receive softmax gradients even for absent targets. A is false; C is not guaranteed since gradients may cancel or learning rates may be zero; D ignores this mechanism.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q193",
+      "answer": "A and B.",
+      "steps": "GPT-1 uses a causal decoder and learned absolute positions. C is false: Radford et al. pretrained on BooksCorpus, rather than the later composite WebText-style mixtures; D is false.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q285",
+      "answer": "0.41.",
+      "steps": "The initial row gives P(seismology|[start])=0.41.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "probability": 0.41
+      }
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q286",
+      "answer": "Approximately 1.637.",
+      "steps": "The six successive tokens follow the greedy path, so 1000 × 0.41 × 0.43 × 0.29 × 0.48 × 0.29 × 0.23 = 1.636882032.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "factors": [
+          0.41,
+          0.43,
+          0.29,
+          0.48,
+          0.29,
+          0.23
+        ],
+        "scaled_probability": 1.636882032
+      }
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q287",
+      "answer": "Insufficient information; enter −1.",
+      "steps": "The row following “seismology is” is supplied only along the greedy prefix, which continues with “a”; the conditional distribution after the non-greedy “earth quake” is missing.",
+      "status": "ambiguous",
+      "ambiguity_note": "The model probability after the off-greedy prefix is not specified; earthquake is assumed to mean the listed “earth quake” token.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q289",
+      "answer": "A: 64 × 128.",
+      "steps": "Learned positional embeddings have one 128-dimensional row per position, giving `64 × 128`. B uses head count as width, C uses 12 positions, and D is an unrelated configuration. E is false.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "positions": 64,
+        "dimension": 128
+      }
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q118",
+      "answer": "60/41 ≈ 1.4634",
+      "steps": "Under an empirical random-token-start distribution, the corpus contains 41 tokens and the requested phrase occurs 6 time(s); chain-rule conditionals telescope to occurrence count / 41.",
+      "status": "ambiguous",
+      "ambiguity_note": "The sampling distribution over starting positions is unspecified; the estimate assumes uniformly sampled corpus token positions.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "total_tokens": 41,
+        "sachin_count": 6,
+        "scaled_probability": 1.4634146341463414
+      }
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q119",
+      "answer": "100/41 ≈ 2.4390",
+      "steps": "Under an empirical random-token-start distribution, the corpus contains 41 tokens and the requested phrase occurs 1 time(s); chain-rule conditionals telescope to occurrence count / 41.",
+      "status": "ambiguous",
+      "ambiguity_note": "The sampling distribution over starting positions is unspecified; the estimate assumes uniformly sampled corpus token positions.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "total_tokens": 41,
+        "phrase_count": 1,
+        "scaled_probability": 2.4390243902439024
+      }
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q120",
+      "answer": "100/41 ≈ 2.4390",
+      "steps": "Under an empirical random-token-start distribution, the corpus contains 41 tokens and the requested phrase occurs 1 time(s); chain-rule conditionals telescope to occurrence count / 41.",
+      "status": "ambiguous",
+      "ambiguity_note": "The sampling distribution over starting positions is unspecified; the estimate assumes uniformly sampled corpus token positions.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "total_tokens": 41,
+        "phrase_count": 1,
+        "scaled_probability": 2.4390243902439024
+      }
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q121",
+      "answer": "A: broken, under the empirical-frequency approximation.",
+      "steps": "After “Sachin has”, broken occurs twice, acted once, highest once; A has the highest empirical conditional frequency. B and C are less frequent; D disregards A. Training does not guarantee this learned ranking.",
+      "status": "ambiguous",
+      "ambiguity_note": "Model training and generalization are unspecified; corpus counts alone do not guarantee a trained model’s next-token ranking.",
+      "verified_by_code": false,
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q140",
+      "answer": "A and B.",
+      "steps": "Causal attention admits current and earlier positions (A), and predicts the next token (B). C requires future context and D describes the usual encoder-only MLM setting.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q141",
+      "answer": "A and D.",
+      "steps": "A: masked attention parallelizes training across positions; D: pretrained weights transfer to many tasks. B incorrectly introduces recurrence; C overstates the finite context limit.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q23",
+      "answer": "B.",
+      "steps": "Autoregressive training models P(x[t+1]|x[1:t]). A denies dependencies; C describes bidirectional masked-token prediction.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q24",
+      "answer": "C.",
+      "steps": "Teacher forcing conditions each prediction on the observed prefix. A instead feeds generated tokens; B ignores correctly predicted tokens; D violates causal masking.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q23",
+      "answer": "A and B.",
+      "steps": "A: the mask blocks future keys; B: identical position-wise input embeddings and deterministic computation give identical distributions. C is false: the triangular mask itself conveys order through prefix structure across layers. D is false: dense attention remains quadratic.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q189",
+      "answer": "32736 targets.",
+      "steps": "Without BOS, each length-1024 sequence supplies 1023 next-token labels; 32 × 1023 = 32736.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "batch": 32,
+        "length": 1024,
+        "targets": 32736
+      }
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q16",
+      "answer": "A",
+      "steps": "Token matrix `[40000, 768]`: 40000 × 768 = 30720000; B adds dimensions, C is position count and D multiplies unrelated dimensions.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "parameters": 30720000
+      }
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q17",
+      "answer": "B",
+      "steps": "Position matrix `[512, 768]`: 512 × 768 = 393216; A adds dimensions, C and D have incorrect decimal scale.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "parameters": 393216
+      }
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q18",
+      "answer": "D",
+      "steps": "One head has width 768/12=64; Q,K,V matrices each `[768, 64]`, totaling 3 × 768 × 64 = 147456. A counts one matrix, B and C use wrong widths.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "D"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "parameters": 147456
+      }
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q19",
+      "answer": "C",
+      "steps": "The concatenated heads have width 768; output weights `[768, 768]` contain 589824. A, B and D use smaller incorrect dimensions.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "parameters": 589824
+      }
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q20",
+      "answer": "C",
+      "steps": "Two weight matrices plus biases: 2 × 768 × 3072 + 3072 + 768 = 4722432. A omits a matrix; B omits biases; D doubles the count.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "parameters": 4722432
+      }
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q13",
+      "answer": "B: false.",
+      "steps": "All future entries are zero, but row t=5 sums to 0.90, not 1. A is false for an attention probability matrix; C is false because the supplied entries suffice.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "row_5_sum": 0.9
+      }
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q10",
+      "answer": "0.18.",
+      "steps": "From the tree: P(you)P(eat|you)P(apples|you,eat)=0.4×0.5×0.9=0.18.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "factors": [
+          0.4,
+          0.5,
+          0.9
+        ],
+        "joint_probability": 0.18
+      }
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q11",
+      "answer": "C: “i eat bananas”.",
+      "steps": "A = 0.5×0.3×0.4=0.06; C = 0.5×0.3×0.6=0.09; D = 0.4×0.4×0.5=0.08; E = 0.4×0.4×0.4=0.064. B is absent from the partial tree and cannot be compared without a zero-probability assumption.",
+      "status": "ambiguous",
+      "ambiguity_note": "The tree explicitly omits some vocabulary probabilities; the unshown B path cannot be assigned zero without an extra assumption.",
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "A": 0.06,
+        "C": 0.09,
+        "D": 0.08,
+        "E": 0.064
+      }
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q12",
+      "answer": "Insufficient information; enter −1.",
+      "steps": "P(apples|like) marginalizes over all preceding first tokens; the tree is partial and omits possible contexts and their probabilities.",
+      "status": "ambiguous",
+      "ambiguity_note": "The tree covers only selected branches of a larger vocabulary, so the needed marginal is not determined.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q13",
+      "answer": "A, B and E.",
+      "steps": "GPT decoder blocks contain causal self-attention, positionwise FFN, residual additions and layer normalization. C is encoder–decoder cross-attention, absent in GPT-1; D is recurrent, not a GPT block.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "E"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q8",
+      "answer": "B: separate premise and hypothesis.",
+      "steps": "GPT-1 places a delimiter between the two text segments. A softmax is applied by the classification head; C uses a separate end token; D the delimiter does not initialize parameters.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q9",
+      "answer": "D.",
+      "steps": "Causal attention permits the final representation to incorporate all earlier tokens. A overstates positional embeddings, B denies attention, and C confuses classification with teacher forcing.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    }
+  ]
+}

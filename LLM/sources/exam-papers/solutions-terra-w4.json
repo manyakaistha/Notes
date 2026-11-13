@@ -1,0 +1,1051 @@
+{
+  "week": 4,
+  "author": "terra",
+  "records": [
+    {
+      "id": "da5004_2024T1_ET_AN--q148",
+      "answer": "something somewhere incredible is waiting be",
+      "steps": "Take each row maximum: 0.41, 0.43, 0.29, 0.48, 0.29, 0.23. No [end] is selected in these six rows.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "row_maxima": [
+          0.41,
+          0.43,
+          0.29,
+          0.48,
+          0.29,
+          0.23
+        ]
+      }
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q201",
+      "answer": "somewhere something incredible is waiting be",
+      "steps": "Select the largest entry in each row: 0.41, 0.43, 0.29, 0.48, 0.29, 0.23; no [end] appears.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "row_maxima": [
+          0.41,
+          0.43,
+          0.29,
+          0.48,
+          0.29,
+          0.23
+        ]
+      }
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q150",
+      "answer": "A, B, C, D and E could all produce the observed runs.",
+      "steps": "A and B are deterministic given fixed tie-breaking. E preserves the logit argmax for every positive temperature. C and D can randomly repeat a sequence, and D can even have a one-token nucleus; repetition alone cannot identify the decoder.",
+      "status": "ambiguous",
+      "ambiguity_note": "“Might” allows chance repetition under sampling; if the intended question asks for guaranteed repeatability, only A, B, E follow with deterministic tie-breaking and positive temperatures.",
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q203",
+      "answer": "A, B, C, D and E could all produce the observed runs.",
+      "steps": "A and B are deterministic given fixed tie-breaking. E preserves the logit argmax for every positive temperature. C and D can randomly repeat a sequence, and D can even have a one-token nucleus; repetition alone cannot identify the decoder.",
+      "status": "ambiguous",
+      "ambiguity_note": "“Might” allows chance repetition under sampling; if the intended question asks for guaranteed repeatability, only A, B, E follow with deterministic tie-breaking and positive temperatures.",
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q198",
+      "answer": "B is the intended closest answer.",
+      "steps": "The original expansion is Bidirectional Encoder Representations from Transformers. B approximates it but drops both plurals; A changes “from Transformers” to “for Text”; C and D expand different words.",
+      "status": "ambiguous",
+      "ambiguity_note": "No option exactly spells the expansion: B uses singular Representation and Transformer.",
+      "verified_by_code": false,
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q195",
+      "answer": "A, B, C and D can all be applied to translation.",
+      "steps": "Top-k and top-p are stochastic but can generate translations; beam search searches a few candidates, and exhaustive search is feasible under the stated infinite compute assumption. E is therefore false.",
+      "status": "ambiguous",
+      "ambiguity_note": "“Appropriate” is subjective and no quality or optimality criterion is specified; a conventional quality-oriented answer could prefer B and D.",
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q110",
+      "answer": "A, B, C and D can all be applied to translation.",
+      "steps": "Top-k and top-p are stochastic but can generate translations; beam search searches a few candidates, and exhaustive search is feasible under the stated infinite compute assumption. E is therefore false.",
+      "status": "ambiguous",
+      "ambiguity_note": "“Appropriate” is subjective and no quality or optimality criterion is specified; a conventional quality-oriented answer could prefer B and D.",
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q198",
+      "answer": "B: false.",
+      "steps": "BERT NSP classifies a jointly encoded sentence pair, not autoregressively generates the second sentence. A asserts that incorrect mechanism.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q178",
+      "answer": "A and B are both deterministic.",
+      "steps": "Both fixed-width beam search and greedy decoding return the same output with fixed model and tie-breaking; C samples and D ignores A and B.",
+      "status": "ambiguous",
+      "ambiguity_note": "This is marked single-answer MCQ but both A and B are correct.",
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q196",
+      "answer": "C: top-k sampling with k=2.",
+      "steps": "C can sample alternative tokens on different runs. A is width-one beam search and B is greedy, both deterministic under fixed tie-breaking; D ignores C. Different outputs are possible, not guaranteed on every run.",
+      "status": "ambiguous",
+      "ambiguity_note": "Literal “different each time” is not guaranteed by sampling, which can repeat; C is interpreted as allowing different outputs.",
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q106",
+      "answer": "C: top-k sampling with k=2.",
+      "steps": "C can sample alternative tokens on different runs. A is width-one beam search and B is greedy, both deterministic under fixed tie-breaking; D ignores C. Different outputs are possible, not guaranteed on every run.",
+      "status": "ambiguous",
+      "ambiguity_note": "Literal “different each time” is not guaranteed by sampling, which can repeat; C is interpreted as allowing different outputs.",
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q288",
+      "answer": "0.41/0.64 ≈ 0.640625.",
+      "steps": "The three largest first-row entries are 0.41, 0.14 and 0.09; renormalize 0.41/(0.41+0.14+0.09).",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "selected": [
+          0.41,
+          0.14,
+          0.09
+        ],
+        "probability": 0.640625
+      }
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q109",
+      "answer": "A and C.",
+      "steps": "There are |V| choices at each of 10 positions, giving |V|^10 complete sequences; exhaustive maximization is deterministic with fixed tie-breaking. B uses the wrong exponent and D confuses search with sampling.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q198",
+      "answer": "6 tokens.",
+      "steps": "Sorted probabilities accumulate 0.20+0.15+0.14+0.11=0.60; adding 0.09 reaches 0.69 and the sixth, 0.08, reaches 0.77.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sorted": [
+          0.2,
+          0.15,
+          0.14,
+          0.11,
+          0.09,
+          0.08
+        ],
+        "cumulative_five": 0.69,
+        "cumulative_six": 0.77,
+        "count": 6
+      }
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q141",
+      "answer": "A, B, C and D are possible; the observations do not uniquely identify the methods.",
+      "steps": "Greedy A explains repeated text; top-p C can yield modest variation, and high-temperature top-p D can produce large variation. B is also capable of accidental repetition; E is normally deterministic. Observed semantic variation is not a reliable decoder identifier.",
+      "status": "ambiguous",
+      "ambiguity_note": "“Most likely” is underdetermined without the model distribution, sample counts and priors; B can repeat by chance. D’s low p does not guarantee high diversity.",
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q143",
+      "answer": "A and B.",
+      "steps": "A retains k largest probabilities. B retains the smallest prefix reaching p (the question says exceeds). C is false because their candidate sets vary independently; D is false since nucleus size varies.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q145",
+      "answer": "Approximately 0.41.",
+      "steps": "For T=2, logits become [0.75, 0.25, 0, −0.25]; exp(0.75)/sum(exp([0.75, 0.25, 0, −0.25])) ≈ 0.408701, or 0.41.",
+      "status": "ambiguous",
+      "ambiguity_note": "The prompt calls T=2 low temperature, but relative to T=1 it is high; calculation uses the stated T.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "logits": [
+          1.5,
+          0.5,
+          0,
+          -0.5
+        ],
+        "temperature": 2,
+        "probability_rounded": 0.41
+      }
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q137",
+      "answer": "B.",
+      "steps": "GPT predicts next tokens causally; BERT uses masked-token prediction (plus NSP in original pretraining). A reverses them; C and D make both objectives identical.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q138",
+      "answer": "C.",
+      "steps": "Increasing k allows more low-ranked options and potentially greater diversity and incoherence. A reverses the trend, B is not guaranteed, and D is an unsupported guarantee.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q142",
+      "answer": "A, B, C.",
+      "steps": "BERT’s paired input begins with [CLS], separates sentences with [SEP], and adds segment embeddings. D is false: position embeddings are part of the input representation.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q143",
+      "answer": "B.",
+      "steps": "Top-p retains the smallest high-probability prefix reaching p. A describes top-k, C incorrectly makes probabilities uniform, and D does not ensure diversity or include all tail tokens.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q145",
+      "answer": "Approximately 0.84.",
+      "steps": "Scale logits by 1/0.5, yielding [4,2,1,−2]; exp(4)/sum(exp([4,2,1,−2])) ≈ 0.842.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "logits": [
+          2,
+          1,
+          0.5,
+          -1
+        ],
+        "temperature": 0.5,
+        "probability_rounded": 0.84
+      }
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q153",
+      "answer": "216 decoder evaluations.",
+      "steps": "At t=4 exhaustive search expands 6^3=216 distinct length-3 prefixes, requiring one evaluation each absent batching.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "vocabulary": 6,
+        "prefix_length": 3,
+        "decoder_evaluations": 216
+      }
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q154",
+      "answer": "7776 sequences.",
+      "steps": "Six possible tokens at each of five positions give 6^5=7776 length-5 sequences.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "vocabulary": 6,
+        "length": 5,
+        "sequences": 7776
+      }
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q155",
+      "answer": "0.23/(0.33+0.23) ≈ 0.411.",
+      "steps": "At t=1 the two largest entries are blue 0.33 and sky 0.23; renormalize sky over this pair.",
+      "status": "ambiguous",
+      "ambiguity_note": "The table’s t=1 column sums to 0.92, so it is not a complete normalized distribution; the top-two ratio is unchanged by global normalization.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sky": 0.23,
+        "blue": 0.33,
+        "normalized": 0.4107142857142857
+      }
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q2",
+      "answer": "B: apple or banana.",
+      "steps": "Dividing by positive T preserves ranking; the two largest logits are 2.1 and 1.8. A omits banana, C includes a third token, D replaces banana with grape.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q5",
+      "answer": "B: use [CLS] for a classification head.",
+      "steps": "Original BERT uses final [CLS] representation and a classifier. A is a possible alternative pooling method, not the canonical BERT design; C and D do not specify the standard sequence classifier.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q6",
+      "answer": "C: named entity recognition.",
+      "steps": "NER labels spans such as disease names. A is a pretraining objective, B is sentence-pair classification, and D generates text instead of tagging spans.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q15",
+      "answer": "C and D.",
+      "steps": "Top-p can sample different continuations at positive T. Greedy A and width-one beam B are deterministic with fixed tie-breaking; E is not a valid positive integer beam width.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q3",
+      "answer": "C: cat, dog and bird.",
+      "steps": "Positive temperature preserves ranking 3.2 > 2.9 > 1.1 > 0.5 > −0.4. A and B omit eligible tokens; D includes fish and omits cat.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q4",
+      "answer": "C: A, B and C.",
+      "steps": "Cumulative 0.5+0.2=0.7 < 0.8; adding C reaches 0.85. A and D include unnecessary tokens; B omits C; E skips a higher-probability token.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "cumulative_two": 0.7,
+        "cumulative_three": 0.85
+      }
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q6",
+      "answer": "B: sigmoid for each label.",
+      "steps": "Independent sigmoid outputs allow several topics at once. A changes pooling, C is token labeling, and D does not specify the required multi-label activation.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q24",
+      "answer": "B and C.",
+      "steps": "Sampling from nontrivial top-k or top-p sets may vary. A has one candidate and T=0 is undefined as division but has a greedy limit; D retains the argmax under positive temperature; E is deterministic with fixed ties.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B",
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q178",
+      "answer": "C: Σ(k=1..5) |V|^k.",
+      "steps": "Count all nonempty lengths 1 through 5. A counts only length 5; B is linear instead of exponential; D sums lengths 0 through 4.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q180",
+      "answer": "C: (V−1)V^L.",
+      "steps": "Comparing total leaf counts, V^(L+1)−V^L=(V−1)V^L. A, B, D, E do not generally equal that difference.",
+      "status": "ambiguous",
+      "ambiguity_note": "If “additional sequences evaluated” means all new length-(L+1) strings after already evaluating length L, the number is V^(L+1), absent from the options; C assumes a difference in total leaf counts.",
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q181",
+      "answer": "D.",
+      "steps": "After one token the retained counts are 1, 3, 10; after three, 1, 3, 10^3. A, B and C incorrectly count beam or exhaustive prefixes.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "D"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "vocabulary": 10,
+        "step1": [
+          1,
+          3,
+          10
+        ],
+        "step3": [
+          1,
+          3,
+          1000
+        ]
+      }
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q182",
+      "answer": "C: nucleus sampling.",
+      "steps": "Sampling draws randomly from the nucleus. A beam, B greedy, and D exhaustive search are deterministic under fixed tie-breaking.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q185",
+      "answer": "B and D.",
+      "steps": "Beam width 2 retains both A and B; top-2 filters to both then draws one. A reverses the two roles; C claims random beam selection and least-probable filtering.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q115",
+      "answer": "E and F.",
+      "steps": "Ordinary beam search is deterministic with fixed tie-breaking; width one reduces to greedy. A–D sample and need not repeat when the candidate set has multiple tokens.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "E",
+        "F"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q8",
+      "answer": "3 tokens.",
+      "steps": "Cumulative mass reaches 0.40+0.25+0.15=0.80 with three tokens, using the standard threshold ≥ p.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "probabilities": [
+          0.4,
+          0.25,
+          0.15
+        ],
+        "p": 0.8,
+        "count": 3
+      }
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q11",
+      "answer": "0.46.",
+      "steps": "Scale logits to [1,0.5,0,−0.5], then exp(1)/sum(exp([1,0.5,0,−0.5])) ≈ 0.4551.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "logits": [
+          2,
+          1,
+          0,
+          -1
+        ],
+        "temperature": 2,
+        "probability_rounded": 0.46
+      }
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q6",
+      "answer": "C: randomly sample another corpus sentence.",
+      "steps": "Original BERT uses actual next sentences for half the pairs and random corpus sentences for the other half. A uses the preceding sentence, B reverses order, D masks verbs.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q12",
+      "answer": "A, B, D with the usual inclusive causal convention.",
+      "steps": "BERT attention is bidirectional and MLM predicts masked tokens; GPT uses causal next-token prediction. B is understood to include the current position. C reverses the model types.",
+      "status": "ambiguous",
+      "ambiguity_note": "B says “only to previous tokens” literally excludes the current position, although standard GPT causal self-attention includes it; B is accepted in the conventional intended sense.",
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q15",
+      "answer": "A, B and D.",
+      "steps": "With identical scoring and stopping, width-one beam equals greedy; greedy can degenerate into repetition; nucleus size adapts to the distribution while k is fixed. C falsely guarantees grammar.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q16",
+      "answer": "C, and B under the intended conventional formatting.",
+      "steps": "Frozen BERT supplies fixed features to a trainable linear/softmax head (C). Pairing question with each candidate (B) is a standard construction, but not the only possible format. A updates the pretrained model, contradicting feature-based freezing; D describes generation.",
+      "status": "ambiguous",
+      "ambiguity_note": "B says the input “must” use this pair format, but feature-based multiple-choice systems can use other representations; C alone is strictly necessary among these choices.",
+      "verified_by_code": false,
+      "answer_options": [
+        "B",
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q17",
+      "answer": "A: BERT 150, GPT 90.",
+      "steps": "Per layer, unrestricted attention has 5²=25 links and causal attention has 5×6/2=15. Across six layers these are 150 and 90. B swaps totals; C and D equate masks; E and F omit pairwise links.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "length": 5,
+        "layers": 6,
+        "bert": 150,
+        "gpt": 90
+      }
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q6",
+      "answer": "C: randomly sample another corpus sentence.",
+      "steps": "Original BERT uses actual next sentences for half the pairs and random corpus sentences for the other half. A uses the preceding sentence, B reverses order, D masks verbs.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q12",
+      "answer": "A, B, D with the usual inclusive causal convention.",
+      "steps": "BERT attention is bidirectional and MLM predicts masked tokens; GPT uses causal next-token prediction. B is understood to include the current position. C reverses the model types.",
+      "status": "ambiguous",
+      "ambiguity_note": "B says “only to previous tokens” literally excludes the current position, although standard GPT causal self-attention includes it; B is accepted in the conventional intended sense.",
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q15",
+      "answer": "A, B and D.",
+      "steps": "With identical scoring and stopping, width-one beam equals greedy; greedy can degenerate into repetition; nucleus size adapts to the distribution while k is fixed. C falsely guarantees grammar.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q16",
+      "answer": "C, and B under the intended conventional formatting.",
+      "steps": "Frozen BERT supplies fixed features to a trainable linear/softmax head (C). Pairing question with each candidate (B) is a standard construction, but not the only possible format. A updates the pretrained model, contradicting feature-based freezing; D describes generation.",
+      "status": "ambiguous",
+      "ambiguity_note": "B says the input “must” use this pair format, but feature-based multiple-choice systems can use other representations; C alone is strictly necessary among these choices.",
+      "verified_by_code": false,
+      "answer_options": [
+        "B",
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q17",
+      "answer": "A: BERT 150, GPT 90.",
+      "steps": "Per layer, unrestricted attention has 5²=25 links and causal attention has 5×6/2=15. Across six layers these are 150 and 90. B swaps totals; C and D equate masks; E and F omit pairwise links.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "length": 5,
+        "layers": 6,
+        "bert": 150,
+        "gpt": 90
+      }
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q6",
+      "answer": "B.",
+      "steps": "Single-sentence input normally assigns the same learned segment-A embedding to every token. A disables an active embedding, C invents a split, and D incorrectly reinitializes parameters.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q7",
+      "answer": "B.",
+      "steps": "For a unique maximum, softmax(z/T) converges to [1,0,0] as T→0+. A is the high-temperature limit, C is false, D confuses numerical implementation with the mathematical limit.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q8",
+      "answer": "C: final [CLS] hidden state.",
+      "steps": "BERT’s standard sequence classification head uses [CLS]. A is alternative pooling, B uses [SEP], D concatenates variable numbers of vectors.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q3",
+      "answer": "C.",
+      "steps": "Unchanged selected tokens reduce pretraining/fine-tuning input mismatch and encourage contextual representations of ordinary tokens. A has no softmax saving; B is related but less complete; D is not the stated motivation.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q4",
+      "answer": "B.",
+      "steps": "GPT’s causal mask blocks right-hand context, unlike BERT MLM. A cites size, C incorrectly denies positional embeddings, and D incorrectly makes activation choice decisive.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q17",
+      "answer": "0.62.",
+      "steps": "Top two are B=0.4 and D=0.25; normalize P(B)=0.4/0.65≈0.61538.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "B": 0.4,
+        "D": 0.25,
+        "probability": 0.6153846153846154
+      }
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q18",
+      "answer": "648448 parameters.",
+      "steps": "Token, position and segment tables contribute 5000×128 + 64×128 + 2×128 = 640000+8192+256=648448.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "token": 640000,
+        "position": 8192,
+        "segment": 256,
+        "total": 648448
+      }
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q4",
+      "answer": "A: beam search.",
+      "steps": "A retains a small set of high-scoring partial sequences. B expands exponentially, C samples a token at a time instead of explicitly tracking competing sequences, and D commits to one.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q5",
+      "answer": "B.",
+      "steps": "BERT adds learned segment/type embeddings to token and positional embeddings. A invents separate encoders, C confuses [MASK] with [SEP], D wrongly assigns attention heads by segment.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q9",
+      "answer": "3 tokens.",
+      "steps": "Softmax logits give approximately [0.5072, 0.2519, 0.1382, 0.0686, 0.0341]; first two total 0.7590 < 0.8, first three 0.8973 ≥ 0.8.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "logits": [
+          2.5,
+          1.8,
+          1.2,
+          0.5,
+          -0.2
+        ],
+        "p": 0.8,
+        "count": 3
+      }
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q10",
+      "answer": "0.565.",
+      "steps": "Three candidates survive top-p. The largest renormalized probability is exp(2.5)/(exp(2.5)+exp(1.8)+exp(1.2))≈0.565254.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "candidate_logits": [
+          2.5,
+          1.8,
+          1.2
+        ],
+        "probability": 0.5652537086405652
+      }
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q14",
+      "answer": "historic castle was majestic but abandoned; probability 0.005.",
+      "steps": "Select column maxima 0.38, 0.40, 0.50, 0.35, 0.45, 0.40; their product is 0.004788, rounded to 0.005.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "maxima": [
+          0.38,
+          0.4,
+          0.5,
+          0.35,
+          0.45,
+          0.4
+        ],
+        "probability": 0.004788,
+        "rounded": 0.005
+      }
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q15",
+      "answer": "400 decoder evaluations.",
+      "steps": "Under general prefix-conditioned exhaustive decoding, evaluate each prefix of lengths 0–3: 1+7+49+343=400; a batched or prefix-independent implementation can use fewer calls.",
+      "status": "ambiguous",
+      "ambiguity_note": "The table gives the same column for every prefix, in which case the distributions can be reused. The count assumes a separate model evaluation per prefix, not batched calls.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "vocabulary": 7,
+        "prefix_counts": [
+          1,
+          7,
+          49,
+          343
+        ],
+        "total": 400
+      }
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q16",
+      "answer": "0.412.",
+      "steps": "At t=4 the top three are 0.35, 0.30, 0.20; normalize 0.35/0.85≈0.411765.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "top3": [
+          0.35,
+          0.3,
+          0.2
+        ],
+        "probability": 0.4117647058823529
+      }
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q17",
+      "answer": "5 beams.",
+      "steps": "The target prefix products through t=4 are 0.30, 0.12, 0.06, 0.018. Under the given prefix-invariant table, its global ranks are 2, 2, 2, 5, so width 5 retains it at each step.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "prefix_products": [
+          0.3,
+          0.12,
+          0.06,
+          0.018
+        ],
+        "prefix_ranks": [
+          2,
+          2,
+          2,
+          5
+        ],
+        "beam_width": 5
+      }
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q10",
+      "answer": "A is the intended general trend.",
+      "steps": "T=5 flattens softmax compared with T=1, so cumulative mass is less concentrated and the nucleus cannot shrink; B reverses the effect, C describes truncation rather than scaling, and D ignores the changed cumulative mass.",
+      "status": "ambiguous",
+      "ambiguity_note": "The nucleus need not strictly expand: for some p and logits its size remains unchanged; no distribution or p is specified, so A is not universally true.",
+      "verified_by_code": false,
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    }
+  ]
+}

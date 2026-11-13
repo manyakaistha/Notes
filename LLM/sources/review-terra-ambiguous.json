@@ -1,0 +1,671 @@
+{
+  "records": [
+    {
+      "id": "da5004_2024T1_ET_AN--q149",
+      "verdict": "convention",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "A, B, C, D with a fixed complete-sequence window; A–E with sliding and reset position IDs",
+      "proposed_answer_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "reason": "The shared prompt gives T=2048 and 712 prompt tokens, leaving 1336 slots under a complete-sequence cap, so 256, 16, 1024 and 512 fit. A sliding context can generate 2048; the supplied prompt does not specify inference policy. The exam key implies the fixed-window reading."
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q150",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "A, B, C, D, E",
+      "proposed_answer_options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "reason": "The question asks what might have happened, not what guarantees repetition. Greedy and beam can repeat; top-k and top-p may sample the same sequence repeatedly, including a singleton nucleus; positive temperature does not change greedy argmax. Thus all five are possible, assuming a finite number of runs and consistent ties. The old note correctly observes this distinction but treats the conditional alternative as ambiguity."
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q151",
+      "verdict": "defective",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "Not uniquely determinable; floor((2,366,208 + 256V)/1000) under the stated illustrative convention",
+      "proposed_answer_options": [],
+      "reason": "The pictured shared passage supplies no vocabulary size V, although token embeddings are requested. With bias-free attention, FFN biases and two affine norms per layer, the three encoder layers have 2,366,208 parameters and embeddings add 256V; other bias assumptions change even the constant. Fixed sinusoids add zero. The printed 2566 cannot establish a missing vocabulary size."
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q153",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "1.676",
+      "proposed_answer_options": [],
+      "reason": "The image supplies an attention matrix and W_V and W_O, so the attention-layer output naturally includes W_O. In sentence order the row [0.04,0.12,0.17,0.67] gives A X W_V W_O=[-0.417,2.093] and sum 1.676 using the printed rounded entries. Calling the preprojection intermediate a representation does not require leaving W_O unused; the source transcription differs from the picture."
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q198",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "B",
+      "proposed_answer_options": [
+        "B"
+      ],
+      "reason": "B is the unique option with the correct constituent words Bidirectional Encoder Representation from Transformer. The primary BERT paper uses plurals, “Representations from Transformers”; the singular inflection does not alter which option expands the acronym."
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q202",
+      "verdict": "convention",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "A, B with a fixed complete-sequence window; A–D with sliding and reset position IDs",
+      "proposed_answer_options": [
+        "A",
+        "B"
+      ],
+      "reason": "The shared prompt gives T=1024 and 712 prompt tokens, leaving 312 slots under a complete-sequence cap. Only 256 and 16 fit. Sliding can generate all listed lengths; the exam key implies the fixed-window reading."
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q203",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "A, B, C, D, E",
+      "proposed_answer_options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "reason": "The question asks what might have happened, not what guarantees repetition. Greedy and beam can repeat; top-k and top-p may sample the same sequence repeatedly, including a singleton nucleus; positive temperature does not change greedy argmax. Thus all five are possible, assuming a finite number of runs and consistent ties. The old note correctly observes this distinction but treats the conditional alternative as ambiguity."
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q206",
+      "verdict": "defective",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "Not uniquely determinable; floor((2,366,208 + 256V)/1000) under the stated illustrative convention",
+      "proposed_answer_options": [],
+      "reason": "The pictured shared passage supplies no vocabulary size V, although token embeddings are requested. With bias-free attention, FFN biases and two affine norms per layer, the three encoder layers have 2,366,208 parameters and embeddings add 256V; other bias assumptions change even the constant. Fixed sinusoids add zero. The printed 2566 cannot establish a missing vocabulary size."
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q208",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "1.592",
+      "proposed_answer_options": [],
+      "reason": "Using the pictured coffee row [0.25,0.06,0.17,0.53] and its input embeddings gives A X W_V W_O=[-0.324,1.916], sum 1.592. W_O is supplied as part of the attention layer and is naturally applied; the source Markdown transcription contains different matrices."
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q189",
+      "verdict": "defective",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "768 weights if the preceding subquestion’s 1600 source embedding parameters apply; otherwise undetermined",
+      "proposed_answer_options": [],
+      "reason": "The shared passage fixes vocabulary 100 and two heads but does not give model width. The preceding subquestion introduces 1600 embedding parameters only as a supposition: if carried forward, d=1600/100=16 and 3d²=768 weights; otherwise d remains free. Projection bias is also unspecified."
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q192",
+      "verdict": "defective",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "C is defensible; B is the intended empirical claim but not guaranteed",
+      "proposed_answer_options": [
+        "C"
+      ],
+      "reason": "Autoregressive factorization is compatible with teacher forcing, so the two named approaches are not mutually defined. A switch to generated-prefix training is possible (C), whereas an unconditional faster-convergence claim (B) depends on setup and convergence metric; the item does not specify these."
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q193",
+      "verdict": "convention",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "A if BOS counts within a 1024-token full sequence; A, B if 1024 newly predicted tokens are counted; A–D with sliding",
+      "proposed_answer_options": [
+        "A"
+      ],
+      "reason": "A capped full sequence leaves 1023 positions after BOS; a final prediction can instead be emitted from a full input context, allowing 1024 new tokens. Sliding or resetting positional IDs permits still longer text. The exam’s fixed-window treatment is the closest course convention; its wording does not settle output counting."
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q194",
+      "verdict": "convention",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "A, B, D for the original GPT-1 supervised experiments; A, D for ordinary supervised fine-tuning without the optional auxiliary CLM loss",
+      "proposed_answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "reason": "GPT-1 pretraining starts from random weights; supervised fine-tuning reuses them and typically uses labels. Radford et al. included an auxiliary language-model objective in their experiments, while fine-tuning in general need not. The paper-specific and generic conventions differ, and the course paper implies the GPT-1 experiment."
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q195",
+      "verdict": "defective",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "A–D are usable; B and D are the conventional mode-seeking choices",
+      "proposed_answer_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "reason": "Top-k, top-p, beam and exhaustive search can all generate translations. If appropriate means the conventional mode-seeking objective, B and D are the course key; if it means usable, A–D qualify. No criterion for appropriateness is given, so a unique set cannot be established."
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q178",
+      "verdict": "defective",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "A and B",
+      "proposed_answer_options": [
+        "A",
+        "B"
+      ],
+      "reason": "With a fixed model and deterministic tie-breaking both beam search with width four and greedy decoding return the same completion. The item is single-choice but has two correct choices."
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q190",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "A, B, C",
+      "proposed_answer_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "reason": "An encoder–decoder Transformer has masked decoder self-attention, encoder multi-head self-attention, and parallel teacher-forced training. A states that a self-attention block uses a mask; it does not assert every self-attention block uses a causal mask. D is false."
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q194",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "A, B, D",
+      "proposed_answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "reason": "In the GPT-1 setting, random initialization applies at pretraining, downstream fine-tuning reuses pretrained weights and typically uses labels, and the original supervised-task formulation includes an auxiliary CLM loss. The qualifier “for downstream tasks like sentiment classification” supplies that context; CLM is not a universal requirement for every adaptation."
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q196",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "C",
+      "proposed_answer_options": [
+        "C"
+      ],
+      "reason": "Top-k sampling with k=2 is the only listed stochastic method and can yield different continuations; width-one beam search and greedy search are deterministic with fixed ties. A sample need not differ on every run, but the standard contrast asks which can produce variation."
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q276",
+      "verdict": "defective",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "B and D",
+      "proposed_answer_options": [
+        "B",
+        "D"
+      ],
+      "reason": "Multiple heads can capture different relationships (B); Transformer variants can use batch normalization (D). Both are defensible literal claims, although layer normalization is standard, and only one choice is allowed."
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q277",
+      "verdict": "convention",
+      "current_note_accurate": false,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "230,656 with bias-free attention and affine LayerNorm; 232,192 with attention biases",
+      "proposed_answer_options": [],
+      "reason": "The shared passage explicitly makes encoder and decoder configurations equal, so N=2 applies to both. Six attention blocks contribute 6×4×64²=98,304, four bias-free FFNs 4×2×64×256=131,072, and ten affine norms 1,280, total 230,656. Attention biases add 6×4×64=1,536. The printed answer favors bias-free attention; the old note incorrectly suggests independent stack depths are unspecified."
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q278",
+      "verdict": "convention",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "48,000 weights; 48,750 including an output bias",
+      "proposed_answer_options": [],
+      "reason": "A 64-to-750 output projection contains 64×750=48,000 weights; an output bias contributes 750. Whether tied output weights are counted as independent parameters is another convention. The paper key implies a weights-only count."
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q279",
+      "verdict": "defective",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "32,000 source embedding weights; 48,000 target embedding weights; 80,000 for both",
+      "proposed_answer_options": [],
+      "reason": "The shared encoder–decoder has source vocabulary 500, target vocabulary 750, and width 64, yet asks for “the embedding layer” without identifying source, target, or both. Their untied counts are 500×64, 750×64, and their sum; sharing would need further specification."
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q287",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "-1",
+      "proposed_answer_options": [],
+      "reason": "The pictured passage explicitly instructs entry of -1 for insufficient information. The requested earthquake path deviates from greedy at the third token; P(study | seismology,is,earthquake) is absent. The unknown sequence probability therefore makes -1 the uniquely prescribed answer; the old note identifies the missing conditional correctly but overlooks the resulting resolvability."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q105",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "D",
+      "proposed_answer_options": [
+        "D"
+      ],
+      "reason": "An autoregressive Transformer can be trained for translation, so the assertion is false. Teacher forcing generally accelerates practical training and convergence by supplying reference prefixes and enabling parallel positions; the reason is the standard qualitative course statement, not an all-datasets theorem. D is the unique intended pair."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q106",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "C",
+      "proposed_answer_options": [
+        "C"
+      ],
+      "reason": "Top-k sampling with k=2 is the only listed stochastic method and can yield different continuations; width-one beam search and greedy search are deterministic with fixed ties. A sample need not differ on every run, but the standard contrast asks which can produce variation."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q107",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "A",
+      "proposed_answer_options": [
+        "A"
+      ],
+      "reason": "A fixed-vector encoder–decoder RNN has a long-sequence information bottleneck; attention supplies direct access to source states, as do Transformer attention mechanisms. The phrase “in general” asks for this comparative course principle, not a claim that the other models have unlimited context."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q108",
+      "verdict": "convention",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "A, B, D for the original GPT-1 supervised experiments; A, D for ordinary supervised fine-tuning without the optional auxiliary CLM loss",
+      "proposed_answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "reason": "GPT-1 pretraining starts from random weights; supervised fine-tuning reuses them and typically uses labels. Radford et al. included an auxiliary language-model objective in their experiments, while fine-tuning in general need not. The paper-specific and generic conventions differ, and the course paper implies the GPT-1 experiment."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q110",
+      "verdict": "defective",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "A–D are usable; B and D are the conventional mode-seeking choices",
+      "proposed_answer_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "reason": "Top-k, top-p, beam and exhaustive search can all generate translations. If appropriate means the conventional mode-seeking objective, B and D are the course key; if it means usable, A–D qualify. No criterion for appropriateness is given, so a unique set cannot be established."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q111",
+      "verdict": "convention",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "0 for fixed sinusoidal positions; 1,024 for a learned table",
+      "proposed_answer_options": [],
+      "reason": "The source embedding condition gives d=3200/100=32 and the context has 32 positions. A learned position table contains 32×32=1,024 parameters; fixed sinusoids contain zero. The original Transformer used sinusoids, while the paper key implies a learned table; “vanilla” alone does not settle this conflict."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q112",
+      "verdict": "convention",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "3,072 Q/K/V matrix weights, or 3,168 including Q/K/V biases, if d=32",
+      "proposed_answer_options": [],
+      "reason": "Carrying the preceding conditional source table to the common model gives d=3200/100=32; 3d²=3072 weights, plus 3d=96 biases if present. The course key implies shared context and weights only, but the earlier supposition is not expressly repeated and biases are not fixed."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q113",
+      "verdict": "convention",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "256 matrix weights if d=32; otherwise d²/4",
+      "proposed_answer_options": [],
+      "reason": "If the preceding subquestion’s embedding condition applies, d=3200/100=32 and one of four heads has W_Q of size 32×8=256. Without carrying the conditional value forward the common passage leaves d unknown. The matrix itself has no separate bias; the course key implies carrying the width forward."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q118",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "60/41 ≈ 1.4634146",
+      "proposed_answer_options": [],
+      "reason": "The passage asks for an estimate from the given corpus. Ignoring punctuation leaves 41 tokens, six equal to Sachin; empirical P(Sachin)=6/41, so 10P=60/41. Uniform empirical token counting is the natural data-based estimate, not a missing parameter."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q119",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "100/41 ≈ 2.4390244",
+      "proposed_answer_options": [],
+      "reason": "After punctuation removal the 41-token corpus contains the consecutive pair Sachin Tendulkar once. Empirical chain-rule estimation gives P(Sachin)P(Tendulkar|Sachin)=(6/41)(1/6)=1/41, and 100P=100/41. The printed upper bound 2.43 excludes this exact result by about 0.009, apparently a key tolerance issue."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q120",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "100/41 ≈ 2.4390244",
+      "proposed_answer_options": [],
+      "reason": "The 41-token corpus contains the requested five-token phrase once. Chain-rule empirical counts telescope: (6/41)(4/6)(2/4)(2/2)(1/2)=1/41; multiply by 100. The printed 2.43 upper bound narrowly excludes the result, a key tolerance issue."
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q121",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "A: broken",
+      "proposed_answer_options": [
+        "A"
+      ],
+      "reason": "The requested corpus-based estimate counts broken twice after “Sachin has”, versus acted once and highest once. An adequately fitted model is intended to reflect the empirical ranking; the old caveat is mathematically true for arbitrary training but ignores the stated “sufficiently trained” teaching context."
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q141",
+      "verdict": "defective",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "A, B, C and D are possible; the most likely assignments are not identifiable",
+      "proposed_answer_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "reason": "Deterministic greedy is consistent with repeated stories, and top-p sampling can produce variation; a fixed model and unspecified stochastic seed, sample size, probability distribution and priors do not determine the “most likely” mappings. Top-k can repeat by chance and p=0.5 can even yield a one-token nucleus despite T=1.5."
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q145",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "0.41",
+      "proposed_answer_options": [],
+      "reason": "The explicit temperature is T=2 regardless of the erroneous adjective “low”. Softmax gives exp(1.5/2)/[exp(1.5/2)+exp(0.5/2)+exp(0)+exp(-0.5/2)]=0.40870097, which rounds to 0.41."
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q147",
+      "verdict": "defective",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "No listed option; approximately [[4,8],[4,8]]",
+      "proposed_answer_options": [],
+      "reason": "The original shared image has X=[[1,0],[0,2],[1,0],[0,2]] and W¹=[[1,1,1,1],[2,2,2,2]], with column-oriented tokens. Hence Q=K=V=[[2,4],[4,8]], and the displayed softmax(QᵀK/√2)Vᵀ is approximately [[4,8],[4,8]]. No option matches. The Markdown transcription is different."
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q148",
+      "verdict": "defective",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "No listed option; approximately [[1.33952,3.33024],[0.11161,3.94419]]",
+      "proposed_answer_options": [],
+      "reason": "From the pictured shared X and W², Q=K=V=[[2,0],[3,4]]. Row-softmax(QᵀK/√2)Vᵀ gives the stated matrix; no pictured option agrees. The Markdown transcription differs from the shared image."
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q149",
+      "verdict": "defective",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "No listed option; approximately [[2,2],[4,4],[1.33952,0.11161],[3.33024,3.94419]]",
+      "proposed_answer_options": [],
+      "reason": "Transpose the two head outputs into the image’s feature-by-token layout, concatenate and left-multiply diag(0.5,0.5,1,1). The resulting four-by-two matrix matches no pictured option; the shared-image matrices differ from the transcription."
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q150",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "32",
+      "proposed_answer_options": [],
+      "reason": "The pictured shared passage gives X=[[1,1],[2,3],[1,2],[3,1]] and MHA(X)=[[1,2],[3,3],[2,3],[3,1]]. Their sum is [[2,3],[5,6],[3,5],[6,2]], whose entries total 32. A transcription or answer-key discrepancy does not make the legible original image ambiguous."
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q17",
+      "verdict": "convention",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "B and C when “self-attention” means the score and value products; C alone when projection FLOPs are included",
+      "proposed_answer_options": [
+        "B",
+        "C"
+      ],
+      "reason": "The two attention matrix products scale as L²d and quadruple, while the positionwise FFN scales as L and doubles. Including the Q/K/V/output projections adds a linear-in-L term, making the exact total factor between 2 and 4. The usual textbook attention-complexity convention implies B and C; the old note correctly identifies the scope choice."
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q20",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "48 sets (144 individual matrices)",
+      "proposed_answer_options": [],
+      "reason": "Each of six encoder layers has eight heads; each head has one set (W_Q,W_K,W_V). Thus there are 6×8=48 sets, containing 144 individual matrices. The question explicitly asks for sets, so the old alternative counts a different object."
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q2",
+      "verdict": "defective",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "No universally correct option; D applies in evaluation with tracked running statistics",
+      "proposed_answer_options": [],
+      "reason": "For one observation per normalized channel during training, the mean is that observation, not necessarily 0, and variance is 0; some implementations reject the case. Evaluation with tracked running statistics uses those statistics (D), but other spatial dimensions and evaluation modes are possible. The prompt specifies neither mode nor reduction axes."
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q8",
+      "verdict": "resolvable",
+      "current_note_accurate": false,
+      "proposed_status": "derived",
+      "proposed_answer": "B: QKᵀ",
+      "proposed_answer_options": [
+        "B"
+      ],
+      "reason": "The question specifically asks for computing the full attention matrix: QKᵀ constructs its T×T scores in O(T²d), then softmax forms A. AV also costs O(T²d), but consumes an already computed attention matrix to produce output representations; it does not compute that matrix. The old note misses the stem’s narrower target."
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q25",
+      "verdict": "convention",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "B and C when “self-attention” means the score and value products; C alone when projection FLOPs are included",
+      "proposed_answer_options": [
+        "B",
+        "C"
+      ],
+      "reason": "The two attention matrix products scale as L²d and quadruple, while the positionwise FFN scales as L and doubles. Including the Q/K/V/output projections adds a linear-in-L term, making the exact total factor between 2 and 4. The usual textbook attention-complexity convention implies B and C; the old note correctly identifies the scope choice."
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q180",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "C: (V−1)V^L",
+      "proposed_answer_options": [
+        "C"
+      ],
+      "reason": "Exhaustive search over length L has V^L candidates; over length L+1 it has V^(L+1). The increase in candidate count is V^(L+1)−V^L=(V−1)V^L. “Additional” naturally asks for the increase, rather than a count of the identities of new strings."
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q190",
+      "verdict": "convention",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "524,800 unmasked or finite-softmax positive entries; raw nonzero logits undetermined",
+      "proposed_answer_options": [],
+      "reason": "The inclusive causal triangle contains 1024×1025/2=524,800 allowed positions. With finite logits, post-softmax allowed weights are positive and masked weights zero; pre-softmax raw allowed scores can be zero and additive-masked scores are −∞. The course convention counts available causal weights, but “score matrix” does not specify the stage."
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q12",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "A, B, D",
+      "proposed_answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "reason": "BERT self-attention is bidirectional and predicts masked tokens; GPT uses causal attention and next-token prediction. B’s “previous tokens” is the usual prediction-relative shorthand: the current input position is among the tokens preceding the predicted next token. C reverses the architectures."
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q16",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "C",
+      "proposed_answer_options": [
+        "C"
+      ],
+      "reason": "Feature-based use freezes the pretrained transformer; C describes a trainable linear/softmax classifier over fixed representations. B’s “must” is false: alternatives can encode question and choices separately or use other features. A updates pretrained weights and D describes generation. The old note correctly identifies C as the only strictly necessary listed statement but also selects B."
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q12",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "cos(3/10000^(4/128)) ≈ −0.62792665",
+      "proposed_answer_options": [],
+      "reason": "The explicitly requested sixth element is zero-based coordinate 5=2×2+1; the cosine formula therefore uses pair index 2. The reuse of i for coordinate and pair index is a notation slip, but “sixth element” fixes the requested coordinate unambiguously."
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q18",
+      "verdict": "convention",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "D: 147,456 weights; 147,648 including Q/K/V biases",
+      "proposed_answer_options": [
+        "D"
+      ],
+      "reason": "With width 768 and 12 heads, each head width is 64. The three 768×64 projection matrices contain 147,456 weights; three bias vectors add 192. D and the course-style matrix count imply bias-free projections, whereas the track’s GPT parameter convention includes biases."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q3",
+      "verdict": "defective",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "A is false; D is also false as an unrestricted mathematical claim",
+      "proposed_answer_options": [
+        "A",
+        "D"
+      ],
+      "reason": "Sinusoidal dot products sum cosines of relative offsets and do not strictly increase with separation (A false). One-hot vectors have equal pairwise distances, but their active indices can be decoded and subtracted, so one-hot positions are not mathematically incapable of representing relative distance (D false). A single-choice question has two false statements under literal wording."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q6",
+      "verdict": "convention",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "3 when ε=0; 1+2/√(1+ε) otherwise",
+      "proposed_answer_options": [],
+      "reason": "The third pictured row is [7,5], with mean 6 and population variance 1. LayerNorm gives 2(7−6)/√(1+ε)+1. Elementary hand calculations conventionally omit ε and obtain 3; implementations use a small positive ε and the problem does not state it."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q18",
+      "verdict": "resolvable",
+      "current_note_accurate": false,
+      "proposed_status": "derived",
+      "proposed_answer": "C: [5, 3, −1, −1]ᵀ",
+      "proposed_answer_options": [
+        "C"
+      ],
+      "reason": "The original image has x₁=[2,1,3,2]ᵀ and the pictured W_Q gives [2+3,1+2,2−3,1−2]ᵀ=[5,3,−1,−1]ᵀ. The option C PNG visibly contains 3, not 13: both inventory transcription and the existing note misread the image."
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q19",
+      "verdict": "resolvable",
+      "current_note_accurate": false,
+      "proposed_status": "derived",
+      "proposed_answer": "B: [4, 6, −2, −2]ᵀ",
+      "proposed_answer_options": [
+        "B"
+      ],
+      "reason": "The pictured x₃=[1,3,2,4]ᵀ and W_K yield [1+3,2+4,1−3,2−4]ᵀ=[4,6,−2,−2]ᵀ. Option B’s PNG visibly contains 6, not 16; the inventory transcription and existing note misread the image."
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q12",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "A, B, D",
+      "proposed_answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "reason": "BERT self-attention is bidirectional and predicts masked tokens; GPT uses causal attention and next-token prediction. B’s “previous tokens” is the usual prediction-relative shorthand: the current input position is among the tokens preceding the predicted next token. C reverses the architectures."
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q16",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "C",
+      "proposed_answer_options": [
+        "C"
+      ],
+      "reason": "Feature-based use freezes the pretrained transformer; C describes a trainable linear/softmax classifier over fixed representations. B’s “must” is false: alternatives can encode question and choices separately or use other features. A updates pretrained weights and D describes generation. The old note correctly identifies C as the only strictly necessary listed statement but also selects B."
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q11",
+      "verdict": "defective",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "C if the omitted B path is below 0.09; B if it exceeds 0.09; tie at 0.09",
+      "proposed_answer_options": [
+        "B",
+        "C"
+      ],
+      "reason": "The pictured partial tree gives A=.5×.3×.4=.06, C=.5×.3×.6=.09, D=.4×.4×.5=.08, and E=.4×.4×.4=.064. B starts with an unpictured apples branch whose mass may be as high as .1; its continuation probabilities are not given. Both C and B can win."
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q12",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "-1",
+      "proposed_answer_options": [],
+      "reason": "The pictured tree is explicitly partial, and the question explicitly prescribes -1 if the information is insufficient. P(apples|like) marginalizes over all first-token contexts; omitted first tokens may also precede like. The requested ratio is not determined, so -1 is the unique prescribed response."
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q15",
+      "verdict": "convention",
+      "current_note_accurate": true,
+      "proposed_status": "ambiguous",
+      "proposed_answer": "400 unbatched prefix evaluations; 4 batched depth-wise forward passes",
+      "proposed_answer_options": [],
+      "reason": "General exhaustive decoding evaluates 1+7+7²+7³=400 prefixes to assign probabilities to four tokens. If “decoder run” means batched forward pass, four depth-wise calls suffice; if the supplied table is reusable and prefix-invariant, the computation needs no additional model calls. The usual course search-tree convention implies 400 but the unit is not defined."
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q10",
+      "verdict": "resolvable",
+      "current_note_accurate": true,
+      "proposed_status": "derived",
+      "proposed_answer": "A",
+      "proposed_answer_options": [
+        "A"
+      ],
+      "reason": "At T=5 versus T=1, softmax is flatter and the cumulative mass of any fixed top-k prefix cannot increase, so the nucleus size cannot decrease. It can stay equal for some logits and p, but A best describes the trend among the choices; the question asks for the best description, not a universal strict inequality."
+    }
+  ]
+}

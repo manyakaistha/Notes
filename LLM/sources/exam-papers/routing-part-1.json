@@ -1,0 +1,1233 @@
+{
+  "part": 1,
+  "papers": [
+    "2024T1_ET_AN",
+    "2024T1_ET_FN",
+    "2024T1_Q1_NA",
+    "2024T1_Q2_NA",
+    "2024T3_ET_AN",
+    "2024T3_ET_FN",
+    "2024T3_Q1_NA"
+  ],
+  "records": [
+    {
+      "id": "da5004_2024T1_ET_AN--q144",
+      "week": 3,
+      "topic_ids": [
+        "w3-gpt1-architecture"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q145",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "sparse attention complexity",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests sparse attention complexity."
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q146",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "text-to-text regression fine-tuning",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "The question tests text-to-text regression fine-tuning."
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q147",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BPE tokenization",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q148",
+      "week": 4,
+      "topic_ids": [
+        "w4-exhaustive-greedy"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests exhaustive-greedy."
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q149",
+      "week": 3,
+      "topic_ids": [
+        "w3-causal-lm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "medium",
+      "note": "The question tests the finite context of a causal GPT model."
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q150",
+      "week": 4,
+      "topic_ids": [
+        "w4-exhaustive-greedy",
+        "w4-beam-search",
+        "w4-topk-temperature",
+        "w4-topp-nucleus"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The options or calculation combine concepts, with routing based on the principal architecture or decoding skill."
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q151",
+      "week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The encoder parameter calculation uses fixed sinusoidal positions."
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q152",
+      "week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The encoder parameter calculation uses fixed sinusoidal positions."
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q153",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests self-attention-qkv."
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q154",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q155",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests self-attention-qkv."
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q156",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests Self-attention and Q/K/V projections."
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q157",
+      "week": 2,
+      "topic_ids": [
+        "w2-masked-self-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests masked-self-attention."
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q158",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "efficient attention variants",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests efficient attention variants."
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q198",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-architecture-params"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests BERT sizes and parameter counts."
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q199",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "position information injected into attention",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "The question tests position information injected into attention."
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q200",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "sparse attention complexity",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests sparse attention complexity."
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q201",
+      "week": 4,
+      "topic_ids": [
+        "w4-exhaustive-greedy"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests exhaustive-greedy."
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q202",
+      "week": 3,
+      "topic_ids": [
+        "w3-causal-lm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "medium",
+      "note": "The question tests the finite context of a causal GPT model."
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q203",
+      "week": 4,
+      "topic_ids": [
+        "w4-exhaustive-greedy",
+        "w4-beam-search",
+        "w4-topk-temperature",
+        "w4-topp-nucleus"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The options or calculation combine concepts, with routing based on the principal architecture or decoding skill."
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q204",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BPE tokenization",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q205",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BPE tokenization",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q206",
+      "week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The encoder parameter calculation uses fixed sinusoidal positions."
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q207",
+      "week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The encoder parameter calculation uses fixed sinusoidal positions."
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q208",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests self-attention-qkv."
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q209",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q210",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests self-attention-qkv."
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q211",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests Self-attention and Q/K/V projections."
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q212",
+      "week": 2,
+      "topic_ids": [
+        "w2-masked-self-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests masked-self-attention."
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q184",
+      "week": 2,
+      "topic_ids": [
+        "w2-positional-encoding"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The shared passage specifies sinusoidal positional encoding."
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q185",
+      "week": 2,
+      "topic_ids": [
+        "w2-positional-encoding"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The shared passage specifies sinusoidal positional encoding."
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q186",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests Self-attention and Q/K/V projections."
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q187",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests Self-attention and Q/K/V projections."
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q188",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "learned positional embedding parameter count",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "The question tests learned positional embedding parameter count."
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q189",
+      "week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests Parameter counting for the encoder."
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q190",
+      "week": 2,
+      "topic_ids": [
+        "w2-cross-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests cross-attention."
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q191",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "learned positional embedding during generation",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "The question tests learned positional embedding during generation."
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q192",
+      "week": 2,
+      "topic_ids": [
+        "w2-teacher-forcing"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests teacher-forcing."
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q193",
+      "week": 3,
+      "topic_ids": [
+        "w3-causal-lm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "medium",
+      "note": "The question tests the finite context of a causal GPT model."
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q194",
+      "week": 3,
+      "topic_ids": [
+        "w3-finetuning",
+        "w3-pretraining-objective"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The options or calculation combine concepts, with routing based on the principal architecture or decoding skill."
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q195",
+      "week": 4,
+      "topic_ids": [
+        "w4-exhaustive-greedy",
+        "w4-beam-search",
+        "w4-topk-temperature",
+        "w4-topp-nucleus"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The options or calculation combine concepts, with routing based on the principal architecture or decoding skill."
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q196",
+      "week": 2,
+      "topic_ids": [
+        "w2-masked-self-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests masked-self-attention."
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q197",
+      "week": 2,
+      "topic_ids": [
+        "w2-masked-self-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests masked-self-attention."
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q198",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-nsp-inputs"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests NSP, [CLS]/[SEP] and the three input embeddings."
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q134",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BPE vocabulary construction",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q135",
+      "week": 3,
+      "topic_ids": [
+        "w3-gpt1-parameter-count"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "BPE changes the vocabulary, but the question excludes embeddings and asks about decoder block parameters."
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q136",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BPE tokenizer coverage",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q137",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "interchanging BPE tokenizers",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": "The question tests interchanging BPE tokenizers."
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q138",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "zero-shot summarization and transfer",
+      "likely_later_week": "other/unknown",
+      "confidence": "high",
+      "note": "The question mixes supervised fine-tuning with zero-shot transfer."
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q139",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "T5 span corruption and sentinel tokens",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "The question tests T5 span corruption and sentinel tokens."
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q140",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "comparison of BERT with BART and T5 denoising objectives",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "The options jointly test BERT, BART and T5 denoising objectives."
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q141",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "dataset size and repeated training effects",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q142",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "dataset size and repeated training effects",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q143",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "prefix masking and architecture choices for summarization",
+      "likely_later_week": "other/unknown",
+      "confidence": "medium",
+      "note": "The question tests prefix masking and architecture choices for summarization."
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q144",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "scaling laws",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q145",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "pretraining data filtering",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q146",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "pretraining data filtering",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T1_Q2_NA--q147",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "pretraining data filtering",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": "The question tests pretraining data filtering."
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q176",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests Self-attention and Q/K/V projections."
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q177",
+      "week": 3,
+      "topic_ids": [
+        "w3-pretraining-objective"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Tied input and output weights make this a question about the pretraining softmax objective."
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q178",
+      "week": 4,
+      "topic_ids": [
+        "w4-exhaustive-greedy",
+        "w4-beam-search",
+        "w4-topk-temperature"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests Exhaustive and greedy search, Beam search and length normalisation, Top-k sampling and temperature."
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q179",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "zero-shot and few-shot transfer approaches",
+      "likely_later_week": "other/unknown",
+      "confidence": "high",
+      "note": "The question mixes supervised fine-tuning with zero-shot and few-shot transfer."
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q180",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "tokenizer and model pipeline",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": "The question tests tokenizer and model pipeline."
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q181",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "pretraining data duplication",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": "The question tests pretraining data duplication."
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q182",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "strided local attention complexity",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q183",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "GPT-2 positional shift evaluation",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q184",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "medium",
+      "note": "The score expands Q/K projections of token plus positional inputs; the position scheme is unspecified."
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q185",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "WordPiece vocabulary and merging",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q186",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "WordPiece vocabulary and merging",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q187",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "WordPiece vocabulary and merging",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q188",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "WordPiece vocabulary and merging",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q189",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "WordPiece vocabulary and merging",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q190",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "vocabulary size and tokenization",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q191",
+      "week": 2,
+      "topic_ids": [
+        "w2-full-transformer",
+        "w2-masked-self-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The options or calculation combine concepts, with routing based on the principal architecture or decoding skill."
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q192",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "C4 dataset filtering",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q193",
+      "week": 3,
+      "topic_ids": [
+        "w3-gpt1-architecture"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests GPT-1 architecture and pre-train/fine-tune paradigm."
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q194",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "strided and block attention",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests strided and block attention."
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q195",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "strided and block attention",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests strided and block attention."
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q189",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests Self-attention and Q/K/V projections."
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q190",
+      "week": 2,
+      "topic_ids": [
+        "w2-full-transformer",
+        "w2-teacher-forcing"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The options or calculation combine concepts, with routing based on the principal architecture or decoding skill."
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q191",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "vocabulary size and tokenization",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q192",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "C4 dataset filtering",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q193",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "GPT-3 architecture and pretraining data",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": "The question tests GPT-3 architecture and pretraining data."
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q194",
+      "week": 3,
+      "topic_ids": [
+        "w3-finetuning",
+        "w3-pretraining-objective"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The options or calculation combine concepts, with routing based on the principal architecture or decoding skill."
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q195",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "T5 text-to-text fine-tuning",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "The question tests T5 text-to-text fine-tuning."
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q196",
+      "week": 4,
+      "topic_ids": [
+        "w4-topk-temperature"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests Top-k sampling and temperature."
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q197",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "tokenizer and model pipeline",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": "The question tests tokenizer and model pipeline."
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q198",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "pretraining data duplication",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": "The question tests pretraining data duplication."
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q199",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q200",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "GPT-2 positional shift evaluation",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q201",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Transformer-XL relative position attention",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "The question tests Transformer-XL relative position attention."
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q202",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "WordPiece vocabulary and merging",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q203",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "WordPiece vocabulary and merging",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q204",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "WordPiece vocabulary and merging",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q205",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "WordPiece vocabulary and merging",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q206",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "WordPiece vocabulary and merging",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q207",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "block and strided attention",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q208",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "block and strided attention",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests block and strided attention."
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q209",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "block and strided attention",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests block and strided attention."
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q275",
+      "week": 2,
+      "topic_ids": [
+        "w2-teacher-forcing"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests Teacher forcing."
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q276",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm",
+        "w2-positional-encoding"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The options or calculation combine concepts, with routing based on the principal architecture or decoding skill."
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q277",
+      "week": 2,
+      "topic_ids": [
+        "w2-decoder-output-and-params"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The options or calculation combine concepts, with routing based on the principal architecture or decoding skill."
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q278",
+      "week": 2,
+      "topic_ids": [
+        "w2-decoder-output-and-params"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests decoder-output-and-params."
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q279",
+      "week": 2,
+      "topic_ids": [
+        "w2-decoder-output-and-params"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "medium",
+      "note": "The shared encoder-decoder passage makes this an embedding or output-distribution calculation."
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q280",
+      "week": 2,
+      "topic_ids": [
+        "w2-decoder-output-and-params"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "medium",
+      "note": "The shared encoder-decoder passage makes this an embedding or output-distribution calculation."
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q281",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q282",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q283",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q284",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q285",
+      "week": 3,
+      "topic_ids": [
+        "w3-language-modelling"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests language-modelling."
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q286",
+      "week": 3,
+      "topic_ids": [
+        "w3-language-modelling"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests language-modelling."
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q287",
+      "week": 3,
+      "topic_ids": [
+        "w3-language-modelling"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests language-modelling."
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q288",
+      "week": 4,
+      "topic_ids": [
+        "w4-topk-temperature"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": null
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q289",
+      "week": 3,
+      "topic_ids": [
+        "w3-gpt1-parameter-count"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "medium",
+      "note": "The GPT-like passage asks for the positional embedding table shape."
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q290",
+      "week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests Multi-head attention and W^O."
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q291",
+      "week": 2,
+      "topic_ids": [
+        "w2-masked-self-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests masked-self-attention."
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q292",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests Self-attention and Q/K/V projections."
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q293",
+      "week": 2,
+      "topic_ids": [
+        "w2-positional-encoding"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests Sinusoidal positional encoding."
+    }
+  ]
+}

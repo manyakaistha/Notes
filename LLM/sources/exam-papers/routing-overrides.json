@@ -1,0 +1,34 @@
+{
+  "overrides": [
+    {
+      "id": "da5004_2025T3_ET_AN--q17",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-scaled-dot-product",
+        "w1-ffn-encoder-stack"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "reason": "Retain self-attention and add the attention-product and position-wise FFN topics: doubling length tests quadratic attention products and linear FFN work."
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q25",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv",
+        "w1-scaled-dot-product",
+        "w1-ffn-encoder-stack"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "reason": "Retain self-attention and add the attention-product and position-wise FFN topics: doubling length tests quadratic attention products and linear FFN work."
+    }
+  ],
+  "rejected": [
+    {
+      "id": "da5004_2024T3_ET_AN--q184",
+      "reason": "The options test expanding the Q/K attention score for position-augmented inputs; no sinusoidal encoding or positional scheme is specified, so Week 1 remains appropriate."
+    }
+  ]
+}

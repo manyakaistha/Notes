@@ -1,0 +1,281 @@
+{
+  "corrections": [
+    {
+      "id": "da5004_2024T1_Q1_NA--q186",
+      "field": "stem",
+      "original": "The bottommost encoder layer of the transformer contains the following parameter matrices:\n\n$$W_Q = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}, \\quad W_K = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}, \\quad W_V = \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix}, \\quad W_O = \\begin{bmatrix} 1 & 1 \\\\ 1 & 1 \\end{bmatrix}$$\n\ngiven that the embeddings are row vectors, compute the attention score to produce the new representation for the token (T) at the 3-rd position in the sequence X.\n\n\n\n\nWhat is the un-normalized attention weight given for the token (A) at the 4th position?\n\nNote: unnormalized here implies the raw score before applying softmax. Avoid scaling the dot-product by $\\sqrt{d_k}$",
+      "corrected": "The bottommost encoder layer of the transformer contains the following parameter matrices:\n\n$$W_Q = \\begin{bmatrix} 1 & 0 \\\\ 0 & -1 \\end{bmatrix}, \\quad W_K = \\begin{bmatrix} 1 & 0 \\\\ 1 & 0 \\end{bmatrix}, \\quad W_V = \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix}, \\quad W_O = \\begin{bmatrix} 1 & 1 \\\\ 1 & 1 \\end{bmatrix}$$\n\ngiven that the embeddings are row vectors, compute the attention score to produce the new representation for the token (T) at the 3-rd position in the sequence X.\n\n\n\n\nWhat is the un-normalized attention weight given for the token (A) at the 4th position?\n\nNote: unnormalized here implies the raw score before applying softmax. Avoid scaling the dot-product by $\\sqrt{d_k}$",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T1_Q1_NA/q186-q186-stem-01-p005.png shows W_Q = diag(1,−1) and W_K = [[1,0],[1,0]].",
+      "kind": "extraction_error"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q187",
+      "field": "stem",
+      "original": "The bottommost encoder layer of the transformer contains the following parameter matrices:\n\n$$W_Q = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}, \\quad W_K = \\begin{bmatrix} 1 & 0 \\\\ 0 & 1 \\end{bmatrix}, \\quad W_V = \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix}, \\quad W_O = \\begin{bmatrix} 1 & 1 \\\\ 1 & 1 \\end{bmatrix}$$\n\ngiven that the embeddings are row vectors, compute the attention score to produce the new representation for the token (T) at the 3-rd position in the sequence X.\n\n\n\n\nWhich token in the sequence was given the highest score?",
+      "corrected": "The bottommost encoder layer of the transformer contains the following parameter matrices:\n\n$$W_Q = \\begin{bmatrix} 1 & 0 \\\\ 0 & -1 \\end{bmatrix}, \\quad W_K = \\begin{bmatrix} 1 & 0 \\\\ 1 & 0 \\end{bmatrix}, \\quad W_V = \\begin{bmatrix} 0 & 1 \\\\ 1 & 0 \\end{bmatrix}, \\quad W_O = \\begin{bmatrix} 1 & 1 \\\\ 1 & 1 \\end{bmatrix}$$\n\ngiven that the embeddings are row vectors, compute the attention score to produce the new representation for the token (T) at the 3-rd position in the sequence X.\n\n\n\n\nWhich token in the sequence was given the highest score?",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T1_Q1_NA/q187-q187-stem-01-p006.png shows W_Q = diag(1,−1) and W_K = [[1,0],[1,0]].",
+      "kind": "extraction_error"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q184",
+      "field": "stem",
+      "original": "What is the sum of the elements in the embedding vector $P_3$?",
+      "corrected": "What is the sum of the elements in the embedding vector $P_5$?",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T1_Q1_NA/q184-q184-stem-01-p004.png asks for P_5.",
+      "kind": "extraction_error"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q283",
+      "field": "stem",
+      "original": "Say $\\sigma_1, \\sigma_2$ and $\\sigma_3$ were the standard deviations used to compute batch normalization of X. What is $\\sum_{i=1}^3 \\sigma_i^2$?",
+      "corrected": "Say $\\sigma_1, \\sigma_2$ and $\\sigma_3$ were the standard deviations used to compute batch normalization of X. What is $\\sum_{i=1}^3 \\sigma_i$?",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/q283-q283-stem-01-p007.png shows the sum of σ_i, with no square.",
+      "kind": "extraction_error"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q284",
+      "field": "stem",
+      "original": "Say $\\sigma_1, \\sigma_2$ and $\\sigma_3$ were the standard deviations used to compute layer normalization of X. What is $\\sum_{i=1}^3 \\sigma_i^2$?",
+      "corrected": "Say $\\sigma_1, \\sigma_2$ and $\\sigma_3$ were the standard deviations used to compute layer normalization of X. What is $\\sum_{i=1}^3 \\sigma_i$?",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/q284-q284-stem-01-p007.png shows the sum of σ_i, with no square.",
+      "kind": "extraction_error"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q195",
+      "field": "stem",
+      "original": "Which of the following decoding strategies is (are) appropriate for machine translation tasks? Assume we have infinite compute and the values for $k > 3, p > 0.35$ where required.",
+      "corrected": "Which of the following decoding strategies is (are) appropriate for machine translation tasks? Assume we have infinite compute and the values for $k \\ge 3, p > 0.35$ where required.",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T1_Q1_NA/q195-q195-stem-01-p012.png shows k ≥ 3.",
+      "kind": "extraction_error"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q184",
+      "field": "context",
+      "original": "",
+      "corrected": "Vocabulary V=(A,T,C,G), embeddings E=[[1,0],[0,1],[1,-1],[1,1]], and X=(G,C,C,T,A,G). Position indices start at zero; H=E(X)+P. The scan defines P(pos,2i)=sin(pos/10^(2i/d_model)) and P(pos,2i+1)=cos(pos/10^(2i/d_model)).",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T1_Q1_NA/ctx-184-187-passage-01-p004.png shows vocabulary, embedding matrix, sequence, positional formula and zero indexing.",
+      "kind": "shared_context",
+      "context_from": [
+        "da5004_2024T1_Q1_NA--ctx-184-187"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q185",
+      "field": "context",
+      "original": "",
+      "corrected": "Vocabulary V=(A,T,C,G), embeddings E=[[1,0],[0,1],[1,-1],[1,1]], and X=(G,C,C,T,A,G). Position indices start at zero; H=E(X)+P. The scan defines P(pos,2i)=sin(pos/10^(2i/d_model)) and P(pos,2i+1)=cos(pos/10^(2i/d_model)).",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T1_Q1_NA/ctx-184-187-passage-01-p004.png shows vocabulary, embedding matrix, sequence, positional formula and zero indexing.",
+      "kind": "shared_context",
+      "context_from": [
+        "da5004_2024T1_Q1_NA--ctx-184-187"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q186",
+      "field": "context",
+      "original": "",
+      "corrected": "Vocabulary V=(A,T,C,G), embeddings E=[[1,0],[0,1],[1,-1],[1,1]], and X=(G,C,C,T,A,G). Position indices start at zero; H=E(X)+P. The scan defines P(pos,2i)=sin(pos/10^(2i/d_model)) and P(pos,2i+1)=cos(pos/10^(2i/d_model)).",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T1_Q1_NA/ctx-184-187-passage-01-p004.png shows vocabulary, embedding matrix, sequence, positional formula and zero indexing.",
+      "kind": "shared_context",
+      "context_from": [
+        "da5004_2024T1_Q1_NA--ctx-184-187"
+      ]
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q187",
+      "field": "context",
+      "original": "",
+      "corrected": "Vocabulary V=(A,T,C,G), embeddings E=[[1,0],[0,1],[1,-1],[1,1]], and X=(G,C,C,T,A,G). Position indices start at zero; H=E(X)+P. The scan defines P(pos,2i)=sin(pos/10^(2i/d_model)) and P(pos,2i+1)=cos(pos/10^(2i/d_model)).",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T1_Q1_NA/ctx-184-187-passage-01-p004.png shows vocabulary, embedding matrix, sequence, positional formula and zero indexing.",
+      "kind": "shared_context",
+      "context_from": [
+        "da5004_2024T1_Q1_NA--ctx-184-187"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q281",
+      "field": "context",
+      "original": "",
+      "corrected": "X=[[1,2,3],[4,7,11],[-3,5,-2]] has three samples as columns and three features as rows; gamma=1, beta=0, epsilon=10^-6, with standard scaling.",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/ctx-281-284-passage-01-p006.png shows input matrix, sample orientation and epsilon = 10^-6.",
+      "kind": "shared_context",
+      "context_from": [
+        "da5004_2024T3_Q1_NA--ctx-281-284"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q282",
+      "field": "context",
+      "original": "",
+      "corrected": "X=[[1,2,3],[4,7,11],[-3,5,-2]] has three samples as columns and three features as rows; gamma=1, beta=0, epsilon=10^-6, with standard scaling.",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/ctx-281-284-passage-01-p006.png shows input matrix, sample orientation and epsilon = 10^-6.",
+      "kind": "shared_context",
+      "context_from": [
+        "da5004_2024T3_Q1_NA--ctx-281-284"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q283",
+      "field": "context",
+      "original": "",
+      "corrected": "X=[[1,2,3],[4,7,11],[-3,5,-2]] has three samples as columns and three features as rows; gamma=1, beta=0, epsilon=10^-6, with standard scaling.",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/ctx-281-284-passage-01-p006.png shows input matrix, sample orientation and epsilon = 10^-6.",
+      "kind": "shared_context",
+      "context_from": [
+        "da5004_2024T3_Q1_NA--ctx-281-284"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q284",
+      "field": "context",
+      "original": "",
+      "corrected": "X=[[1,2,3],[4,7,11],[-3,5,-2]] has three samples as columns and three features as rows; gamma=1, beta=0, epsilon=10^-6, with standard scaling.",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/ctx-281-284-passage-01-p006.png shows input matrix, sample orientation and epsilon = 10^-6.",
+      "kind": "shared_context",
+      "context_from": [
+        "da5004_2024T3_Q1_NA--ctx-281-284"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q285",
+      "field": "context",
+      "original": "",
+      "corrected": "Vocabulary V=([start], breaking, ground, a, is, seismology, study, experience, earth quake, [end]). Rows of the probability matrix correspond to greedy prefixes, beginning with [start]; columns follow V. Matrix: [[.04,.01,.14,.07,.09,.41,.08,.05,.08,.01],[.10,.03,.06,.16,.43,.01,.06,.09,.01,.04],[.06,.08,.28,.29,.03,.08,.04,.08,.04,.04],[.11,.03,.48,.02,.01,.07,.06,.14,.07,.01],[.09,.29,.04,.01,.04,.03,.25,.05,.15,.06],[.14,.22,.13,.08,.01,.03,.06,.23,.08,.03]]. Enter -1 if information is insufficient.",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/ctx-285-288-passage-01-p008.png shows vocabulary, probability matrix, greedy-prefix conditioning and insufficient-data instruction.",
+      "kind": "shared_context",
+      "context_from": [
+        "da5004_2024T3_Q1_NA--ctx-285-288"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q286",
+      "field": "context",
+      "original": "",
+      "corrected": "Vocabulary V=([start], breaking, ground, a, is, seismology, study, experience, earth quake, [end]). Rows of the probability matrix correspond to greedy prefixes, beginning with [start]; columns follow V. Matrix: [[.04,.01,.14,.07,.09,.41,.08,.05,.08,.01],[.10,.03,.06,.16,.43,.01,.06,.09,.01,.04],[.06,.08,.28,.29,.03,.08,.04,.08,.04,.04],[.11,.03,.48,.02,.01,.07,.06,.14,.07,.01],[.09,.29,.04,.01,.04,.03,.25,.05,.15,.06],[.14,.22,.13,.08,.01,.03,.06,.23,.08,.03]]. Enter -1 if information is insufficient.",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/ctx-285-288-passage-01-p008.png shows vocabulary, probability matrix, greedy-prefix conditioning and insufficient-data instruction.",
+      "kind": "shared_context",
+      "context_from": [
+        "da5004_2024T3_Q1_NA--ctx-285-288"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q287",
+      "field": "context",
+      "original": "",
+      "corrected": "Vocabulary V=([start], breaking, ground, a, is, seismology, study, experience, earth quake, [end]). Rows of the probability matrix correspond to greedy prefixes, beginning with [start]; columns follow V. Matrix: [[.04,.01,.14,.07,.09,.41,.08,.05,.08,.01],[.10,.03,.06,.16,.43,.01,.06,.09,.01,.04],[.06,.08,.28,.29,.03,.08,.04,.08,.04,.04],[.11,.03,.48,.02,.01,.07,.06,.14,.07,.01],[.09,.29,.04,.01,.04,.03,.25,.05,.15,.06],[.14,.22,.13,.08,.01,.03,.06,.23,.08,.03]]. Enter -1 if information is insufficient.",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/ctx-285-288-passage-01-p008.png shows vocabulary, probability matrix, greedy-prefix conditioning and insufficient-data instruction.",
+      "kind": "shared_context",
+      "context_from": [
+        "da5004_2024T3_Q1_NA--ctx-285-288"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q288",
+      "field": "context",
+      "original": "",
+      "corrected": "Vocabulary V=([start], breaking, ground, a, is, seismology, study, experience, earth quake, [end]). Rows of the probability matrix correspond to greedy prefixes, beginning with [start]; columns follow V. Matrix: [[.04,.01,.14,.07,.09,.41,.08,.05,.08,.01],[.10,.03,.06,.16,.43,.01,.06,.09,.01,.04],[.06,.08,.28,.29,.03,.08,.04,.08,.04,.04],[.11,.03,.48,.02,.01,.07,.06,.14,.07,.01],[.09,.29,.04,.01,.04,.03,.25,.05,.15,.06],[.14,.22,.13,.08,.01,.03,.06,.23,.08,.03]]. Enter -1 if information is insufficient.",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/ctx-285-288-passage-01-p008.png shows vocabulary, probability matrix, greedy-prefix conditioning and insufficient-data instruction.",
+      "kind": "shared_context",
+      "context_from": [
+        "da5004_2024T3_Q1_NA--ctx-285-288"
+      ]
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q184",
+      "field": "stem",
+      "original": "Which of the following is correct expression for $q_{ij}$? The symbols have usual meaning.",
+      "corrected": "Which of the following is correct expression for $e_{ij}$? The symbols have usual meaning.",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T3_ET_AN/q184-q184-stem-01-p005.png asks for e_ij, not q_ij.",
+      "kind": "extraction_error"
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q184",
+      "field": "option:A",
+      "original": "$x_i^T W_Q W_K^T x_j + x_i^T W_Q W_K^T p_j + p_i^T W_Q W_K^T x_j + p_i^T W_Q W_K^T p_j$",
+      "corrected": "$x_i W_Q W_K^T x_j^T + x_i W_Q W_K^T p_j^T + p_i W_Q W_K^T x_j^T + p_i W_Q W_K^T p_j^T$",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T3_ET_AN/q184-q184-option-a-01-p005.png shows the row/column transposes in the corrected expression.",
+      "kind": "extraction_error"
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q184",
+      "field": "option:B",
+      "original": "$x_i^T W_Q W_K^T x_j - x_i^T W_Q W_K^T p_j + p_i^T W_Q W_K^T x_j - p_i^T W_Q W_K^T p_j$",
+      "corrected": "$x_i W_Q W_K^T x_j^T - x_i W_Q W_K^T p_j^T + p_i W_Q W_K^T x_j^T - p_i W_Q W_K^T p_j^T$",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T3_ET_AN/q184-q184-option-b-01-p005.png shows the row/column transposes in the corrected expression.",
+      "kind": "extraction_error"
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q184",
+      "field": "option:C",
+      "original": "$x_i^T W_K W_Q^T x_j + x_i^T W_K W_Q^T p_j + p_i^T W_K W_Q^T x_j + p_i^T W_K W_Q^T p_j$",
+      "corrected": "$x_i W_K W_Q^T x_j^T + x_i W_K W_Q^T p_j^T + p_i W_K W_Q^T x_j^T + p_i W_K W_Q^T p_j^T$",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T3_ET_AN/q184-q184-option-c-01-p005.png shows the row/column transposes in the corrected expression.",
+      "kind": "extraction_error"
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q184",
+      "field": "option:D",
+      "original": "$x_i W_Q W_K x_j^T + x_i W_Q W_K p_j^T + p_i W_Q W_K x_j^T + p_i W_Q W_K p_j^T$",
+      "corrected": "$x_i W_Q W_K x_j + x_i W_Q W_K p_j + p_i W_Q W_K x_j + p_i W_Q W_K p_j$",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2024T3_ET_AN/q184-q184-option-d-01-p005.png shows the row/column transposes in the corrected expression.",
+      "kind": "extraction_error"
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q18",
+      "field": "option:A",
+      "original": "$[4, 13, 1, -1]^T$\n\n![Option A vector [4, 13, 1, -1]^T](assets/da5004_2026T2_ET_AN/q18-q18-option-a-01-p012.png)",
+      "corrected": "$[4, 3, 1, -1]^T$\n\n![Option A vector [4, 3, 1, -1]^T](assets/da5004_2026T2_ET_AN/q18-q18-option-a-01-p012.png)",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2026T2_ET_AN/q18-q18-option-a-01-p012.png shows [4, 3, 1, -1].",
+      "kind": "extraction_error"
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q18",
+      "field": "option:C",
+      "original": "$[5, 13, -1, -1]^T$\n\n![Option C vector [5, 13, -1, -1]^T](assets/da5004_2026T2_ET_AN/q18-q18-option-c-01-p012.png)",
+      "corrected": "$[5, 3, -1, -1]^T$\n\n![Option C vector [5, 3, -1, -1]^T](assets/da5004_2026T2_ET_AN/q18-q18-option-c-01-p012.png)",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2026T2_ET_AN/q18-q18-option-c-01-p012.png shows [5, 3, -1, -1].",
+      "kind": "extraction_error"
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q18",
+      "field": "option:D",
+      "original": "$[3, 15, -2, 1]^T$\n\n![Option D vector [3, 15, -2, 1]^T](assets/da5004_2026T2_ET_AN/q18-q18-option-d-01-p012.png)",
+      "corrected": "$[3, 5, -2, 1]^T$\n\n![Option D vector [3, 5, -2, 1]^T](assets/da5004_2026T2_ET_AN/q18-q18-option-d-01-p012.png)",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2026T2_ET_AN/q18-q18-option-d-01-p012.png shows [3, 5, -2, 1].",
+      "kind": "extraction_error"
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q19",
+      "field": "option:A",
+      "original": "$[3, 16, -1, -2]^T$\n\n![Option A vector [3, 16, -1, -2]^T](assets/da5004_2026T2_ET_AN/q19-q19-option-a-01-p013.png)",
+      "corrected": "$[3, 6, -1, -2]^T$\n\n![Option A vector [3, 6, -1, -2]^T](assets/da5004_2026T2_ET_AN/q19-q19-option-a-01-p013.png)",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2026T2_ET_AN/q19-q19-option-a-01-p013.png shows [3, 6, -1, -2].",
+      "kind": "extraction_error"
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q19",
+      "field": "option:B",
+      "original": "$[4, 16, -2, -2]^T$\n\n![Option B vector [4, 16, -2, -2]^T](assets/da5004_2026T2_ET_AN/q19-q19-option-b-01-p013.png)",
+      "corrected": "$[4, 6, -2, -2]^T$\n\n![Option B vector [4, 6, -2, -2]^T](assets/da5004_2026T2_ET_AN/q19-q19-option-b-01-p013.png)",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2026T2_ET_AN/q19-q19-option-b-01-p013.png shows [4, 6, -2, -2].",
+      "kind": "extraction_error"
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q19",
+      "field": "option:D",
+      "original": "$[2, 16, -2, 2]^T$\n\n![Option D vector [2, 16, -2, 2]^T](assets/da5004_2026T2_ET_AN/q19-q19-option-d-01-p013.png)",
+      "corrected": "$[2, 6, -2, 2]^T$\n\n![Option D vector [2, 6, -2, 2]^T](assets/da5004_2026T2_ET_AN/q19-q19-option-d-01-p013.png)",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2026T2_ET_AN/q19-q19-option-d-01-p013.png shows [2, 6, -2, 2].",
+      "kind": "extraction_error"
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q8",
+      "field": "answer_note",
+      "original": "Option B and C source crops are labeled as illustrations of their respective transcribed choices.",
+      "corrected": "The source crops attached to options B and C are vertically misaligned: the B crop shows part of the attention-times-value line and the C crop shows part of the layer-normalization line. Consult the source text or original page for option evidence.",
+      "evidence": "LLM/sources/exam-papers/assets/da5004_2025T3_ET_FN/q8-q8-option-b-01-p004.png and q8-q8-option-c-01-p004.png show portions of different option lines.",
+      "kind": "ambiguity_note"
+    }
+  ],
+  "rejected": []
+}

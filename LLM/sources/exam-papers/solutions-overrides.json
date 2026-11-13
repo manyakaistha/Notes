@@ -1,0 +1,991 @@
+{
+  "overrides": [
+    {
+      "id": "da5004_2024T1_ET_AN--q149",
+      "status": "ambiguous",
+      "answer": "A, B, C, D with a fixed complete-sequence window; A–E with sliding and reset position IDs",
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "steps": "The shared prompt gives T=2048 and 712 prompt tokens, leaving 1336 slots under a complete-sequence cap, so 256, 16, 1024 and 512 fit. A sliding context can generate 2048; the supplied prompt does not specify inference policy. The exam key implies the fixed-window reading.",
+      "ambiguity_note": "Implied course/exam convention: A, B, C, D with a fixed complete-sequence window; A–E with sliding and reset position IDs. The shared prompt gives T=2048 and 712 prompt tokens, leaving 1336 slots under a complete-sequence cap, so 256, 16, 1024 and 512 fit. A sliding context can generate 2048; the supplied prompt does not specify inference policy. The exam key implies the fixed-window reading.",
+      "is_numeric": true,
+      "numeric_values": {
+        "context": 2048,
+        "prompt_tokens": 712,
+        "remaining": 1336
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q150",
+      "status": "derived",
+      "answer": "A, B, C, D, E",
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "steps": "The question asks what might have happened, not what guarantees repetition. Greedy and beam can repeat; top-k and top-p may sample the same sequence repeatedly, including a singleton nucleus; positive temperature does not change greedy argmax. Thus all five are possible, assuming a finite number of runs and consistent ties. The old note correctly observes this distinction but treats the conditional alternative as ambiguity.",
+      "ambiguity_note": null,
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q151",
+      "status": "ambiguous",
+      "answer": "Not uniquely determinable; floor((2,366,208 + 256V)/1000) under the stated illustrative convention",
+      "answer_options": [],
+      "steps": "The pictured shared passage supplies no vocabulary size V, although token embeddings are requested. With bias-free attention, FFN biases and two affine norms per layer, the three encoder layers have 2,366,208 parameters and embeddings add 256V; other bias assumptions change even the constant. Fixed sinusoids add zero. The printed 2566 cannot establish a missing vocabulary size.",
+      "ambiguity_note": "The pictured shared passage supplies no vocabulary size V, although token embeddings are requested. With bias-free attention, FFN biases and two affine norms per layer, the three encoder layers have 2,366,208 parameters and embeddings add 256V; other bias assumptions change even the constant. Fixed sinusoids add zero. The printed 2566 cannot establish a missing vocabulary size.",
+      "is_numeric": true,
+      "numeric_values": {
+        "encoder_parameters": 2366208
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q153",
+      "status": "derived",
+      "answer": "1.676",
+      "answer_options": [],
+      "steps": "The image supplies an attention matrix and W_V and W_O, so the attention-layer output naturally includes W_O. In sentence order the row [0.04,0.12,0.17,0.67] gives A X W_V W_O=[-0.417,2.093] and sum 1.676 using the printed rounded entries. Calling the preprojection intermediate a representation does not require leaving W_O unused; the source transcription differs from the picture.",
+      "ambiguity_note": null,
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          -0.417,
+          2.093
+        ],
+        "sum": 1.676
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q198",
+      "status": "derived",
+      "answer": "B",
+      "answer_options": [
+        "B"
+      ],
+      "steps": "B is the unique option with the correct constituent words Bidirectional Encoder Representation from Transformer. The primary BERT paper uses plurals, “Representations from Transformers”; the singular inflection does not alter which option expands the acronym.",
+      "ambiguity_note": null,
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q202",
+      "status": "ambiguous",
+      "answer": "A, B with a fixed complete-sequence window; A–D with sliding and reset position IDs",
+      "answer_options": [
+        "A",
+        "B"
+      ],
+      "steps": "The shared prompt gives T=1024 and 712 prompt tokens, leaving 312 slots under a complete-sequence cap. Only 256 and 16 fit. Sliding can generate all listed lengths; the exam key implies the fixed-window reading.",
+      "ambiguity_note": "Implied course/exam convention: A, B with a fixed complete-sequence window; A–D with sliding and reset position IDs. The shared prompt gives T=1024 and 712 prompt tokens, leaving 312 slots under a complete-sequence cap. Only 256 and 16 fit. Sliding can generate all listed lengths; the exam key implies the fixed-window reading.",
+      "is_numeric": true,
+      "numeric_values": {
+        "context": 1024,
+        "prompt_tokens": 712,
+        "remaining": 312
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q203",
+      "status": "derived",
+      "answer": "A, B, C, D, E",
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ],
+      "steps": "The question asks what might have happened, not what guarantees repetition. Greedy and beam can repeat; top-k and top-p may sample the same sequence repeatedly, including a singleton nucleus; positive temperature does not change greedy argmax. Thus all five are possible, assuming a finite number of runs and consistent ties. The old note correctly observes this distinction but treats the conditional alternative as ambiguity.",
+      "ambiguity_note": null,
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q206",
+      "status": "ambiguous",
+      "answer": "Not uniquely determinable; floor((2,366,208 + 256V)/1000) under the stated illustrative convention",
+      "answer_options": [],
+      "steps": "The pictured shared passage supplies no vocabulary size V, although token embeddings are requested. With bias-free attention, FFN biases and two affine norms per layer, the three encoder layers have 2,366,208 parameters and embeddings add 256V; other bias assumptions change even the constant. Fixed sinusoids add zero. The printed 2566 cannot establish a missing vocabulary size.",
+      "ambiguity_note": "The pictured shared passage supplies no vocabulary size V, although token embeddings are requested. With bias-free attention, FFN biases and two affine norms per layer, the three encoder layers have 2,366,208 parameters and embeddings add 256V; other bias assumptions change even the constant. Fixed sinusoids add zero. The printed 2566 cannot establish a missing vocabulary size.",
+      "is_numeric": true,
+      "numeric_values": {
+        "encoder_parameters": 2366208
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q208",
+      "status": "derived",
+      "answer": "1.592",
+      "answer_options": [],
+      "steps": "Using the pictured coffee row [0.25,0.06,0.17,0.53] and its input embeddings gives A X W_V W_O=[-0.324,1.916], sum 1.592. W_O is supplied as part of the attention layer and is naturally applied; the source Markdown transcription contains different matrices.",
+      "ambiguity_note": null,
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          -0.324,
+          1.916
+        ],
+        "sum": 1.592
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q189",
+      "status": "ambiguous",
+      "answer": "768 weights if the preceding subquestion’s 1600 source embedding parameters apply; otherwise undetermined",
+      "answer_options": [],
+      "steps": "The shared passage fixes vocabulary 100 and two heads but does not give model width. The preceding subquestion introduces 1600 embedding parameters only as a supposition: if carried forward, d=1600/100=16 and 3d²=768 weights; otherwise d remains free. Projection bias is also unspecified.",
+      "ambiguity_note": "The shared passage fixes vocabulary 100 and two heads but does not give model width. The preceding subquestion introduces 1600 embedding parameters only as a supposition: if carried forward, d=1600/100=16 and 3d²=768 weights; otherwise d remains free. Projection bias is also unspecified.",
+      "is_numeric": true,
+      "numeric_values": {
+        "matrix_weights": 768
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q192",
+      "status": "ambiguous",
+      "answer": "C is defensible; B is the intended empirical claim but not guaranteed",
+      "answer_options": [
+        "C"
+      ],
+      "steps": "Teacher forcing supplies gold previous tokens; free-running training uses model outputs. Either can be scheduled after the other (C). Faster convergence is an empirical tendency, not a theorem for every dataset, so B is unproved and D false.",
+      "ambiguity_note": "Autoregressive factorization is compatible with teacher forcing, so the two named approaches are not mutually defined. A switch to generated-prefix training is possible (C), whereas an unconditional faster-convergence claim (B) depends on setup and convergence metric; the item does not specify these.",
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q193",
+      "status": "ambiguous",
+      "answer": "A if BOS counts within a 1024-token full sequence; A, B if 1024 newly predicted tokens are counted; A–D with sliding",
+      "answer_options": [
+        "A"
+      ],
+      "steps": "A capped full sequence leaves 1023 positions after BOS; a final prediction can instead be emitted from a full input context, allowing 1024 new tokens. Sliding or resetting positional IDs permits still longer text. The exam’s fixed-window treatment is the closest course convention; its wording does not settle output counting.",
+      "ambiguity_note": "Implied course/exam convention: A if BOS counts within a 1024-token full sequence; A, B if 1024 newly predicted tokens are counted; A–D with sliding. A capped full sequence leaves 1023 positions after BOS; a final prediction can instead be emitted from a full input context, allowing 1024 new tokens. Sliding or resetting positional IDs permits still longer text. The exam’s fixed-window treatment is the closest course convention; its wording does not settle output counting.",
+      "is_numeric": true,
+      "numeric_values": {
+        "context": 1024
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q194",
+      "status": "ambiguous",
+      "answer": "A, B, D for the original GPT-1 supervised experiments; A, D for ordinary supervised fine-tuning without the optional auxiliary CLM loss",
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "steps": "GPT-1 pretraining starts from random weights; supervised fine-tuning reuses them and typically uses labels. Radford et al. included an auxiliary language-model objective in their experiments, while fine-tuning in general need not. The paper-specific and generic conventions differ, and the course paper implies the GPT-1 experiment.",
+      "ambiguity_note": "Implied course/exam convention: A, B, D for the original GPT-1 supervised experiments; A, D for ordinary supervised fine-tuning without the optional auxiliary CLM loss. GPT-1 pretraining starts from random weights; supervised fine-tuning reuses them and typically uses labels. Radford et al. included an auxiliary language-model objective in their experiments, while fine-tuning in general need not. The paper-specific and generic conventions differ, and the course paper implies the GPT-1 experiment.",
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q195",
+      "status": "ambiguous",
+      "answer": "A–D are usable; B and D are the conventional mode-seeking choices",
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "steps": "Top-k, top-p, beam and exhaustive search can all generate translations. If appropriate means the conventional mode-seeking objective, B and D are the course key; if it means usable, A–D qualify. No criterion for appropriateness is given, so a unique set cannot be established.",
+      "ambiguity_note": "Top-k, top-p, beam and exhaustive search can all generate translations. If appropriate means the conventional mode-seeking objective, B and D are the course key; if it means usable, A–D qualify. No criterion for appropriateness is given, so a unique set cannot be established.",
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q178",
+      "status": "ambiguous",
+      "answer": "A and B",
+      "answer_options": [
+        "A",
+        "B"
+      ],
+      "steps": "With a fixed model and deterministic tie-breaking both beam search with width four and greedy decoding return the same completion. The item is single-choice but has two correct choices.",
+      "ambiguity_note": "With a fixed model and deterministic tie-breaking both beam search with width four and greedy decoding return the same completion. The item is single-choice but has two correct choices.",
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q190",
+      "status": "derived",
+      "answer": "A, B, C",
+      "answer_options": [
+        "A",
+        "B",
+        "C"
+      ],
+      "steps": "An encoder–decoder Transformer has masked decoder self-attention, encoder multi-head self-attention, and parallel teacher-forced training. A states that a self-attention block uses a mask; it does not assert every self-attention block uses a causal mask. D is false.",
+      "ambiguity_note": null,
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q194",
+      "status": "derived",
+      "answer": "A, B, D",
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "steps": "In the GPT-1 setting, random initialization applies at pretraining, downstream fine-tuning reuses pretrained weights and typically uses labels, and the original supervised-task formulation includes an auxiliary CLM loss. The qualifier “for downstream tasks like sentiment classification” supplies that context; CLM is not a universal requirement for every adaptation.",
+      "ambiguity_note": null,
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q196",
+      "status": "derived",
+      "answer": "C",
+      "answer_options": [
+        "C"
+      ],
+      "steps": "Top-k sampling with k=2 is the only listed stochastic method and can yield different continuations; width-one beam search and greedy search are deterministic with fixed ties. A sample need not differ on every run, but the standard contrast asks which can produce variation.",
+      "ambiguity_note": null,
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q276",
+      "status": "ambiguous",
+      "answer": "B and D",
+      "answer_options": [
+        "B",
+        "D"
+      ],
+      "steps": "Multiple heads can capture different relationships (B); Transformer variants can use batch normalization (D). Both are defensible literal claims, although layer normalization is standard, and only one choice is allowed.",
+      "ambiguity_note": "Multiple heads can capture different relationships (B); Transformer variants can use batch normalization (D). Both are defensible literal claims, although layer normalization is standard, and only one choice is allowed.",
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q277",
+      "status": "ambiguous",
+      "answer": "230,656 with bias-free attention and affine LayerNorm; 232,192 with attention biases",
+      "answer_options": [],
+      "steps": "The shared passage explicitly makes encoder and decoder configurations equal, so N=2 applies to both. Six attention blocks contribute 6×4×64²=98,304, four bias-free FFNs 4×2×64×256=131,072, and ten affine norms 1,280, total 230,656. Attention biases add 6×4×64=1,536. The printed answer favors bias-free attention; the old note incorrectly suggests independent stack depths are unspecified.",
+      "ambiguity_note": "Implied course/exam convention: 230,656 with bias-free attention and affine LayerNorm; 232,192 with attention biases. The shared passage explicitly makes encoder and decoder configurations equal, so N=2 applies to both. Six attention blocks contribute 6×4×64²=98,304, four bias-free FFNs 4×2×64×256=131,072, and ten affine norms 1,280, total 230,656. Attention biases add 6×4×64=1,536. The printed answer favors bias-free attention; the old note incorrectly suggests independent stack depths are unspecified.",
+      "is_numeric": true,
+      "numeric_values": {
+        "conditional_count": 230656
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q278",
+      "status": "ambiguous",
+      "answer": "48,000 weights; 48,750 including an output bias",
+      "answer_options": [],
+      "steps": "A 64-to-750 output projection contains 64×750=48,000 weights; an output bias contributes 750. Whether tied output weights are counted as independent parameters is another convention. The paper key implies a weights-only count.",
+      "ambiguity_note": "Implied course/exam convention: 48,000 weights; 48,750 including an output bias. A 64-to-750 output projection contains 64×750=48,000 weights; an output bias contributes 750. Whether tied output weights are counted as independent parameters is another convention. The paper key implies a weights-only count.",
+      "is_numeric": true,
+      "numeric_values": {
+        "weights": 48000,
+        "with_bias": 48750
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q279",
+      "status": "ambiguous",
+      "answer": "32,000 source embedding weights; 48,000 target embedding weights; 80,000 for both",
+      "answer_options": [],
+      "steps": "The shared encoder–decoder has source vocabulary 500, target vocabulary 750, and width 64, yet asks for “the embedding layer” without identifying source, target, or both. Their untied counts are 500×64, 750×64, and their sum; sharing would need further specification.",
+      "ambiguity_note": "The shared encoder–decoder has source vocabulary 500, target vocabulary 750, and width 64, yet asks for “the embedding layer” without identifying source, target, or both. Their untied counts are 500×64, 750×64, and their sum; sharing would need further specification.",
+      "is_numeric": true,
+      "numeric_values": {
+        "source": 32000,
+        "target": 48000,
+        "both": 80000
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q287",
+      "status": "derived",
+      "answer": "-1",
+      "answer_options": [],
+      "steps": "The pictured passage explicitly instructs entry of -1 for insufficient information. The requested earthquake path deviates from greedy at the third token; P(study | seismology,is,earthquake) is absent. The unknown sequence probability therefore makes -1 the uniquely prescribed answer; the old note identifies the missing conditional correctly but overlooks the resulting resolvability.",
+      "ambiguity_note": null,
+      "is_numeric": true,
+      "numeric_values": {
+        "answer": -1
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q105",
+      "status": "derived",
+      "answer": "D",
+      "answer_options": [
+        "D"
+      ],
+      "steps": "An autoregressive Transformer can be trained for translation, so the assertion is false. Teacher forcing generally accelerates practical training and convergence by supplying reference prefixes and enabling parallel positions; the reason is the standard qualitative course statement, not an all-datasets theorem. D is the unique intended pair.",
+      "ambiguity_note": null,
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q106",
+      "status": "derived",
+      "answer": "C",
+      "answer_options": [
+        "C"
+      ],
+      "steps": "Top-k sampling with k=2 is the only listed stochastic method and can yield different continuations; width-one beam search and greedy search are deterministic with fixed ties. A sample need not differ on every run, but the standard contrast asks which can produce variation.",
+      "ambiguity_note": null,
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q107",
+      "status": "derived",
+      "answer": "A",
+      "answer_options": [
+        "A"
+      ],
+      "steps": "A fixed-vector encoder–decoder RNN has a long-sequence information bottleneck; attention supplies direct access to source states, as do Transformer attention mechanisms. The phrase “in general” asks for this comparative course principle, not a claim that the other models have unlimited context.",
+      "ambiguity_note": null,
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q108",
+      "status": "ambiguous",
+      "answer": "A, B, D for the original GPT-1 supervised experiments; A, D for ordinary supervised fine-tuning without the optional auxiliary CLM loss",
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "steps": "GPT-1 pretraining starts from random weights; supervised fine-tuning reuses them and typically uses labels. Radford et al. included an auxiliary language-model objective in their experiments, while fine-tuning in general need not. The paper-specific and generic conventions differ, and the course paper implies the GPT-1 experiment.",
+      "ambiguity_note": "Implied course/exam convention: A, B, D for the original GPT-1 supervised experiments; A, D for ordinary supervised fine-tuning without the optional auxiliary CLM loss. GPT-1 pretraining starts from random weights; supervised fine-tuning reuses them and typically uses labels. Radford et al. included an auxiliary language-model objective in their experiments, while fine-tuning in general need not. The paper-specific and generic conventions differ, and the course paper implies the GPT-1 experiment.",
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q110",
+      "status": "ambiguous",
+      "answer": "A–D are usable; B and D are the conventional mode-seeking choices",
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "steps": "Top-k, top-p, beam and exhaustive search can all generate translations. If appropriate means the conventional mode-seeking objective, B and D are the course key; if it means usable, A–D qualify. No criterion for appropriateness is given, so a unique set cannot be established.",
+      "ambiguity_note": "Top-k, top-p, beam and exhaustive search can all generate translations. If appropriate means the conventional mode-seeking objective, B and D are the course key; if it means usable, A–D qualify. No criterion for appropriateness is given, so a unique set cannot be established.",
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q111",
+      "status": "ambiguous",
+      "answer": "0 for fixed sinusoidal positions; 1,024 for a learned table",
+      "answer_options": [],
+      "steps": "The source embedding condition gives d=3200/100=32 and the context has 32 positions. A learned position table contains 32×32=1,024 parameters; fixed sinusoids contain zero. The original Transformer used sinusoids, while the paper key implies a learned table; “vanilla” alone does not settle this conflict.",
+      "ambiguity_note": "Implied course/exam convention: 0 for fixed sinusoidal positions; 1,024 for a learned table. The source embedding condition gives d=3200/100=32 and the context has 32 positions. A learned position table contains 32×32=1,024 parameters; fixed sinusoids contain zero. The original Transformer used sinusoids, while the paper key implies a learned table; “vanilla” alone does not settle this conflict.",
+      "is_numeric": true,
+      "numeric_values": {
+        "model_dimension": 32,
+        "learned_position_parameters": 1024,
+        "fixed_position_parameters": 0
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q112",
+      "status": "ambiguous",
+      "answer": "3,072 Q/K/V matrix weights, or 3,168 including Q/K/V biases, if d=32",
+      "answer_options": [],
+      "steps": "Carrying the preceding conditional source table to the common model gives d=3200/100=32; 3d²=3072 weights, plus 3d=96 biases if present. The course key implies shared context and weights only, but the earlier supposition is not expressly repeated and biases are not fixed.",
+      "ambiguity_note": "Implied course/exam convention: 3,072 Q/K/V matrix weights, or 3,168 including Q/K/V biases, if d=32. Carrying the preceding conditional source table to the common model gives d=3200/100=32; 3d²=3072 weights, plus 3d=96 biases if present. The course key implies shared context and weights only, but the earlier supposition is not expressly repeated and biases are not fixed.",
+      "is_numeric": true,
+      "numeric_values": {
+        "matrix_weights": 3072
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q113",
+      "status": "ambiguous",
+      "answer": "256 matrix weights if d=32; otherwise d²/4",
+      "answer_options": [],
+      "steps": "If the preceding subquestion’s embedding condition applies, d=3200/100=32 and one of four heads has W_Q of size 32×8=256. Without carrying the conditional value forward the common passage leaves d unknown. The matrix itself has no separate bias; the course key implies carrying the width forward.",
+      "ambiguity_note": "Implied course/exam convention: 256 matrix weights if d=32; otherwise d²/4. If the preceding subquestion’s embedding condition applies, d=3200/100=32 and one of four heads has W_Q of size 32×8=256. Without carrying the conditional value forward the common passage leaves d unknown. The matrix itself has no separate bias; the course key implies carrying the width forward.",
+      "is_numeric": true,
+      "numeric_values": {
+        "matrix_weights": 256
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q118",
+      "status": "derived",
+      "answer": "60/41 ≈ 1.4634146",
+      "answer_options": [],
+      "steps": "The passage asks for an estimate from the given corpus. Ignoring punctuation leaves 41 tokens, six equal to Sachin; empirical P(Sachin)=6/41, so 10P=60/41. Uniform empirical token counting is the natural data-based estimate, not a missing parameter.",
+      "ambiguity_note": null,
+      "is_numeric": true,
+      "numeric_values": {
+        "total_tokens": 41,
+        "sachin_count": 6,
+        "scaled_probability": 1.4634146341463414
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q119",
+      "status": "derived",
+      "answer": "100/41 ≈ 2.4390244",
+      "answer_options": [],
+      "steps": "After punctuation removal the 41-token corpus contains the consecutive pair Sachin Tendulkar once. Empirical chain-rule estimation gives P(Sachin)P(Tendulkar|Sachin)=(6/41)(1/6)=1/41, and 100P=100/41. The printed upper bound 2.43 excludes this exact result by about 0.009, apparently a key tolerance issue.",
+      "ambiguity_note": null,
+      "is_numeric": true,
+      "numeric_values": {
+        "total_tokens": 41,
+        "phrase_count": 1,
+        "scaled_probability": 2.4390243902439024
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q120",
+      "status": "derived",
+      "answer": "100/41 ≈ 2.4390244",
+      "answer_options": [],
+      "steps": "The 41-token corpus contains the requested five-token phrase once. Chain-rule empirical counts telescope: (6/41)(4/6)(2/4)(2/2)(1/2)=1/41; multiply by 100. The printed 2.43 upper bound narrowly excludes the result, a key tolerance issue.",
+      "ambiguity_note": null,
+      "is_numeric": true,
+      "numeric_values": {
+        "total_tokens": 41,
+        "phrase_count": 1,
+        "scaled_probability": 2.4390243902439024
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q121",
+      "status": "derived",
+      "answer": "A: broken",
+      "answer_options": [
+        "A"
+      ],
+      "steps": "The requested corpus-based estimate counts broken twice after “Sachin has”, versus acted once and highest once. An adequately fitted model is intended to reflect the empirical ranking; the old caveat is mathematically true for arbitrary training but ignores the stated “sufficiently trained” teaching context.",
+      "ambiguity_note": null,
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q141",
+      "status": "ambiguous",
+      "answer": "A, B, C and D are possible; the most likely assignments are not identifiable",
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "steps": "Deterministic greedy is consistent with repeated stories, and top-p sampling can produce variation; a fixed model and unspecified stochastic seed, sample size, probability distribution and priors do not determine the “most likely” mappings. Top-k can repeat by chance and p=0.5 can even yield a one-token nucleus despite T=1.5.",
+      "ambiguity_note": "Deterministic greedy is consistent with repeated stories, and top-p sampling can produce variation; a fixed model and unspecified stochastic seed, sample size, probability distribution and priors do not determine the “most likely” mappings. Top-k can repeat by chance and p=0.5 can even yield a one-token nucleus despite T=1.5.",
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q145",
+      "status": "derived",
+      "answer": "0.41",
+      "answer_options": [],
+      "steps": "The explicit temperature is T=2 regardless of the erroneous adjective “low”. Softmax gives exp(1.5/2)/[exp(1.5/2)+exp(0.5/2)+exp(0)+exp(-0.5/2)]=0.40870097, which rounds to 0.41.",
+      "ambiguity_note": null,
+      "is_numeric": true,
+      "numeric_values": {
+        "logits": [
+          1.5,
+          0.5,
+          0,
+          -0.5
+        ],
+        "temperature": 2,
+        "probability_rounded": 0.41
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q147",
+      "status": "ambiguous",
+      "answer": "No listed option; approximately [[4,8],[4,8]]",
+      "answer_options": [],
+      "steps": "The original shared image has X=[[1,0],[0,2],[1,0],[0,2]] and W¹=[[1,1,1,1],[2,2,2,2]], with column-oriented tokens. Hence Q=K=V=[[2,4],[4,8]], and the displayed softmax(QᵀK/√2)Vᵀ is approximately [[4,8],[4,8]]. No option matches. The Markdown transcription is different.",
+      "ambiguity_note": "The original shared image has X=[[1,0],[0,2],[1,0],[0,2]] and W¹=[[1,1,1,1],[2,2,2,2]], with column-oriented tokens. Hence Q=K=V=[[2,4],[4,8]], and the displayed softmax(QᵀK/√2)Vᵀ is approximately [[4,8],[4,8]]. No option matches. The Markdown transcription is different.",
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          [
+            3.99999856,
+            7.99999711
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q148",
+      "status": "ambiguous",
+      "answer": "No listed option; approximately [[1.33952,3.33024],[0.11161,3.94419]]",
+      "answer_options": [],
+      "steps": "From the pictured shared X and W², Q=K=V=[[2,0],[3,4]]. Row-softmax(QᵀK/√2)Vᵀ gives the stated matrix; no pictured option agrees. The Markdown transcription differs from the shared image.",
+      "ambiguity_note": "From the pictured shared X and W², Q=K=V=[[2,0],[3,4]]. Row-softmax(QᵀK/√2)Vᵀ gives the stated matrix; no pictured option agrees. The Markdown transcription differs from the shared image.",
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          [
+            1.3395231,
+            3.33023845
+          ],
+          [
+            0.11161444,
+            3.94419278
+          ]
+        ]
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q149",
+      "status": "ambiguous",
+      "answer": "No listed option; approximately [[2,2],[4,4],[1.33952,0.11161],[3.33024,3.94419]]",
+      "answer_options": [],
+      "steps": "Transpose the two head outputs into the image’s feature-by-token layout, concatenate and left-multiply diag(0.5,0.5,1,1). The resulting four-by-two matrix matches no pictured option; the shared-image matrices differ from the transcription.",
+      "ambiguity_note": "Transpose the two head outputs into the image’s feature-by-token layout, concatenate and left-multiply diag(0.5,0.5,1,1). The resulting four-by-two matrix matches no pictured option; the shared-image matrices differ from the transcription.",
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          [
+            1.99999928,
+            2
+          ],
+          [
+            3.99999856,
+            4
+          ],
+          [
+            1.3395231,
+            0.11161444
+          ],
+          [
+            3.33023845,
+            3.94419278
+          ]
+        ]
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q150",
+      "status": "derived",
+      "answer": "32",
+      "answer_options": [],
+      "steps": "The pictured shared passage gives X=[[1,1],[2,3],[1,2],[3,1]] and MHA(X)=[[1,2],[3,3],[2,3],[3,1]]. Their sum is [[2,3],[5,6],[3,5],[6,2]], whose entries total 32. A transcription or answer-key discrepancy does not make the legible original image ambiguous.",
+      "ambiguity_note": null,
+      "is_numeric": true,
+      "numeric_values": {
+        "R": [
+          [
+            2,
+            3
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            6,
+            2
+          ]
+        ],
+        "sum": 32
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q17",
+      "status": "ambiguous",
+      "answer": "B and C when “self-attention” means the score and value products; C alone when projection FLOPs are included",
+      "answer_options": [
+        "B",
+        "C"
+      ],
+      "steps": "For fixed width, QKᵀ and AV cost cL², so L→2L multiplies these products by 4 (B); the position-wise FFN costs fL and doubles (C). Including Q/K/V and output projections gives aL²+bL and ratio (4aL²+2bL)/(aL²+bL), generally neither 2 nor 4.",
+      "ambiguity_note": "Implied course/exam convention: B and C when “self-attention” means the score and value products; C alone when projection FLOPs are included. The two attention matrix products scale as L²d and quadruple, while the positionwise FFN scales as L and doubles. Including the Q/K/V/output projections adds a linear-in-L term, making the exact total factor between 2 and 4. The usual textbook attention-complexity convention implies B and C; the old note correctly identifies the scope choice.",
+      "is_numeric": true,
+      "numeric_values": {
+        "quadratic_factor": 4,
+        "ffn_factor": 2
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q20",
+      "status": "derived",
+      "answer": "48 sets (144 individual matrices)",
+      "answer_options": [],
+      "steps": "Each of six encoder layers has eight heads; each head has one set (W_Q,W_K,W_V). Thus there are 6×8=48 sets, containing 144 individual matrices. The question explicitly asks for sets, so the old alternative counts a different object.",
+      "ambiguity_note": null,
+      "is_numeric": true,
+      "numeric_values": {
+        "sets": 48,
+        "individual_matrices": 144
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q2",
+      "status": "ambiguous",
+      "answer": "No universally correct option; D applies in evaluation with tracked running statistics",
+      "answer_options": [],
+      "steps": "For one observation per normalized channel during training, the mean is that observation, not necessarily 0, and variance is 0; some implementations reject the case. Evaluation with tracked running statistics uses those statistics (D), but other spatial dimensions and evaluation modes are possible. The prompt specifies neither mode nor reduction axes.",
+      "ambiguity_note": "For one observation per normalized channel during training, the mean is that observation, not necessarily 0, and variance is 0; some implementations reject the case. Evaluation with tracked running statistics uses those statistics (D), but other spatial dimensions and evaluation modes are possible. The prompt specifies neither mode nor reduction axes.",
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q8",
+      "status": "derived",
+      "answer": "B: QKᵀ",
+      "answer_options": [
+        "B"
+      ],
+      "steps": "QKᵀ multiplies [T,d] by [d,T], constructing the T×T score matrix in O(T²d), so B answers the stated matrix-construction question. AV is also O(T²d) but consumes the matrix; broad wording about the entire mechanism admits C. The supplied B/C image crops are misaligned with their text and cannot verify the option text.",
+      "ambiguity_note": null,
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q25",
+      "status": "ambiguous",
+      "answer": "B and C when “self-attention” means the score and value products; C alone when projection FLOPs are included",
+      "answer_options": [
+        "B",
+        "C"
+      ],
+      "steps": "For fixed width, QKᵀ and AV cost cL², so L→2L multiplies these products by 4 (B); the position-wise FFN costs fL and doubles (C). Including Q/K/V and output projections gives aL²+bL and ratio (4aL²+2bL)/(aL²+bL), generally neither 2 nor 4.",
+      "ambiguity_note": "Implied course/exam convention: B and C when “self-attention” means the score and value products; C alone when projection FLOPs are included. The two attention matrix products scale as L²d and quadruple, while the positionwise FFN scales as L and doubles. Including the Q/K/V/output projections adds a linear-in-L term, making the exact total factor between 2 and 4. The usual textbook attention-complexity convention implies B and C; the old note correctly identifies the scope choice.",
+      "is_numeric": true,
+      "numeric_values": {
+        "quadratic_factor": 4,
+        "ffn_factor": 2
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q180",
+      "status": "derived",
+      "answer": "C: (V−1)V^L",
+      "answer_options": [
+        "C"
+      ],
+      "steps": "Exhaustive search over length L has V^L candidates; over length L+1 it has V^(L+1). The increase in candidate count is V^(L+1)−V^L=(V−1)V^L. “Additional” naturally asks for the increase, rather than a count of the identities of new strings.",
+      "ambiguity_note": null,
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q190",
+      "status": "ambiguous",
+      "answer": "524,800 unmasked or finite-softmax positive entries; raw nonzero logits undetermined",
+      "answer_options": [],
+      "steps": "The inclusive causal triangle contains 1024×1025/2=524,800 allowed positions. With finite logits, post-softmax allowed weights are positive and masked weights zero; pre-softmax raw allowed scores can be zero and additive-masked scores are −∞. The course convention counts available causal weights, but “score matrix” does not specify the stage.",
+      "ambiguity_note": "Implied course/exam convention: 524,800 unmasked or finite-softmax positive entries; raw nonzero logits undetermined. The inclusive causal triangle contains 1024×1025/2=524,800 allowed positions. With finite logits, post-softmax allowed weights are positive and masked weights zero; pre-softmax raw allowed scores can be zero and additive-masked scores are −∞. The course convention counts available causal weights, but “score matrix” does not specify the stage.",
+      "is_numeric": true,
+      "numeric_values": {
+        "T": 1024,
+        "allowed_entries": 524800
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q12",
+      "status": "derived",
+      "answer": "A, B, D",
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "steps": "BERT self-attention is bidirectional and predicts masked tokens; GPT uses causal attention and next-token prediction. B’s “previous tokens” is the usual prediction-relative shorthand: the current input position is among the tokens preceding the predicted next token. C reverses the architectures.",
+      "ambiguity_note": null,
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q16",
+      "status": "derived",
+      "answer": "C",
+      "answer_options": [
+        "C"
+      ],
+      "steps": "A frozen encoder produces fixed features; a trainable linear layer scores candidates and softmax normalizes scores (C). Joint or separately encoded question/choice features are possible, so the particular pair format in B is not mandatory; A updates the body and D describes generation.",
+      "ambiguity_note": null,
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q12",
+      "status": "derived",
+      "answer": "cos(3/10000^(4/128)) ≈ −0.62792665",
+      "answer_options": [],
+      "steps": "The explicitly requested sixth element is zero-based coordinate 5=2×2+1; the cosine formula therefore uses pair index 2. The reuse of i for coordinate and pair index is a notation slip, but “sixth element” fixes the requested coordinate unambiguously.",
+      "ambiguity_note": null,
+      "is_numeric": true,
+      "numeric_values": {
+        "position": 3,
+        "coordinate": 5,
+        "pair_index": 2,
+        "value": -0.6279266524418035
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q18",
+      "status": "ambiguous",
+      "answer": "D: 147,456 weights; 147,648 including Q/K/V biases",
+      "answer_options": [
+        "D"
+      ],
+      "steps": "With width 768 and 12 heads, each head width is 64. The three 768×64 projection matrices contain 147,456 weights; three bias vectors add 192. D and the course-style matrix count imply bias-free projections, whereas the track’s GPT parameter convention includes biases.",
+      "ambiguity_note": "Implied course/exam convention: D: 147,456 weights; 147,648 including Q/K/V biases. With width 768 and 12 heads, each head width is 64. The three 768×64 projection matrices contain 147,456 weights; three bias vectors add 192. D and the course-style matrix count imply bias-free projections, whereas the track’s GPT parameter convention includes biases.",
+      "is_numeric": true,
+      "numeric_values": {
+        "head_width": 64,
+        "weights_only": 147456,
+        "with_biases": 147648
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q3",
+      "status": "ambiguous",
+      "answer": "A is false; D is also false as an unrestricted mathematical claim",
+      "answer_options": [
+        "A",
+        "D"
+      ],
+      "steps": "Sinusoidal dot products sum cosines of relative offsets and do not strictly increase with separation (A false). One-hot vectors have equal pairwise distances, but their active indices can be decoded and subtracted, so one-hot positions are not mathematically incapable of representing relative distance (D false). A single-choice question has two false statements under literal wording.",
+      "ambiguity_note": "Sinusoidal dot products sum cosines of relative offsets and do not strictly increase with separation (A false). One-hot vectors have equal pairwise distances, but their active indices can be decoded and subtracted, so one-hot positions are not mathematically incapable of representing relative distance (D false). A single-choice question has two false statements under literal wording.",
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q6",
+      "status": "ambiguous",
+      "answer": "3 when ε=0; 1+2/√(1+ε) otherwise",
+      "answer_options": [],
+      "steps": "The third pictured row is [7,5], with mean 6 and population variance 1. LayerNorm gives 2(7−6)/√(1+ε)+1. Elementary hand calculations conventionally omit ε and obtain 3; implementations use a small positive ε and the problem does not state it.",
+      "ambiguity_note": "Implied course/exam convention: 3 when ε=0; 1+2/√(1+ε) otherwise. The third pictured row is [7,5], with mean 6 and population variance 1. LayerNorm gives 2(7−6)/√(1+ε)+1. Elementary hand calculations conventionally omit ε and obtain 3; implementations use a small positive ε and the problem does not state it.",
+      "is_numeric": true,
+      "numeric_values": {
+        "mean": 6,
+        "variance": 1,
+        "output_if_epsilon_zero": 3
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q18",
+      "status": "derived",
+      "answer": "C: [5, 3, −1, −1]ᵀ",
+      "answer_options": [
+        "C"
+      ],
+      "steps": "Using the pictured x₁=(2,1,3,2), the rows of W_Q yield (2+3,1+2,2−3,1−2)=(5,3,−1,−1), option C. The extracted second component 13 is a transcription error.",
+      "ambiguity_note": null,
+      "is_numeric": true,
+      "numeric_values": {
+        "x_m": [
+          2,
+          1,
+          3,
+          2
+        ],
+        "product": [
+          5,
+          3,
+          -1,
+          -1
+        ]
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q19",
+      "status": "derived",
+      "answer": "B: [4, 6, −2, −2]ᵀ",
+      "answer_options": [
+        "B"
+      ],
+      "steps": "Using the pictured x₃=(1,3,2,4), the rows of W_K yield (1+3,2+4,1−3,2−4)=(4,6,−2,−2), option B. The extracted second component 16 is a transcription error.",
+      "ambiguity_note": null,
+      "is_numeric": true,
+      "numeric_values": {
+        "x_n": [
+          1,
+          3,
+          2,
+          4
+        ],
+        "product": [
+          4,
+          6,
+          -2,
+          -2
+        ]
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q12",
+      "status": "derived",
+      "answer": "A, B, D",
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "steps": "BERT self-attention is bidirectional and predicts masked tokens; GPT uses causal attention and next-token prediction. B’s “previous tokens” is the usual prediction-relative shorthand: the current input position is among the tokens preceding the predicted next token. C reverses the architectures.",
+      "ambiguity_note": null,
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q16",
+      "status": "derived",
+      "answer": "C",
+      "answer_options": [
+        "C"
+      ],
+      "steps": "A frozen encoder produces fixed features; a trainable linear layer scores candidates and softmax normalizes scores (C). Joint or separately encoded question/choice features are possible, so the particular pair format in B is not mandatory; A updates the body and D describes generation.",
+      "ambiguity_note": null,
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q11",
+      "status": "ambiguous",
+      "answer": "C if the omitted B path is below 0.09; B if it exceeds 0.09; tie at 0.09",
+      "answer_options": [
+        "B",
+        "C"
+      ],
+      "steps": "The pictured partial tree gives A=.5×.3×.4=.06, C=.5×.3×.6=.09, D=.4×.4×.5=.08, and E=.4×.4×.4=.064. B starts with an unpictured apples branch whose mass may be as high as .1; its continuation probabilities are not given. Both C and B can win.",
+      "ambiguity_note": "The pictured partial tree gives A=.5×.3×.4=.06, C=.5×.3×.6=.09, D=.4×.4×.5=.08, and E=.4×.4×.4=.064. B starts with an unpictured apples branch whose mass may be as high as .1; its continuation probabilities are not given. Both C and B can win.",
+      "is_numeric": true,
+      "numeric_values": {
+        "A": 0.06,
+        "C": 0.09,
+        "D": 0.08,
+        "E": 0.064
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q12",
+      "status": "derived",
+      "answer": "-1",
+      "answer_options": [],
+      "steps": "The pictured tree is explicitly partial, and the question explicitly prescribes -1 if the information is insufficient. P(apples|like) marginalizes over all first-token contexts; omitted first tokens may also precede like. The requested ratio is not determined, so -1 is the unique prescribed response.",
+      "ambiguity_note": null,
+      "is_numeric": true,
+      "numeric_values": {
+        "answer": -1
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q15",
+      "status": "ambiguous",
+      "answer": "400 unbatched prefix evaluations; 4 batched depth-wise forward passes",
+      "answer_options": [],
+      "steps": "General exhaustive decoding evaluates 1+7+7²+7³=400 prefixes to assign probabilities to four tokens. If “decoder run” means batched forward pass, four depth-wise calls suffice; if the supplied table is reusable and prefix-invariant, the computation needs no additional model calls. The usual course search-tree convention implies 400 but the unit is not defined.",
+      "ambiguity_note": "Implied course/exam convention: 400 unbatched prefix evaluations; 4 batched depth-wise forward passes. General exhaustive decoding evaluates 1+7+7²+7³=400 prefixes to assign probabilities to four tokens. If “decoder run” means batched forward pass, four depth-wise calls suffice; if the supplied table is reusable and prefix-invariant, the computation needs no additional model calls. The usual course search-tree convention implies 400 but the unit is not defined.",
+      "is_numeric": true,
+      "numeric_values": {
+        "vocabulary": 7,
+        "prefix_counts": [
+          1,
+          7,
+          49,
+          343
+        ],
+        "total": 400
+      },
+      "source": "independent audit"
+    },
+    {
+      "id": "da5004_2026T2_Q2_NA--q10",
+      "status": "derived",
+      "answer": "A",
+      "answer_options": [
+        "A"
+      ],
+      "steps": "At T=5 versus T=1, softmax is flatter and the cumulative mass of any fixed top-k prefix cannot increase, so the nucleus size cannot decrease. It can stay equal for some logits and p, but A best describes the trend among the choices; the question asks for the best description, not a universal strict inequality.",
+      "ambiguity_note": null,
+      "is_numeric": false,
+      "numeric_values": {},
+      "source": "independent audit"
+    }
+  ]
+}

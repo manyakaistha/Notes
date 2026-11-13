@@ -1,0 +1,575 @@
+{
+  "week": 1,
+  "chunk": "a",
+  "author": "terra",
+  "records": [
+    {
+      "id": "da5004_2024T1_ET_AN--q151",
+      "answer": "Not uniquely determinable.",
+      "steps": "For vocabulary size V, fixed positions contribute zero; with bias-free attention and two affine layer norms per layer, the encoder and embedding total is 2,366,208 + 256V. Divide by 1,000 and truncate as requested.",
+      "status": "ambiguous",
+      "ambiguity_note": "Vocabulary size is not specified; attention biases and normalization parameters are also not specified.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "encoder_parameters": 2366208
+      }
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q152",
+      "answer": "0 additional parameters.",
+      "steps": "Fixed sinusoidal positions have no learned parameters and the layer and vocabulary sizes are unchanged.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "additional_parameters": 0
+      }
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q153",
+      "answer": "The sum after the output projection is 1.676.",
+      "steps": "From the image, use the last attention row [0.04, 0.12, 0.17, 0.67], the four embeddings in sentence order, then compute AHW_VW_O = [-0.417, 2.093]; the sum is 1.676. The displayed attention entries are rounded.",
+      "status": "ambiguous",
+      "ambiguity_note": "The question does not specify whether representation is before or after W_O; before W_O the sum differs. The displayed attention entries are rounded.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          -0.417,
+          2.093
+        ],
+        "sum": 1.676
+      }
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q154",
+      "answer": "Approximately 0.53.",
+      "steps": "Without positional information, reordering permutes attention rows and columns. Coffee is row 3 and often column 4 in the original table; the entry is 0.53.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "attention": 0.53
+      }
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q155",
+      "answer": "8 tokens.",
+      "steps": "The displayed score matrix has shape `8 \u00d7 8`, one row and column per token.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sequence_length": 8
+      }
+    },
+    {
+      "id": "da5004_2024T1_ET_AN--q156",
+      "answer": "A, C and D.",
+      "steps": "The query\u2013key dot product requires d_q = d_k, while d_v can differ. A, C, D have equal query and key dimensions; B and E do not.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "C",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q206",
+      "answer": "Not uniquely determinable.",
+      "steps": "For vocabulary size V, fixed positions contribute zero; with bias-free attention and two affine layer norms per layer, the encoder and embedding total is 2,366,208 + 256V. Divide by 1,000 and truncate as requested.",
+      "status": "ambiguous",
+      "ambiguity_note": "Vocabulary size is not specified; attention biases and normalization parameters are also not specified.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "encoder_parameters": 2366208
+      }
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q207",
+      "answer": "0 additional parameters.",
+      "steps": "Fixed sinusoidal positions have no learned parameters and the layer and vocabulary sizes are unchanged.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "additional_parameters": 0
+      }
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q208",
+      "answer": "The sum after output projection is 1.592.",
+      "steps": "Using the displayed coffee attention row [0.25, 0.06, 0.17, 0.53], the embeddings in sentence order and the image matrices gives AHW_VW_O = [-0.324, 1.916], whose sum is 1.592.",
+      "status": "ambiguous",
+      "ambiguity_note": "The question does not specify whether representation is before or after W_O; before W_O the sum differs. The displayed attention entries are rounded.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          -0.324,
+          1.916
+        ],
+        "sum": 1.592
+      }
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q209",
+      "answer": "Approximately 0.53.",
+      "steps": "Without positional information, reordering permutes attention rows and columns. Coffee is row 3 and much column 4 in the original table; the entry is 0.53.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "attention": 0.53
+      }
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q210",
+      "answer": "8 tokens.",
+      "steps": "The displayed score matrix has shape `8 \u00d7 8`, one row and column per token.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sequence_length": 8
+      }
+    },
+    {
+      "id": "da5004_2024T1_ET_FN--q211",
+      "answer": "A, B, C and D.",
+      "steps": "The query\u2013key dot product requires d_q = d_k, while d_v can differ. A\u2013D have equal dimensions; E and F do not.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q186",
+      "answer": "Approximately -0.057922.",
+      "steps": "Using zero-based positions, T is at 3 and A at 4. From the image W_Q=diag(1,-1), W_K=[[1,0],[1,0]]; score = sin(3) \u00d7 (1+sin(4)+cos(4)).",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "score": -0.05792216
+      }
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q187",
+      "answer": "A: G at position 0.",
+      "steps": "For query T at zero-based index 3 the unscaled scores are approximately [0.42336, 0.19500, 0.06959, 0.02133, -0.05792, 0.18695]. G at 0 is highest; C (B), T (C), and A (D) score lower.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "scores": [
+          0.42336,
+          0.194996,
+          0.069593,
+          0.021327,
+          -0.057922,
+          0.186947
+        ]
+      }
+    },
+    {
+      "id": "da5004_2024T1_Q1_NA--q189",
+      "answer": "768 matrix weights, assuming the preceding question\u2019s embedding size carries over.",
+      "steps": "From 1600 source embedding weights / 100 tokens, d_model=16. Two heads each have three `16 \u00d7 8` matrices: 2\u00d73\u00d716\u00d78=768; W_O excluded.",
+      "status": "ambiguous",
+      "ambiguity_note": "The 1600-parameter embedding is stated conditionally in the preceding subquestion, not explicitly carried over; attention biases are unspecified.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "matrix_weights": 768
+      }
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q176",
+      "answer": "Approximately 0.239933.",
+      "steps": "The image asks for the (0,0) element of \u2202a\u2083/\u2202e\u2083, not z\u2081. For query 3, scores are [2.2, 1.1, 1.1], giving a\u2083,\u2080\u22480.600333; its softmax diagonal derivative is a\u2083,\u2080(1\u2212a\u2083,\u2080)\u22480.239933.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "scores": [
+          2.2,
+          1.1,
+          1.1
+        ],
+        "derivative": 0.2399332882
+      }
+    },
+    {
+      "id": "da5004_2024T3_ET_AN--q184",
+      "answer": "A.",
+      "steps": "With row vectors, e\u1d62\u2c7c=(x\u1d62+p\u1d62)W_Q W_K\u1d40(x\u2c7c+p\u2c7c)\u1d40; expanding gives A. B has incorrect signs; C reverses query and key projections; D omits necessary transposes; E is false.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q189",
+      "answer": "Approximately 0.246608.",
+      "steps": "The image asks for \u2202a\u2083/\u2202e\u2083 at (0,0). For query 3 scores are [1.65, 0.11, 1.1], so a\u2083,\u2080\u22480.558244 and the corresponding softmax diagonal derivative is a\u2083,\u2080(1\u2212a\u2083,\u2080)\u22480.246608.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "scores": [
+          1.65,
+          0.11,
+          1.1
+        ],
+        "derivative": 0.2466076191
+      }
+    },
+    {
+      "id": "da5004_2024T3_ET_FN--q199",
+      "answer": "A: O(T\u00b2d).",
+      "steps": "Multiplying `Q [T,d]` by `K\u1d40 [d,T]` produces `T\u00b2` dot products of length d. B is projection cost, C and D omit pairwise work, E is false.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q290",
+      "answer": "D: `128 \u00d7 32` for one head.",
+      "steps": "The image asks for W_Q in one head: d_model=128 and 4 heads give d_q=32. Thus W_Q is `128 \u00d7 32`; A, B, C, E have incorrect dimensions and F is false.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [
+        "D"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "shape": [
+          128,
+          32
+        ]
+      }
+    },
+    {
+      "id": "da5004_2024T3_Q1_NA--q292",
+      "answer": "0.",
+      "steps": "The image asks for sum of \u2202L/\u2202e\u2083, not \u2202L/\u2202h\u2081. Since a\u2083=softmax(e\u2083), \u2202L/\u2202e\u2083=(diag(a\u2083)\u2212a\u2083a\u2083\u1d40)V[1,2]\u1d40; every column of the softmax Jacobian sums to zero, so the gradient sum is zero.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sum": 0
+      }
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q107",
+      "answer": "A is the conventional intended answer: an encoder\u2013decoder RNN with a fixed context vector.",
+      "steps": "A fixed-length RNN context bottleneck makes long sentences difficult; B attention supplies access to all encoder states and C self-attention supplies direct token interactions. Neither makes long-sequence problems impossible.",
+      "status": "ambiguous",
+      "ambiguity_note": "The unqualified wording \u201cin general, struggle\u201d is not a precise criterion: attention RNNs and transformers also have long-context limitations.",
+      "verified_by_code": false,
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q112",
+      "answer": "3,072 matrix weights if the previous question\u2019s embedding size carries over.",
+      "steps": "The prior subquestion gives 3,200 weights for 100 source tokens, implying d_model=32 and 4 heads of width 8. Three projection matrices per head give 4\u00d73\u00d732\u00d78=3,072, excluding W_O and FFN.",
+      "status": "ambiguous",
+      "ambiguity_note": "The 3,200 embedding parameters are conditional in the preceding subquestion and not explicitly carried over; projection biases are unspecified.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "matrix_weights": 3072
+      }
+    },
+    {
+      "id": "da5004_2025T1_Q1_NA--q113",
+      "answer": "256 weights if the previous question\u2019s embedding size carries over.",
+      "steps": "Assuming the preceding 3,200 source embedding weights and 100 words, d_model=32 and d_q=32/4=8, so one W_Q has `32 \u00d7 8`=256 entries.",
+      "status": "ambiguous",
+      "ambiguity_note": "The 3,200 embedding parameters are conditional in an earlier subquestion and not explicitly carried over.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "matrix_weights": 256
+      }
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q199",
+      "answer": "Approximately 0.950 using the supplied rounded attention matrix.",
+      "steps": "The enjoy row is [0.43,0.25,0.21,0.10]. Multiply this row by H W_V W_O to get [1.331,\u22120.381], summing to 0.950. Recomputing full precision from the matrices gives approximately 0.95216.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          1.331,
+          -0.381
+        ],
+        "sum": 0.95
+      }
+    },
+    {
+      "id": "da5004_2025T2_ET_AN--q200",
+      "answer": "Approximately 0.07 from the supplied table.",
+      "steps": "Without positional encodings, reordering permutes attention rows and columns; tea is row 3 and often column 4 of the supplied original matrix, so the entry is 0.07. Recomputing from the matrices gives approximately 0.06607.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "attention_rounded": 0.07,
+        "attention_exact_approx": 0.06606854
+      }
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q146",
+      "answer": "Approximately 1.020 using the supplied rounded attention matrix.",
+      "steps": "The tea row is [0.39,0.39,0.16,0.07]. Multiplication by H W_V W_O yields [1.272,\u22120.252] with sum 1.020. Recomputing full precision from the stated matrices gives approximately 1.01445.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          1.272,
+          -0.252
+        ],
+        "sum": 1.02
+      }
+    },
+    {
+      "id": "da5004_2025T2_ET_FN--q147",
+      "answer": "Approximately 0.07 from the supplied table.",
+      "steps": "With no positional encodings reordering permutes rows and columns; the original tea-query, often-key table entry is 0.07. Recomputing the matrices gives approximately 0.06607.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "attention_rounded": 0.07,
+        "attention_exact_approx": 0.06606854
+      }
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q135",
+      "answer": "C: all input positions can be processed in parallel.",
+      "steps": "Self-attention and feed-forward operations allow parallel processing of available positions during a forward pass. A and B prescribe a recurrence or reverse order, neither required; D is not generally true for causal generation, which processes a prefix.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q136",
+      "answer": "A: normalize attention scores into a probability distribution.",
+      "steps": "Row-wise softmax yields nonnegative weights summing to one, used to average values. B is a generic consequence rather than the attention-specific purpose; C concerns an output classifier; D is not what softmax does.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q146",
+      "answer": "1.00.",
+      "steps": "The weighted vector is 0.1[1,0]+0.2[0,1]+0.5[1,1]+0.2[2,1]=[1.0,0.9]; the first component is 1.00.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          1.0,
+          0.9
+        ],
+        "first": 1.0
+      }
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q147",
+      "answer": "No option matches the paper\u2019s stated matrices.",
+      "steps": "From the image, Q=K=V=W\u00b9X=[[2,4],[4,8]], and the printed formula gives softmax(Q\u1d40K/\u221a2)V\u1d40\u2248[[4,8],[4,8]]. A, B, C, and D differ substantially.",
+      "status": "ambiguous",
+      "ambiguity_note": "No listed option matches; the inventory transcription of the matrices differs from the paper image.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          [
+            3.99999856,
+            7.99999711
+          ],
+          [
+            4,
+            8
+          ]
+        ]
+      }
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q148",
+      "answer": "No option matches the paper\u2019s stated matrices.",
+      "steps": "Using the image, Q=K=V=W\u00b2X=[[2,0],[3,4]]. Row-softmax(Q\u1d40K/\u221a2)V\u1d40\u2248[[1.33952,3.33024],[0.11161,3.94419]]. A, B, C and D each differ from this result.",
+      "status": "ambiguous",
+      "ambiguity_note": "No option matches; the inventory transcription differs from the paper image.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          [
+            1.3395231,
+            3.33023845
+          ],
+          [
+            0.11161444,
+            3.94419278
+          ]
+        ]
+      }
+    },
+    {
+      "id": "da5004_2025T2_Q1_NA--q149",
+      "answer": "No option matches the paper\u2019s stated matrices.",
+      "steps": "Transpose the head outputs into feature-by-token orientation, stack them, and left-multiply the image\u2019s diagonal W_O: approximately [[2,2],[4,4],[1.33952,0.11161],[3.33024,3.94419]]. None of A\u2013D matches.",
+      "status": "ambiguous",
+      "ambiguity_note": "No option matches the operations and matrices shown in the source image; the inventory transcription differs.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "output": [
+          [
+            1.99999928,
+            2
+          ],
+          [
+            3.99999856,
+            4
+          ],
+          [
+            1.3395231,
+            0.11161444
+          ],
+          [
+            3.33023845,
+            3.94419278
+          ]
+        ]
+      }
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q17",
+      "answer": "C; B holds for the quadratic attention products only.",
+      "steps": "FFN work is proportional to L, so C is true and D false. QK\u1d40 and AV are proportional to L\u00b2 and quadruple, supporting B for those products; Q/K/V/output projections are linear in L. Thus the complete self-attention sublayer has both linear and quadratic work and neither factor 2 nor 4 is exact.",
+      "status": "ambiguous",
+      "ambiguity_note": "The question does not specify whether self-attention FLOPs include projection layers. If included, neither A nor B is exactly correct; if restricted to attention products, B is correct.",
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q20",
+      "answer": "48 sets of three matrices, or 144 individual matrices.",
+      "steps": "There are 6\u00d78=48 head-specific (W_Q,W_K,W_V) triples, comprising 48\u00d73=144 individual projection matrices.",
+      "status": "ambiguous",
+      "ambiguity_note": "\u201cSets of ... matrices\u201d ordinarily means 48 triples, while the question may intend the number 144 of individual matrices.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sets": 48,
+        "individual_matrices": 144
+      }
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q18",
+      "answer": "100,000 scalar scores.",
+      "steps": "Each of 10 sentences has a `100 \u00d7 100` score matrix, so 10\u00d7100\u00d7100=100,000 scores before masking.",
+      "status": "derived",
+      "ambiguity_note": "",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "scores": 100000
+      }
+    }
+  ]
+}

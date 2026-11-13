@@ -1,0 +1,2 @@
+BERT-base: paper-vocab-30000=109,081,344; configured-vocab-30522 formula=109,482,240; torch=109,482,240; paper~110M
+BERT-large: paper-vocab-30000=334,607,360; configured-vocab-30522 formula=335,141,888; torch=335,141,888; paper~340M

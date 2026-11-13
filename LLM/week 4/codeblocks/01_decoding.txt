@@ -1,0 +1,3 @@
+greedy=['A', 'b'], probability=.51*.6=0.3060
+beam k=2 (seq, logP, normalised alpha=0): [(('B', 'a'), np.float64(-0.7234), np.float64(-0.7234)), (('A', 'b'), np.float64(-1.1842), np.float64(-1.1842))]
+beam k=2, alpha=1: [(('B', 'a'), np.float64(-0.7234), np.float64(-0.3617)), (('A', 'b'), np.float64(-1.1842), np.float64(-0.5921))]

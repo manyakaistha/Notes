@@ -1,0 +1,8 @@
+5aecd79c0ee165139aa5013e63a4550b0223ee45cdb10a31168ef255bd11eb93  week 4/assets/01_greedy_beam_tree.png
+9b47d14f18ac6ddd64662d0eb68a99593e61159958045cdfd5c31dddaeeada0e  week 4/assets/02_topk_topp.png
+d40e2e5149ea93cd2a98a1315fe27d721e2717f73a6c4f10a511956e12134ba8  week 4/assets/03_temperature_entropy.png
+35191a2baf2d2d3190f2b61c076b7dc9ad9c487532001696221f3e59df5a3429  week 4/assets/04_length_normalisation.png
+a5b5bed2811345aa9ce128ff316ae6ca244b0db73207ad3a3a79259e671d39a4  week 4/assets/05_bert_masking_statistics.png
+92be40d1cf45783f4cb5f55c7c04599b9217f84a8e7714d72083396ff38e6781  week 4/assets/06_bert_parameter_breakdown.png
+
+Verdict: IDENTICAL (two consecutive generator runs)

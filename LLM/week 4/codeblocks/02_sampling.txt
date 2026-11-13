@@ -1,0 +1,5 @@
+top-k k=3: [0.5122 0.3049 0.1829 0.     0.    ]
+top-p p=.80 (include crossing token): [0.5122 0.3049 0.1829 0.     0.    ]
+T=0.5: entropy=1.0341, sample=B
+T=1: entropy=1.4278, sample=B
+T=2: entropy=1.5623, sample=D

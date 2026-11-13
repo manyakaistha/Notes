@@ -1,0 +1,4 @@
+selected=14.9892% (target 15%)
+mask among selected=79.9322%
+random among selected=10.1320%
+unchanged among selected=9.9358%

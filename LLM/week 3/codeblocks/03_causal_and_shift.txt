@@ -1,0 +1,2 @@
+future-change max |logit diff| at t=1: 0.00000000
+shifted next-token CE over positions 1..2: 1.288726

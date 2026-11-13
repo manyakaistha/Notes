@@ -1,0 +1,4 @@
+Mean cross-entropy: 0.767528 nats/token
+PPL from CE: 2.154435
+PPL from per-token probabilities: 2.154435
+exp(mean NLL) identity: True

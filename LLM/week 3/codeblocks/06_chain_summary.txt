@@ -1,0 +1,2 @@
+full history: P=0.120000, token NLL=[0.9163 0.5108 0.6931]
+bigram: P=0.024000, token NLL=[0.9163 1.204  1.6094]

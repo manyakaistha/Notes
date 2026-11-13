@@ -1,0 +1,2 @@
+full-history toy conditionals: factors=[0.4, 0.6, 0.5], P=0.120000, logP=-2.120264
+bigram approximation: factors=[0.4, 0.3, 0.2], P=0.024000, logP=-3.729701

@@ -1,0 +1,6 @@
+# Week 3 counting and source notes
+
+- The ebook's 40,478 GPT-1 vocabulary entries are distinct from the paper's 40,000 BPE merge operations: merge count and final vocabulary size are different quantities. The GPT-1 configuration used here follows the 40,478 vocabulary size in the ebook.
+- The ebook/paper headline of 117M is a rounded total. With `V=40,478`, `d=768`, `T=512`, 12 layers, FFN width 3,072, tied token/LM embeddings, QKV/output and FFN biases, and two affine LayerNorms per block, the formula and the minimal PyTorch module both count **116,534,784** parameters (116.535M; rounds to 117M).
+- This exact component breakdown is embeddings 31,480,320; attention 28,348,416; FFN 56,669,184; LayerNorm 36,864. The ebook's rounded mnemonic `31 + 27 + 56 = 114M` omits/understates terms; the exact component sum is 116,534,784. The output head adds no distinct parameters because its weight is tied to token embeddings. Untying it would add `40,478 * 768 = 31,087,104` parameters.
+- Counting convention is explicit: QKV and output projections have biases; both FFN linears have biases; each of 12 blocks has two affine LayerNorms; the final LM head has no separate bias and is tied to the token table. A different convention changes totals.

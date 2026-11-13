@@ -1,0 +1,2 @@
+task=0.700; L2 sumsq=5.250; L1=3.500
+composed loss task + 0.5*L2 + 0.1*L1 = 3.675

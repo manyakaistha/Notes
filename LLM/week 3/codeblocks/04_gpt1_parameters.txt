@@ -1,0 +1,3 @@
+formula tied total=116,534,784; torch tied total=116,534,784
+embeddings=31,480,320; attention=28,348,416; FFN=56,669,184; LayerNorm=36,864
+Convention: tied token/LM weights, QKV/output and FFN biases, two affine LayerNorms per block; no LM-head bias.

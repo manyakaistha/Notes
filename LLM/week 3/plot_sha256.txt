@@ -1,0 +1,7 @@
+9c2d8e972bf8c5b48dfcc7d828ecbcc85b8c84d4c15e6e5cc331e5d88b35f6ca  week 3/assets/01_perplexity_ce.png
+5b3e8fe999b7f1a530e7a6fd18fa4d180ab89e9f709852e59c9a68c0c95443ba  week 3/assets/02_chain_rule.png
+9a2825b4ebca21d881004d57172be6fcbe3e44cedbf1b779ed08a33fdd58aa17  week 3/assets/03_causal_mask.png
+26cfb58d234ad73943853887755e3368442eaf050f548c78e4ce4eefecf22209  week 3/assets/04_gpt1_parameters.png
+9a7c1e346ed8ff09e06ff1643b7230610f91d2f1b6953dfdad4b87d6f8b799b8  week 3/assets/05_task_input_layouts.png
+
+Verdict: IDENTICAL (two consecutive generator runs)

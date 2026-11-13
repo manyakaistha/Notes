@@ -1,0 +1,1306 @@
+{
+  "part": 3,
+  "papers": [
+    "2025T3_ET_AN",
+    "2025T3_ET_FN",
+    "2025T3_Q1_NA",
+    "2025T3_Q2_NA",
+    "2026T1_ET_AN",
+    "2026T1_ET_FN"
+  ],
+  "records": [
+    {
+      "id": "da5004_2025T3_ET_AN--q2",
+      "week": 4,
+      "topic_ids": [
+        "w4-topk-temperature"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q3",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q4",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenizer and subword vocabulary methods",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q5",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-finetuning"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q6",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-finetuning"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q7",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Efficient or sparse attention and inference caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests efficient or sparse attention and inference caching."
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q8",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "The question tests positional methods beyond sinusoidal encoding."
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q9",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q10",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "The question tests positional methods beyond sinusoidal encoding."
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q11",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "medium",
+      "note": "The bare distance-counting question occurs among relative-position questions, but its intended encoding is unstated."
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q12",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "The question tests positional methods beyond sinusoidal encoding."
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q13",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "The question tests positional methods beyond sinusoidal encoding."
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q14",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "The question tests positional methods beyond sinusoidal encoding."
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q15",
+      "week": 4,
+      "topic_ids": [
+        "w4-topp-nucleus"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q16",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q17",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "BART provides the setting, but the calculation tests standard attention and FFN sequence scaling."
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q18",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Efficient or sparse attention and inference caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests efficient or sparse attention and inference caching."
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q19",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Efficient or sparse attention and inference caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q20",
+      "week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q21",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BART, T5, or prefix language-model objectives and comparisons",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "Prefix-LM uses a mixed bidirectional and causal mask beyond the standard causal mask."
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q22",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Efficient or sparse attention and inference caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests efficient or sparse attention and inference caching."
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q23",
+      "week": 3,
+      "topic_ids": [
+        "w3-causal-lm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The shared passage specifies a decoder-only causal language model."
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q24",
+      "week": 3,
+      "topic_ids": [
+        "w3-pretraining-objective"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests pretraining objective."
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q25",
+      "week": 2,
+      "topic_ids": [
+        "w2-teacher-forcing"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_AN--q26",
+      "week": 2,
+      "topic_ids": [
+        "w2-masked-self-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q2",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "medium",
+      "note": "BatchNorm behavior depends on training versus inference and the number of values per feature."
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q3",
+      "week": 4,
+      "topic_ids": [
+        "w4-topk-temperature"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q4",
+      "week": 4,
+      "topic_ids": [
+        "w4-topp-nucleus"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q5",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenizer and subword vocabulary methods",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q6",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-finetuning"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q7",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BART, T5, or prefix language-model objectives and comparisons",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "The question tests bart, t5, or prefix language-model objectives and comparisons."
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q8",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "medium",
+      "note": "Both score formation and value aggregation have quadratic sequence dependence, making the single-choice wording ambiguous."
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q9",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Efficient or sparse attention and inference caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests efficient or sparse attention and inference caching."
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q10",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Efficient or sparse attention and inference caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests efficient or sparse attention and inference caching."
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q11",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q12",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "The question concerns learned absolute position embeddings and length extension, not fixed sinusoidal encoding."
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q13",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "medium",
+      "note": "The bare distance-counting question occurs among relative-position questions, but its intended encoding is unstated."
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q14",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q15",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q16",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "The question tests positional methods beyond sinusoidal encoding."
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q17",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q18",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q19",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BART, T5, or prefix language-model objectives and comparisons",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "Prefix-LM uses a mixed bidirectional and causal mask beyond the standard causal mask."
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q20",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Efficient or sparse attention and inference caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q21",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Efficient or sparse attention and inference caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests efficient or sparse attention and inference caching."
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q22",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Efficient or sparse attention and inference caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests efficient or sparse attention and inference caching."
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q23",
+      "week": 3,
+      "topic_ids": [
+        "w3-causal-lm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question combines causal masking with positional-order and computational claims."
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q24",
+      "week": 4,
+      "topic_ids": [
+        "w4-topk-temperature"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q25",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "BART provides the setting, but the calculation tests standard attention and FFN sequence scaling."
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q173",
+      "week": 1,
+      "topic_ids": [
+        "w1-scaled-dot-product"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q174",
+      "week": 2,
+      "topic_ids": [
+        "w2-positional-encoding"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q175",
+      "week": 2,
+      "topic_ids": [
+        "w2-teacher-forcing"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q176",
+      "week": 2,
+      "topic_ids": [
+        "w2-masked-self-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q177",
+      "week": 2,
+      "topic_ids": [
+        "w2-teacher-forcing"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q178",
+      "week": 4,
+      "topic_ids": [
+        "w4-exhaustive-greedy"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The sequence-counting problem measures the exhaustive decoding search space."
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q179",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q180",
+      "week": 4,
+      "topic_ids": [
+        "w4-exhaustive-greedy"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests exhaustive greedy."
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q181",
+      "week": 4,
+      "topic_ids": [
+        "w4-beam-search"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The comparison spans greedy, beam, and exhaustive decoding."
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q182",
+      "week": 4,
+      "topic_ids": [
+        "w4-topp-nucleus"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests topp nucleus."
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q183",
+      "week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q184",
+      "week": 2,
+      "topic_ids": [
+        "w2-full-transformer"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The statements combine encoder and decoder embeddings, positions, and causal masking."
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q185",
+      "week": 4,
+      "topic_ids": [
+        "w4-beam-search"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question compares beam search with top-k sampling."
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q186",
+      "week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q187",
+      "week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q188",
+      "week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q189",
+      "week": 3,
+      "topic_ids": [
+        "w3-pretraining-objective"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q190",
+      "week": 2,
+      "topic_ids": [
+        "w2-masked-self-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests masked self attention."
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q191",
+      "week": 1,
+      "topic_ids": [
+        "w1-multi-head-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q192",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Question stem and options absent from source",
+      "likely_later_week": "other/unknown",
+      "confidence": "low",
+      "note": "The question header survives but its stem and options are truncated in the source PDF."
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q107",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenizer and subword vocabulary methods",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": "The shared passage specifies WordPiece merge scoring."
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q108",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenizer and subword vocabulary methods",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": "The shared passage specifies WordPiece merge scoring."
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q109",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenizer and subword vocabulary methods",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": "The shared passage specifies a WordPiece merge."
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q110",
+      "week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question asks generic parameter arithmetic for shared encoder and decoder weights."
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q111",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenizer and subword vocabulary methods",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q112",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenizer and subword vocabulary methods",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": "The question tests tokenizer and subword vocabulary methods."
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q113",
+      "week": 2,
+      "topic_ids": [
+        "w2-masked-self-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question tests masked self attention."
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q114",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Pretraining data, datasets, or scaling",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q115",
+      "week": 4,
+      "topic_ids": [
+        "w4-beam-search"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question compares deterministic beam search with stochastic sampling."
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q116",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Pretraining data, datasets, or scaling",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q117",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Pretraining data, datasets, or scaling",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q118",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BART, T5, or prefix language-model objectives and comparisons",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "The matching task requires BART and T5 objectives in addition to BERT and GPT."
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q119",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Pretraining data, datasets, or scaling",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q120",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BART, T5, or prefix language-model objectives and comparisons",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "The decision compares BERT with the later BART architecture."
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q121",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BART, T5, or prefix language-model objectives and comparisons",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "The question tests bart, t5, or prefix language-model objectives and comparisons."
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q122",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BART, T5, or prefix language-model objectives and comparisons",
+      "likely_later_week": "7",
+      "confidence": "medium",
+      "note": "The corrupted-span target tests later denoising or span-corruption objectives."
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q123",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BART, T5, or prefix language-model objectives and comparisons",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "The question tests bart, t5, or prefix language-model objectives and comparisons."
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q124",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BART, T5, or prefix language-model objectives and comparisons",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "Teacher forcing appears in the context of the specific BART denoising objective."
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q125",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenizer and subword vocabulary methods",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q126",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenizer and subword vocabulary methods",
+      "likely_later_week": "5",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q127",
+      "week": 2,
+      "topic_ids": [
+        "w2-residual-layernorm"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q128",
+      "week": 2,
+      "topic_ids": [
+        "w2-cross-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q2",
+      "week": 2,
+      "topic_ids": [
+        "w2-masked-self-attention"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q3",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BART, T5, or prefix language-model objectives and comparisons",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "The question tests bart, t5, or prefix language-model objectives and comparisons."
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q4",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Efficient or sparse attention and inference caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests efficient or sparse attention and inference caching."
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q5",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "The question tests positional methods beyond sinusoidal encoding."
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q6",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Tokenizer and subword vocabulary methods",
+      "likely_later_week": "5",
+      "confidence": "medium",
+      "note": "The multiple-select question includes BERT input structure and a tokenizer-specific claim."
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q7",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Prompting or parameter-efficient fine-tuning beyond Weeks 1–4",
+      "likely_later_week": "other/unknown",
+      "confidence": "high",
+      "note": "The comparison explicitly tests zero-shot prompting as well as fine-tuning."
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q8",
+      "week": 4,
+      "topic_ids": [
+        "w4-topp-nucleus"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q9",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Pretraining data, datasets, or scaling",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": "The calculation asks about pretraining data volume rather than a language-model objective."
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q10",
+      "week": 1,
+      "topic_ids": [
+        "w1-self-attention-qkv"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q11",
+      "week": 4,
+      "topic_ids": [
+        "w4-topk-temperature"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q12",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Efficient or sparse attention and inference caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests efficient or sparse attention and inference caching."
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q13",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Prompting or parameter-efficient fine-tuning beyond Weeks 1–4",
+      "likely_later_week": "other/unknown",
+      "confidence": "high",
+      "note": "The question tests prompting or parameter-efficient fine-tuning beyond weeks 1–4."
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q14",
+      "week": 2,
+      "topic_ids": [
+        "w2-positional-encoding"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "Although RoPE is named as an example, the question asks the general purpose of positional information."
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q15",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Efficient or sparse attention and inference caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests efficient or sparse attention and inference caching."
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q16",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Efficient or sparse attention and inference caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests efficient or sparse attention and inference caching."
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q17",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "The question tests positional methods beyond sinusoidal encoding."
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q18",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "The question tests positional methods beyond sinusoidal encoding."
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q19",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BART, T5, or prefix language-model objectives and comparisons",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "The question tests bart, t5, or prefix language-model objectives and comparisons."
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q20",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Efficient or sparse attention and inference caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests efficient or sparse attention and inference caching."
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q21",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Efficient or sparse attention and inference caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests efficient or sparse attention and inference caching."
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q2",
+      "week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q3",
+      "week": 1,
+      "topic_ids": [
+        "w1-encoder-parameter-count"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "T5 supplies dimensions, while the requested calculation is the generic encoder FFN parameter count."
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q4",
+      "week": 1,
+      "topic_ids": [
+        "w1-ffn-encoder-stack"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q5",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Efficient or sparse attention and inference caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests efficient or sparse attention and inference caching."
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q6",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-nsp-inputs"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q7",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Pretraining data, datasets, or scaling",
+      "likely_later_week": "8",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q8",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Efficient or sparse attention and inference caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q9",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Efficient or sparse attention and inference caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests efficient or sparse attention and inference caching."
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q10",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "The question tests positional methods beyond sinusoidal encoding."
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q11",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "The question tests positional methods beyond sinusoidal encoding."
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q12",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-finetuning"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The comparison combines BERT bidirectionality and MLM with GPT causal modelling."
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q13",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BART, T5, or prefix language-model objectives and comparisons",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "The architectural comparison includes the later prefix-LM objective."
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q14",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Efficient or sparse attention and inference caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests efficient or sparse attention and inference caching."
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q15",
+      "week": 4,
+      "topic_ids": [
+        "w4-beam-search"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The question compares beam, greedy, top-k, and top-p decoding."
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q16",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-finetuning"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": ""
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q17",
+      "week": 4,
+      "topic_ids": [
+        "w4-bert-finetuning"
+      ],
+      "archive_reason": null,
+      "likely_later_week": null,
+      "confidence": "high",
+      "note": "The comparison tests bidirectional BERT and causal GPT attention masks."
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q18",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "BART, T5, or prefix language-model objectives and comparisons",
+      "likely_later_week": "7",
+      "confidence": "high",
+      "note": "The question tests bart, t5, or prefix language-model objectives and comparisons."
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q19",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Efficient or sparse attention and inference caching",
+      "likely_later_week": "11",
+      "confidence": "high",
+      "note": "The question tests efficient or sparse attention and inference caching."
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q20",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": "The question tests positional methods beyond sinusoidal encoding."
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q21",
+      "week": "archive",
+      "topic_ids": [],
+      "archive_reason": "Positional methods beyond sinusoidal encoding",
+      "likely_later_week": "12",
+      "confidence": "high",
+      "note": ""
+    }
+  ]
+}

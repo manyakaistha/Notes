@@ -1,0 +1,617 @@
+{
+  "week": 1,
+  "chunk": "b",
+  "author": "terra",
+  "records": [
+    {
+      "id": "da5004_2025T3_ET_FN--q25",
+      "answer": "C is true; B holds for the quadratic attention products, but the total self-attention sublayer does not exactly quadruple.",
+      "steps": "Score and weighted-value products scale as L²d, whereas Q/K/V/output projections scale as Ld². FFN scales linearly in L: C true, D false. A is false for the quadratic products; B is true only if self-attention FLOPs means those products alone.",
+      "status": "ambiguous",
+      "ambiguity_note": "The phrase self-attention FLOPs is underspecified: including projection FLOPs gives neither an exact factor of 2 nor 4.",
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "quadratic_factor": 4,
+        "ffn_factor": 2
+      }
+    },
+    {
+      "id": "da5004_2025T3_ET_FN--q8",
+      "answer": "B and C both perform quadratic-in-T, linear-in-d matrix multiplications.",
+      "steps": "QKᵀ costs O(T²d) and AV costs O(T²d), so both B and C qualify. A row-wise softmax is O(T²), not O(T²d); D is O(Td).",
+      "status": "ambiguous",
+      "ambiguity_note": "Single-answer MCQ has two valid choices B and C under the stated complexity.",
+      "verified_by_code": false,
+      "answer_options": [
+        "B",
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q173",
+      "answer": "D: scaling limits softmax saturation and vanishing gradients.",
+      "steps": "Independent unit-variance components yield dot-product variance proportional to d_k; dividing by √d_k controls scale. A is not the main motivation; B does not reduce asymptotic cost; C is guaranteed by softmax.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q183",
+      "answer": "A and C.",
+      "steps": "A: heads can learn different relations. C: standard equal head width is d_model/h. B: more heads do not generally reduce memory and score matrices grow with head count. D: heads may overlap.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q186",
+      "answer": "1152 scalar scores.",
+      "steps": "Each head produces a `[12, 12]` score matrix per sequence, hence 4×2×12² = 1152.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "batch": 4,
+        "heads": 2,
+        "sequence_length": 12,
+        "scores": 1152
+      }
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q187",
+      "answer": "100% increase.",
+      "steps": "Float32 uses 4 bytes; 8×1000²×4/10⁶ = 32 MB and 16×1000²×4/10⁶ = 64 MB. The increase is (64−32)/32×100%.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "model_a_mb": 32,
+        "model_b_mb": 64,
+        "increase_percent": 100
+      }
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q188",
+      "answer": "32768 parameters.",
+      "steps": "One head has W_Q shape `[512, 64]`, so 512×64 = 32768 matrix entries; bias is not part of the matrix.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "parameters": 32768,
+        "shape": [
+          512,
+          64
+        ]
+      }
+    },
+    {
+      "id": "da5004_2025T3_Q1_NA--q191",
+      "answer": "589824 matrix parameters.",
+      "steps": "In the shared setup d_model=768 and the conventional concatenated value width is 768. W_O has shape `[768, 768]`, hence 768²=589824; an optional bias is not part of W_O.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "parameters": 589824,
+        "shape": [
+          768,
+          768
+        ]
+      }
+    },
+    {
+      "id": "da5004_2025T3_Q2_NA--q110",
+      "answer": "Approximately 110 million parameters under the stated idealized sharing assumption.",
+      "steps": "Equal halves of 220 million each contain 110 million; fully tying corresponding encoder and decoder parameters stores one copy. This assumes all counted parameters can actually be shared.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "model_a_millions": 220,
+        "model_c_millions": 110
+      }
+    },
+    {
+      "id": "da5004_2026T1_ET_AN--q10",
+      "answer": "Factor 4.",
+      "steps": "A score matrix has T² elements, so (2T)²/T²=4 at fixed element size and head count.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "factor": 4
+      }
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q2",
+      "answer": "262144 parameters.",
+      "steps": "For Q, K and V, 3×4×256×64 = 196608 entries; W_O has 256×256 = 65536. Total 262144; biases are excluded.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "qkv": 196608,
+        "output": 65536,
+        "total": 262144
+      }
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q3",
+      "answer": "4718592 parameters.",
+      "steps": "The original T5 feed-forward block has two matrices `[768, 3072]` and `[3072, 768]`; 2×768×3072=4718592 without biases.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "parameters": 4718592
+      }
+    },
+    {
+      "id": "da5004_2026T1_ET_FN--q4",
+      "answer": "6400 elements.",
+      "steps": "The final encoder tensor retains padded shape `[5, 20, 64]`; 5×20×64 = 6400.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "shape": [
+          5,
+          20,
+          64
+        ],
+        "elements": 6400
+      }
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q10",
+      "answer": "A, C and D, with d_v=d_k under the given assumption.",
+      "steps": "A: `[T,d_k]` times `[d_k,T]` gives `[T,T]`. D: each entry is a query–key affinity. Softmax is row-wise, so B is false. C: multiplying `[T,T]` by V yields `[T,d_k]`, equivalently `[T,d_v]` here with d_v=d_k.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "C",
+        "D"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "output_shape": [
+          "T",
+          "d_k"
+        ],
+        "score_shape": [
+          "T",
+          "T"
+        ]
+      }
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q13",
+      "answer": "1.93.",
+      "steps": "For h₁=(1,0), identity U and W give s+h₁=(2,2), and v=(1,1) gives score 2 tanh(2)≈1.928055, rounded to two decimals.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "score": 1.9280551601516338,
+        "rounded": 1.93
+      }
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q14",
+      "answer": "0.35.",
+      "steps": "The three additive scores are approximately 1.928055, 1.756649, 1.959082. Applying exp(score₁)/Σ exp(scoreⱼ) gives 0.347948, rounded only at the end.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "scores": [
+          1.9280551601516338,
+          1.7566489096424953,
+          1.9590823337625474
+        ],
+        "alpha": [
+          0.34794798617397626,
+          0.29313895714981564,
+          0.3589130566762082
+        ],
+        "rounded": 0.35
+      }
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q15",
+      "answer": "1.36.",
+      "steps": "With h₁=(1,0), h₂=(0,1), h₃=(1,1), c=(α₁+α₃, α₂+α₃), whose component sum is 1+α₃=1.358913.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "alpha": [
+          0.34794798617397626,
+          0.29313895714981564,
+          0.3589130566762082
+        ],
+        "context": [
+          0.7068610428501845,
+          0.6520520138260238
+        ],
+        "sum": 1.3589130566762082
+      }
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q2",
+      "answer": "C: `[T, d_k]`.",
+      "steps": "Q=XW_Q has shapes `[T,d_model]` × `[d_model,d_k]` = `[T,d_k]`. A and B transpose dimensions; D incorrectly retains d_model in general.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "shape": [
+          "T",
+          "d_k"
+        ]
+      }
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q3",
+      "answer": "C.",
+      "steps": "The dot-product variance grows with d_k, and √d_k scaling prevents excessively saturated softmax and tiny gradients. A: scalar scaling changes no shape; B: adds/removes no learned parameters; D: does not normalize vector lengths.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q4",
+      "answer": "C: `[50, 512]`.",
+      "steps": "Every standard encoder layer preserves sequence length and model width. A pools tokens, B treats layers as tokens, and D concatenates layer outputs, none of which is specified.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "shape": [
+          50,
+          512
+        ]
+      }
+    },
+    {
+      "id": "da5004_2026T1_Q1_NA--q9",
+      "answer": "A, B and D.",
+      "steps": "A and D follow from separate learned head projections and attention patterns. B is a useful mathematical analogy: parallel learned transformations extract different features, although heads are dynamic attention operators rather than convolution kernels. C is false: standard fixed total width gives the same projection parameter count as one head.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q14",
+      "answer": "0.2.",
+      "steps": "In the provided attention matrix, row t=5 (data) and column 2 (science) contain 0.2. The row sums to 0.9, so the supplied matrix is not a valid normalized attention distribution, but its stated entry is unambiguous.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "row": 5,
+        "column": 2,
+        "weight": 0.2
+      }
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q2",
+      "answer": "C: `[T, 512]`.",
+      "steps": "Under standard equal-width heads d_v=512/8=64; concatenating eight `[T,64]` outputs gives `[T,512]`. A is one head, B assumes each head has width 512, and D confuses head count with concatenated width.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "head_width": 64,
+        "shape": [
+          "T",
+          512
+        ]
+      }
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q8",
+      "answer": "A and B.",
+      "steps": "The original encoder has unmasked multi-head self-attention and position-wise FFNs. C belongs to decoder cross-attention, and D describes the causal masked decoder self-attention, not the standard encoder.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "B"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T1_Q2_NA--q9",
+      "answer": "A, C and D.",
+      "steps": "A: full self-attention connects arbitrary positions in one layer, versus O(T) maximum recurrent path. C: token operations can run in parallel at training. D: Q/K/V are projections of layer inputs, initially embeddings. B is false: teacher-forced transformer training parallelizes sequence positions.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "C",
+        "D"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q18",
+      "answer": "No option matches: W_Q x_m = [5, 3, −1, −1]ᵀ.",
+      "steps": "The displayed x₁=(2,1,3,2) and W_Q rows yield (2+3, 1+2, 2−3, 1−2)=(5,3,−1,−1). A, B, C and D all differ, including C with 13 rather than 3.",
+      "status": "ambiguous",
+      "ambiguity_note": "No correct option: C incorrectly uses 13 for the second component.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "x_m": [
+          2,
+          1,
+          3,
+          2
+        ],
+        "product": [
+          5,
+          3,
+          -1,
+          -1
+        ]
+      }
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q19",
+      "answer": "No option matches: W_K x_n = [4, 6, −2, −2]ᵀ.",
+      "steps": "The displayed x₃=(1,3,2,4) yields (1+3, 2+4, 1−3, 2−4)=(4,6,−2,−2). Each of A, B, C and D differs; B incorrectly has 16 in its second component.",
+      "status": "ambiguous",
+      "ambiguity_note": "No correct option: B incorrectly uses 16 for the second component.",
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "x_n": [
+          1,
+          3,
+          2,
+          4
+        ],
+        "product": [
+          4,
+          6,
+          -2,
+          -2
+        ]
+      }
+    },
+    {
+      "id": "da5004_2026T2_ET_AN--q2",
+      "answer": "C.",
+      "steps": "In an original Transformer encoder, each unpadded position can attend bidirectionally, while causal masking is used in the decoder. Thus assertion true, reason false; A and B require true reason, and D and E falsely reject the assertion.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q2",
+      "answer": "262144 parameters.",
+      "steps": "For Q, K and V, 3×4×256×64 = 196608 entries; W_O has 256×256 = 65536. Total 262144; biases excluded.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "qkv": 196608,
+        "output": 65536,
+        "total": 262144
+      }
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q3",
+      "answer": "4718592 parameters.",
+      "steps": "Original T5 uses two FFN matrices `[768,3072]` and `[3072,768]`: 2×768×3072=4718592, ignoring bias.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "parameters": 4718592
+      }
+    },
+    {
+      "id": "da5004_2026T2_ET_FN--q4",
+      "answer": "6400 elements.",
+      "steps": "The encoder output is `[5,20,64]`, preserving batch, padded sequence length and hidden width: 5×20×64=6400.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "shape": [
+          5,
+          20,
+          64
+        ],
+        "elements": 6400
+      }
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q2",
+      "answer": "A and C.",
+      "steps": "In Bahdanau attention the decoder state scores encoder states and the context is their weighted sum. B is false because weights run over encoder states, not all decoder states; D is false because those states are retrieved throughout decoding.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A",
+        "C"
+      ],
+      "is_numeric": false,
+      "numeric_values": {}
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q3",
+      "answer": "4.",
+      "steps": "The original PNG uses QᵀK, consistent with tokens as columns of X; Q=K=X because W_Q=W_K=I. Thus QᵀK=[[1,0,1],[0,1,1],[1,1,2]] and its trace is 1+1+2=4. The transcription incorrectly writes QKᵀ.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "matrix": [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            2
+          ]
+        ],
+        "trace": 4
+      }
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q4",
+      "answer": "A: {learn, easy}.",
+      "steps": "The source image specifies column-token QᵀK=[[1,0,1],[0,1,1],[1,1,2]]. The indicated pairs have scores A=0; B=C=D=E=1. Scaling by √2 does not change the ranking, and within the learn query A also has the smallest row-softmax weight.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [
+        "A"
+      ],
+      "is_numeric": true,
+      "numeric_values": {
+        "raw_scores": {
+          "A": 0,
+          "B": 1,
+          "C": 1,
+          "D": 1,
+          "E": 1
+        }
+      }
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q5",
+      "answer": "144 additional scores.",
+      "steps": "Every head computes 6²=36 scores per sequence; four additional heads therefore add (8−4)×36=144.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "sequence_length": 6,
+        "additional_heads": 4,
+        "additional_scores": 144
+      }
+    },
+    {
+      "id": "da5004_2026T2_Q1_NA--q6",
+      "answer": "32768 elements.",
+      "steps": "The last encoder output retains shape `[8,32,128]`, independent of the number of layers and heads; 8×32×128=32768.",
+      "status": "derived",
+      "ambiguity_note": null,
+      "verified_by_code": false,
+      "answer_options": [],
+      "is_numeric": true,
+      "numeric_values": {
+        "shape": [
+          8,
+          32,
+          128
+        ],
+        "elements": 32768
+      }
+    }
+  ]
+}

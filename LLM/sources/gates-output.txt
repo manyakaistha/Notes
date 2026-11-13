@@ -1,0 +1,293 @@
+LLM Weeks 1–4 final gates
+Repository: /home/manya/Notes
+
+==============================================================================
+G1 routing/bank/index reconciliation: PASS
+==============================================================================
+routed=241; archived=247; total=488; IDs=488
+| Week | Count | MCQ | MSQ | SA | Distinct stems |
+|---:|---:|---:|---:|---:|---:|
+| 1 | 73 | 19 | 11 | 43 | 66 |
+| 2 | 65 | 26 | 8 | 31 | 62 |
+| 3 | 36 | 15 | 12 | 9 | 34 |
+| 4 | 67 | 28 | 20 | 19 | 59 |
+Duplicate routing IDs: 0
+Bank/index placement discrepancies: 0
+
+==============================================================================
+G2 internal links: PASS
+==============================================================================
+Files scanned: 91
+Links checked: wikilinks=1392, markdown-links=285, images=561
+
+Broken links (0):
+Anchor references checked: 1169
+Broken by type: wikilinks=0, markdown-links=0, image-paths=0, #anchors=0
+
+==============================================================================
+G3 topic checklists: PASS
+==============================================================================
+Inputs: 488 inventory records; 241 routed; 247 archived.
+Week 1: 73 routed sections; IDs unique; each has worked answer and verification marker.
+Week 1: 7 topic checklist rows; no blank cells; all topics.json topics present.
+Week 2: 65 routed sections; IDs unique; each has worked answer and verification marker.
+Week 2: 8 topic checklist rows; no blank cells; all topics.json topics present.
+Week 3: 36 routed sections; IDs unique; each has worked answer and verification marker.
+Week 3: 8 topic checklist rows; no blank cells; all topics.json topics present.
+Week 4: 67 routed sections; IDs unique; each has worked answer and verification marker.
+Week 4: 8 topic checklist rows; no blank cells; all topics.json topics present.
+Archive: 247 IDs appear in the index and none appear in the four banks.
+Images: 147 contextual image links resolve from their bank files.
+Corrections: 17 question records have visible editorial notes; 12 shared-context blocks rendered.
+Reconciliation: W1 73 + W2 65 + W3 36 + W4 67 + archived 247 = 488.
+Topics without direct question: W3 Ways to parameterise a language model (w3-model-parameterisations)
+PASS: exam bank structure, coverage, topic checklists, archive routing, and image links verified.
+Independent W1: topic rows=7, expected topics=7, missing=0
+Independent W2: topic rows=8, expected topics=8, missing=0
+Independent W3: topic rows=8, expected topics=8, missing=0
+Independent W4: topic rows=8, expected topics=8, missing=0
+Independent empty/missing-cell/topic findings:
+none
+
+==============================================================================
+G4 deterministic plots: PASS
+==============================================================================
+W1: run1 exit=0; run2 exit=0; PNGs=5; IDENTICAL=True; committed-status-unchanged=True
+W1 run 1 output:
+[Generated] /home/manya/Notes/LLM/week 1/assets/01_scaled_attention_heatmap.png
+[Generated] /home/manya/Notes/LLM/week 1/assets/02_scaling_saturation.png
+[Generated] /home/manya/Notes/LLM/week 1/assets/03_seq2seq_vs_alignment.png
+[Generated] /home/manya/Notes/LLM/week 1/assets/04_multihead_patterns_shapes.png
+[Encoder] formula components=3,152,384; MHA=1,050,624; FFN=2,099,712; LayerNorm=2,048
+[Generated] /home/manya/Notes/LLM/week 1/assets/05_encoder_parameter_breakdown.png
+W1 run 2 output:
+[Generated] /home/manya/Notes/LLM/week 1/assets/01_scaled_attention_heatmap.png
+[Generated] /home/manya/Notes/LLM/week 1/assets/02_scaling_saturation.png
+[Generated] /home/manya/Notes/LLM/week 1/assets/03_seq2seq_vs_alignment.png
+[Generated] /home/manya/Notes/LLM/week 1/assets/04_multihead_patterns_shapes.png
+[Encoder] formula components=3,152,384; MHA=1,050,624; FFN=2,099,712; LayerNorm=2,048
+[Generated] /home/manya/Notes/LLM/week 1/assets/05_encoder_parameter_breakdown.png
+W2: run1 exit=0; run2 exit=0; PNGs=6; IDENTICAL=True; committed-status-unchanged=True
+W2 run 1 output:
+[Generated] /home/manya/Notes/LLM/week 2/assets/01_sinusoidal_pe_heatmap.png
+[Generated] /home/manya/Notes/LLM/week 2/assets/02_pe_relative_offset.png
+[Generated] /home/manya/Notes/LLM/week 2/assets/03_norm_axes.png
+[Generated] /home/manya/Notes/LLM/week 2/assets/04_warmup_schedule.png
+[Generated] /home/manya/Notes/LLM/week 2/assets/05_causal_mask_softmax.png
+[Generated] /home/manya/Notes/LLM/week 2/assets/06_label_smoothing.png
+W2 run 2 output:
+[Generated] /home/manya/Notes/LLM/week 2/assets/01_sinusoidal_pe_heatmap.png
+[Generated] /home/manya/Notes/LLM/week 2/assets/02_pe_relative_offset.png
+[Generated] /home/manya/Notes/LLM/week 2/assets/03_norm_axes.png
+[Generated] /home/manya/Notes/LLM/week 2/assets/04_warmup_schedule.png
+[Generated] /home/manya/Notes/LLM/week 2/assets/05_causal_mask_softmax.png
+[Generated] /home/manya/Notes/LLM/week 2/assets/06_label_smoothing.png
+W3: run1 exit=0; run2 exit=0; PNGs=5; IDENTICAL=True; committed-status-unchanged=True
+W3 run 1 output:
+[Week 3] GPT1 formula parts: embeddings=31,480,320, attention=28,348,416, FFN=56,669,184, LayerNorm=36,864, total=116,534,784
+[Completed] 5 figures
+W3 run 2 output:
+[Week 3] GPT1 formula parts: embeddings=31,480,320, attention=28,348,416, FFN=56,669,184, LayerNorm=36,864, total=116,534,784
+[Completed] 5 figures
+W4: run1 exit=0; run2 exit=0; PNGs=6; IDENTICAL=True; committed-status-unchanged=True
+W4 run 1 output:
+[Week 4] MLM empirical: selected=14.989% (target 15%); N=1,000,000
+[Week 4] BERT counts: base=109482240, large=335141888
+[Completed] 6 figures
+W4 run 2 output:
+[Week 4] MLM empirical: selected=14.989% (target 15%); N=1,000,000
+[Week 4] BERT counts: base=109482240, large=335141888
+[Completed] 6 figures
+
+==============================================================================
+G5 saved executable codeblocks: PASS
+==============================================================================
+W1: note Python blocks=5; saved scripts=5
+W2: note Python blocks=8; saved scripts=8
+W3: note Python blocks=6; saved scripts=6
+W4: note Python blocks=5; saved scripts=5
+Codeblocks rerun: 24
+Placeholder findings: 0
+Code/output findings: 0
+
+==============================================================================
+G6 frontmatter and table pipes: PASS
+==============================================================================
+Markdown files=91; frontmatter blocks parsed=69 with check_notes_quality.py YAML-subset parser; violations=0
+
+==============================================================================
+G7 numeric answer provenance: PASS
+==============================================================================
+Derived numeric answers=114; verified_by_code=43; reason-stated=71; violations=0
+
+==============================================================================
+G8 JSON integrity: PASS
+==============================================================================
+routing.json records=488; question-solutions.json records=241; topics.json parses=True
+Duplicate routing IDs=0; duplicate solution IDs=0; week topic groups=4
+
+==============================================================================
+G9 repository hygiene and file sizes: FAIL
+==============================================================================
+git status --porcelain LLM/:
+?? LLM/plot_sha256.txt
+?? LLM/scripts/run_gates.py
+?? LLM/sources/ebook/pages/p-002.png
+?? LLM/sources/ebook/pages/p-003.png
+?? LLM/sources/ebook/pages/p-004.png
+?? LLM/sources/ebook/pages/p-005.png
+?? LLM/sources/ebook/pages/p-006.png
+?? LLM/sources/ebook/pages/p-007.png
+?? LLM/sources/ebook/pages/p-008.png
+?? LLM/sources/ebook/pages/p-009.png
+?? LLM/sources/ebook/pages/p-010.png
+?? LLM/sources/ebook/pages/p-011.png
+?? LLM/sources/ebook/pages/p-012.png
+?? LLM/sources/ebook/pages/p-013.png
+?? LLM/sources/ebook/pages/p-014.png
+?? LLM/sources/ebook/pages/p-015.png
+?? LLM/sources/ebook/pages/p-016.png
+?? LLM/sources/ebook/pages/p-017.png
+?? LLM/sources/ebook/pages/p-018.png
+?? LLM/sources/ebook/pages/p-019.png
+?? LLM/sources/ebook/pages/p-020.png
+?? LLM/sources/ebook/pages/p-021.png
+?? LLM/sources/ebook/pages/p-022.png
+?? LLM/sources/ebook/pages/p-023.png
+?? LLM/sources/ebook/pages/p-024.png
+?? LLM/sources/ebook/pages/p-025.png
+?? LLM/sources/ebook/pages/p-026.png
+?? LLM/sources/ebook/pages/p-027.png
+?? LLM/sources/ebook/pages/p-028.png
+?? LLM/sources/ebook/pages/p-029.png
+?? LLM/sources/ebook/pages/p-030.png
+?? LLM/sources/ebook/pages/p-031.png
+?? LLM/sources/ebook/pages/p-032.png
+?? LLM/sources/ebook/pages/p-033.png
+?? LLM/sources/ebook/pages/p-034.png
+?? LLM/sources/ebook/pages/p-035.png
+?? LLM/sources/ebook/pages/p-036.png
+?? LLM/sources/ebook/pages/p-037.png
+?? LLM/sources/ebook/pages/p-038.png
+?? LLM/sources/ebook/pages/p-039.png
+?? LLM/sources/ebook/pages/p-040.png
+?? LLM/sources/ebook/pages/p-041.png
+?? LLM/sources/ebook/pages/p-042.png
+?? LLM/sources/ebook/pages/p-043.png
+?? LLM/sources/ebook/pages/p-044.png
+?? LLM/sources/ebook/pages/p-045.png
+?? LLM/sources/ebook/pages/p-046.png
+?? LLM/sources/ebook/pages/p-047.png
+?? LLM/sources/ebook/pages/p-048.png
+?? LLM/sources/ebook/pages/p-049.png
+?? LLM/sources/ebook/pages/p-050.png
+?? LLM/sources/ebook/pages/p-051.png
+?? LLM/sources/ebook/pages/p-052.png
+?? LLM/sources/ebook/pages/p-053.png
+?? LLM/sources/ebook/pages/p-054.png
+?? LLM/sources/ebook/pages/p-055.png
+?? LLM/sources/ebook/pages/p-056.png
+?? LLM/sources/ebook/pages/p-057.png
+?? LLM/sources/ebook/pages/p-058.png
+?? LLM/sources/ebook/pages/p-059.png
+?? LLM/sources/exam-papers/solutions-terra-w1.json
+?? LLM/sources/exam-papers/solutions-terra-w2.json
+?? LLM/sources/final-report-data.md
+?? LLM/sources/gates-output.txt
+Untracked files=64
+  LLM/plot_sha256.txt
+  LLM/scripts/run_gates.py
+  LLM/sources/ebook/pages/p-002.png
+  LLM/sources/ebook/pages/p-003.png
+  LLM/sources/ebook/pages/p-004.png
+  LLM/sources/ebook/pages/p-005.png
+  LLM/sources/ebook/pages/p-006.png
+  LLM/sources/ebook/pages/p-007.png
+  LLM/sources/ebook/pages/p-008.png
+  LLM/sources/ebook/pages/p-009.png
+  LLM/sources/ebook/pages/p-010.png
+  LLM/sources/ebook/pages/p-011.png
+  LLM/sources/ebook/pages/p-012.png
+  LLM/sources/ebook/pages/p-013.png
+  LLM/sources/ebook/pages/p-014.png
+  LLM/sources/ebook/pages/p-015.png
+  LLM/sources/ebook/pages/p-016.png
+  LLM/sources/ebook/pages/p-017.png
+  LLM/sources/ebook/pages/p-018.png
+  LLM/sources/ebook/pages/p-019.png
+  LLM/sources/ebook/pages/p-020.png
+  LLM/sources/ebook/pages/p-021.png
+  LLM/sources/ebook/pages/p-022.png
+  LLM/sources/ebook/pages/p-023.png
+  LLM/sources/ebook/pages/p-024.png
+  LLM/sources/ebook/pages/p-025.png
+  LLM/sources/ebook/pages/p-026.png
+  LLM/sources/ebook/pages/p-027.png
+  LLM/sources/ebook/pages/p-028.png
+  LLM/sources/ebook/pages/p-029.png
+  LLM/sources/ebook/pages/p-030.png
+  LLM/sources/ebook/pages/p-031.png
+  LLM/sources/ebook/pages/p-032.png
+  LLM/sources/ebook/pages/p-033.png
+  LLM/sources/ebook/pages/p-034.png
+  LLM/sources/ebook/pages/p-035.png
+  LLM/sources/ebook/pages/p-036.png
+  LLM/sources/ebook/pages/p-037.png
+  LLM/sources/ebook/pages/p-038.png
+  LLM/sources/ebook/pages/p-039.png
+  LLM/sources/ebook/pages/p-040.png
+  LLM/sources/ebook/pages/p-041.png
+  LLM/sources/ebook/pages/p-042.png
+  LLM/sources/ebook/pages/p-043.png
+  LLM/sources/ebook/pages/p-044.png
+  LLM/sources/ebook/pages/p-045.png
+  LLM/sources/ebook/pages/p-046.png
+  LLM/sources/ebook/pages/p-047.png
+  LLM/sources/ebook/pages/p-048.png
+  LLM/sources/ebook/pages/p-049.png
+  LLM/sources/ebook/pages/p-050.png
+  LLM/sources/ebook/pages/p-051.png
+  LLM/sources/ebook/pages/p-052.png
+  LLM/sources/ebook/pages/p-053.png
+  LLM/sources/ebook/pages/p-054.png
+  LLM/sources/ebook/pages/p-055.png
+  LLM/sources/ebook/pages/p-056.png
+  LLM/sources/ebook/pages/p-057.png
+  LLM/sources/ebook/pages/p-058.png
+  LLM/sources/ebook/pages/p-059.png
+  LLM/sources/exam-papers/solutions-terra-w1.json
+  LLM/sources/exam-papers/solutions-terra-w2.json
+  LLM/sources/final-report-data.md
+  LLM/sources/gates-output.txt
+Files >5 MB outside PDF/PNG caches: 14
+  21828192 bytes LLM/.venv/bin/python
+  21828192 bytes LLM/.venv/bin/python3
+  21828192 bytes LLM/.venv/bin/python3.11
+  5568040 bytes LLM/.venv/lib/python3.11/site-packages/kiwisolver/_cext.cpython-311-x86_64-linux-gnu.so
+  10407681 bytes LLM/.venv/lib/python3.11/site-packages/numpy/_core/_multiarray_umath.cpython-311-x86_64-linux-gnu.so
+  6720872 bytes LLM/.venv/lib/python3.11/site-packages/scipy/optimize/_highspy/_core.cpython-311-x86_64-linux-gnu.so
+  25409073 bytes LLM/.venv/lib/python3.11/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so
+  24805561 bytes LLM/.venv/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so
+  5454800 bytes LLM/.venv/lib/python3.11/site-packages/torch/bin/protoc
+  5454800 bytes LLM/.venv/lib/python3.11/site-packages/torch/bin/protoc-3.21.12.0
+  15098032 bytes LLM/.venv/lib/python3.11/site-packages/torch/bin/test_api
+  13457776 bytes LLM/.venv/lib/python3.11/site-packages/torch/bin/test_jit
+  440280512 bytes LLM/.venv/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so
+  32730248 bytes LLM/.venv/lib/python3.11/site-packages/torch/lib/libtorch_python.so
+Five largest LLM files:
+  440280512 bytes LLM/.venv/lib/python3.11/site-packages/torch/lib/libtorch_cpu.so
+  32730248 bytes LLM/.venv/lib/python3.11/site-packages/torch/lib/libtorch_python.so
+  25409073 bytes LLM/.venv/lib/python3.11/site-packages/numpy.libs/libscipy_openblas64_-32a4b2a6.so
+  24805561 bytes LLM/.venv/lib/python3.11/site-packages/scipy.libs/libscipy_openblas-6cdc3b4a.so
+  21828192 bytes LLM/.venv/bin/python3.11
+
+FINAL SUMMARY
+PASS G1 routing/bank/index reconciliation
+PASS G2 internal links
+PASS G3 topic checklists
+PASS G4 deterministic plots
+PASS G5 saved executable codeblocks
+PASS G6 frontmatter and table pipes
+PASS G7 numeric answer provenance
+PASS G8 JSON integrity
+FAIL G9 repository hygiene and file sizes

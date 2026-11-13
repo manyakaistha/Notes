@@ -17,10 +17,10 @@
     },
     {
       "id": "da5004_2024T1_ET_AN--q149",
-      "answer": "A, B, C, D, and E are possible in principle.",
-      "steps": "A 2048-token context limits each forward pass, not necessarily total output; a sliding context can generate arbitrarily long text. Without sliding, 2048−712=1336 slots allow A–D but not E.",
+      "answer": "A–D with a fixed window; A–E with a sliding window.",
+      "steps": "2048−712=1336 positions remain when the complete sequence is capped; 256, 16, 1024 and 512 fit, but 2048 does not. Sliding the window and resetting position IDs permits longer output; if the last sampled token need not be fed back, one extra token can be emitted without sliding.",
       "status": "ambiguous",
-      "ambiguity_note": "The question does not specify whether the context is truncated/slid during generation; under a single untruncated window only A–D fit.",
+      "ambiguity_note": "Fixed full-sequence window: A–D; sliding context with position IDs reset: A–E. Counting a final prediction beyond the last input adds one token but does not change these choices.",
       "verified_by_code": false,
       "answer_options": [
         "A",
@@ -38,14 +38,16 @@
     },
     {
       "id": "da5004_2024T1_ET_FN--q202",
-      "answer": "A and B under a single-window assumption.",
-      "steps": "1024−712=312 remaining positions: 256 and 16 fit, whereas 1024 and 512 do not. Sliding the context allows longer generations.",
+      "answer": "A and B with a fixed window; A–D with a sliding window.",
+      "steps": "1024−712=312 positions remain when the complete sequence is capped; 256 and 16 fit but 1024 and 512 do not. A sliding context with position IDs reset permits all four; a final prediction without feedback adds one token without altering the choices.",
       "status": "ambiguous",
-      "ambiguity_note": "Generation policy is unspecified; a sliding context makes C and D possible too.",
+      "ambiguity_note": "Fixed full-sequence window: A and B; sliding context with position IDs reset: A–D. Counting a final prediction beyond the last input adds one token but does not change these choices.",
       "verified_by_code": false,
       "answer_options": [
         "A",
-        "B"
+        "B",
+        "C",
+        "D"
       ],
       "is_numeric": true,
       "numeric_values": {
@@ -56,10 +58,10 @@
     },
     {
       "id": "da5004_2024T1_Q1_NA--q193",
-      "answer": "A, B, C, D are possible with a sliding context.",
-      "steps": "A 1024-token receptive field limits each forward pass, not total generation if older tokens are discarded. With one fixed untruncated window, only the shorter outputs fit, with boundary depending on whether BOS is counted.",
+      "answer": "A under a capped complete sequence; A and B if the final prediction need not be fed back; A–D with a sliding window.",
+      "steps": "With BOS occupying one of 1024 full-sequence slots, at most 1023 new tokens fit, so only 512 is eligible. A model can predict one further token from a full input window, allowing 1024 generated tokens, while sliding with position IDs reset permits all offered lengths.",
       "status": "ambiguous",
-      "ambiguity_note": "The question omits the context-management policy and whether BOS counts in output length; without sliding, longer sequences are excluded.",
+      "ambiguity_note": "Full-sequence cap including BOS yields A; counting the final prediction without feeding it back yields A and B; sliding and resetting position IDs yields A–D.",
       "verified_by_code": false,
       "answer_options": [
         "A",
@@ -196,7 +198,7 @@
       "answer": "Insufficient information; enter −1.",
       "steps": "The row following “seismology is” is supplied only along the greedy prefix, which continues with “a”; the conditional distribution after the non-greedy “earth quake” is missing.",
       "status": "ambiguous",
-      "ambiguity_note": "The model probability after the off-greedy prefix is not specified; earthquake is assumed to mean the listed “earth quake” token.",
+      "ambiguity_note": "The conditional probability of study after the non-greedy earthquake prefix is absent: choosing that factor as 0 gives sequence probability 0, and choosing 1 gives 0.007052. The prescribed insufficient-information response is −1; this treats the listed “earth quake” as earthquake.",
       "verified_by_code": false,
       "answer_options": [],
       "is_numeric": true,
@@ -391,17 +393,19 @@
     },
     {
       "id": "da5004_2026T1_Q1_NA--q18",
-      "answer": "D",
-      "steps": "One head has width 768/12=64; Q,K,V matrices each `[768, 64]`, totaling 3 × 768 × 64 = 147456. A counts one matrix, B and C use wrong widths.",
-      "status": "derived",
-      "ambiguity_note": null,
+      "answer": "D (147,456) without Q/K/V biases; 147,648 with biases, absent from the options.",
+      "steps": "Each of Q, K and V has a 768×64 weight matrix. Their 147,456 weights become 147,648 parameters if three 64-element bias vectors are included.",
+      "status": "ambiguous",
+      "ambiguity_note": "Bias-free Q/K/V projections yield D, 147,456; biased Q/K/V projections yield 147,648, which is not listed. The prompt does not specify the bias convention.",
       "verified_by_code": false,
       "answer_options": [
         "D"
       ],
       "is_numeric": true,
       "numeric_values": {
-        "parameters": 147456
+        "head_width": 64,
+        "weights_only": 147456,
+        "with_biases": 147648
       }
     },
     {
@@ -469,12 +473,13 @@
     },
     {
       "id": "da5004_2026T2_Q1_NA--q11",
-      "answer": "C: “i eat bananas”.",
-      "steps": "A = 0.5×0.3×0.4=0.06; C = 0.5×0.3×0.6=0.09; D = 0.4×0.4×0.5=0.08; E = 0.4×0.4×0.4=0.064. B is absent from the partial tree and cannot be compared without a zero-probability assumption.",
+      "answer": "C if the unshown B path has probability below 0.09; B if its probability exceeds 0.09.",
+      "steps": "The displayed paths give A=.5×.3×.4=.06, C=.5×.3×.6=.09, D=.4×.4×.5=.08, E=.4×.4×.4=.064. B begins with an unshown apples branch whose start mass can be up to .1; its later conditionals are unspecified.",
       "status": "ambiguous",
-      "ambiguity_note": "The tree explicitly omits some vocabulary probabilities; the unshown B path cannot be assigned zero without an extra assumption.",
+      "ambiguity_note": "If the omitted B path has probability 0, C wins at 0.09; if P(apples first)=0.1 and both subsequent B conditionals are 1, B wins at 0.1. The partial tree permits both completions.",
       "verified_by_code": false,
       "answer_options": [
+        "B",
         "C"
       ],
       "is_numeric": true,
@@ -490,7 +495,7 @@
       "answer": "Insufficient information; enter −1.",
       "steps": "P(apples|like) marginalizes over all preceding first tokens; the tree is partial and omits possible contexts and their probabilities.",
       "status": "ambiguous",
-      "ambiguity_note": "The tree covers only selected branches of a larger vocabulary, so the needed marginal is not determined.",
+      "ambiguity_note": "If no omitted first token can precede like, P(apples|like)=0.274/0.46≈0.595652; if an omitted first token has mass 0.1 and both relevant conditionals are 1, the ratio is 0.374/0.56≈0.667857. The prescribed answer for missing information is −1.",
       "verified_by_code": false,
       "answer_options": [],
       "is_numeric": true,

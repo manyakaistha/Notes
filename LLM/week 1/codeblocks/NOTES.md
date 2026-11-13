@@ -1,0 +1,5 @@
+# Week 1 numerical convention notes
+
+- The transcript's worked encoder count reports the combined Q/K/V weights as 786,432 and output projection as 262,144, for MHA weights = 1,048,576; it reports FFN weights and biases as approximately 2.1M and a per-layer total of approximately 3.15M. Its mnemonics separately round this to “MHA is 1, FFN is 2, layer is 3.” The original Vaswani et al. base-model description gives approximate model totals (65M) rather than an exact per-layer count. The executable count distinguishes terms and compares against PyTorch's biased, post-norm `TransformerEncoderLayer`: 3,152,384 parameters with the two affine LayerNorms included.
+- A transcript slide typo prints 32,178 for one per-head projection where `64 × 512 = 32,768`; the surrounding correct total also implies 32,768. This does not change the generated computation.
+- Scaled attention computes `softmax(QKᵀ / sqrt(d_k))`; PyTorch SDPA uses the same default scale for the last query/key dimension. The executable NumPy/PyTorch comparison prints both implementation outputs through the maximum absolute difference.

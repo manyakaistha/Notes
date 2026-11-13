@@ -1,0 +1,3 @@
+input [B,T,d_model]=[2,5,16]
+heads [B,h,T,d_k]=[2,4,5,4]; concat=[2, 5, 16]
+max |manual - torch.nn.MultiheadAttention|=0.00000009

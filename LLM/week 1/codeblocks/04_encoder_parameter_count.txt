@@ -1,0 +1,3 @@
+MHA formula=1,050,624; FFN formula=2,099,712; two LayerNorms=2,048
+encoder-layer formula=3,152,384; torch count=3,152,384; equal=True
+Course shorthand: about 3.15M with FFN biases; original paper's base layer count is approximate.

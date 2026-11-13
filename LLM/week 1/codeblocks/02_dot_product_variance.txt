@@ -1,0 +1,4 @@
+d_k=  4 Var(q.k)=    4.04 target=  4 scaled_var=1.011
+d_k= 16 Var(q.k)=   15.87 target= 16 scaled_var=0.992
+d_k= 64 Var(q.k)=   63.83 target= 64 scaled_var=0.997
+d_k=256 Var(q.k)=  253.99 target=256 scaled_var=0.992

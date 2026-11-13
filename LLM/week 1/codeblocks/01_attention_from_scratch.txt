@@ -1,0 +1,2 @@
+attention shape=(1, 2, 3, 4); row-sum range=1.000000..1.000000
+max |NumPy - torch SDPA|=0.00000011

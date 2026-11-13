@@ -24,98 +24,138 @@ tags:
 
 The checklist includes every topic named for this week in `sources/topics.json`. A topic without a directly routed question still links to the study notes.
 
+### Topic: Teacher forcing
+### Topic: Masked (causal) self-attention
+### Topic: Cross-attention (encoder-decoder attention)
+### Topic: Decoder output layer and decoder parameter counts
+### Topic: Sinusoidal positional encoding
+### Topic: Residual connections, LayerNorm vs BatchNorm
+### Topic: Training tricks: label smoothing, warm-up schedule, dropout
+### Topic: The full Transformer data flow
+
 | Topic | Linked questions | Evidence / revision |
 | :--- | ---: | :--- |
-| <a id="w2-teacher-forcing"></a>Teacher forcing | 8 | [[week-2-exam-questions#da5004_2024T1_Q1_NA--q192\|2024T1 Q1 NA Q192]] · [[week-2-exam-questions#da5004_2024T3_ET_FN--q190\|2024T3 ET FN Q190]] · [[week-2-exam-questions#da5004_2024T3_Q1_NA--q275\|2024T3 Q1 NA Q275]] · [[week-2-exam-questions#da5004_2025T1_Q1_NA--q105\|2025T1 Q1 NA Q105]] · [[week-2-exam-questions#da5004_2025T3_ET_AN--q25\|2025T3 ET AN Q25]] · [[week-2-exam-questions#da5004_2025T3_Q1_NA--q175\|2025T3 Q1 NA Q175]] · [[week-2-exam-questions#da5004_2025T3_Q1_NA--q177\|2025T3 Q1 NA Q177]] · [[week-2-exam-questions#da5004_2026T2_Q1_NA--q9\|2026T2 Q1 NA Q9]] |
-| <a id="w2-masked-self-attention"></a>Masked (causal) self-attention | 15 | [[week-2-exam-questions#da5004_2024T1_ET_AN--q157\|2024T1 ET AN Q157]] · [[week-2-exam-questions#da5004_2024T1_ET_FN--q212\|2024T1 ET FN Q212]] · [[week-2-exam-questions#da5004_2024T1_Q1_NA--q196\|2024T1 Q1 NA Q196]] · [[week-2-exam-questions#da5004_2024T1_Q1_NA--q197\|2024T1 Q1 NA Q197]] · [[week-2-exam-questions#da5004_2024T3_ET_AN--q191\|2024T3 ET AN Q191]] · [[week-2-exam-questions#da5004_2024T3_Q1_NA--q291\|2024T3 Q1 NA Q291]] · [[week-2-exam-questions#da5004_2025T2_ET_AN--q193\|2025T2 ET AN Q193]] · [[week-2-exam-questions#da5004_2025T3_ET_AN--q26\|2025T3 ET AN Q26]] · [[week-2-exam-questions#da5004_2025T3_Q1_NA--q176\|2025T3 Q1 NA Q176]] · [[week-2-exam-questions#da5004_2025T3_Q1_NA--q190\|2025T3 Q1 NA Q190]] · [[week-2-exam-questions#da5004_2025T3_Q2_NA--q113\|2025T3 Q2 NA Q113]] · [[week-2-exam-questions#da5004_2026T1_ET_AN--q2\|2026T1 ET AN Q2]] · [[week-2-exam-questions#da5004_2026T2_Q1_NA--q7\|2026T2 Q1 NA Q7]] · [[week-2-exam-questions#da5004_2026T2_Q2_NA--q3\|2026T2 Q2 NA Q3]] · [[week-2-exam-questions#da5004_2026T2_Q2_NA--q5\|2026T2 Q2 NA Q5]] |
-| <a id="w2-cross-attention"></a>Cross-attention (encoder-decoder attention) | 5 | [[week-2-exam-questions#da5004_2024T1_Q1_NA--q190\|2024T1 Q1 NA Q190]] · [[week-2-exam-questions#da5004_2025T1_Q1_NA--q104\|2025T1 Q1 NA Q104]] · [[week-2-exam-questions#da5004_2025T3_Q2_NA--q128\|2025T3 Q2 NA Q128]] · [[week-2-exam-questions#da5004_2026T1_Q1_NA--q5\|2026T1 Q1 NA Q5]] · [[week-2-exam-questions#da5004_2026T1_Q1_NA--q11\|2026T1 Q1 NA Q11]] |
-| <a id="w2-decoder-output-and-params"></a>Decoder output layer and decoder parameter counts | 4 | [[week-2-exam-questions#da5004_2024T3_Q1_NA--q277\|2024T3 Q1 NA Q277]] · [[week-2-exam-questions#da5004_2024T3_Q1_NA--q278\|2024T3 Q1 NA Q278]] · [[week-2-exam-questions#da5004_2024T3_Q1_NA--q279\|2024T3 Q1 NA Q279]] · [[week-2-exam-questions#da5004_2024T3_Q1_NA--q280\|2024T3 Q1 NA Q280]] |
-| <a id="w2-positional-encoding"></a>Sinusoidal positional encoding | 11 | [[week-2-exam-questions#da5004_2024T1_Q1_NA--q184\|2024T1 Q1 NA Q184]] · [[week-2-exam-questions#da5004_2024T1_Q1_NA--q185\|2024T1 Q1 NA Q185]] · [[week-2-exam-questions#da5004_2024T3_Q1_NA--q276\|2024T3 Q1 NA Q276]] · [[week-2-exam-questions#da5004_2024T3_Q1_NA--q293\|2024T3 Q1 NA Q293]] · [[week-2-exam-questions#da5004_2025T1_Q1_NA--q111\|2025T1 Q1 NA Q111]] · [[week-2-exam-questions#da5004_2025T2_Q1_NA--q144\|2025T2 Q1 NA Q144]] · [[week-2-exam-questions#da5004_2025T3_Q1_NA--q174\|2025T3 Q1 NA Q174]] · [[week-2-exam-questions#da5004_2026T1_ET_AN--q14\|2026T1 ET AN Q14]] · [[week-2-exam-questions#da5004_2026T1_Q1_NA--q12\|2026T1 Q1 NA Q12]] · [[week-2-exam-questions#da5004_2026T2_ET_AN--q3\|2026T2 ET AN Q3]] · [[week-2-exam-questions#da5004_2026T2_Q1_NA--q8\|2026T2 Q1 NA Q8]] |
-| <a id="w2-residual-layernorm"></a>Residual connections, LayerNorm vs BatchNorm | 21 | [[week-2-exam-questions#da5004_2024T3_Q1_NA--q276\|2024T3 Q1 NA Q276]] · [[week-2-exam-questions#da5004_2024T3_Q1_NA--q281\|2024T3 Q1 NA Q281]] · [[week-2-exam-questions#da5004_2024T3_Q1_NA--q282\|2024T3 Q1 NA Q282]] · [[week-2-exam-questions#da5004_2024T3_Q1_NA--q283\|2024T3 Q1 NA Q283]] · [[week-2-exam-questions#da5004_2024T3_Q1_NA--q284\|2024T3 Q1 NA Q284]] · [[week-2-exam-questions#da5004_2025T1_Q1_NA--q114\|2025T1 Q1 NA Q114]] · [[week-2-exam-questions#da5004_2025T1_Q1_NA--q115\|2025T1 Q1 NA Q115]] · [[week-2-exam-questions#da5004_2025T1_Q1_NA--q116\|2025T1 Q1 NA Q116]] · [[week-2-exam-questions#da5004_2025T1_Q1_NA--q117\|2025T1 Q1 NA Q117]] · [[week-2-exam-questions#da5004_2025T2_ET_FN--q142\|2025T2 ET FN Q142]] · [[week-2-exam-questions#da5004_2025T2_Q1_NA--q139\|2025T2 Q1 NA Q139]] · [[week-2-exam-questions#da5004_2025T2_Q1_NA--q150\|2025T2 Q1 NA Q150]] · [[week-2-exam-questions#da5004_2025T2_Q1_NA--q151\|2025T2 Q1 NA Q151]] · [[week-2-exam-questions#da5004_2025T2_Q1_NA--q152\|2025T2 Q1 NA Q152]] · [[week-2-exam-questions#da5004_2025T3_ET_AN--q3\|2025T3 ET AN Q3]] · [[week-2-exam-questions#da5004_2025T3_ET_FN--q2\|2025T3 ET FN Q2]] · [[week-2-exam-questions#da5004_2025T3_Q1_NA--q179\|2025T3 Q1 NA Q179]] · [[week-2-exam-questions#da5004_2025T3_Q2_NA--q127\|2025T3 Q2 NA Q127]] · [[week-2-exam-questions#da5004_2026T1_Q2_NA--q12\|2026T1 Q2 NA Q12]] · [[week-2-exam-questions#da5004_2026T2_ET_AN--q6\|2026T2 ET AN Q6]] · [[week-2-exam-questions#da5004_2026T2_Q2_NA--q2\|2026T2 Q2 NA Q2]] |
-| <a id="w2-training-tricks"></a>Training tricks: label smoothing, warm-up schedule, dropout | 1 | [[week-2-exam-questions#da5004_2025T2_ET_FN--q142\|2025T2 ET FN Q142]] |
-| <a id="w2-full-transformer"></a>The full Transformer data flow | 4 | [[week-2-exam-questions#da5004_2024T3_ET_AN--q191\|2024T3 ET AN Q191]] · [[week-2-exam-questions#da5004_2024T3_ET_FN--q190\|2024T3 ET FN Q190]] · [[week-2-exam-questions#da5004_2025T3_Q1_NA--q184\|2025T3 Q1 NA Q184]] · [[week-2-exam-questions#da5004_2026T2_Q2_NA--q4\|2026T2 Q2 NA Q4]] |
+| Teacher forcing | 8 | [[week-2-exam-questions#2024 T1 Quiz 1 NA, Q192\|2024T1 Q1 NA Q192]] · [[week-2-exam-questions#2024 T3 End Term FN, Q190\|2024T3 ET FN Q190]] · [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q275\|2024T3 Q1 NA Q275]] · [[week-2-exam-questions#2025 T1 Quiz 1 NA, Q105\|2025T1 Q1 NA Q105]] · [[week-2-exam-questions#2025 T3 End Term AN, Q25\|2025T3 ET AN Q25]] · [[week-2-exam-questions#2025 T3 Quiz 1 NA, Q175\|2025T3 Q1 NA Q175]] · [[week-2-exam-questions#2025 T3 Quiz 1 NA, Q177\|2025T3 Q1 NA Q177]] · [[week-2-exam-questions#2026 T2 Quiz 1 NA, Q9\|2026T2 Q1 NA Q9]] |
+| Masked (causal) self-attention | 15 | [[week-2-exam-questions#2024 T1 End Term AN, Q157\|2024T1 ET AN Q157]] · [[week-2-exam-questions#2024 T1 End Term FN, Q212\|2024T1 ET FN Q212]] · [[week-2-exam-questions#2024 T1 Quiz 1 NA, Q196\|2024T1 Q1 NA Q196]] · [[week-2-exam-questions#2024 T1 Quiz 1 NA, Q197\|2024T1 Q1 NA Q197]] · [[week-2-exam-questions#2024 T3 End Term AN, Q191\|2024T3 ET AN Q191]] · [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q291\|2024T3 Q1 NA Q291]] · [[week-2-exam-questions#2025 T2 End Term AN, Q193\|2025T2 ET AN Q193]] · [[week-2-exam-questions#2025 T3 End Term AN, Q26\|2025T3 ET AN Q26]] · [[week-2-exam-questions#2025 T3 Quiz 1 NA, Q176\|2025T3 Q1 NA Q176]] · [[week-2-exam-questions#2025 T3 Quiz 1 NA, Q190\|2025T3 Q1 NA Q190]] · [[week-2-exam-questions#2025 T3 Quiz 2 NA, Q113\|2025T3 Q2 NA Q113]] · [[week-2-exam-questions#2026 T1 End Term AN, Q2\|2026T1 ET AN Q2]] · [[week-2-exam-questions#2026 T2 Quiz 1 NA, Q7\|2026T2 Q1 NA Q7]] · [[week-2-exam-questions#2026 T2 Quiz 2 NA, Q3\|2026T2 Q2 NA Q3]] · [[week-2-exam-questions#2026 T2 Quiz 2 NA, Q5\|2026T2 Q2 NA Q5]] |
+| Cross-attention (encoder-decoder attention) | 5 | [[week-2-exam-questions#2024 T1 Quiz 1 NA, Q190\|2024T1 Q1 NA Q190]] · [[week-2-exam-questions#2025 T1 Quiz 1 NA, Q104\|2025T1 Q1 NA Q104]] · [[week-2-exam-questions#2025 T3 Quiz 2 NA, Q128\|2025T3 Q2 NA Q128]] · [[week-2-exam-questions#2026 T1 Quiz 1 NA, Q5\|2026T1 Q1 NA Q5]] · [[week-2-exam-questions#2026 T1 Quiz 1 NA, Q11\|2026T1 Q1 NA Q11]] |
+| Decoder output layer and decoder parameter counts | 4 | [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q277\|2024T3 Q1 NA Q277]] · [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q278\|2024T3 Q1 NA Q278]] · [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q279\|2024T3 Q1 NA Q279]] · [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q280\|2024T3 Q1 NA Q280]] |
+| Sinusoidal positional encoding | 11 | [[week-2-exam-questions#2024 T1 Quiz 1 NA, Q184\|2024T1 Q1 NA Q184]] · [[week-2-exam-questions#2024 T1 Quiz 1 NA, Q185\|2024T1 Q1 NA Q185]] · [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q276\|2024T3 Q1 NA Q276]] · [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q293\|2024T3 Q1 NA Q293]] · [[week-2-exam-questions#2025 T1 Quiz 1 NA, Q111\|2025T1 Q1 NA Q111]] · [[week-2-exam-questions#2025 T2 Quiz 1 NA, Q144\|2025T2 Q1 NA Q144]] · [[week-2-exam-questions#2025 T3 Quiz 1 NA, Q174\|2025T3 Q1 NA Q174]] · [[week-2-exam-questions#2026 T1 End Term AN, Q14\|2026T1 ET AN Q14]] · [[week-2-exam-questions#2026 T1 Quiz 1 NA, Q12\|2026T1 Q1 NA Q12]] · [[week-2-exam-questions#2026 T2 End Term AN, Q3\|2026T2 ET AN Q3]] · [[week-2-exam-questions#2026 T2 Quiz 1 NA, Q8\|2026T2 Q1 NA Q8]] |
+| Residual connections, LayerNorm vs BatchNorm | 21 | [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q276\|2024T3 Q1 NA Q276]] · [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q281\|2024T3 Q1 NA Q281]] · [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q282\|2024T3 Q1 NA Q282]] · [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q283\|2024T3 Q1 NA Q283]] · [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q284\|2024T3 Q1 NA Q284]] · [[week-2-exam-questions#2025 T1 Quiz 1 NA, Q114\|2025T1 Q1 NA Q114]] · [[week-2-exam-questions#2025 T1 Quiz 1 NA, Q115\|2025T1 Q1 NA Q115]] · [[week-2-exam-questions#2025 T1 Quiz 1 NA, Q116\|2025T1 Q1 NA Q116]] · [[week-2-exam-questions#2025 T1 Quiz 1 NA, Q117\|2025T1 Q1 NA Q117]] · [[week-2-exam-questions#2025 T2 End Term FN, Q142\|2025T2 ET FN Q142]] · [[week-2-exam-questions#2025 T2 Quiz 1 NA, Q139\|2025T2 Q1 NA Q139]] · [[week-2-exam-questions#2025 T2 Quiz 1 NA, Q150\|2025T2 Q1 NA Q150]] · [[week-2-exam-questions#2025 T2 Quiz 1 NA, Q151\|2025T2 Q1 NA Q151]] · [[week-2-exam-questions#2025 T2 Quiz 1 NA, Q152\|2025T2 Q1 NA Q152]] · [[week-2-exam-questions#2025 T3 End Term AN, Q3\|2025T3 ET AN Q3]] · [[week-2-exam-questions#2025 T3 End Term FN, Q2\|2025T3 ET FN Q2]] · [[week-2-exam-questions#2025 T3 Quiz 1 NA, Q179\|2025T3 Q1 NA Q179]] · [[week-2-exam-questions#2025 T3 Quiz 2 NA, Q127\|2025T3 Q2 NA Q127]] · [[week-2-exam-questions#2026 T1 Quiz 2 NA, Q12\|2026T1 Q2 NA Q12]] · [[week-2-exam-questions#2026 T2 End Term AN, Q6\|2026T2 ET AN Q6]] · [[week-2-exam-questions#2026 T2 Quiz 2 NA, Q2\|2026T2 Q2 NA Q2]] |
+| Training tricks: label smoothing, warm-up schedule, dropout | 1 | [[week-2-exam-questions#2025 T2 End Term FN, Q142\|2025T2 ET FN Q142]] |
+| The full Transformer data flow | 4 | [[week-2-exam-questions#2024 T3 End Term AN, Q191\|2024T3 ET AN Q191]] · [[week-2-exam-questions#2024 T3 End Term FN, Q190\|2024T3 ET FN Q190]] · [[week-2-exam-questions#2025 T3 Quiz 1 NA, Q184\|2025T3 Q1 NA Q184]] · [[week-2-exam-questions#2026 T2 Quiz 2 NA, Q4\|2026T2 Q2 NA Q4]] |
 
 ## Question navigator
 
 | Paper | Question link | Topic | Answer status |
 | :--- | :--- | :--- | :--- |
-| 2024T1_ET_AN | [[week-2-exam-questions#da5004_2024T1_ET_AN--q157\|2024 T1 End Term AN, Q157]] | w2-masked-self-attention | derived |
-| 2024T1_ET_FN | [[week-2-exam-questions#da5004_2024T1_ET_FN--q212\|2024 T1 End Term FN, Q212]] | w2-masked-self-attention | derived |
-| 2024T1_Q1_NA | [[week-2-exam-questions#da5004_2024T1_Q1_NA--q184\|2024 T1 Quiz 1 NA, Q184]] | w2-positional-encoding | derived |
-| 2024T1_Q1_NA | [[week-2-exam-questions#da5004_2024T1_Q1_NA--q185\|2024 T1 Quiz 1 NA, Q185]] | w2-positional-encoding | derived |
-| 2024T1_Q1_NA | [[week-2-exam-questions#da5004_2024T1_Q1_NA--q190\|2024 T1 Quiz 1 NA, Q190]] | w2-cross-attention | derived |
-| 2024T1_Q1_NA | [[week-2-exam-questions#da5004_2024T1_Q1_NA--q192\|2024 T1 Quiz 1 NA, Q192]] | w2-teacher-forcing | ambiguous |
-| 2024T1_Q1_NA | [[week-2-exam-questions#da5004_2024T1_Q1_NA--q196\|2024 T1 Quiz 1 NA, Q196]] | w2-masked-self-attention | derived |
-| 2024T1_Q1_NA | [[week-2-exam-questions#da5004_2024T1_Q1_NA--q197\|2024 T1 Quiz 1 NA, Q197]] | w2-masked-self-attention | derived |
-| 2024T3_ET_AN | [[week-2-exam-questions#da5004_2024T3_ET_AN--q191\|2024 T3 End Term AN, Q191]] | w2-full-transformer, w2-masked-self-attention | derived |
-| 2024T3_ET_FN | [[week-2-exam-questions#da5004_2024T3_ET_FN--q190\|2024 T3 End Term FN, Q190]] | w2-full-transformer, w2-teacher-forcing | ambiguous |
-| 2024T3_Q1_NA | [[week-2-exam-questions#da5004_2024T3_Q1_NA--q275\|2024 T3 Quiz 1 NA, Q275]] | w2-teacher-forcing | derived |
-| 2024T3_Q1_NA | [[week-2-exam-questions#da5004_2024T3_Q1_NA--q276\|2024 T3 Quiz 1 NA, Q276]] | w2-residual-layernorm, w2-positional-encoding | ambiguous |
-| 2024T3_Q1_NA | [[week-2-exam-questions#da5004_2024T3_Q1_NA--q277\|2024 T3 Quiz 1 NA, Q277]] | w2-decoder-output-and-params | ambiguous |
-| 2024T3_Q1_NA | [[week-2-exam-questions#da5004_2024T3_Q1_NA--q278\|2024 T3 Quiz 1 NA, Q278]] | w2-decoder-output-and-params | ambiguous |
-| 2024T3_Q1_NA | [[week-2-exam-questions#da5004_2024T3_Q1_NA--q279\|2024 T3 Quiz 1 NA, Q279]] | w2-decoder-output-and-params | ambiguous |
-| 2024T3_Q1_NA | [[week-2-exam-questions#da5004_2024T3_Q1_NA--q280\|2024 T3 Quiz 1 NA, Q280]] | w2-decoder-output-and-params | derived |
-| 2024T3_Q1_NA | [[week-2-exam-questions#da5004_2024T3_Q1_NA--q281\|2024 T3 Quiz 1 NA, Q281]] | w2-residual-layernorm | derived |
-| 2024T3_Q1_NA | [[week-2-exam-questions#da5004_2024T3_Q1_NA--q282\|2024 T3 Quiz 1 NA, Q282]] | w2-residual-layernorm | derived |
-| 2024T3_Q1_NA | [[week-2-exam-questions#da5004_2024T3_Q1_NA--q283\|2024 T3 Quiz 1 NA, Q283]] | w2-residual-layernorm | derived |
-| 2024T3_Q1_NA | [[week-2-exam-questions#da5004_2024T3_Q1_NA--q284\|2024 T3 Quiz 1 NA, Q284]] | w2-residual-layernorm | derived |
-| 2024T3_Q1_NA | [[week-2-exam-questions#da5004_2024T3_Q1_NA--q291\|2024 T3 Quiz 1 NA, Q291]] | w2-masked-self-attention | derived |
-| 2024T3_Q1_NA | [[week-2-exam-questions#da5004_2024T3_Q1_NA--q293\|2024 T3 Quiz 1 NA, Q293]] | w2-positional-encoding | derived |
-| 2025T1_Q1_NA | [[week-2-exam-questions#da5004_2025T1_Q1_NA--q104\|2025 T1 Quiz 1 NA, Q104]] | w2-cross-attention | derived |
-| 2025T1_Q1_NA | [[week-2-exam-questions#da5004_2025T1_Q1_NA--q105\|2025 T1 Quiz 1 NA, Q105]] | w2-teacher-forcing | ambiguous |
-| 2025T1_Q1_NA | [[week-2-exam-questions#da5004_2025T1_Q1_NA--q111\|2025 T1 Quiz 1 NA, Q111]] | w2-positional-encoding | ambiguous |
-| 2025T1_Q1_NA | [[week-2-exam-questions#da5004_2025T1_Q1_NA--q114\|2025 T1 Quiz 1 NA, Q114]] | w2-residual-layernorm | derived |
-| 2025T1_Q1_NA | [[week-2-exam-questions#da5004_2025T1_Q1_NA--q115\|2025 T1 Quiz 1 NA, Q115]] | w2-residual-layernorm | derived |
-| 2025T1_Q1_NA | [[week-2-exam-questions#da5004_2025T1_Q1_NA--q116\|2025 T1 Quiz 1 NA, Q116]] | w2-residual-layernorm | derived |
-| 2025T1_Q1_NA | [[week-2-exam-questions#da5004_2025T1_Q1_NA--q117\|2025 T1 Quiz 1 NA, Q117]] | w2-residual-layernorm | derived |
-| 2025T2_ET_AN | [[week-2-exam-questions#da5004_2025T2_ET_AN--q193\|2025 T2 End Term AN, Q193]] | w2-masked-self-attention | derived |
-| 2025T2_ET_FN | [[week-2-exam-questions#da5004_2025T2_ET_FN--q142\|2025 T2 End Term FN, Q142]] | w2-residual-layernorm, w2-training-tricks | derived |
-| 2025T2_Q1_NA | [[week-2-exam-questions#da5004_2025T2_Q1_NA--q139\|2025 T2 Quiz 1 NA, Q139]] | w2-residual-layernorm | derived |
-| 2025T2_Q1_NA | [[week-2-exam-questions#da5004_2025T2_Q1_NA--q144\|2025 T2 Quiz 1 NA, Q144]] | w2-positional-encoding | derived |
-| 2025T2_Q1_NA | [[week-2-exam-questions#da5004_2025T2_Q1_NA--q150\|2025 T2 Quiz 1 NA, Q150]] | w2-residual-layernorm | ambiguous |
-| 2025T2_Q1_NA | [[week-2-exam-questions#da5004_2025T2_Q1_NA--q151\|2025 T2 Quiz 1 NA, Q151]] | w2-residual-layernorm | derived |
-| 2025T2_Q1_NA | [[week-2-exam-questions#da5004_2025T2_Q1_NA--q152\|2025 T2 Quiz 1 NA, Q152]] | w2-residual-layernorm | derived |
-| 2025T3_ET_AN | [[week-2-exam-questions#da5004_2025T3_ET_AN--q3\|2025 T3 End Term AN, Q3]] | w2-residual-layernorm | derived |
-| 2025T3_ET_AN | [[week-2-exam-questions#da5004_2025T3_ET_AN--q25\|2025 T3 End Term AN, Q25]] | w2-teacher-forcing | derived |
-| 2025T3_ET_AN | [[week-2-exam-questions#da5004_2025T3_ET_AN--q26\|2025 T3 End Term AN, Q26]] | w2-masked-self-attention | derived |
-| 2025T3_ET_FN | [[week-2-exam-questions#da5004_2025T3_ET_FN--q2\|2025 T3 End Term FN, Q2]] | w2-residual-layernorm | ambiguous |
-| 2025T3_Q1_NA | [[week-2-exam-questions#da5004_2025T3_Q1_NA--q174\|2025 T3 Quiz 1 NA, Q174]] | w2-positional-encoding | derived |
-| 2025T3_Q1_NA | [[week-2-exam-questions#da5004_2025T3_Q1_NA--q175\|2025 T3 Quiz 1 NA, Q175]] | w2-teacher-forcing | derived |
-| 2025T3_Q1_NA | [[week-2-exam-questions#da5004_2025T3_Q1_NA--q176\|2025 T3 Quiz 1 NA, Q176]] | w2-masked-self-attention | derived |
-| 2025T3_Q1_NA | [[week-2-exam-questions#da5004_2025T3_Q1_NA--q177\|2025 T3 Quiz 1 NA, Q177]] | w2-teacher-forcing | derived |
-| 2025T3_Q1_NA | [[week-2-exam-questions#da5004_2025T3_Q1_NA--q179\|2025 T3 Quiz 1 NA, Q179]] | w2-residual-layernorm | derived |
-| 2025T3_Q1_NA | [[week-2-exam-questions#da5004_2025T3_Q1_NA--q184\|2025 T3 Quiz 1 NA, Q184]] | w2-full-transformer | derived |
-| 2025T3_Q1_NA | [[week-2-exam-questions#da5004_2025T3_Q1_NA--q190\|2025 T3 Quiz 1 NA, Q190]] | w2-masked-self-attention | ambiguous |
-| 2025T3_Q2_NA | [[week-2-exam-questions#da5004_2025T3_Q2_NA--q113\|2025 T3 Quiz 2 NA, Q113]] | w2-masked-self-attention | derived |
-| 2025T3_Q2_NA | [[week-2-exam-questions#da5004_2025T3_Q2_NA--q127\|2025 T3 Quiz 2 NA, Q127]] | w2-residual-layernorm | derived |
-| 2025T3_Q2_NA | [[week-2-exam-questions#da5004_2025T3_Q2_NA--q128\|2025 T3 Quiz 2 NA, Q128]] | w2-cross-attention | derived |
-| 2026T1_ET_AN | [[week-2-exam-questions#da5004_2026T1_ET_AN--q2\|2026 T1 End Term AN, Q2]] | w2-masked-self-attention | derived |
-| 2026T1_ET_AN | [[week-2-exam-questions#da5004_2026T1_ET_AN--q14\|2026 T1 End Term AN, Q14]] | w2-positional-encoding | derived |
-| 2026T1_Q1_NA | [[week-2-exam-questions#da5004_2026T1_Q1_NA--q5\|2026 T1 Quiz 1 NA, Q5]] | w2-cross-attention | derived |
-| 2026T1_Q1_NA | [[week-2-exam-questions#da5004_2026T1_Q1_NA--q11\|2026 T1 Quiz 1 NA, Q11]] | w2-cross-attention | derived |
-| 2026T1_Q1_NA | [[week-2-exam-questions#da5004_2026T1_Q1_NA--q12\|2026 T1 Quiz 1 NA, Q12]] | w2-positional-encoding | ambiguous |
-| 2026T1_Q2_NA | [[week-2-exam-questions#da5004_2026T1_Q2_NA--q12\|2026 T1 Quiz 2 NA, Q12]] | w2-residual-layernorm | derived |
-| 2026T2_ET_AN | [[week-2-exam-questions#da5004_2026T2_ET_AN--q3\|2026 T2 End Term AN, Q3]] | w2-positional-encoding | ambiguous |
-| 2026T2_ET_AN | [[week-2-exam-questions#da5004_2026T2_ET_AN--q6\|2026 T2 End Term AN, Q6]] | w2-residual-layernorm | ambiguous |
-| 2026T2_Q1_NA | [[week-2-exam-questions#da5004_2026T2_Q1_NA--q7\|2026 T2 Quiz 1 NA, Q7]] | w2-masked-self-attention | derived |
-| 2026T2_Q1_NA | [[week-2-exam-questions#da5004_2026T2_Q1_NA--q8\|2026 T2 Quiz 1 NA, Q8]] | w2-positional-encoding | derived |
-| 2026T2_Q1_NA | [[week-2-exam-questions#da5004_2026T2_Q1_NA--q9\|2026 T2 Quiz 1 NA, Q9]] | w2-teacher-forcing | derived |
-| 2026T2_Q2_NA | [[week-2-exam-questions#da5004_2026T2_Q2_NA--q2\|2026 T2 Quiz 2 NA, Q2]] | w2-residual-layernorm | derived |
-| 2026T2_Q2_NA | [[week-2-exam-questions#da5004_2026T2_Q2_NA--q3\|2026 T2 Quiz 2 NA, Q3]] | w2-masked-self-attention | derived |
-| 2026T2_Q2_NA | [[week-2-exam-questions#da5004_2026T2_Q2_NA--q4\|2026 T2 Quiz 2 NA, Q4]] | w2-full-transformer | derived |
-| 2026T2_Q2_NA | [[week-2-exam-questions#da5004_2026T2_Q2_NA--q5\|2026 T2 Quiz 2 NA, Q5]] | w2-masked-self-attention | derived |
+| 2024T1_ET_AN | [[week-2-exam-questions#2024 T1 End Term AN, Q157\|2024 T1 End Term AN, Q157]] | w2-masked-self-attention | derived |
+| 2024T1_ET_FN | [[week-2-exam-questions#2024 T1 End Term FN, Q212\|2024 T1 End Term FN, Q212]] | w2-masked-self-attention | derived |
+| 2024T1_Q1_NA | [[week-2-exam-questions#2024 T1 Quiz 1 NA, Q184\|2024 T1 Quiz 1 NA, Q184]] | w2-positional-encoding | derived |
+| 2024T1_Q1_NA | [[week-2-exam-questions#2024 T1 Quiz 1 NA, Q185\|2024 T1 Quiz 1 NA, Q185]] | w2-positional-encoding | derived |
+| 2024T1_Q1_NA | [[week-2-exam-questions#2024 T1 Quiz 1 NA, Q190\|2024 T1 Quiz 1 NA, Q190]] | w2-cross-attention | derived |
+| 2024T1_Q1_NA | [[week-2-exam-questions#2024 T1 Quiz 1 NA, Q192\|2024 T1 Quiz 1 NA, Q192]] | w2-teacher-forcing | ambiguous |
+| 2024T1_Q1_NA | [[week-2-exam-questions#2024 T1 Quiz 1 NA, Q196\|2024 T1 Quiz 1 NA, Q196]] | w2-masked-self-attention | derived |
+| 2024T1_Q1_NA | [[week-2-exam-questions#2024 T1 Quiz 1 NA, Q197\|2024 T1 Quiz 1 NA, Q197]] | w2-masked-self-attention | derived |
+| 2024T3_ET_AN | [[week-2-exam-questions#2024 T3 End Term AN, Q191\|2024 T3 End Term AN, Q191]] | w2-full-transformer, w2-masked-self-attention | derived |
+| 2024T3_ET_FN | [[week-2-exam-questions#2024 T3 End Term FN, Q190\|2024 T3 End Term FN, Q190]] | w2-full-transformer, w2-teacher-forcing | derived |
+| 2024T3_Q1_NA | [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q275\|2024 T3 Quiz 1 NA, Q275]] | w2-teacher-forcing | derived |
+| 2024T3_Q1_NA | [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q276\|2024 T3 Quiz 1 NA, Q276]] | w2-residual-layernorm, w2-positional-encoding | ambiguous |
+| 2024T3_Q1_NA | [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q277\|2024 T3 Quiz 1 NA, Q277]] | w2-decoder-output-and-params | ambiguous |
+| 2024T3_Q1_NA | [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q278\|2024 T3 Quiz 1 NA, Q278]] | w2-decoder-output-and-params | ambiguous |
+| 2024T3_Q1_NA | [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q279\|2024 T3 Quiz 1 NA, Q279]] | w2-decoder-output-and-params | ambiguous |
+| 2024T3_Q1_NA | [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q280\|2024 T3 Quiz 1 NA, Q280]] | w2-decoder-output-and-params | derived |
+| 2024T3_Q1_NA | [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q281\|2024 T3 Quiz 1 NA, Q281]] | w2-residual-layernorm | derived |
+| 2024T3_Q1_NA | [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q282\|2024 T3 Quiz 1 NA, Q282]] | w2-residual-layernorm | derived |
+| 2024T3_Q1_NA | [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q283\|2024 T3 Quiz 1 NA, Q283]] | w2-residual-layernorm | derived |
+| 2024T3_Q1_NA | [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q284\|2024 T3 Quiz 1 NA, Q284]] | w2-residual-layernorm | derived |
+| 2024T3_Q1_NA | [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q291\|2024 T3 Quiz 1 NA, Q291]] | w2-masked-self-attention | derived |
+| 2024T3_Q1_NA | [[week-2-exam-questions#2024 T3 Quiz 1 NA, Q293\|2024 T3 Quiz 1 NA, Q293]] | w2-positional-encoding | derived |
+| 2025T1_Q1_NA | [[week-2-exam-questions#2025 T1 Quiz 1 NA, Q104\|2025 T1 Quiz 1 NA, Q104]] | w2-cross-attention | derived |
+| 2025T1_Q1_NA | [[week-2-exam-questions#2025 T1 Quiz 1 NA, Q105\|2025 T1 Quiz 1 NA, Q105]] | w2-teacher-forcing | derived |
+| 2025T1_Q1_NA | [[week-2-exam-questions#2025 T1 Quiz 1 NA, Q111\|2025 T1 Quiz 1 NA, Q111]] | w2-positional-encoding | ambiguous |
+| 2025T1_Q1_NA | [[week-2-exam-questions#2025 T1 Quiz 1 NA, Q114\|2025 T1 Quiz 1 NA, Q114]] | w2-residual-layernorm | derived |
+| 2025T1_Q1_NA | [[week-2-exam-questions#2025 T1 Quiz 1 NA, Q115\|2025 T1 Quiz 1 NA, Q115]] | w2-residual-layernorm | derived |
+| 2025T1_Q1_NA | [[week-2-exam-questions#2025 T1 Quiz 1 NA, Q116\|2025 T1 Quiz 1 NA, Q116]] | w2-residual-layernorm | derived |
+| 2025T1_Q1_NA | [[week-2-exam-questions#2025 T1 Quiz 1 NA, Q117\|2025 T1 Quiz 1 NA, Q117]] | w2-residual-layernorm | derived |
+| 2025T2_ET_AN | [[week-2-exam-questions#2025 T2 End Term AN, Q193\|2025 T2 End Term AN, Q193]] | w2-masked-self-attention | derived |
+| 2025T2_ET_FN | [[week-2-exam-questions#2025 T2 End Term FN, Q142\|2025 T2 End Term FN, Q142]] | w2-residual-layernorm, w2-training-tricks | derived |
+| 2025T2_Q1_NA | [[week-2-exam-questions#2025 T2 Quiz 1 NA, Q139\|2025 T2 Quiz 1 NA, Q139]] | w2-residual-layernorm | derived |
+| 2025T2_Q1_NA | [[week-2-exam-questions#2025 T2 Quiz 1 NA, Q144\|2025 T2 Quiz 1 NA, Q144]] | w2-positional-encoding | derived |
+| 2025T2_Q1_NA | [[week-2-exam-questions#2025 T2 Quiz 1 NA, Q150\|2025 T2 Quiz 1 NA, Q150]] | w2-residual-layernorm | derived |
+| 2025T2_Q1_NA | [[week-2-exam-questions#2025 T2 Quiz 1 NA, Q151\|2025 T2 Quiz 1 NA, Q151]] | w2-residual-layernorm | derived |
+| 2025T2_Q1_NA | [[week-2-exam-questions#2025 T2 Quiz 1 NA, Q152\|2025 T2 Quiz 1 NA, Q152]] | w2-residual-layernorm | derived |
+| 2025T3_ET_AN | [[week-2-exam-questions#2025 T3 End Term AN, Q3\|2025 T3 End Term AN, Q3]] | w2-residual-layernorm | derived |
+| 2025T3_ET_AN | [[week-2-exam-questions#2025 T3 End Term AN, Q25\|2025 T3 End Term AN, Q25]] | w2-teacher-forcing | derived |
+| 2025T3_ET_AN | [[week-2-exam-questions#2025 T3 End Term AN, Q26\|2025 T3 End Term AN, Q26]] | w2-masked-self-attention | derived |
+| 2025T3_ET_FN | [[week-2-exam-questions#2025 T3 End Term FN, Q2\|2025 T3 End Term FN, Q2]] | w2-residual-layernorm | ambiguous |
+| 2025T3_Q1_NA | [[week-2-exam-questions#2025 T3 Quiz 1 NA, Q174\|2025 T3 Quiz 1 NA, Q174]] | w2-positional-encoding | derived |
+| 2025T3_Q1_NA | [[week-2-exam-questions#2025 T3 Quiz 1 NA, Q175\|2025 T3 Quiz 1 NA, Q175]] | w2-teacher-forcing | derived |
+| 2025T3_Q1_NA | [[week-2-exam-questions#2025 T3 Quiz 1 NA, Q176\|2025 T3 Quiz 1 NA, Q176]] | w2-masked-self-attention | derived |
+| 2025T3_Q1_NA | [[week-2-exam-questions#2025 T3 Quiz 1 NA, Q177\|2025 T3 Quiz 1 NA, Q177]] | w2-teacher-forcing | derived |
+| 2025T3_Q1_NA | [[week-2-exam-questions#2025 T3 Quiz 1 NA, Q179\|2025 T3 Quiz 1 NA, Q179]] | w2-residual-layernorm | derived |
+| 2025T3_Q1_NA | [[week-2-exam-questions#2025 T3 Quiz 1 NA, Q184\|2025 T3 Quiz 1 NA, Q184]] | w2-full-transformer | derived |
+| 2025T3_Q1_NA | [[week-2-exam-questions#2025 T3 Quiz 1 NA, Q190\|2025 T3 Quiz 1 NA, Q190]] | w2-masked-self-attention | ambiguous |
+| 2025T3_Q2_NA | [[week-2-exam-questions#2025 T3 Quiz 2 NA, Q113\|2025 T3 Quiz 2 NA, Q113]] | w2-masked-self-attention | derived |
+| 2025T3_Q2_NA | [[week-2-exam-questions#2025 T3 Quiz 2 NA, Q127\|2025 T3 Quiz 2 NA, Q127]] | w2-residual-layernorm | derived |
+| 2025T3_Q2_NA | [[week-2-exam-questions#2025 T3 Quiz 2 NA, Q128\|2025 T3 Quiz 2 NA, Q128]] | w2-cross-attention | derived |
+| 2026T1_ET_AN | [[week-2-exam-questions#2026 T1 End Term AN, Q2\|2026 T1 End Term AN, Q2]] | w2-masked-self-attention | derived |
+| 2026T1_ET_AN | [[week-2-exam-questions#2026 T1 End Term AN, Q14\|2026 T1 End Term AN, Q14]] | w2-positional-encoding | derived |
+| 2026T1_Q1_NA | [[week-2-exam-questions#2026 T1 Quiz 1 NA, Q5\|2026 T1 Quiz 1 NA, Q5]] | w2-cross-attention | derived |
+| 2026T1_Q1_NA | [[week-2-exam-questions#2026 T1 Quiz 1 NA, Q11\|2026 T1 Quiz 1 NA, Q11]] | w2-cross-attention | derived |
+| 2026T1_Q1_NA | [[week-2-exam-questions#2026 T1 Quiz 1 NA, Q12\|2026 T1 Quiz 1 NA, Q12]] | w2-positional-encoding | derived |
+| 2026T1_Q2_NA | [[week-2-exam-questions#2026 T1 Quiz 2 NA, Q12\|2026 T1 Quiz 2 NA, Q12]] | w2-residual-layernorm | derived |
+| 2026T2_ET_AN | [[week-2-exam-questions#2026 T2 End Term AN, Q3\|2026 T2 End Term AN, Q3]] | w2-positional-encoding | ambiguous |
+| 2026T2_ET_AN | [[week-2-exam-questions#2026 T2 End Term AN, Q6\|2026 T2 End Term AN, Q6]] | w2-residual-layernorm | ambiguous |
+| 2026T2_Q1_NA | [[week-2-exam-questions#2026 T2 Quiz 1 NA, Q7\|2026 T2 Quiz 1 NA, Q7]] | w2-masked-self-attention | derived |
+| 2026T2_Q1_NA | [[week-2-exam-questions#2026 T2 Quiz 1 NA, Q8\|2026 T2 Quiz 1 NA, Q8]] | w2-positional-encoding | derived |
+| 2026T2_Q1_NA | [[week-2-exam-questions#2026 T2 Quiz 1 NA, Q9\|2026 T2 Quiz 1 NA, Q9]] | w2-teacher-forcing | derived |
+| 2026T2_Q2_NA | [[week-2-exam-questions#2026 T2 Quiz 2 NA, Q2\|2026 T2 Quiz 2 NA, Q2]] | w2-residual-layernorm | derived |
+| 2026T2_Q2_NA | [[week-2-exam-questions#2026 T2 Quiz 2 NA, Q3\|2026 T2 Quiz 2 NA, Q3]] | w2-masked-self-attention | derived |
+| 2026T2_Q2_NA | [[week-2-exam-questions#2026 T2 Quiz 2 NA, Q4\|2026 T2 Quiz 2 NA, Q4]] | w2-full-transformer | derived |
+| 2026T2_Q2_NA | [[week-2-exam-questions#2026 T2 Quiz 2 NA, Q5\|2026 T2 Quiz 2 NA, Q5]] | w2-masked-self-attention | derived |
 
 ## Quiz 1 questions
 
-<a id="da5004_2024T1_Q1_NA--q184"></a>
+#### Shared context
 
+**Question ID:** `640653739756`
+
+**Type:** Comprehension
+**PDF pages:** 3, 4
+
+Consider a vocabulary $V = (A, T, C, G)$ and the corresponding embedding matrix $E = \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ 1 & -1 \\ 1 & 1 \end{bmatrix}$. For example, the 0-th row of $E$ is the embedding for 0-th token of $V$ and so on.
+
+The following sequence $X = (G, C, C, T, A, G)$ is to be processed by the encoder layer of the transformer architecture by appropriately adding the positional information using the following encoding scheme:
+
+$$P(pos, 2i) = \sin\left(\frac{pos}{10000^{2i/d_{model}}}\right)$$
+
+$$P(pos, 2i+1) = \cos\left(\frac{pos}{10000^{2i/d_{model}}}\right)$$
+
+Assume the index for the position starts from zero. Add positional information to all the tokens in the sequence. Let the resultant sequence be denoted by $H = E(X) + P$, ($H$ will be used in the subsequent questions, please write it down). Here, $E(X)$ denotes the embedding for each token in $X$.
+
+!Vocabulary V, embedding matrix E, sequence X, and positional encoding scheme equations for transformer encoder
+
+**Figure 2.** Vocabulary V, embedding matrix E, sequence X, and positional encoding scheme equations for transformer encoder
+
+Based on the above data, answer the given subquestions.
+
+### Question 184
+
+**Corrected shared-context text:** Vocabulary V=(A,T,C,G), embeddings E=[[1,0],[0,1],[1,-1],[1,1]], and X=(G,C,C,T,A,G). Position indices start at zero; H=E(X)+P. The scan defines P(pos,2i)=sin(pos/10^(2i/d_model)) and P(pos,2i+1)=cos(pos/10^(2i/d_model)).
+
+#### Dependent question
+
+<a id="da5004_2024T1_Q1_NA--q184"></a>
 ### 2024 T1 Quiz 1 NA, Q184
 
 **Paper:** `2024T1_Q1_NA` · **Type:** SA · **Marks:** 3 · **Topic(s):** w2-positional-encoding
 
-What is the sum of the elements in the embedding vector $P_3$?
+What is the sum of the elements in the embedding vector $P_5$?
 
 ![Question stem image for 2024 T1 Quiz 1 NA, Q184 in 2024T1_Q1_NA](../sources/exam-papers/assets/da5004_2024T1_Q1_NA/q184-q184-stem-01-p004.png)
+
+> Editorial correction: the extracted text differed from the scan (extraction_error); see evidence `LLM/sources/exam-papers/assets/da5004_2024T1_Q1_NA/q184-q184-stem-01-p004.png asks for P_5.`.
+> Editorial correction: the extracted text differed from the scan (shared_context); see evidence `LLM/sources/exam-papers/assets/da5004_2024T1_Q1_NA/ctx-184-187-passage-01-p004.png shows vocabulary, embedding matrix, sequence, positional formula and zero indexing.`.
 
 #### Worked answer
 
@@ -129,8 +169,36 @@ What is the sum of the elements in the embedding vector $P_3$?
 
 ---
 
-<a id="da5004_2024T1_Q1_NA--q185"></a>
+#### Shared context
 
+**Question ID:** `640653739756`
+
+**Type:** Comprehension
+**PDF pages:** 3, 4
+
+Consider a vocabulary $V = (A, T, C, G)$ and the corresponding embedding matrix $E = \begin{bmatrix} 1 & 0 \\ 0 & 1 \\ 1 & -1 \\ 1 & 1 \end{bmatrix}$. For example, the 0-th row of $E$ is the embedding for 0-th token of $V$ and so on.
+
+The following sequence $X = (G, C, C, T, A, G)$ is to be processed by the encoder layer of the transformer architecture by appropriately adding the positional information using the following encoding scheme:
+
+$$P(pos, 2i) = \sin\left(\frac{pos}{10000^{2i/d_{model}}}\right)$$
+
+$$P(pos, 2i+1) = \cos\left(\frac{pos}{10000^{2i/d_{model}}}\right)$$
+
+Assume the index for the position starts from zero. Add positional information to all the tokens in the sequence. Let the resultant sequence be denoted by $H = E(X) + P$, ($H$ will be used in the subsequent questions, please write it down). Here, $E(X)$ denotes the embedding for each token in $X$.
+
+!Vocabulary V, embedding matrix E, sequence X, and positional encoding scheme equations for transformer encoder
+
+**Figure 2.** Vocabulary V, embedding matrix E, sequence X, and positional encoding scheme equations for transformer encoder
+
+Based on the above data, answer the given subquestions.
+
+### Question 184
+
+**Corrected shared-context text:** Vocabulary V=(A,T,C,G), embeddings E=[[1,0],[0,1],[1,-1],[1,1]], and X=(G,C,C,T,A,G). Position indices start at zero; H=E(X)+P. The scan defines P(pos,2i)=sin(pos/10^(2i/d_model)) and P(pos,2i+1)=cos(pos/10^(2i/d_model)).
+
+#### Dependent question
+
+<a id="da5004_2024T1_Q1_NA--q185"></a>
 ### 2024 T1 Quiz 1 NA, Q185
 
 **Paper:** `2024T1_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w2-positional-encoding
@@ -138,6 +206,8 @@ What is the sum of the elements in the embedding vector $P_3$?
 What is the sum of the elements in the 3-rd token, $h_3 \in H$
 
 ![Question stem image for 2024 T1 Quiz 1 NA, Q185 in 2024T1_Q1_NA](../sources/exam-papers/assets/da5004_2024T1_Q1_NA/q185-q185-stem-01-p005.png)
+
+> Editorial correction: the extracted text differed from the scan (shared_context); see evidence `LLM/sources/exam-papers/assets/da5004_2024T1_Q1_NA/ctx-184-187-passage-01-p004.png shows vocabulary, embedding matrix, sequence, positional formula and zero indexing.`.
 
 #### Worked answer
 
@@ -152,7 +222,6 @@ What is the sum of the elements in the 3-rd token, $h_3 \in H$
 ---
 
 <a id="da5004_2024T1_Q1_NA--q190"></a>
-
 ### 2024 T1 Quiz 1 NA, Q190
 
 **Paper:** `2024T1_Q1_NA` · **Type:** MCQ · **Marks:** 4 · **Topic(s):** w2-cross-attention
@@ -197,6 +266,7 @@ Let $R_E \in \mathbb{R}^{T_1 \times d_{model}}$ be the representation from the t
 *Label added for presentation.*
 ![Option D image for 2024 T1 Quiz 1 NA, Q190 in 2024T1_Q1_NA](../sources/exam-papers/assets/da5004_2024T1_Q1_NA/q190-q190-option-d-01-p009.png)
 
+
 #### Worked answer
 
 **Final answer:** D: T₂ × T₁.
@@ -210,7 +280,6 @@ Let $R_E \in \mathbb{R}^{T_1 \times d_{model}}$ be the representation from the t
 ---
 
 <a id="da5004_2024T1_Q1_NA--q192"></a>
-
 ### 2024 T1 Quiz 1 NA, Q192
 
 **Paper:** `2024T1_Q1_NA` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w2-teacher-forcing
@@ -243,22 +312,22 @@ Choose the correct statements
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
-**Final answer:** B and C are the intended choices, but B is not guaranteed.
+**Final answer:** C is defensible; B is the intended empirical claim but not guaranteed
 
-**Steps:** Teacher forcing makes target positions parallel and supplies clean prefixes; switching to model-generated prefixes is possible (C), so D is false. Faster convergence (B) is empirical, not a theorem; A is likewise not guaranteed. Autoregressive factorization itself also includes teacher forcing.
+**Steps:** Teacher forcing supplies gold previous tokens; free-running training uses model outputs. Either can be scheduled after the other (C). Faster convergence is an empirical tendency, not a theorem for every dataset, so B is unproved and D false.
 
 **Status:** ambiguous
 
-**Ambiguity note:** B asserts faster convergence without conditions, and autoregressive training is not defined separately from teacher forcing.
+**Ambiguity note:** Autoregressive factorization is compatible with teacher forcing, so the two named approaches are not mutually defined. A switch to generated-prefix training is possible (C), whereas an unconditional faster-convergence claim (B) depends on setup and convergence metric; the item does not specify these.
 
 **verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
 
 ---
 
 <a id="da5004_2024T1_Q1_NA--q196"></a>
-
 ### 2024 T1 Quiz 1 NA, Q196
 
 **Paper:** `2024T1_Q1_NA` · **Type:** MCQ · **Marks:** 4 · **Topic(s):** w2-masked-self-attention
@@ -281,6 +350,7 @@ The attention score matrix given in Table 1 is appropriate for the causal langua
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
 **Final answer:** A: True.
@@ -294,12 +364,12 @@ The attention score matrix given in Table 1 is appropriate for the causal langua
 ---
 
 <a id="da5004_2024T1_Q1_NA--q197"></a>
-
 ### 2024 T1 Quiz 1 NA, Q197
 
 **Paper:** `2024T1_Q1_NA` · **Type:** SA · **Marks:** 4 · **Topic(s):** w2-masked-self-attention
 
 Assume the time step starts from t = 0 and ends at t = 6. Suppose the model is at time step t = 4, what is the attention value assigned for the word “is”?
+
 
 
 #### Worked answer
@@ -315,7 +385,6 @@ Assume the time step starts from t = 0 and ends at t = 6. Suppose the model is a
 ---
 
 <a id="da5004_2024T3_Q1_NA--q275"></a>
-
 ### 2024 T3 Quiz 1 NA, Q275
 
 **Paper:** `2024T3_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w2-teacher-forcing
@@ -333,6 +402,7 @@ Teacher forcing for training an transformer model is:
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
 **Final answer:** B: optional.
@@ -346,7 +416,6 @@ Teacher forcing for training an transformer model is:
 ---
 
 <a id="da5004_2024T3_Q1_NA--q276"></a>
-
 ### 2024 T3 Quiz 1 NA, Q276
 
 **Paper:** `2024T3_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w2-residual-layernorm, w2-positional-encoding
@@ -379,22 +448,22 @@ Choose the correct statements regarding transformer architecture:
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
-**Final answer:** B and D are both defensible.
+**Final answer:** B and D
 
-**Steps:** B: heads can attend in different representation subspaces. D: batch normalization can replace layer normalization in Transformer variants, although it has different batch and padding behavior. A dismisses important optimization aids; C is a poor general choice because fixed one-hot positions do not naturally extrapolate; E is false.
+**Steps:** Multiple heads can capture different relationships (B); Transformer variants can use batch normalization (D). Both are defensible literal claims, although layer normalization is standard, and only one choice is allowed.
 
 **Status:** ambiguous
 
-**Ambiguity note:** Single-answer MCQ has at least two defensible choices: multi-head diversity and the possibility of using batch normalization.
+**Ambiguity note:** Multiple heads can capture different relationships (B); Transformer variants can use batch normalization (D). Both are defensible literal claims, although layer normalization is standard, and only one choice is allowed.
 
 **verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
 
 ---
 
 <a id="da5004_2024T3_Q1_NA--q277"></a>
-
 ### 2024 T3 Quiz 1 NA, Q277
 
 **Paper:** `2024T3_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w2-decoder-output-and-params
@@ -402,22 +471,22 @@ Choose the correct statements regarding transformer architecture:
 Assume the model has two layers (N = 2). Calculate the total number of parameters in the model (excluding the embedding layer and output layer). Moreover, no bias was added to the neuron in the FFNN layers.
 
 
+
 #### Worked answer
 
-**Final answer:** 230,656 under standard bias-free attention and two layers per stack.
+**Final answer:** 230,656 with bias-free attention and affine LayerNorm; 232,192 with attention biases
 
-**Steps:** Each attention block has 4×64²=16,384 weights; two encoder and two decoder layers contain 6 blocks. Four FFNs contribute 4×2×64×256; ten layer norms contribute 10×2×64. Total 98,304+131,072+1,280=230,656.
+**Steps:** The shared passage explicitly makes encoder and decoder configurations equal, so N=2 applies to both. Six attention blocks contribute 6×4×64²=98,304, four bias-free FFNs 4×2×64×256=131,072, and ten affine norms 1,280, total 230,656. Attention biases add 6×4×64=1,536. The printed answer favors bias-free attention; the old note incorrectly suggests independent stack depths are unspecified.
 
 **Status:** ambiguous
 
-**Ambiguity note:** Attention projection biases and whether N=2 applies independently to encoder and decoder are not specified; allowing projection biases changes the count.
+**Ambiguity note:** Implied course/exam convention: 230,656 with bias-free attention and affine LayerNorm; 232,192 with attention biases. The shared passage explicitly makes encoder and decoder configurations equal, so N=2 applies to both. Six attention blocks contribute 6×4×64²=98,304, four bias-free FFNs 4×2×64×256=131,072, and ten affine norms 1,280, total 230,656. Attention biases add 6×4×64=1,536. The printed answer favors bias-free attention; the old note incorrectly suggests independent stack depths are unspecified.
 
-**verified_by_code:** `false` — depends on figure, no code path
+**verified_by_code:** `false` — Override numeric derivation not code-verified: complete numeric inputs are absent from the editable extraction; manual scan adjudication retained.
 
 ---
 
 <a id="da5004_2024T3_Q1_NA--q278"></a>
-
 ### 2024 T3 Quiz 1 NA, Q278
 
 **Paper:** `2024T3_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w2-decoder-output-and-params
@@ -425,22 +494,22 @@ Assume the model has two layers (N = 2). Calculate the total number of parameter
 How many parameters does the output layer have?
 
 
+
 #### Worked answer
 
-**Final answer:** 48,000 weights if the output projection has no bias.
+**Final answer:** 48,000 weights; 48,750 including an output bias
 
-**Steps:** The target projection has `64 × 750` weights, giving 48,000. A 750-element output bias would increase this to 48,750; tied weights alter independent parameter accounting.
+**Steps:** A 64-to-750 output projection contains 64×750=48,000 weights; an output bias contributes 750. Whether tied output weights are counted as independent parameters is another convention. The paper key implies a weights-only count.
 
 **Status:** ambiguous
 
-**Ambiguity note:** Output bias and weight tying are not specified.
+**Ambiguity note:** Implied course/exam convention: 48,000 weights; 48,750 including an output bias. A 64-to-750 output projection contains 64×750=48,000 weights; an output bias contributes 750. Whether tied output weights are counted as independent parameters is another convention. The paper key implies a weights-only count.
 
-**verified_by_code:** `false` — depends on figure, no code path
+**verified_by_code:** `false` — Override numeric derivation not code-verified: complete numeric inputs are absent from the editable extraction; manual scan adjudication retained.
 
 ---
 
 <a id="da5004_2024T3_Q1_NA--q279"></a>
-
 ### 2024 T3 Quiz 1 NA, Q279
 
 **Paper:** `2024T3_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w2-decoder-output-and-params
@@ -448,27 +517,28 @@ How many parameters does the output layer have?
 How many parameters does the embedding layer have?
 
 
+
 #### Worked answer
 
-**Final answer:** 32,000 for the source table; 80,000 for both source and target tables.
+**Final answer:** 32,000 source embedding weights; 48,000 target embedding weights; 80,000 for both
 
-**Steps:** Source embeddings use `500 × 64`=32,000 weights; target embeddings use `750 × 64`=48,000. Both tables together contain 80,000 when untied.
+**Steps:** The shared encoder–decoder has source vocabulary 500, target vocabulary 750, and width 64, yet asks for “the embedding layer” without identifying source, target, or both. Their untied counts are 500×64, 750×64, and their sum; sharing would need further specification.
 
 **Status:** ambiguous
 
-**Ambiguity note:** The question does not identify which of the two embedding layers to count or specify tying.
+**Ambiguity note:** The shared encoder–decoder has source vocabulary 500, target vocabulary 750, and width 64, yet asks for “the embedding layer” without identifying source, target, or both. Their untied counts are 500×64, 750×64, and their sum; sharing would need further specification.
 
-**verified_by_code:** `false` — depends on figure, no code path
+**verified_by_code:** `false` — Override numeric derivation not code-verified: complete numeric inputs are absent from the editable extraction; manual scan adjudication retained.
 
 ---
 
 <a id="da5004_2024T3_Q1_NA--q280"></a>
-
 ### 2024 T3 Quiz 1 NA, Q280
 
 **Paper:** `2024T3_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w2-decoder-output-and-params
 
 At time step t = 1, the prediction probability for the words “Naan”, “transformer” and “padaththai” are 0.55,0.15 and 0.2, respectively. What is the probability for the word “rasithen”? If you think, the given information is insufficient enter -1
+
 
 
 #### Worked answer
@@ -483,14 +553,44 @@ At time step t = 1, the prediction probability for the words “Naan”, “tran
 
 ---
 
-<a id="da5004_2024T3_Q1_NA--q281"></a>
+#### Shared context
 
+**Question ID:** `640653993617`
+
+**Type:** Comprehension
+**PDF pages:** 6
+
+
+
+Consider following input matrix to a single neural network layer:
+
+$$X = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 7 & 11 \\ -3 & 5 & -2 \end{bmatrix}$$
+
+It has 3 samples with 3 features each i.e. batch size is 3.
+Each column represents a sample. Left most column represents the first sample and topmost row represents the first feature vector.
+Note: assume $\gamma = 1, \beta = 0$ and $\epsilon = 10^{-5}$ for both batch and layer normalization, if not mentioned explicitly. Use standard scaling.
+
+!Input matrix X and batch/layer normalization configuration specifications
+
+**Figure 3.** Input matrix X and batch/layer normalization configuration specifications
+
+Based on the above data, answer the given subquestions.
+
+### Question 281
+
+**Corrected shared-context text:** X=[[1,2,3],[4,7,11],[-3,5,-2]] has three samples as columns and three features as rows; gamma=1, beta=0, epsilon=10^-6, with standard scaling.
+
+#### Dependent question
+
+<a id="da5004_2024T3_Q1_NA--q281"></a>
 ### 2024 T3 Quiz 1 NA, Q281
 
 **Paper:** `2024T3_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w2-residual-layernorm
 
 Say matrix F is computed by applying batch normalization on X, what will be sum of every element in first/topmost row of F?
 
+
+> Editorial correction: the extracted text differed from the scan (shared_context); see evidence `LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/ctx-281-284-passage-01-p006.png shows input matrix, sample orientation and epsilon = 10^-6.`.
 
 #### Worked answer
 
@@ -504,14 +604,44 @@ Say matrix F is computed by applying batch normalization on X, what will be sum 
 
 ---
 
-<a id="da5004_2024T3_Q1_NA--q282"></a>
+#### Shared context
 
+**Question ID:** `640653993617`
+
+**Type:** Comprehension
+**PDF pages:** 6
+
+
+
+Consider following input matrix to a single neural network layer:
+
+$$X = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 7 & 11 \\ -3 & 5 & -2 \end{bmatrix}$$
+
+It has 3 samples with 3 features each i.e. batch size is 3.
+Each column represents a sample. Left most column represents the first sample and topmost row represents the first feature vector.
+Note: assume $\gamma = 1, \beta = 0$ and $\epsilon = 10^{-5}$ for both batch and layer normalization, if not mentioned explicitly. Use standard scaling.
+
+!Input matrix X and batch/layer normalization configuration specifications
+
+**Figure 3.** Input matrix X and batch/layer normalization configuration specifications
+
+Based on the above data, answer the given subquestions.
+
+### Question 281
+
+**Corrected shared-context text:** X=[[1,2,3],[4,7,11],[-3,5,-2]] has three samples as columns and three features as rows; gamma=1, beta=0, epsilon=10^-6, with standard scaling.
+
+#### Dependent question
+
+<a id="da5004_2024T3_Q1_NA--q282"></a>
 ### 2024 T3 Quiz 1 NA, Q282
 
 **Paper:** `2024T3_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w2-residual-layernorm
 
 Say matrix F is computed by applying layer normalization on X, what will be sum of every element in first/leftmost column of F?
 
+
+> Editorial correction: the extracted text differed from the scan (shared_context); see evidence `LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/ctx-281-284-passage-01-p006.png shows input matrix, sample orientation and epsilon = 10^-6.`.
 
 #### Worked answer
 
@@ -525,15 +655,46 @@ Say matrix F is computed by applying layer normalization on X, what will be sum 
 
 ---
 
-<a id="da5004_2024T3_Q1_NA--q283"></a>
+#### Shared context
 
+**Question ID:** `640653993617`
+
+**Type:** Comprehension
+**PDF pages:** 6
+
+
+
+Consider following input matrix to a single neural network layer:
+
+$$X = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 7 & 11 \\ -3 & 5 & -2 \end{bmatrix}$$
+
+It has 3 samples with 3 features each i.e. batch size is 3.
+Each column represents a sample. Left most column represents the first sample and topmost row represents the first feature vector.
+Note: assume $\gamma = 1, \beta = 0$ and $\epsilon = 10^{-5}$ for both batch and layer normalization, if not mentioned explicitly. Use standard scaling.
+
+!Input matrix X and batch/layer normalization configuration specifications
+
+**Figure 3.** Input matrix X and batch/layer normalization configuration specifications
+
+Based on the above data, answer the given subquestions.
+
+### Question 281
+
+**Corrected shared-context text:** X=[[1,2,3],[4,7,11],[-3,5,-2]] has three samples as columns and three features as rows; gamma=1, beta=0, epsilon=10^-6, with standard scaling.
+
+#### Dependent question
+
+<a id="da5004_2024T3_Q1_NA--q283"></a>
 ### 2024 T3 Quiz 1 NA, Q283
 
 **Paper:** `2024T3_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w2-residual-layernorm
 
-Say $\sigma_1, \sigma_2$ and $\sigma_3$ were the standard deviations used to compute batch normalization of X. What is $\sum_{i=1}^3 \sigma_i^2$?
+Say $\sigma_1, \sigma_2$ and $\sigma_3$ were the standard deviations used to compute batch normalization of X. What is $\sum_{i=1}^3 \sigma_i$?
 
 ![Question stem image for 2024 T3 Quiz 1 NA, Q283 in 2024T3_Q1_NA](../sources/exam-papers/assets/da5004_2024T3_Q1_NA/q283-q283-stem-01-p007.png)
+
+> Editorial correction: the extracted text differed from the scan (extraction_error); see evidence `LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/q283-q283-stem-01-p007.png shows the sum of σ_i, with no square.`.
+> Editorial correction: the extracted text differed from the scan (shared_context); see evidence `LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/ctx-281-284-passage-01-p006.png shows input matrix, sample orientation and epsilon = 10^-6.`.
 
 #### Worked answer
 
@@ -547,15 +708,46 @@ Say $\sigma_1, \sigma_2$ and $\sigma_3$ were the standard deviations used to com
 
 ---
 
-<a id="da5004_2024T3_Q1_NA--q284"></a>
+#### Shared context
 
+**Question ID:** `640653993617`
+
+**Type:** Comprehension
+**PDF pages:** 6
+
+
+
+Consider following input matrix to a single neural network layer:
+
+$$X = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 7 & 11 \\ -3 & 5 & -2 \end{bmatrix}$$
+
+It has 3 samples with 3 features each i.e. batch size is 3.
+Each column represents a sample. Left most column represents the first sample and topmost row represents the first feature vector.
+Note: assume $\gamma = 1, \beta = 0$ and $\epsilon = 10^{-5}$ for both batch and layer normalization, if not mentioned explicitly. Use standard scaling.
+
+!Input matrix X and batch/layer normalization configuration specifications
+
+**Figure 3.** Input matrix X and batch/layer normalization configuration specifications
+
+Based on the above data, answer the given subquestions.
+
+### Question 281
+
+**Corrected shared-context text:** X=[[1,2,3],[4,7,11],[-3,5,-2]] has three samples as columns and three features as rows; gamma=1, beta=0, epsilon=10^-6, with standard scaling.
+
+#### Dependent question
+
+<a id="da5004_2024T3_Q1_NA--q284"></a>
 ### 2024 T3 Quiz 1 NA, Q284
 
 **Paper:** `2024T3_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w2-residual-layernorm
 
-Say $\sigma_1, \sigma_2$ and $\sigma_3$ were the standard deviations used to compute layer normalization of X. What is $\sum_{i=1}^3 \sigma_i^2$?
+Say $\sigma_1, \sigma_2$ and $\sigma_3$ were the standard deviations used to compute layer normalization of X. What is $\sum_{i=1}^3 \sigma_i$?
 
 ![Question stem image for 2024 T3 Quiz 1 NA, Q284 in 2024T3_Q1_NA](../sources/exam-papers/assets/da5004_2024T3_Q1_NA/q284-q284-stem-01-p007.png)
+
+> Editorial correction: the extracted text differed from the scan (extraction_error); see evidence `LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/q284-q284-stem-01-p007.png shows the sum of σ_i, with no square.`.
+> Editorial correction: the extracted text differed from the scan (shared_context); see evidence `LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/ctx-281-284-passage-01-p006.png shows input matrix, sample orientation and epsilon = 10^-6.`.
 
 #### Worked answer
 
@@ -570,7 +762,6 @@ Say $\sigma_1, \sigma_2$ and $\sigma_3$ were the standard deviations used to com
 ---
 
 <a id="da5004_2024T3_Q1_NA--q291"></a>
-
 ### 2024 T3 Quiz 1 NA, Q291
 
 **Paper:** `2024T3_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w2-masked-self-attention
@@ -604,6 +795,7 @@ What will be shape of the mask M?
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
 **Final answer:** C: 64 × 64.
@@ -617,7 +809,6 @@ What will be shape of the mask M?
 ---
 
 <a id="da5004_2024T3_Q1_NA--q293"></a>
-
 ### 2024 T3 Quiz 1 NA, Q293
 
 **Paper:** `2024T3_Q1_NA` · **Type:** SA · **Marks:** 3 · **Topic(s):** w2-positional-encoding
@@ -681,6 +872,7 @@ What is $h[0] + h[1]$ i.e. sum of first two elements of $h$?
 - {"classification": "following-subject-heading", "page": 13, "bbox": [20.62, 603.3, 405.42, 821.0], "reason": "Out-of-scope heading for subsequent Section 15 DLP (Section Id 64065369324)", "identity": "Section 15"}
 
 
+
 #### Worked answer
 
 **Final answer:** Approximately 0.79315.
@@ -694,7 +886,6 @@ What is $h[0] + h[1]$ i.e. sum of first two elements of $h$?
 ---
 
 <a id="da5004_2025T1_Q1_NA--q104"></a>
-
 ### 2025 T1 Quiz 1 NA, Q104
 
 **Paper:** `2025T1_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w2-cross-attention
@@ -715,6 +906,7 @@ Let $H_e \in \mathbb{R}^{T_1 \times d_{model}}$ be the representation from the t
 **D.** $T_2 \times T_1$
 ![Option D image for 2025 T1 Quiz 1 NA, Q104 in 2025T1_Q1_NA](../sources/exam-papers/assets/da5004_2025T1_Q1_NA/q104-q104-option-d-01-p002.png)
 
+
 #### Worked answer
 
 **Final answer:** D: T₂ × T₁.
@@ -728,7 +920,6 @@ Let $H_e \in \mathbb{R}^{T_1 \times d_{model}}$ be the representation from the t
 ---
 
 <a id="da5004_2025T1_Q1_NA--q105"></a>
-
 ### 2025 T1 Quiz 1 NA, Q105
 
 **Paper:** `2025T1_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w2-teacher-forcing
@@ -752,22 +943,20 @@ Assertion.
 
 **D.** Assertion is false but Reason is true.
 
+
 #### Worked answer
 
-**Final answer:** D is the intended answer.
+**Final answer:** D
 
-**Steps:** Autoregressive translation training is possible, so the assertion is false. Teacher forcing often accelerates training by parallelizing known target prefixes. A–C incorrectly label the assertion true.
+**Steps:** An autoregressive Transformer can be trained for translation, so the assertion is false. Teacher forcing generally accelerates practical training and convergence by supplying reference prefixes and enabling parallel positions; the reason is the standard qualitative course statement, not an all-datasets theorem. D is the unique intended pair.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** The reason asserts a universal convergence-rate improvement; the training speed benefit does not guarantee faster convergence in every setting.
-
-**verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
+**verified_by_code:** `false` — Non-numeric response; no numeric checker path applies.
 
 ---
 
 <a id="da5004_2025T1_Q1_NA--q111"></a>
-
 ### 2025 T1 Quiz 1 NA, Q111
 
 **Paper:** `2025T1_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w2-positional-encoding
@@ -776,28 +965,29 @@ Suppose the number of learnable parameters in the source input-embedding layer i
 many parameters are there in the positional embedding layer of the source language?
 
 
+
 #### Worked answer
 
-**Final answer:** 0 for fixed sinusoidal positions; 1,024 for a learned position table.
+**Final answer:** 0 for fixed sinusoidal positions; 1,024 for a learned table
 
-**Steps:** Source word embeddings have 100d=3,200, so d=32. A learned table for 32 positions has 32×32=1,024 parameters, whereas the original vanilla Transformer uses fixed sinusoidal encodings with no learnable positional parameters.
+**Steps:** The source embedding condition gives d=3200/100=32 and the context has 32 positions. A learned position table contains 32×32=1,024 parameters; fixed sinusoids contain zero. The original Transformer used sinusoids, while the paper key implies a learned table; “vanilla” alone does not settle this conflict.
 
 **Status:** ambiguous
 
-**Ambiguity note:** The question calls the architecture vanilla but does not specify whether position encodings are learned; Vaswani et al. use fixed sinusoids.
+**Ambiguity note:** Implied course/exam convention: 0 for fixed sinusoidal positions; 1,024 for a learned table. The source embedding condition gives d=3200/100=32 and the context has 32 positions. A learned position table contains 32×32=1,024 parameters; fixed sinusoids contain zero. The original Transformer used sinusoids, while the paper key implies a learned table; “vanilla” alone does not settle this conflict.
 
-**verified_by_code:** `false` — depends on figure, no code path
+**verified_by_code:** `true` — solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.
 
 ---
 
 <a id="da5004_2025T1_Q1_NA--q114"></a>
-
 ### 2025 T1 Quiz 1 NA, Q114
 
 **Paper:** `2025T1_Q1_NA` · **Type:** SA · **Marks:** 1 · **Topic(s):** w2-residual-layernorm
 
 Say matrix F is computed by applying batch normalization on X, what will be sum of every element
 in first / topmost row of F?
+
 
 
 #### Worked answer
@@ -813,13 +1003,13 @@ in first / topmost row of F?
 ---
 
 <a id="da5004_2025T1_Q1_NA--q115"></a>
-
 ### 2025 T1 Quiz 1 NA, Q115
 
 **Paper:** `2025T1_Q1_NA` · **Type:** SA · **Marks:** 1 · **Topic(s):** w2-residual-layernorm
 
 Say matrix F is computed by applying layer normalization on X, what will be sum of every element
 in first / leftmost column of F?
+
 
 
 #### Worked answer
@@ -835,7 +1025,6 @@ in first / leftmost column of F?
 ---
 
 <a id="da5004_2025T1_Q1_NA--q116"></a>
-
 ### 2025 T1 Quiz 1 NA, Q116
 
 **Paper:** `2025T1_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w2-residual-layernorm
@@ -843,6 +1032,7 @@ in first / leftmost column of F?
 Say $\sigma_i$'s were the standard deviations used to compute batch normalization of $X$. What is $\sum_{i=1}^2 \sigma_i$?
 
 ![Question stem image for 2025 T1 Quiz 1 NA, Q116 in 2025T1_Q1_NA](../sources/exam-papers/assets/da5004_2025T1_Q1_NA/q116-q116-stem-01-p007.png)
+
 
 #### Worked answer
 
@@ -857,7 +1047,6 @@ Say $\sigma_i$'s were the standard deviations used to compute batch normalizatio
 ---
 
 <a id="da5004_2025T1_Q1_NA--q117"></a>
-
 ### 2025 T1 Quiz 1 NA, Q117
 
 **Paper:** `2025T1_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w2-residual-layernorm
@@ -865,6 +1054,7 @@ Say $\sigma_i$'s were the standard deviations used to compute batch normalizatio
 Say $\sigma_i$'s were the standard deviations used to compute layer normalization of $X$. What is $\sum_{i=1}^4 \sigma_i$?
 
 ![Question stem image for 2025 T1 Quiz 1 NA, Q117 in 2025T1_Q1_NA](../sources/exam-papers/assets/da5004_2025T1_Q1_NA/q117-q117-stem-01-p008.png)
+
 
 #### Worked answer
 
@@ -879,7 +1069,6 @@ Say $\sigma_i$'s were the standard deviations used to compute layer normalizatio
 ---
 
 <a id="da5004_2025T2_Q1_NA--q139"></a>
-
 ### 2025 T2 Quiz 1 NA, Q139
 
 **Paper:** `2025T2_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w2-residual-layernorm
@@ -895,6 +1084,7 @@ Why are residual connections important in transformer architectures?
 
 **D.** They remove the need for layer normalization.
 
+
 #### Worked answer
 
 **Final answer:** C.
@@ -908,7 +1098,6 @@ Why are residual connections important in transformer architectures?
 ---
 
 <a id="da5004_2025T2_Q1_NA--q144"></a>
-
 ### 2025 T2 Quiz 1 NA, Q144
 
 **Paper:** `2025T2_Q1_NA` · **Type:** SA · **Marks:** 3 · **Topic(s):** w2-positional-encoding
@@ -921,6 +1110,7 @@ $$\text{PE}(pos, 2i + 1) = \cos\left(\frac{pos}{10000^{2i/d}}\right)$$
 What is the value of $h[0] - h[1]$ i.e. substract second element from the first element of $h$ vector ? (Answer correct up to 2 values after the decimal)
 
 ![Question stem image for 2025 T2 Quiz 1 NA, Q144 in 2025T2_Q1_NA](../sources/exam-papers/assets/da5004_2025T2_Q1_NA/q144-q144-stem-01-p006.png)
+
 
 #### Worked answer
 
@@ -935,7 +1125,6 @@ What is the value of $h[0] - h[1]$ i.e. substract second element from the first 
 ---
 
 <a id="da5004_2025T2_Q1_NA--q150"></a>
-
 ### 2025 T2 Quiz 1 NA, Q150
 
 **Paper:** `2025T2_Q1_NA` · **Type:** SA · **Marks:** 1 · **Topic(s):** w2-residual-layernorm
@@ -943,22 +1132,20 @@ What is the value of $h[0] - h[1]$ i.e. substract second element from the first 
 For the given input matrix X and multihead attention output MHA(X), apply a residual connection and store the result in matrix R, and finally compute the sum of all elements in matrix R.
 
 
+
 #### Worked answer
 
 **Final answer:** 32
 
-**Steps:** The passage image gives X=[[1,1],[2,3],[1,2],[3,1]] and MHA(X)=[[1,2],[3,3],[2,3],[3,1]], with tokens in columns. Thus R=[[2,3],[5,6],[3,5],[6,2]], whose entries sum to 32. The transcription and printed key differ from the image.
+**Steps:** The pictured shared passage gives X=[[1,1],[2,3],[1,2],[3,1]] and MHA(X)=[[1,2],[3,3],[2,3],[3,1]]. Their sum is [[2,3],[5,6],[3,5],[6,2]], whose entries total 32. A transcription or answer-key discrepancy does not make the legible original image ambiguous.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** The source image matrices conflict with the transcription and official key; 32 follows the visible matrices.
-
-**verified_by_code:** `false` — depends on figure, no code path
+**verified_by_code:** `false` — Override numeric derivation not code-verified: complete numeric inputs are absent from the editable extraction; manual scan adjudication retained.
 
 ---
 
 <a id="da5004_2025T2_Q1_NA--q151"></a>
-
 ### 2025 T2 Quiz 1 NA, Q151
 
 **Paper:** `2025T2_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w2-residual-layernorm
@@ -966,6 +1153,7 @@ For the given input matrix X and multihead attention output MHA(X), apply a resi
 To apply the layer normalization on the matrix R. How many learning parameters ($\theta$) will be required ?
 
 ![Question stem image for 2025 T2 Quiz 1 NA, Q151 in 2025T2_Q1_NA](../sources/exam-papers/assets/da5004_2025T2_Q1_NA/q151-q151-stem-01-p013.png)
+
 
 #### Worked answer
 
@@ -980,7 +1168,6 @@ To apply the layer normalization on the matrix R. How many learning parameters (
 ---
 
 <a id="da5004_2025T2_Q1_NA--q152"></a>
-
 ### 2025 T2 Quiz 1 NA, Q152
 
 **Paper:** `2025T2_Q1_NA` · **Type:** SA · **Marks:** 3 · **Topic(s):** w2-residual-layernorm
@@ -988,6 +1175,7 @@ To apply the layer normalization on the matrix R. How many learning parameters (
 Initialize $\gamma = 2, \beta = 1$ and use $\epsilon = 0$ and apply the layer normalization on the matrix R and sum of all the elements of the final output.
 
 ![Question stem image for 2025 T2 Quiz 1 NA, Q152 in 2025T2_Q1_NA](../sources/exam-papers/assets/da5004_2025T2_Q1_NA/q152-q152-stem-01-p013.png)
+
 
 #### Worked answer
 
@@ -1002,7 +1190,6 @@ Initialize $\gamma = 2, \beta = 1$ and use $\epsilon = 0$ and apply the layer no
 ---
 
 <a id="da5004_2025T3_Q1_NA--q174"></a>
-
 ### 2025 T3 Quiz 1 NA, Q174
 
 **Paper:** `2025T3_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w2-positional-encoding
@@ -1025,6 +1212,7 @@ Which of the following is true regarding sinusoidal encoding?
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
 **Final answer:** C — each position uses sine in even dimensions and cosine in odd dimensions
@@ -1038,7 +1226,6 @@ Which of the following is true regarding sinusoidal encoding?
 ---
 
 <a id="da5004_2025T3_Q1_NA--q175"></a>
-
 ### 2025 T3 Quiz 1 NA, Q175
 
 **Paper:** `2025T3_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w2-teacher-forcing
@@ -1076,6 +1263,7 @@ If teacher forcing is used, what will be the decoder input at time step 3?
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
 **Final answer:** C — suis
@@ -1089,7 +1277,6 @@ If teacher forcing is used, what will be the decoder input at time step 3?
 ---
 
 <a id="da5004_2025T3_Q1_NA--q176"></a>
-
 ### 2025 T3 Quiz 1 NA, Q176
 
 **Paper:** `2025T3_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w2-masked-self-attention
@@ -1143,6 +1330,7 @@ For token x3, the pre-softmax row is [1, 2, 0, 2]. After masking, what does it b
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
 **Final answer:** C — [1, 2, 0, −∞]
@@ -1156,7 +1344,6 @@ For token x3, the pre-softmax row is [1, 2, 0, 2]. After masking, what does it b
 ---
 
 <a id="da5004_2025T3_Q1_NA--q177"></a>
-
 ### 2025 T3 Quiz 1 NA, Q177
 
 **Paper:** `2025T3_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w2-teacher-forcing
@@ -1184,6 +1371,7 @@ In the context of language model training, teacher forcing is a technique where:
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
 **Final answer:** A — feed the correct preceding target token
@@ -1197,7 +1385,6 @@ In the context of language model training, teacher forcing is a technique where:
 ---
 
 <a id="da5004_2025T3_Q1_NA--q179"></a>
-
 ### 2025 T3 Quiz 1 NA, Q179
 
 **Paper:** `2025T3_Q1_NA` · **Type:** MCQ · **Marks:** 3 · **Topic(s):** w2-residual-layernorm
@@ -1245,6 +1432,7 @@ If Batch Normalization is applied across the batch for each feature (assume $\ga
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
 **Final answer:** A — [[−1, −1], [1, 1]]
@@ -1258,7 +1446,6 @@ If Batch Normalization is applied across the batch for each feature (assume $\ga
 ---
 
 <a id="da5004_2025T3_Q1_NA--q184"></a>
-
 ### 2025 T3 Quiz 1 NA, Q184
 
 **Paper:** `2025T3_Q1_NA` · **Type:** MSQ · **Marks:** 4 · **Topic(s):** w2-full-transformer
@@ -1291,6 +1478,7 @@ Which of the following statements about the Transformer architecture are true?
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
 **Final answer:** A, D and E
@@ -1304,7 +1492,6 @@ Which of the following statements about the Transformer architecture are true?
 ---
 
 <a id="da5004_2025T3_Q1_NA--q190"></a>
-
 ### 2025 T3 Quiz 1 NA, Q190
 
 **Paper:** `2025T3_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w2-masked-self-attention
@@ -1312,22 +1499,22 @@ Which of the following statements about the Transformer architecture are true?
 For one sequence, how many non-zero attention scores remain in the masked attention score matrix (per head)?
 
 
+
 #### Worked answer
 
-**Final answer:** At most 524,800 unmasked entries per head; the number of nonzero raw scores is not determined.
+**Final answer:** 524,800 unmasked or finite-softmax positive entries; raw nonzero logits undetermined
 
-**Steps:** For T=1024 the diagonal-inclusive lower triangle has T(T+1)/2=524800 permitted entries. Finite logits can themselves be zero, and an additive mask sets forbidden logits to −∞, not zero. If the question means post-softmax weights for finite logits, all allowed weights are positive and the count is 524800.
+**Steps:** The inclusive causal triangle contains 1024×1025/2=524,800 allowed positions. With finite logits, post-softmax allowed weights are positive and masked weights zero; pre-softmax raw allowed scores can be zero and additive-masked scores are −∞. The course convention counts available causal weights, but “score matrix” does not specify the stage.
 
 **Status:** ambiguous
 
-**Ambiguity note:** Nonzero attention scores are not determined from sequence length alone; the question does not specify post-softmax weights or assume nonzero permitted scores.
+**Ambiguity note:** Implied course/exam convention: 524,800 unmasked or finite-softmax positive entries; raw nonzero logits undetermined. The inclusive causal triangle contains 1024×1025/2=524,800 allowed positions. With finite logits, post-softmax allowed weights are positive and masked weights zero; pre-softmax raw allowed scores can be zero and additive-masked scores are −∞. The course convention counts available causal weights, but “score matrix” does not specify the stage.
 
-**verified_by_code:** `false` — depends on figure, no code path
+**verified_by_code:** `true` — solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.
 
 ---
 
 <a id="da5004_2026T1_Q1_NA--q5"></a>
-
 ### 2026 T1 Quiz 1 NA, Q5
 
 **Paper:** `2026T1_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w2-cross-attention
@@ -1343,6 +1530,7 @@ In a standard Transformer encoder-decoder architecture, is masking typically app
 
 **D.** No masking is ever applied in cross-attention since the encoder processes the complete input sequence
 
+
 #### Worked answer
 
 **Final answer:** C — no source causal mask; source padding may be masked
@@ -1356,7 +1544,6 @@ In a standard Transformer encoder-decoder architecture, is masking typically app
 ---
 
 <a id="da5004_2026T1_Q1_NA--q11"></a>
-
 ### 2026 T1 Quiz 1 NA, Q11
 
 **Paper:** `2026T1_Q1_NA` · **Type:** MSQ · **Marks:** 2 · **Topic(s):** w2-cross-attention
@@ -1372,6 +1559,7 @@ In the context of the Transformer architecture, which of the following statement
 
 **D.** This mechanism allows the Decoder to focus on relevant parts of the input sequence processed by the Encoder.
 
+
 #### Worked answer
 
 **Final answer:** B and D
@@ -1385,7 +1573,6 @@ In the context of the Transformer architecture, which of the following statement
 ---
 
 <a id="da5004_2026T1_Q1_NA--q12"></a>
-
 ### 2026 T1 Quiz 1 NA, Q12
 
 **Paper:** `2026T1_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w2-positional-encoding
@@ -1399,22 +1586,20 @@ Consider a Transformer model with a hidden state dimension $d_{model} = 128$. Yo
 
 ![Question stem image for 2026 T1 Quiz 1 NA, Q12 in 2026T1_Q1_NA](../sources/exam-papers/assets/da5004_2026T1_Q1_NA/q12-q12-stem-01-p007.png)
 
+
 #### Worked answer
 
-**Final answer:** cos(3/10000^(4/128)) ≈ −0.627927
+**Final answer:** cos(3/10000^(4/128)) ≈ −0.62792665
 
-**Steps:** The sixth element has zero-based coordinate 5=2×2+1, so the cosine formula uses pair index 2 and exponent 4/128. The wording calls the coordinate i=5 although i denotes the pair index in the formula; interpreting i=5 as the pair index would instead address coordinate 11.
+**Steps:** The explicitly requested sixth element is zero-based coordinate 5=2×2+1; the cosine formula therefore uses pair index 2. The reuse of i for coordinate and pair index is a notation slip, but “sixth element” fixes the requested coordinate unambiguously.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** The question uses i=5 for a vector coordinate although the equations use i as the sine/cosine pair index; the sixth-element interpretation is given.
-
-**verified_by_code:** `false` — depends on figure, no code path
+**verified_by_code:** `true` — solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.
 
 ---
 
 <a id="da5004_2026T2_Q1_NA--q7"></a>
-
 ### 2026 T2 Quiz 1 NA, Q7
 
 **Paper:** `2026T2_Q1_NA` · **Type:** SA · **Marks:** 4 · **Topic(s):** w2-masked-self-attention
@@ -1422,6 +1607,7 @@ Consider a Transformer model with a hidden state dimension $d_{model} = 128$. Yo
 Consider a masked multi-head attention layer in a transformer decoder. The source vocabulary is of size $V_s = 1000$, $d_{model} = 64$ and context length $T = 128$. To enforce autoregressive generation, a causal mask is applied to the raw attention score before applying softmax. How many entries in the causal mask are set to $-\infty$ ?
 
 ![Question stem image for 2026 T2 Quiz 1 NA, Q7 in 2026T2_Q1_NA](../sources/exam-papers/assets/da5004_2026T2_Q1_NA/q7-q7-stem-01-p004.png)
+
 
 #### Worked answer
 
@@ -1436,7 +1622,6 @@ Consider a masked multi-head attention layer in a transformer decoder. The sourc
 ---
 
 <a id="da5004_2026T2_Q1_NA--q8"></a>
-
 ### 2026 T2 Quiz 1 NA, Q8
 
 **Paper:** `2026T2_Q1_NA` · **Type:** SA · **Marks:** 4 · **Topic(s):** w2-positional-encoding
@@ -1451,6 +1636,7 @@ Compute the squared euclidean norm for the vector corresponding to $pos = 3$ and
 
 ![Question stem image for 2026 T2 Quiz 1 NA, Q8 in 2026T2_Q1_NA](../sources/exam-papers/assets/da5004_2026T2_Q1_NA/q8-q8-stem-01-p005.png)
 
+
 #### Worked answer
 
 **Final answer:** 256
@@ -1464,7 +1650,6 @@ Compute the squared euclidean norm for the vector corresponding to $pos = 3$ and
 ---
 
 <a id="da5004_2026T2_Q1_NA--q9"></a>
-
 ### 2026 T2 Quiz 1 NA, Q9
 
 **Paper:** `2026T2_Q1_NA` · **Type:** MCQ · **Marks:** 4 · **Topic(s):** w2-teacher-forcing
@@ -1487,6 +1672,7 @@ can destabilize training
 
 **D.** Both the statements are False
 
+
 #### Worked answer
 
 **Final answer:** B — statement 1 false; statement 2 true
@@ -1502,7 +1688,6 @@ can destabilize training
 ## Quiz 2 questions
 
 <a id="da5004_2025T3_Q2_NA--q113"></a>
-
 ### 2025 T3 Quiz 2 NA, Q113
 
 **Paper:** `2025T3_Q2_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w2-masked-self-attention
@@ -1518,6 +1703,7 @@ After the Causal LM mask and the subsequent softmax function are applied, what w
 
 ![Question stem image for 2025 T3 Quiz 2 NA, Q113 in 2025T3_Q2_NA](../sources/exam-papers/assets/da5004_2025T3_Q2_NA/q113-q113-stem-01-p006.png)
 
+
 #### Worked answer
 
 **Final answer:** 0
@@ -1531,7 +1717,6 @@ After the Causal LM mask and the subsequent softmax function are applied, what w
 ---
 
 <a id="da5004_2025T3_Q2_NA--q127"></a>
-
 ### 2025 T3 Quiz 2 NA, Q127
 
 **Paper:** `2025T3_Q2_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w2-residual-layernorm
@@ -1547,6 +1732,7 @@ For a layer with 512 features, how many learnable parameters do BatchNorm and La
 
 **D.** BatchNorm: 1024, LayerNorm: 1024
 
+
 #### Worked answer
 
 **Final answer:** D — BatchNorm 1,024 and LayerNorm 1,024
@@ -1560,7 +1746,6 @@ For a layer with 512 features, how many learnable parameters do BatchNorm and La
 ---
 
 <a id="da5004_2025T3_Q2_NA--q128"></a>
-
 ### 2025 T3 Quiz 2 NA, Q128
 
 **Paper:** `2025T3_Q2_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w2-cross-attention
@@ -1571,6 +1756,7 @@ In a standard Encoder-Decoder Transformer, where do the Query $Q$, Key $K$, and 
 **A.** $Q$ comes from the decoder's previous sub-layer; $K$ and $V$ come from the final hidden states of the encoder.
 
 **B.** $Q$ comes from the final hidden states of the encoder; $K$ and $V$ come from the decoder's previous sub-layer.
+
 
 #### Worked answer
 
@@ -1585,7 +1771,6 @@ In a standard Encoder-Decoder Transformer, where do the Query $Q$, Key $K$, and 
 ---
 
 <a id="da5004_2026T1_Q2_NA--q12"></a>
-
 ### 2026 T1 Quiz 2 NA, Q12
 
 **Paper:** `2026T1_Q2_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w2-residual-layernorm
@@ -1616,6 +1801,7 @@ For Sample 2, after applying Layer Normalization, what is the maximum value in t
 
 ![Question stem image for 2026 T1 Quiz 2 NA, Q12 in 2026T1_Q2_NA](../sources/exam-papers/assets/da5004_2026T1_Q2_NA/q12-q12-stem-01-p006.png)
 
+
 #### Worked answer
 
 **Final answer:** 3/√5 ≈ 1.341641
@@ -1629,7 +1815,6 @@ For Sample 2, after applying Layer Normalization, what is the maximum value in t
 ---
 
 <a id="da5004_2026T2_Q2_NA--q2"></a>
-
 ### 2026 T2 Quiz 2 NA, Q2
 
 **Paper:** `2026T2_Q2_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w2-residual-layernorm
@@ -1637,6 +1822,7 @@ For Sample 2, after applying Layer Normalization, what is the maximum value in t
 In the given Transformer architecture for one Encoder Decoder block, identify every Add & Norm layer. Submit the corresponding component alphabets in alphabetical (ascending) order as a single uppercase string without spaces, commas, or quotation marks.
 
 Example: If the correct components are Q, G, and S, your answer should be GQS
+
 
 
 #### Worked answer
@@ -1652,7 +1838,6 @@ Example: If the correct components are Q, G, and S, your answer should be GQS
 ---
 
 <a id="da5004_2026T2_Q2_NA--q3"></a>
-
 ### 2026 T2 Quiz 2 NA, Q3
 
 **Paper:** `2026T2_Q2_NA` · **Type:** MCQ · **Marks:** 1 · **Topic(s):** w2-masked-self-attention
@@ -1670,6 +1855,7 @@ Identify the function of component "L" in the given Transformer architecture.
 
 **E.** Linear Output Projection
 
+
 #### Worked answer
 
 **Final answer:** C — masked multi-head self-attention
@@ -1683,7 +1869,6 @@ Identify the function of component "L" in the given Transformer architecture.
 ---
 
 <a id="da5004_2026T2_Q2_NA--q4"></a>
-
 ### 2026 T2 Quiz 2 NA, Q4
 
 **Paper:** `2026T2_Q2_NA` · **Type:** MSQ · **Marks:** 2 · **Topic(s):** w2-full-transformer
@@ -1703,6 +1888,7 @@ Based on the architecture shown in the given image, identify all components that
 
 **F.** Add & Norm
 
+
 #### Worked answer
 
 **Final answer:** A, B and F
@@ -1716,7 +1902,6 @@ Based on the architecture shown in the given image, identify all components that
 ---
 
 <a id="da5004_2026T2_Q2_NA--q5"></a>
-
 ### 2026 T2 Quiz 2 NA, Q5
 
 **Paper:** `2026T2_Q2_NA` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w2-masked-self-attention
@@ -1740,6 +1925,7 @@ to that of the original approach
 **D.** The attention weights for the final token of the sequence will always be the
 same for both the approaches
 
+
 #### Worked answer
 
 **Final answer:** A and D
@@ -1755,7 +1941,6 @@ same for both the approaches
 ## End Term questions
 
 <a id="da5004_2024T1_ET_AN--q157"></a>
-
 ### 2024 T1 End Term AN, Q157
 
 **Paper:** `2024T1_ET_AN` · **Type:** SA · **Marks:** 4 · **Topic(s):** w2-masked-self-attention
@@ -1763,6 +1948,7 @@ same for both the approaches
 Suppose we pass this $QK^T$ through the softmax function to compute the final attention score. Following zero-based indexing, at time step $t_3$, the attention score for the query $q_3$ is highest for the $i$-th key $k_i$. Enter the value of $i$.
 
 ![Question stem image for 2024 T1 End Term AN, Q157 in 2024T1_ET_AN](../sources/exam-papers/assets/da5004_2024T1_ET_AN/q157-q157-stem-01-p014.png)
+
 
 #### Worked answer
 
@@ -1777,7 +1963,6 @@ Suppose we pass this $QK^T$ through the softmax function to compute the final at
 ---
 
 <a id="da5004_2024T1_ET_FN--q212"></a>
-
 ### 2024 T1 End Term FN, Q212
 
 **Paper:** `2024T1_ET_FN` · **Type:** SA · **Marks:** 4 · **Topic(s):** w2-masked-self-attention
@@ -1828,6 +2013,7 @@ Suppose we pass this $QK^T$ through the softmax function to compute the final at
 
 ![Question stem image for 2024 T1 End Term FN, Q212 in 2024T1_ET_FN](../sources/exam-papers/assets/da5004_2024T1_ET_FN/q212-q212-stem-01-p014.png)
 
+
 #### Worked answer
 
 **Final answer:** 3
@@ -1841,7 +2027,6 @@ Suppose we pass this $QK^T$ through the softmax function to compute the final at
 ---
 
 <a id="da5004_2024T3_ET_AN--q191"></a>
-
 ### 2024 T3 End Term AN, Q191
 
 **Paper:** `2024T3_ET_AN` · **Type:** MSQ · **Marks:** 2 · **Topic(s):** w2-full-transformer, w2-masked-self-attention
@@ -1859,6 +2044,7 @@ identical.
 
 **D.** None of these.
 
+
 #### Worked answer
 
 **Final answer:** A and B.
@@ -1872,7 +2058,6 @@ identical.
 ---
 
 <a id="da5004_2024T3_ET_FN--q190"></a>
-
 ### 2024 T3 End Term FN, Q190
 
 **Paper:** `2024T3_ET_FN` · **Type:** MSQ · **Marks:** 2 · **Topic(s):** w2-full-transformer, w2-teacher-forcing
@@ -1900,22 +2085,20 @@ Choose the correct statements regarding an encoder-decoder transformer model:
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
-**Final answer:** A, B and C, with A dependent on interpretation.
+**Final answer:** A, B, C
 
-**Steps:** Decoder self-attention uses a causal mask (A); the encoder includes multi-head self-attention (B); teacher forcing permits parallel training (C). D is false. Encoder self-attention need not use a causal mask, so A is not universal.
+**Steps:** An encoder–decoder Transformer has masked decoder self-attention, encoder multi-head self-attention, and parallel teacher-forced training. A states that a self-attention block uses a mask; it does not assert every self-attention block uses a causal mask. D is false.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** A does not specify decoder versus encoder self-attention or whether a padding mask is present.
-
-**verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
+**verified_by_code:** `false` — Non-numeric response; no numeric checker path applies.
 
 ---
 
 <a id="da5004_2025T2_ET_AN--q193"></a>
-
 ### 2025 T2 End Term AN, Q193
 
 **Paper:** `2025T2_ET_AN` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w2-masked-self-attention
@@ -1961,6 +2144,7 @@ attention logits?
 *Label added for presentation.*
 ![Option D image for 2025 T2 End Term AN, Q193 in 2025T2_ET_AN](../sources/exam-papers/assets/da5004_2025T2_ET_AN/q193-q193-option-d-01-p003.png)
 
+
 #### Worked answer
 
 **Final answer:** A.
@@ -1974,7 +2158,6 @@ attention logits?
 ---
 
 <a id="da5004_2025T2_ET_FN--q142"></a>
-
 ### 2025 T2 End Term FN, Q142
 
 **Paper:** `2025T2_ET_FN` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w2-residual-layernorm, w2-training-tricks
@@ -2008,6 +2191,7 @@ model?
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
 **Final answer:** A, B, D and E.
@@ -2021,7 +2205,6 @@ model?
 ---
 
 <a id="da5004_2025T3_ET_AN--q3"></a>
-
 ### 2025 T3 End Term AN, Q3
 
 **Paper:** `2025T3_ET_AN` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w2-residual-layernorm
@@ -2043,6 +2226,7 @@ Which option correctly states the number of trainable parameters added by each n
 
 **E.** Both add 0 trainable parameters
 
+
 #### Worked answer
 
 **Final answer:** B — 1,024 parameters for each
@@ -2056,7 +2240,6 @@ Which option correctly states the number of trainable parameters added by each n
 ---
 
 <a id="da5004_2025T3_ET_AN--q25"></a>
-
 ### 2025 T3 End Term AN, Q25
 
 **Paper:** `2025T3_ET_AN` · **Type:** MCQ · **Marks:** 1 · **Topic(s):** w2-teacher-forcing
@@ -2075,6 +2258,7 @@ the exposure bias problem, where the model is unfamiliar with its own prediction
 **D.** It's not used; the challenge is the need for a separate encoder-decoder
 architecture.
 
+
 #### Worked answer
 
 **Final answer:** B — ground truth is unavailable during generation, producing exposure bias
@@ -2088,7 +2272,6 @@ architecture.
 ---
 
 <a id="da5004_2025T3_ET_AN--q26"></a>
-
 ### 2025 T3 End Term AN, Q26
 
 **Paper:** `2025T3_ET_AN` · **Type:** MCQ · **Marks:** 1 · **Topic(s):** w2-masked-self-attention
@@ -2105,6 +2288,7 @@ Modeling constraint?
 
 **D.** The Cross-Attention layer.
 
+
 #### Worked answer
 
 **Final answer:** C — masked self-attention
@@ -2118,7 +2302,6 @@ Modeling constraint?
 ---
 
 <a id="da5004_2025T3_ET_FN--q2"></a>
-
 ### 2025 T3 End Term FN, Q2
 
 **Paper:** `2025T3_ET_FN` · **Type:** MCQ · **Marks:** 1 · **Topic(s):** w2-residual-layernorm
@@ -2134,22 +2317,22 @@ What happens when you use Batch Normalization with a batch size of 1?
 
 **D.** It uses the running statistics from training
 
+
 #### Worked answer
 
-**Final answer:** No option is universally correct; D holds in standard evaluation mode.
+**Final answer:** No universally correct option; D applies in evaluation with tracked running statistics
 
-**Steps:** With a single value per feature in training, the batch mean equals that activation, not necessarily 0, and variance is 0. B falsely says mean=0. A ignores degenerate training statistics, C does not occur automatically, and D describes evaluation with tracked running statistics, not training generally. Spatial dimensions can supply additional observations.
+**Steps:** For one observation per normalized channel during training, the mean is that observation, not necessarily 0, and variance is 0; some implementations reject the case. Evaluation with tracked running statistics uses those statistics (D), but other spatial dimensions and evaluation modes are possible. The prompt specifies neither mode nor reduction axes.
 
 **Status:** ambiguous
 
-**Ambiguity note:** Training/evaluation mode and reduction dimensions are unspecified; B states a false mean, while D is conditional on evaluation and tracked statistics.
+**Ambiguity note:** For one observation per normalized channel during training, the mean is that observation, not necessarily 0, and variance is 0; some implementations reject the case. Evaluation with tracked running statistics uses those statistics (D), but other spatial dimensions and evaluation modes are possible. The prompt specifies neither mode nor reduction axes.
 
 **verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
 
 ---
 
 <a id="da5004_2026T1_ET_AN--q2"></a>
-
 ### 2026 T1 End Term AN, Q2
 
 **Paper:** `2026T1_ET_AN` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w2-masked-self-attention
@@ -2165,6 +2348,7 @@ In the standard Transformer Decoder, the Multi-Head Attention layer is "Masked".
 
 **D.** To force the model to focus on the Encoder output rather than the Decoder input.
 
+
 #### Worked answer
 
 **Final answer:** C — prevent target-future leakage
@@ -2178,7 +2362,6 @@ In the standard Transformer Decoder, the Multi-Head Attention layer is "Masked".
 ---
 
 <a id="da5004_2026T1_ET_AN--q14"></a>
-
 ### 2026 T1 End Term AN, Q14
 
 **Paper:** `2026T1_ET_AN` · **Type:** MCQ · **Marks:** 3 · **Topic(s):** w2-positional-encoding
@@ -2194,6 +2377,7 @@ Why do standard LLM architectures include explicit Positional Encodings (like Ro
 
 **D.** To fix a mathematical error in the original Dot-Product Attention formula.
 
+
 #### Worked answer
 
 **Final answer:** C — position provides a structural and distance-sensitive inductive bias
@@ -2207,7 +2391,6 @@ Why do standard LLM architectures include explicit Positional Encodings (like Ro
 ---
 
 <a id="da5004_2026T2_ET_AN--q3"></a>
-
 ### 2026 T2 End Term AN, Q3
 
 **Paper:** `2026T2_ET_AN` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w2-positional-encoding
@@ -2223,22 +2406,22 @@ Which of the following statements regarding one-hot positional encoding and sinu
 
 **D.** One-hot positional encoding is incapable of mathematically representing relative distance between tokens
 
+
 #### Worked answer
 
-**Final answer:** A is incorrect under the usual geometric interpretation; D is also false if read literally.
+**Final answer:** A is false; D is also false as an unrestricted mathematical claim
 
-**Steps:** For sinusoidal encodings the dot product is a sum of cosines of relative offsets, oscillatory and potentially negative, so A is false. B follows from sin²+cos²=1 per pair and C from orthogonal one-hot vectors. D is true only in the restricted sense that raw one-hot distances or dot products do not encode separation: the indices can be decoded and subtracted, so the absolute claim of mathematical incapacity is false.
+**Steps:** Sinusoidal dot products sum cosines of relative offsets and do not strictly increase with separation (A false). One-hot vectors have equal pairwise distances, but their active indices can be decoded and subtracted, so one-hot positions are not mathematically incapable of representing relative distance (D false). A single-choice question has two false statements under literal wording.
 
 **Status:** ambiguous
 
-**Ambiguity note:** This single-answer MCQ has two false statements under a literal reading: one-hot indices can represent and recover relative distance even though their raw pairwise geometry does not.
+**Ambiguity note:** Sinusoidal dot products sum cosines of relative offsets and do not strictly increase with separation (A false). One-hot vectors have equal pairwise distances, but their active indices can be decoded and subtracted, so one-hot positions are not mathematically incapable of representing relative distance (D false). A single-choice question has two false statements under literal wording.
 
 **verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
 
 ---
 
 <a id="da5004_2026T2_ET_AN--q6"></a>
-
 ### 2026 T2 End Term AN, Q6
 
 **Paper:** `2026T2_ET_AN` · **Type:** SA · **Marks:** 3 · **Topic(s):** w2-residual-layernorm
@@ -2263,17 +2446,18 @@ Shift parameter $\beta = 1$:
 ![Question stem image for 2026 T2 End Term AN, Q6 in 2026T2_ET_AN](../sources/exam-papers/assets/da5004_2026T2_ET_AN/q6-q6-stem-02-p004.png)
 ![Question stem image for 2026 T2 End Term AN, Q6 in 2026T2_ET_AN](../sources/exam-papers/assets/da5004_2026T2_ET_AN/q6-q6-stem-03-p004.png)
 
+
 #### Worked answer
 
-**Final answer:** 3 if ε=0; otherwise 1+2/√(1+ε)
+**Final answer:** 3 when ε=0; 1+2/√(1+ε) otherwise
 
-**Steps:** The image gives sample 3 as [7,5]. Its mean is 6 and population variance is 1; its first normalized entry is 1/√(1+ε), followed by gain 2 and bias 1. The standard ε=0 simplification gives 3.
+**Steps:** The third pictured row is [7,5], with mean 6 and population variance 1. LayerNorm gives 2(7−6)/√(1+ε)+1. Elementary hand calculations conventionally omit ε and obtain 3; implementations use a small positive ε and the problem does not state it.
 
 **Status:** ambiguous
 
-**Ambiguity note:** The question does not specify epsilon; its exact output depends on epsilon in standard LayerNorm.
+**Ambiguity note:** Implied course/exam convention: 3 when ε=0; 1+2/√(1+ε) otherwise. The third pictured row is [7,5], with mean 6 and population variance 1. LayerNorm gives 2(7−6)/√(1+ε)+1. Elementary hand calculations conventionally omit ε and obtain 3; implementations use a small positive ε and the problem does not state it.
 
-**verified_by_code:** `false` — depends on figure, no code path
+**verified_by_code:** `true` — solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.
 
 ---
 

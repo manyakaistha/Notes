@@ -9,6 +9,7 @@ Week 4: 67 routed sections; IDs unique; each has worked answer and verification 
 Week 4: 8 topic checklist rows; no blank cells; all topics.json topics present.
 Archive: 247 IDs appear in the index and none appear in the four banks.
 Images: 147 contextual image links resolve from their bank files.
+Corrections: 17 question records have visible editorial notes; 12 shared-context blocks rendered.
 Reconciliation: W1 73 + W2 65 + W3 36 + W4 67 + archived 247 = 488.
 Topics without direct question: W3 Ways to parameterise a language model (w3-model-parameterisations)
 PASS: exam bank structure, coverage, topic checklists, archive routing, and image links verified.

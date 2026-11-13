@@ -8,10 +8,12 @@ from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
 
-from solve_numeric import PAPERS, ROUTING_PATH, INVENTORY_PATH, run_terra
+from solve_numeric import PAPERS, ROUTING_PATH, INVENTORY_PATH, run_terra, run_overrides
 
 OUTPUT = PAPERS / "question-solutions.json"
 REPORT = PAPERS / "solutions-report.txt"
+LUNA_VERIFICATION = PAPERS / "solutions-luna-verification.txt"
+OVERRIDES = PAPERS / "solutions-overrides.json"
 SOURCES = [
     "solutions-terra-w1-a.json", "solutions-terra-w1-b.json",
     "solutions-terra-w2-a.json", "solutions-terra-w2-b.json",
@@ -44,7 +46,19 @@ def main() -> None:
     assert not missing, f"missing solution records: {missing}"
     assert not extra, f"extra solution records: {extra}"
 
+    override_data = json.loads(OVERRIDES.read_text(encoding="utf-8"))
+    overrides = {r["id"]: r for r in override_data.get("overrides", [])}
     verification_output = run_terra()
+    override_verification_output = run_overrides()
+    LUNA_VERIFICATION.write_text(verification_output + "\nOverride-controlled numeric derivations:\n" + override_verification_output, encoding="utf-8")
+    override_checked: dict[str, str] = {}
+    for line in override_verification_output.splitlines():
+        if " MATCH" in line:
+            override_checked[line.split(" computed=", 1)[0]] = "MATCH"
+        elif " MISMATCH" in line:
+            override_checked[line.split(" computed=", 1)[0]] = "MISMATCH"
+        elif " UNVERIFIED " in line:
+            override_checked[line.split(" UNVERIFIED ", 1)[0]] = "UNVERIFIED"
     checked: dict[str, str] = {}
     for line in verification_output.splitlines():
         if " computed=" not in line:
@@ -55,14 +69,23 @@ def main() -> None:
     records: list[dict[str, Any]] = []
     for qid, route in expected.items():
         original, author, filename = source_records[qid]
+        original = dict(original)
+        override = overrides.get(qid)
+        if override:
+            for field in ("answer", "steps", "status", "ambiguity_note", "answer_options", "is_numeric", "numeric_values"):
+                if field in override:
+                    original[field] = override[field]
         status = original.get("status", "")
         assert status in {"derived", "ambiguous"}, f"unsupported status {status}: {qid}"
         numeric = bool(original.get("is_numeric", False))
         answer_options = list(original.get("answer_options") or [])
         note = ""
-        verified = checked.get(qid) == "MATCH"
+        verified = (override_checked.get(qid) == "MATCH" if qid in overrides and original.get("is_numeric")
+                    else checked.get(qid) == "MATCH")
         if verified:
             note = "solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH."
+        elif numeric and override_checked.get(qid) == "UNVERIFIED":
+            note = "Override numeric derivation not code-verified: complete numeric inputs are absent from the editable extraction; manual scan adjudication retained."
         elif numeric:
             q = questions.get(qid, {})
             if q.get("stem_images") or q.get("image_only"):
@@ -89,6 +112,8 @@ def main() -> None:
             "author": author,
             "code_ref": original.get("code_ref", f"{filename}::{qid}"),
         }
+        if override:
+            item["override_source"] = override.get("source", "solutions-overrides.json")
         if route.get("type") in {"MCQ", "MSQ"} and not answer_options:
             assert status == "ambiguous" and item["ambiguity_note"].strip(), f"empty options on non-ambiguous MCQ/MSQ: {qid}"
         records.append(item)
@@ -96,7 +121,7 @@ def main() -> None:
     assert len(records) == 241
     assert len({r["id"] for r in records}) == 241
     assert {r["id"] for r in records} == set(expected)
-    assert all(list(r) == FIELDS for r in records)
+    assert all(list(r) == FIELDS + (["override_source"] if r["id"] in overrides else []) for r in records)
     OUTPUT.write_text(json.dumps({"records": records}, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
     week_status = Counter((r["week"], r["status"]) for r in records)
@@ -110,6 +135,7 @@ def main() -> None:
 
     lines = [
         f"records={len(records)}",
+        f"overrides_applied={sum(r['id'] in overrides for r in records)}",
         "counts_by_week_status:",
     ]
     for week in range(1, 5):
@@ -136,6 +162,7 @@ def main() -> None:
     lines.append(f"gate7_derived_numeric={len(derived_numeric_unverified)} unverified; each listed above with reason")
     lines.append(f"checker_match_count={sum(value == 'MATCH' for value in checked.values())}")
     lines.append(f"checker_mismatch_count={sum(value == 'MISMATCH' for value in checked.values())}")
+    lines.append(override_verification_output.rstrip())
     REPORT.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))
 

@@ -1,4 +1,7 @@
-Files scanned: 84
-Links checked: wikilinks=1384, markdown-links=282, images=561
+Files scanned: 89
+Links checked: wikilinks=1389, markdown-links=283, images=561
+
+Pending-generation targets (1):
+LLM/AGENTS.md:117 — wikilink — week-N-exam-questions#2024 T1 Quiz 1 NA, Q186 — target file not generated yet
 
 Broken links (0):

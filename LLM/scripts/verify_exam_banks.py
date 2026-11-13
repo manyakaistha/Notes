@@ -6,6 +6,7 @@ from urllib.parse import unquote
 import io
 import json
 import re
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "sources/exam-papers"
@@ -13,6 +14,7 @@ INV = json.loads((BASE / "question-inventory.json").read_text())
 ROUTING = json.loads((BASE / "routing.json").read_text())["records"]
 SOLUTIONS = json.loads((BASE / "question-solutions.json").read_text())["records"]
 TOPICS = json.loads((BASE.parent / "topics.json").read_text())["weeks"]
+CORRECTIONS = json.loads((BASE / "question-corrections.json").read_text()).get("corrections", [])
 assert len(INV["questions"]) == len(ROUTING) == 488
 assert len(SOLUTIONS) == 241
 
@@ -43,6 +45,11 @@ def run_checks():
         assert text.count("#### Worked answer") == len(expected)
         assert all((f"<a id=\"{qid}\"></a>" in text and f"verified_by_code:**" in text[text.index(f'<a id="{qid}"></a>'):]) for qid in expected)
         print(f"Week {week}: {len(expected)} routed sections; IDs unique; each has worked answer and verification marker.")
+        headings = {re.sub(r"^#{1,6}\s+", "", line).strip() for line in text.splitlines() if re.match(r"^#{1,6}\s+", line)}
+        navigator = text.split("## Question navigator", 1)[1].split("## Quiz", 1)[0]
+        for fragment in re.findall(r"\[\[week-\d+-exam-questions#([^|\]]+)", navigator):
+            fragment = fragment.rstrip("\\")
+            assert fragment in headings, (week, "navigator does not target a question heading", fragment)
         # Check every cell in the topic checklist table and ensure all syllabus topics occur as rows.
         marker = text.index("| Topic | Linked questions | Evidence / revision |")
         table = text[marker:].split("\n\n", 1)[0].splitlines()[2:]
@@ -77,6 +84,14 @@ def run_checks():
         assert all(record["id"] not in text for text in bank_texts.values()), f"Archived ID appeared in bank: {record['id']}"
     print(f"Archive: {len(archived)} IDs appear in the index and none appear in the four banks.")
     print(f"Images: {image_total} contextual image links resolve from their bank files.")
+    correction_ids = {c["id"] for c in CORRECTIONS}
+    for qid in correction_ids:
+        week = next(r["week"] for r in ROUTING if r["id"] == qid)
+        text = bank_texts[week]
+        section = text.split(f'<a id="{qid}"></a>', 1)[1].split("#### Worked answer", 1)[0]
+        assert "Editorial correction:" in section, (qid, "correction note absent")
+    context_count = sum(text.count("#### Shared context") for text in bank_texts.values())
+    print(f"Corrections: {len(correction_ids)} question records have visible editorial notes; {context_count} shared-context blocks rendered.")
     counts = Counter(r["week"] for r in routed)
     assert sum(counts[w] for w in range(1, 5)) + len(archived) == 488
     assert f"routed W1 {counts[1]} + W2 {counts[2]} + W3 {counts[3]} + W4 {counts[4]} + archived {len(archived)}" in index

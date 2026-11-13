@@ -24,62 +24,70 @@ tags:
 
 The checklist includes every topic named for this week in `sources/topics.json`. A topic without a directly routed question still links to the study notes.
 
+### Topic: Language-modelling objective, chain rule and perplexity
+### Topic: Ways to parameterise a language model
+### Topic: Causal language modelling with a decoder-only stack
+### Topic: GPT-1 architecture and pre-train/fine-tune paradigm
+### Topic: GPT-1 parameter count (117M)
+### Topic: Pre-training objective and teacher forcing
+### Topic: Fine-tuning GPT and the fine-tuning loss
+### Topic: Task-specific input transformations
+
 | Topic | Linked questions | Evidence / revision |
 | :--- | ---: | :--- |
-| <a id="w3-language-modelling"></a>Language-modelling objective, chain rule and perplexity | 10 | [[week-3-exam-questions#da5004_2024T3_Q1_NA--q285\|2024T3 Q1 NA Q285]] · [[week-3-exam-questions#da5004_2024T3_Q1_NA--q286\|2024T3 Q1 NA Q286]] · [[week-3-exam-questions#da5004_2024T3_Q1_NA--q287\|2024T3 Q1 NA Q287]] · [[week-3-exam-questions#da5004_2025T1_Q1_NA--q118\|2025T1 Q1 NA Q118]] · [[week-3-exam-questions#da5004_2025T1_Q1_NA--q119\|2025T1 Q1 NA Q119]] · [[week-3-exam-questions#da5004_2025T1_Q1_NA--q120\|2025T1 Q1 NA Q120]] · [[week-3-exam-questions#da5004_2025T1_Q1_NA--q121\|2025T1 Q1 NA Q121]] · [[week-3-exam-questions#da5004_2026T2_Q1_NA--q10\|2026T2 Q1 NA Q10]] · [[week-3-exam-questions#da5004_2026T2_Q1_NA--q11\|2026T2 Q1 NA Q11]] · [[week-3-exam-questions#da5004_2026T2_Q1_NA--q12\|2026T2 Q1 NA Q12]] |
-| <a id="w3-model-parameterisations"></a>Ways to parameterise a language model | 0 | No direct question found; revise the linked study notes. [[week-3-notes\|Week notes]] |
-| <a id="w3-causal-lm"></a>Causal language modelling with a decoder-only stack | 8 | [[week-3-exam-questions#da5004_2024T1_ET_AN--q149\|2024T1 ET AN Q149]] · [[week-3-exam-questions#da5004_2024T1_ET_FN--q202\|2024T1 ET FN Q202]] · [[week-3-exam-questions#da5004_2024T1_Q1_NA--q193\|2024T1 Q1 NA Q193]] · [[week-3-exam-questions#da5004_2025T2_Q1_NA--q140\|2025T2 Q1 NA Q140]] · [[week-3-exam-questions#da5004_2025T3_ET_AN--q23\|2025T3 ET AN Q23]] · [[week-3-exam-questions#da5004_2025T3_ET_FN--q23\|2025T3 ET FN Q23]] · [[week-3-exam-questions#da5004_2026T1_Q2_NA--q13\|2026T1 Q2 NA Q13]] · [[week-3-exam-questions#da5004_2026T2_Q1_NA--q13\|2026T2 Q1 NA Q13]] |
-| <a id="w3-gpt1-architecture"></a>GPT-1 architecture and pre-train/fine-tune paradigm | 4 | [[week-3-exam-questions#da5004_2024T1_ET_AN--q144\|2024T1 ET AN Q144]] · [[week-3-exam-questions#da5004_2024T3_ET_AN--q193\|2024T3 ET AN Q193]] · [[week-3-exam-questions#da5004_2025T1_Q1_NA--q108\|2025T1 Q1 NA Q108]] · [[week-3-exam-questions#da5004_2025T2_Q1_NA--q141\|2025T2 Q1 NA Q141]] |
-| <a id="w3-gpt1-parameter-count"></a>GPT-1 parameter count (117M) | 7 | [[week-3-exam-questions#da5004_2024T1_Q2_NA--q135\|2024T1 Q2 NA Q135]] · [[week-3-exam-questions#da5004_2024T3_Q1_NA--q289\|2024T3 Q1 NA Q289]] · [[week-3-exam-questions#da5004_2026T1_Q1_NA--q16\|2026T1 Q1 NA Q16]] · [[week-3-exam-questions#da5004_2026T1_Q1_NA--q17\|2026T1 Q1 NA Q17]] · [[week-3-exam-questions#da5004_2026T1_Q1_NA--q18\|2026T1 Q1 NA Q18]] · [[week-3-exam-questions#da5004_2026T1_Q1_NA--q19\|2026T1 Q1 NA Q19]] · [[week-3-exam-questions#da5004_2026T1_Q1_NA--q20\|2026T1 Q1 NA Q20]] |
-| <a id="w3-pretraining-objective"></a>Pre-training objective and teacher forcing | 5 | [[week-3-exam-questions#da5004_2024T1_Q1_NA--q194\|2024T1 Q1 NA Q194]] · [[week-3-exam-questions#da5004_2024T3_ET_AN--q177\|2024T3 ET AN Q177]] · [[week-3-exam-questions#da5004_2024T3_ET_FN--q194\|2024T3 ET FN Q194]] · [[week-3-exam-questions#da5004_2025T3_ET_AN--q24\|2025T3 ET AN Q24]] · [[week-3-exam-questions#da5004_2025T3_Q1_NA--q189\|2025T3 Q1 NA Q189]] |
-| <a id="w3-finetuning"></a>Fine-tuning GPT and the fine-tuning loss | 4 | [[week-3-exam-questions#da5004_2024T1_Q1_NA--q194\|2024T1 Q1 NA Q194]] · [[week-3-exam-questions#da5004_2024T3_ET_FN--q194\|2024T3 ET FN Q194]] · [[week-3-exam-questions#da5004_2025T1_Q1_NA--q108\|2025T1 Q1 NA Q108]] · [[week-3-exam-questions#da5004_2026T2_Q2_NA--q9\|2026T2 Q2 NA Q9]] |
-| <a id="w3-task-input-formats"></a>Task-specific input transformations | 1 | [[week-3-exam-questions#da5004_2026T2_Q2_NA--q8\|2026T2 Q2 NA Q8]] |
+| Language-modelling objective, chain rule and perplexity | 10 | [[week-3-exam-questions#2024 T3 Quiz 1 NA, Q285\|2024T3 Q1 NA Q285]] · [[week-3-exam-questions#2024 T3 Quiz 1 NA, Q286\|2024T3 Q1 NA Q286]] · [[week-3-exam-questions#2024 T3 Quiz 1 NA, Q287\|2024T3 Q1 NA Q287]] · [[week-3-exam-questions#2025 T1 Quiz 1 NA, Q118\|2025T1 Q1 NA Q118]] · [[week-3-exam-questions#2025 T1 Quiz 1 NA, Q119\|2025T1 Q1 NA Q119]] · [[week-3-exam-questions#2025 T1 Quiz 1 NA, Q120\|2025T1 Q1 NA Q120]] · [[week-3-exam-questions#2025 T1 Quiz 1 NA, Q121\|2025T1 Q1 NA Q121]] · [[week-3-exam-questions#2026 T2 Quiz 1 NA, Q10\|2026T2 Q1 NA Q10]] · [[week-3-exam-questions#2026 T2 Quiz 1 NA, Q11\|2026T2 Q1 NA Q11]] · [[week-3-exam-questions#2026 T2 Quiz 1 NA, Q12\|2026T2 Q1 NA Q12]] |
+| Ways to parameterise a language model | 0 | No direct question found; revise the linked study notes. [[week-3-notes\|Week notes]] |
+| Causal language modelling with a decoder-only stack | 8 | [[week-3-exam-questions#2024 T1 End Term AN, Q149\|2024T1 ET AN Q149]] · [[week-3-exam-questions#2024 T1 End Term FN, Q202\|2024T1 ET FN Q202]] · [[week-3-exam-questions#2024 T1 Quiz 1 NA, Q193\|2024T1 Q1 NA Q193]] · [[week-3-exam-questions#2025 T2 Quiz 1 NA, Q140\|2025T2 Q1 NA Q140]] · [[week-3-exam-questions#2025 T3 End Term AN, Q23\|2025T3 ET AN Q23]] · [[week-3-exam-questions#2025 T3 End Term FN, Q23\|2025T3 ET FN Q23]] · [[week-3-exam-questions#2026 T1 Quiz 2 NA, Q13\|2026T1 Q2 NA Q13]] · [[week-3-exam-questions#2026 T2 Quiz 1 NA, Q13\|2026T2 Q1 NA Q13]] |
+| GPT-1 architecture and pre-train/fine-tune paradigm | 4 | [[week-3-exam-questions#2024 T1 End Term AN, Q144\|2024T1 ET AN Q144]] · [[week-3-exam-questions#2024 T3 End Term AN, Q193\|2024T3 ET AN Q193]] · [[week-3-exam-questions#2025 T1 Quiz 1 NA, Q108\|2025T1 Q1 NA Q108]] · [[week-3-exam-questions#2025 T2 Quiz 1 NA, Q141\|2025T2 Q1 NA Q141]] |
+| GPT-1 parameter count (117M) | 7 | [[week-3-exam-questions#2024 T1 Quiz 2 NA, Q135\|2024T1 Q2 NA Q135]] · [[week-3-exam-questions#2024 T3 Quiz 1 NA, Q289\|2024T3 Q1 NA Q289]] · [[week-3-exam-questions#2026 T1 Quiz 1 NA, Q16\|2026T1 Q1 NA Q16]] · [[week-3-exam-questions#2026 T1 Quiz 1 NA, Q17\|2026T1 Q1 NA Q17]] · [[week-3-exam-questions#2026 T1 Quiz 1 NA, Q18\|2026T1 Q1 NA Q18]] · [[week-3-exam-questions#2026 T1 Quiz 1 NA, Q19\|2026T1 Q1 NA Q19]] · [[week-3-exam-questions#2026 T1 Quiz 1 NA, Q20\|2026T1 Q1 NA Q20]] |
+| Pre-training objective and teacher forcing | 5 | [[week-3-exam-questions#2024 T1 Quiz 1 NA, Q194\|2024T1 Q1 NA Q194]] · [[week-3-exam-questions#2024 T3 End Term AN, Q177\|2024T3 ET AN Q177]] · [[week-3-exam-questions#2024 T3 End Term FN, Q194\|2024T3 ET FN Q194]] · [[week-3-exam-questions#2025 T3 End Term AN, Q24\|2025T3 ET AN Q24]] · [[week-3-exam-questions#2025 T3 Quiz 1 NA, Q189\|2025T3 Q1 NA Q189]] |
+| Fine-tuning GPT and the fine-tuning loss | 4 | [[week-3-exam-questions#2024 T1 Quiz 1 NA, Q194\|2024T1 Q1 NA Q194]] · [[week-3-exam-questions#2024 T3 End Term FN, Q194\|2024T3 ET FN Q194]] · [[week-3-exam-questions#2025 T1 Quiz 1 NA, Q108\|2025T1 Q1 NA Q108]] · [[week-3-exam-questions#2026 T2 Quiz 2 NA, Q9\|2026T2 Q2 NA Q9]] |
+| Task-specific input transformations | 1 | [[week-3-exam-questions#2026 T2 Quiz 2 NA, Q8\|2026T2 Q2 NA Q8]] |
 
 ## Question navigator
 
 | Paper | Question link | Topic | Answer status |
 | :--- | :--- | :--- | :--- |
-| 2024T1_ET_AN | [[week-3-exam-questions#da5004_2024T1_ET_AN--q144\|2024 T1 End Term AN, Q144]] | w3-gpt1-architecture | derived |
-| 2024T1_ET_AN | [[week-3-exam-questions#da5004_2024T1_ET_AN--q149\|2024 T1 End Term AN, Q149]] | w3-causal-lm | ambiguous |
-| 2024T1_ET_FN | [[week-3-exam-questions#da5004_2024T1_ET_FN--q202\|2024 T1 End Term FN, Q202]] | w3-causal-lm | ambiguous |
-| 2024T1_Q1_NA | [[week-3-exam-questions#da5004_2024T1_Q1_NA--q193\|2024 T1 Quiz 1 NA, Q193]] | w3-causal-lm | ambiguous |
-| 2024T1_Q1_NA | [[week-3-exam-questions#da5004_2024T1_Q1_NA--q194\|2024 T1 Quiz 1 NA, Q194]] | w3-finetuning, w3-pretraining-objective | ambiguous |
-| 2024T1_Q2_NA | [[week-3-exam-questions#da5004_2024T1_Q2_NA--q135\|2024 T1 Quiz 2 NA, Q135]] | w3-gpt1-parameter-count | derived |
-| 2024T3_ET_AN | [[week-3-exam-questions#da5004_2024T3_ET_AN--q177\|2024 T3 End Term AN, Q177]] | w3-pretraining-objective | derived |
-| 2024T3_ET_AN | [[week-3-exam-questions#da5004_2024T3_ET_AN--q193\|2024 T3 End Term AN, Q193]] | w3-gpt1-architecture | derived |
-| 2024T3_ET_FN | [[week-3-exam-questions#da5004_2024T3_ET_FN--q194\|2024 T3 End Term FN, Q194]] | w3-finetuning, w3-pretraining-objective | ambiguous |
-| 2024T3_Q1_NA | [[week-3-exam-questions#da5004_2024T3_Q1_NA--q285\|2024 T3 Quiz 1 NA, Q285]] | w3-language-modelling | derived |
-| 2024T3_Q1_NA | [[week-3-exam-questions#da5004_2024T3_Q1_NA--q286\|2024 T3 Quiz 1 NA, Q286]] | w3-language-modelling | derived |
-| 2024T3_Q1_NA | [[week-3-exam-questions#da5004_2024T3_Q1_NA--q287\|2024 T3 Quiz 1 NA, Q287]] | w3-language-modelling | ambiguous |
-| 2024T3_Q1_NA | [[week-3-exam-questions#da5004_2024T3_Q1_NA--q289\|2024 T3 Quiz 1 NA, Q289]] | w3-gpt1-parameter-count | derived |
-| 2025T1_Q1_NA | [[week-3-exam-questions#da5004_2025T1_Q1_NA--q108\|2025 T1 Quiz 1 NA, Q108]] | w3-finetuning, w3-gpt1-architecture | ambiguous |
-| 2025T1_Q1_NA | [[week-3-exam-questions#da5004_2025T1_Q1_NA--q118\|2025 T1 Quiz 1 NA, Q118]] | w3-language-modelling | ambiguous |
-| 2025T1_Q1_NA | [[week-3-exam-questions#da5004_2025T1_Q1_NA--q119\|2025 T1 Quiz 1 NA, Q119]] | w3-language-modelling | ambiguous |
-| 2025T1_Q1_NA | [[week-3-exam-questions#da5004_2025T1_Q1_NA--q120\|2025 T1 Quiz 1 NA, Q120]] | w3-language-modelling | ambiguous |
-| 2025T1_Q1_NA | [[week-3-exam-questions#da5004_2025T1_Q1_NA--q121\|2025 T1 Quiz 1 NA, Q121]] | w3-language-modelling | ambiguous |
-| 2025T2_Q1_NA | [[week-3-exam-questions#da5004_2025T2_Q1_NA--q140\|2025 T2 Quiz 1 NA, Q140]] | w3-causal-lm | derived |
-| 2025T2_Q1_NA | [[week-3-exam-questions#da5004_2025T2_Q1_NA--q141\|2025 T2 Quiz 1 NA, Q141]] | w3-gpt1-architecture | derived |
-| 2025T3_ET_AN | [[week-3-exam-questions#da5004_2025T3_ET_AN--q23\|2025 T3 End Term AN, Q23]] | w3-causal-lm | derived |
-| 2025T3_ET_AN | [[week-3-exam-questions#da5004_2025T3_ET_AN--q24\|2025 T3 End Term AN, Q24]] | w3-pretraining-objective | derived |
-| 2025T3_ET_FN | [[week-3-exam-questions#da5004_2025T3_ET_FN--q23\|2025 T3 End Term FN, Q23]] | w3-causal-lm | derived |
-| 2025T3_Q1_NA | [[week-3-exam-questions#da5004_2025T3_Q1_NA--q189\|2025 T3 Quiz 1 NA, Q189]] | w3-pretraining-objective | derived |
-| 2026T1_Q1_NA | [[week-3-exam-questions#da5004_2026T1_Q1_NA--q16\|2026 T1 Quiz 1 NA, Q16]] | w3-gpt1-parameter-count | derived |
-| 2026T1_Q1_NA | [[week-3-exam-questions#da5004_2026T1_Q1_NA--q17\|2026 T1 Quiz 1 NA, Q17]] | w3-gpt1-parameter-count | derived |
-| 2026T1_Q1_NA | [[week-3-exam-questions#da5004_2026T1_Q1_NA--q18\|2026 T1 Quiz 1 NA, Q18]] | w3-gpt1-parameter-count | ambiguous |
-| 2026T1_Q1_NA | [[week-3-exam-questions#da5004_2026T1_Q1_NA--q19\|2026 T1 Quiz 1 NA, Q19]] | w3-gpt1-parameter-count | derived |
-| 2026T1_Q1_NA | [[week-3-exam-questions#da5004_2026T1_Q1_NA--q20\|2026 T1 Quiz 1 NA, Q20]] | w3-gpt1-parameter-count | derived |
-| 2026T1_Q2_NA | [[week-3-exam-questions#da5004_2026T1_Q2_NA--q13\|2026 T1 Quiz 2 NA, Q13]] | w3-causal-lm | derived |
-| 2026T2_Q1_NA | [[week-3-exam-questions#da5004_2026T2_Q1_NA--q10\|2026 T2 Quiz 1 NA, Q10]] | w3-language-modelling | derived |
-| 2026T2_Q1_NA | [[week-3-exam-questions#da5004_2026T2_Q1_NA--q11\|2026 T2 Quiz 1 NA, Q11]] | w3-language-modelling | ambiguous |
-| 2026T2_Q1_NA | [[week-3-exam-questions#da5004_2026T2_Q1_NA--q12\|2026 T2 Quiz 1 NA, Q12]] | w3-language-modelling | ambiguous |
-| 2026T2_Q1_NA | [[week-3-exam-questions#da5004_2026T2_Q1_NA--q13\|2026 T2 Quiz 1 NA, Q13]] | w3-causal-lm | derived |
-| 2026T2_Q2_NA | [[week-3-exam-questions#da5004_2026T2_Q2_NA--q8\|2026 T2 Quiz 2 NA, Q8]] | w3-task-input-formats | derived |
-| 2026T2_Q2_NA | [[week-3-exam-questions#da5004_2026T2_Q2_NA--q9\|2026 T2 Quiz 2 NA, Q9]] | w3-finetuning | derived |
+| 2024T1_ET_AN | [[week-3-exam-questions#2024 T1 End Term AN, Q144\|2024 T1 End Term AN, Q144]] | w3-gpt1-architecture | derived |
+| 2024T1_ET_AN | [[week-3-exam-questions#2024 T1 End Term AN, Q149\|2024 T1 End Term AN, Q149]] | w3-causal-lm | ambiguous |
+| 2024T1_ET_FN | [[week-3-exam-questions#2024 T1 End Term FN, Q202\|2024 T1 End Term FN, Q202]] | w3-causal-lm | ambiguous |
+| 2024T1_Q1_NA | [[week-3-exam-questions#2024 T1 Quiz 1 NA, Q193\|2024 T1 Quiz 1 NA, Q193]] | w3-causal-lm | ambiguous |
+| 2024T1_Q1_NA | [[week-3-exam-questions#2024 T1 Quiz 1 NA, Q194\|2024 T1 Quiz 1 NA, Q194]] | w3-finetuning, w3-pretraining-objective | ambiguous |
+| 2024T1_Q2_NA | [[week-3-exam-questions#2024 T1 Quiz 2 NA, Q135\|2024 T1 Quiz 2 NA, Q135]] | w3-gpt1-parameter-count | derived |
+| 2024T3_ET_AN | [[week-3-exam-questions#2024 T3 End Term AN, Q177\|2024 T3 End Term AN, Q177]] | w3-pretraining-objective | derived |
+| 2024T3_ET_AN | [[week-3-exam-questions#2024 T3 End Term AN, Q193\|2024 T3 End Term AN, Q193]] | w3-gpt1-architecture | derived |
+| 2024T3_ET_FN | [[week-3-exam-questions#2024 T3 End Term FN, Q194\|2024 T3 End Term FN, Q194]] | w3-finetuning, w3-pretraining-objective | derived |
+| 2024T3_Q1_NA | [[week-3-exam-questions#2024 T3 Quiz 1 NA, Q285\|2024 T3 Quiz 1 NA, Q285]] | w3-language-modelling | derived |
+| 2024T3_Q1_NA | [[week-3-exam-questions#2024 T3 Quiz 1 NA, Q286\|2024 T3 Quiz 1 NA, Q286]] | w3-language-modelling | derived |
+| 2024T3_Q1_NA | [[week-3-exam-questions#2024 T3 Quiz 1 NA, Q287\|2024 T3 Quiz 1 NA, Q287]] | w3-language-modelling | derived |
+| 2024T3_Q1_NA | [[week-3-exam-questions#2024 T3 Quiz 1 NA, Q289\|2024 T3 Quiz 1 NA, Q289]] | w3-gpt1-parameter-count | derived |
+| 2025T1_Q1_NA | [[week-3-exam-questions#2025 T1 Quiz 1 NA, Q108\|2025 T1 Quiz 1 NA, Q108]] | w3-finetuning, w3-gpt1-architecture | ambiguous |
+| 2025T1_Q1_NA | [[week-3-exam-questions#2025 T1 Quiz 1 NA, Q118\|2025 T1 Quiz 1 NA, Q118]] | w3-language-modelling | derived |
+| 2025T1_Q1_NA | [[week-3-exam-questions#2025 T1 Quiz 1 NA, Q119\|2025 T1 Quiz 1 NA, Q119]] | w3-language-modelling | derived |
+| 2025T1_Q1_NA | [[week-3-exam-questions#2025 T1 Quiz 1 NA, Q120\|2025 T1 Quiz 1 NA, Q120]] | w3-language-modelling | derived |
+| 2025T1_Q1_NA | [[week-3-exam-questions#2025 T1 Quiz 1 NA, Q121\|2025 T1 Quiz 1 NA, Q121]] | w3-language-modelling | derived |
+| 2025T2_Q1_NA | [[week-3-exam-questions#2025 T2 Quiz 1 NA, Q140\|2025 T2 Quiz 1 NA, Q140]] | w3-causal-lm | derived |
+| 2025T2_Q1_NA | [[week-3-exam-questions#2025 T2 Quiz 1 NA, Q141\|2025 T2 Quiz 1 NA, Q141]] | w3-gpt1-architecture | derived |
+| 2025T3_ET_AN | [[week-3-exam-questions#2025 T3 End Term AN, Q23\|2025 T3 End Term AN, Q23]] | w3-causal-lm | derived |
+| 2025T3_ET_AN | [[week-3-exam-questions#2025 T3 End Term AN, Q24\|2025 T3 End Term AN, Q24]] | w3-pretraining-objective | derived |
+| 2025T3_ET_FN | [[week-3-exam-questions#2025 T3 End Term FN, Q23\|2025 T3 End Term FN, Q23]] | w3-causal-lm | derived |
+| 2025T3_Q1_NA | [[week-3-exam-questions#2025 T3 Quiz 1 NA, Q189\|2025 T3 Quiz 1 NA, Q189]] | w3-pretraining-objective | derived |
+| 2026T1_Q1_NA | [[week-3-exam-questions#2026 T1 Quiz 1 NA, Q16\|2026 T1 Quiz 1 NA, Q16]] | w3-gpt1-parameter-count | derived |
+| 2026T1_Q1_NA | [[week-3-exam-questions#2026 T1 Quiz 1 NA, Q17\|2026 T1 Quiz 1 NA, Q17]] | w3-gpt1-parameter-count | derived |
+| 2026T1_Q1_NA | [[week-3-exam-questions#2026 T1 Quiz 1 NA, Q18\|2026 T1 Quiz 1 NA, Q18]] | w3-gpt1-parameter-count | ambiguous |
+| 2026T1_Q1_NA | [[week-3-exam-questions#2026 T1 Quiz 1 NA, Q19\|2026 T1 Quiz 1 NA, Q19]] | w3-gpt1-parameter-count | derived |
+| 2026T1_Q1_NA | [[week-3-exam-questions#2026 T1 Quiz 1 NA, Q20\|2026 T1 Quiz 1 NA, Q20]] | w3-gpt1-parameter-count | derived |
+| 2026T1_Q2_NA | [[week-3-exam-questions#2026 T1 Quiz 2 NA, Q13\|2026 T1 Quiz 2 NA, Q13]] | w3-causal-lm | derived |
+| 2026T2_Q1_NA | [[week-3-exam-questions#2026 T2 Quiz 1 NA, Q10\|2026 T2 Quiz 1 NA, Q10]] | w3-language-modelling | derived |
+| 2026T2_Q1_NA | [[week-3-exam-questions#2026 T2 Quiz 1 NA, Q11\|2026 T2 Quiz 1 NA, Q11]] | w3-language-modelling | ambiguous |
+| 2026T2_Q1_NA | [[week-3-exam-questions#2026 T2 Quiz 1 NA, Q12\|2026 T2 Quiz 1 NA, Q12]] | w3-language-modelling | derived |
+| 2026T2_Q1_NA | [[week-3-exam-questions#2026 T2 Quiz 1 NA, Q13\|2026 T2 Quiz 1 NA, Q13]] | w3-causal-lm | derived |
+| 2026T2_Q2_NA | [[week-3-exam-questions#2026 T2 Quiz 2 NA, Q8\|2026 T2 Quiz 2 NA, Q8]] | w3-task-input-formats | derived |
+| 2026T2_Q2_NA | [[week-3-exam-questions#2026 T2 Quiz 2 NA, Q9\|2026 T2 Quiz 2 NA, Q9]] | w3-finetuning | derived |
 
 ## Quiz 1 questions
 
 <a id="da5004_2024T1_Q1_NA--q193"></a>
-
 ### 2024 T1 Quiz 1 NA, Q193
 
 **Paper:** `2024T1_Q1_NA` · **Type:** MSQ · **Marks:** 4 · **Topic(s):** w3-causal-lm
@@ -116,22 +124,22 @@ They trained the model for millions of steps and stopped the training after the 
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
-**Final answer:** A under a capped complete sequence; A and B if the final prediction need not be fed back; A–D with a sliding window.
+**Final answer:** A if BOS counts within a 1024-token full sequence; A, B if 1024 newly predicted tokens are counted; A–D with sliding
 
-**Steps:** With BOS occupying one of 1024 full-sequence slots, at most 1023 new tokens fit, so only 512 is eligible. A model can predict one further token from a full input window, allowing 1024 generated tokens, while sliding with position IDs reset permits all offered lengths.
+**Steps:** A capped full sequence leaves 1023 positions after BOS; a final prediction can instead be emitted from a full input context, allowing 1024 new tokens. Sliding or resetting positional IDs permits still longer text. The exam’s fixed-window treatment is the closest course convention; its wording does not settle output counting.
 
 **Status:** ambiguous
 
-**Ambiguity note:** Full-sequence cap including BOS yields A; counting the final prediction without feeding it back yields A and B; sliding and resetting position IDs yields A–D.
+**Ambiguity note:** Implied course/exam convention: A if BOS counts within a 1024-token full sequence; A, B if 1024 newly predicted tokens are counted; A–D with sliding. A capped full sequence leaves 1023 positions after BOS; a final prediction can instead be emitted from a full input context, allowing 1024 new tokens. Sliding or resetting positional IDs permits still longer text. The exam’s fixed-window treatment is the closest course convention; its wording does not settle output counting.
 
 **verified_by_code:** `true` — solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.
 
 ---
 
 <a id="da5004_2024T1_Q1_NA--q194"></a>
-
 ### 2024 T1 Quiz 1 NA, Q194
 
 **Paper:** `2024T1_Q1_NA` · **Type:** MSQ · **Marks:** 4 · **Topic(s):** w3-finetuning, w3-pretraining-objective
@@ -159,22 +167,64 @@ Choose the correct statements
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
-**Final answer:** A, B, D in the GPT-1 supervised-task setting.
+**Final answer:** A, B, D for the original GPT-1 supervised experiments; A, D for ordinary supervised fine-tuning without the optional auxiliary CLM loss
 
-**Steps:** A: pretraining starts from random model parameters. B: Radford et al. use supervised loss plus an auxiliary CLM loss; CLM is not mandatory for every fine-tuning task. C: pretrained weights are reused, not reinitialized. D: supervised downstream fine-tuning generally uses labels; unsupervised adaptation is also possible.
+**Steps:** GPT-1 pretraining starts from random weights; supervised fine-tuning reuses them and typically uses labels. Radford et al. included an auxiliary language-model objective in their experiments, while fine-tuning in general need not. The paper-specific and generic conventions differ, and the course paper implies the GPT-1 experiment.
 
 **Status:** ambiguous
 
-**Ambiguity note:** B is task-dependent: GPT-1 used auxiliary CLM in its experiments, but fine-tuning need not minimize CLM; D concerns supervised fine-tuning rather than all fine-tuning.
+**Ambiguity note:** Implied course/exam convention: A, B, D for the original GPT-1 supervised experiments; A, D for ordinary supervised fine-tuning without the optional auxiliary CLM loss. GPT-1 pretraining starts from random weights; supervised fine-tuning reuses them and typically uses labels. Radford et al. included an auxiliary language-model objective in their experiments, while fine-tuning in general need not. The paper-specific and generic conventions differ, and the course paper implies the GPT-1 experiment.
 
 **verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
 
 ---
 
-<a id="da5004_2024T3_Q1_NA--q285"></a>
+#### Shared context
 
+**Question ID:** `640653993611`
+
+**Type:** Comprehension
+**PDF pages:** 8
+
+
+
+Consider a vocabulary $V$,
+
+$V = (\text{[start]}, \text{breaking}, \text{ground}, \text{a}, \text{is}, \text{seismology}, \text{study}, \text{experience}, \text{earth quake}, \text{[end]})$.
+
+Assume that we have a pre-trained GPT model for text generation and the first input token to the model is always the special token [start]. The prediction probabilities outputted by the model are given below.
+
+$$\begin{bmatrix}
+0.04 & 0.01 & 0.14 & 0.07 & 0.09 & 0.41 & 0.08 & 0.05 & 0.08 & 0.01 \\
+0.10 & 0.03 & 0.06 & 0.16 & 0.43 & 0.01 & 0.06 & 0.09 & 0.01 & 0.04 \\
+0.06 & 0.08 & 0.28 & 0.29 & 0.03 & 0.08 & 0.04 & 0.08 & 0.04 & 0.04 \\
+0.11 & 0.03 & 0.48 & 0.02 & 0.01 & 0.07 & 0.06 & 0.14 & 0.07 & 0.01 \\
+0.09 & 0.29 & 0.04 & 0.01 & 0.04 & 0.03 & 0.25 & 0.05 & 0.15 & 0.06 \\
+0.14 & 0.22 & 0.13 & 0.08 & 0.01 & 0.03 & 0.06 & 0.23 & 0.08 & 0.03
+\end{bmatrix}$$
+
+The columns of the matrix are in the same order as the words listed in the vocabulary set above.
+
+The zeroth row of the matrix is the output probability distribution by the model given the special [Start] token as input.
+
+Following the Greedy Search decoding strategy, the subsequent rows give the conditional probability distribution conditioned over the previous tokens. If you think the given information is insufficient for any sub-questions, then enter -1 as your answer.
+
+!Pre-trained GPT vocabulary and prediction probability distribution matrix for greedy decoding
+
+**Figure 6.** Pre-trained GPT vocabulary and prediction probability distribution matrix for greedy decoding
+
+Based on the above data, answer the given subquestions.
+
+### Question 285
+
+**Corrected shared-context text:** Vocabulary V=([start], breaking, ground, a, is, seismology, study, experience, earth quake, [end]). Rows of the probability matrix correspond to greedy prefixes, beginning with [start]; columns follow V. Matrix: [[.04,.01,.14,.07,.09,.41,.08,.05,.08,.01],[.10,.03,.06,.16,.43,.01,.06,.09,.01,.04],[.06,.08,.28,.29,.03,.08,.04,.08,.04,.04],[.11,.03,.48,.02,.01,.07,.06,.14,.07,.01],[.09,.29,.04,.01,.04,.03,.25,.05,.15,.06],[.14,.22,.13,.08,.01,.03,.06,.23,.08,.03]]. Enter -1 if information is insufficient.
+
+#### Dependent question
+
+<a id="da5004_2024T3_Q1_NA--q285"></a>
 ### 2024 T3 Quiz 1 NA, Q285
 
 **Paper:** `2024T3_Q1_NA` · **Type:** SA · **Marks:** 1 · **Topic(s):** w3-language-modelling
@@ -183,6 +233,8 @@ What is the probability of the predicted word equal to “Seismology” given th
 
 ![Question 285 prompt: probability of predicted word Seismology given [Start] token](assets/da5004_2024T3_Q1_NA/q285-q285-stem-01-p009.png)
 
+
+> Editorial correction: the extracted text differed from the scan (shared_context); see evidence `LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/ctx-285-288-passage-01-p008.png shows vocabulary, probability matrix, greedy-prefix conditioning and insufficient-data instruction.`.
 
 #### Worked answer
 
@@ -196,8 +248,49 @@ What is the probability of the predicted word equal to “Seismology” given th
 
 ---
 
-<a id="da5004_2024T3_Q1_NA--q286"></a>
+#### Shared context
 
+**Question ID:** `640653993611`
+
+**Type:** Comprehension
+**PDF pages:** 8
+
+
+
+Consider a vocabulary $V$,
+
+$V = (\text{[start]}, \text{breaking}, \text{ground}, \text{a}, \text{is}, \text{seismology}, \text{study}, \text{experience}, \text{earth quake}, \text{[end]})$.
+
+Assume that we have a pre-trained GPT model for text generation and the first input token to the model is always the special token [start]. The prediction probabilities outputted by the model are given below.
+
+$$\begin{bmatrix}
+0.04 & 0.01 & 0.14 & 0.07 & 0.09 & 0.41 & 0.08 & 0.05 & 0.08 & 0.01 \\
+0.10 & 0.03 & 0.06 & 0.16 & 0.43 & 0.01 & 0.06 & 0.09 & 0.01 & 0.04 \\
+0.06 & 0.08 & 0.28 & 0.29 & 0.03 & 0.08 & 0.04 & 0.08 & 0.04 & 0.04 \\
+0.11 & 0.03 & 0.48 & 0.02 & 0.01 & 0.07 & 0.06 & 0.14 & 0.07 & 0.01 \\
+0.09 & 0.29 & 0.04 & 0.01 & 0.04 & 0.03 & 0.25 & 0.05 & 0.15 & 0.06 \\
+0.14 & 0.22 & 0.13 & 0.08 & 0.01 & 0.03 & 0.06 & 0.23 & 0.08 & 0.03
+\end{bmatrix}$$
+
+The columns of the matrix are in the same order as the words listed in the vocabulary set above.
+
+The zeroth row of the matrix is the output probability distribution by the model given the special [Start] token as input.
+
+Following the Greedy Search decoding strategy, the subsequent rows give the conditional probability distribution conditioned over the previous tokens. If you think the given information is insufficient for any sub-questions, then enter -1 as your answer.
+
+!Pre-trained GPT vocabulary and prediction probability distribution matrix for greedy decoding
+
+**Figure 6.** Pre-trained GPT vocabulary and prediction probability distribution matrix for greedy decoding
+
+Based on the above data, answer the given subquestions.
+
+### Question 285
+
+**Corrected shared-context text:** Vocabulary V=([start], breaking, ground, a, is, seismology, study, experience, earth quake, [end]). Rows of the probability matrix correspond to greedy prefixes, beginning with [start]; columns follow V. Matrix: [[.04,.01,.14,.07,.09,.41,.08,.05,.08,.01],[.10,.03,.06,.16,.43,.01,.06,.09,.01,.04],[.06,.08,.28,.29,.03,.08,.04,.08,.04,.04],[.11,.03,.48,.02,.01,.07,.06,.14,.07,.01],[.09,.29,.04,.01,.04,.03,.25,.05,.15,.06],[.14,.22,.13,.08,.01,.03,.06,.23,.08,.03]]. Enter -1 if information is insufficient.
+
+#### Dependent question
+
+<a id="da5004_2024T3_Q1_NA--q286"></a>
 ### 2024 T3 Quiz 1 NA, Q286
 
 **Paper:** `2024T3_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w3-language-modelling
@@ -205,6 +298,8 @@ What is the probability of the predicted word equal to “Seismology” given th
 Say the probability of the sequence “Seismology is a ground breaking experience” is p, then what is $1000 \times p$?
 
 ![Question stem image for 2024 T3 Quiz 1 NA, Q286 in 2024T3_Q1_NA](../sources/exam-papers/assets/da5004_2024T3_Q1_NA/q286-q286-stem-01-p009.png)
+
+> Editorial correction: the extracted text differed from the scan (shared_context); see evidence `LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/ctx-285-288-passage-01-p008.png shows vocabulary, probability matrix, greedy-prefix conditioning and insufficient-data instruction.`.
 
 #### Worked answer
 
@@ -218,8 +313,49 @@ Say the probability of the sequence “Seismology is a ground breaking experienc
 
 ---
 
-<a id="da5004_2024T3_Q1_NA--q287"></a>
+#### Shared context
 
+**Question ID:** `640653993611`
+
+**Type:** Comprehension
+**PDF pages:** 8
+
+
+
+Consider a vocabulary $V$,
+
+$V = (\text{[start]}, \text{breaking}, \text{ground}, \text{a}, \text{is}, \text{seismology}, \text{study}, \text{experience}, \text{earth quake}, \text{[end]})$.
+
+Assume that we have a pre-trained GPT model for text generation and the first input token to the model is always the special token [start]. The prediction probabilities outputted by the model are given below.
+
+$$\begin{bmatrix}
+0.04 & 0.01 & 0.14 & 0.07 & 0.09 & 0.41 & 0.08 & 0.05 & 0.08 & 0.01 \\
+0.10 & 0.03 & 0.06 & 0.16 & 0.43 & 0.01 & 0.06 & 0.09 & 0.01 & 0.04 \\
+0.06 & 0.08 & 0.28 & 0.29 & 0.03 & 0.08 & 0.04 & 0.08 & 0.04 & 0.04 \\
+0.11 & 0.03 & 0.48 & 0.02 & 0.01 & 0.07 & 0.06 & 0.14 & 0.07 & 0.01 \\
+0.09 & 0.29 & 0.04 & 0.01 & 0.04 & 0.03 & 0.25 & 0.05 & 0.15 & 0.06 \\
+0.14 & 0.22 & 0.13 & 0.08 & 0.01 & 0.03 & 0.06 & 0.23 & 0.08 & 0.03
+\end{bmatrix}$$
+
+The columns of the matrix are in the same order as the words listed in the vocabulary set above.
+
+The zeroth row of the matrix is the output probability distribution by the model given the special [Start] token as input.
+
+Following the Greedy Search decoding strategy, the subsequent rows give the conditional probability distribution conditioned over the previous tokens. If you think the given information is insufficient for any sub-questions, then enter -1 as your answer.
+
+!Pre-trained GPT vocabulary and prediction probability distribution matrix for greedy decoding
+
+**Figure 6.** Pre-trained GPT vocabulary and prediction probability distribution matrix for greedy decoding
+
+Based on the above data, answer the given subquestions.
+
+### Question 285
+
+**Corrected shared-context text:** Vocabulary V=([start], breaking, ground, a, is, seismology, study, experience, earth quake, [end]). Rows of the probability matrix correspond to greedy prefixes, beginning with [start]; columns follow V. Matrix: [[.04,.01,.14,.07,.09,.41,.08,.05,.08,.01],[.10,.03,.06,.16,.43,.01,.06,.09,.01,.04],[.06,.08,.28,.29,.03,.08,.04,.08,.04,.04],[.11,.03,.48,.02,.01,.07,.06,.14,.07,.01],[.09,.29,.04,.01,.04,.03,.25,.05,.15,.06],[.14,.22,.13,.08,.01,.03,.06,.23,.08,.03]]. Enter -1 if information is insufficient.
+
+#### Dependent question
+
+<a id="da5004_2024T3_Q1_NA--q287"></a>
 ### 2024 T3 Quiz 1 NA, Q287
 
 **Paper:** `2024T3_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w3-language-modelling
@@ -228,22 +364,21 @@ What is the probability of the sequence “Seismology is earthquake study ”?
 
 ![Question stem image for 2024 T3 Quiz 1 NA, Q287 in 2024T3_Q1_NA](../sources/exam-papers/assets/da5004_2024T3_Q1_NA/q287-q287-stem-01-p009.png)
 
+> Editorial correction: the extracted text differed from the scan (shared_context); see evidence `LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/ctx-285-288-passage-01-p008.png shows vocabulary, probability matrix, greedy-prefix conditioning and insufficient-data instruction.`.
+
 #### Worked answer
 
-**Final answer:** Insufficient information; enter −1.
+**Final answer:** -1
 
-**Steps:** The row following “seismology is” is supplied only along the greedy prefix, which continues with “a”; the conditional distribution after the non-greedy “earth quake” is missing.
+**Steps:** The pictured passage explicitly instructs entry of -1 for insufficient information. The requested earthquake path deviates from greedy at the third token; P(study | seismology,is,earthquake) is absent. The unknown sequence probability therefore makes -1 the uniquely prescribed answer; the old note identifies the missing conditional correctly but overlooks the resulting resolvability.
 
-**Status:** ambiguous
-
-**Ambiguity note:** The conditional probability of study after the non-greedy earthquake prefix is absent: choosing that factor as 0 gives sequence probability 0, and choosing 1 gives 0.007052. The prescribed insufficient-information response is −1; this treats the listed “earth quake” as earthquake.
+**Status:** derived
 
 **verified_by_code:** `true` — solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.
 
 ---
 
 <a id="da5004_2024T3_Q1_NA--q289"></a>
-
 ### 2024 T3 Quiz 1 NA, Q289
 
 **Paper:** `2024T3_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w3-gpt1-parameter-count
@@ -276,6 +411,7 @@ What will be the shape of positional embedding?
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
 **Final answer:** A: 64 × 128.
@@ -289,7 +425,6 @@ What will be the shape of positional embedding?
 ---
 
 <a id="da5004_2025T1_Q1_NA--q108"></a>
-
 ### 2025 T1 Quiz 1 NA, Q108
 
 **Paper:** `2025T1_Q1_NA` · **Type:** MSQ · **Marks:** 2 · **Topic(s):** w3-finetuning, w3-gpt1-architecture
@@ -307,22 +442,22 @@ performance
 
 **D.** In general, fine-tuning requires a dataset with labels
 
+
 #### Worked answer
 
-**Final answer:** A, B, D in the GPT-1 supervised-task setting.
+**Final answer:** A, B, D for the original GPT-1 supervised experiments; A, D for ordinary supervised fine-tuning without the optional auxiliary CLM loss
 
-**Steps:** A: pretraining starts from random model parameters. B: Radford et al. use supervised loss plus an auxiliary CLM loss; CLM is not mandatory for every fine-tuning task. C: pretrained weights are reused, not reinitialized. D: supervised downstream fine-tuning generally uses labels; unsupervised adaptation is also possible.
+**Steps:** GPT-1 pretraining starts from random weights; supervised fine-tuning reuses them and typically uses labels. Radford et al. included an auxiliary language-model objective in their experiments, while fine-tuning in general need not. The paper-specific and generic conventions differ, and the course paper implies the GPT-1 experiment.
 
 **Status:** ambiguous
 
-**Ambiguity note:** B is task-dependent: GPT-1 used auxiliary CLM in its experiments, but fine-tuning need not minimize CLM; D concerns supervised fine-tuning rather than all fine-tuning.
+**Ambiguity note:** Implied course/exam convention: A, B, D for the original GPT-1 supervised experiments; A, D for ordinary supervised fine-tuning without the optional auxiliary CLM loss. GPT-1 pretraining starts from random weights; supervised fine-tuning reuses them and typically uses labels. Radford et al. included an auxiliary language-model objective in their experiments, while fine-tuning in general need not. The paper-specific and generic conventions differ, and the course paper implies the GPT-1 experiment.
 
 **verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
 
 ---
 
 <a id="da5004_2025T1_Q1_NA--q118"></a>
-
 ### 2025 T1 Quiz 1 NA, Q118
 
 **Paper:** `2025T1_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w3-language-modelling
@@ -333,22 +468,20 @@ Note: $x_1 = \text{Sachin}$
 
 ![Question stem image for 2025 T1 Quiz 1 NA, Q118 in 2025T1_Q1_NA](../sources/exam-papers/assets/da5004_2025T1_Q1_NA/q118-q118-stem-01-p009.png)
 
+
 #### Worked answer
 
-**Final answer:** 60/41 ≈ 1.4634
+**Final answer:** 60/41 ≈ 1.4634146
 
-**Steps:** Under an empirical random-token-start distribution, the corpus contains 41 tokens and the requested phrase occurs 6 time(s); chain-rule conditionals telescope to occurrence count / 41.
+**Steps:** The passage asks for an estimate from the given corpus. Ignoring punctuation leaves 41 tokens, six equal to Sachin; empirical P(Sachin)=6/41, so 10P=60/41. Uniform empirical token counting is the natural data-based estimate, not a missing parameter.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** The sampling distribution over starting positions is unspecified; the estimate assumes uniformly sampled corpus token positions.
-
-**verified_by_code:** `false` — depends on figure, no code path
+**verified_by_code:** `true` — solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.
 
 ---
 
 <a id="da5004_2025T1_Q1_NA--q119"></a>
-
 ### 2025 T1 Quiz 1 NA, Q119
 
 **Paper:** `2025T1_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w3-language-modelling
@@ -359,22 +492,20 @@ Note: $x_1 = \text{Sachin}$ and $x_2 = \text{Tendulkar}$
 
 ![Question stem image for 2025 T1 Quiz 1 NA, Q119 in 2025T1_Q1_NA](../sources/exam-papers/assets/da5004_2025T1_Q1_NA/q119-q119-stem-01-p009.png)
 
+
 #### Worked answer
 
-**Final answer:** 100/41 ≈ 2.4390
+**Final answer:** 100/41 ≈ 2.4390244
 
-**Steps:** Under an empirical random-token-start distribution, the corpus contains 41 tokens and the requested phrase occurs 1 time(s); chain-rule conditionals telescope to occurrence count / 41.
+**Steps:** After punctuation removal the 41-token corpus contains the consecutive pair Sachin Tendulkar once. Empirical chain-rule estimation gives P(Sachin)P(Tendulkar|Sachin)=(6/41)(1/6)=1/41, and 100P=100/41. The printed upper bound 2.43 excludes this exact result by about 0.009, apparently a key tolerance issue.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** The sampling distribution over starting positions is unspecified; the estimate assumes uniformly sampled corpus token positions.
-
-**verified_by_code:** `false` — depends on figure, no code path
+**verified_by_code:** `true` — solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.
 
 ---
 
 <a id="da5004_2025T1_Q1_NA--q120"></a>
-
 ### 2025 T1 Quiz 1 NA, Q120
 
 **Paper:** `2025T1_Q1_NA` · **Type:** SA · **Marks:** 3 · **Topic(s):** w3-language-modelling
@@ -385,22 +516,20 @@ Note: $x_1 = \text{Sachin}$, $x_2 = \text{has}$, and so on.
 
 ![Question stem image for 2025 T1 Quiz 1 NA, Q120 in 2025T1_Q1_NA](../sources/exam-papers/assets/da5004_2025T1_Q1_NA/q120-q120-stem-01-p009.png)
 
+
 #### Worked answer
 
-**Final answer:** 100/41 ≈ 2.4390
+**Final answer:** 100/41 ≈ 2.4390244
 
-**Steps:** Under an empirical random-token-start distribution, the corpus contains 41 tokens and the requested phrase occurs 1 time(s); chain-rule conditionals telescope to occurrence count / 41.
+**Steps:** The 41-token corpus contains the requested five-token phrase once. Chain-rule empirical counts telescope: (6/41)(4/6)(2/4)(2/2)(1/2)=1/41; multiply by 100. The printed 2.43 upper bound narrowly excludes the result, a key tolerance issue.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** The sampling distribution over starting positions is unspecified; the estimate assumes uniformly sampled corpus token positions.
-
-**verified_by_code:** `false` — depends on figure, no code path
+**verified_by_code:** `true` — solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.
 
 ---
 
 <a id="da5004_2025T1_Q1_NA--q121"></a>
-
 ### 2025 T1 Quiz 1 NA, Q121
 
 **Paper:** `2025T1_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w3-language-modelling
@@ -417,22 +546,20 @@ probability to be the next token, if the input is “Sachin has”:
 
 **D.** None of these
 
+
 #### Worked answer
 
-**Final answer:** A: broken, under the empirical-frequency approximation.
+**Final answer:** A: broken
 
-**Steps:** After “Sachin has”, broken occurs twice, acted once, highest once; A has the highest empirical conditional frequency. B and C are less frequent; D disregards A. Training does not guarantee this learned ranking.
+**Steps:** The requested corpus-based estimate counts broken twice after “Sachin has”, versus acted once and highest once. An adequately fitted model is intended to reflect the empirical ranking; the old caveat is mathematically true for arbitrary training but ignores the stated “sufficiently trained” teaching context.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** Model training and generalization are unspecified; corpus counts alone do not guarantee a trained model’s next-token ranking.
-
-**verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
+**verified_by_code:** `false` — Non-numeric response; no numeric checker path applies.
 
 ---
 
 <a id="da5004_2025T2_Q1_NA--q140"></a>
-
 ### 2025 T2 Quiz 1 NA, Q140
 
 **Paper:** `2025T2_Q1_NA` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w3-causal-lm
@@ -448,6 +575,7 @@ Which of the following statements are true regarding causal language modeling (C
 
 **D.** The CLM objective is commonly used for encoder-only models.
 
+
 #### Worked answer
 
 **Final answer:** A and B.
@@ -461,7 +589,6 @@ Which of the following statements are true regarding causal language modeling (C
 ---
 
 <a id="da5004_2025T2_Q1_NA--q141"></a>
-
 ### 2025 T2 Quiz 1 NA, Q141
 
 **Paper:** `2025T2_Q1_NA` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w3-gpt1-architecture
@@ -477,6 +604,7 @@ Which of the following are valid reasons why transformer-based large language mo
 
 **D.** Large transformer models can be fine-tuned for various NLP tasks using a single pre-trained model.
 
+
 #### Worked answer
 
 **Final answer:** A and D.
@@ -490,12 +618,12 @@ Which of the following are valid reasons why transformer-based large language mo
 ---
 
 <a id="da5004_2025T3_Q1_NA--q189"></a>
-
 ### 2025 T3 Quiz 1 NA, Q189
 
 **Paper:** `2025T3_Q1_NA` · **Type:** SA · **Marks:** 3 · **Topic(s):** w3-pretraining-objective
 
 How many next-token prediction targets are generated during training a full batch?
+
 
 
 #### Worked answer
@@ -511,7 +639,6 @@ How many next-token prediction targets are generated during training a full batc
 ---
 
 <a id="da5004_2026T1_Q1_NA--q16"></a>
-
 ### 2026 T1 Quiz 1 NA, Q16
 
 **Paper:** `2026T1_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w3-gpt1-parameter-count
@@ -527,6 +654,7 @@ What is the number of parameters in the token embedding matrix?
 
 **D.** 15,728,640,000
 
+
 #### Worked answer
 
 **Final answer:** A
@@ -540,7 +668,6 @@ What is the number of parameters in the token embedding matrix?
 ---
 
 <a id="da5004_2026T1_Q1_NA--q17"></a>
-
 ### 2026 T1 Quiz 1 NA, Q17
 
 **Paper:** `2026T1_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w3-gpt1-parameter-count
@@ -556,6 +683,7 @@ What is the total number of parameters in the positional embedding matrix?
 
 **D.** 39,321
 
+
 #### Worked answer
 
 **Final answer:** B
@@ -569,7 +697,6 @@ What is the total number of parameters in the positional embedding matrix?
 ---
 
 <a id="da5004_2026T1_Q1_NA--q18"></a>
-
 ### 2026 T1 Quiz 1 NA, Q18
 
 **Paper:** `2026T1_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w3-gpt1-parameter-count
@@ -585,22 +712,22 @@ For ONE complete attention head, what is the total number of parameters (Q + K +
 
 **D.** 147,456
 
+
 #### Worked answer
 
-**Final answer:** D (147,456) without Q/K/V biases; 147,648 with biases, absent from the options.
+**Final answer:** D: 147,456 weights; 147,648 including Q/K/V biases
 
-**Steps:** Each of Q, K and V has a 768×64 weight matrix. Their 147,456 weights become 147,648 parameters if three 64-element bias vectors are included.
+**Steps:** With width 768 and 12 heads, each head width is 64. The three 768×64 projection matrices contain 147,456 weights; three bias vectors add 192. D and the course-style matrix count imply bias-free projections, whereas the track’s GPT parameter convention includes biases.
 
 **Status:** ambiguous
 
-**Ambiguity note:** Bias-free Q/K/V projections yield D, 147,456; biased Q/K/V projections yield 147,648, which is not listed. The prompt does not specify the bias convention.
+**Ambiguity note:** Implied course/exam convention: D: 147,456 weights; 147,648 including Q/K/V biases. With width 768 and 12 heads, each head width is 64. The three 768×64 projection matrices contain 147,456 weights; three bias vectors add 192. D and the course-style matrix count imply bias-free projections, whereas the track’s GPT parameter convention includes biases.
 
 **verified_by_code:** `true` — solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.
 
 ---
 
 <a id="da5004_2026T1_Q1_NA--q19"></a>
-
 ### 2026 T1 Quiz 1 NA, Q19
 
 **Paper:** `2026T1_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w3-gpt1-parameter-count
@@ -618,6 +745,7 @@ How many parameters are in the output projection matrix (weights only, excluding
 
 **D.** 294,912
 
+
 #### Worked answer
 
 **Final answer:** C
@@ -631,7 +759,6 @@ How many parameters are in the output projection matrix (weights only, excluding
 ---
 
 <a id="da5004_2026T1_Q1_NA--q20"></a>
-
 ### 2026 T1 Quiz 1 NA, Q20
 
 **Paper:** `2026T1_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w3-gpt1-parameter-count
@@ -647,6 +774,7 @@ What is the total number of parameters in the complete FFN (including both weigh
 
 **D.** 9,437,184
 
+
 #### Worked answer
 
 **Final answer:** C
@@ -660,7 +788,6 @@ What is the total number of parameters in the complete FFN (including both weigh
 ---
 
 <a id="da5004_2026T2_Q1_NA--q10"></a>
-
 ### 2026 T2 Quiz 1 NA, Q10
 
 **Paper:** `2026T2_Q1_NA` · **Type:** SA · **Marks:** 3 · **Topic(s):** w3-language-modelling
@@ -670,6 +797,7 @@ Compute the joint probability of the sentence : "You eat apples"
 (Provide answer correct upto 2 digits after the decimal)
 
 ![Question stem image for 2026 T2 Quiz 1 NA, Q10 in 2026T2_Q1_NA](../sources/exam-papers/assets/da5004_2026T2_Q1_NA/q10-q10-stem-01-p006.png)
+
 
 #### Worked answer
 
@@ -684,7 +812,6 @@ Compute the joint probability of the sentence : "You eat apples"
 ---
 
 <a id="da5004_2026T2_Q1_NA--q11"></a>
-
 ### 2026 T2 Quiz 1 NA, Q11
 
 **Paper:** `2026T2_Q1_NA` · **Type:** MCQ · **Marks:** 3 · **Topic(s):** w3-language-modelling
@@ -702,22 +829,22 @@ Choose the option corresponding to the sentence with the highest joint probabili
 
 **E.** "you like apples
 
+
 #### Worked answer
 
-**Final answer:** C if the unshown B path has probability below 0.09; B if its probability exceeds 0.09.
+**Final answer:** C if the omitted B path is below 0.09; B if it exceeds 0.09; tie at 0.09
 
-**Steps:** The displayed paths give A=.5×.3×.4=.06, C=.5×.3×.6=.09, D=.4×.4×.5=.08, E=.4×.4×.4=.064. B begins with an unshown apples branch whose start mass can be up to .1; its later conditionals are unspecified.
+**Steps:** The pictured partial tree gives A=.5×.3×.4=.06, C=.5×.3×.6=.09, D=.4×.4×.5=.08, and E=.4×.4×.4=.064. B starts with an unpictured apples branch whose mass may be as high as .1; its continuation probabilities are not given. Both C and B can win.
 
 **Status:** ambiguous
 
-**Ambiguity note:** If the omitted B path has probability 0, C wins at 0.09; if P(apples first)=0.1 and both subsequent B conditionals are 1, B wins at 0.1. The partial tree permits both completions.
+**Ambiguity note:** The pictured partial tree gives A=.5×.3×.4=.06, C=.5×.3×.6=.09, D=.4×.4×.5=.08, and E=.4×.4×.4=.064. B starts with an unpictured apples branch whose mass may be as high as .1; its continuation probabilities are not given. Both C and B can win.
 
 **verified_by_code:** `true` — solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.
 
 ---
 
 <a id="da5004_2026T2_Q1_NA--q12"></a>
-
 ### 2026 T2 Quiz 1 NA, Q12
 
 **Paper:** `2026T2_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w3-language-modelling
@@ -725,22 +852,20 @@ Choose the option corresponding to the sentence with the highest joint probabili
 Using the given probability tree calculate the conditional probability of predicting "apples" given "like" [i.e P(apples | like)]. (Submit -1 if the provided information is insufficient)
 
 
+
 #### Worked answer
 
-**Final answer:** Insufficient information; enter −1.
+**Final answer:** -1
 
-**Steps:** P(apples|like) marginalizes over all preceding first tokens; the tree is partial and omits possible contexts and their probabilities.
+**Steps:** The pictured tree is explicitly partial, and the question explicitly prescribes -1 if the information is insufficient. P(apples|like) marginalizes over all first-token contexts; omitted first tokens may also precede like. The requested ratio is not determined, so -1 is the unique prescribed response.
 
-**Status:** ambiguous
-
-**Ambiguity note:** If no omitted first token can precede like, P(apples|like)=0.274/0.46≈0.595652; if an omitted first token has mass 0.1 and both relevant conditionals are 1, the ratio is 0.374/0.56≈0.667857. The prescribed answer for missing information is −1.
+**Status:** derived
 
 **verified_by_code:** `true` — solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.
 
 ---
 
 <a id="da5004_2026T2_Q1_NA--q13"></a>
-
 ### 2026 T2 Quiz 1 NA, Q13
 
 **Paper:** `2026T2_Q1_NA` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w3-causal-lm
@@ -758,6 +883,7 @@ Which of the following are components found within a GPT decoder layer?
 
 **E.** Add & Norm Layer
 
+
 #### Worked answer
 
 **Final answer:** A, B and E.
@@ -773,7 +899,6 @@ Which of the following are components found within a GPT decoder layer?
 ## Quiz 2 questions
 
 <a id="da5004_2024T1_Q2_NA--q135"></a>
-
 ### 2024 T1 Quiz 2 NA, Q135
 
 **Paper:** `2024T1_Q2_NA` · **Type:** MSQ · **Marks:** 4 · **Topic(s):** w3-gpt1-parameter-count
@@ -790,6 +915,7 @@ embedding and output layer parameters)
 
 **D.** All models have the same number of parameters
 
+
 #### Worked answer
 
 **Final answer:** D: all have the same decoder parameter count.
@@ -803,7 +929,6 @@ embedding and output layer parameters)
 ---
 
 <a id="da5004_2026T1_Q2_NA--q13"></a>
-
 ### 2026 T1 Quiz 2 NA, Q13
 
 **Paper:** `2026T1_Q2_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w3-causal-lm
@@ -816,6 +941,7 @@ Is the given attention matrix valid for a causal language modelling task?
 **B.** False
 
 **C.** Insufficient information
+
 
 #### Worked answer
 
@@ -830,7 +956,6 @@ Is the given attention matrix valid for a causal language modelling task?
 ---
 
 <a id="da5004_2026T2_Q2_NA--q8"></a>
-
 ### 2026 T2 Quiz 2 NA, Q8
 
 **Paper:** `2026T2_Q2_NA` · **Type:** MCQ · **Marks:** 3 · **Topic(s):** w3-task-input-formats
@@ -846,6 +971,7 @@ During the fine-tuning of GPT-1 for Textual Entailment tasks, what is the purpos
 
 **D.** To initialize the linear head.
 
+
 #### Worked answer
 
 **Final answer:** B: separate premise and hypothesis.
@@ -859,7 +985,6 @@ During the fine-tuning of GPT-1 for Textual Entailment tasks, what is the purpos
 ---
 
 <a id="da5004_2026T2_Q2_NA--q9"></a>
-
 ### 2026 T2 Quiz 2 NA, Q9
 
 **Paper:** `2026T2_Q2_NA` · **Type:** MCQ · **Marks:** 3 · **Topic(s):** w3-finetuning
@@ -878,6 +1003,7 @@ the need for teacher forcing during the classification forward pass.
 
 **D.** Causal self-attention ensures that only the final token's representation aggregates information from all preceding tokens in the sequence.
 
+
 #### Worked answer
 
 **Final answer:** D.
@@ -893,7 +1019,6 @@ the need for teacher forcing during the classification forward pass.
 ## End Term questions
 
 <a id="da5004_2024T1_ET_AN--q144"></a>
-
 ### 2024 T1 End Term AN, Q144
 
 **Paper:** `2024T1_ET_AN` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w3-gpt1-architecture
@@ -921,6 +1046,7 @@ GPT stands for
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
 **Final answer:** A: Generative Pre-trained Transformer.
@@ -934,7 +1060,6 @@ GPT stands for
 ---
 
 <a id="da5004_2024T1_ET_AN--q149"></a>
-
 ### 2024 T1 End Term AN, Q149
 
 **Paper:** `2024T1_ET_AN` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w3-causal-lm
@@ -967,22 +1092,22 @@ A user runs inference on the model N times with an input text that contains 712 
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
-**Final answer:** A–D with a fixed window; A–E with a sliding window.
+**Final answer:** A, B, C, D with a fixed complete-sequence window; A–E with sliding and reset position IDs
 
-**Steps:** 2048−712=1336 positions remain when the complete sequence is capped; 256, 16, 1024 and 512 fit, but 2048 does not. Sliding the window and resetting position IDs permits longer output; if the last sampled token need not be fed back, one extra token can be emitted without sliding.
+**Steps:** The shared prompt gives T=2048 and 712 prompt tokens, leaving 1336 slots under a complete-sequence cap, so 256, 16, 1024 and 512 fit. A sliding context can generate 2048; the supplied prompt does not specify inference policy. The exam key implies the fixed-window reading.
 
 **Status:** ambiguous
 
-**Ambiguity note:** Fixed full-sequence window: A–D; sliding context with position IDs reset: A–E. Counting a final prediction beyond the last input adds one token but does not change these choices.
+**Ambiguity note:** Implied course/exam convention: A, B, C, D with a fixed complete-sequence window; A–E with sliding and reset position IDs. The shared prompt gives T=2048 and 712 prompt tokens, leaving 1336 slots under a complete-sequence cap, so 256, 16, 1024 and 512 fit. A sliding context can generate 2048; the supplied prompt does not specify inference policy. The exam key implies the fixed-window reading.
 
 **verified_by_code:** `true` — solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.
 
 ---
 
 <a id="da5004_2024T1_ET_FN--q202"></a>
-
 ### 2024 T1 End Term FN, Q202
 
 **Paper:** `2024T1_ET_FN` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w3-causal-lm
@@ -1010,22 +1135,22 @@ A user runs inference on the model N times with an input text that contains 712 
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
-**Final answer:** A and B with a fixed window; A–D with a sliding window.
+**Final answer:** A, B with a fixed complete-sequence window; A–D with sliding and reset position IDs
 
-**Steps:** 1024−712=312 positions remain when the complete sequence is capped; 256 and 16 fit but 1024 and 512 do not. A sliding context with position IDs reset permits all four; a final prediction without feedback adds one token without altering the choices.
+**Steps:** The shared prompt gives T=1024 and 712 prompt tokens, leaving 312 slots under a complete-sequence cap. Only 256 and 16 fit. Sliding can generate all listed lengths; the exam key implies the fixed-window reading.
 
 **Status:** ambiguous
 
-**Ambiguity note:** Fixed full-sequence window: A and B; sliding context with position IDs reset: A–D. Counting a final prediction beyond the last input adds one token but does not change these choices.
+**Ambiguity note:** Implied course/exam convention: A, B with a fixed complete-sequence window; A–D with sliding and reset position IDs. The shared prompt gives T=1024 and 712 prompt tokens, leaving 312 slots under a complete-sequence cap. Only 256 and 16 fit. Sliding can generate all listed lengths; the exam key implies the fixed-window reading.
 
 **verified_by_code:** `true` — solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.
 
 ---
 
 <a id="da5004_2024T3_ET_AN--q177"></a>
-
 ### 2024 T3 End Term AN, Q177
 
 **Paper:** `2024T3_ET_AN` · **Type:** MCQ · **Marks:** 3 · **Topic(s):** w3-pretraining-objective
@@ -1048,6 +1173,7 @@ will get updated
 
 **D.** None of these
 
+
 #### Worked answer
 
 **Final answer:** B: rare embeddings can be updated.
@@ -1061,7 +1187,6 @@ will get updated
 ---
 
 <a id="da5004_2024T3_ET_AN--q193"></a>
-
 ### 2024 T3 End Term AN, Q193
 
 **Paper:** `2024T3_ET_AN` · **Type:** MSQ · **Marks:** 2 · **Topic(s):** w3-gpt1-architecture
@@ -1077,6 +1202,7 @@ Which of the following are correct about GPT-1 model:
 
 **D.** None of these.
 
+
 #### Worked answer
 
 **Final answer:** A and B.
@@ -1090,7 +1216,6 @@ Which of the following are correct about GPT-1 model:
 ---
 
 <a id="da5004_2024T3_ET_FN--q194"></a>
-
 ### 2024 T3 End Term FN, Q194
 
 **Paper:** `2024T3_ET_FN` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w3-finetuning, w3-pretraining-objective
@@ -1123,22 +1248,20 @@ Choose all the correct statements about the GPT model:
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
-**Final answer:** A, B, D in the GPT-1 supervised-task setting.
+**Final answer:** A, B, D
 
-**Steps:** A: pretraining starts from random model parameters. B: Radford et al. use supervised loss plus an auxiliary CLM loss; CLM is not mandatory for every fine-tuning task. C: pretrained weights are reused, not reinitialized. D: supervised downstream fine-tuning generally uses labels; unsupervised adaptation is also possible. E is false because A and D hold.
+**Steps:** In the GPT-1 setting, random initialization applies at pretraining, downstream fine-tuning reuses pretrained weights and typically uses labels, and the original supervised-task formulation includes an auxiliary CLM loss. The qualifier “for downstream tasks like sentiment classification” supplies that context; CLM is not a universal requirement for every adaptation.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** B is task-dependent: GPT-1 used auxiliary CLM in its experiments, but fine-tuning need not minimize CLM; D concerns supervised fine-tuning rather than all fine-tuning.
-
-**verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
+**verified_by_code:** `false` — Non-numeric response; no numeric checker path applies.
 
 ---
 
 <a id="da5004_2025T3_ET_AN--q23"></a>
-
 ### 2025 T3 End Term AN, Q23
 
 **Paper:** `2025T3_ET_AN` · **Type:** MCQ · **Marks:** 1 · **Topic(s):** w3-causal-lm
@@ -1151,6 +1274,7 @@ Which of the following describes the fundamental training mechanism of this mode
 **B.** The model predicts the token $x_{t+1}$ based only on the tokens $x_1$ up to $x_t$.
 
 **C.** The model predicts a masked token $x_t$ based on both the left and right context tokens.
+
 
 #### Worked answer
 
@@ -1165,7 +1289,6 @@ Which of the following describes the fundamental training mechanism of this mode
 ---
 
 <a id="da5004_2025T3_ET_AN--q24"></a>
-
 ### 2025 T3 End Term AN, Q24
 
 **Paper:** `2025T3_ET_AN` · **Type:** MCQ · **Marks:** 1 · **Topic(s):** w3-pretraining-objective
@@ -1182,6 +1305,7 @@ predicted.
 
 **D.** It allows the model to see future tokens $(x_{t+2}, \dots, x_T)$ when predicting $x_{t+1}$.
 
+
 #### Worked answer
 
 **Final answer:** C.
@@ -1195,7 +1319,6 @@ predicted.
 ---
 
 <a id="da5004_2025T3_ET_FN--q23"></a>
-
 ### 2025 T3 End Term FN, Q23
 
 **Paper:** `2025T3_ET_FN` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w3-causal-lm
@@ -1216,6 +1339,7 @@ Consider the following statements about GPT-style causal models.
 **C.** Removing positional encodings would force GPT to treat all permutations of the same set of tokens as equivalent contexts
 
 **D.** Causal masking ensures that the computational cost of training scales linearly with sequence length
+
 
 #### Worked answer
 

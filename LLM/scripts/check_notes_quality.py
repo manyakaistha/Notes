@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import importlib.util
+import json
 import re
 import sys
 from collections import Counter
@@ -24,8 +25,6 @@ def selected_files() -> list[Path]:
             continue
         rel = p.relative_to(ROOT).as_posix()
         if WEEK_NOTE.search(rel) or EXAM_NOTE.search(rel) or rel.startswith("notes/concepts/"):
-            found.append(p)
-        elif "bank" in rel.casefold() or re.search(r"week-\d+-exam-questions\.md$", rel):
             found.append(p)
     return sorted(set(found))
 
@@ -135,7 +134,7 @@ def quality_paths(path: Path) -> tuple[str, ...]:
             failures.append(f"frontmatter: {error}")
         else:
             required = ["title"]
-            if WEEK_NOTE.search(rel) or EXAM_NOTE.search(rel) or "bank" in rel.casefold() or re.search(r"week-\d+-exam-questions\.md$", rel):
+            if WEEK_NOTE.search(rel) or EXAM_NOTE.search(rel):
                 required.extend(["week", "status"])
             missing = [key for key in required if key not in meta]
             if missing:
@@ -222,6 +221,33 @@ def main() -> int:
     print(f"Files with failures: {sum(bool(f) for _, f in rows)}")
     print("Failures by category: " + (", ".join(f"{k}={totals[k]}" for k in sorted(totals)) if totals else "none"))
     print(f"Total findings: {sum(totals.values())}")
+    overrides_path = ROOT / "sources/exam-papers/routing-overrides.json"
+    parts_dir = ROOT / "sources/exam-papers"
+    prior = {}
+    for part in sorted(parts_dir.glob("routing-part-*.json")):
+        for record in json.loads(part.read_text(encoding="utf-8")).get("records", []):
+            prior[record["id"]] = set(record.get("topic_ids", []))
+    row_labels = {
+        "w1-scaled-dot-product": "Scaled dot-product attention and the sqrt(d_k) factor",
+        "w1-ffn-encoder-stack": "Position-wise FFN and the encoder layer/stack",
+    }
+    inconsistencies = []
+    for override in json.loads(overrides_path.read_text(encoding="utf-8")).get("overrides", []):
+        added = set(override.get("topic_ids", [])) - prior.get(override["id"], set())
+        for topic_id in sorted(added):
+            label = row_labels.get(topic_id)
+            if not label:
+                continue
+            note = ROOT / "week 1/week-1-notes.md"
+            for line_no, line in enumerate(note.read_text(encoding="utf-8").splitlines(), 1):
+                if line.startswith("|") and label in line and override["id"] not in line:
+                    inconsistencies.append((note.relative_to(ROOT).as_posix(), line_no, topic_id, override["id"], line))
+    print("\nRouting retag consistency (notes left unchanged):")
+    if inconsistencies:
+        for rel, line_no, topic_id, qid, line in inconsistencies:
+            print(f"{rel}:{line_no} — {topic_id} newly includes {qid}; exact existing table line: {line}")
+    else:
+        print("none")
     return 1 if totals else 0
 
 

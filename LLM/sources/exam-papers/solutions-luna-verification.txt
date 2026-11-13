@@ -42,3 +42,44 @@ da5004_2026T2_Q1_NA--q5 computed={"additional_heads": 4, "additional_scores": 14
 da5004_2026T1_ET_FN--q17 computed={"bert": 150, "gpt": 90, "layers": 6, "length": 5} verdict=derived_extra MATCH
 da5004_2026T2_ET_FN--q17 computed={"bert": 150, "gpt": 90, "layers": 6, "length": 5} verdict=derived_extra MATCH
 mismatch_count=0
+
+Override-controlled numeric derivations:
+da5004_2024T1_ET_AN--q149 computed={"context": 2048, "fixed_complete_sequence_emitted": 1336, "fixed_complete_sequence_options": ["A", "B", "C", "D"], "fixed_last_sample_not_fed_back_emitted": 1337, "fixed_last_sample_options": ["A", "B", "C", "D"], "prompt_tokens": 712, "remaining": 1336, "sliding_options": ["A", "B", "C", "D", "E"]} MATCH
+da5004_2024T1_ET_AN--q151 computed={"encoder_parameters": 2366208, "including_four_projection_biases_per_layer": 2369280} MATCH
+da5004_2024T1_ET_AN--q153 UNVERIFIED reason=complete numeric inputs are absent from editable extraction; manual scan adjudication retained
+da5004_2024T1_ET_FN--q202 computed={"context": 1024, "fixed_complete_sequence_emitted": 312, "fixed_complete_sequence_options": ["A", "B"], "fixed_last_sample_not_fed_back_emitted": 313, "fixed_last_sample_options": ["A", "B"], "prompt_tokens": 712, "remaining": 312, "sliding_options": ["A", "B", "C", "D"]} MATCH
+da5004_2024T1_ET_FN--q206 computed={"encoder_parameters": 2366208, "including_four_projection_biases_per_layer": 2369280} MATCH
+da5004_2024T1_ET_FN--q208 UNVERIFIED reason=complete numeric inputs are absent from editable extraction; manual scan adjudication retained
+da5004_2024T1_Q1_NA--q189 computed={"matrix_weights": 768} MATCH
+da5004_2024T1_Q1_NA--q193 computed={"capped_complete_sequence_new_tokens": 1023, "capped_options": ["A"], "context": 1024, "last_prediction_not_fed_back_new_tokens": 1024, "last_prediction_options": ["A", "B"], "sliding_options": ["A", "B", "C", "D"]} MATCH
+da5004_2024T3_Q1_NA--q277 UNVERIFIED reason=complete numeric inputs are absent from editable extraction; manual scan adjudication retained
+da5004_2024T3_Q1_NA--q278 UNVERIFIED reason=complete numeric inputs are absent from editable extraction; manual scan adjudication retained
+da5004_2024T3_Q1_NA--q279 UNVERIFIED reason=complete numeric inputs are absent from editable extraction; manual scan adjudication retained
+da5004_2024T3_Q1_NA--q287 computed={"answer": -1} MATCH
+da5004_2025T1_Q1_NA--q111 computed={"fixed_position_parameters": 0, "learned_position_parameters": 1024, "model_dimension": 32} MATCH
+da5004_2025T1_Q1_NA--q112 computed={"matrix_weights": 3072} MATCH
+da5004_2025T1_Q1_NA--q113 computed={"matrix_weights": 256} MATCH
+da5004_2025T1_Q1_NA--q118 computed={"sachin_count": 6, "scaled_probability": 1.4634146341463414, "total_tokens": 41} MATCH
+da5004_2025T1_Q1_NA--q119 computed={"phrase_count": 1, "scaled_probability": 2.4390243902439024, "total_tokens": 41} MATCH
+da5004_2025T1_Q1_NA--q120 computed={"phrase_count": 1, "scaled_probability": 2.4390243902439024, "total_tokens": 41} MATCH
+da5004_2025T2_ET_FN--q145 computed={"logits": [1.5, 0.5, 0.0, -0.5], "probability_rounded": 0.41, "temperature": 2.0} MATCH
+da5004_2025T2_Q1_NA--q147 UNVERIFIED reason=complete numeric inputs are absent from editable extraction; manual scan adjudication retained
+da5004_2025T2_Q1_NA--q148 UNVERIFIED reason=complete numeric inputs are absent from editable extraction; manual scan adjudication retained
+da5004_2025T2_Q1_NA--q149 UNVERIFIED reason=complete numeric inputs are absent from editable extraction; manual scan adjudication retained
+da5004_2025T2_Q1_NA--q150 UNVERIFIED reason=complete numeric inputs are absent from editable extraction; manual scan adjudication retained
+da5004_2025T3_ET_AN--q17 computed={"ffn_factor": 2, "quadratic_factor": 4} MATCH
+da5004_2025T3_ET_AN--q20 computed={"individual_matrices": 144, "sets": 48} MATCH
+da5004_2025T3_ET_FN--q25 computed={"ffn_factor": 2, "quadratic_factor": 4} MATCH
+da5004_2025T3_Q1_NA--q190 computed={"T": 1024, "allowed_entries": 524800} MATCH
+da5004_2026T1_Q1_NA--q12 computed={"coordinate": 5, "pair_index": 2, "position": 3, "value": -0.6279266524418035} MATCH
+da5004_2026T1_Q1_NA--q18 computed={"head_width": 64, "weights_only": 147456, "with_biases": 147648} MATCH
+da5004_2026T2_ET_AN--q6 computed={"mean": 6.0, "output_if_epsilon_zero": 3.0, "output_with_epsilon": 2.99999900000075, "variance": 1} MATCH
+da5004_2026T2_ET_AN--q18 computed={"product": [5, 3, -1, -1], "x_m": [2, 1, 3, 2]} MATCH
+da5004_2026T2_ET_AN--q19 computed={"product": [4, 6, -2, -2], "x_n": [1, 3, 2, 4]} MATCH
+da5004_2026T2_Q1_NA--q11 computed={"A": 0.06, "C": 0.09, "D": 0.08000000000000002, "E": 0.06400000000000002, "winner_when_B_max": "B", "winner_when_B_zero": "C"} MATCH
+da5004_2026T2_Q1_NA--q12 computed={"answer": -1} MATCH
+da5004_2026T2_Q1_NA--q15 computed={"prefix_counts": [1, 7, 49, 343], "total": 400, "vocabulary": 7} MATCH
+override_numeric_count=35
+override_numeric_verified=26
+override_numeric_unverified=9
+override_numeric_mismatch_count=0

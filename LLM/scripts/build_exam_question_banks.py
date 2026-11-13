@@ -12,10 +12,17 @@ BASE = ROOT / "sources/exam-papers"
 INV = json.loads((BASE / "question-inventory.json").read_text())
 ROUTING = json.loads((BASE / "routing.json").read_text())["records"]
 SOLUTIONS = json.loads((BASE / "question-solutions.json").read_text())["records"]
+CORRECTION_DATA = json.loads((BASE / "question-corrections.json").read_text())
 TOPICS = json.loads((BASE.parent / "topics.json").read_text())["weeks"]
 Q_BY_ID = {q["id"]: q for q in INV["questions"]}
 R_BY_ID = {q["id"]: q for q in ROUTING}
 S_BY_ID = {q["id"]: q for q in SOLUTIONS}
+CORRECTIONS = {}
+CONTEXTS = {}
+for correction in CORRECTION_DATA.get("corrections", []):
+    CORRECTIONS.setdefault(correction["id"], []).append(correction)
+    for context_id in correction.get("context_from", []):
+        CONTEXTS.setdefault(correction["id"], []).append(context_id)
 PAPERS = {p["paper"]: p for p in INV["papers"]}
 assert len(Q_BY_ID) == 488 and len(R_BY_ID) == 488 and len(S_BY_ID) == 241
 assert set(Q_BY_ID) == set(R_BY_ID)
@@ -43,19 +50,67 @@ def img_lines(paths, q, role):
 
 def topic_anchor_link(q):
     week = R_BY_ID[q["id"]]["week"]
-    return wlink(f"week-{week}-exam-questions#{q['id']}", f"{q['year']}{q['term']} {q['exam']} {q['session']} Q{q['number']}")
+    return wlink(f"week-{week}-exam-questions#{occurrence_label(q)}", f"{q['year']}{q['term']} {q['exam']} {q['session']} Q{q['number']}")
+
+def correction_for(qid, field):
+    return [c for c in CORRECTIONS.get(qid, []) if c["field"] == field]
+
+def corrected_value(q, field, original):
+    matches = correction_for(q["id"], field)
+    if not matches:
+        return original, []
+    value = original
+    for c in matches:
+        value = c["corrected"]
+    return value, matches
+
+def editorial_lines(corrections):
+    return [f"> Editorial correction: the extracted text differed from the scan ({c['kind']}); see evidence `{c['evidence']}`." for c in corrections]
+
+def source_context(context_id, week):
+    prefix, short_id = context_id.split("--", 1)
+    extraction = BASE / f"{prefix}.md"
+    text = extraction.read_text(encoding="utf-8")
+    match = re.search(rf'<a\s+id=["\']{re.escape(short_id)}["\']></a>(.*?)(?=<a\s+id=|\Z)', text, re.S | re.I)
+    if not match:
+        raise ValueError(f"Missing shared context anchor {context_id} in {extraction}")
+    body = match.group(1).strip()
+    body = re.sub(r"\*\*Shared context:\*\*.*", "", body).strip()
+    body = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", body)
+    def rewrite_image(image_match):
+        alt, path = image_match.group(1), image_match.group(2)
+        return f"![{alt}](../sources/exam-papers/{path})"
+    body = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", rewrite_image, body)
+    return body
+
+def context_lines(q, week):
+    contexts = list(dict.fromkeys(CONTEXTS.get(q["id"], [])))
+    if not contexts:
+        return []
+    body = "\n\n---\n\n".join(source_context(context_id, week) for context_id in contexts)
+    context_corrections = correction_for(q["id"], "context")
+    if context_corrections:
+        body += "\n\n" + "\n\n".join(f"**Corrected shared-context text:** {c['corrected']}" for c in context_corrections)
+    return ["#### Shared context", "", body, "", "#### Dependent question", ""]
 
 def render_question(q, s):
     topics = R_BY_ID[q["id"]]["topic_ids"]
-    stem_text = clean_text(q["stem_text"])
-    out = [f'\n<a id="{q["id"]}"></a>\n', f"### {occurrence_label(q)}", "", f"**Paper:** `{q['paper']}` · **Type:** {q['type']} · **Marks:** {q['marks'] if q['marks'] is not None else 'not stated'} · **Topic(s):** {', '.join(topics) or 'No topic metadata'}", "", stem_text or "[No text extracted; inspect the source image.]", ""]
+    stem_text, stem_corrections = corrected_value(q, "stem", q["stem_text"])
+    out = [""]
+    out.extend(context_lines(q, R_BY_ID[q["id"]]["week"]))
+    out.extend([f'<a id="{q["id"]}"></a>', f"### {occurrence_label(q)}", "", f"**Paper:** `{q['paper']}` · **Type:** {q['type']} · **Marks:** {q['marks'] if q['marks'] is not None else 'not stated'} · **Topic(s):** {', '.join(topics) or 'No topic metadata'}", ""])
+    out.extend([clean_text(stem_text) or "[No text extracted; inspect the source image.]", ""])
     out.extend(img_lines(q["stem_images"], q, "Question stem"))
     for option in q["options"]:
-        out.extend(["", f"**{option['label']}.** {clean_text(option['text'])}"])
+        option_text, option_corrections = corrected_value(q, f"option:{option['label']}", option["text"])
+        out.extend(["", f"**{option['label']}.** {clean_text(option_text)}"])
         out.extend(img_lines(option["images"], q, f"Option {option['label']}"))
+    out.extend([""] + editorial_lines(CORRECTIONS.get(q["id"], [])))
     out.extend(["", "#### Worked answer", "", f"**Final answer:** {s['answer']}", "", f"**Steps:** {s['steps']}", "", f"**Status:** {s['status']}"])
-    if s.get("ambiguity_note"):
-        out.extend(["", f"**Ambiguity note:** {s['ambiguity_note']}"])
+    answer_note = correction_for(q["id"], "answer_note")
+    ambiguity_note = answer_note[-1]["corrected"] if answer_note else s.get("ambiguity_note")
+    if ambiguity_note:
+        out.extend(["", f"**Ambiguity note:** {ambiguity_note}"])
     out.extend(["", f"**verified_by_code:** `{str(s.get('verified_by_code') is True).lower()}` — {s.get('verification_note') or 'No verification note supplied.'}", "", "---"])
     return "\n".join(out)
 
@@ -70,7 +125,7 @@ for w, questions in included.items():
             refs = " · ".join(topic_anchor_link(q) for q in matches)
         else:
             refs = f"No direct question found; revise the linked study notes. {wlink(f'week-{w}-notes', 'Week notes')}"
-        topic_rows.append(f"| <a id=\"{topic['id']}\"></a>{topic['name']} | {len(matches)} | {refs} |")
+        topic_rows.append(f"| {topic['name']} | {len(matches)} | {refs} |")
     type_counts = Counter(q["type"] for q in questions)
     exam_counts = Counter(q["exam"] for q in questions)
     prev_bank = f'"[[week-{w-1}-exam-questions|Week {w-1} bank]]"' if w > 1 else '"[[Knowledge-Map|Knowledge Map]]"'
@@ -85,11 +140,12 @@ for w, questions in included.items():
         f"**Coverage:** {len(questions)} routed occurrences; {len({q['stem_text'].strip() for q in questions})} distinct stems; by type MCQ {type_counts['MCQ']}, MSQ {type_counts['MSQ']}, SA {type_counts['SA']}; by exam Q1 {exam_counts['Q1']}, Q2 {exam_counts['Q2']}, ET {exam_counts['ET']}.", "",
         "**Answer provenance:** Answers were derived by the study team (Terra/Luna agents); they are not official keys. `verified_by_code: true` means a numerical/code-based check was run for that answer; `false` means no such code verification is claimed. Status and any source ambiguity are stated with each solution.", "",
         "## Topic checklist", "", "The checklist includes every topic named for this week in `sources/topics.json`. A topic without a directly routed question still links to the study notes.", "",
+        *[f"### Topic: {topic['name']}" for topic in current_topics], "",
         "| Topic | Linked questions | Evidence / revision |", "| :--- | ---: | :--- |", *topic_rows, "", "## Question navigator", "", "| Paper | Question link | Topic | Answer status |", "| :--- | :--- | :--- | :--- |"
     ]
     for q in questions:
         s = S_BY_ID[q["id"]]
-        question_link = wlink(f"week-{w}-exam-questions#{q['id']}", occurrence_label(q))
+        question_link = wlink(f"week-{w}-exam-questions#{occurrence_label(q)}", occurrence_label(q))
         route_topics = R_BY_ID[q["id"]]["topic_ids"]
         lines.append(f"| {q['paper']} | {question_link} | {', '.join(route_topics) or 'No topic metadata'} | {s['status']} |")
     for exam, heading in (("Q1", "Quiz 1"), ("Q2", "Quiz 2"), ("ET", "End Term")):

@@ -24,98 +24,106 @@ tags:
 
 The checklist includes every topic named for this week in `sources/topics.json`. A topic without a directly routed question still links to the study notes.
 
+### Topic: Exhaustive and greedy search
+### Topic: Beam search and length normalisation
+### Topic: Top-k sampling and temperature
+### Topic: Top-p (nucleus) sampling and repetition issues
+### Topic: BERT masked language modelling (80/10/10)
+### Topic: NSP, [CLS]/[SEP] and the three input embeddings
+### Topic: BERT sizes and parameter counts
+### Topic: BERT fine-tuning heads and GPT vs BERT
+
 | Topic | Linked questions | Evidence / revision |
 | :--- | ---: | :--- |
-| <a id="w4-exhaustive-greedy"></a>Exhaustive and greedy search | 15 | [[week-4-exam-questions#da5004_2024T1_ET_AN--q148\|2024T1 ET AN Q148]] · [[week-4-exam-questions#da5004_2024T1_ET_AN--q150\|2024T1 ET AN Q150]] · [[week-4-exam-questions#da5004_2024T1_ET_FN--q201\|2024T1 ET FN Q201]] · [[week-4-exam-questions#da5004_2024T1_ET_FN--q203\|2024T1 ET FN Q203]] · [[week-4-exam-questions#da5004_2024T1_Q1_NA--q195\|2024T1 Q1 NA Q195]] · [[week-4-exam-questions#da5004_2024T3_ET_AN--q178\|2024T3 ET AN Q178]] · [[week-4-exam-questions#da5004_2025T1_Q1_NA--q109\|2025T1 Q1 NA Q109]] · [[week-4-exam-questions#da5004_2025T1_Q1_NA--q110\|2025T1 Q1 NA Q110]] · [[week-4-exam-questions#da5004_2025T2_ET_FN--q141\|2025T2 ET FN Q141]] · [[week-4-exam-questions#da5004_2025T2_Q1_NA--q153\|2025T2 Q1 NA Q153]] · [[week-4-exam-questions#da5004_2025T2_Q1_NA--q154\|2025T2 Q1 NA Q154]] · [[week-4-exam-questions#da5004_2025T3_Q1_NA--q178\|2025T3 Q1 NA Q178]] · [[week-4-exam-questions#da5004_2025T3_Q1_NA--q180\|2025T3 Q1 NA Q180]] · [[week-4-exam-questions#da5004_2026T2_Q1_NA--q14\|2026T2 Q1 NA Q14]] · [[week-4-exam-questions#da5004_2026T2_Q1_NA--q15\|2026T2 Q1 NA Q15]] |
-| <a id="w4-beam-search"></a>Beam search and length normalisation | 13 | [[week-4-exam-questions#da5004_2024T1_ET_AN--q150\|2024T1 ET AN Q150]] · [[week-4-exam-questions#da5004_2024T1_ET_FN--q203\|2024T1 ET FN Q203]] · [[week-4-exam-questions#da5004_2024T1_Q1_NA--q195\|2024T1 Q1 NA Q195]] · [[week-4-exam-questions#da5004_2024T3_ET_AN--q178\|2024T3 ET AN Q178]] · [[week-4-exam-questions#da5004_2025T1_Q1_NA--q110\|2025T1 Q1 NA Q110]] · [[week-4-exam-questions#da5004_2025T2_ET_FN--q141\|2025T2 ET FN Q141]] · [[week-4-exam-questions#da5004_2025T3_Q1_NA--q181\|2025T3 Q1 NA Q181]] · [[week-4-exam-questions#da5004_2025T3_Q1_NA--q185\|2025T3 Q1 NA Q185]] · [[week-4-exam-questions#da5004_2025T3_Q2_NA--q115\|2025T3 Q2 NA Q115]] · [[week-4-exam-questions#da5004_2026T1_ET_FN--q15\|2026T1 ET FN Q15]] · [[week-4-exam-questions#da5004_2026T2_ET_AN--q4\|2026T2 ET AN Q4]] · [[week-4-exam-questions#da5004_2026T2_ET_FN--q15\|2026T2 ET FN Q15]] · [[week-4-exam-questions#da5004_2026T2_Q1_NA--q17\|2026T2 Q1 NA Q17]] |
-| <a id="w4-topk-temperature"></a>Top-k sampling and temperature | 22 | [[week-4-exam-questions#da5004_2024T1_ET_AN--q150\|2024T1 ET AN Q150]] · [[week-4-exam-questions#da5004_2024T1_ET_FN--q203\|2024T1 ET FN Q203]] · [[week-4-exam-questions#da5004_2024T1_Q1_NA--q195\|2024T1 Q1 NA Q195]] · [[week-4-exam-questions#da5004_2024T3_ET_AN--q178\|2024T3 ET AN Q178]] · [[week-4-exam-questions#da5004_2024T3_ET_FN--q196\|2024T3 ET FN Q196]] · [[week-4-exam-questions#da5004_2024T3_Q1_NA--q288\|2024T3 Q1 NA Q288]] · [[week-4-exam-questions#da5004_2025T1_Q1_NA--q106\|2025T1 Q1 NA Q106]] · [[week-4-exam-questions#da5004_2025T1_Q1_NA--q110\|2025T1 Q1 NA Q110]] · [[week-4-exam-questions#da5004_2025T2_ET_FN--q141\|2025T2 ET FN Q141]] · [[week-4-exam-questions#da5004_2025T2_ET_FN--q143\|2025T2 ET FN Q143]] · [[week-4-exam-questions#da5004_2025T2_ET_FN--q145\|2025T2 ET FN Q145]] · [[week-4-exam-questions#da5004_2025T2_Q1_NA--q138\|2025T2 Q1 NA Q138]] · [[week-4-exam-questions#da5004_2025T2_Q1_NA--q143\|2025T2 Q1 NA Q143]] · [[week-4-exam-questions#da5004_2025T2_Q1_NA--q145\|2025T2 Q1 NA Q145]] · [[week-4-exam-questions#da5004_2025T2_Q1_NA--q155\|2025T2 Q1 NA Q155]] · [[week-4-exam-questions#da5004_2025T3_ET_AN--q2\|2025T3 ET AN Q2]] · [[week-4-exam-questions#da5004_2025T3_ET_FN--q3\|2025T3 ET FN Q3]] · [[week-4-exam-questions#da5004_2025T3_ET_FN--q24\|2025T3 ET FN Q24]] · [[week-4-exam-questions#da5004_2026T1_ET_AN--q11\|2026T1 ET AN Q11]] · [[week-4-exam-questions#da5004_2026T1_Q1_NA--q7\|2026T1 Q1 NA Q7]] · [[week-4-exam-questions#da5004_2026T1_Q2_NA--q17\|2026T1 Q2 NA Q17]] · [[week-4-exam-questions#da5004_2026T2_Q1_NA--q16\|2026T2 Q1 NA Q16]] |
-| <a id="w4-topp-nucleus"></a>Top-p (nucleus) sampling and repetition issues | 15 | [[week-4-exam-questions#da5004_2024T1_ET_AN--q150\|2024T1 ET AN Q150]] · [[week-4-exam-questions#da5004_2024T1_ET_FN--q203\|2024T1 ET FN Q203]] · [[week-4-exam-questions#da5004_2024T1_Q1_NA--q195\|2024T1 Q1 NA Q195]] · [[week-4-exam-questions#da5004_2025T1_Q1_NA--q110\|2025T1 Q1 NA Q110]] · [[week-4-exam-questions#da5004_2025T2_ET_AN--q198\|2025T2 ET AN Q198]] · [[week-4-exam-questions#da5004_2025T2_ET_FN--q141\|2025T2 ET FN Q141]] · [[week-4-exam-questions#da5004_2025T2_ET_FN--q143\|2025T2 ET FN Q143]] · [[week-4-exam-questions#da5004_2025T2_Q1_NA--q143\|2025T2 Q1 NA Q143]] · [[week-4-exam-questions#da5004_2025T3_ET_AN--q15\|2025T3 ET AN Q15]] · [[week-4-exam-questions#da5004_2025T3_ET_FN--q4\|2025T3 ET FN Q4]] · [[week-4-exam-questions#da5004_2025T3_Q1_NA--q182\|2025T3 Q1 NA Q182]] · [[week-4-exam-questions#da5004_2026T1_ET_AN--q8\|2026T1 ET AN Q8]] · [[week-4-exam-questions#da5004_2026T2_ET_AN--q9\|2026T2 ET AN Q9]] · [[week-4-exam-questions#da5004_2026T2_ET_AN--q10\|2026T2 ET AN Q10]] · [[week-4-exam-questions#da5004_2026T2_Q2_NA--q10\|2026T2 Q2 NA Q10]] |
-| <a id="w4-bert-mlm"></a>BERT masked language modelling (80/10/10) | 3 | [[week-4-exam-questions#da5004_2025T2_Q1_NA--q137\|2025T2 Q1 NA Q137]] · [[week-4-exam-questions#da5004_2026T1_Q2_NA--q3\|2026T1 Q2 NA Q3]] · [[week-4-exam-questions#da5004_2026T1_Q2_NA--q4\|2026T1 Q2 NA Q4]] |
-| <a id="w4-bert-nsp-inputs"></a>NSP, [CLS]/[SEP] and the three input embeddings | 6 | [[week-4-exam-questions#da5004_2024T1_Q1_NA--q198\|2024T1 Q1 NA Q198]] · [[week-4-exam-questions#da5004_2025T2_Q1_NA--q142\|2025T2 Q1 NA Q142]] · [[week-4-exam-questions#da5004_2026T1_ET_FN--q6\|2026T1 ET FN Q6]] · [[week-4-exam-questions#da5004_2026T1_Q1_NA--q6\|2026T1 Q1 NA Q6]] · [[week-4-exam-questions#da5004_2026T2_ET_AN--q5\|2026T2 ET AN Q5]] · [[week-4-exam-questions#da5004_2026T2_ET_FN--q6\|2026T2 ET FN Q6]] |
-| <a id="w4-bert-architecture-params"></a>BERT sizes and parameter counts | 2 | [[week-4-exam-questions#da5004_2024T1_ET_FN--q198\|2024T1 ET FN Q198]] · [[week-4-exam-questions#da5004_2026T1_Q2_NA--q18\|2026T1 Q2 NA Q18]] |
-| <a id="w4-bert-finetuning"></a>BERT fine-tuning heads and GPT vs BERT | 11 | [[week-4-exam-questions#da5004_2025T2_Q1_NA--q137\|2025T2 Q1 NA Q137]] · [[week-4-exam-questions#da5004_2025T3_ET_AN--q5\|2025T3 ET AN Q5]] · [[week-4-exam-questions#da5004_2025T3_ET_AN--q6\|2025T3 ET AN Q6]] · [[week-4-exam-questions#da5004_2025T3_ET_FN--q6\|2025T3 ET FN Q6]] · [[week-4-exam-questions#da5004_2026T1_ET_FN--q12\|2026T1 ET FN Q12]] · [[week-4-exam-questions#da5004_2026T1_ET_FN--q16\|2026T1 ET FN Q16]] · [[week-4-exam-questions#da5004_2026T1_ET_FN--q17\|2026T1 ET FN Q17]] · [[week-4-exam-questions#da5004_2026T1_Q1_NA--q8\|2026T1 Q1 NA Q8]] · [[week-4-exam-questions#da5004_2026T2_ET_FN--q12\|2026T2 ET FN Q12]] · [[week-4-exam-questions#da5004_2026T2_ET_FN--q16\|2026T2 ET FN Q16]] · [[week-4-exam-questions#da5004_2026T2_ET_FN--q17\|2026T2 ET FN Q17]] |
+| Exhaustive and greedy search | 15 | [[week-4-exam-questions#2024 T1 End Term AN, Q148\|2024T1 ET AN Q148]] · [[week-4-exam-questions#2024 T1 End Term AN, Q150\|2024T1 ET AN Q150]] · [[week-4-exam-questions#2024 T1 End Term FN, Q201\|2024T1 ET FN Q201]] · [[week-4-exam-questions#2024 T1 End Term FN, Q203\|2024T1 ET FN Q203]] · [[week-4-exam-questions#2024 T1 Quiz 1 NA, Q195\|2024T1 Q1 NA Q195]] · [[week-4-exam-questions#2024 T3 End Term AN, Q178\|2024T3 ET AN Q178]] · [[week-4-exam-questions#2025 T1 Quiz 1 NA, Q109\|2025T1 Q1 NA Q109]] · [[week-4-exam-questions#2025 T1 Quiz 1 NA, Q110\|2025T1 Q1 NA Q110]] · [[week-4-exam-questions#2025 T2 End Term FN, Q141\|2025T2 ET FN Q141]] · [[week-4-exam-questions#2025 T2 Quiz 1 NA, Q153\|2025T2 Q1 NA Q153]] · [[week-4-exam-questions#2025 T2 Quiz 1 NA, Q154\|2025T2 Q1 NA Q154]] · [[week-4-exam-questions#2025 T3 Quiz 1 NA, Q178\|2025T3 Q1 NA Q178]] · [[week-4-exam-questions#2025 T3 Quiz 1 NA, Q180\|2025T3 Q1 NA Q180]] · [[week-4-exam-questions#2026 T2 Quiz 1 NA, Q14\|2026T2 Q1 NA Q14]] · [[week-4-exam-questions#2026 T2 Quiz 1 NA, Q15\|2026T2 Q1 NA Q15]] |
+| Beam search and length normalisation | 13 | [[week-4-exam-questions#2024 T1 End Term AN, Q150\|2024T1 ET AN Q150]] · [[week-4-exam-questions#2024 T1 End Term FN, Q203\|2024T1 ET FN Q203]] · [[week-4-exam-questions#2024 T1 Quiz 1 NA, Q195\|2024T1 Q1 NA Q195]] · [[week-4-exam-questions#2024 T3 End Term AN, Q178\|2024T3 ET AN Q178]] · [[week-4-exam-questions#2025 T1 Quiz 1 NA, Q110\|2025T1 Q1 NA Q110]] · [[week-4-exam-questions#2025 T2 End Term FN, Q141\|2025T2 ET FN Q141]] · [[week-4-exam-questions#2025 T3 Quiz 1 NA, Q181\|2025T3 Q1 NA Q181]] · [[week-4-exam-questions#2025 T3 Quiz 1 NA, Q185\|2025T3 Q1 NA Q185]] · [[week-4-exam-questions#2025 T3 Quiz 2 NA, Q115\|2025T3 Q2 NA Q115]] · [[week-4-exam-questions#2026 T1 End Term FN, Q15\|2026T1 ET FN Q15]] · [[week-4-exam-questions#2026 T2 End Term AN, Q4\|2026T2 ET AN Q4]] · [[week-4-exam-questions#2026 T2 End Term FN, Q15\|2026T2 ET FN Q15]] · [[week-4-exam-questions#2026 T2 Quiz 1 NA, Q17\|2026T2 Q1 NA Q17]] |
+| Top-k sampling and temperature | 22 | [[week-4-exam-questions#2024 T1 End Term AN, Q150\|2024T1 ET AN Q150]] · [[week-4-exam-questions#2024 T1 End Term FN, Q203\|2024T1 ET FN Q203]] · [[week-4-exam-questions#2024 T1 Quiz 1 NA, Q195\|2024T1 Q1 NA Q195]] · [[week-4-exam-questions#2024 T3 End Term AN, Q178\|2024T3 ET AN Q178]] · [[week-4-exam-questions#2024 T3 End Term FN, Q196\|2024T3 ET FN Q196]] · [[week-4-exam-questions#2024 T3 Quiz 1 NA, Q288\|2024T3 Q1 NA Q288]] · [[week-4-exam-questions#2025 T1 Quiz 1 NA, Q106\|2025T1 Q1 NA Q106]] · [[week-4-exam-questions#2025 T1 Quiz 1 NA, Q110\|2025T1 Q1 NA Q110]] · [[week-4-exam-questions#2025 T2 End Term FN, Q141\|2025T2 ET FN Q141]] · [[week-4-exam-questions#2025 T2 End Term FN, Q143\|2025T2 ET FN Q143]] · [[week-4-exam-questions#2025 T2 End Term FN, Q145\|2025T2 ET FN Q145]] · [[week-4-exam-questions#2025 T2 Quiz 1 NA, Q138\|2025T2 Q1 NA Q138]] · [[week-4-exam-questions#2025 T2 Quiz 1 NA, Q143\|2025T2 Q1 NA Q143]] · [[week-4-exam-questions#2025 T2 Quiz 1 NA, Q145\|2025T2 Q1 NA Q145]] · [[week-4-exam-questions#2025 T2 Quiz 1 NA, Q155\|2025T2 Q1 NA Q155]] · [[week-4-exam-questions#2025 T3 End Term AN, Q2\|2025T3 ET AN Q2]] · [[week-4-exam-questions#2025 T3 End Term FN, Q3\|2025T3 ET FN Q3]] · [[week-4-exam-questions#2025 T3 End Term FN, Q24\|2025T3 ET FN Q24]] · [[week-4-exam-questions#2026 T1 End Term AN, Q11\|2026T1 ET AN Q11]] · [[week-4-exam-questions#2026 T1 Quiz 1 NA, Q7\|2026T1 Q1 NA Q7]] · [[week-4-exam-questions#2026 T1 Quiz 2 NA, Q17\|2026T1 Q2 NA Q17]] · [[week-4-exam-questions#2026 T2 Quiz 1 NA, Q16\|2026T2 Q1 NA Q16]] |
+| Top-p (nucleus) sampling and repetition issues | 15 | [[week-4-exam-questions#2024 T1 End Term AN, Q150\|2024T1 ET AN Q150]] · [[week-4-exam-questions#2024 T1 End Term FN, Q203\|2024T1 ET FN Q203]] · [[week-4-exam-questions#2024 T1 Quiz 1 NA, Q195\|2024T1 Q1 NA Q195]] · [[week-4-exam-questions#2025 T1 Quiz 1 NA, Q110\|2025T1 Q1 NA Q110]] · [[week-4-exam-questions#2025 T2 End Term AN, Q198\|2025T2 ET AN Q198]] · [[week-4-exam-questions#2025 T2 End Term FN, Q141\|2025T2 ET FN Q141]] · [[week-4-exam-questions#2025 T2 End Term FN, Q143\|2025T2 ET FN Q143]] · [[week-4-exam-questions#2025 T2 Quiz 1 NA, Q143\|2025T2 Q1 NA Q143]] · [[week-4-exam-questions#2025 T3 End Term AN, Q15\|2025T3 ET AN Q15]] · [[week-4-exam-questions#2025 T3 End Term FN, Q4\|2025T3 ET FN Q4]] · [[week-4-exam-questions#2025 T3 Quiz 1 NA, Q182\|2025T3 Q1 NA Q182]] · [[week-4-exam-questions#2026 T1 End Term AN, Q8\|2026T1 ET AN Q8]] · [[week-4-exam-questions#2026 T2 End Term AN, Q9\|2026T2 ET AN Q9]] · [[week-4-exam-questions#2026 T2 End Term AN, Q10\|2026T2 ET AN Q10]] · [[week-4-exam-questions#2026 T2 Quiz 2 NA, Q10\|2026T2 Q2 NA Q10]] |
+| BERT masked language modelling (80/10/10) | 3 | [[week-4-exam-questions#2025 T2 Quiz 1 NA, Q137\|2025T2 Q1 NA Q137]] · [[week-4-exam-questions#2026 T1 Quiz 2 NA, Q3\|2026T1 Q2 NA Q3]] · [[week-4-exam-questions#2026 T1 Quiz 2 NA, Q4\|2026T1 Q2 NA Q4]] |
+| NSP, [CLS]/[SEP] and the three input embeddings | 6 | [[week-4-exam-questions#2024 T1 Quiz 1 NA, Q198\|2024T1 Q1 NA Q198]] · [[week-4-exam-questions#2025 T2 Quiz 1 NA, Q142\|2025T2 Q1 NA Q142]] · [[week-4-exam-questions#2026 T1 End Term FN, Q6\|2026T1 ET FN Q6]] · [[week-4-exam-questions#2026 T1 Quiz 1 NA, Q6\|2026T1 Q1 NA Q6]] · [[week-4-exam-questions#2026 T2 End Term AN, Q5\|2026T2 ET AN Q5]] · [[week-4-exam-questions#2026 T2 End Term FN, Q6\|2026T2 ET FN Q6]] |
+| BERT sizes and parameter counts | 2 | [[week-4-exam-questions#2024 T1 End Term FN, Q198\|2024T1 ET FN Q198]] · [[week-4-exam-questions#2026 T1 Quiz 2 NA, Q18\|2026T1 Q2 NA Q18]] |
+| BERT fine-tuning heads and GPT vs BERT | 11 | [[week-4-exam-questions#2025 T2 Quiz 1 NA, Q137\|2025T2 Q1 NA Q137]] · [[week-4-exam-questions#2025 T3 End Term AN, Q5\|2025T3 ET AN Q5]] · [[week-4-exam-questions#2025 T3 End Term AN, Q6\|2025T3 ET AN Q6]] · [[week-4-exam-questions#2025 T3 End Term FN, Q6\|2025T3 ET FN Q6]] · [[week-4-exam-questions#2026 T1 End Term FN, Q12\|2026T1 ET FN Q12]] · [[week-4-exam-questions#2026 T1 End Term FN, Q16\|2026T1 ET FN Q16]] · [[week-4-exam-questions#2026 T1 End Term FN, Q17\|2026T1 ET FN Q17]] · [[week-4-exam-questions#2026 T1 Quiz 1 NA, Q8\|2026T1 Q1 NA Q8]] · [[week-4-exam-questions#2026 T2 End Term FN, Q12\|2026T2 ET FN Q12]] · [[week-4-exam-questions#2026 T2 End Term FN, Q16\|2026T2 ET FN Q16]] · [[week-4-exam-questions#2026 T2 End Term FN, Q17\|2026T2 ET FN Q17]] |
 
 ## Question navigator
 
 | Paper | Question link | Topic | Answer status |
 | :--- | :--- | :--- | :--- |
-| 2024T1_ET_AN | [[week-4-exam-questions#da5004_2024T1_ET_AN--q148\|2024 T1 End Term AN, Q148]] | w4-exhaustive-greedy | derived |
-| 2024T1_ET_AN | [[week-4-exam-questions#da5004_2024T1_ET_AN--q150\|2024 T1 End Term AN, Q150]] | w4-exhaustive-greedy, w4-beam-search, w4-topk-temperature, w4-topp-nucleus | ambiguous |
-| 2024T1_ET_FN | [[week-4-exam-questions#da5004_2024T1_ET_FN--q198\|2024 T1 End Term FN, Q198]] | w4-bert-architecture-params | ambiguous |
-| 2024T1_ET_FN | [[week-4-exam-questions#da5004_2024T1_ET_FN--q201\|2024 T1 End Term FN, Q201]] | w4-exhaustive-greedy | derived |
-| 2024T1_ET_FN | [[week-4-exam-questions#da5004_2024T1_ET_FN--q203\|2024 T1 End Term FN, Q203]] | w4-exhaustive-greedy, w4-beam-search, w4-topk-temperature, w4-topp-nucleus | ambiguous |
-| 2024T1_Q1_NA | [[week-4-exam-questions#da5004_2024T1_Q1_NA--q195\|2024 T1 Quiz 1 NA, Q195]] | w4-exhaustive-greedy, w4-beam-search, w4-topk-temperature, w4-topp-nucleus | ambiguous |
-| 2024T1_Q1_NA | [[week-4-exam-questions#da5004_2024T1_Q1_NA--q198\|2024 T1 Quiz 1 NA, Q198]] | w4-bert-nsp-inputs | derived |
-| 2024T3_ET_AN | [[week-4-exam-questions#da5004_2024T3_ET_AN--q178\|2024 T3 End Term AN, Q178]] | w4-exhaustive-greedy, w4-beam-search, w4-topk-temperature | ambiguous |
-| 2024T3_ET_FN | [[week-4-exam-questions#da5004_2024T3_ET_FN--q196\|2024 T3 End Term FN, Q196]] | w4-topk-temperature | ambiguous |
-| 2024T3_Q1_NA | [[week-4-exam-questions#da5004_2024T3_Q1_NA--q288\|2024 T3 Quiz 1 NA, Q288]] | w4-topk-temperature | derived |
-| 2025T1_Q1_NA | [[week-4-exam-questions#da5004_2025T1_Q1_NA--q106\|2025 T1 Quiz 1 NA, Q106]] | w4-topk-temperature | ambiguous |
-| 2025T1_Q1_NA | [[week-4-exam-questions#da5004_2025T1_Q1_NA--q109\|2025 T1 Quiz 1 NA, Q109]] | w4-exhaustive-greedy | derived |
-| 2025T1_Q1_NA | [[week-4-exam-questions#da5004_2025T1_Q1_NA--q110\|2025 T1 Quiz 1 NA, Q110]] | w4-beam-search, w4-topk-temperature, w4-topp-nucleus, w4-exhaustive-greedy | ambiguous |
-| 2025T2_ET_AN | [[week-4-exam-questions#da5004_2025T2_ET_AN--q198\|2025 T2 End Term AN, Q198]] | w4-topp-nucleus | derived |
-| 2025T2_ET_FN | [[week-4-exam-questions#da5004_2025T2_ET_FN--q141\|2025 T2 End Term FN, Q141]] | w4-exhaustive-greedy, w4-beam-search, w4-topk-temperature, w4-topp-nucleus | ambiguous |
-| 2025T2_ET_FN | [[week-4-exam-questions#da5004_2025T2_ET_FN--q143\|2025 T2 End Term FN, Q143]] | w4-topk-temperature, w4-topp-nucleus | derived |
-| 2025T2_ET_FN | [[week-4-exam-questions#da5004_2025T2_ET_FN--q145\|2025 T2 End Term FN, Q145]] | w4-topk-temperature | ambiguous |
-| 2025T2_Q1_NA | [[week-4-exam-questions#da5004_2025T2_Q1_NA--q137\|2025 T2 Quiz 1 NA, Q137]] | w4-bert-finetuning, w4-bert-mlm | derived |
-| 2025T2_Q1_NA | [[week-4-exam-questions#da5004_2025T2_Q1_NA--q138\|2025 T2 Quiz 1 NA, Q138]] | w4-topk-temperature | derived |
-| 2025T2_Q1_NA | [[week-4-exam-questions#da5004_2025T2_Q1_NA--q142\|2025 T2 Quiz 1 NA, Q142]] | w4-bert-nsp-inputs | derived |
-| 2025T2_Q1_NA | [[week-4-exam-questions#da5004_2025T2_Q1_NA--q143\|2025 T2 Quiz 1 NA, Q143]] | w4-topp-nucleus, w4-topk-temperature | derived |
-| 2025T2_Q1_NA | [[week-4-exam-questions#da5004_2025T2_Q1_NA--q145\|2025 T2 Quiz 1 NA, Q145]] | w4-topk-temperature | derived |
-| 2025T2_Q1_NA | [[week-4-exam-questions#da5004_2025T2_Q1_NA--q153\|2025 T2 Quiz 1 NA, Q153]] | w4-exhaustive-greedy | derived |
-| 2025T2_Q1_NA | [[week-4-exam-questions#da5004_2025T2_Q1_NA--q154\|2025 T2 Quiz 1 NA, Q154]] | w4-exhaustive-greedy | derived |
-| 2025T2_Q1_NA | [[week-4-exam-questions#da5004_2025T2_Q1_NA--q155\|2025 T2 Quiz 1 NA, Q155]] | w4-topk-temperature | derived |
-| 2025T3_ET_AN | [[week-4-exam-questions#da5004_2025T3_ET_AN--q2\|2025 T3 End Term AN, Q2]] | w4-topk-temperature | derived |
-| 2025T3_ET_AN | [[week-4-exam-questions#da5004_2025T3_ET_AN--q5\|2025 T3 End Term AN, Q5]] | w4-bert-finetuning | derived |
-| 2025T3_ET_AN | [[week-4-exam-questions#da5004_2025T3_ET_AN--q6\|2025 T3 End Term AN, Q6]] | w4-bert-finetuning | derived |
-| 2025T3_ET_AN | [[week-4-exam-questions#da5004_2025T3_ET_AN--q15\|2025 T3 End Term AN, Q15]] | w4-topp-nucleus | derived |
-| 2025T3_ET_FN | [[week-4-exam-questions#da5004_2025T3_ET_FN--q3\|2025 T3 End Term FN, Q3]] | w4-topk-temperature | derived |
-| 2025T3_ET_FN | [[week-4-exam-questions#da5004_2025T3_ET_FN--q4\|2025 T3 End Term FN, Q4]] | w4-topp-nucleus | derived |
-| 2025T3_ET_FN | [[week-4-exam-questions#da5004_2025T3_ET_FN--q6\|2025 T3 End Term FN, Q6]] | w4-bert-finetuning | derived |
-| 2025T3_ET_FN | [[week-4-exam-questions#da5004_2025T3_ET_FN--q24\|2025 T3 End Term FN, Q24]] | w4-topk-temperature | derived |
-| 2025T3_Q1_NA | [[week-4-exam-questions#da5004_2025T3_Q1_NA--q178\|2025 T3 Quiz 1 NA, Q178]] | w4-exhaustive-greedy | derived |
-| 2025T3_Q1_NA | [[week-4-exam-questions#da5004_2025T3_Q1_NA--q180\|2025 T3 Quiz 1 NA, Q180]] | w4-exhaustive-greedy | ambiguous |
-| 2025T3_Q1_NA | [[week-4-exam-questions#da5004_2025T3_Q1_NA--q181\|2025 T3 Quiz 1 NA, Q181]] | w4-beam-search | derived |
-| 2025T3_Q1_NA | [[week-4-exam-questions#da5004_2025T3_Q1_NA--q182\|2025 T3 Quiz 1 NA, Q182]] | w4-topp-nucleus | derived |
-| 2025T3_Q1_NA | [[week-4-exam-questions#da5004_2025T3_Q1_NA--q185\|2025 T3 Quiz 1 NA, Q185]] | w4-beam-search | derived |
-| 2025T3_Q2_NA | [[week-4-exam-questions#da5004_2025T3_Q2_NA--q115\|2025 T3 Quiz 2 NA, Q115]] | w4-beam-search | derived |
-| 2026T1_ET_AN | [[week-4-exam-questions#da5004_2026T1_ET_AN--q8\|2026 T1 End Term AN, Q8]] | w4-topp-nucleus | derived |
-| 2026T1_ET_AN | [[week-4-exam-questions#da5004_2026T1_ET_AN--q11\|2026 T1 End Term AN, Q11]] | w4-topk-temperature | derived |
-| 2026T1_ET_FN | [[week-4-exam-questions#da5004_2026T1_ET_FN--q6\|2026 T1 End Term FN, Q6]] | w4-bert-nsp-inputs | derived |
-| 2026T1_ET_FN | [[week-4-exam-questions#da5004_2026T1_ET_FN--q12\|2026 T1 End Term FN, Q12]] | w4-bert-finetuning | ambiguous |
-| 2026T1_ET_FN | [[week-4-exam-questions#da5004_2026T1_ET_FN--q15\|2026 T1 End Term FN, Q15]] | w4-beam-search | derived |
-| 2026T1_ET_FN | [[week-4-exam-questions#da5004_2026T1_ET_FN--q16\|2026 T1 End Term FN, Q16]] | w4-bert-finetuning | ambiguous |
-| 2026T1_ET_FN | [[week-4-exam-questions#da5004_2026T1_ET_FN--q17\|2026 T1 End Term FN, Q17]] | w4-bert-finetuning | derived |
-| 2026T1_Q1_NA | [[week-4-exam-questions#da5004_2026T1_Q1_NA--q6\|2026 T1 Quiz 1 NA, Q6]] | w4-bert-nsp-inputs | derived |
-| 2026T1_Q1_NA | [[week-4-exam-questions#da5004_2026T1_Q1_NA--q7\|2026 T1 Quiz 1 NA, Q7]] | w4-topk-temperature | derived |
-| 2026T1_Q1_NA | [[week-4-exam-questions#da5004_2026T1_Q1_NA--q8\|2026 T1 Quiz 1 NA, Q8]] | w4-bert-finetuning | derived |
-| 2026T1_Q2_NA | [[week-4-exam-questions#da5004_2026T1_Q2_NA--q3\|2026 T1 Quiz 2 NA, Q3]] | w4-bert-mlm | derived |
-| 2026T1_Q2_NA | [[week-4-exam-questions#da5004_2026T1_Q2_NA--q4\|2026 T1 Quiz 2 NA, Q4]] | w4-bert-mlm | derived |
-| 2026T1_Q2_NA | [[week-4-exam-questions#da5004_2026T1_Q2_NA--q17\|2026 T1 Quiz 2 NA, Q17]] | w4-topk-temperature | derived |
-| 2026T1_Q2_NA | [[week-4-exam-questions#da5004_2026T1_Q2_NA--q18\|2026 T1 Quiz 2 NA, Q18]] | w4-bert-architecture-params | derived |
-| 2026T2_ET_AN | [[week-4-exam-questions#da5004_2026T2_ET_AN--q4\|2026 T2 End Term AN, Q4]] | w4-beam-search | derived |
-| 2026T2_ET_AN | [[week-4-exam-questions#da5004_2026T2_ET_AN--q5\|2026 T2 End Term AN, Q5]] | w4-bert-nsp-inputs | derived |
-| 2026T2_ET_AN | [[week-4-exam-questions#da5004_2026T2_ET_AN--q9\|2026 T2 End Term AN, Q9]] | w4-topp-nucleus | derived |
-| 2026T2_ET_AN | [[week-4-exam-questions#da5004_2026T2_ET_AN--q10\|2026 T2 End Term AN, Q10]] | w4-topp-nucleus | derived |
-| 2026T2_ET_FN | [[week-4-exam-questions#da5004_2026T2_ET_FN--q6\|2026 T2 End Term FN, Q6]] | w4-bert-nsp-inputs | derived |
-| 2026T2_ET_FN | [[week-4-exam-questions#da5004_2026T2_ET_FN--q12\|2026 T2 End Term FN, Q12]] | w4-bert-finetuning | ambiguous |
-| 2026T2_ET_FN | [[week-4-exam-questions#da5004_2026T2_ET_FN--q15\|2026 T2 End Term FN, Q15]] | w4-beam-search | derived |
-| 2026T2_ET_FN | [[week-4-exam-questions#da5004_2026T2_ET_FN--q16\|2026 T2 End Term FN, Q16]] | w4-bert-finetuning | ambiguous |
-| 2026T2_ET_FN | [[week-4-exam-questions#da5004_2026T2_ET_FN--q17\|2026 T2 End Term FN, Q17]] | w4-bert-finetuning | derived |
-| 2026T2_Q1_NA | [[week-4-exam-questions#da5004_2026T2_Q1_NA--q14\|2026 T2 Quiz 1 NA, Q14]] | w4-exhaustive-greedy | derived |
-| 2026T2_Q1_NA | [[week-4-exam-questions#da5004_2026T2_Q1_NA--q15\|2026 T2 Quiz 1 NA, Q15]] | w4-exhaustive-greedy | ambiguous |
-| 2026T2_Q1_NA | [[week-4-exam-questions#da5004_2026T2_Q1_NA--q16\|2026 T2 Quiz 1 NA, Q16]] | w4-topk-temperature | derived |
-| 2026T2_Q1_NA | [[week-4-exam-questions#da5004_2026T2_Q1_NA--q17\|2026 T2 Quiz 1 NA, Q17]] | w4-beam-search | derived |
-| 2026T2_Q2_NA | [[week-4-exam-questions#da5004_2026T2_Q2_NA--q10\|2026 T2 Quiz 2 NA, Q10]] | w4-topp-nucleus | ambiguous |
+| 2024T1_ET_AN | [[week-4-exam-questions#2024 T1 End Term AN, Q148\|2024 T1 End Term AN, Q148]] | w4-exhaustive-greedy | derived |
+| 2024T1_ET_AN | [[week-4-exam-questions#2024 T1 End Term AN, Q150\|2024 T1 End Term AN, Q150]] | w4-exhaustive-greedy, w4-beam-search, w4-topk-temperature, w4-topp-nucleus | derived |
+| 2024T1_ET_FN | [[week-4-exam-questions#2024 T1 End Term FN, Q198\|2024 T1 End Term FN, Q198]] | w4-bert-architecture-params | derived |
+| 2024T1_ET_FN | [[week-4-exam-questions#2024 T1 End Term FN, Q201\|2024 T1 End Term FN, Q201]] | w4-exhaustive-greedy | derived |
+| 2024T1_ET_FN | [[week-4-exam-questions#2024 T1 End Term FN, Q203\|2024 T1 End Term FN, Q203]] | w4-exhaustive-greedy, w4-beam-search, w4-topk-temperature, w4-topp-nucleus | derived |
+| 2024T1_Q1_NA | [[week-4-exam-questions#2024 T1 Quiz 1 NA, Q195\|2024 T1 Quiz 1 NA, Q195]] | w4-exhaustive-greedy, w4-beam-search, w4-topk-temperature, w4-topp-nucleus | ambiguous |
+| 2024T1_Q1_NA | [[week-4-exam-questions#2024 T1 Quiz 1 NA, Q198\|2024 T1 Quiz 1 NA, Q198]] | w4-bert-nsp-inputs | derived |
+| 2024T3_ET_AN | [[week-4-exam-questions#2024 T3 End Term AN, Q178\|2024 T3 End Term AN, Q178]] | w4-exhaustive-greedy, w4-beam-search, w4-topk-temperature | ambiguous |
+| 2024T3_ET_FN | [[week-4-exam-questions#2024 T3 End Term FN, Q196\|2024 T3 End Term FN, Q196]] | w4-topk-temperature | derived |
+| 2024T3_Q1_NA | [[week-4-exam-questions#2024 T3 Quiz 1 NA, Q288\|2024 T3 Quiz 1 NA, Q288]] | w4-topk-temperature | derived |
+| 2025T1_Q1_NA | [[week-4-exam-questions#2025 T1 Quiz 1 NA, Q106\|2025 T1 Quiz 1 NA, Q106]] | w4-topk-temperature | derived |
+| 2025T1_Q1_NA | [[week-4-exam-questions#2025 T1 Quiz 1 NA, Q109\|2025 T1 Quiz 1 NA, Q109]] | w4-exhaustive-greedy | derived |
+| 2025T1_Q1_NA | [[week-4-exam-questions#2025 T1 Quiz 1 NA, Q110\|2025 T1 Quiz 1 NA, Q110]] | w4-beam-search, w4-topk-temperature, w4-topp-nucleus, w4-exhaustive-greedy | ambiguous |
+| 2025T2_ET_AN | [[week-4-exam-questions#2025 T2 End Term AN, Q198\|2025 T2 End Term AN, Q198]] | w4-topp-nucleus | derived |
+| 2025T2_ET_FN | [[week-4-exam-questions#2025 T2 End Term FN, Q141\|2025 T2 End Term FN, Q141]] | w4-exhaustive-greedy, w4-beam-search, w4-topk-temperature, w4-topp-nucleus | ambiguous |
+| 2025T2_ET_FN | [[week-4-exam-questions#2025 T2 End Term FN, Q143\|2025 T2 End Term FN, Q143]] | w4-topk-temperature, w4-topp-nucleus | derived |
+| 2025T2_ET_FN | [[week-4-exam-questions#2025 T2 End Term FN, Q145\|2025 T2 End Term FN, Q145]] | w4-topk-temperature | derived |
+| 2025T2_Q1_NA | [[week-4-exam-questions#2025 T2 Quiz 1 NA, Q137\|2025 T2 Quiz 1 NA, Q137]] | w4-bert-finetuning, w4-bert-mlm | derived |
+| 2025T2_Q1_NA | [[week-4-exam-questions#2025 T2 Quiz 1 NA, Q138\|2025 T2 Quiz 1 NA, Q138]] | w4-topk-temperature | derived |
+| 2025T2_Q1_NA | [[week-4-exam-questions#2025 T2 Quiz 1 NA, Q142\|2025 T2 Quiz 1 NA, Q142]] | w4-bert-nsp-inputs | derived |
+| 2025T2_Q1_NA | [[week-4-exam-questions#2025 T2 Quiz 1 NA, Q143\|2025 T2 Quiz 1 NA, Q143]] | w4-topp-nucleus, w4-topk-temperature | derived |
+| 2025T2_Q1_NA | [[week-4-exam-questions#2025 T2 Quiz 1 NA, Q145\|2025 T2 Quiz 1 NA, Q145]] | w4-topk-temperature | derived |
+| 2025T2_Q1_NA | [[week-4-exam-questions#2025 T2 Quiz 1 NA, Q153\|2025 T2 Quiz 1 NA, Q153]] | w4-exhaustive-greedy | derived |
+| 2025T2_Q1_NA | [[week-4-exam-questions#2025 T2 Quiz 1 NA, Q154\|2025 T2 Quiz 1 NA, Q154]] | w4-exhaustive-greedy | derived |
+| 2025T2_Q1_NA | [[week-4-exam-questions#2025 T2 Quiz 1 NA, Q155\|2025 T2 Quiz 1 NA, Q155]] | w4-topk-temperature | derived |
+| 2025T3_ET_AN | [[week-4-exam-questions#2025 T3 End Term AN, Q2\|2025 T3 End Term AN, Q2]] | w4-topk-temperature | derived |
+| 2025T3_ET_AN | [[week-4-exam-questions#2025 T3 End Term AN, Q5\|2025 T3 End Term AN, Q5]] | w4-bert-finetuning | derived |
+| 2025T3_ET_AN | [[week-4-exam-questions#2025 T3 End Term AN, Q6\|2025 T3 End Term AN, Q6]] | w4-bert-finetuning | derived |
+| 2025T3_ET_AN | [[week-4-exam-questions#2025 T3 End Term AN, Q15\|2025 T3 End Term AN, Q15]] | w4-topp-nucleus | derived |
+| 2025T3_ET_FN | [[week-4-exam-questions#2025 T3 End Term FN, Q3\|2025 T3 End Term FN, Q3]] | w4-topk-temperature | derived |
+| 2025T3_ET_FN | [[week-4-exam-questions#2025 T3 End Term FN, Q4\|2025 T3 End Term FN, Q4]] | w4-topp-nucleus | derived |
+| 2025T3_ET_FN | [[week-4-exam-questions#2025 T3 End Term FN, Q6\|2025 T3 End Term FN, Q6]] | w4-bert-finetuning | derived |
+| 2025T3_ET_FN | [[week-4-exam-questions#2025 T3 End Term FN, Q24\|2025 T3 End Term FN, Q24]] | w4-topk-temperature | derived |
+| 2025T3_Q1_NA | [[week-4-exam-questions#2025 T3 Quiz 1 NA, Q178\|2025 T3 Quiz 1 NA, Q178]] | w4-exhaustive-greedy | derived |
+| 2025T3_Q1_NA | [[week-4-exam-questions#2025 T3 Quiz 1 NA, Q180\|2025 T3 Quiz 1 NA, Q180]] | w4-exhaustive-greedy | derived |
+| 2025T3_Q1_NA | [[week-4-exam-questions#2025 T3 Quiz 1 NA, Q181\|2025 T3 Quiz 1 NA, Q181]] | w4-beam-search | derived |
+| 2025T3_Q1_NA | [[week-4-exam-questions#2025 T3 Quiz 1 NA, Q182\|2025 T3 Quiz 1 NA, Q182]] | w4-topp-nucleus | derived |
+| 2025T3_Q1_NA | [[week-4-exam-questions#2025 T3 Quiz 1 NA, Q185\|2025 T3 Quiz 1 NA, Q185]] | w4-beam-search | derived |
+| 2025T3_Q2_NA | [[week-4-exam-questions#2025 T3 Quiz 2 NA, Q115\|2025 T3 Quiz 2 NA, Q115]] | w4-beam-search | derived |
+| 2026T1_ET_AN | [[week-4-exam-questions#2026 T1 End Term AN, Q8\|2026 T1 End Term AN, Q8]] | w4-topp-nucleus | derived |
+| 2026T1_ET_AN | [[week-4-exam-questions#2026 T1 End Term AN, Q11\|2026 T1 End Term AN, Q11]] | w4-topk-temperature | derived |
+| 2026T1_ET_FN | [[week-4-exam-questions#2026 T1 End Term FN, Q6\|2026 T1 End Term FN, Q6]] | w4-bert-nsp-inputs | derived |
+| 2026T1_ET_FN | [[week-4-exam-questions#2026 T1 End Term FN, Q12\|2026 T1 End Term FN, Q12]] | w4-bert-finetuning | derived |
+| 2026T1_ET_FN | [[week-4-exam-questions#2026 T1 End Term FN, Q15\|2026 T1 End Term FN, Q15]] | w4-beam-search | derived |
+| 2026T1_ET_FN | [[week-4-exam-questions#2026 T1 End Term FN, Q16\|2026 T1 End Term FN, Q16]] | w4-bert-finetuning | derived |
+| 2026T1_ET_FN | [[week-4-exam-questions#2026 T1 End Term FN, Q17\|2026 T1 End Term FN, Q17]] | w4-bert-finetuning | derived |
+| 2026T1_Q1_NA | [[week-4-exam-questions#2026 T1 Quiz 1 NA, Q6\|2026 T1 Quiz 1 NA, Q6]] | w4-bert-nsp-inputs | derived |
+| 2026T1_Q1_NA | [[week-4-exam-questions#2026 T1 Quiz 1 NA, Q7\|2026 T1 Quiz 1 NA, Q7]] | w4-topk-temperature | derived |
+| 2026T1_Q1_NA | [[week-4-exam-questions#2026 T1 Quiz 1 NA, Q8\|2026 T1 Quiz 1 NA, Q8]] | w4-bert-finetuning | derived |
+| 2026T1_Q2_NA | [[week-4-exam-questions#2026 T1 Quiz 2 NA, Q3\|2026 T1 Quiz 2 NA, Q3]] | w4-bert-mlm | derived |
+| 2026T1_Q2_NA | [[week-4-exam-questions#2026 T1 Quiz 2 NA, Q4\|2026 T1 Quiz 2 NA, Q4]] | w4-bert-mlm | derived |
+| 2026T1_Q2_NA | [[week-4-exam-questions#2026 T1 Quiz 2 NA, Q17\|2026 T1 Quiz 2 NA, Q17]] | w4-topk-temperature | derived |
+| 2026T1_Q2_NA | [[week-4-exam-questions#2026 T1 Quiz 2 NA, Q18\|2026 T1 Quiz 2 NA, Q18]] | w4-bert-architecture-params | derived |
+| 2026T2_ET_AN | [[week-4-exam-questions#2026 T2 End Term AN, Q4\|2026 T2 End Term AN, Q4]] | w4-beam-search | derived |
+| 2026T2_ET_AN | [[week-4-exam-questions#2026 T2 End Term AN, Q5\|2026 T2 End Term AN, Q5]] | w4-bert-nsp-inputs | derived |
+| 2026T2_ET_AN | [[week-4-exam-questions#2026 T2 End Term AN, Q9\|2026 T2 End Term AN, Q9]] | w4-topp-nucleus | derived |
+| 2026T2_ET_AN | [[week-4-exam-questions#2026 T2 End Term AN, Q10\|2026 T2 End Term AN, Q10]] | w4-topp-nucleus | derived |
+| 2026T2_ET_FN | [[week-4-exam-questions#2026 T2 End Term FN, Q6\|2026 T2 End Term FN, Q6]] | w4-bert-nsp-inputs | derived |
+| 2026T2_ET_FN | [[week-4-exam-questions#2026 T2 End Term FN, Q12\|2026 T2 End Term FN, Q12]] | w4-bert-finetuning | derived |
+| 2026T2_ET_FN | [[week-4-exam-questions#2026 T2 End Term FN, Q15\|2026 T2 End Term FN, Q15]] | w4-beam-search | derived |
+| 2026T2_ET_FN | [[week-4-exam-questions#2026 T2 End Term FN, Q16\|2026 T2 End Term FN, Q16]] | w4-bert-finetuning | derived |
+| 2026T2_ET_FN | [[week-4-exam-questions#2026 T2 End Term FN, Q17\|2026 T2 End Term FN, Q17]] | w4-bert-finetuning | derived |
+| 2026T2_Q1_NA | [[week-4-exam-questions#2026 T2 Quiz 1 NA, Q14\|2026 T2 Quiz 1 NA, Q14]] | w4-exhaustive-greedy | derived |
+| 2026T2_Q1_NA | [[week-4-exam-questions#2026 T2 Quiz 1 NA, Q15\|2026 T2 Quiz 1 NA, Q15]] | w4-exhaustive-greedy | ambiguous |
+| 2026T2_Q1_NA | [[week-4-exam-questions#2026 T2 Quiz 1 NA, Q16\|2026 T2 Quiz 1 NA, Q16]] | w4-topk-temperature | derived |
+| 2026T2_Q1_NA | [[week-4-exam-questions#2026 T2 Quiz 1 NA, Q17\|2026 T2 Quiz 1 NA, Q17]] | w4-beam-search | derived |
+| 2026T2_Q2_NA | [[week-4-exam-questions#2026 T2 Quiz 2 NA, Q10\|2026 T2 Quiz 2 NA, Q10]] | w4-topp-nucleus | derived |
 
 ## Quiz 1 questions
 
 <a id="da5004_2024T1_Q1_NA--q195"></a>
-
 ### 2024 T1 Quiz 1 NA, Q195
 
 **Paper:** `2024T1_Q1_NA` · **Type:** MSQ · **Marks:** 4 · **Topic(s):** w4-exhaustive-greedy, w4-beam-search, w4-topk-temperature, w4-topp-nucleus
 
-Which of the following decoding strategies is (are) appropriate for machine translation tasks? Assume we have infinite compute and the values for $k > 3, p > 0.35$ where required.
+Which of the following decoding strategies is (are) appropriate for machine translation tasks? Assume we have infinite compute and the values for $k \ge 3, p > 0.35$ where required.
 
 ![Question stem image for 2024 T1 Quiz 1 NA, Q195 in 2024T1_Q1_NA](../sources/exam-papers/assets/da5004_2024T1_Q1_NA/q195-q195-stem-01-p012.png)
 
@@ -144,22 +152,23 @@ Which of the following decoding strategies is (are) appropriate for machine tran
 
 *Label added for presentation.*
 
+> Editorial correction: the extracted text differed from the scan (extraction_error); see evidence `LLM/sources/exam-papers/assets/da5004_2024T1_Q1_NA/q195-q195-stem-01-p012.png shows k ≥ 3.`.
+
 #### Worked answer
 
-**Final answer:** A, B, C and D can all be applied to translation.
+**Final answer:** A–D are usable; B and D are the conventional mode-seeking choices
 
-**Steps:** Top-k and top-p are stochastic but can generate translations; beam search searches a few candidates, and exhaustive search is feasible under the stated infinite compute assumption. E is therefore false.
+**Steps:** Top-k, top-p, beam and exhaustive search can all generate translations. If appropriate means the conventional mode-seeking objective, B and D are the course key; if it means usable, A–D qualify. No criterion for appropriateness is given, so a unique set cannot be established.
 
 **Status:** ambiguous
 
-**Ambiguity note:** “Appropriate” is subjective and no quality or optimality criterion is specified; a conventional quality-oriented answer could prefer B and D.
+**Ambiguity note:** Top-k, top-p, beam and exhaustive search can all generate translations. If appropriate means the conventional mode-seeking objective, B and D are the course key; if it means usable, A–D qualify. No criterion for appropriateness is given, so a unique set cannot be established.
 
 **verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
 
 ---
 
 <a id="da5004_2024T1_Q1_NA--q198"></a>
-
 ### 2024 T1 Quiz 1 NA, Q198
 
 **Paper:** `2024T1_Q1_NA` · **Type:** MCQ · **Marks:** 3 · **Topic(s):** w4-bert-nsp-inputs
@@ -177,6 +186,7 @@ The statement that “the Next Sentence Prediction (NSP) task requires the BERT 
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
 **Final answer:** B: false.
@@ -189,8 +199,49 @@ The statement that “the Next Sentence Prediction (NSP) task requires the BERT 
 
 ---
 
-<a id="da5004_2024T3_Q1_NA--q288"></a>
+#### Shared context
 
+**Question ID:** `640653993611`
+
+**Type:** Comprehension
+**PDF pages:** 8
+
+
+
+Consider a vocabulary $V$,
+
+$V = (\text{[start]}, \text{breaking}, \text{ground}, \text{a}, \text{is}, \text{seismology}, \text{study}, \text{experience}, \text{earth quake}, \text{[end]})$.
+
+Assume that we have a pre-trained GPT model for text generation and the first input token to the model is always the special token [start]. The prediction probabilities outputted by the model are given below.
+
+$$\begin{bmatrix}
+0.04 & 0.01 & 0.14 & 0.07 & 0.09 & 0.41 & 0.08 & 0.05 & 0.08 & 0.01 \\
+0.10 & 0.03 & 0.06 & 0.16 & 0.43 & 0.01 & 0.06 & 0.09 & 0.01 & 0.04 \\
+0.06 & 0.08 & 0.28 & 0.29 & 0.03 & 0.08 & 0.04 & 0.08 & 0.04 & 0.04 \\
+0.11 & 0.03 & 0.48 & 0.02 & 0.01 & 0.07 & 0.06 & 0.14 & 0.07 & 0.01 \\
+0.09 & 0.29 & 0.04 & 0.01 & 0.04 & 0.03 & 0.25 & 0.05 & 0.15 & 0.06 \\
+0.14 & 0.22 & 0.13 & 0.08 & 0.01 & 0.03 & 0.06 & 0.23 & 0.08 & 0.03
+\end{bmatrix}$$
+
+The columns of the matrix are in the same order as the words listed in the vocabulary set above.
+
+The zeroth row of the matrix is the output probability distribution by the model given the special [Start] token as input.
+
+Following the Greedy Search decoding strategy, the subsequent rows give the conditional probability distribution conditioned over the previous tokens. If you think the given information is insufficient for any sub-questions, then enter -1 as your answer.
+
+!Pre-trained GPT vocabulary and prediction probability distribution matrix for greedy decoding
+
+**Figure 6.** Pre-trained GPT vocabulary and prediction probability distribution matrix for greedy decoding
+
+Based on the above data, answer the given subquestions.
+
+### Question 285
+
+**Corrected shared-context text:** Vocabulary V=([start], breaking, ground, a, is, seismology, study, experience, earth quake, [end]). Rows of the probability matrix correspond to greedy prefixes, beginning with [start]; columns follow V. Matrix: [[.04,.01,.14,.07,.09,.41,.08,.05,.08,.01],[.10,.03,.06,.16,.43,.01,.06,.09,.01,.04],[.06,.08,.28,.29,.03,.08,.04,.08,.04,.04],[.11,.03,.48,.02,.01,.07,.06,.14,.07,.01],[.09,.29,.04,.01,.04,.03,.25,.05,.15,.06],[.14,.22,.13,.08,.01,.03,.06,.23,.08,.03]]. Enter -1 if information is insufficient.
+
+#### Dependent question
+
+<a id="da5004_2024T3_Q1_NA--q288"></a>
 ### 2024 T3 Quiz 1 NA, Q288
 
 **Paper:** `2024T3_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w4-topk-temperature
@@ -198,6 +249,8 @@ The statement that “the Next Sentence Prediction (NSP) task requires the BERT 
 Suppose we use Top—k sampling, with k = 3, what is the probability of the predicted word equal to “Seismology” given the “[Start]” token as the initial input $P(y_1 = \text{Seismology} \mid y_0 = \text{[Start]})$?
 
 ![Question stem image for 2024 T3 Quiz 1 NA, Q288 in 2024T3_Q1_NA](../sources/exam-papers/assets/da5004_2024T3_Q1_NA/q288-q288-stem-01-p010.png)
+
+> Editorial correction: the extracted text differed from the scan (shared_context); see evidence `LLM/sources/exam-papers/assets/da5004_2024T3_Q1_NA/ctx-285-288-passage-01-p008.png shows vocabulary, probability matrix, greedy-prefix conditioning and insufficient-data instruction.`.
 
 #### Worked answer
 
@@ -212,7 +265,6 @@ Suppose we use Top—k sampling, with k = 3, what is the probability of the pred
 ---
 
 <a id="da5004_2025T1_Q1_NA--q106"></a>
-
 ### 2025 T1 Quiz 1 NA, Q106
 
 **Paper:** `2025T1_Q1_NA` · **Type:** MCQ · **Marks:** 3 · **Topic(s):** w4-topk-temperature
@@ -230,22 +282,20 @@ different text completion each time it is executed
 
 **D.** None of these
 
+
 #### Worked answer
 
-**Final answer:** C: top-k sampling with k=2.
+**Final answer:** C
 
-**Steps:** C can sample alternative tokens on different runs. A is width-one beam search and B is greedy, both deterministic under fixed tie-breaking; D ignores C. Different outputs are possible, not guaranteed on every run.
+**Steps:** Top-k sampling with k=2 is the only listed stochastic method and can yield different continuations; width-one beam search and greedy search are deterministic with fixed ties. A sample need not differ on every run, but the standard contrast asks which can produce variation.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** Literal “different each time” is not guaranteed by sampling, which can repeat; C is interpreted as allowing different outputs.
-
-**verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
+**verified_by_code:** `false` — Non-numeric response; no numeric checker path applies.
 
 ---
 
 <a id="da5004_2025T1_Q1_NA--q109"></a>
-
 ### 2025 T1 Quiz 1 NA, Q109
 
 **Paper:** `2025T1_Q1_NA` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w4-exhaustive-greedy
@@ -266,6 +316,7 @@ Which of the following are correct statements regarding exhaustive decoding stra
 **D.** It is a stochastic approach
 ![Option D image for 2025 T1 Quiz 1 NA, Q109 in 2025T1_Q1_NA](../sources/exam-papers/assets/da5004_2025T1_Q1_NA/q109-q109-option-d-01-p004.png)
 
+
 #### Worked answer
 
 **Final answer:** A and C.
@@ -279,7 +330,6 @@ Which of the following are correct statements regarding exhaustive decoding stra
 ---
 
 <a id="da5004_2025T1_Q1_NA--q110"></a>
-
 ### 2025 T1 Quiz 1 NA, Q110
 
 **Paper:** `2025T1_Q1_NA` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w4-beam-search, w4-topk-temperature, w4-topp-nucleus, w4-exhaustive-greedy
@@ -298,22 +348,22 @@ Assume we have infinite compute and the values for k ≥ 3, p > 0.35 where requi
 
 **E.** None of these
 
+
 #### Worked answer
 
-**Final answer:** A, B, C and D can all be applied to translation.
+**Final answer:** A–D are usable; B and D are the conventional mode-seeking choices
 
-**Steps:** Top-k and top-p are stochastic but can generate translations; beam search searches a few candidates, and exhaustive search is feasible under the stated infinite compute assumption. E is therefore false.
+**Steps:** Top-k, top-p, beam and exhaustive search can all generate translations. If appropriate means the conventional mode-seeking objective, B and D are the course key; if it means usable, A–D qualify. No criterion for appropriateness is given, so a unique set cannot be established.
 
 **Status:** ambiguous
 
-**Ambiguity note:** “Appropriate” is subjective and no quality or optimality criterion is specified; a conventional quality-oriented answer could prefer B and D.
+**Ambiguity note:** Top-k, top-p, beam and exhaustive search can all generate translations. If appropriate means the conventional mode-seeking objective, B and D are the course key; if it means usable, A–D qualify. No criterion for appropriateness is given, so a unique set cannot be established.
 
 **verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
 
 ---
 
 <a id="da5004_2025T2_Q1_NA--q137"></a>
-
 ### 2025 T2 Quiz 1 NA, Q137
 
 **Paper:** `2025T2_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w4-bert-finetuning, w4-bert-mlm
@@ -329,6 +379,7 @@ What is the main difference between GPT and BERT pre-training objectives?
 
 **D.** Both use Causal Language Modeling
 
+
 #### Worked answer
 
 **Final answer:** B.
@@ -342,7 +393,6 @@ What is the main difference between GPT and BERT pre-training objectives?
 ---
 
 <a id="da5004_2025T2_Q1_NA--q138"></a>
-
 ### 2025 T2 Quiz 1 NA, Q138
 
 **Paper:** `2025T2_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w4-topk-temperature
@@ -358,6 +408,7 @@ In Top-K sampling for language generation, increasing the value of K typically h
 
 **D.** It guarantees grammatical correctness by focusing on top-ranked tokens only.
 
+
 #### Worked answer
 
 **Final answer:** C.
@@ -371,7 +422,6 @@ In Top-K sampling for language generation, increasing the value of K typically h
 ---
 
 <a id="da5004_2025T2_Q1_NA--q142"></a>
-
 ### 2025 T2 Quiz 1 NA, Q142
 
 **Paper:** `2025T2_Q1_NA` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w4-bert-nsp-inputs
@@ -393,6 +443,7 @@ Which elements are included in BERT’s input representation for Next Sentence P
 **D.** Position embeddings are not required for Next Sentence Prediction.
 ![Option D image for 2025 T2 Quiz 1 NA, Q142 in 2025T2_Q1_NA](../sources/exam-papers/assets/da5004_2025T2_Q1_NA/q142-q142-option-d-01-p005.png)
 
+
 #### Worked answer
 
 **Final answer:** A, B, C.
@@ -406,7 +457,6 @@ Which elements are included in BERT’s input representation for Next Sentence P
 ---
 
 <a id="da5004_2025T2_Q1_NA--q143"></a>
-
 ### 2025 T2 Quiz 1 NA, Q143
 
 **Paper:** `2025T2_Q1_NA` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w4-topp-nucleus, w4-topk-temperature
@@ -422,6 +472,7 @@ How does Top-p (nucleus) sampling differ from Top-K sampling in language generat
 
 **D.** It guarantees diversity by selecting all low-probability tokens.
 
+
 #### Worked answer
 
 **Final answer:** B.
@@ -435,7 +486,6 @@ How does Top-p (nucleus) sampling differ from Top-K sampling in language generat
 ---
 
 <a id="da5004_2025T2_Q1_NA--q145"></a>
-
 ### 2025 T2 Quiz 1 NA, Q145
 
 **Paper:** `2025T2_Q1_NA` · **Type:** SA · **Marks:** 3 · **Topic(s):** w4-topk-temperature
@@ -453,6 +503,7 @@ You apply temperature scaling with temperature $T = 0.5$. After applying the sof
 
 ![Question stem image for 2025 T2 Quiz 1 NA, Q145 in 2025T2_Q1_NA](../sources/exam-papers/assets/da5004_2025T2_Q1_NA/q145-q145-stem-01-p007.png)
 
+
 #### Worked answer
 
 **Final answer:** Approximately 0.84.
@@ -466,12 +517,12 @@ You apply temperature scaling with temperature $T = 0.5$. After applying the sof
 ---
 
 <a id="da5004_2025T2_Q1_NA--q153"></a>
-
 ### 2025 T2 Quiz 1 NA, Q153
 
 **Paper:** `2025T2_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w4-exhaustive-greedy
 
 In exhaustive search, at timestep t=1, we run the decoder once to obtain probability distributions over all tokens in the vocabulary. Given the 6 tokens available in the table in the main question, how many times must we run the decoder at timestep t=4?
+
 
 
 #### Worked answer
@@ -487,12 +538,12 @@ In exhaustive search, at timestep t=1, we run the decoder once to obtain probabi
 ---
 
 <a id="da5004_2025T2_Q1_NA--q154"></a>
-
 ### 2025 T2 Quiz 1 NA, Q154
 
 **Paper:** `2025T2_Q1_NA` · **Type:** SA · **Marks:** 1 · **Topic(s):** w4-exhaustive-greedy
 
 How many total sequences of exactly length 5 are possible according to exhaustive search?
+
 
 
 #### Worked answer
@@ -508,7 +559,6 @@ How many total sequences of exactly length 5 are possible according to exhaustiv
 ---
 
 <a id="da5004_2025T2_Q1_NA--q155"></a>
-
 ### 2025 T2 Quiz 1 NA, Q155
 
 **Paper:** `2025T2_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w4-topk-temperature
@@ -558,6 +608,7 @@ If we use top-k sampling with k=2 at timestep 1, what is the normalized probabil
 - {"classification": "out-of-scope-section", "page": 15, "bbox": [0.0, 406.5, 595.3, 841.9], "reason": "Subsequent Section 9 DL(CV) exam header terminating LLM section", "identity": "following-section-9"}
 
 
+
 #### Worked answer
 
 **Final answer:** 0.23/(0.33+0.23) ≈ 0.411.
@@ -571,7 +622,6 @@ If we use top-k sampling with k=2 at timestep 1, what is the normalized probabil
 ---
 
 <a id="da5004_2025T3_Q1_NA--q178"></a>
-
 ### 2025 T3 Quiz 1 NA, Q178
 
 **Paper:** `2025T3_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w4-exhaustive-greedy
@@ -616,6 +666,7 @@ Given a vocabulary of size $|V|$, how many sequences of maximum length 5 are pos
 *Label added for presentation.*
 ![Option D image for 2025 T3 Quiz 1 NA, Q178 in 2025T3_Q1_NA](../sources/exam-papers/assets/da5004_2025T3_Q1_NA/q178-q178-option-d-01-p004.png)
 
+
 #### Worked answer
 
 **Final answer:** C: Σ(k=1..5) |V|^k.
@@ -629,7 +680,6 @@ Given a vocabulary of size $|V|$, how many sequences of maximum length 5 are pos
 ---
 
 <a id="da5004_2025T3_Q1_NA--q180"></a>
-
 ### 2025 T3 Quiz 1 NA, Q180
 
 **Paper:** `2025T3_Q1_NA` · **Type:** MCQ · **Marks:** 3 · **Topic(s):** w4-exhaustive-greedy
@@ -683,22 +733,20 @@ For a vocabulary of size $V$ and a fixed sequence length $L$, exhaustive decodin
 *Label added for presentation.*
 ![Option E image for 2025 T3 Quiz 1 NA, Q180 in 2025T3_Q1_NA](../sources/exam-papers/assets/da5004_2025T3_Q1_NA/q180-q180-option-e-01-p005.png)
 
+
 #### Worked answer
 
-**Final answer:** C: (V−1)V^L.
+**Final answer:** C: (V−1)V^L
 
-**Steps:** Comparing total leaf counts, V^(L+1)−V^L=(V−1)V^L. A, B, D, E do not generally equal that difference.
+**Steps:** Exhaustive search over length L has V^L candidates; over length L+1 it has V^(L+1). The increase in candidate count is V^(L+1)−V^L=(V−1)V^L. “Additional” naturally asks for the increase, rather than a count of the identities of new strings.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** If “additional sequences evaluated” means all new length-(L+1) strings after already evaluating length L, the number is V^(L+1), absent from the options; C assumes a difference in total leaf counts.
-
-**verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
+**verified_by_code:** `false` — Non-numeric response; no numeric checker path applies.
 
 ---
 
 <a id="da5004_2025T3_Q1_NA--q181"></a>
-
 ### 2025 T3 Quiz 1 NA, Q181
 
 **Paper:** `2025T3_Q1_NA` · **Type:** MCQ · **Marks:** 3 · **Topic(s):** w4-beam-search
@@ -738,6 +786,7 @@ Greedy: 1, Beam: 3, Exhaustive: 1000
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
 **Final answer:** D.
@@ -751,7 +800,6 @@ Greedy: 1, Beam: 3, Exhaustive: 1000
 ---
 
 <a id="da5004_2025T3_Q1_NA--q182"></a>
-
 ### 2025 T3 Quiz 1 NA, Q182
 
 **Paper:** `2025T3_Q1_NA` · **Type:** MSQ · **Marks:** 2 · **Topic(s):** w4-topp-nucleus
@@ -779,6 +827,7 @@ Which of the following decoding strategies is/are inherently non-deterministic?
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
 **Final answer:** C: nucleus sampling.
@@ -792,7 +841,6 @@ Which of the following decoding strategies is/are inherently non-deterministic?
 ---
 
 <a id="da5004_2025T3_Q1_NA--q185"></a>
-
 ### 2025 T3 Quiz 1 NA, Q185
 
 **Paper:** `2025T3_Q1_NA` · **Type:** MSQ · **Marks:** 4 · **Topic(s):** w4-beam-search
@@ -831,6 +879,7 @@ Which statement(s) is/are correct?
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
 **Final answer:** B and D.
@@ -844,7 +893,6 @@ Which statement(s) is/are correct?
 ---
 
 <a id="da5004_2026T1_Q1_NA--q6"></a>
-
 ### 2026 T1 Quiz 1 NA, Q6
 
 **Paper:** `2026T1_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w4-bert-nsp-inputs
@@ -860,6 +908,7 @@ Consider the BERT architecture. During pre-training, it uses segment embeddings 
 
 **D.** Segment embeddings are randomly initialized for every new single-sentence input.
 
+
 #### Worked answer
 
 **Final answer:** B.
@@ -873,7 +922,6 @@ Consider the BERT architecture. During pre-training, it uses segment embeddings 
 ---
 
 <a id="da5004_2026T1_Q1_NA--q7"></a>
-
 ### 2026 T1 Quiz 1 NA, Q7
 
 **Paper:** `2026T1_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w4-topk-temperature
@@ -889,6 +937,7 @@ Consider a decoding step in a language model where the logits for the next token
 
 **D.** It causes numerical instability and results in NaNs.
 
+
 #### Worked answer
 
 **Final answer:** B.
@@ -902,7 +951,6 @@ Consider a decoding step in a language model where the logits for the next token
 ---
 
 <a id="da5004_2026T1_Q1_NA--q8"></a>
-
 ### 2026 T1 Quiz 1 NA, Q8
 
 **Paper:** `2026T1_Q1_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w4-bert-finetuning
@@ -918,6 +966,7 @@ You are fine-tuning a pre-trained BERT model for a spam classification task. The
 
 **D.** The concatenation of all hidden state vectors.
 
+
 #### Worked answer
 
 **Final answer:** C: final [CLS] hidden state.
@@ -931,12 +980,12 @@ You are fine-tuning a pre-trained BERT model for a spam classification task. The
 ---
 
 <a id="da5004_2026T2_Q1_NA--q14"></a>
-
 ### 2026 T2 Quiz 1 NA, Q14
 
 **Paper:** `2026T2_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w4-exhaustive-greedy
 
 Use greedy decoding to determine the most likely sequence of 6 tokens and compute the probability of generating that sequence. Enter the value rounded off to 3 decimal places
+
 
 
 #### Worked answer
@@ -952,7 +1001,6 @@ Use greedy decoding to determine the most likely sequence of 6 tokens and comput
 ---
 
 <a id="da5004_2026T2_Q1_NA--q15"></a>
-
 ### 2026 T2 Quiz 1 NA, Q15
 
 **Paper:** `2026T2_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w4-exhaustive-greedy
@@ -960,27 +1008,28 @@ Use greedy decoding to determine the most likely sequence of 6 tokens and comput
 Use exhaustive search strategy to identify the most probable sequence consisting of 4 tokens. How many decoder runs are required in total to identify the most probable sequence containing 4 tokens?
 
 
+
 #### Worked answer
 
-**Final answer:** 400 decoder evaluations.
+**Final answer:** 400 unbatched prefix evaluations; 4 batched depth-wise forward passes
 
-**Steps:** Under general prefix-conditioned exhaustive decoding, evaluate each prefix of lengths 0–3: 1+7+49+343=400; a batched or prefix-independent implementation can use fewer calls.
+**Steps:** General exhaustive decoding evaluates 1+7+7²+7³=400 prefixes to assign probabilities to four tokens. If “decoder run” means batched forward pass, four depth-wise calls suffice; if the supplied table is reusable and prefix-invariant, the computation needs no additional model calls. The usual course search-tree convention implies 400 but the unit is not defined.
 
 **Status:** ambiguous
 
-**Ambiguity note:** One unbatched model call per prefix gives 400; batching by depth gives 4 forward calls, and reusing the supplied prefix-invariant table requires 0 model calls. The question does not define a decoder run or whether the table may be reused.
+**Ambiguity note:** Implied course/exam convention: 400 unbatched prefix evaluations; 4 batched depth-wise forward passes. General exhaustive decoding evaluates 1+7+7²+7³=400 prefixes to assign probabilities to four tokens. If “decoder run” means batched forward pass, four depth-wise calls suffice; if the supplied table is reusable and prefix-invariant, the computation needs no additional model calls. The usual course search-tree convention implies 400 but the unit is not defined.
 
 **verified_by_code:** `true` — solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.
 
 ---
 
 <a id="da5004_2026T2_Q1_NA--q16"></a>
-
 ### 2026 T2 Quiz 1 NA, Q16
 
 **Paper:** `2026T2_Q1_NA` · **Type:** SA · **Marks:** 3 · **Topic(s):** w4-topk-temperature
 
 Use Top-k sampling at timestep t = 4 and k = 3. Compute the renormalized probability of the most probable token from the candidate tokens and enter the value rounded off to three decimal places
+
 
 
 #### Worked answer
@@ -996,7 +1045,6 @@ Use Top-k sampling at timestep t = 4 and k = 3. Compute the renormalized probabi
 ---
 
 <a id="da5004_2026T2_Q1_NA--q17"></a>
-
 ### 2026 T2 Quiz 1 NA, Q17
 
 **Paper:** `2026T2_Q1_NA` · **Type:** SA · **Marks:** 2 · **Topic(s):** w4-beam-search
@@ -1042,6 +1090,7 @@ Consider the sequence "the castle was abandoned". What is the minimum beam width
 - {"classification": "subject-confirmation", "page": 1, "bbox": [22.87, 750.0, 580.0, 841.9], "reason": "Administrative subject confirmation asking candidate to confirm subject and cross check hall ticket", "identity": "1"}
 
 
+
 #### Worked answer
 
 **Final answer:** 5 beams.
@@ -1057,7 +1106,6 @@ Consider the sequence "the castle was abandoned". What is the minimum beam width
 ## Quiz 2 questions
 
 <a id="da5004_2025T3_Q2_NA--q115"></a>
-
 ### 2025 T3 Quiz 2 NA, Q115
 
 **Paper:** `2025T3_Q2_NA` · **Type:** MSQ · **Marks:** 2 · **Topic(s):** w4-beam-search
@@ -1077,6 +1125,7 @@ Which decoding method ensures the same response every time for a given prompt (a
 
 **F.** Beam Search with beam-size = 1
 
+
 #### Worked answer
 
 **Final answer:** E and F.
@@ -1090,7 +1139,6 @@ Which decoding method ensures the same response every time for a given prompt (a
 ---
 
 <a id="da5004_2026T1_Q2_NA--q3"></a>
-
 ### 2026 T1 Quiz 2 NA, Q3
 
 **Paper:** `2026T1_Q2_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w4-bert-mlm
@@ -1106,6 +1154,7 @@ In the Masked Language Modeling (MLM) objective of BERT, 15% of tokens are chose
 
 **D.** To act as a regularizer similar to Dropout.
 
+
 #### Worked answer
 
 **Final answer:** C.
@@ -1119,7 +1168,6 @@ In the Masked Language Modeling (MLM) objective of BERT, 15% of tokens are chose
 ---
 
 <a id="da5004_2026T1_Q2_NA--q4"></a>
-
 ### 2026 T1 Quiz 2 NA, Q4
 
 **Paper:** `2026T1_Q2_NA` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w4-bert-mlm
@@ -1135,6 +1183,7 @@ Why is the standard GPT architecture (Decoder-only with causal masking) generall
 
 **D.** GPT uses ReLU activation, while BERT uses GELU, which is required for MLM.
 
+
 #### Worked answer
 
 **Final answer:** B.
@@ -1148,7 +1197,6 @@ Why is the standard GPT architecture (Decoder-only with causal masking) generall
 ---
 
 <a id="da5004_2026T1_Q2_NA--q17"></a>
-
 ### 2026 T1 Quiz 2 NA, Q17
 
 **Paper:** `2026T1_Q2_NA` · **Type:** SA · **Marks:** 3 · **Topic(s):** w4-topk-temperature
@@ -1160,6 +1208,7 @@ If we use Top-$k$ sampling with $k = 2$, what is the probability of selecting to
 (Calculate the re-normalized probability. Enter the value correct to 2 decimal places).
 
 ![Question stem image for 2026 T1 Quiz 2 NA, Q17 in 2026T1_Q2_NA](../sources/exam-papers/assets/da5004_2026T1_Q2_NA/q17-q17-stem-01-p009.png)
+
 
 #### Worked answer
 
@@ -1174,7 +1223,6 @@ If we use Top-$k$ sampling with $k = 2$, what is the probability of selecting to
 ---
 
 <a id="da5004_2026T1_Q2_NA--q18"></a>
-
 ### 2026 T1 Quiz 2 NA, Q18
 
 **Paper:** `2026T1_Q2_NA` · **Type:** SA · **Marks:** 3 · **Topic(s):** w4-bert-architecture-params
@@ -1190,6 +1238,7 @@ Calculate the total number of parameters in the Embedding Layer (sum of Token em
 Enter the exact integer value.
 
 
+
 #### Worked answer
 
 **Final answer:** 648448 parameters.
@@ -1203,7 +1252,6 @@ Enter the exact integer value.
 ---
 
 <a id="da5004_2026T2_Q2_NA--q10"></a>
-
 ### 2026 T2 Quiz 2 NA, Q10
 
 **Paper:** `2026T2_Q2_NA` · **Type:** MCQ · **Marks:** 3 · **Topic(s):** w4-topp-nucleus
@@ -1223,24 +1271,22 @@ nucleus.
 **D.** Size of the nucleus remains unaffected by the temperature scaling as it only
 depends on order of the tokens.
 
+
 #### Worked answer
 
-**Final answer:** A is the intended general trend.
+**Final answer:** A
 
-**Steps:** T=5 flattens softmax compared with T=1, so cumulative mass is less concentrated and the nucleus cannot shrink; B reverses the effect, C describes truncation rather than scaling, and D ignores the changed cumulative mass.
+**Steps:** At T=5 versus T=1, softmax is flatter and the cumulative mass of any fixed top-k prefix cannot increase, so the nucleus size cannot decrease. It can stay equal for some logits and p, but A best describes the trend among the choices; the question asks for the best description, not a universal strict inequality.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** The nucleus need not strictly expand: for some p and logits its size remains unchanged; no distribution or p is specified, so A is not universally true.
-
-**verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
+**verified_by_code:** `false` — Non-numeric response; no numeric checker path applies.
 
 ---
 
 ## End Term questions
 
 <a id="da5004_2024T1_ET_AN--q148"></a>
-
 ### 2024 T1 End Term AN, Q148
 
 **Paper:** `2024T1_ET_AN` · **Type:** SA · **Marks:** 4 · **Topic(s):** w4-exhaustive-greedy
@@ -1266,6 +1312,7 @@ Note, enter the predicted tokens as in the vocabulary. Give a single space betwe
 
 ![Question stem image for 2024 T1 End Term AN, Q148 in 2024T1_ET_AN](../sources/exam-papers/assets/da5004_2024T1_ET_AN/q148-q148-stem-01-p006.png)
 
+
 #### Worked answer
 
 **Final answer:** something somewhere incredible is waiting be
@@ -1279,7 +1326,6 @@ Note, enter the predicted tokens as in the vocabulary. Give a single space betwe
 ---
 
 <a id="da5004_2024T1_ET_AN--q150"></a>
-
 ### 2024 T1 End Term AN, Q150
 
 **Paper:** `2024T1_ET_AN` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w4-exhaustive-greedy, w4-beam-search, w4-topk-temperature, w4-topp-nucleus
@@ -1312,22 +1358,20 @@ A user runs inference on the model N times with an input text that contains 712 
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
-**Final answer:** A, B, C, D and E could all produce the observed runs.
+**Final answer:** A, B, C, D, E
 
-**Steps:** A and B are deterministic given fixed tie-breaking. E preserves the logit argmax for every positive temperature. C and D can randomly repeat a sequence, and D can even have a one-token nucleus; repetition alone cannot identify the decoder.
+**Steps:** The question asks what might have happened, not what guarantees repetition. Greedy and beam can repeat; top-k and top-p may sample the same sequence repeatedly, including a singleton nucleus; positive temperature does not change greedy argmax. Thus all five are possible, assuming a finite number of runs and consistent ties. The old note correctly observes this distinction but treats the conditional alternative as ambiguity.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** “Might” allows chance repetition under sampling; if the intended question asks for guaranteed repeatability, only A, B, E follow with deterministic tie-breaking and positive temperatures.
-
-**verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
+**verified_by_code:** `false` — Non-numeric response; no numeric checker path applies.
 
 ---
 
 <a id="da5004_2024T1_ET_FN--q198"></a>
-
 ### 2024 T1 End Term FN, Q198
 
 **Paper:** `2024T1_ET_FN` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w4-bert-architecture-params
@@ -1355,22 +1399,20 @@ BERT stands for
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
-**Final answer:** B is the intended closest answer.
+**Final answer:** B
 
-**Steps:** The original expansion is Bidirectional Encoder Representations from Transformers. B approximates it but drops both plurals; A changes “from Transformers” to “for Text”; C and D expand different words.
+**Steps:** B is the unique option with the correct constituent words Bidirectional Encoder Representation from Transformer. The primary BERT paper uses plurals, “Representations from Transformers”; the singular inflection does not alter which option expands the acronym.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** No option exactly spells the expansion: B uses singular Representation and Transformer.
-
-**verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
+**verified_by_code:** `false` — Non-numeric response; no numeric checker path applies.
 
 ---
 
 <a id="da5004_2024T1_ET_FN--q201"></a>
-
 ### 2024 T1 End Term FN, Q201
 
 **Paper:** `2024T1_ET_FN` · **Type:** SA · **Marks:** 4 · **Topic(s):** w4-exhaustive-greedy
@@ -1396,6 +1438,7 @@ Note, enter the predicted tokens as in the vocabulary. Give a single space betwe
 
 ![Question stem image for 2024 T1 End Term FN, Q201 in 2024T1_ET_FN](../sources/exam-papers/assets/da5004_2024T1_ET_FN/q201-q201-stem-01-p005.png)
 
+
 #### Worked answer
 
 **Final answer:** somewhere something incredible is waiting be
@@ -1409,7 +1452,6 @@ Note, enter the predicted tokens as in the vocabulary. Give a single space betwe
 ---
 
 <a id="da5004_2024T1_ET_FN--q203"></a>
-
 ### 2024 T1 End Term FN, Q203
 
 **Paper:** `2024T1_ET_FN` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w4-exhaustive-greedy, w4-beam-search, w4-topk-temperature, w4-topp-nucleus
@@ -1442,22 +1484,20 @@ A user runs inference on the model N times with an input text that contains 712 
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
-**Final answer:** A, B, C, D and E could all produce the observed runs.
+**Final answer:** A, B, C, D, E
 
-**Steps:** A and B are deterministic given fixed tie-breaking. E preserves the logit argmax for every positive temperature. C and D can randomly repeat a sequence, and D can even have a one-token nucleus; repetition alone cannot identify the decoder.
+**Steps:** The question asks what might have happened, not what guarantees repetition. Greedy and beam can repeat; top-k and top-p may sample the same sequence repeatedly, including a singleton nucleus; positive temperature does not change greedy argmax. Thus all five are possible, assuming a finite number of runs and consistent ties. The old note correctly observes this distinction but treats the conditional alternative as ambiguity.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** “Might” allows chance repetition under sampling; if the intended question asks for guaranteed repeatability, only A, B, E follow with deterministic tie-breaking and positive temperatures.
-
-**verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
+**verified_by_code:** `false` — Non-numeric response; no numeric checker path applies.
 
 ---
 
 <a id="da5004_2024T3_ET_AN--q178"></a>
-
 ### 2024 T3 End Term AN, Q178
 
 **Paper:** `2024T3_ET_AN` · **Type:** MCQ · **Marks:** 3 · **Topic(s):** w4-exhaustive-greedy, w4-beam-search, w4-topk-temperature
@@ -1475,22 +1515,22 @@ same text completion each time it is executed
 
 **D.** None of these
 
+
 #### Worked answer
 
-**Final answer:** A and B are both deterministic.
+**Final answer:** A and B
 
-**Steps:** Both fixed-width beam search and greedy decoding return the same output with fixed model and tie-breaking; C samples and D ignores A and B.
+**Steps:** With a fixed model and deterministic tie-breaking both beam search with width four and greedy decoding return the same completion. The item is single-choice but has two correct choices.
 
 **Status:** ambiguous
 
-**Ambiguity note:** This is marked single-answer MCQ but both A and B are correct.
+**Ambiguity note:** With a fixed model and deterministic tie-breaking both beam search with width four and greedy decoding return the same completion. The item is single-choice but has two correct choices.
 
 **verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
 
 ---
 
 <a id="da5004_2024T3_ET_FN--q196"></a>
-
 ### 2024 T3 End Term FN, Q196
 
 **Paper:** `2024T3_ET_FN` · **Type:** MCQ · **Marks:** 3 · **Topic(s):** w4-topk-temperature
@@ -1518,22 +1558,20 @@ Suppose we use a pre-trained model for text generation with the given prompt “
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
-**Final answer:** C: top-k sampling with k=2.
+**Final answer:** C
 
-**Steps:** C can sample alternative tokens on different runs. A is width-one beam search and B is greedy, both deterministic under fixed tie-breaking; D ignores C. Different outputs are possible, not guaranteed on every run.
+**Steps:** Top-k sampling with k=2 is the only listed stochastic method and can yield different continuations; width-one beam search and greedy search are deterministic with fixed ties. A sample need not differ on every run, but the standard contrast asks which can produce variation.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** Literal “different each time” is not guaranteed by sampling, which can repeat; C is interpreted as allowing different outputs.
-
-**verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
+**verified_by_code:** `false` — Non-numeric response; no numeric checker path applies.
 
 ---
 
 <a id="da5004_2025T2_ET_AN--q198"></a>
-
 ### 2025 T2 End Term AN, Q198
 
 **Paper:** `2025T2_ET_AN` · **Type:** SA · **Marks:** 2 · **Topic(s):** w4-topp-nucleus
@@ -1544,6 +1582,7 @@ Consider the following probability distribution over a vocabulary of 10 tokens:
 You apply top-p (nucleus) sampling with p = 0.7. How many tokens are included in the sampling pool?
 
 ![Question stem image for 2025 T2 End Term AN, Q198 in 2025T2_ET_AN](../sources/exam-papers/assets/da5004_2025T2_ET_AN/q198-q198-stem-01-p005.png)
+
 
 #### Worked answer
 
@@ -1558,7 +1597,6 @@ You apply top-p (nucleus) sampling with p = 0.7. How many tokens are included in
 ---
 
 <a id="da5004_2025T2_ET_FN--q141"></a>
-
 ### 2025 T2 End Term FN, Q141
 
 **Paper:** `2025T2_ET_FN` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w4-exhaustive-greedy, w4-beam-search, w4-topk-temperature, w4-topp-nucleus
@@ -1599,22 +1637,22 @@ Based on the observations, select the most likely decoding strategies for each m
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
-**Final answer:** A, B, C and D are possible; the observations do not uniquely identify the methods.
+**Final answer:** A, B, C and D are possible; the most likely assignments are not identifiable
 
-**Steps:** Greedy A explains repeated text; top-p C can yield modest variation, and high-temperature top-p D can produce large variation. B is also capable of accidental repetition; E is normally deterministic. Observed semantic variation is not a reliable decoder identifier.
+**Steps:** Deterministic greedy is consistent with repeated stories, and top-p sampling can produce variation; a fixed model and unspecified stochastic seed, sample size, probability distribution and priors do not determine the “most likely” mappings. Top-k can repeat by chance and p=0.5 can even yield a one-token nucleus despite T=1.5.
 
 **Status:** ambiguous
 
-**Ambiguity note:** “Most likely” is underdetermined without the model distribution, sample counts and priors; B can repeat by chance. D’s low p does not guarantee high diversity.
+**Ambiguity note:** Deterministic greedy is consistent with repeated stories, and top-p sampling can produce variation; a fixed model and unspecified stochastic seed, sample size, probability distribution and priors do not determine the “most likely” mappings. Top-k can repeat by chance and p=0.5 can even yield a one-token nucleus despite T=1.5.
 
 **verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
 
 ---
 
 <a id="da5004_2025T2_ET_FN--q143"></a>
-
 ### 2025 T2 End Term FN, Q143
 
 **Paper:** `2025T2_ET_FN` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w4-topk-temperature, w4-topp-nucleus
@@ -1643,6 +1681,7 @@ probability exceeds p.
 
 *Label added for presentation.*
 
+
 #### Worked answer
 
 **Final answer:** A and B.
@@ -1656,7 +1695,6 @@ probability exceeds p.
 ---
 
 <a id="da5004_2025T2_ET_FN--q145"></a>
-
 ### 2025 T2 End Term FN, Q145
 
 **Paper:** `2025T2_ET_FN` · **Type:** SA · **Marks:** 3 · **Topic(s):** w4-topk-temperature
@@ -1674,22 +1712,20 @@ You apply Low Temperature Sampling with temperature $T = 2.0$. After applying th
 
 ![Question stem image for 2025 T2 End Term FN, Q145 in 2025T2_ET_FN](../sources/exam-papers/assets/da5004_2025T2_ET_FN/q145-q145-stem-01-p005.png)
 
+
 #### Worked answer
 
-**Final answer:** Approximately 0.41.
+**Final answer:** 0.41
 
-**Steps:** For T=2, logits become [0.75, 0.25, 0, −0.25]; exp(0.75)/sum(exp([0.75, 0.25, 0, −0.25])) ≈ 0.408701, or 0.41.
+**Steps:** The explicit temperature is T=2 regardless of the erroneous adjective “low”. Softmax gives exp(1.5/2)/[exp(1.5/2)+exp(0.5/2)+exp(0)+exp(-0.5/2)]=0.40870097, which rounds to 0.41.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** The prompt calls T=2 low temperature, but relative to T=1 it is high; calculation uses the stated T.
-
-**verified_by_code:** `false` — depends on figure, no code path
+**verified_by_code:** `true` — solve_numeric.py recomputed adjudicated inputs/conventions; all recorded values and adjudication checks MATCH.
 
 ---
 
 <a id="da5004_2025T3_ET_AN--q2"></a>
-
 ### 2025 T3 End Term AN, Q2
 
 **Paper:** `2025T3_ET_AN` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w4-topk-temperature
@@ -1714,6 +1750,7 @@ Which tokens are eligible to be sampled?
 
 **D.** "apple''or ''grape''
 
+
 #### Worked answer
 
 **Final answer:** B: apple or banana.
@@ -1727,7 +1764,6 @@ Which tokens are eligible to be sampled?
 ---
 
 <a id="da5004_2025T3_ET_AN--q5"></a>
-
 ### 2025 T3 End Term AN, Q5
 
 **Paper:** `2025T3_ET_AN` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w4-bert-finetuning
@@ -1743,6 +1779,7 @@ For a 4-category classification task, how would you use BERT's output?
 
 **D.** Use the [MASK] token predictions.
 
+
 #### Worked answer
 
 **Final answer:** B: use [CLS] for a classification head.
@@ -1756,7 +1793,6 @@ For a 4-category classification task, how would you use BERT's output?
 ---
 
 <a id="da5004_2025T3_ET_AN--q6"></a>
-
 ### 2025 T3 End Term AN, Q6
 
 **Paper:** `2025T3_ET_AN` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w4-bert-finetuning
@@ -1774,6 +1810,7 @@ For extracting specific disease names from text, which task should you fine-tune
 
 **D.** Text generation
 
+
 #### Worked answer
 
 **Final answer:** C: named entity recognition.
@@ -1787,7 +1824,6 @@ For extracting specific disease names from text, which task should you fine-tune
 ---
 
 <a id="da5004_2025T3_ET_AN--q15"></a>
-
 ### 2025 T3 End Term AN, Q15
 
 **Paper:** `2025T3_ET_AN` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w4-topp-nucleus
@@ -1806,6 +1842,7 @@ model with the same prompt?
 
 **E.** Beam search with beam width < 1
 
+
 #### Worked answer
 
 **Final answer:** C and D.
@@ -1819,7 +1856,6 @@ model with the same prompt?
 ---
 
 <a id="da5004_2025T3_ET_FN--q3"></a>
-
 ### 2025 T3 End Term FN, Q3
 
 **Paper:** `2025T3_ET_FN` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w4-topk-temperature
@@ -1840,6 +1876,7 @@ After applying both steps, which tokens remain eligible for sampling?
 
 **D.** 'dog'', ''bird'' or ''fish''
 
+
 #### Worked answer
 
 **Final answer:** C: cat, dog and bird.
@@ -1853,7 +1890,6 @@ After applying both steps, which tokens remain eligible for sampling?
 ---
 
 <a id="da5004_2025T3_ET_FN--q4"></a>
-
 ### 2025 T3 End Term FN, Q4
 
 **Paper:** `2025T3_ET_FN` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w4-topp-nucleus
@@ -1872,6 +1908,7 @@ If a model's next-token probabilities are $P(A) = 0.5$, $P(B) = 0.2$, $P(C) = 0.
 
 **E.** Tokens A, B, D
 
+
 #### Worked answer
 
 **Final answer:** C: A, B and C.
@@ -1885,7 +1922,6 @@ If a model's next-token probabilities are $P(A) = 0.5$, $P(B) = 0.2$, $P(C) = 0.
 ---
 
 <a id="da5004_2025T3_ET_FN--q6"></a>
-
 ### 2025 T3 End Term FN, Q6
 
 **Paper:** `2025T3_ET_FN` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w4-bert-finetuning
@@ -1904,6 +1940,7 @@ label
 
 **D.** Use the [SEP] token embedding for multi-label prediction
 
+
 #### Worked answer
 
 **Final answer:** B: sigmoid for each label.
@@ -1917,7 +1954,6 @@ label
 ---
 
 <a id="da5004_2025T3_ET_FN--q24"></a>
-
 ### 2025 T3 End Term FN, Q24
 
 **Paper:** `2025T3_ET_FN` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w4-topk-temperature
@@ -1941,6 +1977,7 @@ multiple runs on the same prompt?
 **E.** Beam search with beam width = 5
 ![Option E image for 2025 T3 End Term FN, Q24 in 2025T3_ET_FN](../sources/exam-papers/assets/da5004_2025T3_ET_FN/q24-q24-option-e-01-p011.png)
 
+
 #### Worked answer
 
 **Final answer:** B and C.
@@ -1954,7 +1991,6 @@ multiple runs on the same prompt?
 ---
 
 <a id="da5004_2026T1_ET_AN--q8"></a>
-
 ### 2026 T1 End Term AN, Q8
 
 **Paper:** `2026T1_ET_AN` · **Type:** SA · **Marks:** 2 · **Topic(s):** w4-topp-nucleus
@@ -1971,6 +2007,7 @@ You are using Top-$p$ (Nucleus) Sampling with $p = 0.80$. The model outputs the 
 How many tokens will be included in the candidate pool from which the final token is sampled? Enter the integer count.
 
 
+
 #### Worked answer
 
 **Final answer:** 3 tokens.
@@ -1984,7 +2021,6 @@ How many tokens will be included in the candidate pool from which the final toke
 ---
 
 <a id="da5004_2026T1_ET_AN--q11"></a>
-
 ### 2026 T1 End Term AN, Q11
 
 **Paper:** `2026T1_ET_AN` · **Type:** SA · **Marks:** 3 · **Topic(s):** w4-topk-temperature
@@ -2004,6 +2040,7 @@ First, apply temperature scaling with $T = 2.0$:
 
 ![Question stem image for 2026 T1 End Term AN, Q11 in 2026T1_ET_AN](../sources/exam-papers/assets/da5004_2026T1_ET_AN/q11-q11-stem-01-p006.png)
 
+
 #### Worked answer
 
 **Final answer:** 0.46.
@@ -2017,7 +2054,6 @@ First, apply temperature scaling with $T = 2.0$:
 ---
 
 <a id="da5004_2026T1_ET_FN--q6"></a>
-
 ### 2026 T1 End Term FN, Q6
 
 **Paper:** `2026T1_ET_FN` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w4-bert-nsp-inputs
@@ -2033,6 +2069,7 @@ In BERT's Next Sentence Prediction task, how are the negative (NotNext) examples
 
 **D.** By masking all verbs in the actual next sentence.
 
+
 #### Worked answer
 
 **Final answer:** C: randomly sample another corpus sentence.
@@ -2046,7 +2083,6 @@ In BERT's Next Sentence Prediction task, how are the negative (NotNext) examples
 ---
 
 <a id="da5004_2026T1_ET_FN--q12"></a>
-
 ### 2026 T1 End Term FN, Q12
 
 **Paper:** `2026T1_ET_FN` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w4-bert-finetuning
@@ -2062,22 +2098,20 @@ Comparing the architectures of BERT and GPT, select all the structural differenc
 
 **D.** During pre-training, BERT predicts masked tokens, whereas GPT predicts the next token in the sequence.
 
+
 #### Worked answer
 
-**Final answer:** A, B, D with the usual inclusive causal convention.
+**Final answer:** A, B, D
 
-**Steps:** BERT attention is bidirectional and MLM predicts masked tokens; GPT uses causal next-token prediction. B is understood to include the current position. C reverses the model types.
+**Steps:** BERT self-attention is bidirectional and predicts masked tokens; GPT uses causal attention and next-token prediction. B’s “previous tokens” is the usual prediction-relative shorthand: the current input position is among the tokens preceding the predicted next token. C reverses the architectures.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** B says “only to previous tokens” literally excludes the current position, although standard GPT causal self-attention includes it; B is accepted in the conventional intended sense.
-
-**verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
+**verified_by_code:** `false` — Non-numeric response; no numeric checker path applies.
 
 ---
 
 <a id="da5004_2026T1_ET_FN--q15"></a>
-
 ### 2026 T1 End Term FN, Q15
 
 **Paper:** `2026T1_ET_FN` · **Type:** MSQ · **Marks:** 2 · **Topic(s):** w4-beam-search
@@ -2093,6 +2127,7 @@ Select all correct statements regarding Decoding Strategies in language generati
 
 **D.** Top-$p$ (Nucleus) sampling allows for a dynamic vocabulary size at each step, whereas Top-$k$ uses a fixed number of candidates.
 
+
 #### Worked answer
 
 **Final answer:** A, B and D.
@@ -2106,7 +2141,6 @@ Select all correct statements regarding Decoding Strategies in language generati
 ---
 
 <a id="da5004_2026T1_ET_FN--q16"></a>
-
 ### 2026 T1 End Term FN, Q16
 
 **Paper:** `2026T1_ET_FN` · **Type:** MSQ · **Marks:** 2 · **Topic(s):** w4-bert-finetuning
@@ -2122,22 +2156,20 @@ In a feature-based approach using a pretrained transformer (like BERT) for a Mul
 
 **D.** The model generates the correct answer string token-by-token using an autoregressive decoding strategy like Greedy Search.
 
+
 #### Worked answer
 
-**Final answer:** C, and B under the intended conventional formatting.
+**Final answer:** C
 
-**Steps:** Frozen BERT supplies fixed features to a trainable linear/softmax head (C). Pairing question with each candidate (B) is a standard construction, but not the only possible format. A updates the pretrained model, contradicting feature-based freezing; D describes generation.
+**Steps:** A frozen encoder produces fixed features; a trainable linear layer scores candidates and softmax normalizes scores (C). Joint or separately encoded question/choice features are possible, so the particular pair format in B is not mandatory; A updates the body and D describes generation.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** B says the input “must” use this pair format, but feature-based multiple-choice systems can use other representations; C alone is strictly necessary among these choices.
-
-**verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
+**verified_by_code:** `false` — Non-numeric response; no numeric checker path applies.
 
 ---
 
 <a id="da5004_2026T1_ET_FN--q17"></a>
-
 ### 2026 T1 End Term FN, Q17
 
 **Paper:** `2026T1_ET_FN` · **Type:** MCQ · **Marks:** 3 · **Topic(s):** w4-bert-finetuning
@@ -2160,6 +2192,7 @@ A Transformer processes a sequence of length 5 using 6 identical self-attention 
 
 **F.** BERT: 36, GPT: 30
 
+
 #### Worked answer
 
 **Final answer:** A: BERT 150, GPT 90.
@@ -2173,7 +2206,6 @@ A Transformer processes a sequence of length 5 using 6 identical self-attention 
 ---
 
 <a id="da5004_2026T2_ET_AN--q4"></a>
-
 ### 2026 T2 End Term AN, Q4
 
 **Paper:** `2026T2_ET_AN` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w4-beam-search
@@ -2189,6 +2221,7 @@ You are designing an LLM to translate a sentence from English to Spanish with lo
 
 **D.** Greedy decoding
 
+
 #### Worked answer
 
 **Final answer:** A: beam search.
@@ -2202,7 +2235,6 @@ You are designing an LLM to translate a sentence from English to Spanish with lo
 ---
 
 <a id="da5004_2026T2_ET_AN--q5"></a>
-
 ### 2026 T2 End Term AN, Q5
 
 **Paper:** `2026T2_ET_AN` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w4-bert-nsp-inputs
@@ -2218,6 +2250,7 @@ In the Next Sentence Prediction task, how are the two input sentences distinguis
 
 **D.** By ensuring two different heads in the Multi-Head Attention setup attend to the specific sentences.
 
+
 #### Worked answer
 
 **Final answer:** B.
@@ -2231,12 +2264,12 @@ In the Next Sentence Prediction task, how are the two input sentences distinguis
 ---
 
 <a id="da5004_2026T2_ET_AN--q9"></a>
-
 ### 2026 T2 End Term AN, Q9
 
 **Paper:** `2026T2_ET_AN` · **Type:** SA · **Marks:** 2 · **Topic(s):** w4-topp-nucleus
 
 How many tokens are selected as candidate tokens?
+
 
 
 #### Worked answer
@@ -2252,12 +2285,12 @@ How many tokens are selected as candidate tokens?
 ---
 
 <a id="da5004_2026T2_ET_AN--q10"></a>
-
 ### 2026 T2 End Term AN, Q10
 
 **Paper:** `2026T2_ET_AN` · **Type:** SA · **Marks:** 2 · **Topic(s):** w4-topp-nucleus
 
 After renormalization of the probabilities, what is the highest probability value among those? (Round off to three decimal places)
+
 
 
 #### Worked answer
@@ -2273,7 +2306,6 @@ After renormalization of the probabilities, what is the highest probability valu
 ---
 
 <a id="da5004_2026T2_ET_FN--q6"></a>
-
 ### 2026 T2 End Term FN, Q6
 
 **Paper:** `2026T2_ET_FN` · **Type:** MCQ · **Marks:** 2 · **Topic(s):** w4-bert-nsp-inputs
@@ -2289,6 +2321,7 @@ In BERT's Next Sentence Prediction task, how are the negative (NotNext) examples
 
 **D.** By masking all verbs in the actual next sentence.
 
+
 #### Worked answer
 
 **Final answer:** C: randomly sample another corpus sentence.
@@ -2302,7 +2335,6 @@ In BERT's Next Sentence Prediction task, how are the negative (NotNext) examples
 ---
 
 <a id="da5004_2026T2_ET_FN--q12"></a>
-
 ### 2026 T2 End Term FN, Q12
 
 **Paper:** `2026T2_ET_FN` · **Type:** MSQ · **Marks:** 3 · **Topic(s):** w4-bert-finetuning
@@ -2318,22 +2350,20 @@ Comparing the architectures of BERT and GPT, select all the structural differenc
 
 **D.** During pre-training, BERT predicts masked tokens, whereas GPT predicts the next token in the sequence.
 
+
 #### Worked answer
 
-**Final answer:** A, B, D with the usual inclusive causal convention.
+**Final answer:** A, B, D
 
-**Steps:** BERT attention is bidirectional and MLM predicts masked tokens; GPT uses causal next-token prediction. B is understood to include the current position. C reverses the model types.
+**Steps:** BERT self-attention is bidirectional and predicts masked tokens; GPT uses causal attention and next-token prediction. B’s “previous tokens” is the usual prediction-relative shorthand: the current input position is among the tokens preceding the predicted next token. C reverses the architectures.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** B says “only to previous tokens” literally excludes the current position, although standard GPT causal self-attention includes it; B is accepted in the conventional intended sense.
-
-**verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
+**verified_by_code:** `false` — Non-numeric response; no numeric checker path applies.
 
 ---
 
 <a id="da5004_2026T2_ET_FN--q15"></a>
-
 ### 2026 T2 End Term FN, Q15
 
 **Paper:** `2026T2_ET_FN` · **Type:** MSQ · **Marks:** 2 · **Topic(s):** w4-beam-search
@@ -2349,6 +2379,7 @@ Select all correct statements regarding Decoding Strategies in language generati
 
 **D.** Top-$p$ (Nucleus) sampling allows for a dynamic vocabulary size at each step, whereas Top-$k$ uses a fixed number of candidates.
 
+
 #### Worked answer
 
 **Final answer:** A, B and D.
@@ -2362,7 +2393,6 @@ Select all correct statements regarding Decoding Strategies in language generati
 ---
 
 <a id="da5004_2026T2_ET_FN--q16"></a>
-
 ### 2026 T2 End Term FN, Q16
 
 **Paper:** `2026T2_ET_FN` · **Type:** MSQ · **Marks:** 2 · **Topic(s):** w4-bert-finetuning
@@ -2378,22 +2408,20 @@ In a feature-based approach using a pretrained transformer (like BERT) for a Mul
 
 **D.** The model generates the correct answer string token-by-token using an autoregressive decoding strategy like Greedy Search.
 
+
 #### Worked answer
 
-**Final answer:** C, and B under the intended conventional formatting.
+**Final answer:** C
 
-**Steps:** Frozen BERT supplies fixed features to a trainable linear/softmax head (C). Pairing question with each candidate (B) is a standard construction, but not the only possible format. A updates the pretrained model, contradicting feature-based freezing; D describes generation.
+**Steps:** A frozen encoder produces fixed features; a trainable linear layer scores candidates and softmax normalizes scores (C). Joint or separately encoded question/choice features are possible, so the particular pair format in B is not mandatory; A updates the body and D describes generation.
 
-**Status:** ambiguous
+**Status:** derived
 
-**Ambiguity note:** B says the input “must” use this pair format, but feature-based multiple-choice systems can use other representations; C alone is strictly necessary among these choices.
-
-**verified_by_code:** `false` — No numeric checker path; answer remains explicitly ambiguous.
+**verified_by_code:** `false` — Non-numeric response; no numeric checker path applies.
 
 ---
 
 <a id="da5004_2026T2_ET_FN--q17"></a>
-
 ### 2026 T2 End Term FN, Q17
 
 **Paper:** `2026T2_ET_FN` · **Type:** MCQ · **Marks:** 3 · **Topic(s):** w4-bert-finetuning
@@ -2415,6 +2443,7 @@ A Transformer processes a sequence of length 5 using 6 identical self-attention 
 **E.** BERT: 30, GPT: 36
 
 **F.** BERT: 36, GPT: 30
+
 
 #### Worked answer
 

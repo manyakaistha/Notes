@@ -43,7 +43,7 @@ out = [
 ]
 for rank, topic in enumerate(sorted(topic_records, key=lambda x: (-x["score"], -x["occurrences"], x["week"], x["name"])), 1):
     week = topic["week"]
-    bank = wlink(f"week-{week}-exam-questions#{topic['id']}", "Checklist")
+    bank = wlink(f"week-{week}-exam-questions#Topic: {topic['name']}", "Checklist")
     notes = wlink(f"week-{week}-notes", f"Week {week} notes")
     out.append(f"| {rank} | {week} | `{topic['id']}` — {topic['name']} | {topic['occurrences']} | {topic['marks']} | {topic['score']:g} | {bank} | {notes} |")
 

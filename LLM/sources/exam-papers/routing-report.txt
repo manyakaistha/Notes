@@ -4,6 +4,12 @@ CHECK 1 inventory coverage: PASS (inventory=488 routed=488 missing=0 extra=0 rep
 CHECK 2 allowed weeks: PASS (invalid=0)
 CHECK 3 week-valid topics: PASS (errors=0)
 CHECK 4 archive metadata: PASS (errors=0)
+CHECK 5 routing overrides: PASS (applied=2 errors=0)
+Applied overrides:
+  da5004_2025T3_ET_AN--q17: week=1 topics=w1-self-attention-qkv,w1-scaled-dot-product,w1-ffn-encoder-stack; Retain self-attention and add the attention-product and position-wise FFN topics: doubling length tests quadratic attention products and linear FFN work.
+  da5004_2025T3_ET_FN--q25: week=1 topics=w1-self-attention-qkv,w1-scaled-dot-product,w1-ffn-encoder-stack; Retain self-attention and add the attention-product and position-wise FFN topics: doubling length tests quadratic attention products and linear FFN work.
+Rejected review suggestions:
+  da5004_2024T3_ET_AN--q184: The options test expanding the Q/K attention score for position-augmented inputs; no sinusoidal encoding or positional scheme is specified, so Week 1 remains appropriate.
 
 Week × type:
   1: MCQ=19, MSQ=11, SA=43
@@ -21,9 +27,9 @@ Topic occurrences:
   w1-seq2seq-bottleneck: 2
   w1-bahdanau-attention: 4
   w1-self-attention-qkv: 30
-  w1-scaled-dot-product: 12
+  w1-scaled-dot-product: 14
   w1-multi-head-attention: 17
-  w1-ffn-encoder-stack: 6
+  w1-ffn-encoder-stack: 8
   w1-encoder-parameter-count: 14
   w2-teacher-forcing: 8
   w2-masked-self-attention: 15

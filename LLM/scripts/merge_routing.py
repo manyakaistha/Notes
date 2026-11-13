@@ -15,6 +15,7 @@ PAPERS = ROOT / "sources/exam-papers"
 PARTS = [PAPERS / f"routing-part-{i}.json" for i in range(1, 5)]
 INVENTORY = PAPERS / "question-inventory.json"
 TOPICS = ROOT / "sources/topics.json"
+OVERRIDES = PAPERS / "routing-overrides.json"
 OUTPUT = PAPERS / "routing.json"
 REPORT = PAPERS / "routing-report.txt"
 META_FIELDS = ("paper", "year", "term", "exam", "session", "type", "marks", "number", "portal_question_id")
@@ -81,6 +82,20 @@ def main() -> int:
                 record[field] = q[field]
         records.append(record)
 
+    override_data = load(OVERRIDES)
+    overrides = override_data.get("overrides", [])
+    override_errors = []
+    by_record = {r.get("id"): r for r in records}
+    for override in overrides:
+        qid = override.get("id")
+        if qid not in by_record:
+            override_errors.append(f"unknown override ID: {qid}")
+            continue
+        record = by_record[qid]
+        for field in ("week", "topic_ids", "archive_reason", "likely_later_week"):
+            if field in override:
+                record[field] = override[field]
+
     invalid_week = sorted(str(r.get("id")) for r in records if r.get("week") not in (1, 2, 3, 4, "archive"))
     topic_errors = []
     for r in records:
@@ -121,10 +136,18 @@ def main() -> int:
         ("2 allowed weeks", not invalid_week, f"invalid={len(invalid_week)}"),
         ("3 week-valid topics", not topic_errors, f"errors={len(topic_errors)}"),
         ("4 archive metadata", not archive_errors, f"errors={len(archive_errors)}"),
+        ("5 routing overrides", not override_errors, f"applied={len(overrides)} errors={len(override_errors)}"),
     ]
     lines = ["Routing merge validation report", ""]
     for name, ok, detail in checks:
         lines.append(f"CHECK {name}: {'PASS' if ok else 'FAIL'} ({detail})")
+    lines.append("Applied overrides:")
+    for override in overrides:
+        lines.append(f"  {override['id']}: week={override.get('week')} topics={','.join(override.get('topic_ids', []))}; {override.get('reason', '')}")
+    lines.append("Rejected review suggestions:")
+    for rejected in override_data.get("rejected", []):
+        lines.append(f"  {rejected['id']}: {rejected.get('reason', '')}")
+    if override_errors: lines.extend(["Override errors:", *["  " + e for e in override_errors]])
     if missing_parts: lines.append("Missing IDs: " + ", ".join(missing_parts))
     if extra_parts: lines.append("Extra IDs: " + ", ".join(extra_parts))
     if repeated_parts: lines.append("Repeated IDs: " + ", ".join(repeated_parts))

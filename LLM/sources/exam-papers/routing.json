@@ -4927,7 +4927,9 @@
       "id": "da5004_2025T3_ET_AN--q17",
       "week": 1,
       "topic_ids": [
-        "w1-self-attention-qkv"
+        "w1-self-attention-qkv",
+        "w1-scaled-dot-product",
+        "w1-ffn-encoder-stack"
       ],
       "archive_reason": null,
       "likely_later_week": null,
@@ -5549,7 +5551,9 @@
       "id": "da5004_2025T3_ET_FN--q25",
       "week": 1,
       "topic_ids": [
-        "w1-self-attention-qkv"
+        "w1-self-attention-qkv",
+        "w1-scaled-dot-product",
+        "w1-ffn-encoder-stack"
       ],
       "archive_reason": null,
       "likely_later_week": null,

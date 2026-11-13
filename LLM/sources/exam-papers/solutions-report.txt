@@ -1,48 +1,46 @@
 records=241
+overrides_applied=62
 counts_by_week_status:
-  week=1 status=derived count=56
-  week=1 status=ambiguous count=17
-  week=2 status=derived count=51
-  week=2 status=ambiguous count=14
-  week=3 status=derived count=22
-  week=3 status=ambiguous count=14
-  week=4 status=derived count=50
-  week=4 status=ambiguous count=17
+  week=1 status=derived count=63
+  week=1 status=ambiguous count=10
+  week=2 status=derived count=55
+  week=2 status=ambiguous count=10
+  week=3 status=derived count=29
+  week=3 status=ambiguous count=7
+  week=4 status=derived count=62
+  week=4 status=ambiguous count=5
 counts_by_type_status:
-  type=MCQ status=derived count=69
-  type=MCQ status=ambiguous count=19
-  type=MSQ status=derived count=31
-  type=MSQ status=ambiguous count=20
-  type=SA status=derived count=79
-  type=SA status=ambiguous count=23
-numeric_count=135
-verified_by_code_count=41
-numeric_derived_verified=33
-numeric_derived_unverified=68
+  type=MCQ status=derived count=79
+  type=MCQ status=ambiguous count=9
+  type=MSQ status=derived count=40
+  type=MSQ status=ambiguous count=11
+  type=SA status=derived count=90
+  type=SA status=ambiguous count=12
+numeric_count=136
+verified_by_code_count=59
+numeric_derived_verified=43
+numeric_derived_unverified=71
 numeric_unverified_ids_and_reasons:
   da5004_2024T1_ET_AN--q148: depends on figure, no code path
-  da5004_2024T1_ET_AN--q151: depends on figure, no code path
-  da5004_2024T1_ET_AN--q153: depends on figure, no code path
+  da5004_2024T1_ET_AN--q153: Override numeric derivation not code-verified: complete numeric inputs are absent from the editable extraction; manual scan adjudication retained.
   da5004_2024T1_ET_AN--q154: depends on figure, no code path
   da5004_2024T1_ET_AN--q155: depends on figure, no code path
   da5004_2024T1_ET_FN--q201: depends on figure, no code path
-  da5004_2024T1_ET_FN--q206: depends on figure, no code path
   da5004_2024T1_ET_FN--q207: depends on figure, no code path
-  da5004_2024T1_ET_FN--q208: depends on figure, no code path
+  da5004_2024T1_ET_FN--q208: Override numeric derivation not code-verified: complete numeric inputs are absent from the editable extraction; manual scan adjudication retained.
   da5004_2024T1_ET_FN--q209: depends on figure, no code path
   da5004_2024T1_ET_FN--q210: depends on figure, no code path
   da5004_2024T1_Q1_NA--q184: depends on figure, no code path
   da5004_2024T1_Q1_NA--q185: depends on figure, no code path
   da5004_2024T1_Q1_NA--q186: depends on figure, no code path
   da5004_2024T1_Q1_NA--q187: depends on figure, no code path
-  da5004_2024T1_Q1_NA--q189: depends on figure, no code path
   da5004_2024T1_Q1_NA--q190: depends on figure, no code path
   da5004_2024T1_Q1_NA--q197: depends on figure, no code path
   da5004_2024T3_ET_AN--q176: depends on figure, no code path
   da5004_2024T3_ET_FN--q189: depends on figure, no code path
-  da5004_2024T3_Q1_NA--q277: depends on figure, no code path
-  da5004_2024T3_Q1_NA--q278: depends on figure, no code path
-  da5004_2024T3_Q1_NA--q279: depends on figure, no code path
+  da5004_2024T3_Q1_NA--q277: Override numeric derivation not code-verified: complete numeric inputs are absent from the editable extraction; manual scan adjudication retained.
+  da5004_2024T3_Q1_NA--q278: Override numeric derivation not code-verified: complete numeric inputs are absent from the editable extraction; manual scan adjudication retained.
+  da5004_2024T3_Q1_NA--q279: Override numeric derivation not code-verified: complete numeric inputs are absent from the editable extraction; manual scan adjudication retained.
   da5004_2024T3_Q1_NA--q281: depends on figure, no code path
   da5004_2024T3_Q1_NA--q282: depends on figure, no code path
   da5004_2024T3_Q1_NA--q283: depends on figure, no code path
@@ -54,40 +52,30 @@ numeric_unverified_ids_and_reasons:
   da5004_2024T3_Q1_NA--q291: depends on figure, no code path
   da5004_2024T3_Q1_NA--q292: depends on figure, no code path
   da5004_2025T1_Q1_NA--q104: depends on figure, no code path
-  da5004_2025T1_Q1_NA--q111: depends on figure, no code path
-  da5004_2025T1_Q1_NA--q112: depends on figure, no code path
-  da5004_2025T1_Q1_NA--q113: depends on figure, no code path
   da5004_2025T1_Q1_NA--q114: depends on figure, no code path
   da5004_2025T1_Q1_NA--q115: depends on figure, no code path
   da5004_2025T1_Q1_NA--q116: depends on figure, no code path
   da5004_2025T1_Q1_NA--q117: depends on figure, no code path
-  da5004_2025T1_Q1_NA--q118: depends on figure, no code path
-  da5004_2025T1_Q1_NA--q119: depends on figure, no code path
-  da5004_2025T1_Q1_NA--q120: depends on figure, no code path
   da5004_2025T2_ET_AN--q198: depends on figure, no code path
   da5004_2025T2_ET_AN--q199: depends on figure, no code path
   da5004_2025T2_ET_AN--q200: depends on figure, no code path
-  da5004_2025T2_ET_FN--q145: depends on figure, no code path
   da5004_2025T2_ET_FN--q146: depends on figure, no code path
   da5004_2025T2_ET_FN--q147: depends on figure, no code path
   da5004_2025T2_Q1_NA--q144: depends on figure, no code path
   da5004_2025T2_Q1_NA--q145: depends on figure, no code path
   da5004_2025T2_Q1_NA--q146: depends on figure, no code path
-  da5004_2025T2_Q1_NA--q147: solve_numeric.py has no registered derivation for this ID; the extracted question data do not supply a complete computable input set.
-  da5004_2025T2_Q1_NA--q148: solve_numeric.py has no registered derivation for this ID; the extracted question data do not supply a complete computable input set.
-  da5004_2025T2_Q1_NA--q149: solve_numeric.py has no registered derivation for this ID; the extracted question data do not supply a complete computable input set.
-  da5004_2025T2_Q1_NA--q150: depends on figure, no code path
+  da5004_2025T2_Q1_NA--q147: Override numeric derivation not code-verified: complete numeric inputs are absent from the editable extraction; manual scan adjudication retained.
+  da5004_2025T2_Q1_NA--q148: Override numeric derivation not code-verified: complete numeric inputs are absent from the editable extraction; manual scan adjudication retained.
+  da5004_2025T2_Q1_NA--q149: Override numeric derivation not code-verified: complete numeric inputs are absent from the editable extraction; manual scan adjudication retained.
+  da5004_2025T2_Q1_NA--q150: Override numeric derivation not code-verified: complete numeric inputs are absent from the editable extraction; manual scan adjudication retained.
   da5004_2025T2_Q1_NA--q151: depends on figure, no code path
   da5004_2025T2_Q1_NA--q152: depends on figure, no code path
-  da5004_2025T3_ET_AN--q20: depends on figure, no code path
   da5004_2025T3_ET_FN--q4: depends on figure, no code path
   da5004_2025T3_ET_FN--q18: depends on figure, no code path
-  da5004_2025T3_ET_FN--q25: depends on figure, no code path
   da5004_2025T3_Q1_NA--q179: depends on figure, no code path
   da5004_2025T3_Q1_NA--q186: depends on figure, no code path
   da5004_2025T3_Q1_NA--q187: depends on figure, no code path
   da5004_2025T3_Q1_NA--q188: depends on figure, no code path
-  da5004_2025T3_Q1_NA--q190: depends on figure, no code path
   da5004_2025T3_Q1_NA--q191: depends on figure, no code path
   da5004_2025T3_Q2_NA--q113: depends on figure, no code path
   da5004_2026T1_ET_AN--q11: depends on figure, no code path
@@ -96,7 +84,6 @@ numeric_unverified_ids_and_reasons:
   da5004_2026T1_Q1_NA--q2: depends on figure, no code path
   da5004_2026T1_Q1_NA--q4: depends on figure, no code path
   da5004_2026T1_Q1_NA--q10: depends on figure, no code path
-  da5004_2026T1_Q1_NA--q12: depends on figure, no code path
   da5004_2026T1_Q1_NA--q13: depends on figure, no code path
   da5004_2026T1_Q1_NA--q14: depends on figure, no code path
   da5004_2026T1_Q1_NA--q15: depends on figure, no code path
@@ -104,9 +91,6 @@ numeric_unverified_ids_and_reasons:
   da5004_2026T1_Q2_NA--q12: depends on figure, no code path
   da5004_2026T1_Q2_NA--q14: depends on figure, no code path
   da5004_2026T1_Q2_NA--q17: depends on figure, no code path
-  da5004_2026T2_ET_AN--q6: depends on figure, no code path
-  da5004_2026T2_ET_AN--q18: solve_numeric.py has no registered derivation for this ID; the extracted question data do not supply a complete computable input set.
-  da5004_2026T2_ET_AN--q19: solve_numeric.py has no registered derivation for this ID; the extracted question data do not supply a complete computable input set.
   da5004_2026T2_ET_FN--q2: depends on figure, no code path
   da5004_2026T2_ET_FN--q4: depends on figure, no code path
   da5004_2026T2_Q1_NA--q3: depends on figure, no code path
@@ -114,71 +98,41 @@ numeric_unverified_ids_and_reasons:
   da5004_2026T2_Q1_NA--q6: depends on figure, no code path
   da5004_2026T2_Q1_NA--q7: depends on figure, no code path
   da5004_2026T2_Q1_NA--q8: depends on figure, no code path
-ambiguous_count=62
+ambiguous_count=32
 ambiguous_ids_and_notes:
-  da5004_2024T1_ET_AN--q149: Fixed full-sequence window: A–D; sliding context with position IDs reset: A–E. Counting a final prediction beyond the last input adds one token but does not change these choices.
-  da5004_2024T1_ET_AN--q150: “Might” allows chance repetition under sampling; if the intended question asks for guaranteed repeatability, only A, B, E follow with deterministic tie-breaking and positive temperatures.
-  da5004_2024T1_ET_AN--q151: Vocabulary size is not specified; attention biases and normalization parameters are also not specified.
-  da5004_2024T1_ET_AN--q153: The question does not specify whether representation is before or after W_O; before W_O the sum differs. The displayed attention entries are rounded.
-  da5004_2024T1_ET_FN--q198: No option exactly spells the expansion: B uses singular Representation and Transformer.
-  da5004_2024T1_ET_FN--q202: Fixed full-sequence window: A and B; sliding context with position IDs reset: A–D. Counting a final prediction beyond the last input adds one token but does not change these choices.
-  da5004_2024T1_ET_FN--q203: “Might” allows chance repetition under sampling; if the intended question asks for guaranteed repeatability, only A, B, E follow with deterministic tie-breaking and positive temperatures.
-  da5004_2024T1_ET_FN--q206: Vocabulary size is not specified; attention biases and normalization parameters are also not specified.
-  da5004_2024T1_ET_FN--q208: The question does not specify whether representation is before or after W_O; before W_O the sum differs. The displayed attention entries are rounded.
-  da5004_2024T1_Q1_NA--q189: The 1600-parameter embedding is stated conditionally in the preceding subquestion, not explicitly carried over; attention biases are unspecified.
-  da5004_2024T1_Q1_NA--q192: B asserts faster convergence without conditions, and autoregressive training is not defined separately from teacher forcing.
-  da5004_2024T1_Q1_NA--q193: Full-sequence cap including BOS yields A; counting the final prediction without feeding it back yields A and B; sliding and resetting position IDs yields A–D.
-  da5004_2024T1_Q1_NA--q194: B is task-dependent: GPT-1 used auxiliary CLM in its experiments, but fine-tuning need not minimize CLM; D concerns supervised fine-tuning rather than all fine-tuning.
-  da5004_2024T1_Q1_NA--q195: “Appropriate” is subjective and no quality or optimality criterion is specified; a conventional quality-oriented answer could prefer B and D.
-  da5004_2024T3_ET_AN--q178: This is marked single-answer MCQ but both A and B are correct.
-  da5004_2024T3_ET_FN--q190: A does not specify decoder versus encoder self-attention or whether a padding mask is present.
-  da5004_2024T3_ET_FN--q194: B is task-dependent: GPT-1 used auxiliary CLM in its experiments, but fine-tuning need not minimize CLM; D concerns supervised fine-tuning rather than all fine-tuning.
-  da5004_2024T3_ET_FN--q196: Literal “different each time” is not guaranteed by sampling, which can repeat; C is interpreted as allowing different outputs.
-  da5004_2024T3_Q1_NA--q276: Single-answer MCQ has at least two defensible choices: multi-head diversity and the possibility of using batch normalization.
-  da5004_2024T3_Q1_NA--q277: Attention projection biases and whether N=2 applies independently to encoder and decoder are not specified; allowing projection biases changes the count.
-  da5004_2024T3_Q1_NA--q278: Output bias and weight tying are not specified.
-  da5004_2024T3_Q1_NA--q279: The question does not identify which of the two embedding layers to count or specify tying.
-  da5004_2024T3_Q1_NA--q287: The conditional probability of study after the non-greedy earthquake prefix is absent: choosing that factor as 0 gives sequence probability 0, and choosing 1 gives 0.007052. The prescribed insufficient-information response is −1; this treats the listed “earth quake” as earthquake.
-  da5004_2025T1_Q1_NA--q105: The reason asserts a universal convergence-rate improvement; the training speed benefit does not guarantee faster convergence in every setting.
-  da5004_2025T1_Q1_NA--q106: Literal “different each time” is not guaranteed by sampling, which can repeat; C is interpreted as allowing different outputs.
-  da5004_2025T1_Q1_NA--q107: The unqualified wording “in general, struggle” is not a precise criterion: attention RNNs and transformers also have long-context limitations.
-  da5004_2025T1_Q1_NA--q108: B is task-dependent: GPT-1 used auxiliary CLM in its experiments, but fine-tuning need not minimize CLM; D concerns supervised fine-tuning rather than all fine-tuning.
-  da5004_2025T1_Q1_NA--q110: “Appropriate” is subjective and no quality or optimality criterion is specified; a conventional quality-oriented answer could prefer B and D.
-  da5004_2025T1_Q1_NA--q111: The question calls the architecture vanilla but does not specify whether position encodings are learned; Vaswani et al. use fixed sinusoids.
-  da5004_2025T1_Q1_NA--q112: The 3,200 embedding parameters are conditional in the preceding subquestion and not explicitly carried over; projection biases are unspecified.
-  da5004_2025T1_Q1_NA--q113: The 3,200 embedding parameters are conditional in an earlier subquestion and not explicitly carried over.
-  da5004_2025T1_Q1_NA--q118: The sampling distribution over starting positions is unspecified; the estimate assumes uniformly sampled corpus token positions.
-  da5004_2025T1_Q1_NA--q119: The sampling distribution over starting positions is unspecified; the estimate assumes uniformly sampled corpus token positions.
-  da5004_2025T1_Q1_NA--q120: The sampling distribution over starting positions is unspecified; the estimate assumes uniformly sampled corpus token positions.
-  da5004_2025T1_Q1_NA--q121: Model training and generalization are unspecified; corpus counts alone do not guarantee a trained model’s next-token ranking.
-  da5004_2025T2_ET_FN--q141: “Most likely” is underdetermined without the model distribution, sample counts and priors; B can repeat by chance. D’s low p does not guarantee high diversity.
-  da5004_2025T2_ET_FN--q145: The prompt calls T=2 low temperature, but relative to T=1 it is high; calculation uses the stated T.
-  da5004_2025T2_Q1_NA--q147: No listed option matches; the inventory transcription of the matrices differs from the paper image.
-  da5004_2025T2_Q1_NA--q148: No option matches; the inventory transcription differs from the paper image.
-  da5004_2025T2_Q1_NA--q149: No option matches the operations and matrices shown in the source image; the inventory transcription differs.
-  da5004_2025T2_Q1_NA--q150: The source image matrices conflict with the transcription and official key; 32 follows the visible matrices.
-  da5004_2025T3_ET_AN--q17: The question does not specify whether self-attention FLOPs include projection layers. If included, neither A nor B is exactly correct; if restricted to attention products, B is correct.
-  da5004_2025T3_ET_AN--q20: “Sets of ... matrices” ordinarily means 48 triples, while the question may intend the number 144 of individual matrices.
-  da5004_2025T3_ET_FN--q2: Training/evaluation mode and reduction dimensions are unspecified; B states a false mean, while D is conditional on evaluation and tracked statistics.
-  da5004_2025T3_ET_FN--q8: Single-answer MCQ has two valid choices B and C under the stated complexity.
-  da5004_2025T3_ET_FN--q25: The phrase self-attention FLOPs is underspecified: including projection FLOPs gives neither an exact factor of 2 nor 4.
-  da5004_2025T3_Q1_NA--q180: If “additional sequences evaluated” means all new length-(L+1) strings after already evaluating length L, the number is V^(L+1), absent from the options; C assumes a difference in total leaf counts.
-  da5004_2025T3_Q1_NA--q190: Nonzero attention scores are not determined from sequence length alone; the question does not specify post-softmax weights or assume nonzero permitted scores.
-  da5004_2026T1_ET_FN--q12: B says “only to previous tokens” literally excludes the current position, although standard GPT causal self-attention includes it; B is accepted in the conventional intended sense.
-  da5004_2026T1_ET_FN--q16: B says the input “must” use this pair format, but feature-based multiple-choice systems can use other representations; C alone is strictly necessary among these choices.
-  da5004_2026T1_Q1_NA--q12: The question uses i=5 for a vector coordinate although the equations use i as the sine/cosine pair index; the sixth-element interpretation is given.
-  da5004_2026T1_Q1_NA--q18: Bias-free Q/K/V projections yield D, 147,456; biased Q/K/V projections yield 147,648, which is not listed. The prompt does not specify the bias convention.
-  da5004_2026T2_ET_AN--q3: This single-answer MCQ has two false statements under a literal reading: one-hot indices can represent and recover relative distance even though their raw pairwise geometry does not.
-  da5004_2026T2_ET_AN--q6: The question does not specify epsilon; its exact output depends on epsilon in standard LayerNorm.
-  da5004_2026T2_ET_AN--q18: No correct option: C incorrectly uses 13 for the second component.
-  da5004_2026T2_ET_AN--q19: No correct option: B incorrectly uses 16 for the second component.
-  da5004_2026T2_ET_FN--q12: B says “only to previous tokens” literally excludes the current position, although standard GPT causal self-attention includes it; B is accepted in the conventional intended sense.
-  da5004_2026T2_ET_FN--q16: B says the input “must” use this pair format, but feature-based multiple-choice systems can use other representations; C alone is strictly necessary among these choices.
-  da5004_2026T2_Q1_NA--q11: If the omitted B path has probability 0, C wins at 0.09; if P(apples first)=0.1 and both subsequent B conditionals are 1, B wins at 0.1. The partial tree permits both completions.
-  da5004_2026T2_Q1_NA--q12: If no omitted first token can precede like, P(apples|like)=0.274/0.46≈0.595652; if an omitted first token has mass 0.1 and both relevant conditionals are 1, the ratio is 0.374/0.56≈0.667857. The prescribed answer for missing information is −1.
-  da5004_2026T2_Q1_NA--q15: One unbatched model call per prefix gives 400; batching by depth gives 4 forward calls, and reusing the supplied prefix-invariant table requires 0 model calls. The question does not define a decoder run or whether the table may be reused.
-  da5004_2026T2_Q2_NA--q10: The nucleus need not strictly expand: for some p and logits its size remains unchanged; no distribution or p is specified, so A is not universally true.
-records_with_empty_answer_options=108
+  da5004_2024T1_ET_AN--q149: Implied course/exam convention: A, B, C, D with a fixed complete-sequence window; A–E with sliding and reset position IDs. The shared prompt gives T=2048 and 712 prompt tokens, leaving 1336 slots under a complete-sequence cap, so 256, 16, 1024 and 512 fit. A sliding context can generate 2048; the supplied prompt does not specify inference policy. The exam key implies the fixed-window reading.
+  da5004_2024T1_ET_AN--q151: The pictured shared passage supplies no vocabulary size V, although token embeddings are requested. With bias-free attention, FFN biases and two affine norms per layer, the three encoder layers have 2,366,208 parameters and embeddings add 256V; other bias assumptions change even the constant. Fixed sinusoids add zero. The printed 2566 cannot establish a missing vocabulary size.
+  da5004_2024T1_ET_FN--q202: Implied course/exam convention: A, B with a fixed complete-sequence window; A–D with sliding and reset position IDs. The shared prompt gives T=1024 and 712 prompt tokens, leaving 312 slots under a complete-sequence cap. Only 256 and 16 fit. Sliding can generate all listed lengths; the exam key implies the fixed-window reading.
+  da5004_2024T1_ET_FN--q206: The pictured shared passage supplies no vocabulary size V, although token embeddings are requested. With bias-free attention, FFN biases and two affine norms per layer, the three encoder layers have 2,366,208 parameters and embeddings add 256V; other bias assumptions change even the constant. Fixed sinusoids add zero. The printed 2566 cannot establish a missing vocabulary size.
+  da5004_2024T1_Q1_NA--q189: The shared passage fixes vocabulary 100 and two heads but does not give model width. The preceding subquestion introduces 1600 embedding parameters only as a supposition: if carried forward, d=1600/100=16 and 3d²=768 weights; otherwise d remains free. Projection bias is also unspecified.
+  da5004_2024T1_Q1_NA--q192: Autoregressive factorization is compatible with teacher forcing, so the two named approaches are not mutually defined. A switch to generated-prefix training is possible (C), whereas an unconditional faster-convergence claim (B) depends on setup and convergence metric; the item does not specify these.
+  da5004_2024T1_Q1_NA--q193: Implied course/exam convention: A if BOS counts within a 1024-token full sequence; A, B if 1024 newly predicted tokens are counted; A–D with sliding. A capped full sequence leaves 1023 positions after BOS; a final prediction can instead be emitted from a full input context, allowing 1024 new tokens. Sliding or resetting positional IDs permits still longer text. The exam’s fixed-window treatment is the closest course convention; its wording does not settle output counting.
+  da5004_2024T1_Q1_NA--q194: Implied course/exam convention: A, B, D for the original GPT-1 supervised experiments; A, D for ordinary supervised fine-tuning without the optional auxiliary CLM loss. GPT-1 pretraining starts from random weights; supervised fine-tuning reuses them and typically uses labels. Radford et al. included an auxiliary language-model objective in their experiments, while fine-tuning in general need not. The paper-specific and generic conventions differ, and the course paper implies the GPT-1 experiment.
+  da5004_2024T1_Q1_NA--q195: Top-k, top-p, beam and exhaustive search can all generate translations. If appropriate means the conventional mode-seeking objective, B and D are the course key; if it means usable, A–D qualify. No criterion for appropriateness is given, so a unique set cannot be established.
+  da5004_2024T3_ET_AN--q178: With a fixed model and deterministic tie-breaking both beam search with width four and greedy decoding return the same completion. The item is single-choice but has two correct choices.
+  da5004_2024T3_Q1_NA--q276: Multiple heads can capture different relationships (B); Transformer variants can use batch normalization (D). Both are defensible literal claims, although layer normalization is standard, and only one choice is allowed.
+  da5004_2024T3_Q1_NA--q277: Implied course/exam convention: 230,656 with bias-free attention and affine LayerNorm; 232,192 with attention biases. The shared passage explicitly makes encoder and decoder configurations equal, so N=2 applies to both. Six attention blocks contribute 6×4×64²=98,304, four bias-free FFNs 4×2×64×256=131,072, and ten affine norms 1,280, total 230,656. Attention biases add 6×4×64=1,536. The printed answer favors bias-free attention; the old note incorrectly suggests independent stack depths are unspecified.
+  da5004_2024T3_Q1_NA--q278: Implied course/exam convention: 48,000 weights; 48,750 including an output bias. A 64-to-750 output projection contains 64×750=48,000 weights; an output bias contributes 750. Whether tied output weights are counted as independent parameters is another convention. The paper key implies a weights-only count.
+  da5004_2024T3_Q1_NA--q279: The shared encoder–decoder has source vocabulary 500, target vocabulary 750, and width 64, yet asks for “the embedding layer” without identifying source, target, or both. Their untied counts are 500×64, 750×64, and their sum; sharing would need further specification.
+  da5004_2025T1_Q1_NA--q108: Implied course/exam convention: A, B, D for the original GPT-1 supervised experiments; A, D for ordinary supervised fine-tuning without the optional auxiliary CLM loss. GPT-1 pretraining starts from random weights; supervised fine-tuning reuses them and typically uses labels. Radford et al. included an auxiliary language-model objective in their experiments, while fine-tuning in general need not. The paper-specific and generic conventions differ, and the course paper implies the GPT-1 experiment.
+  da5004_2025T1_Q1_NA--q110: Top-k, top-p, beam and exhaustive search can all generate translations. If appropriate means the conventional mode-seeking objective, B and D are the course key; if it means usable, A–D qualify. No criterion for appropriateness is given, so a unique set cannot be established.
+  da5004_2025T1_Q1_NA--q111: Implied course/exam convention: 0 for fixed sinusoidal positions; 1,024 for a learned table. The source embedding condition gives d=3200/100=32 and the context has 32 positions. A learned position table contains 32×32=1,024 parameters; fixed sinusoids contain zero. The original Transformer used sinusoids, while the paper key implies a learned table; “vanilla” alone does not settle this conflict.
+  da5004_2025T1_Q1_NA--q112: Implied course/exam convention: 3,072 Q/K/V matrix weights, or 3,168 including Q/K/V biases, if d=32. Carrying the preceding conditional source table to the common model gives d=3200/100=32; 3d²=3072 weights, plus 3d=96 biases if present. The course key implies shared context and weights only, but the earlier supposition is not expressly repeated and biases are not fixed.
+  da5004_2025T1_Q1_NA--q113: Implied course/exam convention: 256 matrix weights if d=32; otherwise d²/4. If the preceding subquestion’s embedding condition applies, d=3200/100=32 and one of four heads has W_Q of size 32×8=256. Without carrying the conditional value forward the common passage leaves d unknown. The matrix itself has no separate bias; the course key implies carrying the width forward.
+  da5004_2025T2_ET_FN--q141: Deterministic greedy is consistent with repeated stories, and top-p sampling can produce variation; a fixed model and unspecified stochastic seed, sample size, probability distribution and priors do not determine the “most likely” mappings. Top-k can repeat by chance and p=0.5 can even yield a one-token nucleus despite T=1.5.
+  da5004_2025T2_Q1_NA--q147: The original shared image has X=[[1,0],[0,2],[1,0],[0,2]] and W¹=[[1,1,1,1],[2,2,2,2]], with column-oriented tokens. Hence Q=K=V=[[2,4],[4,8]], and the displayed softmax(QᵀK/√2)Vᵀ is approximately [[4,8],[4,8]]. No option matches. The Markdown transcription is different.
+  da5004_2025T2_Q1_NA--q148: From the pictured shared X and W², Q=K=V=[[2,0],[3,4]]. Row-softmax(QᵀK/√2)Vᵀ gives the stated matrix; no pictured option agrees. The Markdown transcription differs from the shared image.
+  da5004_2025T2_Q1_NA--q149: Transpose the two head outputs into the image’s feature-by-token layout, concatenate and left-multiply diag(0.5,0.5,1,1). The resulting four-by-two matrix matches no pictured option; the shared-image matrices differ from the transcription.
+  da5004_2025T3_ET_AN--q17: Implied course/exam convention: B and C when “self-attention” means the score and value products; C alone when projection FLOPs are included. The two attention matrix products scale as L²d and quadruple, while the positionwise FFN scales as L and doubles. Including the Q/K/V/output projections adds a linear-in-L term, making the exact total factor between 2 and 4. The usual textbook attention-complexity convention implies B and C; the old note correctly identifies the scope choice.
+  da5004_2025T3_ET_FN--q2: For one observation per normalized channel during training, the mean is that observation, not necessarily 0, and variance is 0; some implementations reject the case. Evaluation with tracked running statistics uses those statistics (D), but other spatial dimensions and evaluation modes are possible. The prompt specifies neither mode nor reduction axes.
+  da5004_2025T3_ET_FN--q25: Implied course/exam convention: B and C when “self-attention” means the score and value products; C alone when projection FLOPs are included. The two attention matrix products scale as L²d and quadruple, while the positionwise FFN scales as L and doubles. Including the Q/K/V/output projections adds a linear-in-L term, making the exact total factor between 2 and 4. The usual textbook attention-complexity convention implies B and C; the old note correctly identifies the scope choice.
+  da5004_2025T3_Q1_NA--q190: Implied course/exam convention: 524,800 unmasked or finite-softmax positive entries; raw nonzero logits undetermined. The inclusive causal triangle contains 1024×1025/2=524,800 allowed positions. With finite logits, post-softmax allowed weights are positive and masked weights zero; pre-softmax raw allowed scores can be zero and additive-masked scores are −∞. The course convention counts available causal weights, but “score matrix” does not specify the stage.
+  da5004_2026T1_Q1_NA--q18: Implied course/exam convention: D: 147,456 weights; 147,648 including Q/K/V biases. With width 768 and 12 heads, each head width is 64. The three 768×64 projection matrices contain 147,456 weights; three bias vectors add 192. D and the course-style matrix count imply bias-free projections, whereas the track’s GPT parameter convention includes biases.
+  da5004_2026T2_ET_AN--q3: Sinusoidal dot products sum cosines of relative offsets and do not strictly increase with separation (A false). One-hot vectors have equal pairwise distances, but their active indices can be decoded and subtracted, so one-hot positions are not mathematically incapable of representing relative distance (D false). A single-choice question has two false statements under literal wording.
+  da5004_2026T2_ET_AN--q6: Implied course/exam convention: 3 when ε=0; 1+2/√(1+ε) otherwise. The third pictured row is [7,5], with mean 6 and population variance 1. LayerNorm gives 2(7−6)/√(1+ε)+1. Elementary hand calculations conventionally omit ε and obtain 3; implementations use a small positive ε and the problem does not state it.
+  da5004_2026T2_Q1_NA--q11: The pictured partial tree gives A=.5×.3×.4=.06, C=.5×.3×.6=.09, D=.4×.4×.5=.08, and E=.4×.4×.4=.064. B starts with an unpictured apples branch whose mass may be as high as .1; its continuation probabilities are not given. Both C and B can win.
+  da5004_2026T2_Q1_NA--q15: Implied course/exam convention: 400 unbatched prefix evaluations; 4 batched depth-wise forward passes. General exhaustive decoding evaluates 1+7+7²+7³=400 prefixes to assign probabilities to four tokens. If “decoder run” means batched forward pass, four depth-wise calls suffice; if the supplied table is reusable and prefix-invariant, the computation needs no additional model calls. The usual course search-tree convention implies 400 but the unit is not defined.
+records_with_empty_answer_options=106
   da5004_2024T1_ET_AN--q148
   da5004_2024T1_ET_AN--q151
   da5004_2024T1_ET_AN--q152
@@ -270,8 +224,6 @@ records_with_empty_answer_options=108
   da5004_2026T2_ET_AN--q6
   da5004_2026T2_ET_AN--q9
   da5004_2026T2_ET_AN--q10
-  da5004_2026T2_ET_AN--q18
-  da5004_2026T2_ET_AN--q19
   da5004_2026T2_ET_FN--q2
   da5004_2026T2_ET_FN--q3
   da5004_2026T2_ET_FN--q4
@@ -287,6 +239,45 @@ records_with_empty_answer_options=108
   da5004_2026T2_Q1_NA--q16
   da5004_2026T2_Q1_NA--q17
   da5004_2026T2_Q2_NA--q2
-gate7_derived_numeric=68 unverified; each listed above with reason
+gate7_derived_numeric=71 unverified; each listed above with reason
 checker_match_count=41
 checker_mismatch_count=0
+da5004_2024T1_ET_AN--q149 computed={"context": 2048, "fixed_complete_sequence_emitted": 1336, "fixed_complete_sequence_options": ["A", "B", "C", "D"], "fixed_last_sample_not_fed_back_emitted": 1337, "fixed_last_sample_options": ["A", "B", "C", "D"], "prompt_tokens": 712, "remaining": 1336, "sliding_options": ["A", "B", "C", "D", "E"]} MATCH
+da5004_2024T1_ET_AN--q151 computed={"encoder_parameters": 2366208, "including_four_projection_biases_per_layer": 2369280} MATCH
+da5004_2024T1_ET_AN--q153 UNVERIFIED reason=complete numeric inputs are absent from editable extraction; manual scan adjudication retained
+da5004_2024T1_ET_FN--q202 computed={"context": 1024, "fixed_complete_sequence_emitted": 312, "fixed_complete_sequence_options": ["A", "B"], "fixed_last_sample_not_fed_back_emitted": 313, "fixed_last_sample_options": ["A", "B"], "prompt_tokens": 712, "remaining": 312, "sliding_options": ["A", "B", "C", "D"]} MATCH
+da5004_2024T1_ET_FN--q206 computed={"encoder_parameters": 2366208, "including_four_projection_biases_per_layer": 2369280} MATCH
+da5004_2024T1_ET_FN--q208 UNVERIFIED reason=complete numeric inputs are absent from editable extraction; manual scan adjudication retained
+da5004_2024T1_Q1_NA--q189 computed={"matrix_weights": 768} MATCH
+da5004_2024T1_Q1_NA--q193 computed={"capped_complete_sequence_new_tokens": 1023, "capped_options": ["A"], "context": 1024, "last_prediction_not_fed_back_new_tokens": 1024, "last_prediction_options": ["A", "B"], "sliding_options": ["A", "B", "C", "D"]} MATCH
+da5004_2024T3_Q1_NA--q277 UNVERIFIED reason=complete numeric inputs are absent from editable extraction; manual scan adjudication retained
+da5004_2024T3_Q1_NA--q278 UNVERIFIED reason=complete numeric inputs are absent from editable extraction; manual scan adjudication retained
+da5004_2024T3_Q1_NA--q279 UNVERIFIED reason=complete numeric inputs are absent from editable extraction; manual scan adjudication retained
+da5004_2024T3_Q1_NA--q287 computed={"answer": -1} MATCH
+da5004_2025T1_Q1_NA--q111 computed={"fixed_position_parameters": 0, "learned_position_parameters": 1024, "model_dimension": 32} MATCH
+da5004_2025T1_Q1_NA--q112 computed={"matrix_weights": 3072} MATCH
+da5004_2025T1_Q1_NA--q113 computed={"matrix_weights": 256} MATCH
+da5004_2025T1_Q1_NA--q118 computed={"sachin_count": 6, "scaled_probability": 1.4634146341463414, "total_tokens": 41} MATCH
+da5004_2025T1_Q1_NA--q119 computed={"phrase_count": 1, "scaled_probability": 2.4390243902439024, "total_tokens": 41} MATCH
+da5004_2025T1_Q1_NA--q120 computed={"phrase_count": 1, "scaled_probability": 2.4390243902439024, "total_tokens": 41} MATCH
+da5004_2025T2_ET_FN--q145 computed={"logits": [1.5, 0.5, 0.0, -0.5], "probability_rounded": 0.41, "temperature": 2.0} MATCH
+da5004_2025T2_Q1_NA--q147 UNVERIFIED reason=complete numeric inputs are absent from editable extraction; manual scan adjudication retained
+da5004_2025T2_Q1_NA--q148 UNVERIFIED reason=complete numeric inputs are absent from editable extraction; manual scan adjudication retained
+da5004_2025T2_Q1_NA--q149 UNVERIFIED reason=complete numeric inputs are absent from editable extraction; manual scan adjudication retained
+da5004_2025T2_Q1_NA--q150 UNVERIFIED reason=complete numeric inputs are absent from editable extraction; manual scan adjudication retained
+da5004_2025T3_ET_AN--q17 computed={"ffn_factor": 2, "quadratic_factor": 4} MATCH
+da5004_2025T3_ET_AN--q20 computed={"individual_matrices": 144, "sets": 48} MATCH
+da5004_2025T3_ET_FN--q25 computed={"ffn_factor": 2, "quadratic_factor": 4} MATCH
+da5004_2025T3_Q1_NA--q190 computed={"T": 1024, "allowed_entries": 524800} MATCH
+da5004_2026T1_Q1_NA--q12 computed={"coordinate": 5, "pair_index": 2, "position": 3, "value": -0.6279266524418035} MATCH
+da5004_2026T1_Q1_NA--q18 computed={"head_width": 64, "weights_only": 147456, "with_biases": 147648} MATCH
+da5004_2026T2_ET_AN--q6 computed={"mean": 6.0, "output_if_epsilon_zero": 3.0, "output_with_epsilon": 2.99999900000075, "variance": 1} MATCH
+da5004_2026T2_ET_AN--q18 computed={"product": [5, 3, -1, -1], "x_m": [2, 1, 3, 2]} MATCH
+da5004_2026T2_ET_AN--q19 computed={"product": [4, 6, -2, -2], "x_n": [1, 3, 2, 4]} MATCH
+da5004_2026T2_Q1_NA--q11 computed={"A": 0.06, "C": 0.09, "D": 0.08000000000000002, "E": 0.06400000000000002, "winner_when_B_max": "B", "winner_when_B_zero": "C"} MATCH
+da5004_2026T2_Q1_NA--q12 computed={"answer": -1} MATCH
+da5004_2026T2_Q1_NA--q15 computed={"prefix_counts": [1, 7, 49, 343], "total": 400, "vocabulary": 7} MATCH
+override_numeric_count=35
+override_numeric_verified=26
+override_numeric_unverified=9
+override_numeric_mismatch_count=0

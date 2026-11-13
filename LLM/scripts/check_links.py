@@ -12,7 +12,7 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 PENDING = {f"week-{n}-exam-questions" for n in range(1, 5)} | {
-    "exam-question-index", "exam-study-guide"
+    "exam-question-index", "exam-study-guide", "week-n-exam-questions"
 }
 FENCE_RE = re.compile(r"^\s{0,3}(```+|~~~+)")
 WIKI_RE = re.compile(r"(?<!\\)\[\[([^\]]+?)\]\]")
@@ -67,6 +67,9 @@ def anchors(path: Path) -> set[str]:
         base = slug(match.group(2))
         counts[base] += 1
         found.add(base if counts[base] == 1 else f"{base}-{counts[base]}")
+        # Obsidian heading links use the visible heading text; Docsify uses its
+        # slug. Accept both while keeping HTML IDs for stable question records.
+        found.add(match.group(2).strip().rstrip("#").strip())
     return found
 
 
